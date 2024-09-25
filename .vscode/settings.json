@@ -1,0 +1,29 @@
+{
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "liveSassCompile.settings.generateMap": false, //이부분 수정
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "~/../css/"
+        }
+    ],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.excludeList": [
+        "_*.scss",
+        "**/node_modules/**",
+        "**/react-ui/**",
+        "**/codeview/**",
+        "**/css/**",
+        "**/convention/**",
+        ".vscode/**"
+    ],
+    "editor.detectIndentation": false,
+    "editor.trimAutoWhitespace": true,
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "eslint.codeActionsOnSave.rules": null,
+    "editor.renderWhitespace": "all"
+}
