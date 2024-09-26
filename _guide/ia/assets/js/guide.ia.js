@@ -2,7 +2,7 @@ var iaURL = '../../';		// 현황판 작업목록 루트경로
 var ajaxURL = 'html/';	// 현황판 리스트 URL
 var ia = {
 	baseUrl : 'html/',
-	
+
 	init : function(){
 		this.include();
 		this.update();
@@ -13,7 +13,7 @@ var ia = {
         +'<nav class="g-gnb">'
         +'    <ul>'
         +'        <li><a href="index.html">가이드</a></li>'
-        +'        <li><a href="list1.html">페이지</a></li>'
+        +'        <li><a href="page.html">페이지</a></li>'
         +'    </ul>'
         +'</nav>';
 		$('.g-header').html(html_header);
@@ -22,7 +22,7 @@ var ia = {
 		$('.g-gnb li').each(function(){
 			if ($(this).text() == pageName){
 				$(this).addClass('is-selected');
-			}			
+			}
 		})
 	},
 	update : function(){
