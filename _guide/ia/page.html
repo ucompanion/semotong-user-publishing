@@ -2,92 +2,729 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Project 현황판</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <!-- Guide Common -->
-    <link href="../assets/css/base.css" rel="stylesheet" />
-    <link href="../assets/css/common.css" rel="stylesheet" />
-    <script src="../assets/js/jquery.min.js"></script>
-    <!-- Guide IA -->
-    <link href="assets/css/import.css" rel="stylesheet" />
-    <script src="assets/js/guide.ia.js"></script>
+	<meta charset="UTF-8" />
+	<title>Project 현황판</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- Guide Common -->
+	<link href="../assets/css/base.css" rel="stylesheet" />
+	<link href="../assets/css/common.css" rel="stylesheet" />
+	<script src="../assets/js/jquery.min.js"></script>
+	<!-- Guide IA -->
+	<link href="assets/css/import.css" rel="stylesheet" />
+	<script src="assets/js/guide.ia.js"></script>
 </head>
 
 <body>
-    <div class="g-wrap ia-wrap">
-        <header class="g-header g-in-sec"></header>
-        <div class="ia-container">
-            <div class="ia-content">
-                <!-- Pages -->
-                <section class="ia-section ia-section-data" data-color="#ff898e">
-                    <div class="ia-section-header">
-                        <h2 class="ia-h2"><a href="#this" class="ui-accordion-toggle">페이지</a></h2>
-                        <div class="ia-legend">
-                            <span class="item"><em>총 페이지 : </em><em class="legend-total">0</em>,</span>
-                            <span class="item c-done"><em>완료 : </em><em class="legend-complete">0</em>,</span>
-                            <span class="item"><em>진척률 : </em><em class="legend-process">0</em></span>
-                        </div>
-                    </div>
-                    <div class="ia-section-body">
-                        <div class="ia-tab-content type-thumb">
-                            <div class="ia-iframe-wrap">
-                                <div class="ia-iframe-list"></div>
-                            </div>
-                        </div>
-                        <div class="ia-tab-content type-list is-visible">
-                            <div class="tbl ia-tbl">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">번호</th>
-                                            <th scope="col" class="col-1depth">1Depth</th>
-                                            <th scope="col" class="col-2depth">2Depth</th>
-                                            <th scope="col" class="col-3depth">3Depth</th>
-                                            <th scope="col" class="col-4depth">4Depth</th>
-                                            <th scope="col" class="col-5depth">5Depth</th>
-                                            <th scope="col" class="col-point">구분</th>
-                                            <th scope="col" class="col-url">URL</th>
-                                            <th scope="col" class="col-complete">상태</th>
-                                            <th scope="col" class="col-memo">비고</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="col-num"><!--자동입력--></td>
-                                            <td class="col-1depth">Layout</td>
-                                            <td class="col-2depth">전체영역</td>
-                                            <td class="col-3depth"></td>
-                                            <td class="col-4depth"></td>
-                                            <td class="col-5depth"></td>
-                                            <td class="col-type" data-type=""></td>
-                                            <td class="col-url">html/_layout/layout.html</td>
-                                            <td class="col-complete" data-complete="대기"></td>
-                                            <td class="col-memo"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="col-num"><!--자동입력--></td>
-                                            <td class="col-1depth"></td>
-                                            <td class="col-2depth">컨텐츠용</td>
-                                            <td class="col-3depth"></td>
-                                            <td class="col-4depth"></td>
-                                            <td class="col-5depth"></td>
-                                            <td class="col-type" data-type=""></td>
-                                            <td class="col-url">html/_layout/content.html</td>
-                                            <td class="col-complete" data-complete="대기"></td>
-                                            <td class="col-memo"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- //Pages -->
-            </div>
-        </div>
-    </div>
+	<div class="g-wrap ia-wrap">
+		<header class="g-header g-in-sec"></header>
+		<div class="ia-container">
+			<div class="ia-content">
+				<!-- Pages -->
+				<section class="ia-section ia-section-data" data-color="#ff898e">
+					<div class="ia-section-header">
+						<h2 class="ia-h2"><a href="#this" class="ui-accordion-toggle">페이지</a></h2>
+						<div class="ia-legend">
+							<span class="item"><em>총 페이지 : </em><em class="legend-total">0</em>,</span>
+							<span class="item c-done"><em>완료 : </em><em class="legend-complete">0</em>,</span>
+							<span class="item"><em>진척률 : </em><em class="legend-process">0</em></span>
+						</div>
+					</div>
+					<div class="ia-section-body">
+						<div class="ia-tab-content type-thumb">
+							<div class="ia-iframe-wrap">
+								<div class="ia-iframe-list"></div>
+							</div>
+						</div>
+						<div class="ia-tab-content type-list is-visible">
+							<div class="tbl ia-tbl">
+								<table>
+									<thead>
+										<tr>
+											<th scope="col">번호</th>
+											<th scope="col" class="col-1depth">1Depth</th>
+											<th scope="col" class="col-2depth">2Depth</th>
+											<th scope="col" class="col-3depth">3Depth</th>
+											<th scope="col" class="col-4depth">4Depth</th>
+											<th scope="col" class="col-5depth">5Depth</th>
+											<th scope="col" class="col-point">구분</th>
+											<th scope="col" class="col-url">URL</th>
+											<th scope="col" class="col-complete">상태</th>
+											<th scope="col" class="col-memo">비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">Layout</td>
+											<td class="col-2depth">개발 전달용 원본</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/_layout/layout.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">퍼블 작업용 양식</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/_layout/content.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo">
+											</td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">메인</td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/main/main.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">메인</td>
+											<td class="col-2depth">Case Empty</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/main/main_empty.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">회원가입/로그인</td>
+											<td class="col-2depth">SNS 연동</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/member/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr class="row-except">
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">네이버 연동</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/member/미확정.html</td>
+											<td class="col-complete" data-complete="제외"></td>
+											<td class="col-memo">
+												<P>2차 개발</P>
+											</td>
+										</tr>
+										<tr class="row-except">
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">구글/애플 연동</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/member/미확정.html</td>
+											<td class="col-complete" data-complete="제외"></td>
+											<td class="col-memo">
+												<P>2차 개발</P>
+											</td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">유심 먼저</td>
+											<td class="col-2depth">챗봇 배너</td>
+											<td class="col-3depth">챗봇형 대화창</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr class="row-except">
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">마이데이터 연동형 상품 추천</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo">
+												<P>2차 개발</P>
+											</td>
+										</tr>
+										<tr class="row-except">
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">AI형 챗봇</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo">
+												<P>추후 개발</P>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">데이터 요금제</td>
+											<td class="col-3depth">마케팅 요금제</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">추천 요금제</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">상품리스트</td>
+											<td class="col-3depth">통신사 상품</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">이벤트</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">이벤트 배너</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">플로팅</td>
+											<td class="col-3depth">요금 추천봇</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">친구 추천</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">카카오톡</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">이용후기</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">입점사</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/유심폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">요금제</td>
+											<td class="col-2depth">요금제 목록</td>
+											<td class="col-3depth">필터</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/요금제폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">추천요금제</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/요금제폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">플랫폼 전용요금제</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/요금제폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">결합 요금제</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/요금제폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">내게 맞는 요금제</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/요금제폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">플로팅</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/요금제폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">휴대폰</td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/휴대폰폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/휴대폰폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/휴대폰폴더미정/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">인터넷</td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/인터넷미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/인터넷미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/인터넷미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">마이페이지</td>
+											<td class="col-2depth">이벤트</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">고객센터</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">나에게 맞는 요금제</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">신청한 요금제</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">찜한 요금제</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">최근 본 요금제</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">평점/후기관리</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">알림 설정</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">로그아웃</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">회원탈퇴</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">포인트</td>
+											<td class="col-3depth">리스트</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">상세페이지</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">내역보기</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/마이페이지미확정폴더/미확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth">푸터</td>
+											<td class="col-2depth">자주 묻는 질문</td>
+											<td class="col-3depth">목록</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">상세</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">검색</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">이용약관</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">개인정보처리지침</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">애드링크</td>
+											<td class="col-3depth"></td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth">공지사항</td>
+											<td class="col-3depth">목록</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+										<tr>
+											<td class="col-num"><!--자동입력--></td>
+											<td class="col-1depth"></td>
+											<td class="col-2depth"></td>
+											<td class="col-3depth">상세</td>
+											<td class="col-4depth"></td>
+											<td class="col-5depth"></td>
+											<td class="col-type" data-type=""></td>
+											<td class="col-url">html/푸터미확정폴더/화확정.html</td>
+											<td class="col-complete" data-complete="대기"></td>
+											<td class="col-memo"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Pages -->
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

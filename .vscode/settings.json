@@ -25,5 +25,7 @@
     "editor.insertSpaces": false,
     "editor.formatOnSave": true,
     "eslint.codeActionsOnSave.rules": null,
-    "editor.renderWhitespace": "all"
+	"editor.renderWhitespace": "all",
+	"prettier.printWidth": 150,
+	"liveServer.settings.port": 5501
 }
