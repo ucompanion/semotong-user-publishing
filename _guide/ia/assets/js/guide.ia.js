@@ -9,7 +9,7 @@ var ia = {
 	},
 	include : function(){
 		var html_header = ''
-        +'<h1 class="g-logo">INDEX</h1>'
+        +'<h1 class="g-logo">세모통</h1>'
         +'<nav class="g-gnb">'
         +'    <ul>'
         +'        <li><a href="index.html">가이드</a></li>'
