@@ -5,28 +5,19 @@
 -------------------------------------------------------------------*/
 
 function setPublishInclude(){
-	$("[data-include]").each(function(){
+	$(".header").each(function(){
 		var path = "/html/_layout/";
-		var filename = $(this).data('include');
-		$(this).load(
-			path + filename,
-			function(){
-				// 공통
-				$(this).children().unwrap();
-
-				// 헤더일때
-				if (filename === "_include_header.html") {
-					// Init Functions
-					console.log("Init Header Functions");
-				}
-
-				// 푸터일때
-				if (filename === "_include_footer.html") {
-					// Init Functions
-					console.log("Init Footer Functions");
-				}
-			}
-		);
+		var filename = "_include_header.html";
+		$(this).load(path + filename, function(){
+				console.log("Init Header Functions");
+		});
+	})
+	$(".footer").each(function(){
+		var path = "/html/_layout/";
+		var filename = "_include_footer.html";
+		$(this).load(path + filename, function(){
+				console.log("Init Footer Functions");
+		});
 	})
 }
 
