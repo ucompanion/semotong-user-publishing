@@ -20,9 +20,18 @@ var	$window			= null,
 	$activeFocus	= null,
 _;
 
+// Device 확인예시
+// console.log(platform.name); // 'Safari'
+// console.log(platform.version); // '5.1'
+// console.log(platform.product); // 'iPad'
+// console.log(platform.manufacturer); // 'Apple'
+// console.log(platform.layout); // 'WebKit'
+// console.log(platform.os); // 'iOS 5.0'
+// console.log(platform.description); // 'Safari 5.1 on Apple iPad (iOS 5.0)'
+
 // Devices
-var isIOS			= browser.os == 'ios',
-	isANDROID		= browser.os == 'android',
+var isIOS			= platform.os.family == 'iOS',
+	isAND			= platform.os.family == 'Android',
 	isMOBILE		= browser.mobile == true,
 	isPC			= browser.mobile == false,
 _;

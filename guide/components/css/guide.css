@@ -9,7 +9,7 @@
 .g-section + .g-section {margin-top:40px;}
 .g-section-head {position:relative; padding-bottom:10px; border-bottom:1px solid #eee;}
 .g-section-body {margin-top:20px;}
-.g-section xmp {border:1px solid #ddd; border-radius:5px; padding:0 30px;font-weight:300; line-height:1.5;}
+.g-section xmp {border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 12px; padding:0 20px; word-break: break-all; white-space:pre-wrap;}
 
 /* 목차 */
 .g-h1 {margin:30px 0; font-size:28px; font-weight:normal;}
@@ -26,6 +26,7 @@ ul.g-desc {margin:5px 0; border-radius:5px; padding:5px 10px;}
 ul.g-desc:last-child {margin-bottom:0;}
 ul.g-desc > li {position:relative; padding:0 0 0 10px; font-size:14px; line-height:1.6;}
 ul.g-desc > li:before {content:''; position:absolute; left:0; top:10px; display:block; width:2px; height:2px; background:#555; border-radius:50%;}
+ul.g-desc strong {font-weight: 700;}
 
 /* 표 type1 - 일반컨텐츠 */
 .g-tbl-type1 {overflow:hidden; border:1px solid #333; border-width:1px 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}

@@ -36,32 +36,69 @@
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">일반 탭</h2>
+							<h2 class="g-h2">General</h2>
 						</div>
 						<div class="g-section-body">
-							<div class="tab-basic">
-								<ul role="tablist" class="tab-list">
-									<li id="tab_11" role="tab" aria-controls="tabpanel_11" aria-selected="true"
-										class="is-active">
-										<button type="button" class="tab"
-											onclick="tab('tab_11', 'tabpanel_11')">탭제목1</button>
+							<h3 class="g-h3">선택기능</h3>
+							<ul class="g-desc">
+								<li>탭 기능 : data-bs-toggle="tab" data-bs-target="#패널아이디"</li>
+							</ul>
+
+							<h3 class="g-h3">기본구조</h3>
+							<xmp>
+<div class="tab-nav tab-유형">
+	<ul class="tab-list" role="tablist">
+		<li class="tab-item" role="presentation">
+			<button type="button" class="btn tab-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-panel" type="button" role="tab" aria-controls="home-tab-panel" aria-selected="true">Home Tab</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button type="button" class="btn tab-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-panel" type="button" role="tab" aria-controls="profile-tab-panel" aria-selected="false">Profile Tab</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button type="button" class="btn tab-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-panel" type="button" role="tab" aria-controls="contact-tab-panel" aria-selected="false">Contact Tab</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button type="button" class="btn tab-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-panel" type="button" role="tab" aria-controls="disabled-tab-panel" aria-selected="false" disabled>Disabled Tab</button>
+		</li>
+	</ul>
+</div>
+<div class="tab-panels" id="myTabContent">
+	<div class="tab-panel fade show active" id="home-tab-panel" role="tabpanel" aria-labelledby="home-tab" tabindex="0">Home Tab Panel</div>
+	<div class="tab-panel fade" id="profile-tab-panel" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Profile Tab Panel</div>
+	<div class="tab-panel fade" id="contact-tab-panel" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Contact Tab Panel</div>
+	<div class="tab-panel fade" id="disabled-tab-panel" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Disabled Tab Panel</div>
+</div>
+						</xmp>
+						</div>
+					</section>
+					<!-- // Section -->
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Basic</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="tab-nav tab-basic">
+								<ul class="tab-list" role="tablist">
+									<li class="tab-item" role="presentation">
+										<button type="button" class="btn tab-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-panel" type="button" role="tab" aria-controls="home-tab-panel" aria-selected="true">Home Tab</button>
 									</li>
-									<li id="tab_12" role="tab" aria-controls="tabpanel_11" aria-selected="false">
-										<button type="button" class="tab"
-											onclick="tab('tab_12', 'tabpanel_12')">탭제목2</button>
+									<li class="tab-item" role="presentation">
+										<button type="button" class="btn tab-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-panel" type="button" role="tab" aria-controls="profile-tab-panel" aria-selected="false">Profile Tab</button>
+									</li>
+									<li class="tab-item" role="presentation">
+										<button type="button" class="btn tab-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-panel" type="button" role="tab" aria-controls="contact-tab-panel" aria-selected="false">Contact Tab</button>
+									</li>
+									<li class="tab-item" role="presentation">
+										<button type="button" class="btn tab-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-panel" type="button" role="tab" aria-controls="disabled-tab-panel" aria-selected="false" disabled>Disabled Tab</button>
 									</li>
 								</ul>
 							</div>
-							<div class="tab-panels">
-								<!-- 탭내용 -->
-								<div id="tabpanel_11" role="tabpanel_" aria-labelledby="tab_11"
-									class="tab-panel is-active">
-									Tab Panel 11
-								</div>
-								<div id="tabpanel_12" role="tabpanel_" aria-labelledby="tab_12" class="tab-panel">
-									Tab Panel 12
-								</div>
-								<!-- //탭내용 -->
+							<div class="tab-panels" id="myTabContent">
+								<div class="tab-panel fade show active" id="home-tab-panel" role="tabpanel" aria-labelledby="home-tab" tabindex="0">Home Tab Panel</div>
+								<div class="tab-panel fade" id="profile-tab-panel" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Profile Tab Panel</div>
+								<div class="tab-panel fade" id="contact-tab-panel" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Contact Tab Panel</div>
+								<div class="tab-panel fade" id="disabled-tab-panel" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Disabled Tab Panel</div>
 							</div>
 						</div>
 					</section>

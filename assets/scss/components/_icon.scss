@@ -7,14 +7,39 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 /* 기본 */
+.icn {
+	display: inline-block;
+	vertical-align: middle;
+	background: no-repeat center center / contain;
+}
 
+// 추가하고 싶은 크기를 배열에 나열
+$icn-sizes: (16, 18, 20, 24, 28, 32);
 
-/* 강조 */
+@each $size in $icn-sizes {
+	[class*='icn-#{$size}'] {
+		width: #{$size}rem;
+		height: #{$size}rem;
+	}
+}
 
 /*-------------------------------------------------------------------
-	@@ 유형
+	@@ 아이콘
 -------------------------------------------------------------------*/
-/* 스타일1 */
+// 추가하고 싶은 이미지명을 배열에 나열
+$icn-names: (
+	// 16
+	'icn-16-아이콘명',
+	'icn-16-아이콘명2',
 
+	// 18
+	'icn-18-아이콘명',
 
-/* 스타일2 */
+	// 20
+	'icn-18-아이콘명',
+);
+@each $name in $icn-names {
+	.#{$name} {
+		background-image: url('../images/#{$name}.svg');
+	}
+}

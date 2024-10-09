@@ -23,9 +23,10 @@
     "editor.detectIndentation": false,
     "editor.trimAutoWhitespace": true,
     "editor.insertSpaces": false,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "eslint.codeActionsOnSave.rules": null,
 	"editor.renderWhitespace": "all",
 	"prettier.printWidth": 150,
-	"liveServer.settings.port": 5501
+	"liveServer.settings.port": 5501,
+	"editor.hover.enabled": false
 }

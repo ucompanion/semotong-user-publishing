@@ -3,18 +3,32 @@
 //    Variables
 //-------------------------------------------------------------------
 // 레이아웃 프레임
-$height-header: value;
-$padding-sidespacer: value;
+$height-header: 90px;
+$padding-sidespacer: 25rem;
+
+// 컬러 맥락
+$color-tit: #222; // 제목 임시값
+$color-body: #444; // 내용 (body 기본값으로 사용)
+$color-info: #999; // 안내 임시값
 
 // 컬러 강조
-$color-primary: value;
-$color-secondary: value;
-$color-point1: value;
+$color-primary: skyblue; // 첫번째 임시값
+$color-secondary: orange; // 두번째 임시값
+$color-point: purple; // 기타 임시값
 
-// 컬러 아이
-$color-item1: value;
-$color-item2: value;
-$color-item3: value;
+// 컬러 상태
+$color-success: green; // 성공 임시값
+$color-fail: #ff0000; // 실패 임시값
+$color-complete: skyblue; // 완료 임시값
+$color-error: #ff0000; // 에러 임시값
+$color-warning: orange; // 경고 임시값
+$color-caution: orange; // 주의 임시값
+$color-danger: orange; // 위험 임시값
+
+// 컬러 아이템
+$color-item1: green; // item1 임시값
+$color-item2: burlywood; // item2 임시값
+$color-item3: coral; // item3 임시값
 
 //-------------------------------------------------------------------
 //    Mixins

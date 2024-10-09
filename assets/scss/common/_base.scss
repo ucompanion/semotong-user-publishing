@@ -94,6 +94,7 @@ strong,
 em,
 address,
 dfn,
+xmp,
 small,
 i,
 b {
@@ -137,7 +138,12 @@ section {
 	display: block;
 }
 
+html {
+	font-size: 1px;
+}
+
 body {
+	color: $color-body;
 	font-family: 'NotoSans', 'sans-serif';
 	font-size: 14px;
 	line-height: 22px;

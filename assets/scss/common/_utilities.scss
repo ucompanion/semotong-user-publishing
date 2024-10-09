@@ -33,6 +33,14 @@
 	overflow: hidden;
 }
 
+/* Bootstrap Transition */
+.fade {
+	transition: opacity .15s linear;
+	&:not(.show){
+		opacity: 0;
+	}
+}
+
 /* Margin */
 .mar-0 {
 	margin: 0 !important;
@@ -152,6 +160,46 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
+}
+
+/*-------------------------------------------------------------------
+	@Colors
+-------------------------------------------------------------------*/
+$colors: (
+	// 강조
+	primary: $color-primary,
+	secondary: $color-secondary,
+	point: $color-point,
+	info: $color-info,
+
+	// 상태
+	success: $color-success,
+	fail: $color-fail,
+	complete: $color-complete,
+	error: $color-error,
+	warning: $color-warning,
+	caution: $color-warning,
+	danger: $color-danger,
+
+	// 컬러 아이템
+	item1: $color-item1,
+	item2: $color-item2,
+	item3: $color-item3,
+
+);
+
+@each $name, $color in $colors {
+	.bg-#{$name} {
+		background-color: $color;
+	}
+
+	.txt-#{$name} {
+		color: $color;
+	}
+
+	.line-#{$name} {
+		border-color: $color;
+	}
 }
 
 /*-------------------------------------------------------------------
