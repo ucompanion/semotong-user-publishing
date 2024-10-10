@@ -2,25 +2,38 @@
 //-------------------------------------------------------------------
 //    Media Responsive
 //-------------------------------------------------------------------
+// 분기점이 되는 해상도는 해당구간의 최소해상도로 한다.
 $media-tablet-xl: 1280px;
 $media-tablet-xs: 1023px;
 $media-mobile-xl: 767px;
 $media-mobile-xs: 480px; // 갤럭시 S23 울트라 세로모드 가로 해상도: 432px 기준
 $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 가로 해상도: 926px
 
-// 반응형: 분기점 사용자정의
-@mixin media-tablet {
+// 기준 해상도
+@mixin media-tablet-xl {
+	@media all and (max-width: $media-tablet-xl) {
+		@content;
+	}
+}
+
+@mixin media-tablet-xs {
 	@media all and (max-width: $media-tablet-xs) {
 		@content;
 	}
 }
 
-@mixin media-mobile {
+@mixin media-mobile-xl {
 	@media all and (max-width: $media-mobile-xl) {
 		@content;
 	}
 
 	@media all and (max-width: $media-mobile-landscape) and (max-height: $media-mobile-xs) {
+		@content;
+	}
+}
+
+@mixin media-mobile-xs {
+	@media all and (max-width: $media-mobile-xs) {
 		@content;
 	}
 }
@@ -31,7 +44,7 @@ $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 �
 	}
 }
 
-// Media Responsive: Custom Size
+// 사용자정의 해상도
 @mixin media-max-width($width) {
 	@media all and (max-width: $width) {
 		@content;
@@ -56,7 +69,7 @@ $media-mobile-landscape: 960px; // 아이폰 14 프로 맥스 가로모드의 �
 	}
 }
 
-// Media Responsive: Orientation
+// Orientation
 @mixin media-portrait() {
 	@media all and (orientation: portrait) {
 		@content;

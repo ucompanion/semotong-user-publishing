@@ -8,9 +8,32 @@
 -------------------------------------------------------------------*/
 /* 기본 */
 .icn {
+	position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	background: no-repeat center center / contain;
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: no-repeat center center / contain;
+		transform: translateY(0%);
+	}
+	&::after {
+		// content: ''; 이미지 교체하는 호버일때 호출
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: no-repeat center center / contain;
+		transform: translateY(110%);
+	}
 }
 
 // 추가하고 싶은 크기를 배열에 나열
@@ -26,20 +49,49 @@ $icn-sizes: (16, 18, 20, 24, 28, 32);
 /*-------------------------------------------------------------------
 	@@ 아이콘
 -------------------------------------------------------------------*/
-// 추가하고 싶은 이미지명을 배열에 나열
-$icn-names: (
-	// 16
-	'icn-16-아이콘명',
-	'icn-16-아이콘명2',
-
-	// 18
-	'icn-18-아이콘명',
-
-	// 20
-	'icn-18-아이콘명',
+// SVG Background Icons (파일명, 확장자)
+$bg-icons: (
+	// 24
+	(icn-24-demo-edit-bk, svg),
+	(icn-24-demo-down-br, png, $color-primary), // 마스크 처리방식 컬러만 변경
+	(icn-24-demo-medal-none, png, icn-24-demo-medal-hover, png), // 이미지 처리방식 깜빡임 대응
 );
-@each $name in $icn-names {
-	.#{$name} {
-		background-image: url('../images/#{$name}.svg');
+@each $values in $bg-icons {
+	$img-name: nth($values, 1);
+	$ext-name: nth($values, 2);
+
+	.#{$img-name} {
+		&::before {
+			background-image: url('../images/common/#{$img-name}.#{$ext-name}');
+		}
+	}
+
+	// 호버 컬러변경 : 세 번째 값이 존재하는 경우에만 hover-color 선언
+	@if length($values) == 3 {
+		$hover-color: nth($values, 3);
+		.btn .#{$img-name}:hover {
+			&::before {
+				mask: url('../images/common/#{$img-name}.#{$ext-name}') no-repeat center center / contain;
+				background: $hover-color;
+			}
+		}
+	}
+
+	// 호버 파일변경 : 네 번째 값이 존재하는 경우에만 hover-color 선언
+	@if length($values) == 4 {
+		$hover-img-name: nth($values, 3);
+		$hover-ext-name: nth($values, 4);
+		.#{$img-name}::after {
+			content:'';
+			background-image: url('../images/common/#{$hover-img-name}.#{$hover-ext-name}');
+		}
+		.btn .#{$img-name}:hover {
+			&::before {
+				transform: translateY(110%);
+			}
+			&::after {
+				transform: translateY(0%);
+			}
+		}
 	}
 }
