@@ -36,15 +36,18 @@
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">style1</h2>
+							<h2 class="g-h2">Default</h2>
 						</div>
 						<div class="g-section-body">
-							<div class="step">
-								<ol class="step-list">
-									<li class="step-item is_completed">Step1</li>
-									<li class="step-item is_current" aria-current="step">Step2</li>
-									<li class="step-item">Step3</li>
-								</ol>
+							<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+							<div class="toast-container">
+								<div id="liveToast" class="toast " role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-delay="1000">
+									<div class="toast-body">
+										<p>Hello, world! This is a toast message.</p>
+										<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -57,6 +60,20 @@
 		<div data-include="include_footer.html"></div>
 		<!-- // Footer -->
 	</div>
+
+	<script>
+		// https://getbootstrap.com/docs/5.3/components/toasts/
+		const toastTrigger = document.getElementById('liveToastBtn')
+		const toastLiveExample = document.getElementById('liveToast')
+
+		if (toastTrigger) {
+			const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+			toastTrigger.addEventListener('click', () => {
+				toastBootstrap.show()
+			})
+		}
+	</script>
+
 </body>
 
 </html>
