@@ -8,14 +8,15 @@
 .g-section + .g-section {margin-top:40px;}
 .g-section-head {position:relative; padding-bottom:10px; border-bottom:1px solid #eee;}
 .g-section-body {margin-top:20px;}
-.g-section xmp {max-height:200px; overflow:auto; border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 12px; padding:0 20px; word-break: break-all; white-space:pre-wrap;}
+.g-section xmp {max-height:200px; overflow:auto; border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 13px; padding:0 20px; word-break: break-all; white-space:pre-wrap;}
 
 /* 목차 */
 .g-h1 {margin:30px 0; font-size:28px; font-weight:normal;}
 .g-h2 {font-size:22px; font-weight:normal;}
 .g-h2:before {display:block; width:20px; height:1px; margin-bottom:5px; background-color:#222;}
-.g-h3 {margin-top:30px; margin-bottom:10px; font-size:16px; font-weight:normal;}
+.g-h3 {margin-top:30px; margin-bottom:15px; font-size:16px; font-weight:500; color:#d3002e;}
 .g-h3:first-child {margin-top:0;}
+.g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}
 .g-h4 {margin-top:25px; margin-bottom:10px; color:#d3002e;}
 .g-h3 + .g-h4 {margin-top:10px;}
 .g-h4:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}

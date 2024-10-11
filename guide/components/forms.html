@@ -31,138 +31,247 @@
 			<main id="content" class="content" role="main">
 				<div class="content-body">
 					<div class="in-sec">
-						<h1 class="g-h1">Form</h1>
+						<h1 class="g-h1">Forms</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">Elements</h2>
+							<h2 class="g-h2">기본가이드</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">Textbox / Select / Textarea </h3>
-							<div class="form-controls">
-								<input type="text" name="" id="" value="" placeholder="Placeholder" class="input demo1">
-								<input type="text" name="" id="" value="Value" placeholder="Placeholder"
-									class="input demo1">
-								<input type="text" name="" id="" value="" placeholder="Placeholder" class="input demo1"
-									readonly>
-								<input type="text" name="" id="" value="" placeholder="Placeholder" class="input demo1"
-									disabled>
-							</div>
-							<br>
-							<div class="form-controls">
-								<select name="" id="" class="select demo1">
-									<option value="">콤보상자1</option>
-									<option value="">콤보상자2</option>
-								</select>
-								<select name="" id="" class="select demo1" aria-readonly="true">
-									<option value="">콤보상자1</option>
-									<option value="">콤보상자2</option>
-								</select>
-								<select name="" id="" class="select demo1" disabled>
-									<option value="">콤보상자1</option>
-									<option value="">콤보상자2</option>
-								</select>
-							</div>
-							<br>
-							<textarea cols="50" rows="2" class="input demo1"></textarea>
+							<ul class="g-desc">
+								<li>&lt;label&gt; 태그는 for/id 반드시 연결한다.</li>
+								<li>&lt;label&gt; 생략된 input, select, textbox 는 반드시 title을 추가한다.</li>
+								<li>title은 가급적 입력형식 우선순위로 설명한다. </li>
+								<li>서식들의 아이디는 다른 기능과 중복되지 않도록 frm아이디 규칙을 적용한다.</li>
+							</ul>
+							<xmp style="max-height: 400px;">
+<div class="frm-tit">
+	<label for="frm아이디" class="tit">라벨</label>
+</div>
 
-							<h3 class="g-h3">File Attach</h3>
-							<h4 class="g-h4">기본</h4>
-							<div class="form-controls">
-								<span class="file-add demo1">
-									<input type="text" id="sFilesName11" class="input demo1" title="첨부된 파일명">
-									<label for="sFiles1" class="btn demo1 type-attach" role="button">
-										<span><input type="file" name="sFiles1" id="sFiles1" value="찾아보기" tabindex="-1"
-												aria-hidden="true" onchange="fileAttachSrc(this, event)">첨부</span>
-									</label>
-								</span>
+<div class="frm-inp">
+	<input type="text" name="" id="frm아이디" value="" placeholder="Placeholder" title="" class="inp" />
+</div>
+
+<div class="frm-inp">
+	<input type="text" name="" id="frm아이디" value="" placeholder="Placeholder" title="" class="inp" />
+	<button type="button" class="btn"></button>
+</div>
+
+<div class="frm-textarea">
+	<textarea name="" id="frm아이디" cols="50" rows="2" class="textarea"></textarea>
+</div>
+
+<div class="frm-sel">
+	<select name="" id="frm아이디"  title="" class="sel">
+		<option value="">콤보상자1</option>
+		<option value="">콤보상자2</option>
+	</select>
+</div>
+
+<div class="frm-chk">
+	<input type="checkbox" name="" id="frm아이디" class="chk" />
+	<label for="frm아이디"><span>체크박스</span></label>
+</div>
+
+<div class="frm-rdo">
+	<input type="radio" name="" id="frm아이디" class="rdo" />
+	<label for="frm아이디"><span>체크박스</span></label>
+</div>
+
+<div class="frm-file">
+	<input type="text" id="frm제목아이디" title="첨부 파일명" class="input" readonly />
+	<label class="btn" role="button">
+		<input type="file" name="" value="찾아보기" tabindex="-1" aria-hidden="true" />
+		첨부
+	</label>
+</div>
+							</xmp>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Input</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="form-tit">
+								<label for="frmInp1" class="tit">기본</label>
 							</div>
-							<h4 class="g-h4">추가삭제</h4>
-							<div class="form-controls type-file">
-								<div class="file-add-row">
-									<span class="file-add demo1">
-										<input type="text" id="sFileName21" class="input demo1" title="첨부된 파일명">
-										<label for="sFilesAdd21" class="btn demo1 btn-file" role="button">
-											<span><input type="file" name="sFilesAdd21" id="sFilesAdd21" value="찾아보기"
-													tabindex="-1" aria-hidden="true"
-													onchange="fileAttachSrc(this, event)">첨부</span>
-										</label>
-										<button type="button" class="btn demo1 type-add"
-											onclick="fileAttachAdd(this, 'sFilesAdd2')"><span>추가</span></button>
-										<button type="button" class="btn demo1 type-remove"
-											onclick="fileAttachRemove(this)"><span>삭제</span></button>
-									</span>
+							<div class="frm-inp">
+								<input type="text" name="" id="frmInp1" value="" placeholder="Placeholder" title="" class="inp" />
+								<input type="text" name="" value="" placeholder="Placeholder" title="" class="inp" disabled />
+							</div>
+							<br>
+							<br>
+							<div class="form-tit">
+								<label for="frmInp1" class="tit">삭제</label>
+							</div>
+							<div class="frm-inp">
+								<input type="text" name="" id="frmInp2" value="입력된 글자 (삭제가능)" placeholder="Placeholder" title="" class="inp" />
+								<div class="on-right">
+									<button type="button" class="btn btn-clear" onclick="setInputClear('#frmInp2')"><i class="icn">삭제</i></button>
 								</div>
 							</div>
-							<h4 class="g-h4">미리보기</h4>
-							<div class="form-controls type-file">
-								<div id="sFilePreview31" class="file-preview"></div>
-								<span class="file-add demo1">
-									<input type="text" id="sFileName31" class="input demo1" title="첨부된 파일명">
-									<label for="sFilesAdd31" class="btn demo1 btn_file" role="button">
-										<span><input type="file" name="sFilesAdd31" id="sFilesAdd31" value="찾아보기"
-												tabindex="-1" aria-hidden="true"
-												onchange="fileAttachSrc(this, event); fileAttachPreview('sFilePreview31', event)">첨부</span>
-									</label>
-								</span>
+							<div class="frm-inp">
+								<input type="text" name="" id="frmInp3" value="입력된 글자 (Disabled)" placeholder="Placeholder" title="" class="inp" disabled />
+								<div class="on-right">
+									<button type="button" class="btn btn-clear" onclick="setInputClear('#frmInp3')"><i class="icn">삭제</i></button>
+								</div>
 							</div>
-							<h3 class="g-h3">Checkbox / Radio / Switch</h3>
-							<div class="check-demo1-area">
-								<span class="check demo1">
-									<input type="checkbox" name="sCheck1" id="sCheck11" checked>
-									<label for="sCheck11"><span class="blind">숨김처리</span></label>
-								</span>
-								<span class="check demo1">
-									<input type="checkbox" name="sCheck1" id="sCheck12">
-									<label for="sCheck12"><span>Label</span></label>
-								</span>
-								<span class="check demo1">
-									<input type="checkbox" name="sCheck1" id="sCheck13" disabled>
-									<label for="sCheck13"><span>Disabled</span></label>
-								</span>
-								<span class="check demo1">
-									<input type="checkbox" name="sCheck1" id="sCheck14">
-									<label for="sCheck14"><span>라벨이<br>두줄인 경우</span></label>
-								</span>
+							<div class="frm-inp">
+								<input type="text" name="" id="frmInp4" value="입력된 글자 (Readonly)" placeholder="Placeholder" title="" class="inp" readonly />
+								<div class="on-right">
+									<button type="button" class="btn btn-clear" onclick="setInputClear('#frmInp4')"><i class="icn">삭제</i></button>
+								</div>
 							</div>
 							<br>
-							<div class="radio-demo1-area">
-								<span class="radio demo1">
-									<input type="radio" name="sRadio1" id="sRadio11" checked>
-									<label for="sRadio11"><span class="blind">숨김처리</span></label>
-								</span>
-								<span class="radio demo1">
-									<input type="radio" name="sRadio1" id="sRadio12">
-									<label for="sRadio12"><span>Label</span></label>
-								</span>
-								<span class="radio demo1">
-									<input type="radio" name="sRadio1" id="sRadio13" disabled>
-									<label for="sRadio13"><span>Disabled</span></label>
-								</span>
-								<span class="radio demo1">
-									<input type="radio" name="sRadio1" id="sRadio14">
-									<label for="sRadio14"><span>라벨이<br>두줄인 경우</span></label>
-								</span>
-							</div>
 							<br>
-							<div class="switch-demo1-area">
-								<span class="switch demo1">
-									<input type="checkbox" name="sSwitch1" id="sSwitch11" value="">
-									<label for="sSwitch11"></label>
-								</span>
-								<span class="switch demo1">
-									<input type="checkbox" name="sSwitch1" id="sSwitch12" value="" checked>
-									<label for="sSwitch12"></label>
-								</span>
-								<span class="switch demo1">
-									<input type="checkbox" name="sSwitch1" id="sSwitch13" value="" disabled>
-									<label for="sSwitch13"></label>
-								</span>
-								<span class="switch demo1">
-									<input type="checkbox" name="sSwitch1" id="sSwitch14" value="" checked disabled>
-									<label for="sSwitch14"></label>
-								</span>
+							<div class="form-tit">
+								<label for="frmInp5" class="tit">검색</label>
+							</div>
+							<div class="frm-inp">
+								<input type="text" name="" id="frmInp5" value="입력된 글자 (삭제가능)" placeholder="Placeholder" title="" class="inp" />
+								<div class="on-right">
+									<button type="button" class="btn btn-clear" onclick="setInputClear('#frmInp5')"><i class="icn">삭제</i></button>
+									<button type="button" class="btn"><i class="icn">검색</i></button>
+								</div>
+							</div>
+							<div class="frm-inp">
+								<input type="text" name="" id="frmInp6" value="입력된 글자 (Disabled)" placeholder="Placeholder" title="" class="inp" disabled />
+								<div class="on-right">
+									<button type="button" class="btn btn-clear" onclick="setInputClear('#frmInp6')"><i class="icn">삭제</i></button>
+									<button type="button" class="btn"><i class="icn">검색</i></button>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Textarea</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="frm-textarea">
+								<textarea name="" id="frm아이디" cols="50" rows="5" class="textarea"></textarea>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Select</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="frm-sel">
+								<select name="" id="frm아이디"  title="" class="sel">
+									<option value="">콤보상자1</option>
+									<option value="">콤보상자2</option>
+								</select>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Checkbox</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="frm-chk">
+								<input type="checkbox" name="sCheck1" id="sCheck11" checked>
+								<label for="sCheck11"><span class="blind">숨김처리</span></label>
+							</div>
+							<div class="frm-chk">
+								<input type="checkbox" name="sCheck1" id="sCheck12">
+								<label for="sCheck12"><span>Label</span></label>
+							</div>
+							<div class="frm-chk">
+								<input type="checkbox" name="sCheck1" id="sCheck13" disabled>
+								<label for="sCheck13"><span>Disabled</span></label>
+							</div>
+							<div class="frm-chk">
+								<input type="checkbox" name="sCheck1" id="sCheck14">
+								<label for="sCheck14"><span>라벨이<br>두줄인 경우</span></label>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Radio</h2>
+						</div>
+						<div class="g-section-body">
+
+							<div class="frm-rdo">
+								<input type="radio" name="sRadio1" id="sRadio11" checked>
+								<label for="sRadio11"><span class="blind">숨김처리</span></label>
+							</div>
+							<div class="frm-rdo">
+								<input type="radio" name="sRadio1" id="sRadio12">
+								<label for="sRadio12"><span>Label</span></label>
+							</div>
+							<div class="frm-rdo">
+								<input type="radio" name="sRadio1" id="sRadio13" disabled>
+								<label for="sRadio13"><span>Disabled</span></label>
+							</div>
+							<div class="frm-rdo">
+								<input type="radio" name="sRadio1" id="sRadio14">
+								<label for="sRadio14"><span>라벨이<br>두줄인 경우</span></label>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Swich</h2>
+						</div>
+						<div class="g-section-body">
+
+							<div class="frm-swich">
+								<input type="checkbox" name="sSwitch1" id="sSwitch11" value="">
+								<label for="sSwitch11"></label>
+							</div>
+							<div class="frm-swich">
+								<input type="checkbox" name="sSwitch1" id="sSwitch12" value="" checked>
+								<label for="sSwitch12"></label>
+							</div>
+							<div class="frm-swich">
+								<input type="checkbox" name="sSwitch1" id="sSwitch13" value="" disabled>
+								<label for="sSwitch13"></label>
+							</div>
+							<div class="frm-swich">
+								<input type="checkbox" name="sSwitch1" id="sSwitch14" value="" checked disabled>
+								<label for="sSwitch14"></label>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">File</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="frm-inp frm-file">
+								<input type="text" id="frm제목아이디" title="첨부 파일명" class="inp" readonly />
+								<label class="btn btn-frm" role="button">
+									<input type="file" name="" value="찾아보기" tabindex="-1" aria-hidden="true" class="file" />
+									첨부
+								</label>
 							</div>
 						</div>
 					</section>

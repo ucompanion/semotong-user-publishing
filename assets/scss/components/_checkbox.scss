@@ -1,20 +1,270 @@
 @charset "utf-8";
+
 /*-------------------------------------------------------------------
 	분류그룹 : 체크박스, 라디오
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ 공통
+	@@ Checkbox
 -------------------------------------------------------------------*/
-/* 기본 */
+/* 스타일 */
+.frm-chk {
+	display: inline-flex;
+	position: relative;
+	margin: 5px 0;
+	line-height: 1;
+	vertical-align: top
+}
 
+.frm-chk label {
+	display: inline-flex;
+	position: relative;
+	min-width: 20px;
+	min-height: 20px;
+	padding-top: 1px;
+	font-size: 13px;
+	line-height: 20px;
+}
 
-/* 강조 */
+.frm-chk label span {
+	display: inline-block;
+	padding-left: 28px;
+}
+
+.frm-chk>input {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+.frm-chk>input,
+.frm-chk label:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* Checked */
+.frm-chk>input:checked {
+	border-color: #2496ee;
+}
+
+.frm-chk>input:checked+label:after {
+	content: '';
+	left: 5px;
+	top: 5px;
+	width: 10px;
+	height: 7px;
+	background: none;
+	border-left: 2px solid #2496ee;
+	border-bottom: 2px solid #2496ee;
+	transform: rotate(-45deg);
+}
+
+/* Focused */
+.frm-chk>input.is-focused,
+.frm-chk>input:hover,
+.frm-chk>input:focus {
+	border-color: #888;
+}
+
+.frm-chk>input:checked:focus,
+.frm-chk>input:checked:hover {
+	border-color: #2496ee;
+	transition: all 0.3s;
+}
+
+/* Disabled */
+.frm-chk>input[disabled]+label {
+	color: #999;
+}
+
+.frm-chk>input[disabled] {
+	background-color: #f0f0f0;
+}
+
+.frm-chk>input[disabled]:focus,
+.frm-chk>input[disabled]:hover {
+	border-color: #ddd;
+}
+
+.frm-chk>input[disabled]:checked+label:after {
+	border-color: #888;
+}
+
+.frm-chk>input[disabled]:checked,
+.frm-chk>input[disabled]:checked:focus,
+.frm-chk>input[disabled]:checked:hover {
+	border-color: #888;
+}
 
 /*-------------------------------------------------------------------
-	@@ 유형
+	@@ Radio
 -------------------------------------------------------------------*/
-/* 스타일1 */
+/* 스타일 */
+.frm-rdo {
+	display: inline-flex;
+	position: relative;
+	margin: 5px 0;
+	line-height: 1;
+	vertical-align: top;
+}
 
+.frm-rdo label {
+	display: inline-flex;
+	position: relative;
+	min-width: 20px;
+	min-height: 20px;
+	padding-top: 1px;
+	font-size: 13px;
+	line-height: 18px;
+}
 
-/* 스타일2 */
+.frm-rdo label span {
+	display: inline-block;
+	padding-left: 28px;
+}
+
+.frm-rdo>input {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.frm-rdo>input,
+.frm-rdo label:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* Checked */
+.frm-rdo>input:checked {
+	background-color: #fff;
+	border-color: #2496ee;
+}
+
+.frm-rdo>input:checked+label:after {
+	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #2496ee;
+}
+
+/* Focused */
+.frm-rdo>input.is-focused,
+.frm-rdo>input:hover,
+.frm-rdo>input:focus {
+	border-color: #888;
+}
+
+.frm-rdo>input:checked:focus,
+.frm-rdo>input:checked:hover {
+	border-color: #2496ee;
+	transition: all 0.3s;
+}
+
+/* Disabled */
+.frm-rdo>input[disabled]+label {
+	color: #999;
+}
+
+.frm-rdo>input[disabled] {
+	background-color: #f0f0f0;
+}
+
+.frm-rdo>input[disabled]:focus,
+.frm-rdo>input[disabled]:hover {
+	border-color: #ddd;
+}
+
+.frm-rdo>input[disabled]:checked+label:after {
+	background: #888;
+}
+
+.frm-rdo>input[disabled]:checked,
+.frm-rdo>input[disabled]:checked:focus,
+.frm-rdo>input[disabled]:checked:hover {
+	border-color: #888;
+}
+
+/*-------------------------------------------------------------------
+	@@ Swich
+-------------------------------------------------------------------*/
+/* 스타일 */
+.frm-swich {
+	display: inline-flex;
+	position: relative;
+	vertical-align: top;
+}
+
+.frm-swich label {
+	display: inline-flex;
+	width: 80px;
+}
+
+.frm-swich label:before,
+.frm-swich label:after {
+	content: '';
+}
+
+.frm-swich label:before {
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	background-color: #f0f0f0;
+	border-radius: 15px;
+	vertical-align: top;
+}
+
+.frm-swich input,
+.frm-swich label:after {
+	position: absolute;
+	left: 2px;
+	top: 50%;
+	z-index: 1;
+	width: 40px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	border-radius: 13px;
+	overflow: hidden;
+	background-color: #aaa;
+	color: #fff;
+	font-size: 12px;
+	transform: translateY(-50%);
+	transition: all 0.3s;
+}
+
+.frm-swich input {
+	z-index: 0;
+	border: 0;
+	height: 24px;
+}
+
+.frm-swich input:checked,
+.frm-swich input:checked+label:after {
+	left: calc(100% - 42px);
+}
+
+.frm-swich input:checked+label:after {
+	background-color: #2496ee;
+}
+
+.frm-swich input+label:after {
+	content: 'OFF';
+}
+
+.frm-swich input:checked+label:after {
+	content: 'ON';
+}
+
+.frm-swich input[disabled]+label:before {
+	background-color: #ddd;
+}
