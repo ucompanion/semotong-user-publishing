@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Steps | 세모통 스타일가이드</title>
+	<title>Toast | 세모통 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -31,18 +31,56 @@
 			<main id="content" class="content" role="main">
 				<div class="content-body">
 					<div class="in-sec">
-						<h1 class="g-h1">Steps</h1>
+						<h1 class="g-h1">Toast</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">Default</h2>
+							<h2 class="g-h2">General</h2>
 						</div>
 						<div class="g-section-body">
-							<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+							<ul class="g-desc">
+								<li><a href="https://getbootstrap.com/docs/5.3/components/toasts/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/toasts/</a></li>
+								<li>탭 기능 : data-bs-toggle="tab" data-bs-target="#패널아이디"</li>
+							</ul>
+							<xmp>
+<button type="button" class="btn" id="liveToastBtn">Show live toast</button>
+
+<div class="toast-container">
+	<div id="liveToast" class="toast fade" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true">
+		<div class="toast-body">
+			<p>Hello, world! This is a toast message.</p>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+	</div>
+</div>
+
+<script>
+	const toastTrigger = document.getElementById('liveToastBtn')
+	const toastLiveExample = document.getElementById('liveToast')
+
+	if (toastTrigger) {
+		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+		toastTrigger.addEventListener('click', () => {
+			toastBootstrap.show()
+		})
+	}
+</script>
+							</xmp>
+						</div>
+					</section>
+					<!-- // Section -->
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Styles</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">Basic</h3>
+							<button type="button" class="btn btn-basic primary" id="liveToastBtn">Show live toast</button>
 
 							<div class="toast-container">
-								<div id="liveToast" class="toast " role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-delay="1000">
+								<div id="liveToast" class="toast fade" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true">
 									<div class="toast-body">
 										<p>Hello, world! This is a toast message.</p>
 										<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -51,6 +89,7 @@
 							</div>
 						</div>
 					</section>
+					<!-- // Section -->
 				</div>
 			</main>
 		</div>

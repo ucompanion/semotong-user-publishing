@@ -52,9 +52,9 @@ $icn-sizes: (16, 20, 24, 28, 32);
 // SVG Background Icons (파일명, 확장자)
 $bg-icons: (
 	// 아이콘 적용 가이드
-	// (icn-24-demo-edit-bk, svg), 호버 없음 - 기본 아이콘
-	// (icn-24-demo-down-br, png, $color-primary), 호버 컬러변경 - 마스크 처리방식
-	// (icn-24-demo-medal-none, png, icn-24-demo-medal-hover, png), 호버 파일변경 - 포지션 처리방식 (깜빡임 대응으로 처음부터 불러오기)
+	// (기본이미지, 확장자), 호버 없음 - 기본 아이콘
+	// (기본이미지, 확장자, 호버컬러), 호버 컬러변경 - 마스크 처리방식
+	// (기본이미지, 확장자, 호버이미지, 호버확장자), 호버 파일변경 - 포지션 처리방식 (깜빡임 대응으로 처음부터 불러오기)
 
 	// Demo 아이콘 예시
 	(icn-24-demo-edit-bk, svg),

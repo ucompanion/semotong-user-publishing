@@ -7,14 +7,14 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 /* 기본 */
-.tab-list {
+.nav-tabs {
 	display: flex;
 	gap: 20rem;
 	.tab-link:disabled {
 		opacity: 0.75;
 	}
 }
-.tab-panel {
+.tab-pane {
 	display: none;
 	&.active {
 		display: block;

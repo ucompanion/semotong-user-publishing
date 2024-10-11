@@ -18,11 +18,6 @@
 	<script src="../../assets/js/ui/ui.common.js"></script>
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 작업용 환경설정(개발적용안함) -->
 	<link rel="stylesheet" type="text/css" href="css/guide.css" /><!-- 가이드전용 -->
-	<style>
-		.acco-cont {
-			padding: 5px 10px;
-		}
-	</style>
 </head>
 
 <body class="pub_only"><!-- pub_only 퍼블리싱전용 클래스 (개발에 추가하지 않습니다.) -->
@@ -41,133 +36,127 @@
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">Action</h2>
+							<h2 class="g-h2">General</h2>
 						</div>
 						<div class="g-section-body">
-							<div class="grid demo1">
-								<div class="col col-4">
-									<h3 class="g-h3">data-sync="true" data-toggle="true"</h3>
-									<div class="acco-demo-area">
-										<ul class="acco demo1" data-sync="true" data-toggle="true">
-											<li class="acco-item is-active">
-												<div class="acco-title">
-													<strong>Accodion Title11</strong>
-													<button type="button" aria-controls="acco11" aria-expanded="true"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco11" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-											<li class="acco-item">
-												<div class="acco-title">
-													<strong>Accodion Title12</strong>
-													<button type="button" aria-controls="acco12" aria-expanded="false"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco12" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-											<li class="acco-item">
-												<div class="acco-title">
-													<strong>Accodion Title13</strong>
-													<button type="button" aria-controls="acco13" aria-expanded="false"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco13" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="col col-4">
-									<h3 class="g-h3">data-sync="true"</h3>
-									<div class="acco-demo-area">
-										<ul class="acco demo1" data-sync="true">
-											<li class="acco-item">
-												<div class="acco-title">
-													<strong>Accodion Title11</strong>
-													<button type="button" aria-controls="acco21" aria-expanded="false"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco21" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-											<li class="acco-item is-active">
-												<div class="acco-title">
-													<strong>Accodion Title12</strong>
-													<button type="button" aria-controls="acco22" aria-expanded="true"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco22" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-											<li class="acco-item">
-												<div class="acco-title">
-													<strong>Accodion Title13</strong>
-													<button type="button" aria-controls="acco23" aria-expanded="false"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco23" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="col col-4">
-									<h3 class="g-h3">data-toggle="true"</h3>
-									<div class="acco-demo-area">
-										<ul class="acco demo1" data-toggle="true">
-											<li class="acco-item">
-												<div class="acco-title">
-													<strong>Accodion Title11</strong>
-													<button type="button" aria-controls="acco31" aria-expanded="true"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco31" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-											<li class="acco-item ">
-												<div class="acco-title">
-													<strong>Accodion Title12</strong>
-													<button type="button" aria-controls="acco32" aria-expanded="false"
-														class="btn acco-toggle"><span>자세히보기</span></button>
-												</div>
-												<div id="acco32" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-											<li class="acco-item is-disaebld">
-												<div class="acco-title">
-													<strong>Accodion Title13 (Disabled)</strong>
-													<button type="button" aria-controls="acco33" aria-expanded="false"
-														class="btn acco-toggle" disabled><span>자세히보기</span></button>
-												</div>
-												<div id="acco33" class="acco-cont">
-													<p>Accodion Content</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							<ul class="g-desc">
+								<li><a href="https://getbootstrap.com/docs/5.3/components/accordion/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/accordion/</a></li>
+								<li>탭 기능 : data-bs-toggle="tab" data-bs-target="#패널아이디"</li>
+							</ul>
+							<xmp>
+<div class="accordion accordion-유형" id="accordionExample">
+	<div class="accordion-item">
+		<h2 class="accordion-header">
+			<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+				aria-expanded="true" aria-controls="collapseOne">
+				Accordion Item #1
+			</button>
+		</h2>
+		<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+			<div class="accordion-body">
+				<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+				plugin adds the appropriate classes that we use to style each element. These classes control the overall
+				appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+				custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+				within the <code>.accordion-body</code>, though the transition does limit overflow.
+			</div>
+		</div>
+	</div>
+	<div class="accordion-item">
+		<h2 class="accordion-header">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				Accordion Item #2
+			</button>
+		</h2>
+		<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+			<div class="accordion-body">
+				<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+				plugin adds the appropriate classes that we use to style each element. These classes control the overall
+				appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+				custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+				within the <code>.accordion-body</code>, though the transition does limit overflow.
+			</div>
+		</div>
+	</div>
+	<div class="accordion-item">
+		<h2 class="accordion-header">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				Accordion Item #3
+			</button>
+		</h2>
+		<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+			<div class="accordion-body">
+				<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+				plugin adds the appropriate classes that we use to style each element. These classes control the overall
+				appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+				custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+				within the <code>.accordion-body</code>, though the transition does limit overflow.
+			</div>
+		</div>
+	</div>
+</div>
+							</xmp>
 						</div>
 					</section>
 					<!-- // Section -->
-
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">style1</h2>
+							<h2 class="g-h2">Basic</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">제목</h3>
+							<div class="accordion accordion-유형" id="accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+											Accordion Item #1
+										</button>
+									</h2>
+									<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+											plugin adds the appropriate classes that we use to style each element. These classes control the overall
+											appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+											custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+											within the <code>.accordion-body</code>, though the transition does limit overflow.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											Accordion Item #2
+										</button>
+									</h2>
+									<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+											plugin adds the appropriate classes that we use to style each element. These classes control the overall
+											appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+											custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+											within the <code>.accordion-body</code>, though the transition does limit overflow.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											Accordion Item #3
+										</button>
+									</h2>
+									<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+											plugin adds the appropriate classes that we use to style each element. These classes control the overall
+											appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+											custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+											within the <code>.accordion-body</code>, though the transition does limit overflow.
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</section>
 					<!-- // Section -->
@@ -180,6 +169,20 @@
 		<div data-include="include_footer.html"></div>
 		<!-- // Footer -->
 	</div>
+
+	<script>
+		// https://getbootstrap.com/docs/5.3/components/toasts/
+		const toastTrigger = document.getElementById('liveToastBtn')
+		const toastLiveExample = document.getElementById('liveToast')
+
+		if (toastTrigger) {
+			const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+			toastTrigger.addEventListener('click', () => {
+				toastBootstrap.show()
+			})
+		}
+	</script>
+
 </body>
 
 </html>

@@ -5,11 +5,10 @@
 -------------------------------------------------------------------*/
 /* Section */
 .g-section {color:#222;}
-.g-section a { color:#222;}
 .g-section + .g-section {margin-top:40px;}
 .g-section-head {position:relative; padding-bottom:10px; border-bottom:1px solid #eee;}
 .g-section-body {margin-top:20px;}
-.g-section xmp {border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 12px; padding:0 20px; word-break: break-all; white-space:pre-wrap;}
+.g-section xmp {max-height:200px; overflow:auto; border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 12px; padding:0 20px; word-break: break-all; white-space:pre-wrap;}
 
 /* 목차 */
 .g-h1 {margin:30px 0; font-size:28px; font-weight:normal;}
@@ -50,6 +49,7 @@ ul.g-desc strong {font-weight: 700;}
 .g-tbl-type2 table tbody + tbody tr:first-child td {border-top:1px solid #666;}
 
 .g-code {line-height:1.6;}
+.g-section .g-link {color: #2496ee; text-decoration: underline;}
 
 /*-------------------------------------------------------------------
 	Demo Components
