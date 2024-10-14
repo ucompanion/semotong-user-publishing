@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Cards | 세모통 스타일가이드</title>
+	<title>Dropdown | 세모통 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -31,7 +31,7 @@
 			<main id="content" class="content" role="main">
 				<div class="content-body">
 					<div class="in-sec">
-						<h1 class="g-h1">Cards</h1>
+						<h1 class="g-h1">Dropdown</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section in-sec">
@@ -39,18 +39,43 @@
 							<h2 class="g-h2">기본 구조</h2>
 						</div>
 						<div class="g-section-body">
+							<ul class="g-desc">
+								<li><a href="https://getbootstrap.com/docs/5.3/components/dropdowns/" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/dropdowns/</a></li>
+							</ul>
 							<xmp>
-<div class="card card-유형">
-	<div class="card-thumb">
-		<img src="" alt="이름 썸네일" />
-	</div>
-	<div class="card-content">
-		...
-	</div>
+<div class="dropdown dropdown-유형">
+	<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		Dropdown button
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="#">Action</a></li>
+		<li><a class="dropdown-item" href="#">Another action</a></li>
+		<li><a class="dropdown-item" href="#">Something else here</a></li>
+	</ul>
 </div>
 							</xmp>
 						</div>
 					</section>
+					<!-- // Section -->
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">Styles</h2>
+						</div>
+						<div class="g-section-body">
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Dropdown button
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Action</a></li>
+									<li><a class="dropdown-item" href="#">Another action</a></li>
+									<li><a class="dropdown-item" href="#">Something else here</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<!-- // Section -->
 				</div>
 			</main>
 		</div>
@@ -60,6 +85,12 @@
 		<div data-include="include_footer.html"></div>
 		<!-- // Footer -->
 	</div>
+
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+	</script>
+
 </body>
 
 </html>
