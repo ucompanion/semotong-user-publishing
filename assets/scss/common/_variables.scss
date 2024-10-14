@@ -2,8 +2,12 @@
 //-------------------------------------------------------------------
 //    Variables
 //-------------------------------------------------------------------
+// 웹폰트
+$font-primary: 'Pretendard Variable', 'sans-serif';
+$font-secondary: 'YJ_Obang';
+
 // 레이아웃 프레임
-$height-header: 90px;
+$height-header: 100rem;
 $padding-sidespacer: 25rem;
 
 // 컬러 맥락
@@ -12,7 +16,7 @@ $color-body: #444; // 내용 (body 기본값으로 사용)
 $color-info: #999; // 안내 임시값
 
 // 컬러 강조
-$color-primary: #A00060; // 첫번째 임시값
+$color-primary: #FF6738; // 첫번째 임시값
 $color-secondary: orange; // 두번째 임시값
 $color-point: purple; // 기타 임시값
 
