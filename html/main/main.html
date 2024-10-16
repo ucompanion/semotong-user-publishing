@@ -17,9 +17,16 @@
 	<script src="../../assets/js/ui/ui.default.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
 
 	<!-- UI 스크립트 호출 -->
-	<script></script>
+	<script>
+		window.onload = function() {
+			// gif가 캐시를 지워야만 다시 재생되는 이슈 대응
+			const gif = document.getElementById('visualGif');
+			visualGif.src = '../../assets/images/main/visual-ani.gif?' + new Date().getTime();
+		}
+	</script>
 </head>
 
 <body>
@@ -36,59 +43,99 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<div class="content main-page in-sec">
-				<!-- Title -->
-				<div class="main-title-sec">
-					<h1 class="h1">나에게 맞는 <br>요금이 궁금하세요?</h1>
-					<button type="button" class="btn">
-						<span>맞춤 요금 추천받기</span>
-						<i class="icn icn-18-link-right" aria-label="페이지 이동"></i>
-					</button>
-				</div>
-				<!-- // Title -->
+			<div class="content main-page">
+				<h1 class="blind">세모통 홈</h1>
 
-				<!-- Grid -->
-				<div class="grid-container">
-					<div class="grid-item column1 sec-1">
+				<!-- 비주얼 -->
+				<div class="main-visual-sec out-sec">
+					<div class="in-sec">
 						<div class="sec-header">
-							<h2 class="h2">내게 맞는<br>요금제 알아보기</h2>
-							<p class="explain">내 사용패턴에 맞는<br>요금제를 찾아보세요.</p>
+							<h2 class="h2">
+								<span class="blind">나에게 맞는 요금이 궁금하세요?</span>
+							</h2>
+							<button type="button" class="ui-btn">
+								<span>맞춤 요금 추천받기</span>
+								<i class="ui-icn icn-18-link-right-bk" aria-label="페이지 이동"></i>
+							</button>
 						</div>
-					</div>
-					<div class="grid-item column2 sec-2">
-						<div class="sec-header">
-							<h2 class="h2">세모통<br>추천딜</h2>
-							<p class="explain">세모통 추천봇에게<br>맞춤 요금 추천 받기!</p>
-						</div>
-					</div>
-					<div class="grid-item column2-row2 sec-3">
-						<div class="sec-header">
-							<h2 class="h2">세모통<br>추천 요금제</h2>
-							<p class="explain">이런 요금제는 어떠세요?</p>
-						</div>
-					</div>
-					<div class="grid-item column3 sec-4">
-						<div class="sec-header">
-							<h2 class="h2">신규 가입<br>이벤트</h2>
-							<p class="explain">신세계 상품권 5만원 증정</p>
-						</div>
-
-					</div>
-					<div class="grid-item row3-column1 sec-5">
-						<div class="sec-header">
-							<h2 class="h2">세모통 파트너사</h2>
-							<p class="explain">아래 통신사들과 함께 합니다.</p>
-						</div>
-
-					</div>
-					<div class="grid-item row3-column3 sec-6">
-						<div class="sec-header">
-							<h2 class="h2">베스트 리뷰</h2>
-							<p class="explain">후기를 확인해보세요.</p>
+						<div class="sec-body">
+							<div class="visual-ani">
+								<img id="visualGif" src="../../assets/images/main/visual-ani.gif" alt="마음껏 무제한, 나는 실속파, 가성비만 한다, 요금제 헌터" />
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- // Grid -->
+				<!-- // 비주얼 -->
+
+				<!-- 세모통 추천딜 -->
+				<div class="main-recommdeal-sec out-sec">
+					<div class="in-sec">
+						<div class="sec-header">
+							<h2 class="h2">세모통 추천딜</h2>
+							<p class="h2-explain">세모통 추천봇에게 맞춤 요금 추천 받기!</p>
+						</div>
+						<div class="sec-body">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="recom-item">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 세모통 추천딜 -->
+
+				<!-- 나에게 맞는 요금제 -->
+				<div class="main-myplan-sec out-sec">
+					<div class="in-sec">
+						<div class="sec-body">
+						</div>
+					</div>
+				</div>
+				<!-- // 나에게 맞는 요금제 -->
+
+				<!-- 틀별한 혜택 -->
+				<div class="main-special-sec out-sec">
+					<div class="in-sec">
+						<div class="sec-header">
+							<h2 class="h2">세모통이 드리는 특별한 혜택</h2>
+							<p class="h2-explain">진행중인 이벤트를 확인해보세요.</p>
+						</div>
+						<div class="sec-body">
+						</div>
+					</div>
+				</div>
+				<!-- // 틀별한 혜택 -->
+
+				<!-- 서비스 리뷰 -->
+				<div class="main-review-sec out-sec">
+					<div class="in-sec">
+						<div class="sec-header">
+							<h2 class="h2">세모통 서비스 리뷰입니다.</h2>
+							<p class="h2-explain">소중한 고객님들의 후기를 확인해보세요.</p>
+						</div>
+						<div class="sec-body">
+						</div>
+					</div>
+				</div>
+				<!-- // 서비스 리뷰 -->
+
+				<!-- 파트너사 -->
+				<div class="main-partner-sec out-sec">
+					<div class="in-sec">
+						<div class="sec-header">
+							<h2 class="h2">세모통 파트너사입니다.</h2>
+							<p class="h2-explain">아래 통신사들과 함께 하고 있습니다.</p>
+						</div>
+						<div class="sec-body">
+						</div>
+					</div>
+				</div>
+				<!-- // 파트너사 -->
+
 			</div>
 			<!-- // content -->
 		</main>

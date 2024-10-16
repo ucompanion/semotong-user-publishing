@@ -7,7 +7,7 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 /* 기본 */
-.icn {
+.ui-icn {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
@@ -48,6 +48,8 @@ $icn-sizes: (14, 16, 18, 20, 24, 28, 32);
 
 /*-------------------------------------------------------------------
 	@@ 아이콘
+	- 클래스명과 파일명을 매칭 (폴더와 확장자를 분리)
+	- 컬러 호버와, 파일 호버의 대응 추가
 -------------------------------------------------------------------*/
 // SVG Background Icons (파일명, 확장자)
 $bg-icons: (
@@ -56,14 +58,14 @@ $bg-icons: (
 	// (기본이미지, 확장자, 호버컬러), 호버 컬러변경 - 마스크 처리방식
 	// (기본이미지, 확장자, 호버이미지, 호버확장자), 호버 파일변경 - 포지션 처리방식 (깜빡임 대응으로 처음부터 불러오기)
 
-	// Demo 아이콘 예시
+	// Demo 가이드 정리용
 	(icn-24-demo-edit-bk, svg),
 	(icn-24-demo-down-br, png, $color-primary),
 	(icn-24-demo-medal-none, png, icn-24-demo-medal-hover, png),
 
 	// 14
-	(icn-14-drop-down, svg),
-	(icn-18-link-right, svg),
+	(icn-14-drop-down-bk, svg),
+	(icn-18-link-right-bk, svg),
 
 	// 16
 
@@ -119,3 +121,4 @@ $bg-icons: (
 		}
 	}
 }
+

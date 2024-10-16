@@ -15,7 +15,7 @@ html {
 
 .wrapper {
 	min-height: 100%;
-	min-width: 1280px;
+	min-width: 320px;
 }
 
 .wrapper,
@@ -36,17 +36,12 @@ html {
 }
 
 // Common
-body {
-	background-color: #EEEEEE;
+.out-sec {
+	@include out-sec;
 }
 
 .in-sec {
-	max-width: 1198rem;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	// 모바일용 padding-left: $padding-sidespacer;
-	// 모바일용 padding-right: $padding-sidespacer;
+	@include in-sec;
 }
 
 .header-skip {
@@ -82,7 +77,7 @@ body {
 	.header-sec {
 		display: flex;
 		align-items: center;
-		height: $height-header;
+		height: $pc-height-header;
 		max-width: calc(1376rem + 40rem);
 		margin: auto;
 		padding: 0 20rem;
@@ -101,6 +96,48 @@ body {
 
 		.nav-area {
 			margin-left: auto;
+
+			.nav-list {
+				display: flex;
+
+				.dropdown {
+					.btn {
+						display: flex;
+						align-items: center;
+						gap: 10rem;
+						height: 43rem;
+						padding: 0 20rem;
+						font-size: 20rem;
+						line-height: 24rem;
+						font-weight: 700;
+
+						&.is-current {
+							color: $color-primary;
+						}
+					}
+
+					.dropdown-menu {
+						padding: 10rem;
+						border: 1px solid #ddd;
+						border-radius: 8rem;
+						background-color: #fff;
+
+						>li+li {
+							margin-top: 2rem;
+						}
+
+						.dropdown-item {
+							display: block;
+							line-height: 24px;
+
+							&:hover,
+							&:focus-visible {
+								color: $color-primary;
+							}
+						}
+					}
+				}
+			}
 		}
 
 		.btn-area {
@@ -108,58 +145,17 @@ body {
 
 			.btn {
 				height: 40rem;
-				padding: 9rem 20rem;
+				padding: 9rem 30rem;
 				border-radius: 40rem;
-				font-size: 20rem;
+				font-size: 17rem;
 				line-height: 24rem;
-				font-weight: 900;
+				font-weight: 500;
 				color: #fff;
 				background-color: $color-primary;
 			}
 		}
 	}
 
-	.nav-list {
-		display: flex;
-
-		.dropdown {
-			.btn {
-				display: flex;
-				align-items: center;
-				gap: 10rem;
-				height: 43rem;
-				padding: 0 20rem;
-				font-size: 20rem;
-				line-height: 24rem;
-				font-weight: 700;
-
-				&.is-current {
-					color: $color-primary;
-				}
-			}
-
-			.dropdown-menu {
-				padding: 10rem;
-				border: 1px solid #ddd;
-				border-radius: 8rem;
-				background-color: #fff;
-
-				>li+li {
-					margin-top: 2rem;
-				}
-
-				.dropdown-item {
-					display: block;
-					line-height: 24px;
-
-					&:hover,
-					&:focus-visible {
-						color: $color-primary;
-					}
-				}
-			}
-		}
-	}
 }
 
 // Footer

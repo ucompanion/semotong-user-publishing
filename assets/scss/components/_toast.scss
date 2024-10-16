@@ -20,7 +20,7 @@
     pointer-events: none;
 }
 
-.toast {
+.ui-toast {
     max-width: 100%;
 	padding: 5rem 10rem;
     pointer-events: auto;
@@ -33,7 +33,7 @@
 	}
 }
 
-.toast.showing {
+.ui-toast.showing {
     opacity: 0;
 }
 

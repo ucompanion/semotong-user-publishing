@@ -7,8 +7,10 @@ $font-primary: 'Pretendard Variable', 'sans-serif';
 $font-secondary: 'YJ_Obang';
 
 // 레이아웃 프레임
-$height-header: 100rem;
-$padding-sidespacer: 25rem;
+$pc-width-content: 1376rem;
+$pc-height-header: 100rem;
+$pc-sidespacer: 102rem;
+$mobile-sidespacer: 25rem;
 
 // 컬러 맥락
 $color-tit: #222; // 제목 임시값
@@ -16,8 +18,8 @@ $color-body: #444; // 내용 (body 기본값으로 사용)
 $color-info: #999; // 안내 임시값
 
 // 컬러 강조
-$color-primary: #FF6738; // 첫번째 임시값
-$color-secondary: orange; // 두번째 임시값
+$color-primary: #7737e0; // 첫번째
+$color-secondary: #dcff4b; // 두번째
 $color-point: purple; // 기타 임시값
 
 // 컬러 상태
@@ -37,6 +39,25 @@ $color-item3: coral; // item3 임시값
 //-------------------------------------------------------------------
 //    Mixins
 //-------------------------------------------------------------------
+// 여백/너비 설정
+@mixin out-sec {
+	padding-left: $pc-sidespacer;
+	padding-right: $pc-sidespacer;
+
+	@include media-mobile-xl {
+		padding-left: $mobile-sidespacer;
+		padding-right: $mobile-sidespacer;
+	}
+}
+
+@mixin in-sec {
+	position: relative;
+	max-width: $pc-width-content;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 // 폰트규칙
 @mixin font-body-10 {
 	font-size: 10px;
