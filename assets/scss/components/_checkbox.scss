@@ -8,7 +8,7 @@
 	@@ Checkbox
 -------------------------------------------------------------------*/
 /* 스타일 */
-.frm-chk {
+.ui-chk {
 	display: inline-flex;
 	position: relative;
 	margin: 5px 0;
@@ -16,7 +16,7 @@
 	vertical-align: top
 }
 
-.frm-chk label {
+.ui-chk label {
 	display: inline-flex;
 	position: relative;
 	min-width: 20px;
@@ -26,31 +26,31 @@
 	line-height: 20px;
 }
 
-.frm-chk label span {
+.ui-chk label span {
 	display: inline-block;
 	padding-left: 28px;
 }
 
-.frm-chk>input {
+.ui-chk>input {
 	width: 20px;
 	height: 20px;
 	border: 1px solid #ddd;
 	background: #fff;
 }
 
-.frm-chk>input,
-.frm-chk label:after {
+.ui-chk>input,
+.ui-chk label:after {
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 
 /* Checked */
-.frm-chk>input:checked {
+.ui-chk>input:checked {
 	border-color: #2496ee;
 }
 
-.frm-chk>input:checked+label:after {
+.ui-chk>input:checked+label:after {
 	content: '';
 	left: 5px;
 	top: 5px;
@@ -63,39 +63,39 @@
 }
 
 /* Focused */
-.frm-chk>input.is-focused,
-.frm-chk>input:hover,
-.frm-chk>input:focus {
+.ui-chk>input.is-focused,
+.ui-chk>input:hover,
+.ui-chk>input:focus {
 	border-color: #888;
 }
 
-.frm-chk>input:checked:focus,
-.frm-chk>input:checked:hover {
+.ui-chk>input:checked:focus,
+.ui-chk>input:checked:hover {
 	border-color: #2496ee;
 	transition: all 0.3s;
 }
 
 /* Disabled */
-.frm-chk>input[disabled]+label {
+.ui-chk>input[disabled]+label {
 	color: #999;
 }
 
-.frm-chk>input[disabled] {
+.ui-chk>input[disabled] {
 	background-color: #f0f0f0;
 }
 
-.frm-chk>input[disabled]:focus,
-.frm-chk>input[disabled]:hover {
+.ui-chk>input[disabled]:focus,
+.ui-chk>input[disabled]:hover {
 	border-color: #ddd;
 }
 
-.frm-chk>input[disabled]:checked+label:after {
+.ui-chk>input[disabled]:checked+label:after {
 	border-color: #888;
 }
 
-.frm-chk>input[disabled]:checked,
-.frm-chk>input[disabled]:checked:focus,
-.frm-chk>input[disabled]:checked:hover {
+.ui-chk>input[disabled]:checked,
+.ui-chk>input[disabled]:checked:focus,
+.ui-chk>input[disabled]:checked:hover {
 	border-color: #888;
 }
 
@@ -103,7 +103,7 @@
 	@@ Radio
 -------------------------------------------------------------------*/
 /* 스타일 */
-.frm-rdo {
+.ui-rdo {
 	display: inline-flex;
 	position: relative;
 	margin: 5px 0;
@@ -111,7 +111,7 @@
 	vertical-align: top;
 }
 
-.frm-rdo label {
+.ui-rdo label {
 	display: inline-flex;
 	position: relative;
 	min-width: 20px;
@@ -121,12 +121,12 @@
 	line-height: 18px;
 }
 
-.frm-rdo label span {
+.ui-rdo label span {
 	display: inline-block;
 	padding-left: 28px;
 }
 
-.frm-rdo>input {
+.ui-rdo>input {
 	width: 20px;
 	height: 20px;
 	border: 1px solid #ddd;
@@ -134,8 +134,8 @@
 	border-radius: 50%;
 }
 
-.frm-rdo>input,
-.frm-rdo label:after {
+.ui-rdo>input,
+.ui-rdo label:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -143,12 +143,12 @@
 }
 
 /* Checked */
-.frm-rdo>input:checked {
+.ui-rdo>input:checked {
 	background-color: #fff;
 	border-color: #2496ee;
 }
 
-.frm-rdo>input:checked+label:after {
+.ui-rdo>input:checked+label:after {
 	top: 5px;
 	left: 5px;
 	width: 10px;
@@ -158,39 +158,39 @@
 }
 
 /* Focused */
-.frm-rdo>input.is-focused,
-.frm-rdo>input:hover,
-.frm-rdo>input:focus {
+.ui-rdo>input.is-focused,
+.ui-rdo>input:hover,
+.ui-rdo>input:focus {
 	border-color: #888;
 }
 
-.frm-rdo>input:checked:focus,
-.frm-rdo>input:checked:hover {
+.ui-rdo>input:checked:focus,
+.ui-rdo>input:checked:hover {
 	border-color: #2496ee;
 	transition: all 0.3s;
 }
 
 /* Disabled */
-.frm-rdo>input[disabled]+label {
+.ui-rdo>input[disabled]+label {
 	color: #999;
 }
 
-.frm-rdo>input[disabled] {
+.ui-rdo>input[disabled] {
 	background-color: #f0f0f0;
 }
 
-.frm-rdo>input[disabled]:focus,
-.frm-rdo>input[disabled]:hover {
+.ui-rdo>input[disabled]:focus,
+.ui-rdo>input[disabled]:hover {
 	border-color: #ddd;
 }
 
-.frm-rdo>input[disabled]:checked+label:after {
+.ui-rdo>input[disabled]:checked+label:after {
 	background: #888;
 }
 
-.frm-rdo>input[disabled]:checked,
-.frm-rdo>input[disabled]:checked:focus,
-.frm-rdo>input[disabled]:checked:hover {
+.ui-rdo>input[disabled]:checked,
+.ui-rdo>input[disabled]:checked:focus,
+.ui-rdo>input[disabled]:checked:hover {
 	border-color: #888;
 }
 

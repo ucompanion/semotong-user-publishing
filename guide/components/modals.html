@@ -29,14 +29,14 @@
 		<!-- Container -->
 		<div class="container">
 			<main id="content" class="content" role="main">
-				<div class="content-body">
+				<div class="content-body out-sec">
 					<div class="in-sec">
 						<h1 class="g-h1">Modals</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">기본가이드</h2>
+							<h2 class="g-h2">기본 구조</h2>
 						</div>
 						<div class="g-section-body">
 							<ul class="g-desc">
@@ -44,12 +44,12 @@
 							</ul>
 							<!-- Modal -->
 							 <xmp>
-<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+<div class="ui-modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-유형">
 		<div class="modal-content modal-컨텐츠">
 			<div class="modal-header">
 				<h3 class="modal-title" id="defaultModalLabel"></h3>
-				<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+				<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
 			</div>
 			<div class="modal-body"></div>
 			<div class="modal-footer"></div>
@@ -68,15 +68,15 @@
 						</div>
 						<div class="g-section-body">
 							<!-- Modal -->
-							<button type="button" class="btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 								Basic modal
 							</button>
-							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="ui-modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 								<div class="modal-dialog modal-basic">
 									<div class="modal-content">
 										<div class="modal-header">
 											<h1 class="modal-title" id="exampleModalLabel">Modal title</h1>
-											<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+											<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
 										</div>
 										<div class="modal-body">
 											<div>
@@ -84,8 +84,8 @@
 											</div>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-popup secondary" data-bs-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-popup primary">Save changes</button>
+											<button type="button" class="ui-btn btn-popup secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="ui-btn btn-popup primary">Save changes</button>
 										</div>
 									</div>
 								</div>
@@ -104,16 +104,16 @@
 							<ul class="g-desc">
 								<li>바닥 클릭시 모달 안닫힘 : data-bs-backdrop="static"</li>
 							</ul>
-							<button type="button" class="btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#alertModal">
+							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#alertModal">
 								Alert modal
 							</button>
 							<br>
-							<button type="button" class="btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
+							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
 								Confirm modal
 							</button>
 
 							<!-- Alert -->
-							<div class="modal fade" id="alertModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="alertModalLabel" aria-hidden="true">
+							<div class="ui-modal fade" id="alertModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="alertModalLabel" aria-hidden="true">
 								<div class="modal-dialog modal-alert">
 									<div class="modal-content">
 										<div class="modal-header">
@@ -123,8 +123,8 @@
 											...
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-popup secondary" data-bs-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-popup primary">Save changes</button>
+											<button type="button" class="ui-btn btn-popup secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="ui-btn btn-popup primary">Save changes</button>
 										</div>
 									</div>
 								</div>
@@ -142,8 +142,8 @@
 											...
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary">Save changes</button>
+											<button type="button" class="ui-btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="ui-btn btn-primary">Save changes</button>
 										</div>
 									</div>
 								</div>

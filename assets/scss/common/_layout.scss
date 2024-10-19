@@ -4,7 +4,10 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 
-/* Default */
+/*-------------------------------------------------------------------
+	@@ 공통
+-------------------------------------------------------------------*/
+// Default
 body,
 html {
 	height: 100%;
@@ -12,6 +15,7 @@ html {
 
 .wrapper {
 	min-height: 100%;
+	min-width: 320px;
 }
 
 .wrapper,
@@ -31,12 +35,209 @@ html {
 	flex: none;
 }
 
-/* Common */
+// Common
+.out-sec {
+	@include out-sec;
+}
+
 .in-sec {
-	max-width: 1200px;
+	@include in-sec;
+}
+
+.header-skip {
+	position: fixed;
+	left: 0;
+	z-index: 900;
+	bottom: 100%;
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: $padding-sidespacer;
-	padding-right: $padding-sidespacer;
+
+	a {
+		display: block;
+		width: 100%;
+		text-align: center;
+		line-height: 50rem;
+		font-size: 18rem;
+		color: #fff;
+		transform: translateY(0%);
+		background-color: rgba(0, 0, 0, 0.75);
+
+		&:focus-visible {
+			text-decoration: underline;
+			text-underline-position: under;
+			transform: translateY(100%);
+			transition: all 0.2s ease;
+		}
+	}
+}
+
+// Header
+.header {
+	background-color: #fff;
+
+	.header-sec {
+		display: flex;
+		align-items: center;
+		height: $pc-height-header;
+		max-width: calc(1376rem + 40rem);
+		margin: auto;
+		padding: 0 20rem;
+
+		.logo-area {
+			margin-right: auto;
+
+			.logo-header {
+				display: block;
+				height: 41rem;
+				img {
+					height: 100%;
+				}
+			}
+		}
+
+		.nav-area {
+			margin-left: auto;
+
+			.nav-list {
+				display: flex;
+
+				.dropdown {
+					.btn {
+						display: flex;
+						align-items: center;
+						gap: 10rem;
+						height: 43rem;
+						padding: 0 20rem;
+						font-size: 20rem;
+						line-height: 24rem;
+						font-weight: 700;
+
+						&.is-current {
+							color: $color-primary;
+						}
+					}
+
+					.dropdown-menu {
+						padding: 10rem;
+						border: 1px solid #ddd;
+						border-radius: 8rem;
+						background-color: #fff;
+
+						>li+li {
+							margin-top: 2rem;
+						}
+
+						.dropdown-item {
+							display: block;
+							line-height: 24px;
+
+							&:hover,
+							&:focus-visible {
+								color: $color-primary;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.btn-area {
+			margin-left: 20rem;
+
+			.btn {
+				height: 40rem;
+				padding: 9rem 30rem;
+				border-radius: 40rem;
+				font-size: 17rem;
+				line-height: 24rem;
+				font-weight: 500;
+				color: #fff;
+				background-color: $color-primary;
+			}
+		}
+	}
+
+}
+
+// Footer
+.footer {
+	padding: 64px 0 68px 0;
+	background-color: #111;
+	color: #fff;
+
+	.footer-sec {
+		@extend .in-sec;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.logo-area {
+		.logo-footer {
+			display: block;
+			height: 41rem;
+			img {
+				height: 100%;
+			}
+		}
+	}
+
+	.fnb-area {
+		.fnb-list {
+			display: flex;
+			align-items: center;
+			gap: 60rem;
+
+			.fnb-item {
+				.btn {
+					font-weight: 600;
+					font-size: 21rem;
+					line-height: 23rem;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.info-area {
+		.info-footer {
+			display: flex;
+			flex-wrap: wrap;
+
+			.info-company {
+				margin-right: 158rem;
+			}
+
+			.info-txt {
+				font-size: 17rem;
+				line-height: 23rem;
+				font-weight: 500;
+				li {
+					position: relative;
+					padding-left: 20rem;
+					&::before {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 8rem;
+						top: 10rem;
+						width: 3rem;
+						height: 3rem;
+						border-radius: 50%;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	.fnb-area:last-child {
+		.fnb-list {
+			.fnb-item {
+				.btn {
+					font-size: 17rem;
+					line-height: 23rem;
+				}
+			}
+		}
+	}
 }
