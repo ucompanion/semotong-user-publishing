@@ -214,43 +214,6 @@ function setResized(){
 }
 
 /*-------------------------------------------------------------------
-	@ Utility
--------------------------------------------------------------------*/
-/* 스크롤설정 */
-var setScrollOptions = {
-	clsLockAll: '.is-scroll-hidden',
-	clsLockIOS: '.is-scroll-hidden-ios',
-	scrTop: null
-}
-/* 스크롤 비활성 */
-function setScrollDisable() {
-	setScrollOptions.scrTop = $window.scrollTop();
-	$wrapper.css({position: 'relative', top: this.scrTop * (-1)});
-	if (isIOS){
-		$html_body.addClass(setScrollOptions.clsLockIOS);
-	} else {
-		$html_body.addClass(setScrollOptions.clsLockAll);
-	}
-}
-/* 스크롤 활성화 */
-function setScrollEnable(){
-	$wrapper.removeAttr('style');
-	if (isIOS){
-		$html_body.removeClass(setScrollOptions.clsLockIOS);
-	} else {
-		$html_body.removeClass(setScrollOptions.clsLockAll);
-	}
-	$html_body.scrollTop(setScrollOptions.scrTop);
-}
-
-
-/*-------------------------------------------------------------------
-	@ Layout
--------------------------------------------------------------------*/
-
-
-
-/*-------------------------------------------------------------------
 	@ Init
 -------------------------------------------------------------------*/
 $(function(){
