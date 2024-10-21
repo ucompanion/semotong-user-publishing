@@ -375,7 +375,7 @@ td.col-complete[data-complete=제외]:after {
 	content: '제외'
 }
 
-td.col-point[data-type]:after {
+td.col-type[data-type]:after {
 	content: attr(data-type);
 }
 
