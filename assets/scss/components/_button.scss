@@ -9,6 +9,7 @@
 /* 기본 */
 .ui-btn {
 	display: inline-flex;
+	overflow: hidden;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;

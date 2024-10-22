@@ -74,84 +74,28 @@ html {
 .header {
 	background-color: #fff;
 
-	.header-sec {
-		display: flex;
-		align-items: center;
-		height: 100rem;
-		max-width: calc(1376rem + 40rem);
-		margin: auto;
-		padding: 0 20rem;
-
-		.logo-area {
-			margin-right: auto;
-
-			.logo-header {
-				display: block;
-				height: 41rem;
-				img {
-					height: 100%;
-				}
-			}
-		}
-
-		.nav-area {
+	// Header Mobile Nav
+	.mobile-nav-modal {
+		top: 0;
+		height: 100%;
+		transition-duration: 0.1s;
+		.modal-dialog {
+			display: block;
+			width: 100%;
+			height: 100%;
 			margin-left: auto;
-
-			.nav-list {
-				display: flex;
-
-				.dropdown {
-					.btn {
-						display: flex;
-						align-items: center;
-						gap: 10rem;
-						height: 43rem;
-						padding: 0 20rem;
-						font-size: 20rem;
-						line-height: 24rem;
-						font-weight: 700;
-
-						&.is-current {
-							color: $color-primary;
-						}
-					}
-
-					.dropdown-menu {
-						padding: 10rem;
-						border: 1px solid #ddd;
-						border-radius: 8rem;
-						background-color: #fff;
-
-						>li+li {
-							margin-top: 2rem;
-						}
-
-						.dropdown-item {
-							display: block;
-							line-height: 24px;
-
-							&:hover,
-							&:focus-visible {
-								color: $color-primary;
-							}
-						}
-					}
-				}
+			background: #fff;
+			transform: translateX(105%);
+			transition-duration: 0.1s;
+			.modal-content {
+				display: block;
+				padding: 20px;
+				box-shadow: none;
 			}
 		}
-
-		.btn-area {
-			margin-left: 20rem;
-
-			.btn {
-				height: 40rem;
-				padding: 9rem 30rem;
-				border-radius: 40rem;
-				font-size: 17rem;
-				line-height: 24rem;
-				font-weight: 500;
-				color: #fff;
-				background-color: $color-primary;
+		&.show {
+			.modal-dialog {
+				transform: translateX(0%);
 			}
 		}
 	}
@@ -160,82 +104,104 @@ html {
 
 // Footer
 .footer {
-	padding: 64px 0 68px 0;
+	padding-bottom: $footer-height;
 	background-color: #111;
-	color: #fff;
+	color: #EFF0F0;
+	@include out-sec;
 
+	// 푸터 섹션
 	.footer-sec {
-		@extend .in-sec;
+		padding: 30rem 0 24rem 0;
+		@include in-sec;
 		display: flex;
 		flex-direction: column;
-		gap: 30px;
-	}
+		gap: 30rem;
 
-	.logo-area {
-		.logo-footer {
-			display: block;
-			height: 41rem;
-			img {
-				height: 100%;
-			}
-		}
-	}
-
-	.fnb-area {
-		.fnb-list {
-			display: flex;
-			align-items: center;
-			gap: 60rem;
-
-			.fnb-item {
-				.btn {
-					font-weight: 600;
-					font-size: 21rem;
-					line-height: 23rem;
-					color: #fff;
+		.logo-area {
+			.logo-footer {
+				display: block;
+				height: 22rem;
+				img {
+					height: 100%;
 				}
 			}
 		}
-	}
 
-	.info-area {
-		.info-footer {
-			display: flex;
-			flex-wrap: wrap;
+		.fnb-area {
+			margin-top: 6rem;
+			.fnb-list {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 10rem 60rem;
 
-			.info-company {
-				margin-right: 158rem;
-			}
+				.fnb-item {
+					flex: none;
 
-			.info-txt {
-				font-size: 17rem;
-				line-height: 23rem;
-				font-weight: 500;
-				li {
-					position: relative;
-					padding-left: 20rem;
-					&::before {
-						content:'';
-						display: block;
-						position: absolute;
-						left: 8rem;
-						top: 10rem;
-						width: 3rem;
-						height: 3rem;
-						border-radius: 50%;
-						background-color: #fff;
+					.ui-btn {
+						width: 100re;
+						flex: none;
+						font-weight: 500;
+						font-size: 14rem;
+						line-height: 22rem;
 					}
 				}
 			}
 		}
+		.info-area {
+			.info-cont {
+				color: #B7B9BA;
+				font-size: 11rem;
+				line-height: 15rem;
+				.info-tit {
+					display: block;
+					margin-bottom: 6rem;
+					font-weight: 700;
+				}
+				.info-txt {
+					font-weight: 500;
+					margin-top: 2rem;
+				}
+				& + .info-cont {
+					margin-top: 30rem;
+				}
+			}
+		}
 	}
 
-	.fnb-area:last-child {
-		.fnb-list {
-			.fnb-item {
-				.btn {
-					font-size: 17rem;
-					line-height: 23rem;
+	// 푸터 고정메뉴
+	.footer-gnb {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: $footer-height;
+		min-width: $mobile-width-content;
+		padding: 14rem 16rem 16rem 16rem;
+		background-color: #fff;
+
+		.gnb-list {
+			display: flex;
+			.gnb-item {
+				flex: none;
+				width: calc(100%/5);
+				.gnb-link {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					font-size: 11rem;
+					line-height: 15rem;
+					color: #828588;
+					letter-spacing: -0.02em;
+					font-weight: 500;
+					&:hover,
+					&:focus-visible {
+						font-weight: 600;
+						color: $color-primary;
+					}
+					& > span {
+						margin-top: 5rem;
+					}
 				}
 			}
 		}

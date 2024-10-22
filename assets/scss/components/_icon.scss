@@ -9,6 +9,7 @@
 /* 기본 */
 .ui-icn {
 	position: relative;
+	overflow: hidden;
 	display: inline-block;
 	vertical-align: middle;
 	background: no-repeat center center / contain;
@@ -64,8 +65,6 @@ $bg-icons: (
 	(icn-24-demo-medal-none, png, icn-24-demo-medal-hover, png),
 
 	// 14
-	(icn-14-drop-down-bk, svg),
-	(icn-18-link-right-bk, svg),
 
 	// 16
 
@@ -74,6 +73,11 @@ $bg-icons: (
 
 
 	// 24
+	(icn-24-gnb-01-gr, svg, icn-24-gnb-01-pr, svg),
+	(icn-24-gnb-02-gr, svg, icn-24-gnb-02-pr, svg),
+	(icn-24-gnb-03-gr, svg, icn-24-gnb-03-pr, svg),
+	(icn-24-gnb-04-gr, svg, icn-24-gnb-04-pr, svg),
+	(icn-24-gnb-05-gr, svg, icn-24-gnb-05-pr, svg),
 
 
 	// 28
@@ -95,7 +99,8 @@ $bg-icons: (
 	// 호버 컬러변경 - 마스크 처리방식
 	@if length($values) == 3 {
 		$hover-color: nth($values, 3);
-		.btn .#{$img-name}:hover {
+		.ui-btn:focus-visible .#{$img-name},
+		.ui-btn:hover .#{$img-name} {
 			&::before {
 				mask: url('../images/common/#{$img-name}.#{$ext-name}') no-repeat center center / contain;
 				background: $hover-color;
@@ -111,7 +116,9 @@ $bg-icons: (
 			content:'';
 			background-image: url('../images/common/#{$hover-img-name}.#{$hover-ext-name}');
 		}
-		.btn .#{$img-name}:hover {
+		.ui-btn.is-selected .#{$img-name},
+		.ui-btn:focus-visible .#{$img-name},
+		.ui-btn:hover .#{$img-name} {
 			&::before {
 				transform: translateY(110%);
 			}

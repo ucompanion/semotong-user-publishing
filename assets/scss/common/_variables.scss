@@ -8,8 +8,12 @@ $font-secondary: 'YJ_Obang';
 
 // 레이아웃 프레임
 $pc-width-content: 1200rem;
-$pc-sidespacer: 102rem;
-$mobile-sidespacer: 25rem;
+$pc-sidespacer: 32rem;
+$mobile-width-content: 320rem;
+$mobile-sidespacer: 16rem;
+
+// 레이아웃 사이즈
+$footer-height: 76rem;
 
 // 컬러 강조
 $color-primary: #7737e0; // 첫번째
@@ -35,6 +39,7 @@ $color-item3: coral; // item3 임시값
 //-------------------------------------------------------------------
 // 여백/너비 설정
 @mixin out-sec {
+	min-width: $mobile-width-content;
 	padding-left: $pc-sidespacer;
 	padding-right: $pc-sidespacer;
 
