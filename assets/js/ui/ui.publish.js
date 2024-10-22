@@ -5,20 +5,12 @@
 -------------------------------------------------------------------*/
 
 function setPublishInclude(){
-	$(".header").each(function(){
-		var path = "../../html/layout/";
-		var filename = "include_header.html";
-		$(this).load(path + filename, function(){
-				console.log("Init Header Functions");
-		});
-	})
-	$(".footer").each(function(){
-		var path = "../../html/layout/";
-		var filename = "include_footer.html";
-		$(this).load(path + filename, function(){
-				console.log("Init Footer Functions");
-		});
-	})
+	$(".header").load("../../html/layout/include_header.html", function(){
+			setStatusInit();
+	});
+	$(".footer").load("../../html/layout/include_footer.html", function(){
+			setStatusInit();
+	});
 }
 
 $(function(){
