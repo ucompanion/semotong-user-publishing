@@ -6,7 +6,7 @@
 $media-mobile-xl: 480px; // 갤럭시 S23 울트라 세로모드 가로 해상도: 432px 기준
 $media-tablet-xs: 768px;
 $media-tablet-xl: 1024px;
-$media-desktop-xl: 1280px;
+$media-desktop-xs: 1280px;
 $media-mobile-landscape: 940px; // 아이폰 14 프로 맥스 가로모드의 가로 해상도: 926px
 
 // 기준 해상도
@@ -27,6 +27,12 @@ $media-mobile-landscape: 940px; // 아이폰 14 프로 맥스 가로모드의 �
 
 @mixin media-tablet-xl {
 	@media all and (min-width: $media-tablet-xl) {
+		@content;
+	}
+}
+
+@mixin media-desktop-xl {
+	@media all and (min-width: $media-desktop-xs) {
 		@content;
 	}
 }

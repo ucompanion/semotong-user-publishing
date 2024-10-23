@@ -16,13 +16,14 @@
 /*-------------------------------------------------------------------
 	@@ Sections
 -------------------------------------------------------------------*/
-.main-page {
+.F-M01-page {
 	// 공통
 	> section {
 		@include out-sec;
 	}
 	.sec-inner {
 		@include in-sec;
+		padding: 24rem;
 	}
 	.sec-tit {
 		@include main-sec-tit;

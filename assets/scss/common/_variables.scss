@@ -40,12 +40,12 @@ $color-item3: coral; // item3 임시값
 // 여백/너비 설정
 @mixin out-sec {
 	min-width: $mobile-width-content;
-	padding-left: $pc-sidespacer;
-	padding-right: $pc-sidespacer;
+	padding-left: $mobile-sidespacer;
+	padding-right: $mobile-sidespacer;
 
-	@include media-mobile-xl {
-		padding-left: $mobile-sidespacer;
-		padding-right: $mobile-sidespacer;
+	@include media-tablet-xl {
+		padding-left: $pc-sidespacer;
+		padding-right: $pc-sidespacer;
 	}
 }
 
