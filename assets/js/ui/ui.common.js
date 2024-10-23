@@ -53,7 +53,7 @@ function setDeviceStatus(){
 	$('html').addClass(isMobile ? 'is-mobile' : 'is-desktop');
 
     // 추가적으로 원하는 클래스는 여기에 추가 가능
-    console.log("OS: " + os, "브라우저: " + browserName + " " + browserVersion);
+    // console.log("OS: " + os, "브라우저: " + browserName + " " + browserVersion);
 }
 
 /* 스크롤 상태 설정 */
