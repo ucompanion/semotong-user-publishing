@@ -37,6 +37,9 @@ $color-item3: coral; // item3 임시값
 //-------------------------------------------------------------------
 //    Mixins
 //-------------------------------------------------------------------
+// IOS Safe Area Bottom 대응 (웹에서 상단은 필요 없음)
+$safe-area-bottom: env(safe-area-inset-bottom, 0);
+
 // 여백/너비 설정
 @mixin out-sec {
 	min-width: $mobile-width-content;
