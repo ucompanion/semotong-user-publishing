@@ -4,32 +4,29 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ 공통
--------------------------------------------------------------------*/
-@mixin main-sec-tit {
-	font-size: 18rem;
-}
-@mixin main-sec-explain {
-	font-size: 18rem;
-}
-
-/*-------------------------------------------------------------------
 	@@ Sections
 -------------------------------------------------------------------*/
 .F-M01-page {
 	// 공통
 	> section {
 		@include out-sec;
+		margin-top: 30rem;
+		& + section {
+			margin-top: 60rem;
+		}
 	}
 	.sec-inner {
 		@include in-sec;
-		padding: 24rem;
 	}
 	.sec-tit {
-		@include main-sec-tit;
+		font-weight: 700;
+		font-size: 20rem;
+		color: #2A2B2D;
 	}
 	.sec-explain {
-		@include main-sec-explain;
+		font-weight: 600;
+		font-size: 14rem;
+		color: #63666A;
 	}
 
 	// 비주얼

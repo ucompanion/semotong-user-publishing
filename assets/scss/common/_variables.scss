@@ -2,18 +2,22 @@
 //-------------------------------------------------------------------
 //    Variables
 //-------------------------------------------------------------------
+// IOS Safe Area Bottom 대응 (웹에서 상단은 필요 없음, 띠의 상하여백 동일한 비율 1.7)
+$safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
+
 // 웹폰트
 $font-primary: 'Pretendard Variable', 'sans-serif';
 $font-secondary: 'YJ_Obang';
 
-// 레이아웃 프레임
+// 본문영역 사이즈
 $pc-width-content: 1200rem;
 $pc-sidespacer: 32rem;
 $mobile-width-content: 320rem;
 $mobile-sidespacer: 16rem;
 
-// 레이아웃 사이즈
-$footer-height: 76rem;
+// 공통요소 사이즈
+$height-header: 60rem;
+$height-footer: calc(76rem + #{$safe-area-bottom});
 
 // 컬러 강조
 $color-primary: #7737e0; // 첫번째
@@ -30,16 +34,14 @@ $color-caution: orange; // 주의 임시값
 $color-danger: orange; // 위험 임시값
 
 // 컬러 아이템
-$color-item1: green; // item1 임시값
-$color-item2: burlywood; // item2 임시값
-$color-item3: coral; // item3 임시값
+$color-item-best: #7762FF; // 베스트
+$color-item-recom: #E5446D; // 추천
+$color-item3: #E5446D; // 추천
+
 
 //-------------------------------------------------------------------
 //    Mixins
 //-------------------------------------------------------------------
-// IOS Safe Area Bottom 대응 (웹에서 상단은 필요 없음)
-$safe-area-bottom: env(safe-area-inset-bottom, 0);
-
 // 여백/너비 설정
 @mixin out-sec {
 	min-width: $mobile-width-content;
@@ -58,30 +60,4 @@ $safe-area-bottom: env(safe-area-inset-bottom, 0);
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-// 폰트규칙
-@mixin font-body-10 {
-	font-size: 10px;
-	line-height: 14px;
-}
-
-@mixin font-body-11 {
-	font-size: 11px;
-	line-height: 15px;
-}
-
-@mixin font-body-12 {
-	font-size: 12px;
-	line-height: 18px;
-}
-
-@mixin font-body-13 {
-	font-size: 13px;
-	line-height: 19px;
-}
-
-@mixin font-body-14 {
-	font-size: 14px;
-	line-height: 22px;
 }

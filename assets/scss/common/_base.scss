@@ -127,7 +127,7 @@ body {
 	color: #444;
 	font-family: $font-primary;
 	font-size: 14px;
-	line-height: 22px;
+	line-height: 1.4;
 	letter-spacing: -0.02em;
 	word-break: break-all;
 	word-wrap: break-word;
@@ -156,6 +156,12 @@ img {
 
 button {
 	background-color: transparent;
+}
+
+a,
+button,
+[role="button"],
+[role="link"] {
 	cursor: pointer;
 }
 

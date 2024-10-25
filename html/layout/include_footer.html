@@ -1,3 +1,4 @@
+<!-- 푸터 섹션 -->
 <div class="footer-sec">
 	<div class="logo-area">
 		<div class="logo-footer">
@@ -45,38 +46,23 @@
 		</div>
 	</div>
 </div>
+<!-- // 푸터 섹션 -->
 
-<nav class="footer-gnb">
-	<ul class="gnb-list">
-		<li class="gnb-item">
-			<a href="/" role="link" class="ui-btn gnb-link is-selected">
-				<i class="ui-icn icn-24-gnb-01-gr"></i>
-				<span>홈</span>
-			</a>
-		</li>
-		<li class="gnb-item">
-			<a href="/" role="link" class="ui-btn gnb-link">
-				<i class="ui-icn icn-24-gnb-02-gr"></i>
-				<span>요금제</span>
-			</a>
-		</li>
-		<li class="gnb-item">
-			<a href="/" role="link" class="ui-btn gnb-link">
-				<i class="ui-icn icn-24-gnb-03-gr"></i>
-				<span>인터넷</span>
-			</a>
-		</li>
-		<li class="gnb-item">
-			<a href="/" role="link" class="ui-btn gnb-link">
-				<i class="ui-icn icn-24-gnb-04-gr"></i>
-				<span>휴대폰</span>
-			</a>
-		</li>
-		<li class="gnb-item">
-			<a href="/" role="link" class="ui-btn gnb-link">
-				<i class="ui-icn icn-24-gnb-05-gr"></i>
-				<span>마이페이지</span>
-			</a>
-		</li>
-	</ul>
-</nav>
+<!-- 플로팅 메뉴 -->
+<div class="floating-menu">
+	<!-- aria-expanded: true/false -->
+	<button type="button" id="floatingMenuBtn" class="ui-btn btn-menu" aria-expanded="false" aria-haspopup="menu" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingMenuBtn')">
+		<i class="icn">로고</i>
+	</button>
+	<button type="button" class="ui-btn btn-top" onclick="window.scrollTo({top:0, left:0, behavior: 'smooth'})">
+		<i class="icn">TOP</i>
+	</button>
+	<div class="floating-layer fade" id="floatingMenuLayer">
+		<!-- a태그, button태그 무관합니다. -->
+		<button type="button" class="ui-btn">이용후기</button>
+		<button type="button" class="ui-btn">친구추천</button>
+		<button type="button" class="ui-btn">카카오톡</button>
+		<button type="button" class="ui-btn" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingMenuBtn')">닫기</button>
+	</div>
+</div>
+<!-- // 플로팅 메뉴 -->
