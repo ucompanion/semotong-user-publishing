@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>파트너사 상세 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- 페이지 스크립트 섹션 -->
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			setSpyScroll();
+		});
+	</script>
+</head>
+
+<body>
+	<!-- 레이아웃 유형구분
+		메인: main-wrapper,
+		서브: sub-wrapper,
+		기타: [기타]-wrapper
+	 -->
+	<div class="wrapper sub-wrapper">
+		<!-- Header -->
+		<header class="header"></header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-M03-page">
+				<!-- 접근성 숨김처리 전역클래스 -->
+				<h1 class="blind">파트너사 상세</h1>
+
+				<!-- 파트너사 섹션 -->
+				<section class="partner-detail-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-h2">KG모바일</h2>
+						</div>
+						<div class="sec-body">
+							<!-- 파트너사 주요정보 -->
+							<div>
+								<span class="ui-label">SKT</span>
+								<strong>
+									<img src="../../assets/images/partner/logo-liivm.png" alt="KB Liiv m" />
+								</strong>
+								<span class="ui-rating rating-value">
+									<i class="ui-icn icn-16-rating-pr" aria-hidden="true"></i>
+									<strong class="val">5.0</strong>
+								</span>
+							</div>
+							<!-- //파트너사 주요정보 -->
+
+							<!-- 파트너사 상세정보 -->
+							<div class="ui-tab tab-유형" style="height: 40rem;">
+								<ul class="tab-list" id="spyScrollTab" role="tablist" style="position: fixed; top: 0; left: 0; width: 100%; height: inherit; background-color: #fff;">
+									<li class="tab-item" role="presentation">
+										<a href="#detail-tab-01-pane" class="nav-link active" role="tab">기본정보</a>
+									</li>
+									<li class="tab-item" role="presentation">
+										<a href="#detail-tab-02-pane" class="nav-link" role="tab">리뷰</a>
+									</li>
+									<li class="tab-item" role="presentation">
+										<a href="#detail-tab-03-pane" class="nav-link" role="tab">요금제</a>
+									</li>
+									<li class="tab-item" role="presentation">
+										<a href="#detail-tab-04-pane" class="nav-link" role="tab">이벤트</a>
+									</li>
+								</ul>
+							</div>
+							<div class="tab-content">
+								<!-- 기본정보 탭패널 -->
+								<div class="tab-pane fade show active" id="detail-tab-01-pane">
+									<section class="tab-pane-sec">
+										<h3 class="sec-h3">기본정보</h3>
+										<dl>
+											<dt>업무시간</dt>
+											<dd>평일 09시~12시 / 13시~18시</dd>
+											<dt>고객센터</dt>
+											<dd>1644-9388</dd>
+											<dt>주소</dt>
+											<dd>서울시 중구 통일로 92 (순화동 1-170) KG타워 16층</dd>
+											<dt>홈페이지</dt>
+											<dd><a href="https://www.kgmobile.co.kr/main" target="_blank">https://www.kgmobile.co.kr/main</a></dd>
+										</dl>
+									</section>
+								</div>
+								<!-- //기본정보 탭패널 -->
+
+								<!-- 리뷰 탭패널 -->
+								<div class="tab-pane fade show active" id="detail-tab-02-pane">
+									<section class="tab-pane-sec">
+										<h3 class="sec-h3">리뷰</h3>
+										<!-- 리뷰 공통 -->
+										<ul class="review-list">
+											<li class="review-item">
+												<div class="review-card">
+													<div class="card-body">
+														<div class="card-rating" aria-label="평점 5점">
+															<span class="ui-rating rating-value">
+																<i class="ui-icn icn-16-rating-pr" aria-hidden="true"></i>
+																<strong class="val">5.0</strong>
+															</span>
+														</div>
+														<p class="card-name">홍길동</p>
+														<p class="card-cont">리뷰내용텍스트리뷰내용텍스트리뷰내용텍스트리뷰</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<!-- // 리뷰 리스트 -->
+									</section>
+								</div>
+								<!-- // 리뷰 탭패널 -->
+
+								<!-- 요금제 탭패널 -->
+								<div class="tab-pane fade show active" id="detail-tab-03-pane">
+									<section class="tab-pane-sec">
+										<h3 class="sec-h3">요금제</h3>
+										<!-- 요금제 공통 타입 C : 요금제 상품 리스트 타입 -->
+										<ul class="ratePlanC-list">
+											<li class="ratePlanC-item">
+												<div class="ratePlanC-card" role="button" tabindex="0">
+												</div>
+											</li>
+										</ul>
+										<!-- // 요금제 공통 타입 C : 요금제 상품 리스트 타입 -->
+									</section>
+								</div>
+								<!-- // 요금제 탭패널 -->
+
+								<!-- 이벤트 -->
+								<div class="tab-pane fade show active" id="detail-tab-04-pane">
+									<section class="tab-pane-sec">
+										<h3 class="sec-h3">이벤트</h3>
+										<div class="ui-bnr bnr-event">
+											<button class="ui-btn">
+												<img src="" alt="이벤트 내용" />
+											</button>
+										</div>
+									</section>
+								</div>
+								<!-- // 이벤트 -->
+							</div>
+							<!-- // 파트너사 상세정보 -->
+						</div>
+					</div>
+				</section>
+				<!-- // 파트너사 섹션 -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

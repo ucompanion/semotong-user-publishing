@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="세모통" />
 	<meta name="description" content="세모통" />
-	<title>대표 추천 요금제 | 세모통</title>
+	<title>추천 요금제 매칭 | 세모통</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -21,8 +21,8 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// 퍼블리싱 바로 볼 수 있도록 호출
-			var FCB0201Modal = new bootstrap.Modal(document.getElementById('FCB0201Modal'));
-			FCB0201Modal.show();
+			var FCB0306Modal = new bootstrap.Modal(document.getElementById('FCB0306Modal'));
+			FCB0306Modal.show();
 		});
 	</script>
 </head>
@@ -31,7 +31,7 @@
 	<div class="wrapper">
 		<div style="padding: 30rem;">
 			<!-- 트리거로 모달 띄우기 -->
-			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FCB0201Modal">
+			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FCB0306Modal">
 				Default modal
 			</button>
 		</div>
@@ -43,12 +43,12 @@
 		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm
 		화면 이름 : 화면아이디-page
 	-->
-	<!-- modal 대표 추천 요금제 -->
-	<div class="modal fade" id="FCB0201Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0201ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full F-CB02-01-page">
+	<!-- modal 추천 요금제 매칭 -->
+	<div class="modal fade" id="FCB0306Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0306ModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-full F-CB03-06-page">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3 class="modal-title blind" id="FCB0201ModalLabel">추천 챗봇</h3>
+					<h3 class="modal-title blind" id="FCB0306ModalLabel">추천 요금제 매칭</h3>
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
 				</div>
 				<div class="modal-body">
@@ -58,10 +58,16 @@
 							<img src="" alt="" />
 						</div>
 						<div class="summary-con">
-							<p>알뜰폰을 사용중이신 고객님께 세모통에서 자신있게 추천하는 세모통 대표 요금제예요!</p>
+							<p>고객님께 딱 맞는 요금제를 추천드려요!</p>
 						</div>
 					</section>
 					<!-- // 챗봇 설명 섹션 -->
+
+					<!-- 챗봇 그래프 섹션 -->
+					 <section class="cb-graph-sec">
+						그래프
+					 </section>
+					<!-- //챗봇 그래프 섹션 -->
 
 					<!-- 챗봇 상품 리스트 섹션 -->
 					<section class="cb-ratePlanC-sec">

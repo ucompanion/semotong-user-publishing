@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="세모통" />
 	<meta name="description" content="세모통" />
-	<title>대표 추천 요금제 | 세모통</title>
+	<title>이용 패턴 유형 선택 | 세모통</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -21,8 +21,8 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// 퍼블리싱 바로 볼 수 있도록 호출
-			var FCB0201Modal = new bootstrap.Modal(document.getElementById('FCB0201Modal'));
-			FCB0201Modal.show();
+			var FCB0304Modal = new bootstrap.Modal(document.getElementById('FCB0304Modal'));
+			FCB0304Modal.show();
 		});
 	</script>
 </head>
@@ -31,7 +31,7 @@
 	<div class="wrapper">
 		<div style="padding: 30rem;">
 			<!-- 트리거로 모달 띄우기 -->
-			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FCB0201Modal">
+			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FCB0304Modal">
 				Default modal
 			</button>
 		</div>
@@ -43,12 +43,12 @@
 		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm
 		화면 이름 : 화면아이디-page
 	-->
-	<!-- modal 대표 추천 요금제 -->
-	<div class="modal fade" id="FCB0201Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0201ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full F-CB02-01-page">
+	<!-- modal 이용 패턴 유형 선택 -->
+	<div class="modal fade" id="FCB0304Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0304ModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-full F-CB03-04-page">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3 class="modal-title blind" id="FCB0201ModalLabel">추천 챗봇</h3>
+					<h3 class="modal-title blind" id="FCB0304ModalLabel">이용 패턴 유형 선택</h3>
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
 				</div>
 				<div class="modal-body">
@@ -58,27 +58,39 @@
 							<img src="" alt="" />
 						</div>
 						<div class="summary-con">
-							<p>알뜰폰을 사용중이신 고객님께 세모통에서 자신있게 추천하는 세모통 대표 요금제예요!</p>
+							<p>고객님, 다른 요금제가 궁금하세요?</p>
+							<p>고객님께 요금을 추천드리기 위해 데이터가 얼마나 필요하신지 알아볼게요. </p>
 						</div>
 					</section>
 					<!-- // 챗봇 설명 섹션 -->
 
-					<!-- 챗봇 상품 리스트 섹션 -->
-					<section class="cb-ratePlanC-sec">
-						<!-- 요금제 공통 타입 C : 요금제 상품 리스트 타입 -->
-						<ul class="ratePlanC-list">
-							<li class="ratePlanC-item">
-								<div class="ratePlanC-card" role="button" tabindex="0">
+					<!-- 챗봇 요금제 리스트 섹션 -->
+					<section class="cb-ratePlanA-sec">
+						<!-- 요금제 공통 타입 A : 요금제 리스트 타입 -->
+						<ul class="ratePlanA-list">
+							<li class="ratePlanA-item">
+								<div class="ratePlanA-card" role="button" tabindex="0">
+									<div class="card-body">
+										<p class="card-explain">웹서핑, 카톡을 <br>주로 사용해요.</p>
+										<p class="card-tag">
+											<span class="tag">#가성비</span>
+											<span class="tag">#합리파</span>
+										</p>
+									</div>
+									<div class="card-footer">
+										<p class="card-name"><em>7GB+</em></p>
+										<p class="card-charge"><em>월 9,990원~</em></p>
+									</div>
 								</div>
 							</li>
 						</ul>
-						<!-- // 요금제 공통 타입 C : 요금제 상품 리스트 타입 -->
+						<!-- // 요금제 공통 타입 A : 요금제 리스트 타입 -->
 
 						<button type="button" class="ui-btn">
 							<span>다른 요금제를 안내해 드릴까요?</span>
 						</button>
 					</section>
-					<!-- // 챗봇 상품 리스트 섹션 -->
+					<!-- // 챗봇 요금제 리스트 섹션 -->
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="ui-btn">

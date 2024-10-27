@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>주간 베스트 요금제 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- 페이지 스크립트 섹션 -->
+	<script></script>
+</head>
+
+<body>
+	<!-- 레이아웃 유형구분
+		메인: main-wrapper,
+		서브: sub-wrapper,
+		기타: [기타]-wrapper
+	 -->
+	<div class="wrapper sub-wrapper">
+		<!-- Header -->
+		<header class="header"></header>
+		<!-- // Header -->
+
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-M03-page">
+				<!-- 접근성 숨김처리 전역클래스 -->
+				<h1 class="blind">주간 베스트 요금제</h1>
+
+				<!-- 주간 베스트 요금제 섹션 -->
+				<section class="ratePlan-best-sec">
+					<div class="sec-inner">
+						<p>세모통 주간 베스트 10</p>
+						<p>*월 주간 요금제 랭킹</p>
+					</div>
+				</section>
+				<!-- // 주간 베스트 요금제 섹션 -->
+
+				<!-- 상품 리스트 섹션 -->
+				<section class="ratePlanC-sec">
+					<div class="sec-inner">
+						<!-- 옵션 공통 -->
+						<div class="frm-option">
+							<div class="ui-swich">
+								<input type="checkbox" name="sSwitch1" id="sSwitch11" value="">
+								<label for="sSwitch11">12개월 총액 보기</label>
+							</div>
+							<div class="ui-swich">
+								<input type="checkbox" name="sSwitch1" id="sSwitch12" value="" checked>
+								<label for="sSwitch12">24개월 총액 보기</label>
+							</div>
+							<div class="ui-dropdown dropdown-유형">
+								<button class="ui-btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="setDropdown(this)">
+									<span>추천순</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">추천순</a></li>
+									<li><a class="dropdown-item" href="#">Another action</a></li>
+									<li><a class="dropdown-item" href="#">Something else here</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- // 옵션 공통 -->
+
+						<!-- 요금제 공통 타입 C : 요금제 상품 리스트 타입 -->
+						<ul class="ratePlanC-list">
+							<li class="ratePlanC-item">
+								<div class="ratePlanC-card" role="button" tabindex="0">
+								</div>
+							</li>
+						</ul>
+						<!-- // 요금제 공통 타입 C : 요금제 상품 리스트 타입 -->
+
+						<button type="button" class="ui-btn">
+							<span>더보기</span>
+						</button>
+					</div>
+				</section>
+				<!-- // 상품 섹션 -->
+
+				<!-- 상품추천 섹션 -->
+				<section class="recom-bnr-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-h2">결합하면 좋은 인터넷 상품 추천드려요!</h2>
+						</div>
+						<div class="sec-body">
+							<div class="ui-bnr">
+								<button type="button" class="ui-btn">
+									<span>인터넷 상품 안내 배너</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // 상품추천 섹션 -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+	</div>
+</body>
+
+</html>

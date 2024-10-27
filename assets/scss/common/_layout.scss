@@ -20,8 +20,7 @@ html {
 
 .wrapper,
 .container,
-.content,
-.content-body {
+.content {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
@@ -29,9 +28,7 @@ html {
 }
 
 .header,
-.footer,
-.content-header,
-.content-footer {
+.footer {
 	flex: none;
 }
 
