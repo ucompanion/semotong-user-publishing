@@ -30,6 +30,8 @@ html {
 .header,
 .footer {
 	flex: none;
+	position: relative;
+	z-index: 200;
 }
 
 // Common
@@ -269,6 +271,7 @@ html {
 	position: fixed;
 	left: 0;
 	bottom: 0;
+	z-index: 300;
 	width: 100%;
 	height: $height-footer;
 	min-width: $mobile-inner-content;
