@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="세모통" />
 	<meta name="description" content="세모통" />
-	<title>Pages | 세모통</title>
+	<title>마이페이지 | 세모통</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -18,7 +18,9 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
-	<script></script>
+	<!-- Swiper Librarys -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -27,7 +29,7 @@
 		서브: sub-wrapper,
 		기타: [기타]-wrapper
 	 -->
-	<div class="wrapper sub-wrapper">
+	<div class="wrapper main-wrapper">
 		<!-- Header -->
 		<header class="header">
 			<div class="header-skip">
@@ -37,12 +39,13 @@
 			<!-- Header -->
 			<div class="header-sec">
 				<div class="header-title">
-					<h1 class="title"><a href="/" class="logo"><span class="blind">WFI (재)원주미래산업진흥원</span></a></h1>
+					<h1 class="title">마이페이지</h1>
 				</div>
 				<div class="header-btn">
-					<!-- <button type="button" class="ui-btn">
-						<i class="icn" aria-label="검색">검색</i>
-					</button> -->
+					<button type="button" class="ui-btn">
+						<i class="ui-icn icn-16-headset-bk" aria-hidden="true"></i>
+						<span>고객센터</span>
+					</button>
 					<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#asideModal">
 						<i class="icn" aria-label="메뉴열기">메뉴열기</i>
 					</button>
@@ -52,15 +55,14 @@
 		</header>
 		<!-- // Header -->
 
-		<!-- Mobile Nav Modal (include_mobileNav.html) -->
-		<div class="modal fade aside-modal" id="asideModal" tabindex="-1" role="dialog" aria-labelledby="asideModalLabel" aria-hidden="true"></div>
-		<!-- Mobile Nav Modal -->
+		<!-- Aside Modal (include_mobileNav.html) -->
+		<aside class="modal fade aside-modal" id="asideModal" tabindex="-1" role="dialog" aria-labelledby="asideModalLabel" aria-hidden="true"></aside>
+		<!-- Aside Modal -->
 
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<div class="content 화면명-page">
-				본문 컨텐츠
+			<div class="content F-MY01-page">
 			</div>
 			<!-- // content -->
 		</main>

@@ -73,11 +73,11 @@ $bg-icons: (
 
 
 	// 24
-	(icn-24-gnb-01-gr, svg, icn-24-gnb-01-pr, svg),
-	(icn-24-gnb-02-gr, svg, icn-24-gnb-02-pr, svg),
-	(icn-24-gnb-03-gr, svg, icn-24-gnb-03-pr, svg),
-	(icn-24-gnb-04-gr, svg, icn-24-gnb-04-pr, svg),
-	(icn-24-gnb-05-gr, svg, icn-24-gnb-05-pr, svg),
+	(icn-24-nav-01-gr, svg, icn-24-nav-01-pr, svg),
+	(icn-24-nav-02-gr, svg, icn-24-nav-02-pr, svg),
+	(icn-24-nav-03-gr, svg, icn-24-nav-03-pr, svg),
+	(icn-24-nav-04-gr, svg, icn-24-nav-04-pr, svg),
+	(icn-24-nav-05-gr, svg, icn-24-nav-05-pr, svg),
 
 
 	// 28
@@ -99,6 +99,7 @@ $bg-icons: (
 	// 호버 컬러변경 - 마스크 처리방식
 	@if length($values) == 3 {
 		$hover-color: nth($values, 3);
+		.is-selected .#{$img-name},
 		.ui-btn:focus-visible .#{$img-name},
 		.ui-btn:hover .#{$img-name} {
 			&::before {
@@ -116,7 +117,7 @@ $bg-icons: (
 			content:'';
 			background-image: url('../images/common/#{$hover-img-name}.#{$hover-ext-name}');
 		}
-		.ui-btn.is-selected .#{$img-name},
+		.is-selected .#{$img-name},
 		.ui-btn:focus-visible .#{$img-name},
 		.ui-btn:hover .#{$img-name} {
 			&::before {

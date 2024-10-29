@@ -4,20 +4,27 @@
 	- @ Init	    : 초기실행
 -------------------------------------------------------------------*/
 $(function(){
-	$(".header").each(function(){
-		$(this).load("../../html/layout/include_header.html", function(){
-			console.log('[INFO] 퍼블리싱 include_header.html 인클루드 완료');
-			initUI();
+	$(".aside-modal").each(function(){
+		$(this).load("../../html/layout/include_mobileNav.html", function(){
+			console.log('[INFO] 퍼블리싱 include_mobileNav.html 인클루드 완료');
 		});
 	})
 	$(".footer").each(function(){
 		$(this).load("../../html/layout/include_footer.html", function(){
-				console.log('[INFO] 퍼블리싱 include_footer.html 인클루드 완료');
+			console.log('[INFO] 퍼블리싱 include_footer.html 인클루드 완료');
 		});
 	});
 	$(".floating-nav").each(function(){
+		var $nav = $(this);
 		$(this).load("../../html/layout/include_floatingNav.html", function(){
-				console.log('[INFO] 퍼블리싱 include_floatingNav.html 인클루드 완료');
+			if ($('.F-M01-page').lenghth) {
+				$nav.find('.nav-item').eq(0).find('.nav-link').addClass('is-selected');
+			}
+			else if ($('.F-MY01-page').lenghth) {
+				$nav.find('.nav-item').eq(4).find('.nav-link').addClass('is-selected');
+			} else {
+				$nav.find('.nav-item').eq(0).find('.nav-link').addClass('is-selected');
+			}
 		});
 	});
 });
