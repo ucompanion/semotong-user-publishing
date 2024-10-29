@@ -36,7 +36,6 @@ html {
 .out-sec {
 	@include out-sec;
 }
-
 .in-sec {
 	@include in-sec;
 }
@@ -70,7 +69,6 @@ html {
 // Header
 .header {
 	background-color: #fff;
-	@include out-sec;
 
 	.header-sec {
 		display: flex;
@@ -126,7 +124,6 @@ html {
 	padding-bottom: $height-footer;
 	background-color: #111;
 	color: #EFF0F0;
-	@include out-sec;
 
 	// 푸터 섹션
 	.footer-sec {
@@ -267,18 +264,19 @@ html {
 	bottom: 0;
 	width: 100%;
 	height: $height-footer;
-	min-width: $mobile-width-content;
+	min-width: $mobile-inner-content;
 	background-color: #fff;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
 	// background-color: gray; 세이프존 확인용
 
 	.nav-list {
 		display: flex;
-		padding: 14rem 16rem 16rem 16rem;
+		justify-content: space-between;
+		padding: 14rem 0 16rem 0;
+		@include in-sec;
 		background-color: #fff;
 		.nav-item {
-			flex: none;
-			width: calc(100%/5);
+			width: 52rem;
 			.nav-link {
 				display: flex;
 				flex-direction: column;

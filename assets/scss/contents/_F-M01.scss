@@ -9,14 +9,11 @@
 .F-M01-page {
 	// 공통
 	> section {
-		@include out-sec;
+		@include in-sec;
 		margin-top: 30rem;
 		& + section {
 			margin-top: 60rem;
 		}
-	}
-	.sec-inner {
-		@include in-sec;
 	}
 	.sec-tit {
 		font-weight: 700;

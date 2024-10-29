@@ -10,10 +10,10 @@ $font-primary: 'Pretendard Variable', 'sans-serif';
 $font-secondary: 'YJ_Obang';
 
 // 본문영역 사이즈
-$pc-width-content: 1200rem;
-$pc-sidespacer: 32rem;
-$mobile-width-content: 320rem;
-$mobile-sidespacer: 16rem;
+$pc-outer-spacer: 40rem;
+$pc-inner-content: 1024rem;
+$mobile-outer-spacer: 16rem;
+$mobile-inner-content: 320rem;
 
 // 공통요소 사이즈
 $height-header: 60rem;
@@ -42,22 +42,28 @@ $color-item3: #E5446D; // 추천
 //-------------------------------------------------------------------
 //    Mixins
 //-------------------------------------------------------------------
-// 여백/너비 설정
-@mixin out-sec {
-	min-width: $mobile-width-content;
-	padding-left: $mobile-sidespacer;
-	padding-right: $mobile-sidespacer;
-
-	@include media-tablet-xl {
-		padding-left: $pc-sidespacer;
-		padding-right: $pc-sidespacer;
+// 안쪽 여백
+@mixin in-spacer {
+	padding-left: $mobile-outer-spacer;
+	padding-right: $mobile-outer-spacer;
+	@include media-tablet-xs {
+		padding-left: $pc-outer-spacer;
+		padding-right: $pc-outer-spacer;
 	}
 }
 
-@mixin in-sec {
-	position: relative;
-	max-width: $pc-width-content;
+// 바깥 섹션
+@mixin out-sec {
 	width: 100%;
+	max-width: $pc-inner-content;
+	min-width: $mobile-inner-content;
 	margin-left: auto;
 	margin-right: auto;
+	transition: padding 0.2s ease;
+}
+
+// 안쪽 섹션
+@mixin in-sec {
+	@include out-sec;
+	@include in-spacer;
 }

@@ -20,7 +20,7 @@ $media-mobile-landscape: 940px; // 아이폰 14 프로 맥스 가로모드의 �
 	@media all and (min-width: $media-tablet-xs) {
 		@content;
 	}
-	@media all and (min-width: $media-mobile-landscape) and (min-height: $media-mobile-xs) {
+	@media all and (min-width: $media-mobile-landscape) and (min-height: $media-mobile-xl) {
 		@content;
 	}
 }
