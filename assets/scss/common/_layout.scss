@@ -125,6 +125,7 @@ html {
 .content {
 	.sec-inner {
 		@include in-sec;
+		transition: padding 0.2s ease;
 	}
 }
 

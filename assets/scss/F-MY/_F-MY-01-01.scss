@@ -41,9 +41,9 @@
 
 // 이벤트
 .event-sec {
-	// @include in-sec;
+	@include out-sec;
 	@include media-tablet-xl {
-		@include in-sec;
+		@include in-spacer;
 	}
 }
 /*-------------------------------------------------------------------
