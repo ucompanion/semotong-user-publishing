@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 마이페이지
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	@@ Sections
+-------------------------------------------------------------------*/
+// 나의 정보
+.my-info-sec {
+	padding-top:25rem;
+	padding-bottom:25rem;
+	background-color: #eee;
+	.my-info-profile {
+		position: relative;
+		.name {
+			font-weight: 600;
+			font-size: 18rem;
+			color: #000000;
+		}
+		.info {
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 16rem;
+			color: #828588;
+		}
+		.ui-btn {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+	}
+
+	.my-info-rateplan {
+		margin-top: 26rem;
+		background-color: #fff;
+		border-radius: 12rem;
+	}
+}
+
+// 이벤트
+.event-sec {
+	// @include in-sec;
+	@include media-tablet-xl {
+		@include in-sec;
+	}
+}
+/*-------------------------------------------------------------------
+	@@ 팝업명
+-------------------------------------------------------------------*/
+/* 섹션명 > 버튼명 > 팝업명 */

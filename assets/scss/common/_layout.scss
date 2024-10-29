@@ -119,6 +119,13 @@ html {
 	}
 }
 
+// Content
+.content {
+	.sec-inner {
+		@include in-sec;
+	}
+}
+
 // Footer
 .footer {
 	padding-bottom: $height-footer;

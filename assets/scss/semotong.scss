@@ -10,6 +10,7 @@
 
 // Components
 @import './components/accordion';
+@import './components/banner';
 @import './components/button';
 @import './components/checkbox';
 @import './components/dropdown';
@@ -23,5 +24,5 @@
 @import './components/tooltip';
 
 // Contents
-@import './contents/F-M01';
-@import './contents/common';
+@import './F-M/F-M01';
+@import './F-MY/F-MY-01-01';

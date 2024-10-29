@@ -21,6 +21,21 @@
 	<!-- Swiper Librarys -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// 이벤트 스와이프 실행
+		    var eventSwiper = new Swiper(".swiper-event", {
+				spaceBetween: 10,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
+		})
+	</script>
 </head>
 
 <body>
@@ -63,6 +78,89 @@
 		<main role="main" class="container">
 			<!-- content -->
 			<div class="content F-MY01-page">
+				<!-- 나의정보 섹션 -->
+				<section class="my-info-sec">
+					<div class="sec-inner">
+						<div class="my-info-profile">
+							<p class="name"><strong>홍*동 님, 환영합니다!</strong></p>
+							<p class="info">아직 신청하신 요금제가 없어요.</p>
+							<button type="button" class="ui-btn">
+								<i class="ui-icn icn-16-more-right-gr" aria-label="더보기"></i>
+							</button>
+						</div>
+						<div class="my-info-rateplan">
+							<dl>
+								<dt>찜한 요금제</dt>
+								<dd>
+									<button type="button" class="ui-btn">
+										<span>0건</span>
+										<i class="ui-icn icn-16-more-right-gr" aria-label="더보기"></i>
+									</button>
+								</dd>
+								<dt>신청한 요금제</dt>
+								<dd>
+									<button type="button" class="ui-btn">
+										<span>0건</span>
+										<i class="ui-icn icn-16-more-right-gr" aria-label="더보기"></i>
+									</button>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</section>
+				<!-- // 나의정보 섹션 -->
+<br>
+<br>
+				<!-- 이벤트 섹션 -->
+				<section class="event-sec">
+						<div class="swiper swiper-event">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="ui-bnr bnr-event">
+										<button class="ui-btn">
+											<img src="" alt="이벤트 내용" />
+										</button>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="ui-bnr bnr-event">
+										<button class="ui-btn">
+											<img src="" alt="이벤트 내용" />
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+				</section>
+				<!-- // 이벤트 섹션 -->
+<br>
+<br>
+
+				<!-- 나의 요금제 섹션 -->
+				<section class="ratePlan-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-h2">최근본 요금제</h2>
+						</div>
+					</div>
+				</section>
+				<!-- // 이벤트 섹션 -->
+<br>
+<br>
+
+				<!-- 나의 요금제 섹션 -->
+				<section class="ratePlan-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-h2">찜한 요금제</h2>
+						</div>
+					</div>
+				</section>
+				<!-- // 이벤트 섹션 -->
+<br>
+<br>
+
 			</div>
 			<!-- // content -->
 		</main>
