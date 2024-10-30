@@ -40,7 +40,7 @@ $color-item3: #E5446D; // 추천
 
 
 //-------------------------------------------------------------------
-//    Mixins
+//    Mixins Settings
 //-------------------------------------------------------------------
 // 안쪽 여백
 @mixin in-spacer {
@@ -54,16 +54,42 @@ $color-item3: #E5446D; // 추천
 
 // 바깥 섹션
 @mixin out-sec {
-	width: 100%;
-	max-width: $pc-inner-content;
 	min-width: $mobile-inner-content;
-	margin-left: auto;
-	margin-right: auto;
+	@include in-spacer;
 	transition: padding 0.2s ease;
 }
 
 // 안쪽 섹션
 @mixin in-sec {
-	@include out-sec;
-	@include in-spacer;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $pc-inner-content;
+}
+
+//-------------------------------------------------------------------
+//    Mixins Styles
+//-------------------------------------------------------------------
+// 섹션
+@mixin sec-basic {
+	.sec-header {
+		position: relative;
+		margin-bottom: 6rem;
+
+		.sec-tit {
+			font-weight: 700;
+			font-size: 20rem;
+			color: #2A2B2D;
+		}
+		.sec-explain {
+			font-weight: 600;
+			font-size: 14rem;
+			color: #63666A;
+		}
+		.btn-more {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
 }

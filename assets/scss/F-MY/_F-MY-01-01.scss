@@ -41,11 +41,18 @@
 
 // 이벤트
 .event-sec {
-	@include out-sec;
-	@include media-tablet-xl {
-		@include in-spacer;
-	}
 }
+
+// 최근 본 요금제 섹션
+.ratePlan-recent-sec {
+	@include sec-basic;
+}
+
+// 찜한 요금제 섹션
+.ratePlan-bookmark-sec {
+	@include sec-basic;
+}
+
 /*-------------------------------------------------------------------
 	@@ 팝업명
 -------------------------------------------------------------------*/

@@ -25,6 +25,7 @@
 		document.addEventListener("DOMContentLoaded", () => {
 			// 이벤트 스와이프 실행
 		    var eventSwiper = new Swiper(".swiper-event", {
+				threshold: 3,
 				spaceBetween: 10,
 				pagination: {
 					el: ".swiper-pagination",
@@ -109,10 +110,10 @@
 					</div>
 				</section>
 				<!-- // 나의정보 섹션 -->
-<br>
-<br>
+
 				<!-- 이벤트 섹션 -->
 				<section class="event-sec">
+					<div class="sec-inner">
 						<div class="swiper swiper-event">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -132,35 +133,86 @@
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>
+					</div>
 				</section>
 				<!-- // 이벤트 섹션 -->
-<br>
-<br>
 
 				<!-- 나의 요금제 섹션 -->
-				<section class="ratePlan-sec">
+				<section class="ratePlan-recent-sec">
 					<div class="sec-inner">
+						<div class="sec-catogory">
+							<h2 class="sec-h2">나의 요금제</h2>
+						</div>
+
+						<!-- 최근 본 요금제 -->
 						<div class="sec-header">
-							<h2 class="sec-h2">최근본 요금제</h2>
+							<h3 class="sec-tit">최근 본 요금제</h3>
+							<button type="button" class="ui-btn btn-more">
+								<span>0건</span>
+								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="sec-body">
+							<div class="no-data">
+								<p>+더 많은 요금제를 확인해보세요.</p>
+							</div>
+						</div>
+						<!-- // 최근 본 요금제 -->
+
+						<!-- 찜한 요금제 -->
+						<div class="sec-header">
+							<h3 class="sec-tit">찜한 요금제</h3>
+							<button type="button" class="ui-btn btn-more">
+								<span>0건</span>
+								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							</button>
+						</div>
+						<!-- // 찜한 요금제 -->
+
+						<!-- 신청한 요금제 -->
+						<div class="sec-header">
+							<h3 class="sec-tit">신청한 요금제</h3>
+							<button type="button" class="ui-btn btn-more">
+								<span>0건</span>
+								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							</button>
+						</div>
+						<!-- // 신청한 요금제 -->
+					</div>
+				</section>
+				<!-- // 나의 요금제 섹션 -->
+
+				<!-- 고객지원 섹션 -->
+				<section class="ratePlan-bookmark-sec">
+					<div class="sec-inner">
+						<h2 class="sec-h2">고객지원</h2>
+
+						<div class="sec-header">
+							<h3 class="sec-tit">공지사항</h3>
+							<button type="button" class="ui-btn btn-more">
+								<span class="blind">더보기</span>
+								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							</button>
+						</div>
+
+						<div class="sec-header">
+							<h3 class="sec-tit">1:1 문의</h3>
+							<button type="button" class="ui-btn btn-more">
+								<span class="blind">더보기</span>
+								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							</button>
+						</div>
+
+						<div class="sec-header">
+							<h3 class="sec-tit">자주 묻는 질문</h3>
+							<button type="button" class="ui-btn btn-more">
+								<span class="blind">더보기</span>
+								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							</button>
 						</div>
 					</div>
 				</section>
 				<!-- // 이벤트 섹션 -->
-<br>
-<br>
-
-				<!-- 나의 요금제 섹션 -->
-				<section class="ratePlan-sec">
-					<div class="sec-inner">
-						<div class="sec-header">
-							<h2 class="sec-h2">찜한 요금제</h2>
-						</div>
-					</div>
-				</section>
-				<!-- // 이벤트 섹션 -->
-<br>
-<br>
-
 			</div>
 			<!-- // content -->
 		</main>

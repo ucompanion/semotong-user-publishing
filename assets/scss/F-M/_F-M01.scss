@@ -7,24 +7,6 @@
 	@@ Sections
 -------------------------------------------------------------------*/
 .F-M01-page {
-	// 공통
-	> section {
-		@include in-sec;
-		margin-top: 30rem;
-		& + section {
-			margin-top: 60rem;
-		}
-	}
-	.sec-tit {
-		font-weight: 700;
-		font-size: 20rem;
-		color: #2A2B2D;
-	}
-	.sec-explain {
-		font-weight: 600;
-		font-size: 14rem;
-		color: #63666A;
-	}
 
 	// 비주얼
 	.main-visual-sec {
