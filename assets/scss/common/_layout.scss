@@ -32,6 +32,7 @@ html {
 	flex: none;
 	position: relative;
 	z-index: 200;
+	@include out-sec;
 }
 
 // Common
@@ -86,6 +87,22 @@ html {
 				height: 28rem;
 				background: url('../images/common/img-logo-bk.svg') no-repeat center center / contain;
 			}
+			.title {
+				font-size: 18rem;
+				font-weight: 600;
+				line-height: 24px;
+			}
+		}
+
+		.header-btn {
+			display: flex;
+			align-items: center;
+			flex: none;
+			gap: 8rem;
+			.ui-btn {
+				width: 32rem;
+				height: 32rem;
+			}
 		}
 	}
 }
@@ -123,6 +140,7 @@ html {
 
 // Content
 .content {
+	padding-bottom: $mobile-bottom-spacer;
 	> section {
 		@include out-sec;
 		transition: padding 0.2s ease;
@@ -235,8 +253,10 @@ html {
 		white-space: nowrap;
 		display: flex;
 		flex-direction: column;
+		pointer-events: none;
 
 		.ui-btn {
+			visibility: hidden;
 			width: 60rem;
 			height: 60rem;
 			background-color: #333;
@@ -257,7 +277,9 @@ html {
 			}
 		}
 		&.show {
+			pointer-events: auto;
 			.ui-btn {
+				visibility: hidden;
 				opacity: 1;
 				&:nth-child(1),
 				&:nth-child(2),

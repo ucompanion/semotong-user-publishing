@@ -66,12 +66,13 @@ $bg-icons: (
 
 	// 14
 	(icn-14-more-gr, svg),
+	(icn-14-noti-gr, svg),
 
 	// 16
-
+	(icn-16-more-gr, svg),
 
 	// 20
-
+	(icn-20-headset-bk, svg),
 
 	// 24
 	(icn-24-nav-01-gr, svg, icn-24-nav-01-pr, svg),
@@ -79,12 +80,12 @@ $bg-icons: (
 	(icn-24-nav-03-gr, svg, icn-24-nav-03-pr, svg),
 	(icn-24-nav-04-gr, svg, icn-24-nav-04-pr, svg),
 	(icn-24-nav-05-gr, svg, icn-24-nav-05-pr, svg),
-
+	(icn-24-headset-bk, svg),
 
 	// 28
 
-
 	// 32
+	(icn-32-anb-bk, svg),
 );
 @each $values in $bg-icons {
 	$img-name: nth($values, 1);

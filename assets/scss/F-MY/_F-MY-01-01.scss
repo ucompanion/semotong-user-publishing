@@ -6,11 +6,11 @@
 /*-------------------------------------------------------------------
 	@@ Sections
 -------------------------------------------------------------------*/
-// 나의 정보
+// 나의정보 섹션
 .my-info-sec {
-	padding-top:25rem;
-	padding-bottom:25rem;
-	background-color: #eee;
+	margin-top:22rem;
+
+	// 나의정보
 	.my-info-profile {
 		position: relative;
 		.name {
@@ -22,36 +22,133 @@
 			font-weight: 500;
 			font-size: 12rem;
 			line-height: 16rem;
-			color: #828588;
-		}
-		.ui-btn {
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transform: translateY(-50%);
+			color: rgba(99, 102, 106, 1);
 		}
 	}
 
+	// 요금제
 	.my-info-rateplan {
-		margin-top: 26rem;
-		background-color: #fff;
-		border-radius: 12rem;
+		// 이용요금제 없음
+		&-nodata {
+			margin-top: 16rem;
+			padding: 11rem;
+			text-align: center;
+			border-radius: 8rem;
+			background-color: rgba(239, 240, 240, 0.7);
+			font-size: 12rem;
+			line-height: 14rem;
+			.ui-icn {
+				margin-right: 4rem;
+			}
+		}
+
+		// 요금제 대시보드
+		&-status {
+			margin-top: 16rem;
+			border-radius: 8rem;
+			box-shadow: 3rem 3rem 10rem 0 rgba(0,0,0,0.1);
+
+			.status-list {
+				display: flex;
+				.status-item {
+					position: relative;
+					flex:1;
+					padding: 16rem;
+					text-align: center;
+					& + .status-item::before {
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+						@include split-set(16rem, #ddd);
+					}
+					.tit {
+						display: block;
+						font-size: 12rem;
+						line-height: 14rem;
+						font-weight: 500;
+						color: #000000;
+					}
+					.val {
+						display: block;
+						margin-top: 5rem;
+						font-weight: 700;
+						font-size: 14rem;
+						line-height: 16rem;
+					}
+				}
+			}
+
+			.status-more {
+				position: relative;
+				padding: 16rem;
+				font-size: 12rem;
+				color: #000000;
+				font-weight: 500;
+				&::before {
+					content:'';
+					display: block;
+					position: absolute;
+					left: 16rem;
+					right: 16rem;
+					top: 0;
+					height: 1rem;
+					background-color: #eee;
+				}
+				em {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+// 고객지원 센터
+.cscenter-sec {
+	margin-top: 30rem;
+	@include sec-basic;
+
+	.sec-header {
+		margin-bottom: 10rem;
+		.sec-tit {
+			display: flex;
+			align-items: center;
+			.ui-icn {
+				margin-right: 4rem;
+			}
+		}
+	}
+
+	.sec-body {
+		.cs-menu-list {
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+			width: 100%;
+			margin-bottom: -8rem;
+			.cs-menu-item {
+				width: 100%;
+				.cs-menu-btn {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					width: 100%;
+					padding: 8rem 0;
+					font-style: 14rem;
+					line-height: 20rem;
+					font-weight: 500;
+					color: rgba(70, 72, 75, 1);
+				}
+			}
+		}
 	}
 }
 
 // 이벤트
 .event-sec {
+	margin-top: 30rem;
 }
 
-// 최근 본 요금제 섹션
-.ratePlan-recent-sec {
-	@include sec-basic;
-}
-
-// 찜한 요금제 섹션
-.ratePlan-bookmark-sec {
-	@include sec-basic;
-}
 
 /*-------------------------------------------------------------------
 	@@ 팝업명

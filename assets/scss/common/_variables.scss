@@ -10,10 +10,12 @@ $font-primary: 'Pretendard Variable', 'sans-serif';
 $font-secondary: 'YJ_Obang';
 
 // 본문영역 사이즈
-$pc-outer-spacer: 40rem;
+$pc-outer-spacer: 24rem;
 $pc-inner-content: 1024rem;
+$pc-bottom-spacer: 60rem;
 $mobile-outer-spacer: 16rem;
 $mobile-inner-content: 320rem;
+$mobile-bottom-spacer: 40rem;
 
 // 공통요소 사이즈
 $height-header: 60rem;
@@ -92,4 +94,13 @@ $color-item3: #E5446D; // 추천
 			top: 0;
 		}
 	}
+}
+
+// 구분선
+@mixin split-set($height, $color){
+	content:'';
+	display: block;
+	width: 1px;
+	height: $height;
+	background-color: $color;
 }
