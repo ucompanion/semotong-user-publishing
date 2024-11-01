@@ -76,13 +76,14 @@ $color-item3: #E5446D; // 추천
 @mixin sec-basic {
 	.sec-header {
 		position: relative;
-		margin-bottom: 6rem;
+		margin-bottom: 16rem;
 
 		.sec-tit {
 			display: flex;
 			align-items: center;
 			font-weight: 700;
 			font-size: 20rem;
+			line-height: 24rem;
 			color: #2A2B2D;
 			.ui-icn {
 				margin-right: 4rem;
@@ -138,3 +139,146 @@ $color-item3: #E5446D; // 추천
 //-------------------------------------------------------------------
 //    Mixins Content
 //-------------------------------------------------------------------
+// 요금제 카테고리 목록
+@mixin ratePlanA-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8rem;
+	.ratePlanA-item {
+		width: calc(50% - (8rem / 2));
+	}
+}
+
+// 요금제 카테고리 카드
+@mixin ratePlanA-card {
+	.card-thumb {
+		width: 100%;
+		aspect-ratio: 156 / 115;
+		background-color: #EFF0F0;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.card-body {
+		height: 120rem;
+		padding: 12rem;
+		background-color: #fff;
+		text-align: center;
+
+		.card-tit {
+			font-size: 14rem;
+			font-weight: 700;
+			line-height: 20rem;
+			color: #000000;
+		}
+		.card-txt {
+			margin-top: 2rem;
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 14rem;
+			color: #5A5D60;
+		}
+
+		.card-charge {
+			margin-top: 10rem;
+			font-weight: 600;
+			font-size: 12rem;
+			line-height: 14rem;
+			color: #36383A;
+		}
+
+		.card-data {
+			display: inline-block;
+			margin-top: 6rem;
+			padding: 3rem 10rem 2rem;
+			background-color: #230785;
+			border-radius: 20rem;
+			font-weight: 700;
+			font-size: 16rem;
+			line-height: 22rem;
+			color: #fff;
+			vertical-align: top;
+		}
+	}
+}
+
+// 요금제 카테고리 배너
+@mixin ratePlanB-card {
+
+}
+
+// 요금제 상품 목록
+@mixin ratePlanC-list {
+
+}
+
+// 요금제 상품 카드
+@mixin ratePlanC-card {
+
+}
+
+// 추천 요금제 목록
+@mixin recom-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+	.recom-item {
+		width: 100%;
+	}
+}
+
+// 추천 요금제 배너
+@mixin recom-bnr {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 17rem 16rem;
+	border-radius: 24rem;
+	background-color: #F2F5FB;
+	.recom-con {
+		flex:1 1 auto;
+		display: flex;
+		flex-direction: column;
+		margin-right: auto;
+		margin-left: 17rem;
+		text-align: left;
+		.tit {
+			display: block;
+			width: 100%;
+			font-weight: 700;
+			font-size: 16rem;
+			line-height: 19rem;
+			color: #2A2B2D;
+		}
+		.txt {
+			display: block;
+			width: 100%;
+			margin-top: 4rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 17rem;
+			color: #63666A;
+		}
+	}
+}
+
+// 이벤트 목록
+@mixin event-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12rem;
+
+	.event-item {
+		width: 100%;
+	}
+}
+
+// 이벤트 배너
+@mixin event-bnr {
+	img {
+		width: 100%;
+		border-radius: 2rem;
+		vertical-align: top;
+	}
+}

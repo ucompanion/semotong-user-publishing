@@ -26,9 +26,7 @@
 			// 이벤트 스와이프 실행
 		    var dealSwiper = new Swiper(".deal-swiper", {
 				threshold: 3,
-				slidesPerView: 1.6,
-				// loop: true,
-				centeredSlides: true,
+				slidesPerView: 'auto',
 				spaceBetween: 14,
 				pagination: {
 					el: ".swiper-pagination",
@@ -84,7 +82,7 @@
 								추천 받아 보세요.
 							</h2>
 							<div class="sec-img">
-								<img src="../../assets/images/main/img_chatbot.png" alt="챗봇 캐릭터" />
+								<img src="../../assets/images/contents/main-visual-chatbot.png" alt="챗봇 캐릭터" />
 							</div>
 							<div class="sec-btn">
 								<button type="button" class="ui-btn">
@@ -101,7 +99,7 @@
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통 얼리버드 추천딜<i class="ui-icn icn-24-clock"></i></h2>
-							<p class="remaining"></p>
+							<p class="remaining">13시간 50분 남았어요!</p>
 						</div>
 						<div class="sec-body">
 							<!-- 추천딜 목록 -->
@@ -114,12 +112,12 @@
 												<div class="card-label">
 													<em class="ui-label style-1 item-best">Best</em>
 												</div>
-												<h3 class="card-tit">LTE 유심 10/20GB</h3>
-												<p class="card-info">충분한 데이터와 통화요금</p>
+												<h3 class="card-tit">(셀프)<br> LTE 유심 10/20GB</h3>
+												<p class="card-info">셀프로 더 할인! 12GB 무제한</p>
 											</div>
 											<div class="card-footer">
 												<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.png" alt="안녕 알뜰폰 snowman" /></p>
-												<p class="card-charge"><em>월 18,700원</em></p>
+												<p class="card-charge">월 18,700원</p>
 											</div>
 										</div>
 										<!-- 추천딜 상품 -->
@@ -177,16 +175,53 @@
 							<ul class="ratePlanA-list">
 								<li class="ratePlanA-item">
 									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-body">
-											<p class="card-explain">웹서핑, 카톡을 <br>주로 사용해요.</p>
-											<p class="card-tag">
-												<span class="tag">#가성비</span>
-												<span class="tag">#합리파</span>
-											</p>
+										<div class="card-thumb">
+											<img src="../../assets/images/common/thumb_ratePlan_cate_01.png" alt="" />
 										</div>
-										<div class="card-footer">
-											<p class="card-name"><em>7GB+</em></p>
-											<p class="card-charge"><em>월 9,990원~</em></p>
+										<div class="card-body">
+											<p class="card-tit"><strong>가격먼저!</strong></p>
+											<p class="card-txt">싸고 좋은 요금제만 추려서</p>
+											<p class="card-charge">월 9,990원 부터</p>
+											<p class="card-data"><strong>7GB</strong></p>
+										</div>
+									</div>
+								</li>
+								<li class="ratePlanA-item">
+									<div class="ratePlanA-card" role="button" tabindex="0">
+										<div class="card-thumb">
+											<img src="../../assets/images/common/thumb_ratePlan_cate_01.png" alt="" />
+										</div>
+										<div class="card-body">
+											<p class="card-tit"><strong>가성비 우선!</strong></p>
+											<p class="card-txt">합리적인 요금을 찾는다면?</p>
+											<p class="card-charge">월 990원 부터</p>
+											<p class="card-data"><strong>7GB</strong></p>
+										</div>
+									</div>
+								</li>
+								<li class="ratePlanA-item">
+									<div class="ratePlanA-card" role="button" tabindex="0">
+										<div class="card-thumb">
+											<img src="../../assets/images/common/thumb_ratePlan_cate_01.png" alt="" />
+										</div>
+										<div class="card-body">
+											<p class="card-tit"><strong>OTT 광인</strong></p>
+											<p class="card-txt">하루 2시간 넷플릭스 정주행</p>
+											<p class="card-charge">월 10,000원 부터</p>
+											<p class="card-data"><strong>15GB+</strong></p>
+										</div>
+									</div>
+								</li>
+								<li class="ratePlanA-item">
+									<div class="ratePlanA-card" role="button" tabindex="0">
+										<div class="card-thumb">
+											<img src="../../assets/images/common/thumb_ratePlan_cate_01.png" alt="" />
+										</div>
+										<div class="card-body">
+											<p class="card-tit"><strong>마음껏 무제한</strong></p>
+											<p class="card-txt">가격은 라이트</p>
+											<p class="card-charge">월 19,990원 부터</p>
+											<p class="card-data"><strong>71GB+</strong></p>
 										</div>
 									</div>
 								</li>
@@ -206,15 +241,23 @@
 						<div class="sec-body">
 							<ul class="recom-list">
 								<li class="recom-item">
-									<button class="recom-btn">
-										<span class="bnr-txt">월 주간 요금제 랭킹</span>
-										<strong class="bnr-tit">세모통 주간 베스트 10</strong>
+									<button class="recom-bnr">
+										<i class="ui-icn icn-48-recom-best" aria-hidden="true"></i>
+										<span class="recom-con">
+											<strong class="tit">세모통 주간 베스트 10</strong>
+											<span class="txt">월 주간 요금제 랭킹</span>
+										</span>
+										<i class="ui-icn icn-24-more-gr" aria-hidden="true"></i>
 									</button>
 								</li>
 								<li class="main-recom-item">
-									<button class="main-recom-btn">
-										<span class="bnr-txt">세모통에만 있는 0원 요금제!</span>
-										<strong class="bnr-tit">0원 요금제</strong>
+									<button class="recom-bnr">
+										<i class="ui-icn icn-48-recom-parent" aria-hidden="true"></i>
+										<span class="recom-con">
+											<strong class="tit">0원 요금제</strong>
+											<span class="txt">세모통에만 있는 0원 요금제!</span>
+										</span>
+										<i class="ui-icn icn-24-more-gr" aria-hidden="true"></i>
 									</button>
 								</li>
 							</ul>
@@ -228,16 +271,29 @@
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통 이벤트</h2>
-							<button type="button" class="ui-btn">
+							<button type="button" class="ui-btn btn-more">
 								<span>더보기</span>
+								<i class="ui-icn icn-14-more-gr" aria-label="더보기"></i>
 							</button>
 						</div>
 						<div class="sec-body">
-							<div class="ui-bnr bnr-event">
-								<button class="ui-btn">
-									<img src="" alt="이벤트 내용" />
-								</button>
-							</div>
+							<ul class="event-list">
+								<li class="event-item">
+									<button type="button" class="event-bnr">
+										<img src="../../assets/images/uploads/@event_04_mo.png" alt="이벤트 내용" />
+									</button>
+								</li>
+								<li class="event-item">
+									<button type="button" class="event-bnr">
+										<img src="../../assets/images/uploads/@event_05_mo.png" alt="이벤트 내용" />
+									</button>
+								</li>
+								<li class="event-item">
+									<button type="button" class="event-bnr">
+										<img src="../../assets/images/uploads/@event_06_mo.png" alt="이벤트 내용" />
+									</button>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</section>
@@ -248,8 +304,9 @@
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통 고객님들의 리뷰에요</h2>
-							<button type="button" class="ui-btn">
+							<button type="button" class="ui-btn btn-more">
 								<span>더보기</span>
+								<i class="ui-icn icn-14-more-gr" aria-label="더보기"></i>
 							</button>
 						</div>
 						<div class="sec-body">
@@ -281,8 +338,9 @@
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통의 파트너사를 소개합니다.</h2>
-							<button type="button" class="ui-btn">
+							<button type="button" class="ui-btn btn-more">
 								<span>더보기</span>
+								<i class="ui-icn icn-14-more-gr" aria-label="더보기"></i>
 							</button>
 						</div>
 						<div class="sec-body">

@@ -8,6 +8,7 @@
 -------------------------------------------------------------------*/
 // s: 기본
 .ui-icn {
+	flex: none;
 	position: relative;
 	overflow: hidden;
 	display: inline-block;
@@ -38,7 +39,7 @@
 }
 
 // 추가하고 싶은 크기를 배열에 나열
-$icn-sizes: (14, 16, 18, 20, 24, 28, 32);
+$icn-sizes: (14, 16, 18, 20, 24, 28, 32, 48);
 
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
@@ -81,11 +82,16 @@ $bg-icons: (
 	(icn-24-nav-05-gr, svg, icn-24-nav-05-pr, svg),
 	(icn-24-headset-bk, svg),
 	(icn-24-clock, png),
+	(icn-24-more-gr, svg),
 
 	// 28
 
 	// 32
 	(icn-32-anb-bk, svg),
+
+	// 48
+	(icn-48-recom-best, png),
+	(icn-48-recom-parent, png),
 );
 @each $values in $bg-icons {
 	$img-name: nth($values, 1);
