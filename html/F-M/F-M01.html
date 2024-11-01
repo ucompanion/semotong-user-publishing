@@ -19,34 +19,20 @@
 
 	<!-- 페이지 스크립트 영역 -->
 	<!-- Swiper Librarys -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
+		var dealSwiper1 = null;
+		var dealSwiper2 = null;
 		document.addEventListener("DOMContentLoaded", () => {
-			// 이벤트 스와이프 실행
-		    var dealSwiper1 = new Swiper("#dealSwiper1", {
-				threshold: 3,
-				slidesPerView: 'auto',
-				freemode: true,
-				loop: true,
-				spaceBetween: 14,
-				pagination: {
-					el: ".swiper-pagination",
-				},
-			});
-		    var dealSwiper2 = new Swiper("#dealSwiper2", {
-				threshold: 3,
-				slidesPerView: 'auto',
-				freemode: true,
-				loopedSlides: 4,
-				loop: true,
-				spaceBetween: 16,
-				centeredSlides: true,
-				pagination: {
-					el: ".swiper-pagination",
-				},
-			});
+
+
 		})
+
+		window.addEventListener("resize", () => {
+			// dealSwiper1.update();
+			// dealSwiper2.update();
+		});
 	</script>
 </head>
 
@@ -124,6 +110,57 @@
 										<div class="deal-card" role="button" tabindex="0">
 											<div class="card-body">
 												<div class="card-label">
+													<em class="ui-label style-1 item-recom">추천</em>
+												</div>
+												<h3 class="card-tit">LTE 유심 10/20GB</h3>
+												<p class="card-info">충분한 데이터와 통화요금</p>
+											</div>
+											<div class="card-footer">
+												<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.png" alt="안녕 알뜰폰 snowman" /></p>
+												<p class="card-charge"><em>월 18,700원</em></p>
+											</div>
+										</div>
+										<!-- // 추천딜 상품 -->
+									</div>
+									<div class="swiper-slide">
+										<!-- 추천딜 상품 -->
+										<div class="deal-card" role="button" tabindex="0">
+											<div class="card-body">
+												<div class="card-label">
+													<em class="ui-label style-1 item-recom">추천</em>
+												</div>
+												<h3 class="card-tit">LTE 유심 10/20GB</h3>
+												<p class="card-info">충분한 데이터와 통화요금</p>
+											</div>
+											<div class="card-footer">
+												<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.png" alt="안녕 알뜰폰 snowman" /></p>
+												<p class="card-charge"><em>월 18,700원</em></p>
+											</div>
+										</div>
+										<!-- // 추천딜 상품 -->
+									</div>
+									<div class="swiper-slide">
+										<!-- 추천딜 상품 -->
+										<div class="deal-card" role="button" tabindex="0">
+											<div class="card-body">
+												<div class="card-label">
+													<em class="ui-label style-1 item-recom">추천</em>
+												</div>
+												<h3 class="card-tit">LTE 유심 10/20GB</h3>
+												<p class="card-info">충분한 데이터와 통화요금</p>
+											</div>
+											<div class="card-footer">
+												<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.png" alt="안녕 알뜰폰 snowman" /></p>
+												<p class="card-charge"><em>월 18,700원</em></p>
+											</div>
+										</div>
+										<!-- // 추천딜 상품 -->
+									</div>
+									<div class="swiper-slide">
+										<!-- 추천딜 상품 -->
+										<div class="deal-card" role="button" tabindex="0">
+											<div class="card-body">
+												<div class="card-label">
 													<em class="ui-label style-1 item-best">Best</em>
 												</div>
 												<h3 class="card-tit">LTE 유심 10/20GB</h3>
@@ -134,7 +171,7 @@
 												<p class="card-charge"><em>월 18,700원</em></p>
 											</div>
 										</div>
-										<!-- 추천딜 상품 -->
+										<!-- // 추천딜 상품 -->
 									</div>
 									<div class="swiper-slide">
 										<!-- 추천딜 상품 -->
@@ -151,14 +188,14 @@
 												<p class="card-charge"><em>월 18,700원</em></p>
 											</div>
 										</div>
-										<!-- 추천딜 상품 -->
+										<!-- // 추천딜 상품 -->
 									</div>
 									<div class="swiper-slide">
 										<!-- 추천딜 상품 -->
 										<div class="deal-card" role="button" tabindex="0">
 											<div class="card-body">
 												<div class="card-label">
-													<em class="ui-label style-1 item-recom">추천</em>
+													<em class="ui-label style-1 item-best">Best</em>
 												</div>
 												<h3 class="card-tit">LTE 유심 10/20GB</h3>
 												<p class="card-info">충분한 데이터와 통화요금</p>
@@ -168,7 +205,7 @@
 												<p class="card-charge"><em>월 18,700원</em></p>
 											</div>
 										</div>
-										<!-- 추천딜 상품 -->
+										<!-- // 추천딜 상품 -->
 									</div>
 								</div>
 							</div>
@@ -225,6 +262,23 @@
 											</div>
 										</div>
 										<!-- 추천딜 상품 -->
+									</div>
+									<div class="swiper-slide">
+										<!-- 추천딜 상품 -->
+										<div class="deal-card" role="button" tabindex="0">
+											<div class="card-body">
+												<div class="card-label">
+													<em class="ui-label style-1 item-best">Best</em>
+												</div>
+												<h3 class="card-tit">LTE 유심 10/20GB</h3>
+												<p class="card-info">충분한 데이터와 통화요금</p>
+											</div>
+											<div class="card-footer">
+												<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.png" alt="안녕 알뜰폰 snowman" /></p>
+												<p class="card-charge"><em>월 18,700원</em></p>
+											</div>
+										</div>
+										<!-- // 추천딜 상품 -->
 									</div>
 								</div>
 							</div>
@@ -520,6 +574,36 @@
 		<nav class="floating-nav"></nav>
 		<!-- // floating Nav- -->
 	</div>
+
+	<script>
+			// 이벤트 스와이프 실행
+		    dealSwiper1 = new Swiper("#dealSwiper1", {
+				threshold: 3,
+				// width: 185,
+				slidesPerView: 'auto',
+				// freemode: true,
+				// loop: true,
+				spaceBetween: 20,
+				// centeredSlides: true,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+			});
+		    dealSwiper2 = new Swiper("#dealSwiper2", {
+				threshold: 3,
+				// width: 185,
+				slidesPerView: 'auto',
+				// freemode: true,
+				// loopedSlides: 4,
+				// loop: true,
+				spaceBetween: 16,
+				centeredSlides: true,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+			});
+
+	</script>
 </body>
 
 </html>
