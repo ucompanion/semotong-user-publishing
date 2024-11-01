@@ -24,7 +24,7 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			// 이벤트 스와이프 실행
-		    var eventSwiper = new Swiper(".swiper-event", {
+		    var eventSwiper = new Swiper(".event-swiper", {
 				threshold: 3,
 				spaceBetween: 10,
 				pagination: {
@@ -103,7 +103,7 @@
 						<div class="my-info-rateplan-nodata">
 							<p>
 								<i class="ui-icn icn-14-noti-gr" aria-hidden="true"></i>
-								아직 이용 중인 요금제가 없어요.
+								<span>아직 이용 중인 요금제가 없어요.</span>
 							</p>
 						</div>
 						<!-- // 이용중인 요즘제 없음 -->
@@ -128,7 +128,7 @@
 							<div class="status-more">
 								<button type="button" class="ui-btn">
 									<span>👏 세모통이 추천하는 <em>나만의 요금제</em>를 확인해보세요.</span>
-									<i class="ui-icn icn-16-more-gr" aria-label="더보기"></i>
+									<i class="ui-icn icn-14-more-gr" aria-label="더보기"></i>
 								</button>
 							</div>
 						</div>
@@ -178,15 +178,15 @@
 				<!-- 이벤트 섹션 -->
 				<section class="event-sec">
 					<div class="sec-inner">
-						<div class="swiper swiper-event">
+						<div class="swiper event-swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<button type="button" class="ui-bnr">
+									<button type="button" class="ui-bnr type-event">
 										<img src="../../assets/images/uploads/@event_01_mo.png" alt="이벤트 내용" />
 									</button>
 								</div>
 								<div class="swiper-slide">
-									<button type="button" class="ui-bnr">
+									<button type="button" class="ui-bnr type-event">
 										<img src="../../assets/images/uploads/@event_01_mo.png" alt="이벤트 내용" />
 									</button>
 								</div>

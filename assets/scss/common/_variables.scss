@@ -23,7 +23,7 @@ $height-footer: calc(76rem + #{$safe-area-bottom});
 
 // 컬러 강조
 $color-primary: #7737e0; // 첫번째
-$color-secondary: #dcff4b; // 두번째
+$color-secondary: #FB85AA; // 두번째
 $color-point: purple; // 기타 임시값
 
 // 컬러 상태
@@ -70,7 +70,7 @@ $color-item3: #E5446D; // 추천
 }
 
 //-------------------------------------------------------------------
-//    Mixins Styles
+//    Mixins Common
 //-------------------------------------------------------------------
 // 섹션
 @mixin sec-basic {
@@ -79,9 +79,14 @@ $color-item3: #E5446D; // 추천
 		margin-bottom: 6rem;
 
 		.sec-tit {
+			display: flex;
+			align-items: center;
 			font-weight: 700;
 			font-size: 20rem;
 			color: #2A2B2D;
+			.ui-icn {
+				margin-right: 4rem;
+			}
 		}
 		.sec-explain {
 			font-weight: 600;
@@ -104,3 +109,32 @@ $color-item3: #E5446D; // 추천
 	height: $height;
 	background-color: $color;
 }
+
+@mixin ellipsis1 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin ellipsis2 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+@mixin ellipsis3 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+//-------------------------------------------------------------------
+//    Mixins Content
+//-------------------------------------------------------------------

@@ -6,7 +6,7 @@
 /*-------------------------------------------------------------------
 	@@ 공통
 -------------------------------------------------------------------*/
-/* 기본 */
+// s: 기본
 .ui-icn {
 	position: relative;
 	overflow: hidden;
@@ -69,7 +69,6 @@ $bg-icons: (
 	(icn-14-noti-gr, svg),
 
 	// 16
-	(icn-16-more-gr, svg),
 
 	// 20
 	(icn-20-headset-bk, svg),
@@ -81,6 +80,7 @@ $bg-icons: (
 	(icn-24-nav-04-gr, svg, icn-24-nav-04-pr, svg),
 	(icn-24-nav-05-gr, svg, icn-24-nav-05-pr, svg),
 	(icn-24-headset-bk, svg),
+	(icn-24-clock, png),
 
 	// 28
 

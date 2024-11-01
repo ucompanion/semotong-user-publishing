@@ -4,9 +4,23 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ Sections
+	@@ Page Layout
 -------------------------------------------------------------------*/
-// 나의정보 섹션
+// s: 마이페이지 페이지
+.F-MY01-page {
+	.cscenter-sec {
+		margin-top: 30rem;
+	}
+	.event-sec {
+		margin-top: 30rem;
+	}
+}
+// e: 마이페이지 페이지
+
+/*-------------------------------------------------------------------
+	@@ Section Content
+-------------------------------------------------------------------*/
+// s: 나의정보 섹션
 .my-info-sec {
 	margin-top:22rem;
 
@@ -37,6 +51,10 @@
 			background-color: rgba(239, 240, 240, 0.7);
 			font-size: 12rem;
 			line-height: 14rem;
+			p {
+				display: flex;
+				justify-content: center;
+			}
 			.ui-icn {
 				margin-right: 4rem;
 			}
@@ -67,7 +85,7 @@
 						font-size: 12rem;
 						line-height: 14rem;
 						font-weight: 500;
-						color: #000000;
+						color: rgba(0,0,0,0.4);
 					}
 					.val {
 						display: block;
@@ -81,10 +99,7 @@
 
 			.status-more {
 				position: relative;
-				padding: 16rem;
-				font-size: 12rem;
-				color: #000000;
-				font-weight: 500;
+				padding: 8rem 16rem;
 				&::before {
 					content:'';
 					display: block;
@@ -95,28 +110,30 @@
 					height: 1rem;
 					background-color: #eee;
 				}
-				em {
-					font-weight: 700;
+				.ui-btn {
+					width: 100%;
+					justify-content: flex-start;
+					padding: 8rem 0;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #000000;
+					font-weight: 500;
+					em {
+						font-weight: 700;
+					}
 				}
 			}
 		}
 	}
 }
+// e: 나의정보 섹션
 
-// 고객지원 센터
+// s: 고객지원 섹션
 .cscenter-sec {
-	margin-top: 30rem;
 	@include sec-basic;
 
 	.sec-header {
 		margin-bottom: 10rem;
-		.sec-tit {
-			display: flex;
-			align-items: center;
-			.ui-icn {
-				margin-right: 4rem;
-			}
-		}
 	}
 
 	.sec-body {
@@ -143,12 +160,7 @@
 		}
 	}
 }
-
-// 이벤트
-.event-sec {
-	margin-top: 30rem;
-}
-
+// e: 고객지원 섹션
 
 /*-------------------------------------------------------------------
 	@@ 팝업명
