@@ -62,7 +62,7 @@
 		.swiper-slide {
 			width: 200px;
 			opacity: 0.5;
-			transition: all 0.2s ease;
+			transition: opacity 0.2s ease;
 			&-active {
 				opacity: 1;
 			}
