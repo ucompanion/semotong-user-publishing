@@ -13,7 +13,7 @@
 	overflow: hidden;
 	display: inline-block;
 	vertical-align: middle;
-	background: no-repeat center center / contain;
+	background: no-repeat center 1000rem / contain;
 	&::before {
 		content: '';
 		display: block;
@@ -62,7 +62,6 @@ $bg-icons: (
 
 	// Demo 가이드 정리용
 	(icn-24-demo-edit-bk, svg),
-	(icn-24-demo-down-br, png, $color-primary),
 	(icn-24-demo-medal-none, png, icn-24-demo-medal-hover, png),
 
 	// 14
@@ -71,23 +70,25 @@ $bg-icons: (
 
 	// 16
 	(icn-16-star-bk, svg),
+	(icn-16-emo-hand, png),
 
 	// 20
 	(icn-20-headset-bk, svg),
 
 	// 24
-	(icn-24-nav-01-gr, svg, icn-24-nav-01-pr, svg),
-	(icn-24-nav-02-gr, svg, icn-24-nav-02-pr, svg),
-	(icn-24-nav-03-gr, svg, icn-24-nav-03-pr, svg),
-	(icn-24-nav-04-gr, svg, icn-24-nav-04-pr, svg),
-	(icn-24-nav-05-gr, svg, icn-24-nav-05-pr, svg),
-	(icn-24-headset-bk, svg),
+	(icn-24-nav-01-gr, svg, icn-24-nav-01-pre, svg, icn-24-nav-01-sel, svg),
+	(icn-24-nav-02-gr, svg, icn-24-nav-02-pre, svg, icn-24-nav-02-sel, svg),
+	(icn-24-nav-03-gr, svg, icn-24-nav-03-pre, svg, icn-24-nav-03-sel, svg),
+	(icn-24-nav-04-gr, svg, icn-24-nav-04-pre, svg, icn-24-nav-04-sel, svg),
+	(icn-24-nav-05-gr, svg, icn-24-nav-05-pre, svg, icn-24-nav-05-sel, svg),
 	(icn-24-clock, png),
 	(icn-24-more-gr, svg),
 
 	// 28
 
 	// 32
+	(icn-32-back-bk, svg),
+	(icn-32-headset-bk, svg),
 	(icn-32-anb-bk, svg),
 
 	// 48
@@ -95,30 +96,16 @@ $bg-icons: (
 	(icn-48-recom-parent, png),
 );
 @each $values in $bg-icons {
+	// 기본
 	$img-name: nth($values, 1);
 	$ext-name: nth($values, 2);
-
-	// 호버 없음 - 기본 아이콘
 	.#{$img-name} {
 		&::before {
 			background-image: url('../images/common/#{$img-name}.#{$ext-name}');
 		}
 	}
 
-	// 호버 컬러변경 - 마스크 처리방식
-	@if length($values) == 3 {
-		$hover-color: nth($values, 3);
-		.is-selected .#{$img-name},
-		.ui-btn:focus-visible .#{$img-name},
-		.ui-btn:hover .#{$img-name} {
-			&::before {
-				mask: url('../images/common/#{$img-name}.#{$ext-name}') no-repeat center center / contain;
-				background: $hover-color;
-			}
-		}
-	}
-
-	// 호버 파일변경 - 포지션 처리방식
+	// 기본 - 호버
 	@if length($values) == 4 {
 		$hover-img-name: nth($values, 3);
 		$hover-ext-name: nth($values, 4);
@@ -127,13 +114,70 @@ $bg-icons: (
 			background-image: url('../images/common/#{$hover-img-name}.#{$hover-ext-name}');
 		}
 		.is-selected .#{$img-name},
-		.ui-btn:focus-visible .#{$img-name},
-		.ui-btn:hover .#{$img-name} {
+		.ui-btn:focus-visible .#{$img-name} {
 			&::before {
 				transform: translateY(110%);
 			}
 			&::after {
 				transform: translateY(0%);
+			}
+		}
+		@include pc-hover {
+			.ui-btn:hover .#{$img-name} {
+				&::before {
+					transform: translateY(110%);
+				}
+				&::after {
+					transform: translateY(0%);
+				}
+			}
+		}
+	}
+
+	// 기본 - 프레스 - 호버
+	@if length($values) == 6 {
+		$active-img-name: nth($values, 3);
+		$active-ext-name: nth($values, 4);
+		$hover-img-name: nth($values, 5);
+		$hover-ext-name: nth($values, 6);
+
+		.#{$img-name}::after {
+			content:'';
+			background-image: url('../images/common/#{$active-img-name}.#{$active-ext-name}');
+		}
+		.#{$img-name} {
+			background-image: url('../images/common/#{$hover-img-name}.#{$hover-ext-name}');
+		}
+
+		// 프레스
+		.ui-btn:hover .#{$img-name},
+		.ui-btn:active .#{$img-name},
+		.ui-btn:focus-visible .#{$img-name} {
+			&::before {
+				transform: translateY(110%);
+			}
+			&::after {
+				transform: translateY(0%);
+			}
+		}
+		// .ui-btn:hover .#{$img-name} {
+		// 	@include pc-hover {
+		// 		&::before {
+		// 			transform: translateY(110%);
+		// 		}
+		// 		&::after {
+		// 			transform: translateY(0%);
+		// 		}
+		// 	}
+		// }
+
+		// 셀렉트
+		.is-selected .#{$img-name} {
+			background-position: center center;
+			&::before,
+			&::after {
+				transform: translateY(-110%);
+				transform: translateY(-110%);
 			}
 		}
 	}

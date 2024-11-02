@@ -13,7 +13,7 @@
 
 	// s: 나의정보 섹션
 	.my-info-sec {
-		margin-top:22rem;
+		margin-top:20rem;
 
 		// 나의정보
 		.my-info-profile {
@@ -38,10 +38,11 @@
 				margin-top: 16rem;
 				padding: 11rem;
 				text-align: center;
-				border-radius: 8rem;
-				background-color: rgba(239, 240, 240, 0.7);
+				border-radius: 2rem;
+				background-color: #EFF0F0;
 				font-size: 12rem;
 				line-height: 14rem;
+				color: #5A5D60;
 				p {
 					display: flex;
 					justify-content: center;
@@ -53,44 +54,45 @@
 
 			// 요금제 대시보드
 			&-status {
-				margin-top: 16rem;
-				border-radius: 8rem;
-				box-shadow: 3rem 3rem 10rem 0 rgba(0,0,0,0.1);
+				margin-top: 12rem;
+				border-radius: 2rem;
+				box-shadow: 0rem 4rem 10rem 0 rgba(0,0,0,0.08);
 
 				.status-list {
 					display: flex;
 					.status-item {
 						position: relative;
 						flex:1;
-						padding: 16rem;
+						padding: 20rem 16rem 12rem 16rem;
 						text-align: center;
 						& + .status-item::before {
 							position: absolute;
 							top: 50%;
 							left: 0;
 							transform: translateY(-50%);
-							@include split-set(16rem, #ddd);
+							@include split-set(16rem, #EFF0F0);
 						}
 						.tit {
 							display: block;
 							font-size: 12rem;
-							line-height: 14rem;
+							line-height: 17rem;
 							font-weight: 500;
-							color: rgba(0,0,0,0.4);
+							color: #96989B;
 						}
 						.val {
 							display: block;
-							margin-top: 5rem;
-							font-weight: 700;
-							font-size: 14rem;
-							line-height: 16rem;
+							margin-top: 6rem;
+							font-weight: 600;
+							font-size: 16rem;
+							line-height: 22rem;
+							color: #000000;
 						}
 					}
 				}
 
 				.status-more {
 					position: relative;
-					padding: 8rem 16rem;
+					padding: 8rem 30rem;
 					&::before {
 						content:'';
 						display: block;
@@ -107,10 +109,13 @@
 						padding: 8rem 0;
 						font-size: 12rem;
 						line-height: 16rem;
-						color: #000000;
+						color: #46484B;
 						font-weight: 500;
 						em {
-							font-weight: 700;
+							color: $color-primary;
+						}
+						.icn-16-emo-hand {
+							margin-right: 4rem;
 						}
 					}
 				}
@@ -121,11 +126,22 @@
 
 	// s: 고객지원 섹션
 	.cscenter-sec {
-		@include sec-basic;
 		margin-top: var(--sec-outer-margin);
 
 		.sec-header {
 			margin-bottom: 10rem;
+			.sec-tit {
+				display: flex;
+				align-items: center;
+				font-weight: 700;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #2A2B2D;
+				.ui-icn {
+					top: -1px;
+					margin-right: 4rem;
+				}
+			}
 		}
 
 		.sec-body {
@@ -143,7 +159,7 @@
 						justify-content: space-between;
 						width: 100%;
 						padding: 8rem 0;
-						font-style: 14rem;
+						font-size: 16rem;
 						line-height: 20rem;
 						font-weight: 500;
 						color: rgba(70, 72, 75, 1);
@@ -157,6 +173,10 @@
 	// s: 이벤트 섹션
 	.event-sec {
 		margin-top: var(--sec-outer-margin);
+
+		.event-swiper {
+			@include event-swiper;
+		}
 
 		.event-bnr {
 			@include event-bnr;

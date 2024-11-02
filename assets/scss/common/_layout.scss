@@ -76,30 +76,31 @@ html {
 	.header-sec {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		height: $height-header;
+		gap: 12rem;
 		@include in-sec;
+
+		.title {
+			margin-right: auto;
+			font-size: 20rem;
+			font-weight: 600;
+			line-height: 28px;
+
+			.logo {
+				display: block;
+				width: 66rem;
+				height: 28rem;
+				background: url('../images/common/img-logo-header-wh.png') no-repeat center center / contain;
+			}
+		}
 	}
 
-	.header-title {
-		.logo {
-			display: block;
-			width: 66rem;
-			height: 28rem;
-			background: url('../images/common/img-logo-header-wh.png') no-repeat center center / contain;
-		}
-		.title {
-			font-size: 18rem;
-			font-weight: 600;
-			line-height: 24px;
-		}
-	}
 
 	.header-btn {
 		display: flex;
 		align-items: center;
 		flex: none;
-		gap: 8rem;
+		gap: 12rem;
 		.ui-btn {
 			width: 32rem;
 			height: 32rem;
@@ -108,12 +109,11 @@ html {
 
 	&.primary {
 		background-color: $color-primary;
-		.header-btn {
-			.icn-32-anb-bk::before {
-				background: none;
-				mask: url('../images/common/icn-32-anb-bk.svg') no-repeat center center / contain;
-				background-color: #fff;
-			}
+
+		.icn-32-anb-bk::before {
+			background: none;
+			mask: url('../images/common/icn-32-anb-bk.svg') no-repeat center center / contain;
+			background-color: #fff;
 		}
 	}
 }
@@ -319,7 +319,7 @@ html {
 	.nav-list {
 		display: flex;
 		justify-content: space-between;
-		padding: 14rem 16rem 16rem 16rem;
+		padding: 14rem 16rem 18rem 16rem;
 		@include in-sec;
 		background-color: #fff;
 		.nav-item {
@@ -331,20 +331,30 @@ html {
 				align-items: center;
 				font-size: 11rem;
 				line-height: 15rem;
-				color: #828588;
+				color: #B7B9BA;
 				letter-spacing: -0.02em;
 				font-weight: 500;
-				&.is-selected,
+
+				> span {
+					margin-top: 5rem;
+					white-space: nowrap;
+				}
+
 				&:hover,
+				&:active,
 				&:focus-visible {
+					> span {
+						font-weight: 600;
+						color: #96989B;
+					}
+				}
+				&.is-selected {
 					> span {
 						font-weight: 600;
 						color: $color-primary;
 					}
 				}
-				> span {
-					margin-top: 5rem;
-				}
+
 			}
 		}
 	}

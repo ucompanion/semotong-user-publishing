@@ -45,13 +45,13 @@ $media-mobile-landscape: 940px; // 아이폰 14 프로 맥스 가로모드의 �
 }
 
 // Orientation
-@mixin media-portrait() {
+@mixin media-portrait {
 	@media all and (orientation: portrait) {
 		@content;
 	}
 }
 
-@mixin media-landscape() {
+@mixin media-landscape {
 	@media all and (orientation: landscape) {
 		@content;
 	}

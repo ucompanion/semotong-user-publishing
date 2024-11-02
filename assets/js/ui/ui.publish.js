@@ -16,11 +16,12 @@ $(function(){
 	});
 	$(".floating-nav").each(function(){
 		var $nav = $(this);
+		var index = $(this).data('index');
 		$(this).load("../../html/layout/include_floatingNav.html", function(){
-			if ($('.F-M01-page').lenghth) {
+			if ($('.F-M01-page').length) {
 				$nav.find('.nav-item').eq(0).find('.nav-link').addClass('is-selected');
 			}
-			else if ($('.F-MY01-page').lenghth) {
+			else if ($('.F-MY01-page').length) {
 				$nav.find('.nav-item').eq(4).find('.nav-link').addClass('is-selected');
 			} else {
 				$nav.find('.nav-item').eq(0).find('.nav-link').addClass('is-selected');

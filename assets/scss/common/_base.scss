@@ -94,6 +94,7 @@ b {
 	-o-box-sizing: inherit;
 	-webkit-print-color-adjust: exact;
 	color-adjust: exact !important;
+	overscroll-behavior:none;
 }
 
 :before,

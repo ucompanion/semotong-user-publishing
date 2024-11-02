@@ -22,15 +22,15 @@ $height-header: 60rem;
 $height-footer: calc(76rem + #{$safe-area-bottom});
 
 // 컬러 강조
-$color-primary: #7737e0; // 첫번째
+$color-primary: #542FDD; // 첫번째
 $color-secondary: #FB85AA; // 두번째
 $color-point: purple; // 기타 임시값
 
 // 컬러 상태
 $color-success: green; // 성공 임시값
-$color-fail: #ff0000; // 실패 임시값
+$color-fail: #FD4A4A; // 실패
 $color-complete: skyblue; // 완료 임시값
-$color-error: #ff0000; // 에러 임시값
+$color-error: #FD4A4A; // 에러
 $color-warning: orange; // 경고 임시값
 $color-caution: orange; // 주의 임시값
 $color-danger: orange; // 위험 임시값
@@ -41,6 +41,22 @@ $color-item-recom: #E5446D; // 추천
 $color-item3: #E5446D; // 추천
 
 
+//-------------------------------------------------------------------
+//    Mixins System
+//-------------------------------------------------------------------
+/* 피시전용 hover 스타일 대용 */
+@mixin pc-hover {
+	@media (hover: hover) and (pointer: fine) {
+		@content;
+	}
+}
+
+/* 모바일전용 hover 스타일 대응 */
+@mixin mobile-hover {
+	@media (hover: none) and (pointer: coarse) {
+		@content;
+	}
+}
 //-------------------------------------------------------------------
 //    Mixins Layout
 //-------------------------------------------------------------------
@@ -293,13 +309,38 @@ $color-item3: #E5446D; // 추천
 	}
 }
 
+// 이벤트 스와이프
+@mixin event-swiper {
+	.swiper-pagination {
+		position: static;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 8rem;
+		gap: 4rem;
+		&-bullet {
+			width: 6rem;
+			height: 6rem;
+			margin: 0;
+			border-radius: 3rem;
+			background-color: #EFF0F0;
+			opacity: 1;
+			transition: all 0.2s ease;
+			&-active {
+				width: 12rem;
+				background-color: $color-primary;
+			}
+		}
+	}
+
+}
 // 이벤트 배너
 @mixin event-bnr {
 	width: 100%;
 
 	img {
 		width: 100%;
-		border-radius: 10rem;
+		border-radius: 2rem;
 		vertical-align: top;
 	}
 }
