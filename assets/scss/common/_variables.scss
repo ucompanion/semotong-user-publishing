@@ -42,15 +42,23 @@ $color-item3: #E5446D; // 추천
 
 
 //-------------------------------------------------------------------
-//    Mixins Settings
+//    Mixins Layout
 //-------------------------------------------------------------------
-// 안쪽 여백
+// 섹션 안쪽 여백
 @mixin in-spacer {
 	padding-left: $mobile-outer-spacer;
 	padding-right: $mobile-outer-spacer;
 	@include media-tablet-xs {
 		padding-left: $pc-outer-spacer;
 		padding-right: $pc-outer-spacer;
+	}
+}
+
+// 하단 여백
+@mixin bottom-spacer {
+	padding-bottom: $pc-bottom-spacer;
+	@include media-tablet-xs {
+		padding-bottom: $mobile-bottom-spacer;
 	}
 }
 

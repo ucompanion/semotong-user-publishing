@@ -151,7 +151,6 @@ html {
 
 // Content
 .content {
-	padding-bottom: $mobile-bottom-spacer;
 	> section {
 		@include out-sec;
 		transition: padding 0.2s ease;
@@ -161,7 +160,6 @@ html {
 		}
 	}
 }
-
 
 // Footer
 .footer {

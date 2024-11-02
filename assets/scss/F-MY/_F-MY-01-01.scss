@@ -8,6 +8,9 @@
 	// 페이지별 섹션 여백 설정
 	--sec-outer-margin: 30rem;
 
+	// 페이시 여백
+	@include bottom-spacer;
+
 	// s: 나의정보 섹션
 	.my-info-sec {
 		margin-top:22rem;
