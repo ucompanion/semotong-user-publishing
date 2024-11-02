@@ -263,19 +263,19 @@ $color-item3: #E5446D; // 추천
 	}
 }
 
-// 이벤트 목록
-@mixin event-list {
+// 특별한 이벤트 목록
+@mixin special-event-list {
 	display: flex;
 	flex-direction: column;
 	gap: 12rem;
 
-	.event-item {
+	.special-event-item {
 		width: 100%;
 	}
 }
 
-// 이벤트 배너
-@mixin event-bnr {
+// 특별한 이벤트 배너
+@mixin special-event-bnr {
 	width: 100%;
 
 	img {
@@ -285,8 +285,8 @@ $color-item3: #E5446D; // 추천
 	}
 }
 
-// 광고 배너
-@mixin ad-bnr {
+// 이벤트 배너
+@mixin event-bnr {
 	width: 100%;
 
 	img {

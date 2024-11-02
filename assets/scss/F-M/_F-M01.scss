@@ -169,20 +169,20 @@
 	}
 	// e: 요금제 추천 섹션
 
-	// e: 세모통 이벤트 섹션
-	.event-sec {
+	// e: 특별한 이벤트 섹션
+	.special-event-sec {
 		@include sec-basic;
 		margin-top: var(--sec-outer-margin);
 
-		.event-list {
-			@include event-list;
+		.special-event-list {
+			@include special-event-list;
 
-			.event-bnr {
-				@include event-bnr;
+			.special-event-bnr {
+				@include special-event-bnr;
 			}
 		}
 	}
-	// e: 세모통 이벤트 섹션
+	// e: 특별한 이벤트 섹션
 
 	// s: 서비스 리뷰 섹션
 	.review-sec {
@@ -235,14 +235,14 @@
 	}
 	// e: 서비스 리뷰 섹션
 
-	// s: 광고배너 섹션
-	.ad-sec {
+	// s: 이벤트 섹션
+	.event-sec {
 		margin-top: var(--sec-outer-margin);
-		.ad-bnr {
-			@include ad-bnr;
+		.event-bnr {
+			@include event-bnr;
 		}
 	}
-	// e: 광고배너 섹션
+	// e: 이벤트 섹션
 
 	// s: 파트너사 섹션
 	.partner-sec {

@@ -151,14 +151,14 @@
 	}
 	// e: 고객지원 섹션
 
-	// s: 광고배너 섹션
-	.ad-sec {
+	// s: 이벤트 섹션
+	.event-sec {
 		margin-top: var(--sec-outer-margin);
 
-		.ad-bnr {
-			@include ad-bnr;
+		.event-bnr {
+			@include event-bnr;
 		}
 	}
-	// e: 광고배너 섹션
+	// e: 이벤트 섹션
 }
 // e: 마이페이지 페이지
