@@ -5,6 +5,10 @@
 -------------------------------------------------------------------*/
 // s: 메인 페이지
 .F-M01-page {
+	// 페이지별 섹션 여백 설정
+	--sec-outer-margin: 50rem;
+	--sec-inner-padding: 40rem;
+
 	// s: 비주얼 섹션
 	.visual-sec {
 		background-color: $color-primary;
@@ -52,8 +56,8 @@
 	// s: 추천딜 섹션
 	.deal-sec {
 		overflow: hidden;
-		padding-top: 30rem;
-		padding-bottom: 40rem;
+		padding-top: var(--sec-inner-padding);
+		padding-bottom: var(--sec-inner-padding);
 		background-color: #DEE9FF;
 		@include sec-basic;
 		.deal-swiper {
@@ -136,8 +140,8 @@
 	// s: 나에게 맞는 요금제 섹션
 	.ratePlanA-sec {
 		@include sec-basic;
-		padding-top: 40rem;
-		padding-bottom: 40rem;
+		padding-top: var(--sec-inner-padding);
+		padding-bottom: var(--sec-inner-padding);
 		background-color: rgba(35, 13, 111, 0.1);
 		.ratePlanA-list {
 			@include ratePlanA-list;
@@ -152,7 +156,7 @@
 	// s: 요금제 추천 섹션
 	.recom-sec {
 		@include sec-basic;
-		margin-top: 50rem;
+		margin-top: var(--sec-outer-margin);
 
 		.recom-list {
 			@include recom-list;
@@ -168,7 +172,7 @@
 	// e: 세모통 이벤트 섹션
 	.event-sec {
 		@include sec-basic;
-		margin-top: 50rem;
+		margin-top: var(--sec-outer-margin);
 
 		.event-list {
 			@include event-list;
@@ -183,7 +187,7 @@
 	// s: 서비스 리뷰 섹션
 	.review-sec {
 		@include sec-basic;
-		margin-top: 50rem;
+		margin-top: var(--sec-outer-margin);
 
 		.review-list {
 			@include review-list;
@@ -233,7 +237,7 @@
 
 	// s: 광고배너 섹션
 	.ad-sec {
-		margin-top: 50rem;
+		margin-top: var(--sec-outer-margin);
 		.ad-bnr {
 			@include ad-bnr;
 		}
@@ -243,9 +247,9 @@
 	// s: 파트너사 섹션
 	.partner-sec {
 		@include sec-basic;
-		margin-top: 50rem;
-		padding-top: 30rem;
-		padding-bottom: 30rem;
+		margin-top: var(--sec-outer-margin);
+		padding-top: var(--sec-inner-padding);
+		padding-bottom: var(--sec-inner-padding);
 		background-color: #F3F6FC;
 	}
 	// e: 파트너사 섹션

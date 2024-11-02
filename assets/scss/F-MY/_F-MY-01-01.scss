@@ -5,6 +5,9 @@
 -------------------------------------------------------------------*/
 // s: 마이페이지 페이지
 .F-MY01-page {
+	// 페이지별 섹션 여백 설정
+	--sec-outer-margin: 30rem;
+
 	// s: 나의정보 섹션
 	.my-info-sec {
 		margin-top:22rem;
@@ -116,7 +119,7 @@
 	// s: 고객지원 섹션
 	.cscenter-sec {
 		@include sec-basic;
-		margin-top: 30rem;
+		margin-top: var(--sec-outer-margin);
 
 		.sec-header {
 			margin-bottom: 10rem;
@@ -150,7 +153,7 @@
 
 	// s: 광고배너 섹션
 	.ad-sec {
-		margin-top: 30rem;
+		margin-top: var(--sec-outer-margin);
 
 		.ad-bnr {
 			@include ad-bnr;
