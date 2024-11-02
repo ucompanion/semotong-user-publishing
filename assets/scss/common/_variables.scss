@@ -276,9 +276,33 @@ $color-item3: #E5446D; // 추천
 
 // 이벤트 배너
 @mixin event-bnr {
+	width: 100%;
+
 	img {
 		width: 100%;
 		border-radius: 2rem;
 		vertical-align: top;
+	}
+}
+
+// 광고 배너
+@mixin ad-bnr {
+	width: 100%;
+
+	img {
+		width: 100%;
+		border-radius: 10rem;
+		vertical-align: top;
+	}
+}
+
+// 리뷰 목록
+@mixin review-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+
+	.review-item {
+		width: 100%;
 	}
 }

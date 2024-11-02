@@ -23,7 +23,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
-			// 이벤트 스와이프 실행
+			// 추천딜 스와이프
 		    var dealSwiper = new Swiper(".deal-swiper", {
 				threshold: 3,
 				slidesPerView: 'auto',
@@ -33,6 +33,20 @@
 					el: ".swiper-pagination",
 				},
 			});
+
+			// 광고 스와이프
+		    var adSwiper = new Swiper(".ad-swiper", {
+				threshold: 3,
+				spaceBetween: 10,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
+
 		})
 	</script>
 </head>
@@ -74,7 +88,7 @@
 			<!-- content -->
 			<div class="content F-M01-page">
 				<!-- 메인 비주얼 섹션 -->
-				<section class="main-visual-sec">
+				<section class="visual-sec">
 					<div class="sec-inner">
 						<div class="sec-body">
 							<h2 class="sec-tit">
@@ -96,7 +110,7 @@
 				<!-- // 비주얼 섹션 -->
 
 				<!-- 메인 추천딜 섹션 -->
-				<section class="main-deal-sec">
+				<section class="deal-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통 얼리버드 추천딜<i class="ui-icn icn-24-clock"></i></h2>
@@ -165,7 +179,7 @@
 				<!-- // 추천딜 섹션 -->
 
 				<!-- 내게 맞는 요금제 섹션 -->
-				<section class="main-ratePlanA-sec">
+				<section class="ratePlanA-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">내게 맞는 요금제는?</h2>
@@ -234,7 +248,7 @@
 				<!-- // 내게 맞는 요금제 섹션 -->
 
 				<!-- 요금제 추천 섹션 -->
-				<section class="main-recom-sec">
+				<section class="recom-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">이런 요금제는 어째요?</h2>
@@ -251,7 +265,7 @@
 										<i class="ui-icn icn-24-more-gr" aria-hidden="true"></i>
 									</button>
 								</li>
-								<li class="main-recom-item">
+								<li class="recom-item">
 									<button class="recom-bnr">
 										<i class="ui-icn icn-48-recom-parent" aria-hidden="true"></i>
 										<span class="recom-con">
@@ -267,8 +281,8 @@
 				</section>
 				<!-- // 요금제 추천 섹션 -->
 
-				<!-- 이벤트 섹션 -->
-				<section class="main-event-sec">
+				<!-- 세모통 이벤트 섹션 -->
+				<section class="event-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통 이벤트</h2>
@@ -281,27 +295,27 @@
 							<ul class="event-list">
 								<li class="event-item">
 									<button type="button" class="event-bnr">
-										<img src="../../assets/images/uploads/@event_04_mo.png" alt="이벤트 내용" />
+										<img src="../../assets/images/uploads/@bnr-event-01-mo.png" alt="이벤트 내용" />
 									</button>
 								</li>
 								<li class="event-item">
 									<button type="button" class="event-bnr">
-										<img src="../../assets/images/uploads/@event_05_mo.png" alt="이벤트 내용" />
+										<img src="../../assets/images/uploads/@bnr-event-02-mo.png" alt="이벤트 내용" />
 									</button>
 								</li>
 								<li class="event-item">
 									<button type="button" class="event-bnr">
-										<img src="../../assets/images/uploads/@event_06_mo.png" alt="이벤트 내용" />
+										<img src="../../assets/images/uploads/@bnr-event-03-mo.png" alt="이벤트 내용" />
 									</button>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</section>
-				<!-- // 이벤트 섹션 -->
+				<!-- // 세모통 이벤트 섹션 -->
 
 				<!-- 리뷰 섹션 -->
-				<section class="main-review-sec">
+				<section class="review-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통 고객님들의 리뷰에요</h2>
@@ -315,16 +329,28 @@
 							<ul class="review-list">
 								<li class="review-item">
 									<div class="review-card">
-										<div class="card-body">
-											<div class="card-rating" aria-label="평점 5점">
-												<span class="ui-rating rating-value">
-													<i class="ui-icn icn-16-rating-pr" aria-hidden="true"></i>
-													<strong class="val">5.0</strong>
-												</span>
-											</div>
-											<p class="card-name">홍길동</p>
-											<p class="card-cont">리뷰내용텍스트리뷰내용텍스트리뷰내용텍스트리뷰</p>
+										<div class="card-rating" aria-label="평점 5점">
+											<i class="ui-icn icn-16-star-bk" aria-hidden="true"></i>
+											<strong class="val">5.0</strong>
 										</div>
+										<p class="card-name">홍길동</p>
+										<p class="card-cont">
+											리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다
+											리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다
+										</p>
+									</div>
+								</li>
+								<li class="review-item">
+									<div class="review-card">
+										<div class="card-rating" aria-label="평점 5점">
+											<i class="ui-icn icn-16-star-bk" aria-hidden="true"></i>
+											<strong class="val">5.0</strong>
+										</div>
+										<p class="card-name">홍길동</p>
+										<p class="card-cont">
+											리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다
+											리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다. 최대 3줄 노출. 초과시 말줄임표 사용. 리뷰 텍스트 영역입니다
+										</p>
 									</div>
 								</li>
 							</ul>
@@ -334,8 +360,30 @@
 				</section>
 				<!-- // 리뷰 섹션 -->
 
+				<!-- 광고배너 섹션 -->
+				<section class="ad-sec">
+					<div class="sec-inner">
+						<div class="swiper ad-bnr-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<button type="button" class="ad-bnr">
+										<img src="../../assets/images/uploads/@bnr-ad-01-mo.png" alt="이벤트 내용" />
+									</button>
+								</div>
+								<div class="swiper-slide">
+									<button type="button" class="ad-bnr">
+										<img src="../../assets/images/uploads/@bnr-ad-01-mo.png" alt="이벤트 내용" />
+									</button>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+				<!-- // 광고배너 섹션 -->
+
 				<!-- 파트너사 섹션 -->
-				<section class="main-partner-sec">
+				<section class="partner-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">세모통의 파트너사를 소개합니다.</h2>

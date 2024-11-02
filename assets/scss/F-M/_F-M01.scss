@@ -3,194 +3,251 @@
 	분류그룹 : 메인
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
-	@@ Section Content
--------------------------------------------------------------------*/
-// 비주얼
-.main-visual-sec {
-	background-color: $color-primary;
-	color: #fff;
+// s: 메인 페이지
+.F-M01-page {
+	// s: 비주얼 섹션
+	.visual-sec {
+		background-color: $color-primary;
+		color: #fff;
 
-	.sec-body {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		height: 250rem;
-		padding-bottom: 26rem;
-
-		.sec-tit {
-			font-size: 24rem;
-			font-weight: 700;
-			em {
-				color: $color-secondary;
-			}
-		}
-
-		.sec-img {
-			position: absolute;
-			right: 0;
-			bottom: 100rem;
-		}
-
-		.sec-btn {
-			margin-top: 16rem;
-			.ui-btn {
-				width: 100%;
-				height: 50rem;
-				background-color: #fff;
-				border-radius: 4rem;
-				font-weight: 600;
-				font-size: 16rem;
-				line-height: 22rem;
-				color: #0D173F;
-			}
-		}
-	}
-}
-
-// 추천딜
-.main-deal-sec {
-	overflow: hidden;
-	padding-top: 30rem;
-	padding-bottom: 40rem;
-	background-color: #DEE9FF;
-	@include sec-basic;
-	.deal-swiper {
-		overflow: visible;
-		width: 100%;
-		.swiper-slide {
-			width: 185px;
-			opacity: 0.5;
-			transition: opacity 0.2s ease;
-			&-active {
-				opacity: 1;
-			}
-		}
-	}
-	.deal-card {
-		width: 217rem;
-		height: 213rem;
-		padding: 16rem;
-		padding: 11rem 16rem 21rem 16rem;
-		margin: -11rem -16rem -21rem -16rem;
-		background: url('../images/contents/main-deal-card.png') no-repeat center center / 217rem 213rem;
-		box-sizing: border-box;
-		.card-body {
-			height: 132rem;
-			width: calc(100% - 36rem);
-			margin: auto;
-			padding: 16rem 0;
-			border-bottom: 2px solid rgba(239, 240, 240, 1);
-			// background-color: rgba(0,0,0,0.5);
-
-			.card-label {
-				margin-bottom: 10rem;
-			}
-			.card-tit {
-				font-weight: 700;
-				font-size: 18rem;
-				line-height: 22rem;
-				color: #2A2B2D;
-				max-height: 44rem;
-				white-space: pre-line;
-				@include ellipsis2;
-			}
-			.card-info {
-				margin-top: 6rem;
-				font-weight: 600;
-				font-size: 13rem;
-				color: #828588;
-				@include ellipsis1;
-			}
-		}
-		.card-footer {
+		.sec-body {
+			position: relative;
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			height: 49rem;
-			width: calc(100% - 32rem);
-			margin: auto;
-			.card-brand {
-				position: relative;
-				width: 50rem;
-				height: 18rem;
-				img {
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					height: 100%;
-					transform: translate(-50%, -50%);
+			flex-direction: column;
+			justify-content: flex-end;
+			height: 250rem;
+			padding-bottom: 26rem;
+
+			.sec-tit {
+				font-size: 24rem;
+				font-weight: 700;
+				em {
+					color: $color-secondary;
 				}
 			}
-			.card-charge {
-				font-weight: 700;
-				font-size: 16rem;
-				line-height: 18rem;
+
+			.sec-img {
+				position: absolute;
+				right: 0;
+				bottom: 100rem;
+			}
+
+			.sec-btn {
+				margin-top: 16rem;
+				.ui-btn {
+					width: 100%;
+					height: 50rem;
+					background-color: #fff;
+					border-radius: 4rem;
+					font-weight: 600;
+					font-size: 16rem;
+					line-height: 22rem;
+					color: #0D173F;
+				}
 			}
 		}
 	}
-}
+	// e: 비주얼 섹션
 
-// 나에게 맞는 요금제
-.main-ratePlanA-sec {
-	@include sec-basic;
-	padding-top: 40rem;
-	padding-bottom: 40rem;
-	background-color: rgba(35, 13, 111, 0.1);
-	.ratePlanA-list {
-		@include ratePlanA-list;
-	}
+	// s: 추천딜 섹션
+	.deal-sec {
+		overflow: hidden;
+		padding-top: 30rem;
+		padding-bottom: 40rem;
+		background-color: #DEE9FF;
+		@include sec-basic;
+		.deal-swiper {
+			overflow: visible;
+			width: 100%;
+			.swiper-slide {
+				width: 185px;
+				opacity: 0.5;
+				transition: opacity 0.2s ease;
+				&-active {
+					opacity: 1;
+				}
+			}
+		}
+		.deal-card {
+			width: 217rem;
+			height: 213rem;
+			padding: 16rem;
+			padding: 11rem 16rem 21rem 16rem;
+			margin: -11rem -16rem -21rem -16rem;
+			background: url('../images/contents/main-deal-card.png') no-repeat center center / 217rem 213rem;
+			box-sizing: border-box;
+			.card-body {
+				height: 132rem;
+				width: calc(100% - 36rem);
+				margin: auto;
+				padding: 16rem 0;
+				border-bottom: 2px solid rgba(239, 240, 240, 1);
+				// background-color: rgba(0,0,0,0.5);
 
-	.ratePlanA-card {
-		@include ratePlanA-card;
-	}
-}
-
-// 요금제 추천
-.main-recom-sec {
-	@include sec-basic;
-	margin-top: 50rem;
-
-	.recom-list {
-		@include recom-list;
-
-		.recom-bnr {
-			@include recom-bnr;
+				.card-label {
+					margin-bottom: 10rem;
+				}
+				.card-tit {
+					font-weight: 700;
+					font-size: 18rem;
+					line-height: 22rem;
+					color: #2A2B2D;
+					max-height: 44rem;
+					white-space: pre-line;
+					@include ellipsis2;
+				}
+				.card-info {
+					margin-top: 6rem;
+					font-weight: 600;
+					font-size: 13rem;
+					color: #828588;
+					@include ellipsis1;
+				}
+			}
+			.card-footer {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 49rem;
+				width: calc(100% - 32rem);
+				margin: auto;
+				.card-brand {
+					position: relative;
+					width: 50rem;
+					height: 18rem;
+					img {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						height: 100%;
+						transform: translate(-50%, -50%);
+					}
+				}
+				.card-charge {
+					font-weight: 700;
+					font-size: 16rem;
+					line-height: 18rem;
+				}
+			}
 		}
 	}
+	// e: 추천딜 섹션
 
-}
+	// s: 나에게 맞는 요금제 섹션
+	.ratePlanA-sec {
+		@include sec-basic;
+		padding-top: 40rem;
+		padding-bottom: 40rem;
+		background-color: rgba(35, 13, 111, 0.1);
+		.ratePlanA-list {
+			@include ratePlanA-list;
+		}
 
-// 세모통 이벤트
-.main-event-sec {
-	@include sec-basic;
-	margin-top: 50rem;
-
-	.event-list {
-		@include event-list;
-
-		.event-bnr {
-			@include event-bnr;
+		.ratePlanA-card {
+			@include ratePlanA-card;
 		}
 	}
-}
+	// e: 나에게 맞는 요금제 섹션
 
-// 서비스 리뷰
-.main-review-sec {
-	@include sec-basic;
-	margin-top: 50rem;
-}
+	// s: 요금제 추천 섹션
+	.recom-sec {
+		@include sec-basic;
+		margin-top: 50rem;
 
-// 파트너사
-.main-partner-sec {
-	@include sec-basic;
-	margin-top: 50rem;
-	padding-top: 30rem;
-	padding-bottom: 30rem;
-}
+		.recom-list {
+			@include recom-list;
 
-/*-------------------------------------------------------------------
-	@@ 팝업명
--------------------------------------------------------------------*/
-/* 섹션명 > 버튼명 > 팝업명 */
+			.recom-bnr {
+				@include recom-bnr;
+			}
+		}
+
+	}
+	// e: 요금제 추천 섹션
+
+	// e: 세모통 이벤트 섹션
+	.event-sec {
+		@include sec-basic;
+		margin-top: 50rem;
+
+		.event-list {
+			@include event-list;
+
+			.event-bnr {
+				@include event-bnr;
+			}
+		}
+	}
+	// e: 세모통 이벤트 섹션
+
+	// s: 서비스 리뷰 섹션
+	.review-sec {
+		@include sec-basic;
+		margin-top: 50rem;
+
+		.review-list {
+			@include review-list;
+
+			.review-card {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 20rem;
+				border-radius: 2rem;
+				border:1px solid #EFF0F0;
+
+				.card-rating {
+					display: flex;
+					align-items: center;
+
+					.val {
+						margin-left: 7rem;
+						padding-top: 1rem;
+						font-weight: 700;
+						font-size: 24rem;
+						line-height: 26rem;
+					}
+				}
+
+				.card-name {
+					margin-left: auto;
+					padding: 5rem 0;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 18rem;
+					color: #828588;
+				}
+
+				.card-cont {
+					width: 100%;
+					margin-top: 10rem;
+					max-height: 60rem;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					@include ellipsis3;
+				}
+			}
+		}
+	}
+	// e: 서비스 리뷰 섹션
+
+	// s: 광고배너 섹션
+	.ad-sec {
+		margin-top: 50rem;
+		.ad-bnr {
+			@include ad-bnr;
+		}
+	}
+	// e: 광고배너 섹션
+
+	// s: 파트너사 섹션
+	.partner-sec {
+		@include sec-basic;
+		margin-top: 50rem;
+		padding-top: 30rem;
+		padding-bottom: 30rem;
+		background-color: #F3F6FC;
+	}
+	// e: 파트너사 섹션
+}
+// e: 메인 페이지
