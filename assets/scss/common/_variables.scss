@@ -56,9 +56,9 @@ $color-item3: #E5446D; // 추천
 
 // 하단 여백
 @mixin bottom-spacer {
-	padding-bottom: $pc-bottom-spacer;
+	padding-bottom: $mobile-bottom-spacer;
 	@include media-tablet-xs {
-		padding-bottom: $mobile-bottom-spacer;
+		padding-bottom: $pc-bottom-spacer;
 	}
 }
 
