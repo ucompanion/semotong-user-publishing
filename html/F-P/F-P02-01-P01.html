@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="세모통" />
 	<meta name="description" content="세모통" />
-	<title>Pages | 세모통</title>
+	<title>제보하기 등록 | 세모통</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -21,8 +21,8 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// 퍼블리싱 바로 볼 수 있도록 호출
-			var defaultModal = new bootstrap.Modal(document.getElementById('defaultModal'));
-			defaultModal.show();
+			var FP0201P01Modal = new bootstrap.Modal(document.getElementById('FP0201P01Modal'));
+			FP0201P01Modal.show();
 		});
 	</script>
 </head>
@@ -31,7 +31,7 @@
 	<div class="wrapper">
 		<div style="padding: 30rem;">
 			<!-- 트리거로 모달 띄우기 -->
-			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#defaultModal">
+			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FP0201P01Modal">
 				MODAL OPEN
 			</button>
 		</div>
@@ -44,11 +44,11 @@
 		화면 이름 : 화면아이디-page
 	-->
 	<!-- modal default -->
-	<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+	<div class="modal fade" id="FP0201P01Modal" tabindex="-1" role="dialog" aria-labelledby="FP0201P01ModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-full">
-			<div class="modal-content F-MY01-02-P01-page">
+			<div class="modal-content F-P02-01-P01-page">
 				<div class="modal-header">
-					<h3 class="modal-title" id="defaultModalLabel"></h3>
+					<h3 class="modal-title blind" id="FP0201P01ModalLabel">제보하기 등록</h3>
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
 				</div>
 				<div class="modal-body"></div>

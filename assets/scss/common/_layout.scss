@@ -81,10 +81,12 @@ html {
 		@include in-sec;
 
 		.title {
+			flex: 1 1 auto;
 			margin-right: auto;
 			font-size: 20rem;
 			font-weight: 600;
 			line-height: 28px;
+			@include ellipsis1;
 
 			.logo {
 				display: block;
@@ -93,18 +95,12 @@ html {
 				background: url('../images/common/img-logo-header-wh.png') no-repeat center center / contain;
 			}
 		}
-	}
 
-
-	.header-btn {
-		display: flex;
-		align-items: center;
-		flex: none;
-		gap: 12rem;
 		.ui-btn {
 			width: 32rem;
 			height: 32rem;
 		}
+
 	}
 
 	&.primary {
