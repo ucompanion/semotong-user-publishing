@@ -105,7 +105,7 @@ $bg-icons: (
 		}
 	}
 
-	// 기본 - 호버
+	// 기본 - 호버/셀렉트
 	@if length($values) == 4 {
 		$hover-img-name: nth($values, 3);
 		$hover-ext-name: nth($values, 4);
@@ -134,7 +134,7 @@ $bg-icons: (
 		}
 	}
 
-	// 기본 - 프레스 - 호버
+	// 기본 - 프레스 - 셀렉트
 	@if length($values) == 6 {
 		$active-img-name: nth($values, 3);
 		$active-ext-name: nth($values, 4);
