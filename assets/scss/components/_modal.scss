@@ -64,9 +64,7 @@
 	max-height: calc(100% - 40px);
 	min-height: 150px;
 	background-color: #fff;
-	border-radius: 16px;
 	pointer-events: auto;
-	box-shadow: 2px 2px 10px 0px rgba(0,0,0, 0.2);
 	.modal-header {
 		flex:none;
 	}
@@ -87,7 +85,38 @@
 /*-------------------------------------------------------------------
 	@@ 유형
 -------------------------------------------------------------------*/
-/* 스타일1 */
+/* Alert, Confirm */
+.modal-alert,
+.modal-confirm {
+	.modal-content {
+		width: 312rem;
+		.msg-sec {
+			padding: 28rem 16rem;
+			text-align: center;
+
+			.sec-tit {
+				font-weight: 600;
+				font-size: 20rem;
+				color: #000;
+				& + .sec-txt {
+					margin-top: 24rem;
+				}
+			}
+			.sec-txt {
+				font-weight: 500;
+				font-size: 16rem;
+				color: #46484B;
+			}
+		}
+	}
+
+	.modal-footer {
+		display: flex;
+		.ui-btn {
+			flex: 1;
+		}
+	}
+}
 
 
 /* 스타일2 */
