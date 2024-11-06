@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="세모통" />
 	<meta name="description" content="세모통" />
-	<title>페이지 이동중 | 세모통</title>
+	<title>Pages | 세모통</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -21,42 +21,42 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// 모달 바로 볼 수 있도록 호출
-			var FP0302Modal = new bootstrap.Modal(document.getElementById('FP0302Modal'));
-			FP0302Modal.show();
+			var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+			alertModal.show();
 		});
 	</script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<div style="padding: 30rem;">
-			<!-- 트리거로 모달 띄우기 -->
-			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FP0302Modal">
-				MODAL OPEN
-			</button>
-		</div>
-	</div>
+	<div class="wrapper"></div>
 
 	<!--
 		[모달 가이드]
 		모달 기본 : modal-dialog
 		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm
-		화면 이름 : 화면아이디-page
 	-->
-	<!-- modal default -->
-	<div class="modal fade" id="FP0302Modal" tabindex="-1" role="dialog" aria-labelledby="FP0302ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full">
-			<div class="modal-content F-P03-02-page">
+	<!-- Modal Alert -->
+	<div class="modal fade" id="alertModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="alertModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-alert">
+			<div class="modal-content">
 				<div class="modal-header">
-					<h3 class="modal-title" id="FP0302ModalLabel">KTskylife</h3>
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+					<h3 class="modal-title blind" id="alertModalLabel">Alert Message</h3>
 				</div>
-				<div class="modal-body"></div>
-				<div class="modal-footer"></div>
+				<div class="modal-body">
+					<section class="msg-sec">
+						<h4 class="sec-tit">Alert 제목 텍스트가 들어가는 영역입니다.</h4>
+						<p class="sec-txt"><span class="txt-primary">Alert 설명 텍스트</span>가 들어가는 영역입니다.</p>
+					</section>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-modal primary" data-bs-dismiss="modal">
+						<span>Save</span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- // modal default -->
+	<!-- // Modal Alert -->
 </body>
 
 </html>

@@ -33,6 +33,14 @@
 
 		// 요금제
 		.my-info-rateplan {
+			// 이용요금제 있음
+			&-data {
+				margin-top: 16rem;
+				.ratePlanD-card {
+					@include ratePlanD-card;
+				}
+			}
+
 			// 이용요금제 없음
 			&-nodata {
 				margin-top: 16rem;

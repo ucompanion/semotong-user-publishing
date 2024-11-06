@@ -82,6 +82,22 @@
 		flex:none;
 	}
 }
+
+// 풀팝업
+.modal-full {
+	.modal-content {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+
+		@include media-tablet-xs {
+			max-width: calc(100% - 40px);
+			max-height: calc(100% - 40px);
+		}
+	}
+}
+
 /*-------------------------------------------------------------------
 	@@ 유형
 -------------------------------------------------------------------*/
@@ -106,6 +122,10 @@
 				font-weight: 500;
 				font-size: 16rem;
 				color: #46484B;
+
+				.txt-primary {
+					color: #2F01D5;
+				}
 			}
 		}
 	}

@@ -21,9 +21,9 @@
 	<!-- 페이지 스크립트 영역 -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
-			// 퍼블리싱 바로 볼 수 있도록 호출
-			var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
-			alertModal.show();
+			// 모달 바로 볼 수 있도록 호출
+			// var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+			// alertModal.show();
 		});
 	</script>
 </head>
@@ -154,7 +154,7 @@
 								Confirm modal
 							</button>
 
-							<!-- Alert -->
+							<!-- Modal Alert -->
 							<div class="modal fade" id="alertModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="alertModalLabel" aria-hidden="true">
 								<div class="modal-dialog modal-alert">
 									<div class="modal-content">
@@ -164,7 +164,7 @@
 										<div class="modal-body">
 											<section class="msg-sec">
 												<h4 class="sec-tit">Alert 제목 텍스트가 들어가는 영역입니다.</h4>
-												<p class="sec-txt">Alert 설명 텍스트가 들어가는 영역입니다.</p>
+												<p class="sec-txt"><span class="txt-primary">Alert 설명 텍스트</span>가 들어가는 영역입니다.</p>
 											</section>
 										</div>
 										<div class="modal-footer">
@@ -175,9 +175,9 @@
 									</div>
 								</div>
 							</div>
-							<!-- //Alert -->
+							<!-- // Modal Alert -->
 
-							<!-- Confirm -->
+							<!-- Modal Confirm -->
 							<div class="modal fade" id="confirmModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="confirmModalLabel" aria-hidden="true">
 								<div class="modal-dialog modal-confirm">
 									<div class="modal-content">
@@ -187,7 +187,7 @@
 										<div class="modal-body">
 											<section class="msg-sec">
 												<h4 class="sec-tit">Confirm 제목 텍스트가 들어가는 영역입니다.</h4>
-												<p class="sec-txt">Confirm 설명 텍스트가 들어가는 영역입니다.</p>
+												<p class="sec-txt"><span class="txt-primary">Confirm 설명 텍스트</span>가 들어가는 영역입니다.</p>
 											</section>
 										</div>
 										<div class="modal-footer">
@@ -201,7 +201,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- //Confirm -->
+							<!-- // Modal Confirm -->
 						</div>
 					</section>
 					<!-- // Section -->

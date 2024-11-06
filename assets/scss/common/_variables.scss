@@ -227,7 +227,7 @@ $color-item3: #E5446D; // 추천
 	}
 }
 
-// 요금제 카테고리 배너
+// 요금제 카테고리 상세 카드
 @mixin ratePlanB-card {
 
 }
@@ -237,9 +237,99 @@ $color-item3: #E5446D; // 추천
 
 }
 
-// 요금제 상품 카드
+// 요금제 상품 목록 카드
 @mixin ratePlanC-card {
 
+}
+
+// 요금제 상품 상세 카드
+@mixin ratePlanD-card {
+	position: relative;
+	border-radius: 2rem;
+	padding: 0 16rem;
+	box-shadow: 0rem 4rem 10rem 0 rgba(0,0,0,0.08);
+
+	.card-body {
+		padding: 16rem 0 20rem 0;
+		.card-opening {
+			display: inline-flex;
+			position: absolute;
+			top: 0;
+			right: 16rem;
+			height: 24rem;
+			align-items: center;
+			justify-content: center;
+			padding: 0 6rem;
+			font-weight: 500;
+			font-size: 12rem;
+			font-style: 16rem;
+			color: #5FCDB0;
+			border-radius: 0 0 2rem 2rem;
+			background-color: #E6F7F2;
+		}
+		.card-state {
+			margin-bottom: 4rem;
+			font-weight: 500;
+			font-size: 12rem;
+			&.is-current {
+				color: #2801B5;
+			}
+		}
+		.card-tit {
+			font-weight: 600;
+			font-size: 20rem;
+			color: #000;
+		}
+		.card-info {
+			display: flex;
+			align-items: center;
+			gap: 6rem;
+			margin-top: 8rem;
+			padding: 2rem 0;
+
+			&-split {
+				display: inline-block;
+				width: 3rem;
+				height: 3rem;
+				border-radius: 50%;
+				background-color: #CFD0D1;
+			}
+
+			&-label {
+				display: inline-flex;
+				align-items: center;
+				color: #494949;
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 12rem;
+				.ui-icn {
+					margin-right: 4rem;
+				}
+			}
+		}
+	}
+	.card-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8rem 0 12rem 0;
+		border-top: 1px solid #EFF0F0;
+
+		.card-brand {
+			height: 28rem;
+			img {
+				height: 100%;
+			}
+		}
+		.card-charge {
+			position: relative;
+			top: 2rem;
+			font-weight: 700;
+			font-size: 16rem;
+			line-height: 22rem;
+			color: #1B0179;
+		}
+	}
 }
 
 // 추천 요금제 목록
