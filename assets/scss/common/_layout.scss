@@ -145,15 +145,13 @@ html {
 	}
 }
 
-// Content
-.content {
-	> section {
-		@include out-sec;
+// Section
+section {
+	@include out-sec;
+	transition: padding 0.2s ease;
+	.sec-inner {
+		@include in-sec;
 		transition: padding 0.2s ease;
-		.sec-inner {
-			@include in-sec;
-			transition: padding 0.2s ease;
-		}
 	}
 }
 

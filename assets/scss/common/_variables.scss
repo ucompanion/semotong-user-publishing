@@ -11,7 +11,7 @@ $font-secondary: 'YJ_Obang';
 
 // 본문영역 사이즈
 $pc-outer-spacer: 24rem;
-$pc-inner-content: 1024rem;
+$pc-inner-content: 720rem;
 $pc-bottom-spacer: 60rem;
 $mobile-outer-spacer: 16rem;
 $mobile-inner-content: 320rem;
@@ -23,7 +23,7 @@ $height-footer: calc(76rem + #{$safe-area-bottom});
 
 // 컬러 강조
 $color-primary: #542FDD; // 첫번째
-$color-secondary: #FB85AA; // 두번째
+$color-secondary: #2FBE98; // 두번째
 $color-point: purple; // 기타 임시값
 
 // 컬러 상태
@@ -39,6 +39,10 @@ $color-danger: orange; // 위험 임시값
 $color-item-best: #7762FF; // 베스트
 $color-item-recom: #E5446D; // 추천
 $color-item3: #E5446D; // 추천
+
+// 그림자
+$box-shadow-10: 0rem 4rem 10rem 0 rgba(0,0,0,0.08);
+$box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 
 
 //-------------------------------------------------------------------
@@ -160,6 +164,18 @@ $color-item3: #E5446D; // 추천
 	-webkit-box-orient: vertical;
 }
 
+// 그림자
+@mixin box-shadow-16 {
+	box-shadow: $box-shadow-16;
+	border-radius: 2rem;
+}
+
+@mixin box-shadow-10 {
+	box-shadow: $box-shadow-10;
+	border-radius: 2rem;
+}
+
+
 //-------------------------------------------------------------------
 //    Mixins Content
 //-------------------------------------------------------------------
@@ -234,12 +250,223 @@ $color-item3: #E5446D; // 추천
 
 // 요금제 상품 목록
 @mixin ratePlanC-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16rem;
 
+	.ratePlanC-item {
+		width: 100%;
+		@include media-tablet-xs {
+			width: calc(50% - 6rem);
+		}
+	}
 }
 
 // 요금제 상품 목록 카드
 @mixin ratePlanC-card {
+	padding: 0 16rem;
+	box-shadow: $box-shadow-16;
 
+	.card-body {
+		padding: 16rem 0;
+	}
+	.card-footer {
+		padding: 12rem 0 20rem;
+		border-top: 1px solid #EFF0F0;
+	}
+	.card-label {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10rem;
+		&-benefit {
+			display: flex;
+			align-items: center;
+			gap: 4rem;
+			.label {
+				padding: 2rem 8rem;
+				border-radius: 4rem;
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #fff;
+				&.primary {
+					background-color: $color-primary;
+				}
+				&.secondary {
+					background-color: $color-secondary;
+				}
+			}
+		}
+		&-option {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 6rem;
+			.split {
+				display: inline-block;
+				width: 3rem;
+				height: 3rem;
+				border-radius: 50%;
+				background-color: #CDC2F5;
+			}
+			.label {
+				font-weight: 600;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: $color-primary;
+			}
+		}
+	}
+	.card-tit {
+		font-weight: 700;
+		font-size: 20rem;
+		color: #000;
+	}
+	.card-info {
+		display: flex;
+		align-items: center;
+		gap: 6rem;
+		margin-top: 8rem;
+		padding: 2rem 0;
+
+		.split {
+			display: inline-block;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			background-color: #CFD0D1;
+		}
+
+		.label {
+			display: inline-flex;
+			align-items: center;
+			color: #494949;
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 12rem;
+			.ui-icn {
+				margin-right: 4rem;
+			}
+		}
+	}
+	.card-charge {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		.brand {
+			display: flex;
+			align-items: center;
+			height: 28rem;
+			img {
+				height: 100%;
+			}
+			.brand-rating {
+				display: inline-flex;
+				align-items: center;
+				padding: 3rem 8rem 3rem 4rem;
+				border:1px solid #CDC2F5;
+				border-radius: 15rem;
+				color: $color-primary;
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 14rem;
+			}
+		}
+		.charge {
+			position: relative;
+			top: 2rem;
+			text-align: right;
+
+			.charge-tit {
+				font-weight: 700;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #1B0179;
+			}
+			.charge-txt {
+				margin-top: 2rem;
+				font-weight: 500;
+				font-size: 12rem;
+				color: #828588;
+			}
+		}
+	}
+	.card-util {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-tooltip {
+			display: flex;
+			align-items: center;
+			gap: 4rem;
+		}
+		&-btn {
+			display: flex;
+			align-items: center;
+			gap: 12rem;
+		}
+	}
+	.card-status {
+		margin-top: 16rem;
+		padding: 11rem 16rem;
+		background-color: #F4F5F8;
+		border-radius: 2rem;
+		.status-expand {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.tit {
+				display: block;
+				flex: 1 1 auto;
+				overflow: hidden;
+				font-weight: 600;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #000000;
+				@include ellipsis1;
+				em {
+					color: $color-primary;
+				}
+			}
+		}
+		.status-choice {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.choice {
+				display: flex;
+				align-items: center;
+
+				.ui-icn:first-child {
+					margin-right: 4rem;
+				}
+				.txt {
+					font-weight: 600;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #36383A;
+					em {
+						color: $color-primary;
+					}
+				}
+				.split {
+					@include split-set(10rem, #CFD0D1);
+					margin-right: 0 8rem;
+				}
+
+			}
+
+			.ui-btn {
+				align-items: center;
+				font-weight: 600;
+				font-size: 12rem;
+				line-height: 14rem;
+				color: #828588;
+			}
+
+		}
+	}
 }
 
 // 요금제 상품 상세 카드
@@ -247,87 +474,92 @@ $color-item3: #E5446D; // 추천
 	position: relative;
 	border-radius: 2rem;
 	padding: 0 16rem;
-	box-shadow: 0rem 4rem 10rem 0 rgba(0,0,0,0.08);
+	box-shadow: $box-shadow-10;
 
 	.card-body {
 		padding: 16rem 0 20rem 0;
-		.card-opening {
+	}
+	.card-footer {
+		padding: 8rem 0 12rem 0;
+		border-top: 1px solid #EFF0F0;
+	}
+	.card-opening {
+		display: inline-flex;
+		position: absolute;
+		top: 0;
+		right: 16rem;
+		height: 24rem;
+		align-items: center;
+		justify-content: center;
+		padding: 0 6rem;
+		font-weight: 500;
+		font-size: 12rem;
+		font-style: 16rem;
+		color: #5FCDB0;
+		border-radius: 0 0 2rem 2rem;
+		background-color: #E6F7F2;
+	}
+	.card-state {
+		margin-bottom: 4rem;
+		font-weight: 500;
+		font-size: 12rem;
+		&.is-current {
+			color: #2801B5;
+		}
+	}
+	.card-tit {
+		font-weight: 600;
+		font-size: 20rem;
+		color: #000;
+	}
+	.card-info {
+		display: flex;
+		align-items: center;
+		gap: 6rem;
+		margin-top: 8rem;
+		padding: 2rem 0;
+
+		.split {
+			display: inline-block;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			background-color: #CFD0D1;
+		}
+
+		.label {
 			display: inline-flex;
-			position: absolute;
-			top: 0;
-			right: 16rem;
-			height: 24rem;
 			align-items: center;
-			justify-content: center;
-			padding: 0 6rem;
+			color: #494949;
 			font-weight: 500;
 			font-size: 12rem;
-			font-style: 16rem;
-			color: #5FCDB0;
-			border-radius: 0 0 2rem 2rem;
-			background-color: #E6F7F2;
-		}
-		.card-state {
-			margin-bottom: 4rem;
-			font-weight: 500;
-			font-size: 12rem;
-			&.is-current {
-				color: #2801B5;
-			}
-		}
-		.card-tit {
-			font-weight: 600;
-			font-size: 20rem;
-			color: #000;
-		}
-		.card-info {
-			display: flex;
-			align-items: center;
-			gap: 6rem;
-			margin-top: 8rem;
-			padding: 2rem 0;
-
-			&-split {
-				display: inline-block;
-				width: 3rem;
-				height: 3rem;
-				border-radius: 50%;
-				background-color: #CFD0D1;
-			}
-
-			&-label {
-				display: inline-flex;
-				align-items: center;
-				color: #494949;
-				font-weight: 500;
-				font-size: 12rem;
-				line-height: 12rem;
-				.ui-icn {
-					margin-right: 4rem;
-				}
+			line-height: 12rem;
+			.ui-icn {
+				margin-right: 4rem;
 			}
 		}
 	}
-	.card-footer {
+	.card-charge {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 8rem 0 12rem 0;
-		border-top: 1px solid #EFF0F0;
-
-		.card-brand {
+		.brand {
 			height: 28rem;
 			img {
 				height: 100%;
 			}
 		}
-		.card-charge {
+		.charge {
 			position: relative;
 			top: 2rem;
-			font-weight: 700;
-			font-size: 16rem;
-			line-height: 22rem;
-			color: #1B0179;
+			text-align: right;
+
+			.charge-tit {
+				font-weight: 700;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #1B0179;
+			}
 		}
 	}
 }
@@ -443,5 +675,112 @@ $color-item3: #E5446D; // 추천
 
 	.review-item {
 		width: 100%;
+	}
+}
+
+// 추천내역 목록
+@mixin recom-history-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12rem;
+
+	.recom-history-item {
+		width: 100%;
+		@include media-tablet-xs {
+			width: calc(50% - 6rem);
+		}
+	}
+}
+
+// 추천내역 카드
+@mixin recom-history-card {
+	padding: 20rem 16rem;
+	@include box-shadow-16;
+
+	.card-body {
+		display: flex;
+		flex-wrap: wrap;
+		.card-name {
+			flex:1 1 auto;
+			max-width: calc(100% - 140rem);
+			font-weight: 700;
+			font-size: 18rem;
+			line-height: 24rem;
+
+			.num {
+				color: $color-primary;
+			}
+			.name {
+				color: #000;
+			}
+		}
+		.card-date {
+			display: inline-flex;
+			justify-content: flex-end;
+			align-items: center;
+			margin-left: auto;
+			max-width: 140rem;
+			padding-top: 4rem;
+			text-align: right;
+			.txt {
+				margin-right: 4rem;
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #828588;
+			}
+			.date {
+				font-weight: 600;
+				font-size: 14rem;
+				line-height: 20rem;
+			}
+		}
+
+		.card-title {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-top: 12rem;
+			padding: 12rem 16rem;
+			border-radius: 2rem;
+			background-color: #EFF0F0;
+			.type {
+				flex: none;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #63666A;
+			}
+			.title {
+				font-weight: 600;
+				list-style: 14rem;
+				line-height: 20rem;
+				color: #2A2B2D;
+			}
+		}
+	}
+}
+
+// noData
+@mixin nodata {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	.ui-icn {
+		margin-bottom: 9rem;
+	}
+	.nodata-tit {
+		font-weight: 700;
+		font-size: 16rem;
+		color: #36383A;
+	}
+	.nodata-txt {
+		font-weight: 500;
+		font-size: 14rem;
+		color: #5A5D60;
+	}
+	.nodata-tit + .nodata-txt {
+		margin-top: 4rem;
 	}
 }

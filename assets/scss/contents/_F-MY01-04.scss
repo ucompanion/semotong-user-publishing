@@ -1,0 +1,36 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 찜한요금제
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+// s: 찜한요금제 페이지
+.F-MY01-04-page {
+
+	// 페이시 여백
+	padding-top: 16rem;
+	@include bottom-spacer;
+
+	// s: 상품리스트 섹션
+	.ratePlanC-sec {
+		.ratePlanC-list {
+			@include ratePlanC-list;
+
+			.ratePlanC-card {
+				@include ratePlanC-card;
+			}
+		}
+
+		.nodata {
+			// nodata 공통
+			@include nodata;
+
+			// 페이지별 대응
+			margin: 20vh 0;
+			@include media-tablet-xs {
+				margin: 120px 0;
+			}
+		}
+	}
+	// e: 상품리스트 섹션
+}
+// e: 찜한요금제 페이지

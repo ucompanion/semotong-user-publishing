@@ -17,23 +17,5 @@
 /*-------------------------------------------------------------------
 	@@ 유형
 -------------------------------------------------------------------*/
-// s: 스타일1
-.style-1 {
-	padding: 4rem 8rem;
-	font-size: 12rem;
-	line-height: 1;
-	color: #fff;
-	font-weight: 600;
-	border-radius: 7rem;
 
-	// 베스트
-	&.item-best {
-		background-color: $color-item-best;
-	}
-
-	// 추천
-	&.item-recom {
-		background-color: $color-item-recom;
-	}
-}
-// e: 공통
+// s: 옵션
