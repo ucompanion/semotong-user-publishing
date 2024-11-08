@@ -20,12 +20,17 @@
 				@include recom-history-card;
 			}
 		}
+	}
+	// e: 추천내역 섹션
 
-		// nodata 공통스타일
+	// s: 노데이터 섹션
+	.nodata-sec {
+		@include nodata-sec;
+
 		.nodata {
 			@include nodata;
 		}
 	}
-	// e: 추천내역 섹션
+	// e: 노데이터 섹션
 }
 // e: 추천내역 페이지
