@@ -83,7 +83,11 @@
 	}
 }
 
-// 풀팝업
+
+/*-------------------------------------------------------------------
+	@@ 유형
+-------------------------------------------------------------------*/
+// Full
 .modal-full {
 	&.fade {
 		transition: none;
@@ -137,10 +141,7 @@
 
 }
 
-/*-------------------------------------------------------------------
-	@@ 유형
--------------------------------------------------------------------*/
-/* Alert, Confirm */
+// Alert, Confirm
 .modal-alert,
 .modal-confirm {
 	.modal-content {
@@ -174,6 +175,33 @@
 		display: flex;
 		.ui-btn {
 			flex: 1;
+		}
+	}
+}
+
+// Select
+.modal-select {
+	.modal-dialog {
+		justify-content: flex-end;
+		.modal-content {
+			width: 100%;
+			max-width: 480rem;
+			border-radius: 20rem 20rem 0 0;
+			@include bottom-spacer;
+		}
+
+		.modal-header {
+			@include out-sec;
+			padding-top: 20rem;
+			padding-bottom: 10rem;
+			.modal-title {
+				font-weight: 600;
+				font-size: 20rem;
+				color: #000;
+			}
+			.btn-close {
+				top: 18rem;
+			}
 		}
 	}
 }

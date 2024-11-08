@@ -5,10 +5,23 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ Label
+	@@ Varialbles
 -------------------------------------------------------------------*/
-.form-tit {
-	display: inline-block;
+@mixin input-style {
+	height: 52rem;
+	width: 100%;
+	padding: 15rem 18rem;
+	border:1px solid #CFD0D1;
+	border-radius: 4rem;
+	font-size: 16rem;
+	line-height: 22rem;
+	font-weight: 500;
+	color: #000000;
+
+	&.is-placeholder,
+	&::placeholder {
+		color: #828588;
+	}
 }
 
 /*-------------------------------------------------------------------
@@ -18,13 +31,9 @@
 .ui-inp {
 	display: inline-block;
 	position: relative;
-	height: 40px;
+
 	.inp {
-		height: 100%;
-		line-height: 1.5;
-		padding: 0 10px;
-		border: 1px solid #ddd;
-		border-radius: 0;
+		@include input-style;
 
 		// 기본상태 인터렉션
 		&:focus,
@@ -64,6 +73,10 @@
 	.btn-clear {
 		display: none;
 	}
+
+	&.fluid {
+		width: 100%;
+	}
 }
 
 
@@ -74,17 +87,16 @@
 /* 스타일 */
 .ui-textarea {
 	.textarea {
-		display: block;
-		padding: 0 10px;
-		width: 100%;
-		border: 1px solid #ddd;
-		border-radius: 0;
-		line-height: 1.5;
+		@include input-style;
+		height: auto;
 	}
 	&:focus,
 	&:hover,
 	&.is-focused {
 		border-color: #0089b3;
+	}
+	&.fluid {
+		width: 100%;
 	}
 }
 
@@ -95,24 +107,43 @@
 /* 스타일 */
 .ui-sel {
 	.sel {
-		height: 40px;
-		padding: 0 30px 0 10px;
-		border: 1px solid #ddd;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		background: url('../demo/ico_select01_black.png') no-repeat right 10px center;
+		@include input-style;
 
 		&:disabled.demo1 {
 			background-color: #f7f7f7;
 		}
 	}
+	&.fluid {
+		width: 100%;
+	}
 }
 
+.ui-listbox {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	li {
+		padding: 10rem 0rem;
+		font-weight: 500;
+		font-size: 16rem;
+		line-height: 24rem;
+		color: #000;
+		&.is-selected {
+			color: $color-primary;
+		}
+	}
+}
 
 
 /*-------------------------------------------------------------------
 	@@ 유형
 -------------------------------------------------------------------*/
 /* File Attach */
-.frm-file {
+.ui-file {
 	position: relative;
 	display: inline-flex;
 }

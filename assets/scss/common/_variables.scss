@@ -782,6 +782,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	display: flex;
 	flex-wrap: wrap;
 	gap: 12rem;
+	padding-top: 16rem;
 
 	.recom-history-item {
 		width: 100%;
@@ -896,5 +897,26 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 	.nodata-tit + .nodata-txt {
 		margin-top: 4rem;
+	}
+}
+
+// 폼 스타일1
+@mixin inquiry-frm {
+	display: flex;
+	flex-direction: column;
+	gap: 32rem;
+
+	.frm-field {
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
+		width: 100%;
+
+		.frm-title {
+			.tit {
+				font-weight: 600;
+				font-size: 16rem;
+			}
+		}
 	}
 }

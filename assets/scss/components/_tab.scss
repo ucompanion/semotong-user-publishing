@@ -42,9 +42,12 @@
 -------------------------------------------------------------------*/
 /* 스타일1 */
 .tab-style1 {
-	margin-bottom: 16rem;
-	padding-top: 6rem;
+	margin-bottom: 30rem;
 	@include out-sec;
+
+	&:first-child {
+		padding-top: 6rem;
+	}
 
 	.tab-list {
 		@include in-sec;
