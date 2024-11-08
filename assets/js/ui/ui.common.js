@@ -185,3 +185,27 @@ function setSpyScroll() {
 		});
 	});
 }
+
+// Card Expand
+function cardExpand(id, button) {
+	const $expand = document.querySelector(id);
+	const isExpanded = button.getAttribute('aria-expanded') === 'true';
+	$expand.classList.toggle('is-expanded');
+	button.setAttribute('aria-expanded', !isExpanded);
+}
+
+// Popover
+function setPopover(selector){
+	// Boottsrap Popover
+	const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+	const popoverList = [...popoverTriggerList].map(popoverTriggerEl => {
+		return new bootstrap.Popover(popoverTriggerEl, {
+			customClass: selector,
+		});
+	});
+
+	// 문서 클릭 시 모든 Popover 닫기
+	document.addEventListener('click', () => {
+		popoverList.forEach(popover => popover.hide());
+	});
+}

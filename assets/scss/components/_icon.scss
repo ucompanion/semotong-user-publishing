@@ -84,12 +84,16 @@ $bg-icons: (
 	(icn-16-star-bk, svg),
 	(icn-16-emo-hand, png),
 	(icn-16-plan-quse-gr, svg),
+	(icn-16-plan-gift-gr, svg),
+	(icn-16-more-list-gr, svg),
 
 	// 18
 	(icn-18-kakao-bk, png),
 
 	// 20
 	(icn-20-headset-bk, svg),
+	(icn-20-plan-like-gr, svg, icn-20-plan-like-sel, svg),
+	(icn-20-plan-share-gr, svg),
 
 	// 24
 	(icn-24-nav-01-gr, svg, icn-24-nav-01-pre, svg, icn-24-nav-01-sel, svg),
@@ -99,8 +103,6 @@ $bg-icons: (
 	(icn-24-nav-05-gr, svg, icn-24-nav-05-pre, svg, icn-24-nav-05-sel, svg),
 	(icn-24-clock, png),
 	(icn-24-more-gr, svg),
-	(icn-24-plan-like-gr, svg, icn-24-plan-like-pr, svg),
-	(icn-24-plan-down-gr, svg),
 
 	// 28
 
@@ -116,7 +118,10 @@ $bg-icons: (
 	(icn-48-recom-parent, png),
 
 	// 100
-	(icn-100-nodata, svg)
+	(icn-100-nodata-recom, svg),
+	(icn-100-nodata-bookmark, svg),
+	(icn-100-nodata-search, svg),
+	(icn-100-nodata-doc, svg),
 );
 @each $values in $bg-icons {
 	// 기본

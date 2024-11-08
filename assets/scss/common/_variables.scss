@@ -1,6 +1,6 @@
 @charset 'utf-8';
 //-------------------------------------------------------------------
-//    Variables
+//	@@ Variables
 //-------------------------------------------------------------------
 // IOS Safe Area Bottom 대응 (웹에서 상단은 필요 없음, 띠의 상하여백 동일한 비율 1.7)
 $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
@@ -9,8 +9,8 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 $font-primary: 'Pretendard Variable', 'sans-serif';
 $font-secondary: 'YJ_Obang';
 
-// 본문영역 사이즈
-$pc-outer-spacer: 24rem;
+// 본문영역 사이즈 (최대 여백포함 768 기준)
+$pc-outer-spacer: 23rem;
 $pc-inner-content: 720rem;
 $pc-bottom-spacer: 60rem;
 $mobile-outer-spacer: 16rem;
@@ -46,7 +46,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 
 
 //-------------------------------------------------------------------
-//    Mixins System
+//	@@ Mixins System
 //-------------------------------------------------------------------
 /* 피시전용 hover 스타일 대용 */
 @mixin pc-hover {
@@ -62,7 +62,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 //-------------------------------------------------------------------
-//    Mixins Layout
+//	@@ Mixins Layout
 //-------------------------------------------------------------------
 // 섹션 안쪽 여백
 @mixin in-spacer {
@@ -98,7 +98,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 }
 
 //-------------------------------------------------------------------
-//    Mixins Common
+//	@@ Mixins Common
 //-------------------------------------------------------------------
 // 섹션
 @mixin sec-basic {
@@ -126,6 +126,25 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			position: absolute;
 			right: 0;
 			top: 0;
+		}
+	}
+}
+
+@mixin floating-sec {
+	display: flex;
+	align-items: center;
+	height: 60rem;
+
+	.sec-inner {
+		position: fixed;
+		left: 50%;
+		bottom: 0;
+		z-index: 100;
+		padding: 20rem $mobile-outer-spacer;
+		transform: translateX(-50%);
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0rem, rgba(255, 255, 255, 1) 20rem);
+		@include media-tablet-xs {
+			padding: 20rem 0;
 		}
 	}
 }
@@ -253,12 +272,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	display: flex;
 	flex-wrap: wrap;
 	gap: 16rem;
+	padding-top: 16rem;
 
 	.ratePlanC-item {
 		width: 100%;
-		@include media-tablet-xs {
-			width: calc(50% - 6rem);
-		}
 	}
 }
 
@@ -268,7 +285,16 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	box-shadow: $box-shadow-16;
 
 	.card-body {
+		position: relative;
 		padding: 16rem 0;
+		.card-trigger {
+			position: absolute;
+			left: -16rem;
+			right: -16rem;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+		}
 	}
 	.card-footer {
 		padding: 12rem 0 20rem;
@@ -310,17 +336,27 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				background-color: #CDC2F5;
 			}
 			.label {
+				display: inline-flex;
+				align-items: center;
 				font-weight: 600;
 				font-size: 12rem;
 				line-height: 16rem;
 				color: $color-primary;
+				.ui-ico {
+					margin-right: 2rem;
+				}
 			}
 		}
 	}
 	.card-tit {
+		display: flex;
 		font-weight: 700;
 		font-size: 20rem;
 		color: #000;
+		.ui-btn {
+			z-index: 10;
+			margin-left: 8rem;
+		}
 	}
 	.card-info {
 		display: flex;
@@ -387,6 +423,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				margin-top: 2rem;
 				font-weight: 500;
 				font-size: 12rem;
+				line-height: 16rem;
 				color: #828588;
 			}
 		}
@@ -399,6 +436,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			display: flex;
 			align-items: center;
 			gap: 4rem;
+			.tit {
+				font-weight: 700;
+				font-size: 14rem;
+				line-height: 16rem;
+			}
 		}
 		&-btn {
 			display: flex;
@@ -411,10 +453,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		padding: 11rem 16rem;
 		background-color: #F4F5F8;
 		border-radius: 2rem;
-		.status-expand {
+		.status-gift {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			flex-wrap: wrap;
 			.tit {
 				display: block;
 				flex: 1 1 auto;
@@ -426,6 +468,45 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				@include ellipsis1;
 				em {
 					color: $color-primary;
+				}
+			}
+			.ui-btn {
+				margin-left: auto;
+			}
+			.status-gift-list {
+				display: flex;
+				flex-direction: column;
+				gap: 8rem;
+
+				li {
+					position: relative;
+					width: 100%;
+					padding-left: 20rem;
+					font-weight: 500;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #36383A;
+
+					.ui-icn {
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+				}
+			}
+
+			// 인터렉션
+			.status-gift-expanded {
+				display: none;
+				width: 100%;
+				margin-top: 4rem;
+			}
+			&.is-expanded {
+				.tit {
+					display: none;
+				}
+				.status-gift-expanded {
+					display: block;
 				}
 			}
 		}
@@ -475,7 +556,14 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	border-radius: 2rem;
 	padding: 0 16rem;
 	box-shadow: $box-shadow-10;
-
+	.card-trigger {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+	}
 	.card-body {
 		padding: 16rem 0 20rem 0;
 	}
@@ -656,6 +744,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 
 }
+
 // 이벤트 배너
 @mixin event-bnr {
 	width: 100%;
@@ -765,19 +854,26 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 @mixin nodata {
 	display: flex;
 	flex-direction: column;
+	flex-grow: 1;
+	flex-basis: auto;
 	align-items: center;
+	justify-content: center;
 	text-align: center;
+	padding-top: 30rem;
+	padding-bottom: 30rem;
 	.ui-icn {
-		margin-bottom: 9rem;
+		margin-bottom: 8rem;
 	}
 	.nodata-tit {
 		font-weight: 700;
 		font-size: 16rem;
+		line-height: 24rem;
 		color: #36383A;
 	}
 	.nodata-txt {
 		font-weight: 500;
 		font-size: 14rem;
+		line-height: 20rem;
 		color: #5A5D60;
 	}
 	.nodata-tit + .nodata-txt {

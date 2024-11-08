@@ -71,13 +71,19 @@ html {
 
 // Header
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	background-color: #fff;
 
 	.header-sec {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		height: $height-header;
 		gap: 12rem;
+		padding: 0;
 		@include in-sec;
 
 		.title {
@@ -145,12 +151,25 @@ html {
 	}
 }
 
+// Container
+.container {
+	padding-top: $height-header;
+}
+
 // Section
 section {
 	@include out-sec;
 	transition: padding 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-basis: auto;
 	.sec-inner {
 		@include in-sec;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		flex-basis: auto;
 		transition: padding 0.2s ease;
 	}
 }
@@ -163,11 +182,11 @@ section {
 
 	// 푸터 섹션
 	.footer-sec {
-		padding: 30rem 0 24rem 0;
-		@include in-sec;
 		display: flex;
 		flex-direction: column;
+		padding: 30rem 0 24rem 0;
 		gap: 30rem;
+		@include in-sec;
 
 		.logo-area {
 			.logo-footer {

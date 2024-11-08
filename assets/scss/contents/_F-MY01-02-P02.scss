@@ -6,9 +6,6 @@
 // s: 추천내역 페이지
 .F-MY01-02-P02-page {
 
-	// 페이지별 섹션 여백 설정
-	--sec-outer-margin: 30rem;
-
 	// 페이시 여백
 	.modal-body {
 		@include bottom-spacer;
@@ -24,15 +21,9 @@
 			}
 		}
 
+		// nodata 공통스타일
 		.nodata {
-			// nodata 공통
 			@include nodata;
-
-			// 페이지별 대응
-			margin: 20vh 0;
-			@include media-tablet-xs {
-				margin: 120px 0;
-			}
 		}
 	}
 	// e: 추천내역 섹션

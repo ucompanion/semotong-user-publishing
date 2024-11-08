@@ -92,3 +92,34 @@
 	color: #555555;
 }
 // e: 더보기 버튼
+
+// s: 더보기 리스트
+.btn-more-list {
+	width: 100%;
+	margin-top: 20rem;
+	padding: 9rem 10rem;
+	background-color: #EFF0F0;
+	border-radius: 4rem;
+	font-weight: 600;
+	font-size: 14rem;
+	line-height: 20rem;
+	color: #5A5D60;
+	.ui-icn {
+		margin-right: 2rem;
+	}
+}
+// e: 더보기 리스트
+
+// s: 플로팅 액션
+.btn-action {
+	height: 50rem;
+	border-radius: 4rem;
+	font-weight: 600;
+	font-size: 16rem;
+	line-height: 22rem;
+	color: #fff;
+	&.primary {
+		background-color: $color-primary;
+	}
+}
+// e: 플로팅 액션
