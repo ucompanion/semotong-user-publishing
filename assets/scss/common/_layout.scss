@@ -160,16 +160,8 @@ html {
 section {
 	@include out-sec;
 	transition: padding 0.2s ease;
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	flex-basis: auto;
 	.sec-inner {
 		@include in-sec;
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		flex-basis: auto;
 		transition: padding 0.2s ease;
 	}
 }
