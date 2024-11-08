@@ -4,7 +4,7 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 // s: 마이페이지 페이지
-.F-MY02-01-page {
+.F-MY01-01-page {
 	// 페이지별 섹션 여백 설정
 	--sec-outer-margin: 30rem;
 
@@ -23,14 +23,11 @@
 				font-size: 18rem;
 				color: #000000;
 			}
-			.explain {
-				margin-top: 6rem;
+			.info {
 				font-weight: 500;
-				font-size: 14rem;
+				font-size: 12rem;
+				line-height: 16rem;
 				color: rgba(99, 102, 106, 1);
-			}
-			.btn-kakao {
-				margin-top: 16rem;
 			}
 		}
 
@@ -66,8 +63,7 @@
 			// 요금제 대시보드
 			&-status {
 				margin-top: 12rem;
-				border-radius: 2rem;
-				box-shadow: 0rem 4rem 10rem 0 rgba(0,0,0,0.08);
+				@include box-shadow-10;
 
 				.status-list {
 					display: flex;

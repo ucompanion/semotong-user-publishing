@@ -44,14 +44,118 @@
 		화면 이름 : 화면아이디-page
 	-->
 	<!-- modal default -->
-	<div class="modal fade" id="FMY0102P02Modal" tabindex="-1" role="dialog" aria-labelledby="FMY0102P02ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full">
+	<div class="modal fade modal-full" id="FMY0102P02Modal" tabindex="-1" role="dialog" aria-labelledby="FMY0102P02ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
 			<div class="modal-content F-MY01-02-P02-page">
 				<div class="modal-header">
-					<h3 class="modal-title" id="FMY0102P02ModalLabel">내 후기 관리</h3>
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+					<h3 class="modal-title" id="FMY0102P02ModalLabel">추천 내역</h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
 				</div>
-				<div class="modal-body"></div>
+				<div class="modal-body">
+					<!-- 탭 목록 -->
+					<div class="ui-tab tab-style1">
+						<ul class="tab-list" role="tablist">
+							<li class="tab-item" role="presentation">
+								<button class="tab-link active" id="tab-11" data-bs-toggle="tab" data-bs-target="#tab-11-pane" type="button" role="tab" aria-controls="tab-11-pane" aria-selected="true">내가 추천한 친구</button>
+							</li>
+							<li class="tab-item" role="presentation">
+								<button class="tab-link" id="tab-12" data-bs-toggle="tab" data-bs-target="#tab-12-pane" type="button" role="tab" aria-controls="tab-12-pane" aria-selected="false">나를 추천한 친구</button>
+							</li>
+						</ul>
+					</div>
+					<!-- // 탭 목록 -->
+
+					<!-- 탭 패널 -->
+					<div class="tab-content">
+						<!-- 탭 패널: 내가 추천한 친구 -->
+						<div class="tab-pane fade show active" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+							<!-- 추천내역 섹션 -->
+							<section class="recom-history-sec">
+								<div class="sec-inner">
+									<!-- 추천내역 목록 -->
+									<ul class="recom-history-list">
+										<li class="recom-history-item">
+											<div class="recom-history-card">
+												<div class="card-body">
+													<p class="card-name">
+														<span class="num">01.</span>
+														<strong class="name">일이삼사오육칠팔</strong>
+													</p>
+													<p class="card-date">
+														<span class="txt">추천일자</span>
+														<em class="date">2024.10.11</em>
+													</p>
+													<dl class="card-title">
+														<dt class="type">유형</dt>
+														<dd class="title">요금제 신청 친구추천</dd>
+													</dl>
+												</div>
+											</div>
+										</li>
+										<li class="recom-history-item">
+											<div class="recom-history-card">
+												<div class="card-body">
+													<p class="card-name">
+														<span class="num">01.</span>
+														<strong class="name">최*웅</strong>
+													</p>
+													<p class="card-date">
+														<span class="txt">추천일자</span>
+														<em class="date">2024.10.11</em>
+													</p>
+													<dl class="card-title">
+														<dt class="type">유형</dt>
+														<dd class="title">요금제 신청 친구추천</dd>
+													</dl>
+												</div>
+											</div>
+										</li>
+										<li class="recom-history-item">
+											<div class="recom-history-card">
+												<div class="card-body">
+													<p class="card-name">
+														<span class="num">01.</span>
+														<strong class="name">유*순</strong>
+													</p>
+													<p class="card-date">
+														<span class="txt">추천일자</span>
+														<em class="date">2024.10.11</em>
+													</p>
+													<dl class="card-title">
+														<dt class="type">유형</dt>
+														<dd class="title">요금제 신청 친구추천</dd>
+													</dl>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<!-- // 추천내역 섹션 -->
+						</div>
+						<!-- // 탭 패널: 내가 추천한 친구 -->
+
+						<!-- 탭 패널: 나를 추천한 친구 -->
+						<div class="tab-pane fade" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
+							<!-- 추천내역 섹션 -->
+							<section class="recom-history-sec">
+								<div class="sec-inner">
+									<!-- Case 추천내역 없음 -->
+									<div class="nodata">
+										<i class="ui-icn icn-100-nodata-recom" aria-hidden="true"></i>
+										<p class="nodata-tit"><strong>아직 추천한 내역이 없어요.</strong></p>
+									</div>
+									<!-- // Case 추천내역 없음 -->
+								</div>
+							</section>
+							<!-- // 추천내역 섹션 -->
+						</div>
+						<!-- // 탭 패널: 나를 추천한 친구 -->
+					</div>
+					<!-- // 탭 패널 -->
+				</div>
 				<div class="modal-footer"></div>
 			</div>
 		</div>

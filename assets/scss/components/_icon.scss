@@ -39,7 +39,7 @@
 }
 
 // 추가하고 싶은 크기를 배열에 나열
-$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 48);
+$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 48, 100);
 
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
@@ -68,21 +68,32 @@ $bg-icons: (
 	(icn-12-tel-gr, svg),
 	(icn-12-mail-gr, svg),
 	(icn-12-antena-gr, svg),
+	(icn-12-plan-check-pr, svg),
 
 	// 14
 	(icn-14-more-gr, svg),
 	(icn-14-noti-gr, svg),
+	(icn-14-plan-link-pr, svg),
+	(icn-14-plan-self-pr, svg),
+	(icn-14-plan-star-pr, svg),
+	(icn-14-plan-expand-bk, svg),
+	(icn-14-plan-more-gr, svg),
 
 	// 16
 	(icn-16-more-gr, svg),
 	(icn-16-star-bk, svg),
 	(icn-16-emo-hand, png),
+	(icn-16-plan-quse-gr, svg),
+	(icn-16-plan-gift-gr, svg),
+	(icn-16-more-list-gr, svg),
 
 	// 18
 	(icn-18-kakao-bk, png),
 
 	// 20
 	(icn-20-headset-bk, svg),
+	(icn-20-plan-like-gr, svg, icn-20-plan-like-sel, svg),
+	(icn-20-plan-share-gr, svg),
 
 	// 24
 	(icn-24-nav-01-gr, svg, icn-24-nav-01-pre, svg, icn-24-nav-01-sel, svg),
@@ -99,10 +110,18 @@ $bg-icons: (
 	(icn-32-back-bk, svg),
 	(icn-32-headset-bk, svg),
 	(icn-32-anb-bk, svg),
+	(icn-32-close-bk, svg),
+	(icn-32-remove-bk, svg),
 
 	// 48
 	(icn-48-recom-best, png),
 	(icn-48-recom-parent, png),
+
+	// 100
+	(icn-100-nodata-recom, svg),
+	(icn-100-nodata-bookmark, svg),
+	(icn-100-nodata-search, svg),
+	(icn-100-nodata-doc, svg),
 );
 @each $values in $bg-icons {
 	// 기본
@@ -122,23 +141,12 @@ $bg-icons: (
 			content:'';
 			background-image: url('../images/common/#{$hover-img-name}.#{$hover-ext-name}');
 		}
-		.is-selected .#{$img-name},
-		.ui-btn:focus-visible .#{$img-name} {
+		.is-selected .#{$img-name} {
 			&::before {
 				transform: translateY(110%);
 			}
 			&::after {
 				transform: translateY(0%);
-			}
-		}
-		@include pc-hover {
-			.ui-btn:hover .#{$img-name} {
-				&::before {
-					transform: translateY(110%);
-				}
-				&::after {
-					transform: translateY(0%);
-				}
 			}
 		}
 	}

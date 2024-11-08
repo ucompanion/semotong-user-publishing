@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 추천내역
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+// s: 추천내역 페이지
+.F-MY01-02-P02-page {
+
+	// 페이시 여백
+	.modal-body {
+		@include bottom-spacer;
+	}
+
+	// s: 추천내역 섹션
+	.recom-history-sec {
+		.recom-history-list {
+			@include recom-history-list;
+
+			.recom-history-card {
+				@include recom-history-card;
+			}
+		}
+
+		// nodata 공통스타일
+		.nodata {
+			@include nodata;
+		}
+	}
+	// e: 추천내역 섹션
+}
+// e: 추천내역 페이지
