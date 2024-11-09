@@ -79,8 +79,8 @@
 							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#basicModal">
 								Basic modal
 							</button>
-							<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-basic">
+							<div class="modal modal-basic fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
 											<h1 class="modal-title" id="basicModalLabel">Modal title</h1>
@@ -106,6 +106,55 @@
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
+							<h2 class="g-h2">Select</h2>
+						</div>
+						<div class="g-section-body">
+							<!-- Modal -->
+							<div class="ui-sel">
+								<!-- 선택전 is-placeholder, (선택후 삭제) -->
+								<button type="button" id="frmType" class="sel is-placeholder" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+									<span>문의유형 선택</span>
+									<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+								</button>
+							</div>
+							<div class="modal modal-select fade" id="selectModal" tabindex="-1" role="dialog" aria-labelledby="selectModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3 class="modal-title" id="selectModalLabel">문의유형 선택</h3>
+											<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+											<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+												<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+											</button>
+										</div>
+										<div class="modal-body">
+											<!-- 콤보박스 섹션 -->
+											<section class="select-sec">
+												<div class="sec-inner">
+													<!-- modal-select 공통 -->
+													<ul class="select-listbox" role="listbox">
+														<!-- setSelectValued 는 퍼블 확인용입니다. -->
+														<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 1</li>
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 2</li>
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 3</li>
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 4</li>
+													</ul>
+												</div>
+											</section>
+											<!-- // 콤보박스 섹션 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // Modal -->
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
 							<h2 class="g-h2">Full</h2>
 						</div>
 						<div class="g-section-body">
@@ -113,8 +162,8 @@
 							<button type="button" class="ui-btn btn-popup primary" data-bs-toggle="modal" data-bs-target="#fullModal">
 								Basic modal
 							</button>
-							<div class="modal fade" id="fullModal" tabindex="-1" role="dialog" aria-labelledby="fullModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-full">
+							<div class="modal modal-full fade" id="fullModal" tabindex="-1" role="dialog" aria-labelledby="fullModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
 											<h1 class="modal-title" id="fullModalLabel">Modal title</h1>
@@ -155,8 +204,8 @@
 							</button>
 
 							<!-- Modal Alert -->
-							<div class="modal fade" id="alertModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="alertModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-alert">
+							<div class="modal modal-alert fade" id="alertModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="alertModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
 											<h3 class="modal-title blind" id="alertModalLabel">Alert Message</h3>
@@ -178,8 +227,8 @@
 							<!-- // Modal Alert -->
 
 							<!-- Modal Confirm -->
-							<div class="modal fade" id="confirmModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="confirmModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-confirm">
+							<div class="modal modal-confirm fade" id="confirmModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="confirmModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
 											<h1 class="modal-title blind" id="confirmModalLabel">Confirm Message</h1>

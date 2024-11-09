@@ -139,24 +139,15 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 }
 
 @mixin floating-sec {
+	position: sticky;
+	bottom: 0;
 	display: flex;
 	align-items: center;
-	height: 60rem;
 	flex:none;
-
-	.sec-inner {
-		position: fixed;
-		left: 50%;
-		bottom: 0;
-		z-index: 100;
-		width: 100%;
-		padding: 20rem $mobile-outer-spacer;
-		transform: translateX(-50%);
-		background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0rem, rgba(255, 255, 255, 1) 20rem);
-		@include media-tablet-xs {
-			padding: 20rem 0;
-		}
-	}
+	padding-top: 20rem;
+	padding-bottom: 20rem;
+	margin-bottom: -20rem; // 공간은 차지하지만 간격은 영향주지 않는다.
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0rem, rgba(255, 255, 255, 1) 20rem);
 }
 
 // 구분선
@@ -297,7 +288,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	.card-body {
 		position: relative;
 		padding: 16rem 0;
-		.card-trigger {
+		.card-button {
 			position: absolute;
 			left: -16rem;
 			right: -16rem;
@@ -566,7 +557,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	border-radius: 2rem;
 	padding: 0 16rem;
 	box-shadow: $box-shadow-10;
-	.card-trigger {
+	.card-button {
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -782,6 +773,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	display: flex;
 	flex-wrap: wrap;
 	gap: 12rem;
+	padding-top: 16rem;
 
 	.recom-history-item {
 		width: 100%;
@@ -896,5 +888,28 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 	.nodata-tit + .nodata-txt {
 		margin-top: 4rem;
+	}
+}
+
+// 등록 폼
+@mixin reg-frm {
+	display: flex;
+	flex-direction: column;
+	gap: 32rem;
+
+	.frm-field {
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
+		width: 100%;
+
+		.frm-title {
+			.tit {
+				font-weight: 600;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #000;
+			}
+		}
 	}
 }

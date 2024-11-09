@@ -113,6 +113,7 @@
 // s: 플로팅 액션
 .btn-action {
 	width: 100%;
+	max-width: $pc-inner-content;
 	height: 50rem;
 	border-radius: 4rem;
 	font-weight: 600;

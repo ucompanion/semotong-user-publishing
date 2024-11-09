@@ -39,7 +39,7 @@
 }
 
 // 추가하고 싶은 크기를 배열에 나열
-$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 48, 100);
+$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 48, 50, 62, 100);
 
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
@@ -94,6 +94,8 @@ $bg-icons: (
 	(icn-20-headset-bk, svg),
 	(icn-20-plan-like-gr, svg, icn-20-plan-like-sel, svg),
 	(icn-20-plan-share-gr, svg),
+	(icn-20-select-arw, svg),
+	(icn-20-acco-arw, svg),
 
 	// 24
 	(icn-24-nav-01-gr, svg, icn-24-nav-01-pre, svg, icn-24-nav-01-sel, svg),
@@ -117,11 +119,19 @@ $bg-icons: (
 	(icn-48-recom-best, png),
 	(icn-48-recom-parent, png),
 
+	// 50
+	(icn-50-sat-good, svg, icn-50-sat-good-sel, svg),
+	(icn-50-sat-soso, svg, icn-50-sat-soso-sel, svg),
+	(icn-50-sat-bad, svg, icn-50-sat-bad-sel, svg),
+
+	// 62
+	(icn-62-motong, png),
+
 	// 100
 	(icn-100-nodata-recom, svg),
 	(icn-100-nodata-bookmark, svg),
 	(icn-100-nodata-recent, svg),
-	(icn-100-nodata-doc, svg),
+	(icn-100-nodata-reg, svg),
 );
 @each $values in $bg-icons {
 	// 기본

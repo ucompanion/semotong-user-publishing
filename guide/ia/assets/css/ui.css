@@ -300,7 +300,9 @@
 .ia-tbl table .col-5depth {
 	width: 12.5%;
 }
-
+.ia-tbl table .col-3depth {
+	width: 15%;
+}
 .ia-tbl table .col-point {
 	width: 60px;
 }

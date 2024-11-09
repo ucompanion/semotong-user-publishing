@@ -5,10 +5,28 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ Label
+	@@ Varialbles
 -------------------------------------------------------------------*/
-.form-tit {
-	display: inline-block;
+@mixin input-placeholder {
+	&.is-placeholder,
+	&::placeholder {
+		color: #828588;
+		word-break: keep-all;
+	}
+}
+@mixin input-style {
+	height: 52rem;
+	width: 100%;
+	padding: 15rem 17rem;
+	border:1px solid #CFD0D1;
+	border-radius: 4rem;
+	font-size: 16rem;
+	line-height: 22rem;
+	font-weight: 500;
+	color: #000000;
+	&:focus {
+		outline-color: #000;
+	}
 }
 
 /*-------------------------------------------------------------------
@@ -18,24 +36,11 @@
 .ui-inp {
 	display: inline-block;
 	position: relative;
-	height: 40px;
-	.inp {
-		height: 100%;
-		line-height: 1.5;
-		padding: 0 10px;
-		border: 1px solid #ddd;
-		border-radius: 0;
+	width: 100%;
 
-		// 기본상태 인터렉션
-		&:focus,
-		&:hover,
-		&.is-focused {
-			border-color: #0089b3;
-		}
-		&:read-only,
-		&:disabled {
-			background-color: #f8f8f8;
-		}
+	.inp {
+		@include input-style;
+		@include input-placeholder;
 
 		// 입력상태 인터렉션
 		&:not(:placeholder-shown) + .on-right .btn-clear {
@@ -64,6 +69,10 @@
 	.btn-clear {
 		display: none;
 	}
+
+	&.fluid {
+		width: 100%;
+	}
 }
 
 
@@ -73,18 +82,35 @@
 -------------------------------------------------------------------*/
 /* 스타일 */
 .ui-textarea {
-	.textarea {
-		display: block;
-		padding: 0 10px;
-		width: 100%;
-		border: 1px solid #ddd;
-		border-radius: 0;
-		line-height: 1.5;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	@include input-style;
+	height: 140rem;
+	width: 100%;
+	&:focus-within {
+		outline:2px solid #000;
+		outline-offset: -1px;
 	}
-	&:focus,
-	&:hover,
-	&.is-focused {
-		border-color: #0089b3;
+
+	.textarea {
+		flex: 1 1 auto;
+		@include input-placeholder;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.bytes {
+		display: flex;
+		margin-top: 8rem;
+		font-weight: 500;
+		font-size: 12rem;
+		line-height: 16rem;
+		color: #828588;
+		.count {
+			color: #36383A;
+		}
 	}
 }
 
@@ -94,25 +120,29 @@
 -------------------------------------------------------------------*/
 /* 스타일 */
 .ui-sel {
+	width: 100%;
+
 	.sel {
-		height: 40px;
-		padding: 0 30px 0 10px;
-		border: 1px solid #ddd;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		background: url('../demo/ico_select01_black.png') no-repeat right 10px center;
+		@include input-style;
 
 		&:disabled.demo1 {
 			background-color: #f7f7f7;
 		}
 	}
+	&.fluid {
+		width: 100%;
+	}
 }
-
-
 
 /*-------------------------------------------------------------------
 	@@ 유형
 -------------------------------------------------------------------*/
 /* File Attach */
-.frm-file {
+.ui-file {
 	position: relative;
 	display: inline-flex;
 }

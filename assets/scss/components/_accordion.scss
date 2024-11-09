@@ -15,13 +15,9 @@
 .collapse:not(.show) {
 	display: none;
 }
-
-/* 강조 */
-
-/*-------------------------------------------------------------------
-	@@ 유형
--------------------------------------------------------------------*/
-/* 스타일1 */
-
-
-/* 스타일2 */
+.accordion-button .ui-icn {
+	transition: transform .35s ease;
+}
+.accordion-button[aria-expanded='true'] .ui-icn {
+	transform: rotate(180deg);
+}

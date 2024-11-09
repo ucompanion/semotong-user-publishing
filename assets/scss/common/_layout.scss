@@ -31,7 +31,6 @@ html {
 .footer {
 	flex: none;
 	position: relative;
-	z-index: 200;
 	@include out-sec;
 }
 
@@ -74,6 +73,7 @@ html {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 200;
 	width: 100%;
 	background-color: #fff;
 
@@ -235,17 +235,19 @@ section {
 
 // 플로팅 메뉴
 .floating-menu {
+	--btn-size: 60rem;
 	position: fixed;
-	bottom: calc(#{$height-footer} + 80rem);
+	bottom: calc(#{$height-footer} + 20rem);
 	right: 20rem;
-	width: 60rem;
-	height: 60rem;
+	width: var(--btn-size);
+	transform: translateY(var(--btn-size));
+	transition: all 0.2s ease;
 
 	.btn-menu {
 		position: relative;
 		z-index: 10;
-		width: 100%;
-		height: 100%;
+		width: var(--btn-size);
+		height: var(--btn-size);
 		background-color: #333;
 		border-radius: 50%;
 	}
@@ -253,10 +255,13 @@ section {
 	.btn-top {
 		position: relative;
 		z-index: 10;
-		width: 100%;
-		height: 100%;
+		width: var(--btn-size);
+		height: var(--btn-size);
 		background-color: #333;
 		border-radius: 50%;
+		pointer-events: none;
+		opacity: 0;
+		transition: all 0.2s ease;
 	}
 
 	.floating-layer {
@@ -305,8 +310,19 @@ section {
 		}
 	}
 }
-
-// 플로팅 로고
+.floating-menu {
+	bottom: calc(#{$safe-area-bottom} + 20rem);
+}
+.is-scroll-last {
+	.floating-menu {
+		transform: translateY(0);
+		.btn-top {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+}
+// 플로팅 메뉴
 
 // 플로팅 네비게이션
 .floating-nav {
@@ -362,5 +378,12 @@ section {
 
 			}
 		}
+	}
+}
+
+// Sub Wrapper
+.sub-wrapper {
+	.footer {
+		padding-bottom: $safe-area-bottom;
 	}
 }

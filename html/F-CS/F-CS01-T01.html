@@ -36,6 +36,9 @@
 
 			<!-- Header -->
 			<section class="header-sec">
+				<button type="button" class="ui-btn">
+					<i class="ui-icn icn-32-back-bk" aria-label="뒤로가기"></i>
+				</button>
 				<h1 class="title">1:1 문의하기</h1>
 				<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#asideModal">
 					<i class="ui-icn icn-32-anb-bk" aria-label="메뉴열기"></i>
@@ -52,8 +55,124 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<div class="content F-CS01-T01-page">
-				본문 컨텐츠
+			<div class="content F-CS01-page">
+				<!-- 모통봇 소개 섹션 -->
+				<section class="motongbot-intro-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">
+								<i class="ui-icn icn-62-motong" aria-hidden="true"></i>
+								안녕하세요! <br>모통봇입니다.
+							</h2>
+						</div>
+						<div class="sec-body">
+							<div class="motongbot-intro-box">
+								<dl>
+									<dt>알뜰폰에 대한 오해와 궁금증이 있으신가요?<br>모통봇이 속 시원하게 해결해드릴게요!</dt>
+									<dd>문의가 많은 경우 답변이 지연될 수 있지만 최대한 빠르게 답변 드리려 노력할게요.</dd>
+									<dd>답변 가능 시간은 평일 오전 9시부터 오후 6시까지입니다. 조금만 기다려주세요!</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // 모통봇 소개 섹션 -->
+
+				<!-- 탭 목록 -->
+				<div class="ui-tab tab-style1">
+					<ul class="tab-list" role="tablist">
+						<li class="tab-item" role="presentation">
+							<button class="tab-link active" id="tab-11" data-bs-toggle="tab" data-bs-target="#tab-11-pane" type="button" role="tab" aria-controls="tab-11-pane" aria-selected="true">1:1 문의</button>
+						</li>
+						<li class="tab-item" role="presentation">
+							<button class="tab-link" id="tab-12" data-bs-toggle="tab" data-bs-target="#tab-12-pane" type="button" role="tab" aria-controls="tab-12-pane" aria-selected="false">나의 고객 문의 내역</button>
+						</li>
+					</ul>
+				</div>
+				<!-- // 탭 목록 -->
+
+				<!-- 탭 패널 -->
+				<div class="tab-content">
+					<!-- F-CS01-T01-page -->
+					<div class="F-CS01-T01-page tab-pane fade show active" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+						<!-- 등록폼 섹션 -->
+						<section class="reg-frm-sec">
+							<div class="sec-inner">
+								<!-- 등록폼 -->
+								<div class="reg-frm">
+									<!-- 문의유형 선택 -->
+									<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
+									<div class="frm-field">
+										<div class="frm-title">
+											<label class="tit" for="frmType">문의 유형을 선택해주세요.</label>
+										</div>
+										<div class="frm-content">
+											<div class="ui-sel">
+												<!-- 선택전 is-placeholder, (선택후 삭제) -->
+												<button type="button" id="frmType" class="sel is-placeholder" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+													<span>문의유형 선택</span>
+													<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 문의유형 선택 -->
+
+									<!-- 제목 입력 -->
+									<div class="frm-field">
+										<div class="frm-title">
+											<label for="frmTitle" class="tit">제목을 입력해 주세요.</label>
+										</div>
+										<div class="frm-content">
+											<div class="ui-inp">
+												<input type="text" name="" id="frmTitle" value="" placeholder="Placeholder" title="" class="inp" />
+											</div>
+										</div>
+									</div>
+									<!-- // 제목 입력 -->
+
+									<!-- 내용 입력 -->
+									<div class="frm-field">
+										<div class="frm-title">
+											<label for="frmTextarea" class="tit">문의하실 내용을 알려주세요.</label>
+										</div>
+										<div class="frm-content">
+											<div class="ui-textarea">
+												<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea"></textarea>
+												<p class="bytes"><em class="count">0/</em>1,000</p>
+											</div>
+										</div>
+									</div>
+									<!-- // 내용 입력 -->
+								</div>
+								<!-- // 등록폼 -->
+							</div>
+						</section>
+						<!-- // 등록폼 섹션 -->
+
+						<!-- 플로팅 섹션 -->
+						<section class="floating-sec">
+							<div class="sec-inner">
+								<button type="button" class="ui-btn btn-action primary" disabled>
+									<span>문의 등록하기</span>
+								</button>
+							</div>
+						</section>
+						<!-- // 페이지 섹션 -->
+					</div>
+					<!-- // F-CS01-T01-page -->
+
+					<!-- F-CS01-T02-page -->
+					<div class="F-CS01-T02-page tab-pane fade" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
+						<section>
+							<div class="sec-inner">
+								<a href="./F-CS01-T02.html">F-CS01-T02.html 이동</a>
+							</div>
+						</section>
+					</div>
+					<!-- // F-CS01-T02-page -->
+				</div>
+
 			</div>
 			<!-- // content -->
 		</main>
@@ -62,11 +181,47 @@
 		<!-- Footer (include_footer.html) -->
 		<footer class="footer"></footer>
 		<!-- // Footer -->
-
-		<!-- floating Nav (include_floatingNav.html) -->
-		<nav class="floating-nav"></nav>
-		<!-- // floating Nav- -->
 	</div>
+
+	<!--
+		[모달 가이드]
+		모달 효과 : fade (공통), fade-pc (PC 전용)
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+		화면 이름 : 화면아이디-page (modal-select 제외)
+	-->
+	<!-- modal default -->
+	<div class="modal modal-select fade" id="selectModal" tabindex="-1" role="dialog" aria-labelledby="selectModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectModalLabel">문의유형 선택</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 콤보박스 섹션 -->
+					<section class="select-sec">
+						<div class="sec-inner">
+							<!-- modal-select 공통 -->
+							<ul class="select-listbox" role="listbox">
+								<!-- setSelectValued 는 퍼블 확인용입니다. -->
+								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 1</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 2</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 3</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 4</li>
+							</ul>
+						</div>
+					</section>
+					<!-- // 콤보박스 섹션 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // modal default -->
 </body>
 
 </html>
