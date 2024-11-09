@@ -105,11 +105,118 @@
 
 					<!-- F-CS01-T02-page -->
 					<div class="F-CS01-T02-page tab-pane fade show active" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
-						<section class="inquiry-list-sec">
+						<!-- 문의내역 섹션 -->
+						<section class="reg-list-sec">
 							<div class="sec-inner">
-								<a href="./F-CS01-T02.html">F-CS01-T02.html</a>
+								<!-- FAQ 아코디언 -->
+								<div class="ui-accordion faq-accordion" id="accoFaq">
+									<div class="accordion-item">
+										<div class="accordion-header">
+											<p class="faq-tit"><strong>알뜰폰 요금제 신청 문의 알뜰폰 요금제 신청 문의</strong></p>
+											<p class="faq-date">2024.11.14</p>
+											<div class="faq-con">
+												<p>알뜰폰 요금제 신청했는데 문의드립니다. <br>
+													문의 내용 텍스트 문의 내용 텍스트 문의 내용 텍스트 문의 내</p>
+											</div>
+											<div class="faq-info">
+												<!-- 접수완료: is-received, 답변완료: is-answered -->
+												<em class="state is-received">접수완료</em>
+												<span class="split" aria-hidden="true"></span>
+												<span class="category">카테고리</span>
+											</div>
+											<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accoFaq01"
+												aria-expanded="false" aria-controls="accoFaq01">
+												<i class="ui-icn icn-20-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</div>
+										<div id="accoFaq01" class="accordion-collapse collapse" data-bs-parent="#accoFaq">
+											<div class="accordion-body">
+												<div class="faq-feedback">
+													<p>
+														안녕하세요 고객님! 세모통입니다.
+														문의 내용 답변 드립니다.
+														텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<div class="accordion-header">
+											<p class="faq-tit"><strong>알뜰폰 요금제 신청 문의</strong></p>
+											<p class="faq-date">2024.11.14</p>
+											<div class="faq-con">
+												<p>알뜰폰 요금제 신청했는데 문의드립니다. <br>
+													문의 내용 텍스트 문의 내용 텍스트 문의 내용 텍스트 문의 내</p>
+											</div>
+											<div class="faq-info">
+												<!-- 접수완료: is-received, 답변완료: is-answered -->
+												<em class="state is-answered">답변완료</em>
+												<span class="split" aria-hidden="true"></span>
+												<span class="category">카테고리</span>
+												<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accoFaq02"
+													aria-expanded="true" aria-controls="accoFaq02">
+													<i class="ui-icn icn-20-acco-arw" aria-label="Toggle"></i>
+												</button>
+											</div>
+										</div>
+										<div id="accoFaq02" class="accordion-collapse collapse" data-bs-parent="#accoFaq">
+											<div class="accordion-body">
+												<div class="faq-feedback">
+													<p>
+														안녕하세요 고객님! 세모통입니다.
+														문의 내용 답변 드립니다.
+														텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<div class="accordion-header">
+											<p class="faq-tit"><strong>알뜰폰 요금제 신청 문의</strong></p>
+											<p class="faq-date">2024.11.14</p>
+											<div class="faq-con">
+												<p>알뜰폰 요금제 신청했는데 문의드립니다. <br>
+													문의 내용 텍스트 문의 내용 텍스트 문의 내용 텍스트 문의 내</p>
+											</div>
+											<div class="faq-info">
+												<em class="state is-received">접수완료</em>
+												<span class="split" aria-hidden="true"></span>
+												<span class="category">카테고리</span>
+												<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accoFaq03"
+													aria-expanded="true" aria-controls="accoFaq03">
+													<i class="ui-icn icn-20-acco-arw" aria-label="Toggle"></i>
+												</button>
+											</div>
+										</div>
+										<div id="accoFaq03" class="accordion-collapse collapse" data-bs-parent="#accoFaq">
+											<div class="accordion-body">
+												<div class="faq-feedback">
+													<p>
+														안녕하세요 고객님! 세모통입니다.
+														문의 내용 답변 드립니다.
+														텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // FAQ 아코디언 -->
+
+								<!-- 피드백 안내 -->
+								 <div class="feedback-msg">
+									<p class="tit"><strong>답변은 어떠셧나요?</strong></p>
+									<p class="txt">소중한 의견을 주시면 더 나은 세모통이 될 수 있도록 참고할게요.</p>
+									<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FCS01T02Modal">
+										<span>의견 보내기</span>
+									</button>
+								 </div>
+								<!-- // 피드백 안내 -->
 							</div>
 						</section>
+						<!-- // 문의내역 섹션 -->
 					</div>
 					<!-- // F-CS01-T02-page -->
 				</div>
@@ -118,7 +225,103 @@
 			<!-- // content -->
 		</main>
 		<!-- // Container -->
+
+		<!-- Footer (include_footer.html) -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
 	</div>
+
+	<!--
+		[모달 가이드]
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+		화면 이름 : 화면아이디-page (modal-select 제외)
+	-->
+	<!-- modal default -->
+	<div class="modal modal-basic fade" id="FCS01T02Modal" tabindex="-1" role="dialog" aria-labelledby="FCS01T02ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-CS01-T02-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="FCS01T02ModalLabel">세모통을 이용해주셔서 감사합니다.</h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 평가하기 섹션 -->
+					<section class="reg-sat-sec">
+						<div class="sec-inner">
+							<div class="reg-sat-msg">
+								<p class="tit">
+									<strong>답변이 도움이 되셧을까요?</strong>
+								</p>
+								<p class="txt">
+									고객님의 소중한 의견을 주시면 <br>
+									더 나은 서비스를 드릴 수 있도록 노력하겠습니다. <br>
+									감사합니다.
+								</p>
+							</div>
+
+							<div class="reg-sat-frm">
+								<!-- 체크된 항목의 라벨에 is-selected 클래스 추가 -->
+								<label class="reg-sat-rdo is-selected">
+									<i class="ui-icn icn-50-sat-good" aria-hidden="true"></i>
+									<span class="ui-rdo">
+										<input type="radio" name="frmSatRadio1" checked  onchange="setRadioSelected('frmSatRadio1', '.reg-sat-rdo')">
+										<span class="rdo"><span>매우 만족</span></span>
+									</span>
+								</label>
+								<label class="reg-sat-rdo" role="radio">
+									<i class="ui-icn icn-50-sat-soso" aria-hidden="true"></i>
+									<span class="ui-rdo">
+										<input type="radio" name="frmSatRadio1" onchange="setRadioSelected('frmSatRadio1', '.reg-sat-rdo')">
+										<span class="rdo"><span>보통</span></span>
+									</span>
+								</label>
+								<label class="reg-sat-rdo" role="radio">
+									<i class="ui-icn icn-50-sat-bad" aria-hidden="true"></i>
+									<span class="ui-rdo">
+										<input type="radio" name="frmSatRadio1" onchange="setRadioSelected('frmSatRadio1', '.reg-sat-rdo')">
+										<span class="rdo"><span>불만족</span></span>
+									</span>
+								</label>
+							</div>
+						</div>
+					</section>
+					<!-- //평가하기 섹션 -->
+					<!-- 등록폼 섹션 -->
+					<section class="reg-frm-sec">
+						<div class="sec-inner">
+							<!-- 등록폼 -->
+							<div class="reg-frm">
+								<!-- 고 입력 -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label for="frmTextarea" class="tit">고객의견</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-textarea">
+											<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea" placeholder="기타 전달하고 싶은 의견이 있으시다면 40자 이내로 메모 부탁드립니다."></textarea>
+											<p class="bytes"><em class="count">0/</em>40</p>
+										</div>
+									</div>
+								</div>
+								<!-- // 내용 입력 -->
+							</div>
+							<!-- // 등록폼 -->
+						</div>
+					</section>
+					<!-- // 등록폼 섹션 -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-action primary">
+						<span>확인</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // modal default -->
 </body>
 
 </html>

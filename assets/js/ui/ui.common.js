@@ -229,3 +229,18 @@ function setSelectValued(buttonId, option){
     // buttonSpan의 텍스트를 선택된 option의 텍스트로 설정
     buttonSpan.textContent = option.textContent;
 }
+
+// Radio Selected
+function setRadioSelected(radioName, className) {
+    // 모든 라디오 버튼의 부모 <label> 요소에서 is-selected 제거
+    var radios = document.getElementsByName(radioName);
+    radios.forEach((radio) => {
+        radio.closest(className).classList.remove('is-selected');
+    });
+
+    // 선택된 라디오 버튼에 is-selected 추가
+    var selectedRadio = document.querySelector(`input[name="${radioName}"]:checked`);
+    if (selectedRadio) {
+        selectedRadio.closest(className).classList.add('is-selected');
+    }
+}

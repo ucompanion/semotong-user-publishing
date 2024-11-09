@@ -7,6 +7,13 @@
 /*-------------------------------------------------------------------
 	@@ Varialbles
 -------------------------------------------------------------------*/
+@mixin input-placeholder {
+	&.is-placeholder,
+	&::placeholder {
+		color: #828588;
+		word-break: keep-all;
+	}
+}
 @mixin input-style {
 	height: 52rem;
 	width: 100%;
@@ -19,10 +26,6 @@
 	color: #000000;
 	&:focus {
 		outline-color: #000;
-	}
-	&.is-placeholder,
-	&::placeholder {
-		color: #828588;
 	}
 }
 
@@ -37,6 +40,7 @@
 
 	.inp {
 		@include input-style;
+		@include input-placeholder;
 
 		// 입력상태 인터렉션
 		&:not(:placeholder-shown) + .on-right .btn-clear {
@@ -91,6 +95,8 @@
 
 	.textarea {
 		flex: 1 1 auto;
+		@include input-placeholder;
+
 		&:focus {
 			outline: none;
 		}
@@ -131,23 +137,6 @@
 		width: 100%;
 	}
 }
-
-.ui-listbox {
-	display: flex;
-	flex-direction: column;
-	gap: 4rem;
-	li {
-		padding: 10rem 0rem;
-		font-weight: 500;
-		font-size: 16rem;
-		line-height: 24rem;
-		color: #000;
-		&.is-selected {
-			color: $color-primary;
-		}
-	}
-}
-
 
 /*-------------------------------------------------------------------
 	@@ 유형

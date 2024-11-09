@@ -61,7 +61,7 @@
 	flex-direction: column;
 	min-width: 280px;
 	max-width: calc(100% - 40px);
-	max-height: calc(100% - 40px);
+	max-height: calc(100% - #{$height-header});
 	min-height: 150px;
 	background-color: #fff;
 	pointer-events: auto;
@@ -125,6 +125,10 @@
 		}
 	}
 
+	.modal-body {
+		padding-bottom: 30rem;
+	}
+
 	@include media-tablet-xs {
 		&.fade {
 			transition: opacity .15s linear;
@@ -136,6 +140,9 @@
 			height: auto;
 			max-width: $pc-inner-content;
 			max-height: calc(100% - 40px);
+		}
+		.modal-body {
+			padding-bottom: 45rem;
 		}
 	}
 
@@ -179,32 +186,84 @@
 	}
 }
 
-// Select
-.modal-select {
+// Select, Basic 공통
+.modal-select,
+.modal-basic {
 	.modal-dialog {
 		justify-content: flex-end;
-		.modal-content {
-			width: 100%;
-			max-width: 480rem;
-			border-radius: 20rem 20rem 0 0;
-			@include bottom-spacer;
-		}
+		transform: translate(0, 105%);
+	}
 
-		.modal-header {
-			@include out-sec;
-			padding-top: 20rem;
-			padding-bottom: 10rem;
-			.modal-title {
-				font-weight: 600;
-				font-size: 20rem;
-				color: #000;
-			}
-			.btn-close {
-				top: 18rem;
+	.modal-content {
+		width: 100%;
+		border-radius: 20rem 20rem 0 0;
+	}
+
+	.modal-header {
+		@include out-sec;
+		padding-top: 20rem;
+		padding-bottom: 10rem;
+		.modal-title {
+			font-weight: 600;
+			font-size: 20rem;
+			color: #000;
+		}
+		.btn-close {
+			display: none;
+			top: 18rem;
+		}
+	}
+
+	@include media-tablet-xs {
+		.modal-dialog {
+			justify-content: center;
+			transform: translate(0, 50px);
+		}
+		.modal-content {
+			border-radius: 20rem;
+		}
+	}
+}
+
+// Selkect
+.modal-select {
+	.modal-content {
+		max-width: 480rem;
+	}
+	.select-listbox {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		li {
+			padding: 10rem 0rem;
+			font-weight: 500;
+			font-size: 16rem;
+			line-height: 24rem;
+			color: #000;
+			&.is-selected {
+				color: $color-primary;
 			}
 		}
 	}
 }
 
-
-/* 스타일2 */
+// Basic
+.modal-basic {
+	.modal-content {
+		max-width: 100%;
+		padding-bottom: 30rem;
+	}
+	.modal-footer {
+		@include out-sec;
+		margin-top: 32rem;
+	}
+	@include media-tablet-xs {
+		.modal-content {
+			max-width: $pc-inner-content;
+			padding-bottom: 45rem;
+		}
+		.modal-footer {
+			margin-top: 40rem;
+		}
+	}
+}

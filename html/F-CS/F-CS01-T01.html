@@ -94,11 +94,12 @@
 				<!-- 탭 패널 -->
 				<div class="tab-content">
 					<!-- F-CS01-T01-page -->
-					<div class="F-CS01-T01-page tab-pane fade" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
-						<section class="inquiry-form-sec">
+					<div class="F-CS01-T01-page tab-pane fade show active" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+						<!-- 등록폼 섹션 -->
+						<section class="reg-frm-sec">
 							<div class="sec-inner">
 								<!-- 등록폼 -->
-								<div class="inquiry-frm">
+								<div class="reg-frm">
 									<!-- 문의유형 선택 -->
 									<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
 									<div class="frm-field">
@@ -124,7 +125,7 @@
 										</div>
 										<div class="frm-content">
 											<div class="ui-inp">
-												<input type="text" name="" id="frm아이디" value="" placeholder="Placeholder" title="" class="inp" />
+												<input type="text" name="" id="frmTitle" value="" placeholder="Placeholder" title="" class="inp" />
 											</div>
 										</div>
 									</div>
@@ -133,12 +134,12 @@
 									<!-- 내용 입력 -->
 									<div class="frm-field">
 										<div class="frm-title">
-											<label for="frmCon" class="tit">문의하실 내용을 알려주세요.</label>
+											<label for="frmTextarea" class="tit">문의하실 내용을 알려주세요.</label>
 										</div>
 										<div class="frm-content">
 											<div class="ui-textarea">
-												<textarea name="" id="frm아이디" cols="50" rows="2" class="textarea"></textarea>
-												<p class="bytes"><em class="count">0</em>/1,000</p>
+												<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea"></textarea>
+												<p class="bytes"><em class="count">0/</em>1,000</p>
 											</div>
 										</div>
 									</div>
@@ -147,6 +148,7 @@
 								<!-- // 등록폼 -->
 							</div>
 						</section>
+						<!-- // 등록폼 섹션 -->
 
 						<!-- 플로팅 섹션 -->
 						<section class="floating-sec">
@@ -161,7 +163,7 @@
 					<!-- // F-CS01-T01-page -->
 
 					<!-- F-CS01-T02-page -->
-					<div class="F-CS01-T02-page tab-pane fade show active" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
+					<div class="F-CS01-T02-page tab-pane fade" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
 						<section>
 							<div class="sec-inner">
 								<a href="./F-CS01-T02.html">F-CS01-T02.html 이동</a>
@@ -175,6 +177,10 @@
 			<!-- // content -->
 		</main>
 		<!-- // Container -->
+
+		<!-- Footer (include_footer.html) -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
 	</div>
 
 	<!--
@@ -197,10 +203,10 @@
 				</div>
 				<div class="modal-body">
 					<!-- 콤보박스 섹션 -->
-					<section class="comobox-sec">
+					<section class="select-sec">
 						<div class="sec-inner">
-							<!-- input.scss 포함 -->
-							<ul class="ui-listbox" role="listbox">
+							<!-- modal-select 공통 -->
+							<ul class="select-listbox" role="listbox">
 								<!-- setSelectValued 는 퍼블 확인용입니다. -->
 								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 1</li>
