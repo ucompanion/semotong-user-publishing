@@ -209,3 +209,23 @@ function setPopover(selector){
 		popoverList.forEach(popover => popover.hide());
 	});
 }
+
+// Select Valued
+function setSelectValued(buttonId, option){
+	var button = document.querySelector(buttonId);
+	var buttonSpan = document.querySelector(buttonId + '>span');
+
+    // option 요소에 is-selected 클래스 추가
+    option.classList.add('is-selected');
+    button.classList.remove('is-placeholder');
+
+    // 다른 형제 요소들에서 is-selected 클래스 제거
+    Array.from(option.parentNode.children).forEach(sibling => {
+        if (sibling !== option) {
+            sibling.classList.remove('is-selected');
+        }
+    });
+
+    // buttonSpan의 텍스트를 선택된 option의 텍스트로 설정
+    buttonSpan.textContent = option.textContent;
+}

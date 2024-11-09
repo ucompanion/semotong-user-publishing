@@ -10,14 +10,16 @@
 @mixin input-style {
 	height: 52rem;
 	width: 100%;
-	padding: 15rem 18rem;
+	padding: 15rem 17rem;
 	border:1px solid #CFD0D1;
 	border-radius: 4rem;
 	font-size: 16rem;
 	line-height: 22rem;
 	font-weight: 500;
 	color: #000000;
-
+	&:focus {
+		outline-color: #000;
+	}
 	&.is-placeholder,
 	&::placeholder {
 		color: #828588;
@@ -31,20 +33,10 @@
 .ui-inp {
 	display: inline-block;
 	position: relative;
+	width: 100%;
 
 	.inp {
 		@include input-style;
-
-		// 기본상태 인터렉션
-		&:focus,
-		&:hover,
-		&.is-focused {
-			border-color: #0089b3;
-		}
-		&:read-only,
-		&:disabled {
-			background-color: #f8f8f8;
-		}
 
 		// 입력상태 인터렉션
 		&:not(:placeholder-shown) + .on-right .btn-clear {
@@ -86,17 +78,33 @@
 -------------------------------------------------------------------*/
 /* 스타일 */
 .ui-textarea {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	@include input-style;
+	height: 140rem;
+	width: 100%;
+	&:focus-within {
+		outline:2px solid #000;
+		outline-offset: -1px;
+	}
+
 	.textarea {
-		@include input-style;
-		height: auto;
+		flex: 1 1 auto;
+		&:focus {
+			outline: none;
+		}
 	}
-	&:focus,
-	&:hover,
-	&.is-focused {
-		border-color: #0089b3;
-	}
-	&.fluid {
-		width: 100%;
+	.bytes {
+		display: flex;
+		margin-top: 8rem;
+		font-weight: 500;
+		font-size: 12rem;
+		line-height: 16rem;
+		color: #828588;
+		.count {
+			color: #36383A;
+		}
 	}
 }
 
@@ -106,6 +114,8 @@
 -------------------------------------------------------------------*/
 /* 스타일 */
 .ui-sel {
+	width: 100%;
+
 	.sel {
 		display: flex;
 		justify-content: space-between;

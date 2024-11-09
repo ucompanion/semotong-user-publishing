@@ -42,12 +42,12 @@
 -------------------------------------------------------------------*/
 /* 스타일1 */
 .tab-style1 {
-	margin-bottom: 30rem;
+	position: sticky;
+	top: $height-header;
+	padding-bottom: 30rem;
+	padding-top: 6rem;
+	background-color: #fff;
 	@include out-sec;
-
-	&:first-child {
-		padding-top: 6rem;
-	}
 
 	.tab-list {
 		@include in-sec;

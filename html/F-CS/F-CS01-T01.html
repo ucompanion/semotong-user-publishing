@@ -94,7 +94,7 @@
 				<!-- 탭 패널 -->
 				<div class="tab-content">
 					<!-- F-CS01-T01-page -->
-					<div class="F-CS01-T01-page tab-pane fade show active" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+					<div class="F-CS01-T01-page tab-pane fade" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 						<section class="inquiry-form-sec">
 							<div class="sec-inner">
 								<!-- 등록폼 -->
@@ -106,7 +106,7 @@
 											<label class="tit" for="frmType">문의 유형을 선택해주세요.</label>
 										</div>
 										<div class="frm-content">
-											<div class="ui-sel fluid">
+											<div class="ui-sel">
 												<!-- 선택전 is-placeholder, (선택후 삭제) -->
 												<button type="button" id="frmType" class="sel is-placeholder" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
 													<span>문의유형 선택</span>
@@ -123,7 +123,7 @@
 											<label for="frmTitle" class="tit">제목을 입력해 주세요.</label>
 										</div>
 										<div class="frm-content">
-											<div class="ui-inp fluid">
+											<div class="ui-inp">
 												<input type="text" name="" id="frm아이디" value="" placeholder="Placeholder" title="" class="inp" />
 											</div>
 										</div>
@@ -136,8 +136,9 @@
 											<label for="frmCon" class="tit">문의하실 내용을 알려주세요.</label>
 										</div>
 										<div class="frm-content">
-											<div class="ui-textarea fluid">
+											<div class="ui-textarea">
 												<textarea name="" id="frm아이디" cols="50" rows="2" class="textarea"></textarea>
+												<p class="bytes"><em class="count">0</em>/1,000</p>
 											</div>
 										</div>
 									</div>
@@ -160,10 +161,10 @@
 					<!-- // F-CS01-T01-page -->
 
 					<!-- F-CS01-T02-page -->
-					<div class="F-CS01-T02-page tab-pane fade" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
-						<section class="inquiry-list-sec">
+					<div class="F-CS01-T02-page tab-pane fade show active" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
+						<section>
 							<div class="sec-inner">
-
+								<a href="./F-CS01-T02.html">F-CS01-T02.html 이동</a>
 							</div>
 						</section>
 					</div>
@@ -189,6 +190,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<h3 class="modal-title" id="selectModalLabel">문의유형 선택</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
 						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
 					</button>
@@ -199,10 +201,12 @@
 						<div class="sec-inner">
 							<!-- input.scss 포함 -->
 							<ul class="ui-listbox" role="listbox">
-								<li role="option" tabindex="0" data-bs-dismiss="modal">문의유형 1</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" class="is-selected">문의유형 2</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal">문의유형 3</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal">문의유형 4</li>
+								<!-- setSelectValued 는 퍼블 확인용입니다. -->
+								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 1</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 2</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 3</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 4</li>
 							</ul>
 						</div>
 					</section>
