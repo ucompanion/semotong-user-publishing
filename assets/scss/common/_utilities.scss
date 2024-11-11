@@ -149,6 +149,19 @@
 	@include ellipsis3;
 }
 
+/* 디바이스 */
+.only-pc {
+	display: none !important;
+}
+@include media-tablet-xs {
+	.only-mo {
+		display: none !important;
+	}
+	.only-pc {
+		display: block !important;
+	}
+}
+
 /*-------------------------------------------------------------------
 	@Colors
 -------------------------------------------------------------------*/

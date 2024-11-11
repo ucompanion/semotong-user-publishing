@@ -248,8 +248,8 @@ function setRadioSelected(radioName, className) {
 // Rating Selected
 function setRating(button) {
 	// 모든 별 버튼을 가져옵니다.
-	const stars = document.querySelectorAll('.rating-star .ui-btn');
-	const ratingStarContainer = document.querySelector('.rating-star');
+	const ratingStarContainer = button.closest('.rating-star');
+	const stars = ratingStarContainer.querySelectorAll('.rating-star .ui-btn');
 	let isActive = true; // 클릭한 버튼까지 활성화하기 위한 플래그
 	let rating = 0; // 선택된 별의 수 (점수)
 

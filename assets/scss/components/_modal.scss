@@ -61,7 +61,7 @@
 	flex-direction: column;
 	min-width: 280px;
 	max-width: calc(100% - 40px);
-	max-height: calc(100% - #{$height-header});
+	max-height: calc(100% - #{$mobile-height-header});
 	min-height: 150px;
 	background-color: #fff;
 	pointer-events: auto;
@@ -108,7 +108,7 @@
 	.modal-header {
 		display: flex;
 		align-items: center;
-		height: $height-header;
+		height: $mobile-height-header;
 		gap: 12rem;
 		@include out-sec;
 
@@ -142,7 +142,7 @@
 			height: auto;
 			max-width: $pc-inner-content;
 			max-height: calc(100% - 40px);
-			border-radius: 20rem;
+			border-radius: 10rem;
 		}
 	}
 
@@ -221,7 +221,7 @@
 			transform: translate(0, 50px);
 		}
 		.modal-content {
-			border-radius: 20rem;
+			border-radius: 10rem;
 		}
 	}
 }

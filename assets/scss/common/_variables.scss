@@ -18,7 +18,8 @@ $mobile-inner-content: 320rem;
 $mobile-bottom-spacer: 40rem;
 
 // 공통요소 사이즈
-$height-header: 60rem;
+$pc-height-header: 80rem;
+$mobile-height-header: 60rem;
 $height-footer: calc(76rem + #{$safe-area-bottom});
 
 // 컬러 강조
