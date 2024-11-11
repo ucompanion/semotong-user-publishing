@@ -65,6 +65,7 @@
 	min-height: 150px;
 	background-color: #fff;
 	pointer-events: auto;
+	transition: all 0.2s ease;
 	.modal-header {
 		flex:none;
 	}
@@ -101,6 +102,7 @@
 		height: 100%;
 		max-width: 100%;
 		max-height: 100%;
+		@include bottom-spacer;
 	}
 
 	.modal-header {
@@ -125,10 +127,6 @@
 		}
 	}
 
-	.modal-body {
-		padding-bottom: 30rem;
-	}
-
 	.tab-style1 {
 		top: 0;
 	}
@@ -144,9 +142,7 @@
 			height: auto;
 			max-width: $pc-inner-content;
 			max-height: calc(100% - 40px);
-		}
-		.modal-body {
-			padding-bottom: 45rem;
+			border-radius: 20rem;
 		}
 	}
 
@@ -200,6 +196,7 @@
 
 	.modal-content {
 		width: 100%;
+		max-width: 480rem;
 		border-radius: 20rem 20rem 0 0;
 	}
 
@@ -232,7 +229,6 @@
 // Selkect
 .modal-select {
 	.modal-content {
-		max-width: 480rem;
 		padding-bottom: calc(#{$safe-area-bottom} + 30rem);
 	}
 	.select-listbox {
@@ -267,7 +263,6 @@
 // Basic
 .modal-basic {
 	.modal-content {
-		max-width: 100%;
 		padding-bottom: calc(#{$safe-area-bottom} + 30rem);
 	}
 	.modal-footer {
@@ -276,7 +271,6 @@
 	}
 	@include media-tablet-xs {
 		.modal-content {
-			max-width: $pc-inner-content;
 			padding-bottom: 45rem;
 		}
 		.modal-footer {
