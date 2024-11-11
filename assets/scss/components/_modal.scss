@@ -129,6 +129,10 @@
 		padding-bottom: 30rem;
 	}
 
+	.tab-style1 {
+		top: 0;
+	}
+
 	@include media-tablet-xs {
 		&.fade {
 			transition: opacity .15s linear;
@@ -229,12 +233,14 @@
 .modal-select {
 	.modal-content {
 		max-width: 480rem;
+		padding-bottom: calc(#{$safe-area-bottom} + 30rem);
 	}
 	.select-listbox {
 		display: flex;
 		flex-direction: column;
 		gap: 4rem;
 		li {
+			position: relative;
 			padding: 10rem 0rem;
 			font-weight: 500;
 			font-size: 16rem;
@@ -242,6 +248,17 @@
 			color: #000;
 			&.is-selected {
 				color: $color-primary;
+				&::after {
+					content:'';
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 20rem;
+					height: 20rem;
+					background: url('../images/common/icn-20-select-chk-sel.svg') no-repeat center center / contain;
+				}
 			}
 		}
 	}
@@ -251,7 +268,7 @@
 .modal-basic {
 	.modal-content {
 		max-width: 100%;
-		padding-bottom: 30rem;
+		padding-bottom: calc(#{$safe-area-bottom} + 30rem);
 	}
 	.modal-footer {
 		@include out-sec;

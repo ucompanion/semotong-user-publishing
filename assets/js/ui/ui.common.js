@@ -244,3 +244,32 @@ function setRadioSelected(radioName, className) {
         selectedRadio.closest(className).classList.add('is-selected');
     }
 }
+
+// Rating Selected
+function setRating(button) {
+	// 모든 별 버튼을 가져옵니다.
+	const stars = document.querySelectorAll('.rating-star .ui-btn');
+	const ratingStarContainer = document.querySelector('.rating-star');
+	let isActive = true; // 클릭한 버튼까지 활성화하기 위한 플래그
+	let rating = 0; // 선택된 별의 수 (점수)
+
+	// 버튼을 반복하여 `is-selected` 및 `aria-selected` 속성을 설정/초기화
+	stars.forEach((star, index) => {
+		if (isActive) {
+			star.classList.add('is-selected'); // 선택된 별에는 `is-selected` 클래스 추가
+			star.setAttribute('aria-selected', 'true'); // aria-selected를 true로 설정
+			rating = index + 1; // 클릭된 별의 수를 계산 (0부터 시작하므로 +1)
+		} else {
+			star.classList.remove('is-selected'); // 선택되지 않은 별에는 클래스 제거
+			star.setAttribute('aria-selected', 'false'); // aria-selected를 false로 설정
+		}
+
+		// 현재 별이 클릭된 버튼인 경우 플래그를 false로 설정하여 이후 별들은 초기화
+		if (star === button) {
+			isActive = false;
+		}
+	});
+
+	// aria-label을 점수에 맞게 업데이트
+	ratingStarContainer.setAttribute('aria-label', '평점: '+rating+'점');
+}

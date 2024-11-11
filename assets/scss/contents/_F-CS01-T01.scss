@@ -8,9 +8,9 @@
 // s: 1:1문의 탭 페이지
 .F-CS01-T01-page {
 	// s: 문의 등록 섹션
-	.reg-frm-sec {
-		.reg-frm {
-			@include reg-frm;
+	.inq-frm-sec {
+		.basic-frm {
+			@include basic-frm;
 		}
 	}
 	// e: 문의 등록 섹션

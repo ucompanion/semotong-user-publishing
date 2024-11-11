@@ -283,7 +283,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 // 요금제 상품 목록 카드
 @mixin ratePlanC-card {
 	padding: 0 16rem;
-	box-shadow: $box-shadow-16;
+	@include box-shadow-16;
 
 	.card-body {
 		position: relative;
@@ -554,9 +554,8 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 // 요금제 상품 상세 카드
 @mixin ratePlanD-card {
 	position: relative;
-	border-radius: 2rem;
 	padding: 0 16rem;
-	box-shadow: $box-shadow-10;
+	@include box-shadow-10;
 	.card-button {
 		position: absolute;
 		left: 0;
@@ -761,10 +760,157 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 @mixin review-list {
 	display: flex;
 	flex-direction: column;
-	gap: 10rem;
+	gap: 16rem;
+	padding-top: 16rem;
 
 	.review-item {
 		width: 100%;
+	}
+}
+
+@mixin review-card {
+	padding: 0 16rem;
+	@include box-shadow-16;
+
+	.card-body {
+		display: flex;
+		flex-wrap: wrap;
+		padding:16rem 0;
+
+		.card-label {
+			display: inline-flex;
+			margin-right: auto;
+			background-color: #EFF0F0;
+			padding: 4rem 8rem;
+			border-radius: 4rem;
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 16rem;
+			color: #63666A;
+			&.is-feedback {
+				background-color: #EAE6FB;
+				color: $color-primary;
+			}
+		}
+		.card-remove {
+			margin-left: auto;
+		}
+		.card-cont {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+			height: 52rem;
+			margin-top: 10rem;
+			padding-left: calc(52rem + 12rem);
+			.card-brand {
+				position: absolute;
+				left: 0;
+				top: 0;
+				flex: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 52rem;
+				height: 52rem;
+				border-radius: 50%;
+				background-color: #F4F2FD;
+				img {
+					width: 44rem;
+					height: auto;
+				}
+			}
+			.card-title {
+				display: block;
+				width: 100%;
+				font-weight: 700;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #000;
+				@include ellipsis1;
+			}
+			.card-date {
+				margin-top: 2rem;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #5A5D60;
+			}
+		}
+	}
+	.card-footer {
+		border-top: 1px solid #EFF0F0;
+		padding: 16rem 0 24rem;
+
+		// 작성완료
+		.card-written {
+			display: flex;
+			flex-wrap: wrap;
+
+			.written-sat {
+				display: inline-flex;
+				align-items: center;
+				margin-right: auto;
+				.ui-icn {
+					margin-right: 7rem;
+				}
+				.val {
+					font-weight: 700;
+					font-size: 22rem;
+					line-height: 30rem;
+				}
+			}
+
+			.written-mod {
+				margin-left: auto;
+				padding: 3rem 9rem;
+				border:1px solid #CFD0D1;
+				border-radius: 4rem;
+				font-weight: 600;
+				font-size: 12rem;
+				line-height: 17rem;
+				color: #828588;
+			}
+
+			.written-cont {
+				margin-top: 10rem;
+				width: 100%;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #46484B;
+				white-space: pre-line;
+			}
+		}
+
+		// 작성대기
+		.card-wait {
+			.wait-rating {
+				.rating-tit {
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: $color-primary;
+					text-align: center;
+				}
+				.rating-star {
+					display: flex;
+					justify-content: center;
+					gap: 6rem;
+					margin: 6rem auto 0;
+				}
+			}
+			.wait-frm {
+				margin-top: 24rem;
+				.ui-textarea {
+					height: 115rem;
+				}
+			}
+			.wait-action {
+				margin-top: 16rem;
+			}
+		}
 	}
 }
 
@@ -892,7 +1038,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 }
 
 // 등록 폼
-@mixin reg-frm {
+@mixin basic-frm {
 	display: flex;
 	flex-direction: column;
 	gap: 32rem;
@@ -913,3 +1059,103 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 	}
 }
+
+// 문의 답변
+@mixin basic-accordion {
+	margin: -20rem 0;
+
+	// 아코디언 필수
+	.collapsing {
+		height: 0;
+		overflow: hidden;
+		transition: height .35s ease;
+	}
+	.collapse:not(.show) {
+		display: none;
+	}
+	.accordion-button .ui-icn {
+		transition: transform .35s ease;
+	}
+	.accordion-button[aria-expanded='true'] .ui-icn {
+		transform: rotate(180deg);
+	}
+
+	// 아코디언 스타일
+	.acco-item {
+		padding: 20rem 0;
+		border-top: 1px solid #EFF0F0;
+	}
+	.acco-header {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		.acco-tit {
+			max-width: calc(100% - 66rem);
+			margin-right: auto;
+			font-weight: 600;
+			font-size: 16rem;
+			line-height: 22rem;
+			color: #2A2B2D;
+			@include ellipsis1;
+		}
+		.acco-date {
+			flex: none;
+			margin-left: auto;
+			padding-top: 2rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #96989B;
+		}
+		.acco-con {
+			width: 100%;
+			margin-top: 10rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #5A5D60;
+		}
+		.acco-info {
+			display: flex;
+			align-items: center;
+			gap: 8rem;
+			margin-top: 16rem;
+			font-weight: 600;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #96989B;
+			.split {
+				@include split-set(10rem, #CFD0D1);
+			}
+			.state {
+				&.is-received,
+				&.is-answered {
+					color: $color-primary;
+				}
+			}
+		}
+		.acco-button {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+		}
+	}
+
+	.acco-body {
+		margin-top: 16rem;
+		.acco-answer {
+			background-color: #F4F4F4;
+			padding: 16rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #2A2B2D;
+		}
+	}
+}
+

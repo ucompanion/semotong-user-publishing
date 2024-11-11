@@ -7,17 +7,3 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 // s: 기본
-.collapsing {
-    height: 0;
-    overflow: hidden;
-    transition: height .35s ease;
-}
-.collapse:not(.show) {
-	display: none;
-}
-.accordion-button .ui-icn {
-	transition: transform .35s ease;
-}
-.accordion-button[aria-expanded='true'] .ui-icn {
-	transform: rotate(180deg);
-}

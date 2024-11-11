@@ -122,6 +122,9 @@
 	color: #fff;
 	&.primary {
 		background-color: $color-primary;
+		&:disabled {
+			background-color: #CDC2F5;
+		}
 	}
 }
 // e: 플로팅 액션
