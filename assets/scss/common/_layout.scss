@@ -294,6 +294,7 @@ section {
 	position: fixed;
 	bottom: calc(#{$height-footer} + 20rem);
 	right: 20rem;
+	z-index: 100;
 	width: var(--btn-size);
 	transform: translateY(var(--btn-size));
 	transition: all 0.2s ease;
@@ -364,9 +365,6 @@ section {
 			}
 		}
 	}
-}
-.floating-menu {
-	bottom: calc(#{$safe-area-bottom} + 20rem);
 }
 .is-scroll-last {
 	.floating-menu {
@@ -441,6 +439,9 @@ section {
 	.footer {
 		padding-bottom: $safe-area-bottom;
 	}
+	.floating-menu {
+		bottom: calc(#{$safe-area-bottom} + 20rem);
+	}
 }
 
 @include media-tablet-xs {
@@ -456,5 +457,14 @@ section {
 	}
 	.header-desktop {
 		display: block;
+	}
+	.floating-nav {
+		display: none;
+	}
+	.footer {
+		padding-bottom: $safe-area-bottom;
+	}
+	.floating-menu {
+		bottom: calc(#{$safe-area-bottom} + 20rem);
 	}
 }

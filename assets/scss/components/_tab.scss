@@ -71,6 +71,14 @@
 		}
 	}
 }
+@include media-tablet-xs {
+	.container {
+		.tab-style1 {
+			top: $pc-height-header;
+			padding-top: 12rem;
+		}
+	}
 
+}
 
 /* 스타일2 */
