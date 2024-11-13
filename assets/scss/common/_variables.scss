@@ -12,10 +12,10 @@ $font-secondary: 'YJ_Obang';
 // 본문영역 사이즈 (최대 여백포함 768 기준)
 $pc-outer-spacer: 23rem;
 $pc-inner-content: 720rem;
-$pc-bottom-spacer: 60rem;
+$pc-bottom-spacer: 48rem;
 $mobile-outer-spacer: 16rem;
 $mobile-inner-content: 320rem;
-$mobile-bottom-spacer: calc(40rem + #{$safe-area-bottom});
+$mobile-bottom-spacer: calc(32rem + #{$safe-area-bottom});
 
 // 공통요소 사이즈
 $pc-height-header: 80rem;
@@ -83,6 +83,18 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 
+// 모달 하단여백
+@mixin modal-spacer {
+	.modal-body {
+		padding-bottom: 16rem;
+		margin-bottom: 16rem;
+	}
+	.modal-footer {
+		padding-top: 20rem;
+		padding-bottom: 32rem;
+	}
+}
+
 // 바깥 섹션
 @mixin out-sec {
 	min-width: $mobile-inner-content;
@@ -146,8 +158,8 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	align-items: center;
 	flex:none;
 	padding-top: 20rem;
-	padding-bottom: 20rem;
-	margin-bottom: -20rem; // 공간은 차지하지만 간격은 영향주지 않는다.
+	padding-bottom: 32rem;
+	margin-bottom: -32rem; // 공간은 차지하지만 간격은 영향주지 않는다.
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0rem, rgba(255, 255, 255, 1) 20rem);
 }
 

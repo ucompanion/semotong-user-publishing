@@ -169,9 +169,8 @@ button,
 
 [tabindex] {
 	outline: none;
-	&:focus-visible {
-		outline:2px solid black;
-		outline-offset: -1px;
+	&:focus {
+		outline:none;
 	}
 }
 
@@ -291,27 +290,32 @@ input::-webkit-calendar-picker-indicator {
 .dv-ios select {
 	-webkit-tap-highlight-color: transparent;
 }
-
 // Scroll Style
-/* 전체 스크롤바 색상 및 두께 */
-::-webkit-scrollbar {
-  width: 10px; /* 가로 스크롤바 두께 */
-  height: 10px; /* 세로 스크롤바 두께 */
-}
+.is-desktop {
+	/* 전체 스크롤바 색상 및 두께 */
+	::-webkit-scrollbar {
+		width: 10px;
+		/* 가로 스크롤바 두께 */
+		height: 10px;
+		/* 세로 스크롤바 두께 */
+	}
 
-/* 스크롤바 트랙 스타일 */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+	/* 스크롤바 트랙 스타일 */
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
 
-/* 스크롤바 핸들 스타일 */
-::-webkit-scrollbar-thumb {
-  background-color: #888; /* 스크롤 핸들 색상 */
-  border-radius: 5rem;
-  border: 3px solid #fff; /* 트랙과 핸들 사이의 간격 */
-}
+	/* 스크롤바 핸들 스타일 */
+	::-webkit-scrollbar-thumb {
+		background-color: #888;
+		/* 스크롤 핸들 색상 */
+		border-radius: 5rem;
+		border: 3px solid #fff;
+		/* 트랙과 핸들 사이의 간격 */
+	}
 
-/* 마우스로 스크롤바를 클릭할 때 스타일 */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+	/* 마우스로 스크롤바를 클릭할 때 스타일 */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
 }
