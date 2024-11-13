@@ -12,10 +12,10 @@ $font-secondary: 'YJ_Obang';
 // 본문영역 사이즈 (최대 여백포함 768 기준)
 $pc-outer-spacer: 23rem;
 $pc-inner-content: 720rem;
-$pc-bottom-spacer: 20rem;
+$pc-bottom-spacer: 60rem;
 $mobile-outer-spacer: 16rem;
 $mobile-inner-content: 320rem;
-$mobile-bottom-spacer: calc(20rem + #{$safe-area-bottom});
+$mobile-bottom-spacer: calc(40rem + #{$safe-area-bottom});
 
 // 공통요소 사이즈
 $pc-height-header: 80rem;

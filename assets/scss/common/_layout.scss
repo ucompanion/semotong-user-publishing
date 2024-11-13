@@ -147,6 +147,8 @@ html {
 		height: $pc-height-header;
 		gap: 12rem;
 		padding: 0;
+		max-width: 940rem;
+		margin: 0 auto;
 		// @include in-sec;
 
 		.title {

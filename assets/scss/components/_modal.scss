@@ -103,7 +103,7 @@
 		height: 100%;
 		max-width: 100%;
 		max-height: 100%;
-		@include bottom-spacer;
+		padding-bottom: $safe-area-bottom;
 	}
 
 	.modal-header {
@@ -132,12 +132,13 @@
 		top: 0;
 	}
 	.modal-body {
-		margin-bottom: 20rem;
+		padding-bottom: 16rem;
+		margin-bottom: 16rem;
 	}
 	.modal-footer {
 		@include out-sec;
 		padding-top: 20rem;
-		margin-top: 12rem;
+		padding-bottom: 24rem;
 	}
 
 	@include media-tablet-xs {
@@ -152,9 +153,6 @@
 			max-width: $pc-inner-content;
 			max-height: calc(100% - 40px);
 			border-radius: 10rem;
-		}
-		.modal-body {
-			margin-bottom: 30rem;
 		}
 	}
 
@@ -227,12 +225,13 @@
 		}
 	}
 	.modal-body {
-		margin-bottom: 20rem;
+		padding-bottom: 16rem;
 	}
 	.modal-footer {
 		@include out-sec;
+		margin-top: 16rem;
 		padding-top: 20rem;
-		margin-top: 12rem;
+		padding-bottom: 20rem;
 	}
 
 	@include media-tablet-xs {
