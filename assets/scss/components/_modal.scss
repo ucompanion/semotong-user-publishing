@@ -80,6 +80,7 @@
 		// }
 	}
 	.modal-footer {
+		display: flex;
 		flex:none;
 	}
 }
@@ -130,6 +131,14 @@
 	.tab-style1 {
 		top: 0;
 	}
+	.modal-body {
+		margin-bottom: 20rem;
+	}
+	.modal-footer {
+		@include out-sec;
+		padding-top: 20rem;
+		margin-top: 12rem;
+	}
 
 	@include media-tablet-xs {
 		&.fade {
@@ -143,6 +152,9 @@
 			max-width: $pc-inner-content;
 			max-height: calc(100% - 40px);
 			border-radius: 10rem;
+		}
+		.modal-body {
+			margin-bottom: 30rem;
 		}
 	}
 
@@ -198,8 +210,8 @@
 		width: 100%;
 		max-width: 480rem;
 		border-radius: 20rem 20rem 0 0;
+		@include bottom-spacer;
 	}
-
 	.modal-header {
 		@include out-sec;
 		padding-top: 20rem;
@@ -214,6 +226,14 @@
 			top: 18rem;
 		}
 	}
+	.modal-body {
+		margin-bottom: 20rem;
+	}
+	.modal-footer {
+		@include out-sec;
+		padding-top: 20rem;
+		margin-top: 12rem;
+	}
 
 	@include media-tablet-xs {
 		.modal-dialog {
@@ -223,14 +243,14 @@
 		.modal-content {
 			border-radius: 10rem;
 		}
+		.modal-body {
+			margin-bottom: 30rem;
+		}
 	}
 }
 
 // Selkect
 .modal-select {
-	.modal-content {
-		padding-bottom: calc(#{$safe-area-bottom} + 30rem);
-	}
 	.select-listbox {
 		display: flex;
 		flex-direction: column;
@@ -256,25 +276,6 @@
 					background: url('../images/common/icn-20-select-chk-sel.svg') no-repeat center center / contain;
 				}
 			}
-		}
-	}
-}
-
-// Basic
-.modal-basic {
-	.modal-content {
-		padding-bottom: calc(#{$safe-area-bottom} + 30rem);
-	}
-	.modal-footer {
-		@include out-sec;
-		margin-top: 32rem;
-	}
-	@include media-tablet-xs {
-		.modal-content {
-			padding-bottom: 45rem;
-		}
-		.modal-footer {
-			margin-top: 40rem;
 		}
 	}
 }
