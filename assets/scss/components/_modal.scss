@@ -29,9 +29,7 @@
 		transform: translate(0, 50px);
 		pointer-events: none;
 		.btn-close {
-			position: absolute;
-			top: 10rem;
-			right: 10rem;
+			margin-left: auto;
 		}
 	}
 	// 인터렉션
@@ -69,6 +67,7 @@
 	pointer-events: auto;
 	transition: all 0.2s ease;
 	.modal-header {
+		position: relative;
 		flex:none;
 	}
 	.modal-body {
