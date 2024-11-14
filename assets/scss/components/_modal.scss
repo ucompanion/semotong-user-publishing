@@ -171,9 +171,29 @@
 		}
 	}
 
-	.tab-style1 {
-		top: 0;
+	.modal-progress {
+		flex:none;
+		width: 100%;
+
+		.progress-step {
+			height: 4rem;
+			background-color: #EFF0F0;
+			.progress-value {
+				display: block;
+				width: 0%;
+				height: 100%;
+				background-color: $color-primary;
+				transition: all 0.2s ease;
+			}
+		}
 	}
+
+	.modal-body {
+		.tab-style1 {
+			top: 0;
+		}
+	}
+
 	.modal-footer {
 		@include out-sec;
 	}

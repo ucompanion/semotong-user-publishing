@@ -597,7 +597,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				}
 				.split {
 					@include split-set(10rem, #CFD0D1);
-					margin-right: 0 8rem;
+					margin: 0 8rem;
 				}
 
 			}
