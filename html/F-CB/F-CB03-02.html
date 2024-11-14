@@ -44,10 +44,13 @@
 		화면 이름 : 화면아이디-page (modal-select 제외)
 	-->
 	<!-- modal 납부금액 선택 -->
-	<div class="modal fade" id="FCB0302Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0302ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full">
+	<div class="modal modal-full fade" id="FCB0302Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0302ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
 			<div class="modal-content F-CB03-02-page">
 				<div class="modal-header">
+					<button type="button" class="ui-btn">
+						<i class="ui-icn icn-32-back-bk" aria-label="뒤로가기"></i>
+					</button>
 					<h3 class="modal-title blind" id="FCB0302ModalLabel">납부금액 선택</h3>
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
 						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
@@ -61,50 +64,54 @@
 					<!-- // 진행율 프로그레스 -->
 
 					<!-- 모통봇 소개 섹션 -->
-					<section class="bot-intro-sec">
-						<div class="intro-img">
-							<img src="" alt="" />
-						</div>
-						<div class="intro-con">
-							<p>지금 월 통신요금으로 얼마나 내고 계세요?</p>
-							<p>통신요금은 기기 할부금을 제외한 금액을 알려주세요.</p>
+					<section class="cb-intro-sec">
+						<div class="sec-inner">
+							<div class="intro-img">
+								<img src="../../assets/images/common/img-62-motong.png" alt="모통봇" />
+							</div>
+							<div class="intro-con">
+								<p>지금 월 통신요금으로 얼마나 내고 계세요?</p>
+								<p>통신요금은 기기 할부금을 <br>제외한 금액을 알려주세요.</p>
+							</div>
 						</div>
 					</section>
 					<!-- // 모통봇 소개 섹션 -->
 
 					<!-- 챗봇 설문 섹션 -->
-					<section class="bot-survey-sec">
-						<ul class="survey-list">
-							<li class="survey-item">
-								<div class="ui-rdo">
-									<input type="radio" name="" id="frmRdo1" class="rdo" />
-									<label for="frmRdo1"><span>7만원 이상</span></label>
-								</div>
-							</li>
-							<li class="survey-item">
-								<div class="ui-rdo">
-									<input type="radio" name="" id="frmRdo2" class="rdo" />
-									<label for="frmRdo2"><span>5~6만원 대</span></label>
-								</div>
-							</li>
-							<li class="survey-item">
-								<div class="ui-rdo">
-									<input type="radio" name="" id="frmRdo3" class="rdo" />
-									<label for="frmRdo3"><span>3~4만원 대</span></label>
-								</div>
-							</li>
-							<li class="survey-item">
-								<div class="ui-rdo">
-									<input type="radio" name="" id="frmRdo4" class="rdo" />
-									<label for="frmRdo4"><span>1~2만원 대</span></label>
-								</div>
-							</li>
-						</ul>
+					<section class="cb-survey-sec">
+						<div class="sec-inner">
+							<ul class="survey-list">
+								<li class="survey-item">
+									<label class="ui-rdo survey-rdo">
+										<input type="radio" name="frmSurvey" checked />
+										<span class="rdo"><span>7만원 이상</span></span>
+									</label>
+								</li>
+								<li class="survey-item">
+									<label class="ui-rdo survey-rdo">
+										<input type="radio" name="frmSurvey" />
+										<span class="rdo"><span>5~6만원 대</span></span>
+									</label>
+								</li>
+								<li class="survey-item">
+									<label class="ui-rdo survey-rdo">
+										<input type="radio" name="frmSurvey" />
+										<span class="rdo"><span>3~4만원 대</span></span>
+									</label>
+								</li>
+								<li class="survey-item">
+									<label class="ui-rdo survey-rdo">
+										<input type="radio" name="frmSurvey" />
+										<span class="rdo"><span>1~2만원 대</span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
 					</section>
 					<!-- // 챗봇 설문 섹션 -->
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="ui-btn">
+					<button type="button" class="ui-btn btn-action primary">
 						<span>처음으로</span>
 					</button>
 				</div>

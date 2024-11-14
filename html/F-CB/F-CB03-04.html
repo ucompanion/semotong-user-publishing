@@ -24,6 +24,11 @@
 			var FCB0304Modal = new bootstrap.Modal(document.getElementById('FCB0304Modal'));
 			FCB0304Modal.show();
 		});
+
+		function openConfirm(id) {
+			var confirmModal = new bootstrap.Modal(document.getElementById(id));
+			confirmModal.show();
+		}
 	</script>
 </head>
 
@@ -44,10 +49,13 @@
 		화면 이름 : 화면아이디-page (modal-select 제외)
 	-->
 	<!-- modal 이용 패턴 유형 선택 -->
-	<div class="modal fade" id="FCB0304Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0304ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full">
+	<div class="modal modal-full fade" id="FCB0304Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0304ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
 			<div class="modal-content F-CB03-04-page">
 				<div class="modal-header">
+					<button type="button" class="ui-btn">
+						<i class="ui-icn icn-32-back-bk" aria-label="뒤로가기"></i>
+					</button>
 					<h3 class="modal-title blind" id="FCB0304ModalLabel">이용 패턴 유형 선택</h3>
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
 						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
@@ -55,47 +63,95 @@
 				</div>
 				<div class="modal-body">
 					<!-- 모통봇 소개 섹션 -->
-					<section class="bot-intro-sec">
-						<div class="intro-img">
-							<img src="" alt="" />
-						</div>
-						<div class="intro-con">
-							<p>고객님, 다른 요금제가 궁금하세요?</p>
-							<p>고객님께 요금을 추천드리기 위해 데이터가 얼마나 필요하신지 알아볼게요. </p>
+					<section class="cb-intro-sec">
+						<div class="sec-inner">
+							<div class="intro-img">
+								<img src="../../assets/images/common/img-62-motong.png" alt="모통봇" />
+							</div>
+							<div class="intro-con">
+								<p>마지막 질문이에요!</p>
+								<p>고객님께 요금을 추천드리기 위해<br> 데이터가 얼마나 필요하신지 알아볼게요. </p>
+							</div>
 						</div>
 					</section>
 					<!-- // 모통봇 소개 섹션 -->
 
-					<!-- 챗봇 요금제 리스트 섹션 -->
-					<section class="bot-ratePlanA-sec">
-						<!-- 요금제 공통 타입 A : 요금제 리스트 타입 -->
-						<ul class="ratePlanA-list">
-							<li class="ratePlanA-item">
-								<div class="ratePlanA-card" role="button" tabindex="0">
-									<div class="card-body">
-										<p class="card-explain">웹서핑, 카톡을 <br>주로 사용해요.</p>
-										<p class="card-tag">
-											<span class="tag">#가성비</span>
-											<span class="tag">#합리파</span>
-										</p>
+					<!-- 요금제 섹션 -->
+					<section class="cb-ratePlanA-sec">
+						<div class="sec-inner">
+							<!-- 요금제 공통 타입 A : 요금제 리스트 타입 -->
+							<ul class="ratePlanA-list">
+								<li class="ratePlanA-item">
+									<div class="ratePlanA-card" role="button" tabindex="0">
+										<div class="card-thumb">
+											<img src="../../assets/images/common/img-plan-price-01.png" alt="" />
+										</div>
+										<div class="card-body">
+											<p class="card-tit"><strong>가격먼저!</strong></p>
+											<p class="card-txt">싸고 좋은 요금제만 추려서</p>
+											<p class="card-charge">월 9,990원 부터</p>
+											<p class="card-data"><strong>7GB</strong></p>
+										</div>
 									</div>
-									<div class="card-footer">
-										<p class="card-name"><em>7GB+</em></p>
-										<p class="card-charge"><em>월 9,990원~</em></p>
+								</li>
+								<li class="ratePlanA-item">
+									<div class="ratePlanA-card" role="button" tabindex="0">
+										<div class="card-thumb">
+											<img src="../../assets/images/common/img-plan-price-02.png" alt="" />
+										</div>
+										<div class="card-body">
+											<p class="card-tit"><strong>가성비 우선!</strong></p>
+											<p class="card-txt">합리적인 요금을 찾는다면?</p>
+											<p class="card-charge">월 990원 부터</p>
+											<p class="card-data"><strong>7GB</strong></p>
+										</div>
 									</div>
-								</div>
-							</li>
-						</ul>
-						<!-- // 요금제 공통 타입 A : 요금제 리스트 타입 -->
-
-						<button type="button" class="ui-btn">
-							<span>다른 요금제를 안내해 드릴까요?</span>
-						</button>
+								</li>
+								<li class="ratePlanA-item">
+									<div class="ratePlanA-card" role="button" tabindex="0">
+										<div class="card-thumb">
+											<img src="../../assets/images/common/img-plan-price-03.png" alt="" />
+										</div>
+										<div class="card-body">
+											<p class="card-tit"><strong>OTT 광인</strong></p>
+											<p class="card-txt">하루 2시간 넷플릭스 정주행</p>
+											<p class="card-charge">월 10,000원 부터</p>
+											<p class="card-data"><strong>15GB+</strong></p>
+										</div>
+									</div>
+								</li>
+								<li class="ratePlanA-item">
+									<div class="ratePlanA-card" role="button" tabindex="0">
+										<div class="card-thumb">
+											<img src="../../assets/images/common/img-plan-price-04.png" alt="" />
+										</div>
+										<div class="card-body">
+											<p class="card-tit"><strong>마음껏 무제한</strong></p>
+											<p class="card-txt">가격은 라이트</p>
+											<p class="card-charge">월 19,990원 부터</p>
+											<p class="card-data"><strong>71GB+</strong></p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- // 요금제 공통 타입 A : 요금제 리스트 타입 -->
+						</div>
 					</section>
-					<!-- // 챗봇 요금제 리스트 섹션 -->
+					<!-- // 요금제 섹션 -->
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="ui-btn">
+					<!--
+						풀팝업도 모달이고, 컨펌팝업도 모달인경우 커스텀이 필요합니다.
+						즉, 모달에서 모달을 기존 모달을 유지하기 위해서는 onclick 으로 직접 띄웁니다.
+						딤도 모달 띄운 순서대로 개수가 쌓입니다. 이것은 나중에 생긴것이 위로 올라오도록 CSS로 처리 하였습니다.
+						3중 모달은 특이 케이스이으로 2중 모달까지만 대응 했습니다.
+
+						2중 모달 테스트를 위해 적용한 것이며,
+						alert, confirm 가이드는 아래의 파일을 참고 바랍니다.
+						html/common/modal-alert.html
+						html/common/modal-confirm.html
+					-->
+					<button type="button" class="ui-btn btn-action primary" onclick="openConfirm('confirmModal')">
 						<span>처음으로</span>
 					</button>
 				</div>
@@ -103,6 +159,39 @@
 		</div>
 	</div>
 	<!-- // modal default -->
+
+
+	<!--
+		[모달 가이드]
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+	-->
+	<!-- Modal Confirm -->
+	<div class="modal modal-confirm fade" id="confirmModal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="confirmModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title blind" id="confirmModalLabel">Confirm Message</h1>
+				</div>
+				<div class="modal-body">
+					<section class="msg-sec">
+						<!-- <h4 class="sec-tit">Confirm 제목 텍스트가 들어가는 영역입니다.</h4> -->
+						<p class="sec-txt">처음부터 다시 시작하시겠어요?</p>
+					</section>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-modal primary" data-bs-dismiss="modal">
+						<span>Save</span>
+					</button>
+					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
+						<span>Cancel</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Modal Confirm -->
+
 </body>
 
 </html>

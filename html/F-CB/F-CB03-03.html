@@ -18,11 +18,27 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
+	<!-- Swiper Librarys -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// 모달 바로 볼 수 있도록 호출
 			var FCB0303Modal = new bootstrap.Modal(document.getElementById('FCB0303Modal'));
 			FCB0303Modal.show();
+
+			// 광고 스와이프
+		    var eventSwiper = new Swiper(".event-swiper", {
+				threshold: 3,
+				spaceBetween: 10,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
 		});
 	</script>
 </head>
@@ -44,10 +60,13 @@
 		화면 이름 : 화면아이디-page (modal-select 제외)
 	-->
 	<!-- modal 인터넷 결합 여부 선택 -->
-	<div class="modal fade" id="FCB0303Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0303ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full">
+	<div class="modal modal-full fade" id="FCB0303Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0303ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
 			<div class="modal-content F-CB03-03-page">
 				<div class="modal-header">
+					<button type="button" class="ui-btn">
+						<i class="ui-icn icn-32-back-bk" aria-label="뒤로가기"></i>
+					</button>
 					<h3 class="modal-title blind" id="FCB0303ModalLabel">인터넷 결합 여부 선택</h3>
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
 						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
@@ -61,49 +80,66 @@
 					<!-- // 진행율 프로그레스 -->
 
 					<!-- 모통봇 소개 섹션 -->
-					<section class="bot-intro-sec">
-						<div class="intro-img">
-							<img src="" alt="" />
-						</div>
-						<div class="intro-con">
-							<p>인터넷 결합 상품도 필요하세요?</p>
-							<p>세모통에서 알뜰폰 구매하시고 <br>
-								인터넷 결합하면 <em>특별한 혜택</em>을 드려요.</p>
+					<section class="cb-intro-sec">
+						<div class="sec-inner">
+							<div class="intro-img">
+								<img src="../../assets/images/common/img-62-motong.png" alt="모통봇" />
+							</div>
+							<div class="intro-con">
+								<p>인터넷 결합 상품도 필요하세요?</p>
+								<p>세모통에서 알뜰폰 구매하시고 <br>인터넷 결합하면 <em>특별한 혜택</em>을 드려요.</p>
+							</div>
 						</div>
 					</section>
 					<!-- // 모통봇 소개 섹션 -->
 
 					<!-- 챗봇 설문 섹션 -->
-					<section class="bot-survey-sec">
-						<ul class="survey-list">
-							<li class="survey-item">
-								<div class="ui-rdo">
-									<input type="radio" name="" id="frmRdo1" class="rdo" />
-									<label for="frmRdo1"><span>필요해요!</span></label>
-								</div>
-							</li>
-							<li class="survey-item">
-								<div class="ui-rdo">
-									<input type="radio" name="" id="frmRdo2" class="rdo" />
-									<label for="frmRdo2"><span>필요하지 않아요</span></label>
-								</div>
-							</li>
-						</ul>
+					<section class="cb-survey-sec">
+						<div class="sec-inner">
+							<ul class="survey-list">
+								<li class="survey-item">
+									<label class="ui-rdo survey-rdo">
+										<input type="radio" name="frmSurvey" checked />
+										<span class="rdo"><span>필요해요!</span></span>
+									</label>
+								</li>
+								<li class="survey-item">
+									<label class="ui-rdo survey-rdo">
+										<input type="radio" name="frmSurvey" />
+										<span class="rdo"><span>필요하지 않아요</span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
 					</section>
 					<!-- // 챗봇 설문 섹션 -->
 
-					<!-- 챗봇 배너 섹션 -->
-					<section class="bot-banner-sec">
-						<div class="ui-bnr">
-							<button type="button" class="ui-btn">
-								<span>인터넷 결합 안내 배너</span>
-							</button>
+					<!-- 이벤트 섹션 -->
+					<section class="cb-event-sec">
+						<div class="sec-inner">
+							<div class="swiper event-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<button type="button" class="event-bnr">
+											<img src="../../assets/images/upload/@bnr-event-01-mo.png" alt="이벤트 내용" class="only-mo" />
+											<img src="../../assets/images/upload/@bnr-event-01-pc.png" alt="이벤트 내용" class="only-pc" />
+										</button>
+									</div>
+									<div class="swiper-slide">
+										<button type="button" class="event-bnr">
+											<img src="../../assets/images/upload/@bnr-event-02-mo.png" alt="이벤트 내용" class="only-mo" />
+											<img src="../../assets/images/upload/@bnr-event-02-pc.png" alt="이벤트 내용" class="only-pc" />
+										</button>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
 						</div>
 					</section>
-					<!-- // 챗봇 배너 섹션 -->
+					<!-- // 이벤트 섹션 -->
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="ui-btn">
+					<button type="button" class="ui-btn btn-action primary">
 						<span>처음으로</span>
 					</button>
 				</div>

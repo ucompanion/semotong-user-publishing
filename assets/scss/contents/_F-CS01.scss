@@ -11,7 +11,7 @@
 	@include bottom-spacer;
 
 	// s: 모통봇 소개 섹션
-	.motongbot-intro-sec {
+	.motongcb-intro-sec {
 		@include sec-basic;
 		margin-bottom: 24rem;
 
@@ -26,7 +26,7 @@
 			}
 		}
 
-		.motongbot-intro-box {
+		.motongcb-intro-box {
 			padding: 20rem 16rem;
 			background-color: #F4F4F4;
 			border-radius: 2px;

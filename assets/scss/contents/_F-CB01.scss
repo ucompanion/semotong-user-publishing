@@ -6,14 +6,14 @@
 // s: 유저 유형 선택 페이지
 .F-CB01-page {
 	// s: 모통봇 소개 섹션
-	.bot-intro-sec {
-		@include bot-intro-sec;
+	.cb-intro-sec {
+		@include cb-intro-sec;
 	}
 	// e: 모통봇 소개 섹션
 
 	// s: 모통봇 선택 섹션
-	.bot-selection-sec {
-		@include bot-selection-sec;
+	.cb-selection-sec {
+		@include  cb-selection-sec;
 	}
 	// e: 모통봇 선택 섹션
 }

@@ -44,8 +44,8 @@
 		화면 이름 : 화면아이디-page (modal-select 제외)
 	-->
 	<!-- modal default -->
-	<div class="modal fade" id="FCB01Modal" tabindex="-1" role="dialog" aria-labelledby="FCB01ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full">
+	<div class="modal fade modal-full" id="FCB01Modal" tabindex="-1" role="dialog" aria-labelledby="FCB01ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
 			<div class="modal-content F-CB01-page">
 				<div class="modal-header">
 					<button type="button" class="ui-btn">
@@ -58,49 +58,45 @@
 				</div>
 				<div class="modal-body">
 					<!-- 모통봇 소개 섹션 -->
-					<section class="bot-intro-sec">
+					<section class="cb-intro-sec">
 						<div class="sec-inner">
 							<div class="intro-img">
-								<img src="../../assets/images/common/img-62-motong-bot.png" alt="모통봇" />
+								<img src="../../assets/images/common/img-62-motong.png" alt="모통봇" />
 							</div>
 							<div class="intro-con">
-								<p>
-									안녕하세요. 고객님께 딱 맞는 요금을 추천해드릴 세모통 (캐릭터명)이에요.
-								</p>
-								<p>
-									세모통 캐릭터명이 나에게 맞는 요금을
-									알아서 잘 딱 깔끔하고 센스있게 알려드려요!
-								</p>
+								<p>안녕하세요. 고객님께 딱 맞는 요금을 추천해드릴 세모통 (캐릭터명)이에요.</p>
+								<p>세모통 캐릭터명이 나에게 맞는 요금을<br>알아서 잘 딱 깔끔하고 센스있게 알려드려요!</p>
 							</div>
 						</div>
 					</section>
 					<!-- // 모통봇 소개 섹션 -->
 
-					<!-- 모통봇 선택 섹션 -->
-					<section class="bot-selection-sec">
+					<!-- 사용자 유형선택 섹션 -->
+					<section class=" cb-selection-sec">
 						<div class="sec-inner">
 							<p class="selection-tit">
 								알뜰폰, 잘 알고 계세요?
 							</p>
 							<div class="selection-frm">
-								<label class="selection-rdo is-selected">
+								<!-- 선택된 상태 : is-selected 클래스 -->
+								<label class="selection-rdo">
 									<img src="../../assets/images/common/img-chatbot-o.png" alt="Yes" />
 									<span class="ui-rdo">
-										<input type="radio" name="frmTypeRadio1" checked  onchange="setRadioSelected('frmTypeRadio1', '.selection-rdo')">
+										<input type="radio" name="frmTypeRadio1" onchange="setRadioSelected('frmTypeRadio1', '.selection-rdo')">
 										<span class="rdo"><span><em>네,</em> 알뜰폰 사용해 본 적이 <br>있어서 잘 알아요.</span></span>
 									</span>
 								</label>
-								<label class="selection-rdo is-selected">
+								<label class="selection-rdo">
 									<img src="../../assets/images/common/img-chatbot-x.png" alt="No" />
 									<span class="ui-rdo">
-										<input type="radio" name="frmTypeRadio1" checked  onchange="setRadioSelected('frmTypeRadio1', '.selection-rdo')">
+										<input type="radio" name="frmTypeRadio1" onchange="setRadioSelected('frmTypeRadio1', '.selection-rdo')">
 										<span class="rdo"><span><em>아니오.</em> 알뜰폰이 <br>처음이에요.</span></span>
 									</span>
 								</label>
 							</div>
 						</div>
 					</section>
-					<!-- // 모통봇 선택 섹션 -->
+					<!-- // 사용자 유형선택 섹션 -->
 				</div>
 			</div>
 		</div>

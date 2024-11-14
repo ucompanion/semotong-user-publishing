@@ -23,6 +23,11 @@
 			// 모달 바로 볼 수 있도록 호출
 			var FCB0201Modal = new bootstrap.Modal(document.getElementById('FCB0201Modal'));
 			FCB0201Modal.show();
+
+			// Bootstrap Popover + Custom
+			// 모달에서 띄우는 팝오버인 경우 - on-modal 추가
+			setPopover('ui-popover popover-style1 on-modal'); // 공통 컴포넌트 규칙 ui- 반영
+
 		});
 	</script>
 </head>
@@ -44,8 +49,8 @@
 		화면 이름 : 화면아이디-page (modal-select 제외)
 	-->
 	<!-- modal 대표 추천 요금제 -->
-	<div class="modal fade" id="FCB0201Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0201ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-full">
+	<div class="modal fade modal-full" id="FCB0201Modal" tabindex="-1" role="dialog" aria-labelledby="FCB0201ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
 			<div class="modal-content F-CB02-01-page">
 				<div class="modal-header">
 					<button type="button" class="ui-btn">
@@ -59,22 +64,20 @@
 				<!-- modal-body -->
 				<div class="modal-body">
 					<!-- 모통봇 소개 섹션 -->
-					<section class="bot-intro-sec">
+					<section class="cb-intro-sec">
 						<div class="sec-inner">
 							<div class="intro-img">
-								<img src="../../assets/images/common/img-62-motong-bot.png" alt="모통봇" />
+								<img src="../../assets/images/common/img-62-motong.png" alt="모통봇" />
 							</div>
 							<div class="intro-con">
-								<p>
-									알뜰폰을 사용중이신 고객님께 세모통에서 자신있게 추천하는 세모통 대표 요금제예요!
-								</p>
+								<p>알뜰폰을 사용중이신 고객님께 세모통에서 자신있게 추천하는 세모통 대표 요금제예요!</p>
 							</div>
 						</div>
 					</section>
 					<!-- // 모통봇 소개 섹션 -->
 
 					<!-- 상품 리스트 섹션 -->
-					<section class="ratePlanC-sec">
+					<section class="cb-ratePlanC-sec">
 						<div class="sec-inner">
 							<div class="sec-body">
 								<!-- 요금제 공통 타입 C : 요금제 상품 리스트 -->
@@ -82,7 +85,12 @@
 									<ul class="ratePlanC-list">
 										<li class="ratePlanC-item">
 											<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-											<div class="ratePlanC-card">
+											<!-- 상위 3개 베스트요금제 : plan-best 클래스 -->
+											<div class="ratePlanC-card plan-best">
+												<!-- Case BEST 요금제 -->
+												<div class="card-best">
+													<p><i class="ui-icn icn-18-plan-best-wh" aria-hidden="true"></i>BEST 요금제</p>
+												</div>
 												<div class="card-body">
 													<div class="card-label">
 														<div class="card-label-benefit">
@@ -90,9 +98,9 @@
 															<span class="label secondary">+20GB</span>
 														</div>
 														<div class="card-label-option">
-															<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프계통</span>
+															<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
 															<span class="split" aria-hidden="true"></span>
-															<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결함</span>
+															<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
 														</div>
 													</div>
 													<div class="card-tit">
@@ -173,7 +181,12 @@
 										</li>
 										<li class="ratePlanC-item">
 											<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-											<div class="ratePlanC-card">
+											<!-- 상위 3개 베스트요금제 : plan-best 클래스 -->
+											<div class="ratePlanC-card plan-best">
+												<!-- Case BEST 요금제 -->
+												<div class="card-best">
+													<p><i class="ui-icn icn-18-plan-best-wh" aria-hidden="true"></i>BEST 요금제</p>
+												</div>
 												<div class="card-body">
 													<div class="card-label">
 														<div class="card-label-benefit">
@@ -181,9 +194,9 @@
 															<span class="label secondary">+20GB</span>
 														</div>
 														<div class="card-label-option">
-															<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프계통</span>
+															<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
 															<span class="split" aria-hidden="true"></span>
-															<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결함</span>
+															<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
 														</div>
 													</div>
 													<div class="card-tit">
@@ -239,6 +252,92 @@
 										</li>
 										<li class="ratePlanC-item">
 											<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+											<!-- 상위 3개 베스트요금제 : plan-best 클래스 -->
+											<div class="ratePlanC-card plan-best">
+												<!-- Case BEST 요금제 -->
+												<div class="card-best">
+													<p><i class="ui-icn icn-18-plan-best-wh" aria-hidden="true"></i>BEST 요금제</p>
+												</div>
+												<div class="card-body">
+													<div class="card-label">
+														<div class="card-label-benefit">
+															<span class="label primary">단독특가</span>
+															<span class="label secondary">+20GB</span>
+														</div>
+														<div class="card-label-option">
+															<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+															<span class="split" aria-hidden="true"></span>
+															<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+														</div>
+													</div>
+													<div class="card-tit">
+														<strong>150GB+최대 5Mbps</strong>
+														<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+															data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+															<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+														</button>
+													</div>
+													<div class="card-info">
+														<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+														<span class="split" aria-hidden="true"></span>
+														<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+														<span class="split" aria-hidden="true"></span>
+														<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+													</div>
+													<div class="card-charge">
+														<div class="brand">
+															<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+															<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+														</div>
+														<div class="charge">
+															<p class="charge-tit">58,700원</p>
+															<p class="charge-txt">7개월 이후 49,000원</p>
+														</div>
+													</div>
+													<!-- 카드 클릭영역  -->
+													<button type="button" class="card-button">
+														<span class="blind">요금제 자세히 보기</span>
+													</button>
+												</div>
+												<div class="card-footer">
+													<div class="card-util">
+														<div class="card-util-tooltip">
+															<strong class="tit">밀리의 서재</strong>
+																<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+																data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+																<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+															</button>
+														</div>
+														<div class="card-util-btn">
+															<button type="button" class="ui-btn is-selected" aria-selected="true">
+																<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+															</button>
+															<button type="button" class="ui-btn">
+																<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+															</button>
+														</div>
+													</div>
+													<!-- Case 선택한상태정보 -->
+													<div class="card-status">
+														<div class="status-choice">
+															<div class="choice">
+																<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
+																<span class="txt"><em>52</em>명 선택</span>
+																<span class="split"></span>
+																<span class="txt"><em>12</em>명 신청 중</span>
+															</div>
+															<button type="button" class="ui-btn" aria-expanded="false">
+																<span>오류 문의</span>
+																<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+										</li>
+										<li class="ratePlanC-item">
+											<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
 											<div class="ratePlanC-card">
 												<div class="card-body">
 													<div class="card-label">
@@ -247,9 +346,9 @@
 															<span class="label secondary">+20GB</span>
 														</div>
 														<div class="card-label-option">
-															<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프계통</span>
+															<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
 															<span class="split" aria-hidden="true"></span>
-															<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결함</span>
+															<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
 														</div>
 													</div>
 													<div class="card-tit">

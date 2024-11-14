@@ -199,8 +199,10 @@ function setPopover(selector){
 	// Boottsrap Popover
 	const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
 	const popoverList = [...popoverTriggerList].map(popoverTriggerEl => {
+		const container = popoverTriggerEl.closest('.modal-body') ? '.modal-body' : 'body';
 		return new bootstrap.Popover(popoverTriggerEl, {
 			customClass: selector,
+			container: container
 		});
 	});
 

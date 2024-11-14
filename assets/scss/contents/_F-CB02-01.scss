@@ -6,28 +6,26 @@
 // s: 대표 추천 요금제 페이지
 .F-CB02-01-page {
 	// s: 모통봇 소개 섹션
-	.bot-intro-sec {
-		@include bot-intro-sec;
+	.cb-intro-sec {
+		@include cb-intro-sec;
 	}
 	// e: 모통봇 소개 섹션
 
-	// s: 요금제 상품 리스트
-	.ratePlanC-list {
+	// s: 요금제 상품 섹션
+	.cb-ratePlanC-sec {
 		margin-top: 24rem;
-		@include ratePlanC-list;
 
-		// 요금제 상품 리스트 카드
-		.ratePlanC-card {
-			@include ratePlanC-card;
+		// s: 요금제 상품 리스트
+		.ratePlanC-list {
+			@include ratePlanC-list;
+
+			// 요금제 상품 리스트 카드
+			.ratePlanC-card {
+				@include ratePlanC-card;
+			}
 		}
+		// e: 요금제 상품 리스트
 	}
-	// e: 요금제 상품 리스트
-
-	// s: 플로팅 섹션
-	.floating-sec {
-		@include floating-sec;
-	}
-	// e: 플로팅 섹션
-
+	// e: 요금제 상품 섹션
 }
 // e: 대표 추천 요금제 페이지
