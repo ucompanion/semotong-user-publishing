@@ -23,6 +23,10 @@
 			// 모달 바로 볼 수 있도록 호출
 			var FCB0203Modal = new bootstrap.Modal(document.getElementById('FCB0203Modal'));
 			FCB0203Modal.show();
+
+			// Bootstrap Popover + Custom
+			// 모달에서 띄우는 팝오버인 경우 - on-modal 추가
+			setPopover('ui-popover popover-style1 on-modal'); // 공통 컴포넌트 규칙 ui- 반영
 		});
 	</script>
 </head>
