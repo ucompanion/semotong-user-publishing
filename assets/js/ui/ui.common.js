@@ -154,39 +154,10 @@ function setDropdown(button) {
 
 // Spy Scroll
 function setSpyScroll() {
-	const tabPanes = document.querySelectorAll(".tab-pane");
-	const navLinks = document.querySelectorAll("#spyScrollTab .nav-link");
-	const tabHeight = document.querySelector("#spyScrollTab").offsetHeight; // 탭 높이
-
-	// 스크롤 시 active 클래스 변경
-	window.addEventListener("scroll", () => {
-		let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-		tabPanes.forEach((section, index) => {
-			const sectionTop = section.offsetTop - tabHeight; // 탭 높이를 빼줌
-			const sectionHeight = section.clientHeight;
-
-			if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-				navLinks.forEach(link => link.classList.remove("active"));
-				navLinks[index].classList.add("active");
-			}
-		});
-	});
-
-	// 클릭 시 active 클래스 변경 및 스크롤 조정
-	navLinks.forEach((link, index) => {
-		link.addEventListener("click", (e) => {
-			e.preventDefault(); // 기본 클릭 동작 방지
-			navLinks.forEach(link => link.classList.remove("active"));
-			link.classList.add("active");
-
-			// 스크롤 애니메이션
-			const targetId = link.getAttribute("href");
-			const targetSection = document.querySelector(targetId);
-			const targetPosition = targetSection.offsetTop - tabHeight; // 탭 높이를 빼줌
-			window.scrollTo({ top: targetPosition, behavior: "smooth" });
-		});
-	});
+	const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]')
+	dataSpyList.forEach(dataSpyEl => {
+	  bootstrap.ScrollSpy.getInstance(dataSpyEl).refresh()
+	})
 }
 
 // Card Expand

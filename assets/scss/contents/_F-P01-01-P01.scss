@@ -7,8 +7,17 @@
 .F-P01-01-P01-page {
 	max-width: $pc-inner-content !important;
 
+	.modal-body {
+		overflow: hidden;
+	}
 	.tab-pane {
 		padding: 16rem 0;
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
 	}
 	.filter-sec {
 		@include sec-basic;
@@ -24,68 +33,175 @@
 		&.is-nowwrap {
 			grid-template-columns: 1fr;
 		}
+		.filter-rdo {
+			position: relative;
+			display: block;
+
+			input {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.rdo {
+				position: relative;
+				display: flex;
+				align-items: center;
+				z-index: 2;
+				min-height: 56rem;
+				padding: 7rem 15rem;
+				border-radius: 10rem;
+				background-color: #EFF0F0;
+				border:1px solid transparent;
+				cursor: pointer;
+				> span {
+					display: block;
+					position: relative;
+					width: 100%;
+					padding-right: 25rem;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #5A5D60;
+					&::after {
+						content:'';
+						display: block;
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 20rem;
+						height: 20rem;
+						opacity: 0;
+						background: url('../images/common/icn-20-rdo-sel.svg') no-repeat center center / contain;
+					}
+					strong {
+						display: block;
+						margin-bottom: 4rem;
+						font-weight: 600;
+						font-size: 16rem;
+						line-height: 22rem;
+					}
+				}
+			}
+			input:checked + .rdo {
+				background-color: #EAE6FB;
+				border-color: $color-primary;
+				> span {
+					font-weight: 600;
+					color: $color-primary;
+					&::after {
+						opacity: 1;
+					}
+				}
+			}
+			&.has-tit {
+				.rdo {
+					padding-top: 13rem;
+					padding-bottom: 13rem;
+					> span::after {
+						top: 1rem;
+					}
+				}
+				input:checked + .rdo {
+					> span {
+						font-weight: 500;
+						color: $color-primary;
+					}
+				}
+			}
+		}
 	}
 
-	.filter-rdo {
-		position: relative;
-		display: block;
+	.filter-chk-frm {
+		display: flex;
+		align-items: flex-start;
+		gap: 8rem;
 
-		input {
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: 1;
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
-		.rdo {
-			position: relative;
+		.filter-chk-group {
 			display: flex;
-			align-items: center;
-			z-index: 2;
-			min-height: 56rem;
-			padding: 7rem 15rem;
-			border-radius: 10rem;
-			background-color: #EFF0F0;
-			border:1px solid transparent;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			gap: 4rem 8rem;
+			width: 100%;
+
+			.filter-tit {
+				width: 100%;
+				margin-bottom: 2rem;
+				font-weight: 600;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #000;
+			}
+		}
+
+		.filter-chk {
+			position: relative;
+			display: block;
+			padding: 4rem 0;
+			min-width: 150rem;
 			cursor: pointer;
-			> span {
+			&:last-child {
+				margin-bottom: auto;
+			}
+			input {
+				position: absolute;
+				top: 4rem;
+				left: 0;
+				z-index: 1;
+				width: 20rem;
+				height: 20rem;
+				outline: none;
+			}
+			.chk {
 				display: block;
 				position: relative;
-				width: 100%;
-				padding-right: 40rem;
-				font-weight: 500;
-				font-size: 14rem;
-				line-height: 20rem;
-				color: #5A5D60;
+				padding-left: 20rem;
+				z-index: 2;
+				&::before,
 				&::after {
 					content:'';
 					display: block;
 					position: absolute;
+					left: 0;
 					top: 0;
-					right: 0;
 					width: 20rem;
 					height: 20rem;
-					opacity: 0;
-					background: url('../images/common/icn-20-rdo-sel.svg') no-repeat center center / contain;
+					background: no-repeat center center;
 				}
-				strong {
-					margin-bottom: 4rem;
-					font-weight: 600;
+				&::before {
+					opacity: 1;
+					background-image:url('../images/common/icn-20-chk-nor.svg');
+				}
+				&::after {
+					opacity: 0;
+					background-image:url('../images/common/icn-20-chk-sel.svg');
+				}
+				> span {
+					display: block;
+					padding-left: 10rem;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #5A5D60;
 				}
 			}
-		}
-		input:checked + .rdo {
-			background-color: #EAE6FB;
-			border-color: $color-primary;
-			> span {
-				color: $color-primary;
+			input:checked + .chk {
+				> span {
+					font-weight: 600;
+					color: $color-primary;
+				}
+				&::before {
+					opacity: 0;
+				}
 				&::after {
 					opacity: 1;
 				}
 			}
 		}
 	}
+
 }
 // e: 필터팝업 페이지

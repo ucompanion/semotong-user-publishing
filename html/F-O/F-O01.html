@@ -20,6 +20,15 @@
 	<!-- 페이지 스크립트 섹션 -->
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
+			// 1. body 요소 가져오기
+			const bodyElement = document.body;
+
+			// 2. ScrollSpy 관련 속성 동적으로 설정
+			bodyElement.setAttribute("data-bs-spy", "scroll");
+			bodyElement.setAttribute("data-bs-target", "#navbarSpyscroll");
+			bodyElement.setAttribute("data-bs-root-margin", "0px 0px -40%");
+			bodyElement.setAttribute("data-bs-smooth-scroll", "true");
+
 			setSpyScroll();
 		});
 	</script>

@@ -20,8 +20,16 @@
 	<!-- 페이지 스크립트 영역 -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
+			const modalElement = document.getElementById('FP0101P01Modal');
+
+			// 모달이 호출되기 전에 이벤트 설정
+			modalElement.addEventListener('shown.bs.modal', () => {
+				// 모달이 호출된 후에 Spyscoll 실행
+				setSpyScroll();
+			});
+
 			// 모달 바로 볼 수 있도록 호출
-			var FP0101P01Modal = new bootstrap.Modal(document.getElementById('FP0101P01Modal'));
+			var FP0101P01Modal = new bootstrap.Modal(modalElement);
 			FP0101P01Modal.show();
 		});
 	</script>
@@ -56,7 +64,7 @@
 				</div>
 				<div class="modal-body">
 					<!-- Spyscroll 탭 목록 -->
-					<div class="ui-tab tab-style1" id="navbarSpyscroll">
+					<div class="ui-tab tab-style2" id="navbarSpyscroll">
 						<ul class="tab-list" role="tablist">
 							<li class="tab-item" role="presentation"><a href="#filter-01-pane" class="tab-link active">데이터</a></li>
 							<li class="tab-item" role="presentation"><a href="#filter-02-pane" class="tab-link">가격</a></li>
@@ -131,15 +139,15 @@
 									<div class="sec-body">
 										<!-- Case 한 줄 처리시 nowrap -->
 										<div class="filter-rdo-frm is-nowwrap">
-											<label class="filter-rdo">
+											<label class="filter-rdo has-tit">
 												<input type="radio" name="frmSpeed">
 												<span class="rdo"><span><strong>1Mbps</strong>텍스트와 용량이 작은 이미지는 확인할 수 있어요</span></span>
 											</label>
-											<label class="filter-rdo">
+											<label class="filter-rdo has-tit">
 												<input type="radio" name="frmSpeed">
 												<span class="rdo"><span><strong>3Mbps</strong>큰 용량 이미지 OK! 유튜브 720p로 재생돼요</span></span>
 											</label>
-											<label class="filter-rdo">
+											<label class="filter-rdo has-tit">
 												<input type="radio" name="frmSpeed">
 												<span class="rdo"><span><strong>5Mbps</strong>모든 상황에서 쾌적하게 확인할 수 있어요</span></span>
 											</label>
@@ -268,30 +276,30 @@
 										<h4 class="sec-tit">통신 정보</h4>
 									</div>
 									<div class="sec-body">
-										<div class="filter-rdo-frm">
-											<div class="filter-fildset">
+										<div class="filter-chk-frm">
+											<div class="filter-chk-group">
 												<h5 class="filter-tit">통신망</h5>
 												<label class="filter-chk">
-													<input type="chkeckbox" name="frmNet">
-													<span class="chk"><span>무제한</span></span>
+													<input type="checkbox" name="frmNet">
+													<span class="chk"><span>SKT망</span></span>
 												</label>
 												<label class="filter-chk">
-													<input type="chkeckbox" name="frmNet">
-													<span class="chk"><span>무제한</span></span>
+													<input type="checkbox" name="frmNet">
+													<span class="chk"><span>KT망</span></span>
 												</label>
 												<label class="filter-chk">
-													<input type="chkeckbox" name="frmNet">
-													<span class="chk"><span>무제한</span></span>
+													<input type="checkbox" name="frmNet">
+													<span class="chk"><span>LGU+망</span></span>
 												</label>
 											</div>
-											<div class="filter-fildset">
+											<div class="filter-chk-group">
 												<h5 class="filter-tit">통신기술</h5>
 												<label class="filter-chk">
-													<input type="chkeckbox" name="frmNet">
+													<input type="checkbox" name="frmNet">
 													<span class="chk"><span>LTE</span></span>
 												</label>
 												<label class="filter-chk">
-													<input type="chkeckbox" name="frmNet">
+													<input type="checkbox" name="frmNet">
 													<span class="chk"><span>5G</span></span>
 												</label>
 											</div>
@@ -307,11 +315,13 @@
 										<h4 class="sec-tit">인터넷 결합</h4>
 									</div>
 									<div class="sec-body">
-										<div class="filter-rdo-frm">
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>결합 가능</span></span>
-											</label>
+										<div class="filter-chk-frm">
+											<div class="filter-chk-group">
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>결합 가능</span></span>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -324,23 +334,25 @@
 										<h4 class="sec-tit">부가 서비스</h4>
 									</div>
 									<div class="sec-body">
-										<div class="filter-rdo-frm">
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>소액 결제</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>해외 로밍</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>모바일 핫스팟</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>데이터 쉐어링</span></span>
-											</label>
+										<div class="filter-chk-frm">
+											<div class="filter-chk-group">
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>소액 결제</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>해외 로밍</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>모바일 핫스팟</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>데이터 쉐어링</span></span>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -350,66 +362,68 @@
 							<section class="filter-sec">
 								<div class="sec-inner">
 									<div class="sec-header">
-										<h4 class="sec-tit">데이터</h4>
+										<h4 class="sec-tit">통신사</h4>
 									</div>
 									<div class="sec-body">
-										<div class="filter-rdo-frm">
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>KT엠모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>인스모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>SK7모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>에르엘모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>KG모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>핀다이렉트</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>리브엠</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>이야기모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>고고모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>모나</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>여유알뜰모바일</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>mobing</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>티플러스</span></span>
-											</label>
-											<label class="filter-chk">
-												<input type="chkeckbox" name="frmCombi">
-												<span class="chk"><span>헬로모바일</span></span>
-											</label>
+										<div class="filter-chk-frm">
+											<div class="filter-chk-group">
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>KT엠모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>인스모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>SK7모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>에르엘모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>KG모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>핀다이렉트</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>리브엠</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>이야기모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>고고모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>모나</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>여유알뜰모바일</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>mobing</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>티플러스</span></span>
+												</label>
+												<label class="filter-chk">
+													<input type="checkbox" name="frmCombi">
+													<span class="chk"><span>헬로모바일</span></span>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
