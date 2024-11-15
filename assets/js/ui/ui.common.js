@@ -13,6 +13,9 @@ function initUI() {
 	/* Setting Init */
 	setDeviceStatus(); // 디바이스 설정
 	setScrollStatus(); // 스크롤 상태 설정
+
+	/* Components */
+	setLikeButton(); // 스크롤 상태 설정
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -274,4 +277,13 @@ function setRating(button) {
 
 	// aria-label을 점수에 맞게 업데이트
 	ratingStarContainer.setAttribute('aria-label', '평점: '+rating+'점');
+}
+
+// Like Button
+function setLikeButton(){
+	if ($('.icn-20-plan-like-gr').length) {
+		$('.icn-20-plan-like-gr').closest('.ui-btn').on('click', function(){
+			$(this).toggleClass('is-selected');
+		})
+	}
 }
