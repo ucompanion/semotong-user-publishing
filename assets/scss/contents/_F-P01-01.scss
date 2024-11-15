@@ -1,0 +1,204 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 요금제
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+// s: 요금제 페이지
+.F-P01-01-page {
+
+	// 페이시 여백
+	padding-top: 10rem;
+	@include bottom-spacer;
+
+	// s: 요금제 카테고리 섹션
+	.ratePlan-cate-sec {
+		.ratePlan-cate-list {
+			display: flex;
+			gap: 8rem;
+			overflow: auto;
+			margin: 0 calc(#{$mobile-outer-spacer} * -1);
+			&::-webkit-scrollbar {
+				height: 0rem;
+			}
+			li {
+				flex: 1 1 auto;
+				min-width: 140rem;
+				box-sizing: border-box;
+				&:first-child {
+					margin-left: $mobile-outer-spacer;
+				}
+				&:last-child {
+					margin-right: $mobile-outer-spacer;
+				}
+
+				.ratePlan-cate-btn {
+					display: flex;
+					align-items: center;
+					width: 100%;
+					padding: 8rem 10rem;
+					border-radius: 12rem;
+					gap: 6rem;
+					font-weight: 600;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #000;
+					span {
+						text-align: left;
+					}
+					@include media-tablet-xs {
+						justify-content: center;
+						br {
+							display: none;
+						}
+					}
+				}
+				&:nth-child(1) .ratePlan-cate-btn {
+					background-color: #EBF3FE;
+				}
+				&:nth-child(2) .ratePlan-cate-btn {
+					background-color: #FCEFE7;
+				}
+				&:nth-child(3) .ratePlan-cate-btn {
+					background-color: #EDF8F0;
+				}
+			}
+		}
+	}
+	// e: 요금제 카테고리 섹션
+
+	// s: 요금제 필터 섹션
+	.ratePlan-filter-sec {
+		margin-top: 32rem;
+
+		.sec-header {
+			margin-bottom: 28rem;
+			.sec-tit {
+				font-weight: 600;
+				font-size: 18rem;
+				line-height: 25rem;
+				color: #000;
+			}
+			.sec-explain {
+				margin-top: 4rem;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #5A5D60;
+			}
+		}
+
+		.ratePlan-filter-list {
+			display: flex;
+			gap: 8rem;
+			overflow: auto;
+			margin: 0 calc(#{$mobile-outer-spacer} * -1);
+			&::-webkit-scrollbar {
+				height: 0;
+			}
+			li {
+				flex:none;
+				display: flex;
+				width: auto;
+				box-sizing: border-box;
+				&:first-child {
+					margin-left: $mobile-outer-spacer;
+				}
+				&:last-child {
+					margin-right: $mobile-outer-spacer;
+				}
+
+				div {
+					flex: none
+				}
+
+				.ui-filter + .split {
+					@include split-set(36rem, #CFD0D1);
+					margin-left: 8rem;
+				}
+
+			}
+			@include media-tablet-xs {
+				margin: 0 0;
+				li {
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	// e: 요금제 필터 섹션
+
+	// s: 상품리스트 섹션
+	.ratePlanC-sec {
+		margin-top: 16rem;
+		padding-top: 16rem;
+		border-top: 1px solid #EFF0F0;
+		@include sec-basic;
+
+		@include media-tablet-xs {
+			margin-top: 16rem;
+			padding-top: 0;
+			border-top: 0;
+
+			.sec-inner {
+				padding-top: 16rem;
+				border-top: 1px solid #EFF0F0;
+			}
+		}
+
+		// 요금제 상품 툴바
+		.ratePlanC-toolbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.count {
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #63666A;
+			}
+			.sort {
+				.ui-btn {
+					font-weight: 600;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #36383A;
+					gap: 4rem;
+				}
+			}
+		}
+	}
+	// e: 상품리스트 섹션
+
+	// s: 최근본요금제 섹션
+	.recent-ratePlanC-sec {
+		margin-top: 50rem;
+		@include sec-basic;
+
+		.sec-header {
+			margin-bottom: 0;
+		}
+	}
+	// e: 최근본요금제 섹션
+
+	// 요금제 상품 리스트 공통
+	.ratePlanC-list {
+		@include ratePlanC-list;
+
+		// 요금제 상품 리스트 카드 공통
+		.ratePlanC-card {
+			@include ratePlanC-card;
+		}
+	}
+
+	// nodata 공통
+	.nodata {
+		@include nodata;
+	}
+
+}
+// e: 요금제 페이지

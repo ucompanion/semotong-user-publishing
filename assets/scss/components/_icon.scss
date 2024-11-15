@@ -39,7 +39,7 @@
 }
 
 // 추가하고 싶은 크기를 배열에 나열
-$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 48, 50, 62, 100);
+$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 44, 48, 50, 62, 100);
 
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
@@ -88,6 +88,8 @@ $bg-icons: (
 	(icn-16-plan-quse-gr, svg),
 	(icn-16-plan-gift-gr, svg),
 	(icn-16-more-list-gr, svg),
+	(icn-16-select-arw, svg, icn-16-select-arw-sel, svg),
+	(icn-16-sort-gr, svg),
 
 	// 18
 	(icn-18-kakao-bk, png),
@@ -101,6 +103,7 @@ $bg-icons: (
 	(icn-20-acco-arw, svg),
 	(icn-20-select-chk-sel, svg),
 	(icn-20-remove-gr, svg),
+	(icn-20-rdo-sel, svg),
 
 	// 24
 	(icn-24-nav-01-gr, svg, icn-24-nav-01-pre, svg, icn-24-nav-01-sel, svg),
@@ -111,6 +114,7 @@ $bg-icons: (
 	(icn-24-clock, png),
 	(icn-24-more-gr, svg),
 	(icn-24-star-gr, svg, icn-24-star-sel, svg),
+	(icn-24-filter-gr, svg),
 
 	// 28
 
@@ -120,6 +124,11 @@ $bg-icons: (
 	(icn-32-anb-bk, svg),
 	(icn-32-close-bk, svg),
 	(icn-32-remove-bk, svg),
+
+	// 44
+	(icn-44-plan-cate-01, png),
+	(icn-44-plan-cate-02, png),
+	(icn-44-plan-cate-03, png),
 
 	// 48
 	(icn-48-recom-best, png),

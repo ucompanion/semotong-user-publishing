@@ -29,6 +29,16 @@
 	}
 }
 
+@mixin input-h-36 {
+	height: 36rem;
+	width: 100%;
+	padding: 7rem 9rem;
+	font-weight: 500;
+	font-size: 14rem;
+	line-height: 20rem;
+	color: #36383A;
+}
+
 /*-------------------------------------------------------------------
 	@@ Input
 -------------------------------------------------------------------*/
@@ -126,20 +136,45 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background: url('../demo/ico_select01_black.png') no-repeat right 10px center;
+		gap: 2rem;
 		@include input-style;
-
-		&:disabled.demo1 {
-			background-color: #f7f7f7;
-		}
 	}
 	&.fluid {
 		width: 100%;
 	}
+
+	&.is-selected {
+		.sel {
+			border-color: $color-primary;
+			background-color: #EAE6FB;
+			color: $color-primary !important;
+			&:focus {
+				outline-color: transparent;
+			}
+		}
+	}
+
+	&.h-36 {
+		.sel {
+			@include input-h-36;
+		}
+	}
 }
 
 /*-------------------------------------------------------------------
-	@@ 유형
+	@@ Filter
+-------------------------------------------------------------------*/
+.ui-filter {
+	@include input-style;
+	padding: 0;
+	&.h-36 {
+		width: 36rem;
+		height: 36rem;
+	}
+}
+
+/*-------------------------------------------------------------------
+	@@ File
 -------------------------------------------------------------------*/
 /* File Attach */
 .ui-file {

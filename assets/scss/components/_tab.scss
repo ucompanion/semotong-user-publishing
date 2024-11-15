@@ -12,6 +12,9 @@
 	.tab-list {
 		display: flex;
 		width: 100%;
+		.tab-link {
+			display: block;
+		}
 		.tab-link:disabled {
 			opacity: 0.75;
 		}
@@ -45,7 +48,7 @@
 	position: sticky;
 	top: $mobile-height-header;
 	padding-bottom: 30rem;
-	padding-top: 6rem;
+	padding-top: 16rem;
 	background-color: #fff;
 	z-index: 10;
 	@include out-sec;
@@ -55,7 +58,7 @@
 	}
 
 	.tab-item {
-		flex:1;
+		flex:1 1 auto;
 	}
 	.tab-link {
 		width: 100%;
@@ -64,6 +67,7 @@
 		font-size: 16rem;
 		line-height: 22rem;
 		color: #B7B9BA;
+		text-align: center;
 		border-bottom: 2px solid #EFF0F0;
 		&.active {
 			color: #000000;

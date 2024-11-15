@@ -114,12 +114,14 @@
 	max-width: $pc-inner-content;
 	height: 50rem;
 	border-radius: 4rem;
+	background-color: #EFF0F0;
 	font-weight: 600;
 	font-size: 16rem;
 	line-height: 22rem;
-	color: #fff;
+	color: #2A2B2D;
 	&.primary {
 		background-color: $color-primary;
+		color: #fff;
 		&:disabled {
 			background-color: #CDC2F5;
 		}

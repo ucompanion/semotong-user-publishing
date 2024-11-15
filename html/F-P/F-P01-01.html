@@ -18,7 +18,12 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
-	<script></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// Bootstrap Popover + Custom
+			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
+		})
+	</script>
 </head>
 
 <body>
@@ -71,7 +76,8 @@
 		<!-- // Header Deaktop -->
 
 		<!-- Header Mobile -->
-		<header class="header-mobile">
+		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
+		<header class="header-mobile only-mo">
 			<section class="header-sec">
 				<h1 class="title"><a href="/" class="logo"><span class="blind">세모통</span></a></h1>
 				<button type="button" class="ui-btn btn-aside" data-bs-toggle="modal" data-bs-target="#asideModal">
@@ -93,10 +99,659 @@
 				<!-- 요금제 카테고리 섹션 -->
 				<section class="ratePlan-cate-sec">
 					<div class="sec-inner">
-
+						<ul class="ratePlan-cate-list">
+							<li>
+								<button type="button" class="ratePlan-cate-btn">
+									<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
+									<span>인터넷<br> 결합 요금제</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="ratePlan-cate-btn">
+									<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
+									<span>장기 할인<br> 요금제</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="ratePlan-cate-btn">
+									<i class="ui-icn icn-44-plan-cate-03" aria-hidden="true"></i>
+									<span>평생 할인<br> 요금제</span>
+								</button>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<!-- // 요금제 카테고리 섹션 -->
+
+				<!-- 요금제 필터 섹션 -->
+				<section class="ratePlan-filter-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">어떤 요금제를 찾고 계세요?</h2>
+							<p class="sec-explain">요금제 구성을 알려주시면 세모통이 추천해드려요!</p>
+						</div>
+						<div class="sec-body">
+							<ul class="ratePlan-filter-list">
+								<li>
+									<!-- ui-filter: input.scss 가이드에 포함 -->
+									<button type="button" class="ui-filter h-36" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+										<i class="ui-icn icn-24-filter-gr" aria-label="필터"></i>
+									</button>
+									<span class="split" aria-hidden="true"></span>
+								</li>
+								<li>
+									<!-- 선택된 필터: is-selected -->
+									<div class="ui-sel h-36 is-selected">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectDataModal">
+											<span>데이터<em>1</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel is-selected" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectPriceModal">
+											<span>가격<em>1</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSpeedModal">
+											<span>소진시 속도<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSaleModal">
+											<span>할인 기간<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCallModal">
+											<span>통화<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSmsModal">
+											<span>문자<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectNetModal">
+											<span>통신 정보<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCombiModal">
+											<span>인터넷 결합<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectAddServiceModal">
+											<span>부가 서비스<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectTelecomModal">
+											<span>통신사<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- // 요금제 필터 섹션 -->
+
+				<!-- 상품 리스트 섹션 -->
+				<section class="ratePlanC-sec">
+					<div class="sec-inner">
+						<!-- 요금제 상품그룹 -->
+						<div class="ratePlanC-list-wrap">
+							<!-- 요금제 상품 툴바 -->
+							<div class="ratePlanC-toolbar">
+								<p class="count">총&nbsp;<em>9,999개</em>&nbsp;요금제</p>
+								<div class="sort">
+									<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#selectSortModal">
+										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
+										<span>추천순</span>
+										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+							<!-- // 요금제 상품 툴바 -->
+
+							<!-- 요금제 공통 타입 C : 요금제 상품 리스트 -->
+							<ul class="ratePlanC-list">
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-label">
+												<div class="card-label-benefit">
+													<span class="label primary">단독특가</span>
+													<span class="label secondary">+20GB</span>
+												</div>
+												<div class="card-label-option">
+													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<span class="split" aria-hidden="true"></span>
+													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+												</div>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<div class="card-util">
+												<div class="card-util-tooltip">
+													<strong class="tit">밀리의 서재</strong>
+													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-util-btn">
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<button type="button" class="ui-btn">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+											<!-- Case 사은품확인 -->
+											<div class="card-status">
+												<div class="status-gift" id="cardExpand01">
+													<p class="tit"><em>사은품이 최대 5개</em> 지금바로 확인하기!</p>
+													<button type="button" class="ui-btn" aria-expanded="false" onclick="cardExpand('#cardExpand01', this)">
+														<i class="ui-icn icn-14-plan-expand-bk" aria-label="자세히보기"></i>
+													</button>
+													<div class="status-gift-expanded">
+														<ul class="status-gift-list">
+															<li>
+																<i class="ui-icn icn-16-plan-gift-gr"></i>
+																3대 마트 상품권 3만원 제공
+															</li>
+															<li>
+																<i class="ui-icn icn-16-plan-gift-gr"></i>
+																밀리의 서재 구독권 제공
+															</li>
+															<li>
+																<i class="ui-icn icn-16-plan-gift-gr"></i>
+																[결합] 최대 20GB 추가 데이터 제공
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-label">
+												<div class="card-label-benefit">
+													<span class="label primary">단독특가</span>
+													<span class="label secondary">+20GB</span>
+												</div>
+												<div class="card-label-option">
+													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<span class="split" aria-hidden="true"></span>
+													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+												</div>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<div class="card-util">
+												<div class="card-util-tooltip">
+													<strong class="tit">밀리의 서재</strong>
+													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-util-btn">
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<button type="button" class="ui-btn">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-label">
+												<div class="card-label-benefit">
+													<span class="label primary">단독특가</span>
+													<span class="label secondary">+20GB</span>
+												</div>
+												<div class="card-label-option">
+													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<span class="split" aria-hidden="true"></span>
+													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+												</div>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<div class="card-util">
+												<div class="card-util-tooltip">
+													<strong class="tit">밀리의 서재</strong>
+														<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-util-btn">
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<button type="button" class="ui-btn">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+											<!-- Case 선택한상태정보 -->
+											<div class="card-status">
+												<div class="status-choice">
+													<div class="choice">
+														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
+														<span class="txt"><em>52</em>명 선택</span>
+														<span class="split"></span>
+														<span class="txt"><em>12</em>명 신청 중</span>
+													</div>
+													<button type="button" class="ui-btn" aria-expanded="false">
+														<span>오류 문의</span>
+														<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+							</ul>
+							<!-- // 요금제 공통 타입 C : 요금제 상품 리스트 -->
+
+							<!-- Case 목록이 많은 경우 더보기 -->
+							<button type="button" class="ui-btn btn-more-list">
+								<i class="ui-icn icn-16-more-list-gr" aria-hidden="true"></i>
+								<span>더보기</span>
+							</button>
+						</div>
+						<!-- // 요금제 상품그룹 -->
+					</div>
+				</section>
+				<!-- // 상품 리스트 섹션 -->
+
+				<!-- 최근 본 요금제 섹션 -->
+				<section class="recent-ratePlanC-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">최근 본 요금제</h2>
+						</div>
+						<div class="sec-body">
+							<!-- 요금제 공통 타입 C : 요금제 상품 리스트 -->
+							<ul class="ratePlanC-list">
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-label">
+												<div class="card-label-benefit">
+													<span class="label primary">단독특가</span>
+													<span class="label secondary">+20GB</span>
+												</div>
+												<div class="card-label-option">
+													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<span class="split" aria-hidden="true"></span>
+													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+												</div>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<div class="card-util">
+												<div class="card-util-tooltip">
+													<strong class="tit">밀리의 서재</strong>
+													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-util-btn">
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<button type="button" class="ui-btn">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+											<!-- Case 사은품확인 -->
+											<div class="card-status">
+												<div class="status-gift" id="cardExpand01">
+													<p class="tit"><em>사은품이 최대 5개</em> 지금바로 확인하기!</p>
+													<button type="button" class="ui-btn" aria-expanded="false" onclick="cardExpand('#cardExpand01', this)">
+														<i class="ui-icn icn-14-plan-expand-bk" aria-label="자세히보기"></i>
+													</button>
+													<div class="status-gift-expanded">
+														<ul class="status-gift-list">
+															<li>
+																<i class="ui-icn icn-16-plan-gift-gr"></i>
+																3대 마트 상품권 3만원 제공
+															</li>
+															<li>
+																<i class="ui-icn icn-16-plan-gift-gr"></i>
+																밀리의 서재 구독권 제공
+															</li>
+															<li>
+																<i class="ui-icn icn-16-plan-gift-gr"></i>
+																[결합] 최대 20GB 추가 데이터 제공
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-label">
+												<div class="card-label-benefit">
+													<span class="label primary">단독특가</span>
+													<span class="label secondary">+20GB</span>
+												</div>
+												<div class="card-label-option">
+													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<span class="split" aria-hidden="true"></span>
+													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+												</div>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<div class="card-util">
+												<div class="card-util-tooltip">
+													<strong class="tit">밀리의 서재</strong>
+													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-util-btn">
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<button type="button" class="ui-btn">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-label">
+												<div class="card-label-benefit">
+													<span class="label primary">단독특가</span>
+													<span class="label secondary">+20GB</span>
+												</div>
+												<div class="card-label-option">
+													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<span class="split" aria-hidden="true"></span>
+													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+												</div>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<div class="card-util">
+												<div class="card-util-tooltip">
+													<strong class="tit">밀리의 서재</strong>
+														<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-util-btn">
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<button type="button" class="ui-btn">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+											<!-- Case 선택한상태정보 -->
+											<div class="card-status">
+												<div class="status-choice">
+													<div class="choice">
+														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
+														<span class="txt"><em>52</em>명 선택</span>
+														<span class="split"></span>
+														<span class="txt"><em>12</em>명 신청 중</span>
+													</div>
+													<button type="button" class="ui-btn" aria-expanded="false">
+														<span>오류 문의</span>
+														<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+							</ul>
+							<!-- // 요금제 공통 타입 C : 요금제 상품 리스트 -->
+						</div>
+					</div>
+				</section>
+				<!-- // 최근 본 요금제 섹션 -->
+
 			</div>
 			<!-- // content -->
 		</main>
@@ -110,6 +765,236 @@
 		<nav class="floating-nav"></nav>
 		<!-- // floating Nav- -->
 	</div>
+
+	<!--
+		[모달 가이드]
+		모달 효과 : fade (공통), fade-pc (풀팝업일때)
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+		화면 이름 : 화면아이디-page (modal-select 제외)
+	-->
+	<!-- 필터 modal basic -->
+	<div class="modal modal-basic fade" id="FP0101P01Modal" tabindex="-1" role="dialog" aria-labelledby="FP0101P01ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-P01-01-P01-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="FP0101P01ModalLabel"></h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+
+				</div>
+				<div class="modal-body">
+					<section>
+						<div class="sec-inner">
+							<p>필터팝업 페이지로 이동</p>
+							<p><a href="./F-P01-01-P01.html">F-P01-01-P01.html</a></p>
+						</div>
+					</section>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // 필터 modal basic -->
+
+	<!-- Sort modal select -->
+	<div class="modal modal-select fade" id="selectSortModal" tabindex="-1" role="dialog" aria-labelledby="selectSortModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSortModalLabel">정렬</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Sort modal select -->
+
+	<!-- 데이터 modal select -->
+	<div class="modal modal-select fade" id="selectDataModal" tabindex="-1" role="dialog" aria-labelledby="selectDataModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectDataModalLabel">데이터</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 데이터 modal select -->
+
+	<!-- 가격 modal select -->
+	<div class="modal modal-select fade" id="selectPriceModal" tabindex="-1" role="dialog" aria-labelledby="selectPriceModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectPriceModalLabel">가격</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 가격 modal select -->
+
+	<!-- 소진시속도 modal select -->
+	<div class="modal modal-select fade" id="selectSpeedModal" tabindex="-1" role="dialog" aria-labelledby="selectSpeedModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSpeedModalLabel">소진시 속도</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 소진시속도 modal select -->
+
+	<!-- 할인기간 modal select -->
+	<div class="modal modal-select fade" id="selectSaleModal" tabindex="-1" role="dialog" aria-labelledby="selectSaleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSaleModalLabel">할인 기간</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 할인기간 modal select -->
+
+	<!-- 통화 modal select -->
+	<div class="modal modal-select fade" id="selectCallModal" tabindex="-1" role="dialog" aria-labelledby="selectCallModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectCallModalLabel">통화</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 통화 modal select -->
+
+	<!-- 문자 modal select -->
+	<div class="modal modal-select fade" id="selectSmsModal" tabindex="-1" role="dialog" aria-labelledby="selectSmsModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSmsModalLabel">문자</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 문자 modal select -->
+
+	<!-- 통신정보 modal select -->
+	<div class="modal modal-select fade" id="selectNetModal" tabindex="-1" role="dialog" aria-labelledby="selectNetModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectNetModalLabel">통신 정보</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 통신정보 modal select -->
+
+	<!-- 인터넷결합 modal select -->
+	<div class="modal modal-select fade" id="selectCombiModal" tabindex="-1" role="dialog" aria-labelledby="selectCombiModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectCombiModalLabel">인터넷 결합</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 인터넷결합 modal select -->
+
+	<!-- 부가서비스 modal select -->
+	<div class="modal modal-select fade" id="selectAddServiceModal" tabindex="-1" role="dialog" aria-labelledby="selectAddServiceModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectAddServiceModalLabel">부가 서비스</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 부가서비스 modal select -->
+
+	<!-- 통신사 modal select -->
+	<div class="modal modal-select fade" id="selectTelecomModal" tabindex="-1" role="dialog" aria-labelledby="selectTelecomModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectTelecomModalLabel">통신사</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 통신사 modal select -->
 </body>
 
 </html>

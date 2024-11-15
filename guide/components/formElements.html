@@ -157,11 +157,52 @@
 						</div>
 						<div class="g-section-body">
 							<div class="ui-sel">
-								<select name="" id="frm아이디"  title="" class="sel">
-									<option value="">콤보상자1</option>
-									<option value="">콤보상자2</option>
-								</select>
+								<!-- 선택전 is-placeholder, (선택후 삭제) -->
+								<button type="button" id="frmType" class="sel is-placeholder" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+									<span>문의유형 선택</span>
+									<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+								</button>
 							</div>
+
+							<!--
+								[모달 가이드]
+								모달 효과 : fade (공통), fade-pc (풀팝업일때)
+								모달 기본 : modal
+								모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+								화면 이름 : 화면아이디-page (modal-select 제외)
+							-->
+							<!-- modal default -->
+							<div class="modal modal-select fade" id="selectModal" tabindex="-1" role="dialog" aria-labelledby="selectModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3 class="modal-title" id="selectModalLabel">문의유형 선택</h3>
+											<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+											<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+												<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+											</button>
+										</div>
+										<div class="modal-body">
+											<!-- 콤보박스 섹션 -->
+											<section class="select-sec">
+												<div class="sec-inner">
+													<!-- modal-select 공통 -->
+													<ul class="select-listbox" role="listbox">
+														<!-- setSelectValued 는 퍼블 확인용입니다. -->
+														<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 1</li>
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 2</li>
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 3</li>
+														<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmType', this)">문의유형 4</li>
+													</ul>
+												</div>
+											</section>
+											<!-- // 콤보박스 섹션 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // modal default -->
 						</div>
 					</section>
 					<!-- // Section -->

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>요금제 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- 페이지 스크립트 영역 -->
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// Bootstrap Popover + Custom
+			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
+		})
+	</script>
+</head>
+
+<body>
+	<!-- 레이아웃 유형구분
+		메인: main-wrapper,
+		서브: sub-wrapper,
+		기타: [기타]-wrapper
+	 -->
+	<div class="wrapper main-wrapper">
+		<!-- Header Deaktop -->
+		<header class="header-desktop">
+			<div class="header-skip">
+				<a href="#content">본문 바로가기</a>
+			</div>
+
+			<div class="header-sec">
+				<h1 class="title"><a href="/" class="logo"><span class="blind">세모통</span></a></h1>
+				<nav class="header-nav">
+					<ul class="nav-list">
+						<li class="nav-item">
+							<!-- 선택된 상태 : is-selected -->
+							<a href="../F-G/F-G01-01.html" role="link" class="ui-btn nav-link">
+								<span>세모통 설명서</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-P/F-P01-01.html" role="link" class="ui-btn nav-link">
+								<span>요금제</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-I/F-I01.html" role="link" class="ui-btn nav-link">
+								<span>인터넷</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-M/F-M01-01.html" role="link" class="ui-btn nav-link">
+								<span>휴대폰</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-MY/F-MY01-01.html" role="link" class="ui-btn nav-link">
+								<span>마이페이지</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- // Header Deaktop -->
+
+		<!-- Header Mobile -->
+		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
+		<header class="header-mobile only-mo">
+			<section class="header-sec">
+				<h1 class="title"><a href="/" class="logo"><span class="blind">세모통</span></a></h1>
+				<button type="button" class="ui-btn btn-aside" data-bs-toggle="modal" data-bs-target="#asideModal">
+					<i class="ui-icn icn-32-anb-bk" aria-label="메뉴열기"></i>
+				</button>
+			</section>
+			<!-- // Mobile Header -->
+		</header>
+		<!-- // Header -->
+
+		<!-- Mobile Nav Modal (include_mobileNav.html) -->
+		<div class="modal fade aside-modal" id="asideModal" tabindex="-1" role="dialog" aria-labelledby="asideModalLabel" aria-hidden="true"></div>
+		<!-- Mobile Nav Modal -->
+
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-P01-01-page">
+				<!-- 요금제 카테고리 섹션 -->
+				<section class="ratePlan-cate-sec">
+					<div class="sec-inner">
+						<ul class="ratePlan-cate-list">
+							<li>
+								<button type="button" class="ratePlan-cate-btn">
+									<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
+									<span>인터넷<br> 결합 요금제</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="ratePlan-cate-btn">
+									<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
+									<span>장기 할인<br> 요금제</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="ratePlan-cate-btn">
+									<i class="ui-icn icn-44-plan-cate-03" aria-hidden="true"></i>
+									<span>평생 할인<br> 요금제</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- // 요금제 카테고리 섹션 -->
+
+				<!-- 요금제 필터 섹션 -->
+				<section class="ratePlan-filter-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">어떤 요금제를 찾고 계세요?</h2>
+							<p class="sec-explain">요금제 구성을 알려주시면 세모통이 추천해드려요!</p>
+						</div>
+						<div class="sec-body">
+							<ul class="ratePlan-filter-list">
+								<li>
+									<!-- ui-filter: input.scss 가이드에 포함 -->
+									<button type="button" class="ui-filter h-36" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+										<i class="ui-icn icn-24-filter-gr" aria-label="필터"></i>
+									</button>
+									<span class="split" aria-hidden="true"></span>
+								</li>
+								<li>
+									<!-- 선택된 필터: is-selected -->
+									<div class="ui-sel h-36 is-selected">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectDataModal">
+											<span>데이터<em>1</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel is-selected" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectPriceModal">
+											<span>가격<em>1</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSpeedModal">
+											<span>소진시 속도<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSaleModal">
+											<span>할인 기간<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCallModal">
+											<span>통화<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSmsModal">
+											<span>문자<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectNetModal">
+											<span>통신 정보<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCombiModal">
+											<span>인터넷 결합<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectAddServiceModal">
+											<span>부가 서비스<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="ui-sel h-36">
+										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectTelecomModal">
+											<span>통신사<em class="blind">0</em></span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- // 요금제 필터 섹션 -->
+
+				<!-- 상품 리스트 섹션 -->
+				<section class="ratePlanC-sec">
+					<div class="sec-inner">
+						<!-- 요금제 상품그룹 -->
+						<div class="ratePlanC-list-wrap">
+							<!-- 요금제 상품 툴바 -->
+							<div class="ratePlanC-toolbar">
+								<p class="count">총&nbsp;<em>9,999개</em>&nbsp;요금제</p>
+								<div class="sort">
+									<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#selectSortModal">
+										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
+										<span>추천순</span>
+										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+							<!-- // 요금제 상품 툴바 -->
+
+							<!-- Case nodata -->
+							<div class="nodata">
+								<i class="ui-icn icn-100-nodata-recom" aria-hidden="true"></i>
+								<p class="nodata-tit"><strong>조회된 요금제가 없어요.</strong></p>
+							</div>
+							<!-- // Case nodata -->
+						</div>
+						<!-- // 요금제 상품그룹 -->
+					</div>
+				</section>
+				<!-- // 상품 리스트 섹션 -->
+
+				<!-- 최근 본 요금제 섹션 -->
+				<section class="recent-ratePlanC-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">최근 본 요금제</h2>
+						</div>
+						<div class="sec-body">
+							<!-- Case nodata -->
+							<div class="nodata">
+								<i class="ui-icn icn-100-nodata-recent" aria-hidden="true"></i>
+								<p class="nodata-tit"><strong>최근 본 요금제가 없어요.</strong></p>
+							</div>
+							<!-- // Case nodata -->
+						</div>
+					</div>
+				</section>
+				<!-- // 최근 본 요금제 섹션 -->
+
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer (include_footer.html) -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+
+		<!-- floating Nav (include_floatingNav.html) -->
+		<nav class="floating-nav"></nav>
+		<!-- // floating Nav- -->
+	</div>
+
+	<!--
+		[모달 가이드]
+		모달 효과 : fade (공통), fade-pc (풀팝업일때)
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+		화면 이름 : 화면아이디-page (modal-select 제외)
+	-->
+	<!-- 필터 modal basic -->
+	<div class="modal modal-basic fade" id="FP0101P01Modal" tabindex="-1" role="dialog" aria-labelledby="FP0101P01ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-P01-01-P01-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="FP0101P01ModalLabel"></h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+
+				</div>
+				<div class="modal-body">
+					<section>
+						<div class="sec-inner">
+							<p>필터팝업 페이지로 이동</p>
+							<p><a href="./F-P01-01-P01.html">F-P01-01-P01.html</a></p>
+						</div>
+					</section>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // 필터 modal basic -->
+
+	<!-- Sort modal select -->
+	<div class="modal modal-select fade" id="selectSortModal" tabindex="-1" role="dialog" aria-labelledby="selectSortModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSortModalLabel">정렬</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Sort modal select -->
+
+	<!-- 데이터 modal select -->
+	<div class="modal modal-select fade" id="selectDataModal" tabindex="-1" role="dialog" aria-labelledby="selectDataModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectDataModalLabel">데이터</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 데이터 modal select -->
+
+	<!-- 가격 modal select -->
+	<div class="modal modal-select fade" id="selectPriceModal" tabindex="-1" role="dialog" aria-labelledby="selectPriceModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectPriceModalLabel">가격</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 가격 modal select -->
+
+	<!-- 소진시속도 modal select -->
+	<div class="modal modal-select fade" id="selectSpeedModal" tabindex="-1" role="dialog" aria-labelledby="selectSpeedModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSpeedModalLabel">소진시 속도</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 소진시속도 modal select -->
+
+	<!-- 할인기간 modal select -->
+	<div class="modal modal-select fade" id="selectSaleModal" tabindex="-1" role="dialog" aria-labelledby="selectSaleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSaleModalLabel">할인 기간</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 할인기간 modal select -->
+
+	<!-- 통화 modal select -->
+	<div class="modal modal-select fade" id="selectCallModal" tabindex="-1" role="dialog" aria-labelledby="selectCallModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectCallModalLabel">통화</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 통화 modal select -->
+
+	<!-- 문자 modal select -->
+	<div class="modal modal-select fade" id="selectSmsModal" tabindex="-1" role="dialog" aria-labelledby="selectSmsModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSmsModalLabel">문자</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 문자 modal select -->
+
+	<!-- 통신정보 modal select -->
+	<div class="modal modal-select fade" id="selectNetModal" tabindex="-1" role="dialog" aria-labelledby="selectNetModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectNetModalLabel">통신 정보</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 통신정보 modal select -->
+
+	<!-- 인터넷결합 modal select -->
+	<div class="modal modal-select fade" id="selectCombiModal" tabindex="-1" role="dialog" aria-labelledby="selectCombiModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectCombiModalLabel">인터넷 결합</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 인터넷결합 modal select -->
+
+	<!-- 부가서비스 modal select -->
+	<div class="modal modal-select fade" id="selectAddServiceModal" tabindex="-1" role="dialog" aria-labelledby="selectAddServiceModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectAddServiceModalLabel">부가 서비스</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 부가서비스 modal select -->
+
+	<!-- 통신사 modal select -->
+	<div class="modal modal-select fade" id="selectTelecomModal" tabindex="-1" role="dialog" aria-labelledby="selectTelecomModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectTelecomModalLabel">통신사</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 통신사 modal select -->
+</body>
+
+</html>

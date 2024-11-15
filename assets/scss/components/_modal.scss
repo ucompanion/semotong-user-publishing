@@ -67,6 +67,8 @@
 	pointer-events: auto;
 	transition: all 0.2s ease;
 	.modal-header {
+		display: flex;
+		justify-content: space-between;
 		position: relative;
 		flex:none;
 	}
@@ -76,13 +78,18 @@
 		flex-grow: 1;
 		flex-basis: auto;
 		overflow: auto;
-		// > div {
-		// 	flex: none;
-		// }
+		.tab-style1 {
+			top: 0;
+		}
 	}
 	.modal-footer {
 		display: flex;
 		flex:none;
+		gap: 8rem;
+	}
+
+	.tab-content[data-bs-spy="scroll"] {
+		overflow: auto;
 	}
 }
 
@@ -187,12 +194,6 @@
 		}
 	}
 
-	.modal-body {
-		.tab-style1 {
-			top: 0;
-		}
-	}
-
 	.modal-footer {
 		@include out-sec;
 	}
@@ -231,6 +232,8 @@
 		padding-bottom: calc(#{$safe-area-bottom} / 2);
 	}
 	.modal-header {
+		display: flex;
+		align-items: center;
 		@include out-sec;
 		padding-top: 20rem;
 		padding-bottom: 10rem;
@@ -239,13 +242,16 @@
 			font-size: 20rem;
 			color: #000;
 		}
-		.btn-close {
-			display: none;
-			top: 18rem;
-		}
+		// .btn-close {
+		// 	display: none;
+		// 	top: 18rem;
+		// }
 	}
 	.modal-footer {
 		@include out-sec;
+		.ui-btn {
+			flex:1 1 auto;
+		}
 	}
 
 	@include media-tablet-xs {
