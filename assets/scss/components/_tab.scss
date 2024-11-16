@@ -87,12 +87,14 @@
 
 /* 스타일2 */
 .tab-style2 {
+	width: 100%;
 	position: sticky;
 	top: $mobile-height-header;
 	padding-bottom: 30rem;
 	padding-top: 16rem;
 	background-color: #fff;
 	z-index: 10;
+	@include out-sec;
 	&::before {
 		content:'';
 		position: absolute;
@@ -103,22 +105,26 @@
 		background-color: #EFF0F0;
 	}
 
-	.tab-list {
+	.tab-list,
+	.swiper-wrapper {
 		position: relative;
-		gap: 16rem;
-		@include out-sec;
-		overflow-y: hidden;
-		overflow-x: auto;
-		&::-webkit-scrollbar {
-			width: 0;
-			height: 0;
-		}
+		// gap: 16rem;
+		// overflow-y: hidden;
+		// overflow-x: auto;
+		// &::-webkit-scrollbar {
+		// 	width: 0;
+		// 	height: 0;
+		// }
 	}
-	.tab-item {
+	.tab-item,
+	.swiper-slide {
+		box-sizing: border-box;
+		width: auto;
 		flex: none;
 	}
 	.tab-link {
 		position: relative;
+		display: block;
 		height: 26rem;
 		border-bottom: 0;
 		font-weight: 600;

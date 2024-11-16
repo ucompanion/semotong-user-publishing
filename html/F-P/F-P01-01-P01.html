@@ -18,6 +18,9 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
+	<!-- Swiper Librarys -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			const modalElement = document.getElementById('FP0101P01Modal');
@@ -26,6 +29,40 @@
 			modalElement.addEventListener('shown.bs.modal', () => {
 				// 모달이 호출된 후에 Spyscoll 실행
 				setSpyScroll();
+
+				// 탭 스크롤 스와이프 설정
+				var tabSwiper = new Swiper(".tab-swiper", {
+					threshold: 3,
+					spaceBetween: 16,
+					slidesPerView: 'auto',
+					freeMode: true,
+					freeModeMomentum: true,
+					resistance: true,
+					resistanceRatio: 0
+				});
+
+				// spyScroll ID
+				const navbarSpyscroll = "#navbarSpyscroll";
+
+				// ScrollSpy에서 active 탭을 찾고 해당 슬라이드로 이동
+				function activateSwipeSlide() {
+					const activeTab = document.querySelector(navbarSpyscroll+' .active');
+					if (activeTab) {
+					const tabList = document.querySelectorAll('.tab-link');
+					const tabIndex = Array.from(tabList).indexOf(activeTab); // 해당 탭의 인덱스를 찾기
+
+					// Swiper 슬라이드를 해당 인덱스로 이동
+					tabSwiper.slideTo(tabIndex);  // 해당 인덱스로 슬라이드 이동
+					}
+				}
+
+				// Spyscroll이 끝나면 activateSwipeSlide 실행
+				const spyScrollEl = document.querySelector('[data-bs-target="'+navbarSpyscroll+'"]');
+				let debounceTimer;
+				spyScrollEl.addEventListener('scroll', function() {
+					clearTimeout(debounceTimer); // 기존 타이머 클리어
+					debounceTimer = setTimeout(activateSwipeSlide, 150);  // 150ms 후에 실행
+				});
 			});
 
 			// 모달 바로 볼 수 있도록 호출
@@ -65,18 +102,40 @@
 				<div class="modal-body">
 					<!-- Spyscroll 탭 목록 -->
 					<div class="ui-tab tab-style2" id="navbarSpyscroll">
-						<ul class="tab-list" role="tablist">
-							<li class="tab-item" role="presentation"><a href="#filter-01-pane" class="tab-link active">데이터</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-02-pane" class="tab-link">가격</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-03-pane" class="tab-link">소진시 속도</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-04-pane" class="tab-link">할인 기간</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-05-pane" class="tab-link">통화</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-06-pane" class="tab-link">문자</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-07-pane" class="tab-link">통신 정보</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-08-pane" class="tab-link">인터넷 결합</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-09-pane" class="tab-link">부가 서비스</a></li>
-							<li class="tab-item" role="presentation"><a href="#filter-10-pane" class="tab-link">통신사</a></li>
-						</ul>
+						<div class="swiper tab-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-01-pane" class="tab-link active">데이터</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-02-pane" class="tab-link">가격</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-03-pane" class="tab-link">소진시 속도</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-04-pane" class="tab-link">할인 기간</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-05-pane" class="tab-link">통화</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-06-pane" class="tab-link">문자</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-07-pane" class="tab-link">통신 정보</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-08-pane" class="tab-link">인터넷 결합</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-09-pane" class="tab-link">부가 서비스</a>
+								</div>
+								<div class="swiper-slide" role="presentation">
+									<a href="#filter-10-pane" class="tab-link">통신사</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- // 탭 목록 -->
 
