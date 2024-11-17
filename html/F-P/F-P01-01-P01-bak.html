@@ -21,121 +21,96 @@
 	<!-- Swiper Librarys -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<!-- Range Librarys: https://slawomir-zaziablo.github.io/range-slider/ -->
+	<link rel="stylesheet" href="../../assets/css/rSlider.min.css" />
+	<script src="../../assets/js/libs/rSlider.min.js"></script>
+
 	<script>
-		// Set Range Multiple
-		const setRange = () => {
-			// 하드코딩버전
-			const range1 = document.getElementById('range1');
-			const range2 = document.getElementById('range2');
-			const rangeValues = document.getElementById('rangeValues');
-
-			// 천단위 콤마 추가 함수
-			const formatNumber = (num) => {
-				return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-			};
-
-			function updateRange() {
-				let val1 = parseInt(range1.value);
-				let val2 = parseInt(range2.value);
-
-				// 1000 단위로 반올림
-				val1 = Math.round(val1 / 1000) * 1000;
-				val2 = Math.round(val2 / 1000) * 1000;
-
-				// 첫 번째 슬라이더가 두 번째 슬라이더를 넘어가지 않도록 처리
-				if (val1 > val2) {
-					range1.value = val2;
-					val1 = val2;
-				}
-
-				// 슬라이더 값에 맞춰 배경 색상 변경 (linear-gradient 사용)
-				const min = range1.min;
-				const max = range1.max;
-
-				const percent1 = (val1 - min) / (max - min) * 100;
-				const percent2 = (val2 - min) / (max - min) * 100;
-
-				range1.style.background = `linear-gradient(to right, #CFD0D1 ${percent1}% , #542FDD ${percent1}%, #542FDD ${percent2}%, #CFD0D1 ${percent2}%)`;
-
-				// 전체 범위 값 (최소값과 최대값이 같을 경우)
-				const minValue = range1.min;
-				const maxValue = range1.max;
-
-				// 값이 전체 범위일 때 '전체'로 표시, 아니라면 값 표시
-				if (val1 === parseInt(minValue) && val2 === parseInt(maxValue)) {
-					rangeValues.textContent = '전체';
-				} else {
-					// 천단위 콤마 적용 후 출력
-					const formattedValue1 = formatNumber(val1);
-					const formattedValue2 = formatNumber(val2);
-					rangeValues.textContent = `${formattedValue1}원 ~ ${formattedValue2}원`;
-				}
-			}
-
-			range1.addEventListener('input', updateRange);
-			range2.addEventListener('input', updateRange);
-
-			// 초기 범위 업데이트
-			updateRange();
-		}
-
-		// Set Tab Swipe
-		let tabSwiper = null;
-		const setTabSwipe = () => {
-			tabSwiper = new Swiper(".tab-swiper", {
-				threshold: 3,
-				spaceBetween: 16,
-				slidesPerView: 'auto',
-				freeMode: true,
-				freeModeMomentum: true,
-				resistance: true,
-				resistanceRatio: 0
-			});
-		}
-
-		// Set SpyScoll 탭스와이프 연동
-		const setSpyScrollActiveLink = () => {
-			// spyScroll ID
-			const navbarSpyscroll = "#navbarSpyscroll";
-
-			// ScrollSpy에서 active 탭을 찾고 해당 슬라이드로 이동
-			function activateSwipeSlide() {
-				const activeTab = document.querySelector(navbarSpyscroll+' .active');
-				if (activeTab) {
-				const tabList = document.querySelectorAll('.tab-link');
-				const tabIndex = Array.from(tabList).indexOf(activeTab); // 해당 탭의 인덱스를 찾기
-
-				// Swiper 슬라이드를 해당 인덱스로 이동
-				tabSwiper.slideTo(tabIndex);  // 해당 인덱스로 슬라이드 이동
-				}
-			}
-
-			// Spyscroll이 끝나면 activateSwipeSlide 실행
-			const spyScrollEl = document.querySelector('[data-bs-target="'+navbarSpyscroll+'"]');
-			let debounceTimer;
-			spyScrollEl.addEventListener('scroll', function() {
-				clearTimeout(debounceTimer); // 기존 타이머 클리어
-				debounceTimer = setTimeout(activateSwipeSlide, 150);  // 150ms 후에 실행
-			});
-		}
-
-		// DOMContentLoaded
 		document.addEventListener("DOMContentLoaded", function() {
 			const modalElement = document.getElementById('FP0101P01Modal');
 
-			// 모달이 호출된 후 Callback
+			// 모달이 호출되기 전에 이벤트 설정
 			modalElement.addEventListener('shown.bs.modal', () => {
-				// Set Spyscroll (ui.common.js)
+				// 모달이 호출된 후에 Spyscoll 실행
 				setSpyScroll();
 
-				// Set Range Multiple
-				setRange();
+				// customRange 옵션 및 onChange 설정값
+				const rSliderMinValue = 1000;
+				const rSliderMaxValue = 40000;
 
-				// Set Tab Swipe
-				setTabSwipe();
+				// Multiple Range Custom 라이브러리
+				var customRange = new rSlider({
+					target: '#customRange',
+					values: {min: rSliderMinValue, max: rSliderMaxValue},
+					step: 100, // 움직임을 매끄럽게 100단위로 낮추고, 1000단위 반올림하여 표시함.
+					range: true,
+					set: [6000, 28000],
+					scale: false,
+					labels: false,
+					tooltip: false,
+					onChange: function (vals) {
+						// 슬라이더 값들을 쉼표로 구분하여 배열로 만들고, 100단위로 반올림
+						const [value1, value2] = vals.split(',').map(val => Math.round(parseInt(val) / 100) * 100);
 
-				// Set SpyScoll 탭스와이프 연동
-				setSpyScrollActiveLink();
+						// 숫자 값으로 변환 (옵션처럼 수치 적용)
+						const min = rSliderMinValue;
+						const max = rSliderMaxValue;
+
+						// 천 단위 콤마 추가 함수
+						const formatNumber = (num) => {
+							return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+						};
+
+						console.log('min, ', parseInt(value1), min);
+						console.log('max, ', parseInt(value2), max);
+
+						// 설정된 값이 전체 범위와 일치하는지 확인
+						if (parseInt(value1) === min && parseInt(value2) === max) {
+							document.getElementById('customRangeValue').textContent = '전체';
+						} else {
+							// 슬라이더 값들을 천 단위로 포맷하고 출력
+							const formattedValue1 = formatNumber(value1);
+							const formattedValue2 = formatNumber(value2);
+
+							document.getElementById('customRangeValue').textContent = formattedValue1 + '원 ~ ' + formattedValue2 + '원';
+						}
+					}
+				});
+
+				// 탭 스크롤 스와이프 설정
+				var tabSwiper = new Swiper(".tab-swiper", {
+					threshold: 3,
+					spaceBetween: 16,
+					slidesPerView: 'auto',
+					freeMode: true,
+					freeModeMomentum: true,
+					resistance: true,
+					resistanceRatio: 0
+				});
+
+				// spyScroll ID
+				const navbarSpyscroll = "#navbarSpyscroll";
+
+				// ScrollSpy에서 active 탭을 찾고 해당 슬라이드로 이동
+				function activateSwipeSlide() {
+					const activeTab = document.querySelector(navbarSpyscroll+' .active');
+					if (activeTab) {
+					const tabList = document.querySelectorAll('.tab-link');
+					const tabIndex = Array.from(tabList).indexOf(activeTab); // 해당 탭의 인덱스를 찾기
+
+					// Swiper 슬라이드를 해당 인덱스로 이동
+					tabSwiper.slideTo(tabIndex);  // 해당 인덱스로 슬라이드 이동
+					}
+				}
+
+				// Spyscroll이 끝나면 activateSwipeSlide 실행
+				const spyScrollEl = document.querySelector('[data-bs-target="'+navbarSpyscroll+'"]');
+				let debounceTimer;
+				spyScrollEl.addEventListener('scroll', function() {
+					clearTimeout(debounceTimer); // 기존 타이머 클리어
+					debounceTimer = setTimeout(activateSwipeSlide, 150);  // 150ms 후에 실행
+				});
 			});
 
 			// 모달 바로 볼 수 있도록 호출
@@ -253,13 +228,14 @@
 								<div class="sec-inner">
 									<div class="sec-header">
 										<h4 class="sec-tit">가격</h4>
-										<p class="sec-valued" id="rangeValues"></p>
+										<p class="sec-valued">
+											<span id="customRangeValue" class="value"></span>
+										</p>
 									</div>
 									<div class="sec-body">
 										<div class="filter-range-frm">
-											<div class="range-wrapper">
-												<input type="range" id="range1" min="1000" max="40000" value="4000" class="range" />
-												<input type="range" id="range2" min="1000" max="40000" value="28000" class="range" />
+											<div class="slider-container">
+												<input type="text" class="slider" id="customRange" />
 											</div>
 										</div>
 									</div>
@@ -415,26 +391,26 @@
 										<div class="filter-chk-frm">
 											<div class="filter-chk-group">
 												<h5 class="filter-tit">통신망</h5>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmNet">
 													<span class="chk"><span>SKT망</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmNet">
 													<span class="chk"><span>KT망</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmNet">
 													<span class="chk"><span>LGU+망</span></span>
 												</label>
 											</div>
 											<div class="filter-chk-group">
 												<h5 class="filter-tit">통신기술</h5>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmNet">
 													<span class="chk"><span>LTE</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmNet">
 													<span class="chk"><span>5G</span></span>
 												</label>
@@ -453,7 +429,7 @@
 									<div class="sec-body">
 										<div class="filter-chk-frm">
 											<div class="filter-chk-group">
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>결합 가능</span></span>
 												</label>
@@ -472,19 +448,19 @@
 									<div class="sec-body">
 										<div class="filter-chk-frm">
 											<div class="filter-chk-group">
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>소액 결제</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>해외 로밍</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>모바일 핫스팟</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>데이터 쉐어링</span></span>
 												</label>
@@ -503,59 +479,59 @@
 									<div class="sec-body">
 										<div class="filter-chk-frm">
 											<div class="filter-chk-group">
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>KT엠모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>인스모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>SK7모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>에르엘모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>KG모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>핀다이렉트</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>리브엠</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>이야기모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>고고모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>모나</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>여유알뜰모바일</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>mobing</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>티플러스</span></span>
 												</label>
-												<label class="ui-chk chk-style1">
+												<label class="filter-chk">
 													<input type="checkbox" name="frmCombi">
 													<span class="chk"><span>헬로모바일</span></span>
 												</label>

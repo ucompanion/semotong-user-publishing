@@ -22,7 +22,16 @@
 	.filter-sec {
 		@include sec-basic;
 		.sec-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			margin-bottom: 10rem;
+			.sec-valued {
+				color: $color-primary;
+				font-weight: 600;
+				font-size: 16rem;
+				line-height: 22rem;
+			}
 		}
 	}
 
@@ -136,72 +145,62 @@
 				color: #000;
 			}
 		}
+	}
 
-		.filter-chk {
+	.filter-range-frm {
+		.range-wrapper {
 			position: relative;
-			display: block;
-			padding: 4rem 0;
-			min-width: 150rem;
-			cursor: pointer;
-			&:last-child {
-				margin-bottom: auto;
-			}
-			input {
+			width: 100%;
+			height: 32rem;
+
+			.range {
+				-webkit-appearance: none;
+				width: 100%;
 				position: absolute;
-				top: 4rem;
-				left: 0;
-				z-index: 1;
-				width: 20rem;
-				height: 20rem;
-				outline: none;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: transparent;
+				pointer-events: none;
 			}
-			.chk {
-				display: block;
+
+			.range::-webkit-slider-runnable-track {
+				height: 6rem;
+				background: transparent;
+				border-radius: 6rem;
+				pointer-events: none;
+			}
+
+			.range::-webkit-slider-thumb {
+				-webkit-appearance: none;
 				position: relative;
-				padding-left: 20rem;
-				z-index: 2;
-				&::before,
-				&::after {
-					content:'';
-					display: block;
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 20rem;
-					height: 20rem;
-					background: no-repeat center center;
-				}
-				&::before {
-					opacity: 1;
-					background-image:url('../images/common/icn-20-chk-nor.svg');
-				}
-				&::after {
-					opacity: 0;
-					background-image:url('../images/common/icn-20-chk-sel.svg');
-				}
-				> span {
-					display: block;
-					padding-left: 10rem;
-					font-weight: 500;
-					font-size: 14rem;
-					line-height: 20rem;
-					color: #5A5D60;
-				}
+				top: -13rem;
+				width: 32rem;
+				height: 32rem;
+				background:#fff;
+				border-radius: 50%;
+				border: 1px solid #EFF0F0;
+				box-shadow: 0 0 4rem 0 rgba(0,0,0,0.15);
+				cursor: pointer;
+				pointer-events: auto;
 			}
-			input:checked + .chk {
-				> span {
-					font-weight: 600;
-					color: $color-primary;
-				}
-				&::before {
-					opacity: 0;
-				}
-				&::after {
-					opacity: 1;
-				}
+
+			.range-labels {
+				position: absolute;
+				top: 20px;
+				width: 100%;
+				text-align: center;
+				font-size: 14px;
+				color: #333;
+			}
+
+			.range:nth-child(1) {
+				z-index: 1;
+			}
+
+			.range:nth-child(2) {
+				z-index: 2;
 			}
 		}
 	}
-
 }
 // e: 필터팝업 페이지

@@ -1,271 +1,72 @@
 @charset "utf-8";
-
 /*-------------------------------------------------------------------
-	분류그룹 : 체크박스, 라디오
+	분류그룹 : 탭 메뉴
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ Checkbox
+	@@ 유형
 -------------------------------------------------------------------*/
-/* 스타일 */
-.ui-chk {
-	display: inline-flex;
+.chk-style1 {
 	position: relative;
-	margin: 5px 0;
-	line-height: 1;
-	vertical-align: top;
+	display: block;
+	padding: 4rem 0;
+	min-width: 150rem;
 	cursor: pointer;
-}
-
-.ui-chk .chk {
-	display: inline-flex;
-	position: relative;
-	min-width: 20px;
-	min-height: 20px;
-	font-size: 13px;
-	line-height: 20px;
-}
-
-.ui-chk .chk span {
-	display: inline-block;
-	padding-left: 28px;
-	color: #46484B;
-}
-
-.ui-chk>input {
-	width: 20px;
-	height: 20px;
-	border: 1px solid #ddd;
-	background: #fff;
-}
-
-.ui-chk>input,
-.ui-chk .chk:after {
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-/* Checked */
-.ui-chk>input:checked {
-	border-color: $color-primary;
-}
-
-.ui-chk>input:checked+.chk:after {
-	content: '';
-	left: 5px;
-	top: 5px;
-	width: 10px;
-	height: 7px;
-	background: none;
-	border-left: 2px solid $color-primary;
-	border-bottom: 2px solid $color-primary;
-	transform: rotate(-45deg);
-}
-
-/* Focused */
-.ui-chk>input.is-focused,
-.ui-chk>input:hover,
-.ui-chk>input:focus {
-	border-color: #888;
-}
-
-.ui-chk>input:checked:focus,
-.ui-chk>input:checked:hover {
-	border-color: $color-primary;
-	transition: all 0.3s;
-}
-
-/* Disabled */
-.ui-chk>input[disabled]+.chk {
-	color: #999;
-}
-
-.ui-chk>input[disabled] {
-	background-color: #f0f0f0;
-}
-
-.ui-chk>input[disabled]:focus,
-.ui-chk>input[disabled]:hover {
-	border-color: #ddd;
-}
-
-.ui-chk>input[disabled]:checked+.chk:after {
-	border-color: #888;
-}
-
-.ui-chk>input[disabled]:checked,
-.ui-chk>input[disabled]:checked:focus,
-.ui-chk>input[disabled]:checked:hover {
-	border-color: #888;
-}
-
-/*-------------------------------------------------------------------
-	@@ Radio
--------------------------------------------------------------------*/
-/* 스타일 */
-.ui-rdo {
-	display: inline-flex;
-	position: relative;
-	margin: 5px 0;
-	line-height: 1;
-	vertical-align: top;
-	cursor: pointer;
-}
-
-.ui-rdo .rdo {
-	display: inline-flex;
-	position: relative;
-	min-width: 20px;
-	min-height: 20px;
-	font-size: 13px;
-	line-height: 20px;
-}
-
-.ui-rdo .rdo span {
-	display: inline-block;
-	padding-left: 28px;
-	color: #46484B;
-}
-
-.ui-rdo>input {
-	width: 20px;
-	height: 20px;
-	border: 1px solid #ddd;
-	background: #fff;
-	border-radius: 50%;
-}
-
-.ui-rdo>input,
-.ui-rdo .rdo:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-/* Checked */
-.ui-rdo>input:checked {
-	background-color: #fff;
-	border-color: $color-primary;
-}
-
-.ui-rdo>input:checked+.rdo:after {
-	top: 5px;
-	left: 5px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: $color-primary;
-}
-
-/* Focused */
-.ui-rdo>input.is-focused,
-.ui-rdo>input:hover,
-.ui-rdo>input:focus {
-	border-color: #888;
-}
-
-.ui-rdo>input:checked:focus,
-.ui-rdo>input:checked:hover {
-	border-color: $color-primary;
-	transition: all 0.3s;
-}
-
-/* Disabled */
-.ui-rdo>input[disabled]+.rdo {
-	color: #999;
-}
-
-.ui-rdo>input[disabled] {
-	background-color: #f0f0f0;
-}
-
-.ui-rdo>input[disabled]:focus,
-.ui-rdo>input[disabled]:hover {
-	border-color: #ddd;
-}
-
-.ui-rdo>input[disabled]:checked+.rdo:after {
-	background: #888;
-}
-
-.ui-rdo>input[disabled]:checked,
-.ui-rdo>input[disabled]:checked:focus,
-.ui-rdo>input[disabled]:checked:hover {
-	border-color: #888;
-}
-
-/*-------------------------------------------------------------------
-	@@ Swich
--------------------------------------------------------------------*/
-/* 스타일 */
-.ui-switch {
-	display: inline-flex;
-	position: relative;
-	vertical-align: top;
-}
-
-.ui-switch label {
-	display: inline-flex;
-	width: 44rem;
-}
-
-.ui-switch label:before,
-.ui-switch label:after {
-	content: '';
-}
-
-.ui-switch label:before {
-	display: inline-block;
-	width: 100%;
-	height: 24rem;
-	background-color: #aaa;
-	border-radius: 15px;
-	vertical-align: top;
-}
-
-.ui-switch input,
-.ui-switch label:after {
-	position: absolute;
-	left: 4px;
-	top: 50%;
-	z-index: 1;
-	width: 16rem;
-	height: 16rem;
-	line-height: 16px;
-	text-align: center;
-	border-radius: 50%;
-	overflow: hidden;
-	background-color: #fff;
-	color: #555;
-	font-size: 12px;
-	transform: translateY(-50%);
-	transition: all 0.3s;
-}
-
-.ui-switch input {
-	z-index: 0;
-	border: 0;
-}
-
-.ui-switch input:checked+label::before {
-	background-color: $color-primary;
-}
-
-.ui-switch input:checked,
-.ui-switch input:checked+label:after {
-	left: calc(100% - 20px);
-}
-
-// .ui-switch input+label:after {
-// 	content: 'OFF';
-// }
-
-// .ui-switch input:checked+label:after {
-// 	content: 'ON';
-// }
-
-.ui-switch input[disabled]+label:before {
-	background-color: #ddd;
+	&:last-child {
+		margin-bottom: auto;
+	}
+	input {
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		z-index: 1;
+		width: 20rem;
+		height: 20rem;
+		outline: none;
+	}
+	.chk {
+		display: block;
+		position: relative;
+		padding-left: 20rem;
+		z-index: 2;
+		&::before,
+		&::after {
+			content:'';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 20rem;
+			height: 20rem;
+			background: no-repeat center center;
+		}
+		&::before {
+			opacity: 1;
+			background-image:url('../images/common/icn-20-chk-nor.svg');
+		}
+		&::after {
+			opacity: 0;
+			background-image:url('../images/common/icn-20-chk-sel.svg');
+		}
+		> span {
+			display: block;
+			padding-left: 10rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #5A5D60;
+		}
+	}
+	input:checked + .chk {
+		> span {
+			font-weight: 600;
+			color: $color-primary;
+		}
+		&::before {
+			opacity: 0;
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
 }

@@ -10,8 +10,8 @@
 	// s: 문의내역 섹션
 	.inq-list-sec {
 		// FAQ
-		.basic-accordion {
-			@include basic-accordion;
+		.inq-accordion {
+			@include inq-accordion;
 		}
 
 		// 피드백안내
