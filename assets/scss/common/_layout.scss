@@ -51,7 +51,7 @@ html {
 	z-index: 200;
 	width: 100%;
 	background-color: #fff;
-	box-shadow: 0 0 5rem 0 rgba(0,0,0,0.2);
+	border-bottom: 1px solid #EFF0F0;
 	transition: all 0.2s ease;
 	@include out-sec;
 
@@ -74,8 +74,8 @@ html {
 
 			.logo {
 				display: block;
-				width: 66rem;
-				height: 28rem;
+				width: 58rem;
+				height: 24rem;
 				background: url('../images/common/img-logo-header-bk.png') no-repeat center center / contain;
 			}
 		}
@@ -97,7 +97,7 @@ html {
 	}
 }
 .is-scroll-first .header-mobile {
-	box-shadow: none;
+	border-color: transparent;
 }
 
 // Header Mobile

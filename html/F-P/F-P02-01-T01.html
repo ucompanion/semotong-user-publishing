@@ -18,7 +18,33 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
-	<script></script>
+	<!-- Swiper Librarys -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script>
+		// 인터넷 결합시 할인 금액 보기
+		function toggleActiveClass(checkbox, targetId) {
+			const targetElement = document.getElementById(targetId);
+			if (checkbox.checked) {
+				targetElement.classList.add('is-active');
+			} else {
+				targetElement.classList.remove('is-active');
+			}
+		}
+
+		// DOMContentLoaded
+		document.addEventListener("DOMContentLoaded", function() {
+			const tabSwiper = new Swiper(".tab-swiper", {
+				threshold: 3,
+				spaceBetween: 16,
+				slidesPerView: 'auto',
+				freeMode: true,
+				freeModeMomentum: true,
+				resistance: true,
+				resistanceRatio: 0
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -71,9 +97,9 @@
 		<!-- // Header Deaktop -->
 
 		<!-- Header Mobile -->
-		<header class="header-mobile">
+		<header class="header-mobile only-mo">
 			<section class="header-sec">
-				<h1 class="title">요금제 상세</h1>
+				<h1 class="title"><a href="/" class="logo"><span class="blind">세모통</span></a></h1>
 				<button type="button" class="ui-btn btn-aside" data-bs-toggle="modal" data-bs-target="#asideModal">
 					<i class="ui-icn icn-32-anb-bk" aria-label="메뉴열기"></i>
 				</button>
@@ -90,19 +116,222 @@
 		<main role="main" class="container">
 			<!-- content -->
 			<div class="content F-P02-01-page">
-				본문 컨텐츠
+				<!-- 상품 리스트 섹션 -->
+				<section class="ratePlanC-sec">
+					<div class="sec-inner">
+						<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+						<div class="ratePlanC-card">
+							<div class="card-body">
+								<div class="card-label">
+									<div class="card-label-benefit">
+										<span class="label primary">단독특가</span>
+										<span class="label secondary">+20GB</span>
+									</div>
+									<div class="card-label-option">
+										<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+										<span class="split" aria-hidden="true"></span>
+										<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+									</div>
+								</div>
+								<div class="card-tit">
+									<strong>150GB+최대 5Mbps</strong>
+									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+										data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+										<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+									</button>
+								</div>
+								<div class="card-info">
+									<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+									<span class="split" aria-hidden="true"></span>
+									<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+									<span class="split" aria-hidden="true"></span>
+									<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+								</div>
+								<div class="card-charge">
+									<div class="brand">
+										<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+										<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+									</div>
+									<div class="charge">
+										<p class="charge-tit">58,700원</p>
+										<p class="charge-txt">7개월 이후 49,000원</p>
+									</div>
+								</div>
+								<!-- 카드 클릭영역  -->
+								<button type="button" class="card-button">
+									<span class="blind">요금제 자세히 보기</span>
+								</button>
+							</div>
+							<div class="card-footer">
+								<div class="card-util">
+									<div class="card-util-tooltip">
+										<strong class="tit">밀리의 서재</strong>
+											<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
+											data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+											<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+										</button>
+									</div>
+									<div class="card-util-btn">
+										<button type="button" class="ui-btn is-selected" aria-selected="true">
+											<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+										</button>
+										<button type="button" class="ui-btn">
+											<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+										</button>
+									</div>
+								</div>
+								<!-- Case 선택한상태정보 -->
+								<div class="card-status">
+									<div class="status-choice">
+										<div class="choice">
+											<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
+											<span class="txt"><em>52</em>명 선택</span>
+											<span class="split"></span>
+											<span class="txt"><em>12</em>명 신청 중</span>
+										</div>
+										<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FP0201P01Modal">
+											<span>오류 문의</span>
+											<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
+										</button>
+									</div>
+								</div>
+
+								<!-- Case 상품구매정보 -->
+								<div class="card-buyinfo">
+									<dl class="buyinfo-con">
+										<dt class="tit">유심 구매 시 오늘 바로 개통 가능!</dt>
+										<dd>가까운 편의점이나 지하철역에서 <br>유심을 구매할 수 있어요.</dd>
+									</dl>
+									<button class="buyinfo-btn">
+										<span>구매처가 궁금하신가요?</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--  // 요금제 공통 타입 C : 요금제 상품 카드 -->
+					</div>
+				</section>
+				<!-- // 상품 리스트 섹션 -->
+
+				<!-- 요금제 결합 섹션 -->
+				<section class="ratePlan-combi-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">인터넷 결합되는 요금제에요!</h2>
+						</div>
+						<div class="sec-body">
+							<button type="button" class="combi-bnr">
+								<img src="../../assets/images/upload/@bnr-event-02-mo.png" alt="이벤트 내용" class="only-mo" />
+								<img src="../../assets/images/upload/@bnr-event-02-pc.png" alt="이벤트 내용" class="only-pc" />
+							</button>
+
+							<label class="ui-chk chk-style1">
+								<input type="checkbox" name="frmCombi">
+								<span class="chk"><span>인터넷 결합 시 할인 금액 보기</span></span>
+							</label>
+
+							<div class="check-guide">
+								<p class="check-tit"><strong>Check!</strong></p>
+								<ul class="check-list">
+									<li>인터넷 결합 상품은 알뜰폰 가입 후 상담, 설치 후 선택하신인터넷 결합 상품의 혜택을 받으실 수 있어요.</li>
+									<li>혜택 정보는 통신사별로 상이하니 신청 시 상담사에게 확인 부탁드려요.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // 요금제 결합 섹션 -->
+
+				<!-- 탭 목록 -->
+				<div class="ui-tab tab-style2">
+					<div class="swiper tab-swiper">
+						<div class="swiper-wrapper" role="tablist">
+							<div class="swiper-slide" role="presentation">
+								<button class="tab-link active" id="tab-01" data-bs-toggle="tab" data-bs-target="#tab-01-pane" type="button" role="tab" aria-controls="tab-01-pane" aria-selected="true">요금제 상세 정보</button>
+							</div>
+							<div class="swiper-slide" role="presentation">
+								<button class="tab-link" id="tab-02" data-bs-toggle="tab" data-bs-target="#tab-02-pane" type="button" role="tab" aria-controls="tab-02-pane" aria-selected="false">사은품</button>
+							</div>
+							<div class="swiper-slide" role="presentation">
+								<button class="tab-link" id="tab-03" data-bs-toggle="tab" data-bs-target="#tab-03-pane" type="button" role="tab" aria-controls="tab-03-pane" aria-selected="false">통신사 리뷰</button>
+							</div>
+							<div class="swiper-slide" role="presentation">
+								<button class="tab-link" id="tab-04" data-bs-toggle="tab" data-bs-target="#tab-04-pane" type="button" role="tab" aria-controls="tab-04-pane" aria-selected="false">지주묻는 질문</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 탭 목록 -->
+
+				<!-- 탭 패널 -->
+				<div class="tab-content">
+					<div class="F-P02-01-T01-page tab-pane fade show active" id="tab-01-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+						<!-- sticky 확인을 위한 임시 높이값 -->
+						<section style="height: 1000px;">
+							<div class="sec-inner">
+								<a href="./F-P02-01-T01.html">F-P02-01-T01.html 페이지로 이동</a>
+							</div>
+						</section>
+					</div>
+					<div class="F-P02-01-T02-page tab-pane fade" id="tab-02-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+						<!-- sticky 확인을 위한 임시 높이값 -->
+						<section style="height: 1000px;">
+							<div class="sec-inner">
+								<a href="./F-P02-01-T02.html">F-P02-01-T01.html 페이지로 이동</a>
+							</div>
+						</section>
+					</div>
+					<div class="F-P02-01-T03-page tab-pane fade" id="tab-03-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+						<!-- sticky 확인을 위한 임시 높이값 -->
+						<section style="height: 1000px;">
+							<div class="sec-inner">
+								<a href="./F-P02-01-T03.html">F-P02-01-T01.html 페이지로 이동</a>
+							</div>
+						</section>
+					</div>
+					<div class="F-P02-01-T04-page tab-pane fade" id="tab-04-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+						<!-- sticky 확인을 위한 임시 높이값 -->
+						<section style="height: 1000px;">
+							<div class="sec-inner">
+								<a href="./F-P02-01-T04.html">F-P02-01-T01.html 페이지로 이동</a>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- // 탭 패널 -->
+
+				<!-- 요금제 신청 섹션 -->
+				<section class="payment-noti-sec" id="paymentNotiSec">
+					<div class="sec-inner">
+						<div class="payment-noti">
+							<div class="payment-tit">
+								<h2 class="blind">월 납부금액 알려드릴게요.</h2>
+								<p class="charge"><strong>월 25,500원</strong></p>
+								<p class="explan"><em>7</em>개월 이후 <em class="price">45,000원</em>으로 변동돼요!</p>
+							</div>
+							<div class="payment-con">
+								<div class="item">
+									<p class="tit">12개월 합산 금액</p>
+									<p class="charge">1,000,000원</p>
+								</div>
+								<div class="item">
+									<p class="tit">24개월 합산 금액</p>
+									<p class="charge">2,000,000원</p>
+								</div>
+							</div>
+							<div class="payment-btn">
+								<button type="button" class="ui-btn btn-action primary">
+									<span>신청하기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // 요금제 신청 섹션 -->
 			</div>
 			<!-- // content -->
 		</main>
 		<!-- // Container -->
-
-		<!-- Footer (include_footer.html) -->
-		<footer class="footer"></footer>
-		<!-- // Footer -->
-
-		<!-- floating Nav (include_floatingNav.html) -->
-		<nav class="floating-nav"></nav>
-		<!-- // floating Nav- -->
 	</div>
 </body>
 

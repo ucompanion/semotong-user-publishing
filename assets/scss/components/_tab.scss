@@ -90,6 +90,7 @@
 	width: 100%;
 	position: sticky;
 	top: $mobile-height-header;
+	overflow: hidden;
 	padding-bottom: 30rem;
 	padding-top: 16rem;
 	background-color: #fff;
@@ -104,19 +105,12 @@
 		height: 1rem;
 		background-color: #EFF0F0;
 	}
-
-	.tab-list,
+	.tab-swiper {
+		overflow: visible;
+	}
 	.swiper-wrapper {
 		position: relative;
-		// gap: 16rem;
-		// overflow-y: hidden;
-		// overflow-x: auto;
-		// &::-webkit-scrollbar {
-		// 	width: 0;
-		// 	height: 0;
-		// }
 	}
-	.tab-item,
 	.swiper-slide {
 		box-sizing: border-box;
 		width: auto;
@@ -144,6 +138,21 @@
 		.tab-style1 {
 			top: $pc-height-header;
 			padding-top: 16rem;
+		}
+		.tab-style2 {
+			padding-left: 0;
+			padding-right: 0;
+			@include in-sec;
+			.swiper-wrapper {
+				display: flex;
+				justify-content: space-between;
+				.swiper-slide {
+					display: flex;
+					justify-content: center;
+					flex: 1 1 auto;
+					text-align: center;
+				}
+			}
 		}
 	}
 }

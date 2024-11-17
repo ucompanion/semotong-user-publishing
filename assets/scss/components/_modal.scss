@@ -105,9 +105,11 @@
 	z-index: 2100;
 	.modal-content {
 		width: 312rem;
-		.msg-sec {
+		section {
 			min-width: 100%;
 			padding: 28rem 16rem;
+		}
+		.msg-sec {
 			text-align: center;
 
 			.sec-tit {

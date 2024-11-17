@@ -1,0 +1,155 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 요금제 상세
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+// s: 요금제 상세 페이지
+.F-P02-01-page {
+
+	// 페이시 여백
+	.tab-content {
+		@include bottom-spacer;
+	}
+
+	// s: 요금제 상품 섹션
+	.ratePlanC-sec {
+		padding-top: 10rem;
+
+		// 요금제 상품 카드
+		.ratePlanC-card {
+			@include ratePlanC-card;
+		}
+	}
+	// e: 요금제 상품 섹션
+
+	// s: 요금제 결합
+	.ratePlan-combi-sec {
+		margin-top: 50rem;
+		@include sec-basic;
+		.combi-bnr {
+			display: flex;
+			width: 100%;
+			img {
+				max-width: 100%;
+			}
+		}
+		.ui-chk {
+			margin-top: 14rem;
+		}
+
+		.check-guide {
+			margin-top: 12rem;
+			padding: 20rem 16rem;
+			border-radius: 2rem;
+			background-color: #f4f4f4;
+			.check-tit {
+				margin-bottom: 12rem;
+				font-weight: 700;
+				font-size: 14rem;
+				line-height: 20rem;
+			}
+			.check-list {
+				li {
+					position: relative;
+					padding-left: 18rem;
+					font-weight: 500;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #63666A;
+					word-break: keep-all;
+					&::before {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 6rem;
+						top: 6rem;
+						width: 3rem;
+						height: 3rem;
+						border-radius: 50%;
+						background-color: #63666A;
+					}
+					& + li {
+						margin-top: 6rem;
+					}
+				}
+			}
+		}
+	}
+	// e: 요금제 결합 섹션
+
+	// s: 요금제 신청 섹션
+	.payment-noti-sec {
+		position: sticky;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		margin-top: auto;
+		padding-top: 20rem;
+		background-color: #fff;
+		border-radius: 20rem 20rem 0 0;
+		box-shadow: 0 -4rem 20rem 0 rgba(0,0,0,0.1);
+		visibility: hidden;
+		transform: translateY(100%);
+		opacity: 0;
+		transition: all 0.2s ease;
+		&.is-active {
+			visibility: visible;
+			transform: translateY(0%);
+			opacity: 1;
+		}
+		.payment-noti {
+			.payment-tit {
+				padding: 0 4rem;
+				.charge {
+					font-weight: 700;
+					font-size: 20rem;
+					line-height: 28rem;
+					color: #000;
+				}
+				.explan {
+					margin-top: 1rem;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #828588;
+					em {
+						font-weight: 700;
+						&.price {
+							color: #000;
+						}
+					}
+				}
+			}
+			.payment-con {
+				margin-top: 13rem;
+				padding: 8rem 12rem;
+				border-radius: 4rem;
+				background-color: #F4F5F8;
+				.item {
+					display: flex;
+					justify-content: space-between;
+					font-size: 12rem;
+					line-height: 16rem;
+					.tit {
+						display: block;
+						font-weight: 500;
+					}
+					.charge {
+						display: block;
+						font-weight: 700;
+						text-align: right;
+					}
+					& + .item {
+						margin-top: 2rem;
+					}
+				}
+			}
+			.payment-btn {
+				margin-top: 20rem;
+				padding-bottom: 32rem;
+			}
+		}
+	}
+	// e: 요금제 신청 섹션
+}
+// e: 요금제 상세 페이지
