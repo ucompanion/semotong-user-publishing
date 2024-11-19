@@ -8,6 +8,88 @@
 
 // s: 통신사 리뷰 페이지
 .F-P02-01-T03-page {
+	// s: 통신사 리뷰 섹션
+	.review-sec {
+		// 통신사 리뷰 평점
+		.review-brand-sat {
+			.ui-btn {
+				display: flex;
+				width: 100%;
+				padding: 16rem;
+				border-radius: 4rem;
+				background-color: #F4F5F8;
+				> .brand {
+					display: flex;
+					align-items: center;
+					height: 28rem;
+					gap: 6rem;
+					img {
+						height: 100%;
+					}
+					.brand-rating {
+						display: inline-flex;
+						align-items: center;
+						padding: 3rem 8rem 3rem 4rem;
+						border:1px solid #CDC2F5;
+						border-radius: 15rem;
+						color: $color-primary;
+						font-weight: 500;
+						font-size: 12rem;
+						line-height: 14rem;
+					}
+				}
+				> .ui-icn {
+					margin-left: auto;
+				}
+			}
+		}
 
+		// 이용자 리뷰 평점
+		.review-user-sat {
+			margin-top: 10rem;
+			.review-list {
+				margin-left: calc(#{$mobile-outer-spacer} * -1);
+				margin-right: calc(#{$mobile-outer-spacer} * -1);
+				.review-item {
+					border-bottom: 1px solid #EFF0F0;
+				}
+			}
+
+			.review-card {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 14rem $mobile-outer-spacer;
+
+				.review-name {
+					margin-right: 10rem;
+					font-weight: 700;
+					font-size: 14rem;
+					line-height: 16rem;
+				}
+
+				.review-sat {
+					display: inline-flex;
+					gap: 4rem;
+					align-items: center;
+					.val {
+						font-weight: 500;
+						font-size: 14rem;
+						line-height: 16rem;
+						color: #46484B;
+					}
+				}
+
+				.review-con {
+					margin-top: 8rem;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					max-height: 60rem;
+					@include ellipsis3;
+				}
+			}
+		}
+	}
+	// e: 통신사 리뷰 섹션
 }
 // e: 통신사 리뷰 페이지

@@ -110,7 +110,7 @@ html {
 	width: 100%;
 	padding: 0 40rem;
 	background-color: #fff;
-	box-shadow: 0 0 5rem 0 rgba(0,0,0,0.2);
+	border-bottom: 1px solid #EFF0F0;
 	transition: all 0.2s ease;
 
 	.header-skip {
@@ -179,7 +179,7 @@ html {
 	}
 }
 .is-scroll-first .header-desktop {
-	box-shadow: none;
+	border-color: transparent;
 }
 
 // Header Mobile Nav
@@ -298,7 +298,7 @@ section {
 	right: 20rem;
 	z-index: 100;
 	width: var(--btn-size);
-	transform: translateY(var(--btn-size));
+	transform: translateY(calc(var(--btn-size) + 20rem));
 	transition: all 0.2s ease;
 
 	.btn-menu {

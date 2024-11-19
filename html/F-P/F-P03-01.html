@@ -21,8 +21,8 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// 모달 바로 볼 수 있도록 호출
-			var FP0302Modal = new bootstrap.Modal(document.getElementById('FP0302Modal'));
-			FP0302Modal.show();
+			var FP0301Modal = new bootstrap.Modal(document.getElementById('FP0301Modal'));
+			FP0301Modal.show();
 		});
 	</script>
 </head>
@@ -31,7 +31,7 @@
 	<div class="wrapper">
 		<div style="padding: 30rem;">
 			<!-- 트리거로 모달 띄우기 -->
-			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FP0302Modal">
+			<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FP0301Modal">
 				MODAL OPEN
 			</button>
 		</div>
@@ -44,17 +44,37 @@
 		화면 이름 : 화면아이디-page (modal-select 제외)
 	-->
 	<!-- modal default -->
-	<div class="modal modal-full fade" id="FP0302Modal" tabindex="-1" role="dialog" aria-labelledby="FP0302ModalLabel" aria-hidden="true">
+	<div class="modal modal-alert fade" id="FP0301Modal" tabindex="-1" role="alertdialog" data-bs-backdrop="static" aria-labelledby="FP0301ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
-			<div class="modal-content F-P03-02-page">
+			<div class="modal-content F-P03-01-page">
 				<div class="modal-header">
-					<h3 class="modal-title" id="FP0302ModalLabel">KTskylife</h3>
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
+					<h3 class="modal-title blind" id="FP0301ModalLabel">페이지 이동중</h3>
 				</div>
-				<div class="modal-body"></div>
-				<div class="modal-footer"></div>
+				<div class="modal-body">
+					<!-- 컨텐츠 섹션 -->
+					<section class="msg-sec">
+						<h4 class="sec-tit">입점사명 공식 페이지로<br>이동중이에요.</h4>
+						<p class="sec-txt">조금만 기다려주세요!</p>
+					</section>
+					<!-- // 컨텐츠 섹션 -->
+
+					<!-- 페이지 이동중 섹션 -->
+					<section class="page-moving-sec">
+						<p>쉐이크 LTE 일 5GB+</p>
+						<div class="page-moving">
+							<div class="brand">
+								<img src="../../assets/images/partner/logo-chance.svg" alt="찬스 모바일" />
+							</div>
+							<div class="split">
+								<i class="ui-icn icn-28-moving" aria-label="페이지 이동중"></i>
+							</div>
+							<div class="brand">
+								<img src="../../assets/images/partner/logo-eyagi.svg" alt="이야기 모바일" />
+							</div>
+						</div>
+					</section>
+					<!-- // 페이지 이동중 섹션 -->
+				</div>
 			</div>
 		</div>
 	</div>

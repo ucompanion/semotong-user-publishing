@@ -26,20 +26,30 @@
 		function toggleActiveClass(checkbox, targetId) {
 			const targetElement = document.getElementById(targetId);
 			if (checkbox.checked) {
-				targetElement.classList.add('is-active');
+				targetElement.classList.add('is-sale');
 			} else {
-				targetElement.classList.remove('is-active');
+				targetElement.classList.remove('is-sale');
 			}
 		}
 
 		// DOMContentLoaded
 		document.addEventListener("DOMContentLoaded", function() {
+			// 탭 스와이프
 			const tabSwiper = new Swiper(".tab-swiper", {
 				threshold: 3,
 				spaceBetween: 16,
 				slidesPerView: 'auto',
 				freeMode: true,
 				freeModeMomentum: true,
+				resistance: true,
+				resistanceRatio: 0
+			});
+
+			// 비슷한 요금제 스와이프
+			const similarPlanSwiper = new Swiper(".similar-plan-swiper", {
+				threshold: 3,
+				spaceBetween: 10,
+				slidesPerView: 'auto',
 				resistance: true,
 				resistanceRatio: 0
 			});
@@ -202,7 +212,7 @@
 										<dt class="tit">유심 구매 시 오늘 바로 개통 가능!</dt>
 										<dd>가까운 편의점이나 지하철역에서 <br>유심을 구매할 수 있어요.</dd>
 									</dl>
-									<button class="buyinfo-btn">
+									<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FP0201P03Modal">
 										<span>구매처가 궁금하신가요?</span>
 									</button>
 								</div>
@@ -226,13 +236,13 @@
 							</button>
 
 							<label class="ui-chk chk-style1">
-								<input type="checkbox" name="frmCombi">
+								<input type="checkbox" name="frmCombi" onchange="toggleActiveClass(this, 'paymentNoti')" />
 								<span class="chk"><span>인터넷 결합 시 할인 금액 보기</span></span>
 							</label>
 
-							<div class="check-guide">
-								<p class="check-tit"><strong>Check!</strong></p>
-								<ul class="check-list">
+							<div class="noti-box">
+								<p class="box-tit"><strong>Check!</strong></p>
+								<ul class="box-list">
 									<li>인터넷 결합 상품은 알뜰폰 가입 후 상담, 설치 후 선택하신인터넷 결합 상품의 혜택을 받으실 수 있어요.</li>
 									<li>혜택 정보는 통신사별로 상이하니 신청 시 상담사에게 확인 부탁드려요.</li>
 								</ul>
@@ -265,48 +275,367 @@
 
 				<!-- 탭 패널 -->
 				<div class="tab-content">
+					<!-- 요금제 상세 정보 탭 -->
 					<div class="F-P02-01-T01-page tab-pane fade show active" id="tab-01-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
-						<!-- sticky 확인을 위한 임시 높이값 -->
-						<section style="height: 1000px;">
+						<!-- 요금제 상세 정보 섹션 -->
+						<section class="ratePlan-detail-sec">
 							<div class="sec-inner">
-								<a href="./F-P02-01-T01.html">F-P02-01-T01.html 페이지로 이동</a>
+								<!-- 요금제 상세 카드 -->
+								<div class="ratePlan-detail-card">
+									<div class="card-header">
+										<p class="card-tit">쉐이크 LTE 일 5GB+</p>
+									</div>
+									<div class="card-body">
+										<ul class="card-info">
+											<li><strong class="tit">통화</strong><span class="txt">무제한</span></li>
+											<li><strong class="tit">문자</strong><span class="txt">무제한</span></li>
+											<li><strong class="tit">통신망</strong><span class="txt">LGU+망</span></li>
+											<li><strong class="tit">통신 기술</strong><span class="txt">LTE</span></li>
+										</ul>
+									</div>
+								</div>
+								<!-- // 요금제 상세 카드 -->
+
+								<!-- 요금제상세 아코디언 -->
+								<div class="ratePlan-detail-acco" id="planAccordion">
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button" type="button" data-bs-toggle="collapse" data-bs-target="#planAccordion1"
+												aria-expanded="false" aria-controls="planAccordion1">
+												<span>지원</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="planAccordion1" class="acco-collapse collapse" data-bs-parent="#planAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요.</p>
+													<div>
+														<h3>SMS, MMS(텍스트형, 멀티미디어형) 포함</h3>
+														<ol>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+															<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+															<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+														</ol>
+														<p><small>※ 기본제공되는 문자 미소진시, 잔여량은 이월되지 않아요.</small></p>
+													</div>
+													<p>문자메시지 기본 제공량 소진시 문자 SMS 22원/건, LMS 44원/건, MMS(사진/그림/배경음악 첨부) 220원/건, MMS(동영상 첨부) 440원/건 청구돼요.</p>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#planAccordion2" aria-expanded="false" aria-controls="planAccordion2">
+												<span>미지원</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="planAccordion2" class="acco-collapse collapse" data-bs-parent="#planAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요.</p>
+													<div>
+														<h3>SMS, MMS(텍스트형, 멀티미디어형) 포함</h3>
+														<ol>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+															<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+															<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+														</ol>
+														<p><small>※ 기본제공되는 문자 미소진시, 잔여량은 이월되지 않아요.</small></p>
+													</div>
+													<p>문자메시지 기본 제공량 소진시 문자 SMS 22원/건, LMS 44원/건, MMS(사진/그림/배경음악 첨부) 220원/건, MMS(동영상 첨부) 440원/건 청구돼요.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#planAccordion3" aria-expanded="false" aria-controls="planAccordion3">
+												<span>초과이용요금</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="planAccordion3" class="acco-collapse collapse" data-bs-parent="#planAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요.</p>
+													<div>
+														<h3>SMS, MMS(텍스트형, 멀티미디어형) 포함</h3>
+														<ol>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+															<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+															<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+														</ol>
+														<p><small>※ 기본제공되는 문자 미소진시, 잔여량은 이월되지 않아요.</small></p>
+													</div>
+													<p>문자메시지 기본 제공량 소진시 문자 SMS 22원/건, LMS 44원/건, MMS(사진/그림/배경음악 첨부) 220원/건, MMS(동영상 첨부) 440원/건 청구돼요.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#planAccordion4" aria-expanded="false" aria-controls="planAccordion4">
+												<span>데이터 (상세)</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="planAccordion4" class="acco-collapse collapse" data-bs-parent="#planAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요.</p>
+													<div>
+														<h3>SMS, MMS(텍스트형, 멀티미디어형) 포함</h3>
+														<ol>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+															<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+															<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+														</ol>
+														<p><small>※ 기본제공되는 문자 미소진시, 잔여량은 이월되지 않아요.</small></p>
+													</div>
+													<p>문자메시지 기본 제공량 소진시 문자 SMS 22원/건, LMS 44원/건, MMS(사진/그림/배경음악 첨부) 220원/건, MMS(동영상 첨부) 440원/건 청구돼요.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#planAccordion5" aria-expanded="false" aria-controls="planAccordion5">
+												<span>음성 (상세)</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="planAccordion5" class="acco-collapse collapse" data-bs-parent="#planAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요.</p>
+													<div>
+														<h3>SMS, MMS(텍스트형, 멀티미디어형) 포함</h3>
+														<ol>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+															<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+															<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+														</ol>
+														<p><small>※ 기본제공되는 문자 미소진시, 잔여량은 이월되지 않아요.</small></p>
+													</div>
+													<p>문자메시지 기본 제공량 소진시 문자 SMS 22원/건, LMS 44원/건, MMS(사진/그림/배경음악 첨부) 220원/건, MMS(동영상 첨부) 440원/건 청구돼요.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#planAccordion6" aria-expanded="false" aria-controls="planAccordion6">
+												<span>메시지 (상세)</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="planAccordion6" class="acco-collapse collapse" data-bs-parent="#planAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요.</p>
+													<div>
+														<h3>SMS, MMS(텍스트형, 멀티미디어형) 포함</h3>
+														<ol>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+															<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+															<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+														</ol>
+														<p><small>※ 기본제공되는 문자 미소진시, 잔여량은 이월되지 않아요.</small></p>
+													</div>
+													<p>문자메시지 기본 제공량 소진시 문자 SMS 22원/건, LMS 44원/건, MMS(사진/그림/배경음악 첨부) 220원/건, MMS(동영상 첨부) 440원/건 청구돼요.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#planAccordion7" aria-expanded="false" aria-controls="planAccordion7">
+												<span>유의사항</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="planAccordion7" class="acco-collapse collapse" data-bs-parent="#planAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요.</p>
+													<div>
+														<h3>SMS, MMS(텍스트형, 멀티미디어형) 포함</h3>
+														<ol>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+															<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+															<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+															<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+														</ol>
+														<p><small>※ 기본제공되는 문자 미소진시, 잔여량은 이월되지 않아요.</small></p>
+													</div>
+													<p>문자메시지 기본 제공량 소진시 문자 SMS 22원/건, LMS 44원/건, MMS(사진/그림/배경음악 첨부) 220원/건, MMS(동영상 첨부) 440원/건 청구돼요.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // 요금제상세 아코디언 -->
 							</div>
 						</section>
+						<!-- // 요금제 상세 정보 섹션 -->
 					</div>
+					<!-- // 요금제 상세 정보 탭 -->
+
+					<!-- 사은품 탭 -->
 					<div class="F-P02-01-T02-page tab-pane fade" id="tab-02-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 						<!-- sticky 확인을 위한 임시 높이값 -->
 						<section style="height: 1000px;">
 							<div class="sec-inner">
-								<a href="./F-P02-01-T02.html">F-P02-01-T01.html 페이지로 이동</a>
+								<a href="./F-P02-01-T02.html">F-P02-01-T02.html 페이지로 이동</a>
 							</div>
 						</section>
 					</div>
+					<!-- // 사은품 탭 -->
+
+					<!-- 통신사 리뷰 탭 -->
 					<div class="F-P02-01-T03-page tab-pane fade" id="tab-03-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 						<!-- sticky 확인을 위한 임시 높이값 -->
 						<section style="height: 1000px;">
 							<div class="sec-inner">
-								<a href="./F-P02-01-T03.html">F-P02-01-T01.html 페이지로 이동</a>
+								<a href="./F-P02-01-T03.html">F-P02-01-T03.html 페이지로 이동</a>
 							</div>
 						</section>
 					</div>
+					<!-- // 통신사 리뷰 탭 -->
+
+					<!-- 자주묻는 질문 -->
 					<div class="F-P02-01-T04-page tab-pane fade" id="tab-04-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 						<!-- sticky 확인을 위한 임시 높이값 -->
 						<section style="height: 1000px;">
 							<div class="sec-inner">
-								<a href="./F-P02-01-T04.html">F-P02-01-T01.html 페이지로 이동</a>
+								<a href="./F-P02-01-T04.html">F-P02-01-T04.html 페이지로 이동</a>
 							</div>
 						</section>
 					</div>
+					<!-- // 자주묻는 질문 -->
+
 				</div>
 				<!-- // 탭 패널 -->
 
-				<!-- 요금제 신청 섹션 -->
-				<section class="payment-noti-sec" id="paymentNotiSec">
+				<!-- 비슷한 요금제 섹션 -->
+				<section class="similar-plan-sec">
 					<div class="sec-inner">
-						<div class="payment-noti">
+						<div class="sec-header">
+							<h2 class="sec-tit">비슷한 요금제</h2>
+						</div>
+						<div class="sec-body">
+							<!-- 비슷한 요금제 스와이프 -->
+							<div class="swiper similar-plan-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="similar-plan-card">
+											<div class="card-body">
+												<p class="card-tit"><strong>[SKT] 150G+최대5Mbps (1)</strong></p>
+												<dl class="card-con">
+													<dt>음성</dt>
+													<dd>무제한+부가통화 300분</dd>
+													<dt>데이터</dt>
+													<dd>71GB+다 쓰면 최대 5Mbps</dd>
+													<dt>문자메시지</dt>
+													<dd>기본제공</dd>
+												</dl>
+												<p class="card-charge">19,540원</p>
+												<button type="button" class="card-button">
+													<span class="blind">요금제 자세히보기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="similar-plan-card">
+											<div class="card-body">
+												<p class="card-tit"><strong>[SKT] 150G+최대5Mbps aaaaaaaaaaaaaaaaaaaaa</strong></p>
+												<dl class="card-con">
+													<dt>음성</dt>
+													<dd>무제한+부가통화+부가기능 300분</dd>
+													<dt>데이터</dt>
+													<dd>71GB+다 쓰면 최대 5Mbps aaaaaaaaaaaaaaaa</dd>
+													<dt>문자메시지</dt>
+													<dd>기본제공</dd>
+												</dl>
+												<p class="card-charge">19,540원</p>
+												<button type="button" class="card-button">
+													<span class="blind">요금제 자세히보기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="similar-plan-card">
+											<div class="card-body">
+												<p class="card-tit"><strong>[SKT] 150G+최대5Mbps (3)</strong></p>
+												<dl class="card-con">
+													<dt>음성</dt>
+													<dd>무제한+부가통화 300분</dd>
+													<dt>데이터</dt>
+													<dd>71GB+다 쓰면 최대 5Mbps</dd>
+													<dt>문자메시지</dt>
+													<dd>기본제공</dd>
+												</dl>
+												<p class="card-charge">19,540원</p>
+												<button type="button" class="card-button">
+													<span class="blind">요금제 자세히보기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="similar-plan-card">
+											<div class="card-body">
+												<p class="card-tit"><strong>[SKT] 150G+최대5Mbps (4)</strong></p>
+												<dl class="card-con">
+													<dt>음성</dt>
+													<dd>무제한+부가통화 300분</dd>
+													<dt>데이터</dt>
+													<dd>71GB+다 쓰면 최대 5Mbps</dd>
+													<dt>문자메시지</dt>
+													<dd>기본제공</dd>
+												</dl>
+												<p class="card-charge">19,540원</p>
+												<button type="button" class="card-button">
+													<span class="blind">요금제 자세히보기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // 비슷한 요금제 스와이프 -->
+						</div>
+					</div>
+				</section>
+				<!-- // 비슷한 요금제 섹션 -->
+
+				<!-- 요금제 신청 섹션 -->
+				<section class="payment-noti-sec">
+					<div class="sec-inner">
+						<!-- Case 인터넷 결합 시 할인 금액 보기: is-sale 클래스 추가 -->
+						<div class="payment-noti" id="paymentNoti">
 							<div class="payment-tit">
 								<h2 class="blind">월 납부금액 알려드릴게요.</h2>
-								<p class="charge"><strong>월 25,500원</strong></p>
+								<p class="charge"><strong>월 25,500원</strong></p> <!-- Case 월 납부금액 보기 -->
+								<p class="charge-sale"><strong>월 15,500원</strong><span>(인터넷 결합 할인 예상 금액)</span></p> <!-- Case 인터넷 결합 시 할인 금액 보기 -->
 								<p class="explan"><em>7</em>개월 이후 <em class="price">45,000원</em>으로 변동돼요!</p>
 							</div>
 							<div class="payment-con">

@@ -162,24 +162,17 @@
 }
 
 /*-------------------------------------------------------------------
-	@@ Filter
--------------------------------------------------------------------*/
-.ui-filter {
-	@include input-style;
-	padding: 0;
-	&.h-36 {
-		width: 36rem;
-		height: 36rem;
-	}
-}
-
-/*-------------------------------------------------------------------
 	@@ File
 -------------------------------------------------------------------*/
 /* File Attach */
 .ui-file {
 	position: relative;
 	display: inline-flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14rem;
+	line-height: 20rem;
+	color: #36383A;
 }
 
 .frm-file input.file {

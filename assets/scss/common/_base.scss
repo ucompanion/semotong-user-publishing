@@ -273,21 +273,23 @@ input::-webkit-calendar-picker-indicator {
 	-webkit-appearance: none;
 }
 
-.dv-android [tabindex='0']:focus,
-.dv-android a:focus,
-.dv-android button:focus,
-.dv-android input:focus,
-.dv-android textarea:focus,
-.dv-android select:focus {
+// Android
+[tabindex='0']:focus,
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
 	outline: 0;
 }
 
-.dv-ios [tabindex='0'],
-.dv-ios a,
-.dv-ios button,
-.dv-ios input,
-.dv-ios textarea,
-.dv-ios select {
+// IOS
+[tabindex='0'],
+a,
+button,
+input,
+textarea,
+select {
 	-webkit-tap-highlight-color: transparent;
 }
 // Scroll Style

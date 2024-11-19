@@ -15,6 +15,7 @@
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	transition: all 0.2s ease;
 
 	> span {
 		position: relative;
@@ -105,10 +106,16 @@
 	font-size: 14rem;
 	line-height: 20rem;
 	color: #5A5D60;
+	&:active {
+		background-color: #CFD0D1;
+	}
+	&:disabled {
+		background-color: #EFF0F0;
+	}
 }
 // e: 더보기 리스트
 
-// s: 플로팅 액션
+// s: 페이지 액션 버튼
 .btn-action {
 	width: 100%;
 	max-width: $pc-inner-content;
@@ -119,12 +126,62 @@
 	font-size: 16rem;
 	line-height: 22rem;
 	color: #2A2B2D;
+	&:active {
+		background-color: #CFD0D1;
+	}
+	&:disabled {
+	background-color: #CFD0D1;
+		color: #fff;
+	}
+
 	&.primary {
 		background-color: $color-primary;
 		color: #fff;
+		&:active {
+			background-color: #2801B5;
+		}
 		&:disabled {
 			background-color: #CDC2F5;
 		}
 	}
 }
-// e: 플로팅 액션
+// e: 페이지 액션 버튼
+
+// s: 서브 버튼
+.btn-sub {
+	background-color: #EAE6FB;
+	color: $color-primary;
+	&:active {
+		background-color: #CDC2F5;
+	}
+	&:disabled {
+		background-color: #CDC2F5;
+		color: rgba(84, 47, 221, 0.3);
+	}
+	&.xl {
+		height: 48rem;
+		width: 100%;
+		margin-top: 20rem;
+		border-radius: 4rem;
+		font-weight: 600;
+		font-size: 14rem;
+		line-height: 20rem;
+	}
+	&.xs {
+		padding: 10rem 12rem;
+		border-radius: 4rem;
+		font-weight: 600;
+	}
+}
+// e: 서브 버튼
+
+// s: 버튼 텍스트
+.btn-texted {
+	font-weight: 600;
+	font-size: 14rem;
+	line-height: 20rem;
+	color: #63666A;
+	text-decoration: underline;
+	text-underline-position: under;
+}
+// e: 버튼 텍스트

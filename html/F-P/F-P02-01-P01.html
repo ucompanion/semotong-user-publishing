@@ -48,22 +48,57 @@
 		<div class="modal-dialog">
 			<div class="modal-content F-P02-01-P01-page">
 				<div class="modal-header">
-					<h3 class="modal-title" id="FP0201P01ModalLabel"></h3>
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
+					<h3 class="modal-title blind" id="confirmModalLabel">Confirm Message</h3>
 				</div>
 				<div class="modal-body">
 					<!-- 컨텐츠 섹션 -->
-					<section>
-						<div class="sec-inner">
-							<!-- 모달 가이드 -->
-							<a href="./F-P02-01-P01.html">F-P02-01-P01 페이지로 이동</a>
-						</div>
+					<section class="msg-sec">
+						<p class="sec-tit">고객님, 잘못된 정보가<br> 제공되어 죄송합니다.</p>
+						<p class="sec-txt">어떤 내용인지 알려주시겠어요?</p>
+
+						<ul class="report-list">
+							<li class="report-item">
+								<label class="ui-rdo rdo-style1 type-block">
+									<input type="checkbox" name="frmChkReport" onchange="setRadioSelected('frmChkReport', '.rdo-style1')" />
+									<span class="rdo"><span>인터넷 결합 시 할인 금액 보기</span></span>
+								</label>
+							</li>
+							<li class="report-item">
+								<label class="ui-rdo rdo-style1 type-block">
+									<input type="checkbox" name="frmChkReport" onchange="setRadioSelected('frmChkReport', '.rdo-style1')" />
+									<span class="rdo"><span>통화 / 데이터 제공량 등 요금제 정보</span></span>
+								</label>
+							</li>
+							<li class="report-item">
+								<label class="ui-rdo rdo-style1 type-block">
+									<input type="checkbox" name="frmChkReport" onchange="setRadioSelected('frmChkReport', '.rdo-style1')" />
+									<span class="rdo"><span>이벤트 / 사은품 정보</span></span>
+								</label>
+							</li>
+							<li class="report-item">
+								<label class="ui-rdo rdo-style1 type-block">
+									<input type="checkbox" name="frmChkReport" onchange="setRadioSelected('frmChkReport', '.rdo-style1')" />
+									<span class="rdo"><span>기타</span></span>
+								</label>
+							</li>
+							<li class="report-item">
+								<div class="ui-textarea">
+									<textarea name="" id="frmTextarea" cols="50" rows="4" class="textarea" placeholder="불편했던 내용을 써주세요. (필수)"></textarea>
+									<p class="bytes"><em class="count">0/</em>500</p>
+								</div>
+							</li>
+						</ul>
 					</section>
 					<!-- // 컨텐츠 섹션 -->
 				</div>
-				<div class="modal-footer"></div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
+						<span>취소하기</span>
+					</button>
+					<button type="button" class="ui-btn btn-modal primary" data-bs-dismiss="modal">
+						<span>보내기</span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -86,7 +86,6 @@
 	.modal-footer {
 		display: flex;
 		flex:none;
-		gap: 8rem;
 	}
 
 	.tab-content[data-bs-spy="scroll"] {
@@ -252,6 +251,8 @@
 	}
 	.modal-footer {
 		@include out-sec;
+		gap: 8rem;
+
 		.ui-btn {
 			flex:1 1 auto;
 		}

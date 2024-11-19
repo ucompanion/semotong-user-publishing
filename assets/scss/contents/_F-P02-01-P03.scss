@@ -5,6 +5,21 @@
 -------------------------------------------------------------------*/
 // s: 구매처 알림 팝업 Case1 페이지
 .F-P02-01-P03-page {
+	.modal-body {
+		padding-bottom: 0;
+		margin-bottom: 40rem
+	}
 
+	// s: 유심구매 안내 섹션
+	.usimBuy-intro-sec {
+		@include usimBuy-intro-sec;
+	}
+	// e: 유심구매 안내 섹션
+
+	// s: 어디서 구매하나요 섹션
+	.usimBuy-store-sec {
+		@include usimBuy-store-sec;
+	}
+	// e: 어디서 구매하나요 섹션
 }
 // e: 구매처 알림 팝업 Case1 페이지

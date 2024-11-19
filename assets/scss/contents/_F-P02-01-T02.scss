@@ -8,6 +8,11 @@
 
 // s: 사은품 페이지
 .F-P02-01-T02-page {
+	// s: 사은품 섹션
+	.noti-box {
+		@include noti-box;
+	}
 
+	// e: 사은품 섹션
 }
 // e: 사은품 페이지

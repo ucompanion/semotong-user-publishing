@@ -60,6 +60,72 @@
 	input:checked + .chk {
 		> span {
 			font-weight: 600;
+
+		}
+		&::before {
+			opacity: 0;
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+.rdo-style1 {
+	position: relative;
+	display: block;
+	padding: 4rem 0;
+	min-width: 150rem;
+	cursor: pointer;
+	&:last-child {
+		margin-bottom: auto;
+	}
+	input {
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		z-index: 1;
+		width: 20rem;
+		height: 20rem;
+		outline: none;
+	}
+	.rdo {
+		display: block;
+		position: relative;
+		padding-left: 20rem;
+		text-align: left;
+		z-index: 2;
+		&::before,
+		&::after {
+			content:'';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 20rem;
+			height: 20rem;
+			background: no-repeat center center;
+		}
+		&::before {
+			opacity: 1;
+			background-image:url('../images/common/icn-20-rdo-basic-nor.svg');
+		}
+		&::after {
+			opacity: 0;
+			background-image:url('../images/common/icn-20-rdo-basic-sel.svg');
+		}
+		> span {
+			display: block;
+			padding-left: 10rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #5A5D60;
+		}
+	}
+	input:checked + .rdo {
+		> span {
+			font-weight: 600;
 			color: $color-primary;
 		}
 		&::before {
@@ -67,6 +133,17 @@
 		}
 		&::after {
 			opacity: 1;
+		}
+	}
+
+	&.type-block {
+		padding: 11rem;
+		border:1px solid transparent;
+		border-radius: 4rem;
+		background-color: #F4F4F4;
+		&.is-selected {
+			border-color: #A692ED;
+			background-color: #fff;
 		}
 	}
 }

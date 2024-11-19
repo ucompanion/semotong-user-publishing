@@ -89,9 +89,10 @@
 
 		.ratePlan-filter-list {
 			display: flex;
+			flex-wrap: wrap;
 			gap: 8rem;
 			overflow: auto;
-			margin: 0 calc(#{$mobile-outer-spacer} * -1);
+			// margin: 0 calc(#{$mobile-outer-spacer} * -1);
 			&::-webkit-scrollbar {
 				height: 0;
 			}
@@ -100,22 +101,63 @@
 				display: flex;
 				width: auto;
 				box-sizing: border-box;
-				&:first-child {
-					margin-left: $mobile-outer-spacer;
-				}
-				&:last-child {
-					margin-right: $mobile-outer-spacer;
+				// &:first-child {
+				// 	margin-left: $mobile-outer-spacer;
+				// }
+				// &:last-child {
+				// 	margin-right: $mobile-outer-spacer;
+				// }
+
+				.filter-btn {
+					display: flex;
+					align-items: center;
+					position: relative;
+					flex:none;
+					gap: 2rem;
+					height: 36rem;
+					min-width: 36rem;
+					padding: 5rem 5rem 5rem 5rem;
+					border-radius: 6rem;
+					border:1px solid #CFD0D1;
+					> span {
+						display: block;
+						padding-right: 4rem;
+					}
+					&.is-setting {
+						border-color: #36383A;
+						&::after {
+							content:'';
+							position: absolute;
+							top: 6rem;
+							left: 25rem;
+							z-index: 2;
+							display: block;
+							width: 3rem;
+							height: 3rem;
+							border-radius: 50%;
+							background-color: #EA2A2A;
+						}
+					}
+					& + .split {
+						@include split-set(36rem, #CFD0D1);
+						margin-left: 8rem;
+					}
 				}
 
-				div {
-					flex: none
+				.filter-chip {
+					flex:none;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 2rem;
+					background-color: #EFF0F0;
+					padding: 8rem 8rem 8rem 10rem;
+					border-radius: 6rem;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #36383A;
 				}
-
-				.ui-filter + .split {
-					@include split-set(36rem, #CFD0D1);
-					margin-left: 8rem;
-				}
-
 			}
 			@include media-tablet-xs {
 				margin: 0 0;

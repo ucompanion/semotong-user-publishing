@@ -71,9 +71,10 @@
 		<!-- // Header Deaktop -->
 
 		<!-- Header Mobile -->
-		<header class="header-mobile">
+		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
+		<header class="header-mobile only-mo">
 			<section class="header-sec">
-				<h1 class="title">인터넷</h1>
+				<h1 class="title"><a href="/" class="logo"><span class="blind">세모통</span></a></h1>
 				<button type="button" class="ui-btn btn-aside" data-bs-toggle="modal" data-bs-target="#asideModal">
 					<i class="ui-icn icn-32-anb-bk" aria-label="메뉴열기"></i>
 				</button>
@@ -89,8 +90,322 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<div class="content 화면명-page">
-				본문 컨텐츠
+			<div class="content F-I01-01-page">
+				<!-- 인터넷 소개 섹션 -->
+				<section class="internet-intro-sec">
+					<div class="sec-inner">
+						<div class="intro-box">
+							<div class="intro-img">
+								<img src="../../assets/images/common/img-80-int-char.png" alt="" />
+							</div>
+							<div class="intro-con">
+								<p class="txt">세모통에서 요금제 개통하신 고객님!</p>
+								<p class="tit"><strong><span>인터넷 결합하시면 더 많은 혜택이 준비되어 있어요!</span> <span>바로 상담 받아 보세요!</span></strong></p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // 인터넷 소개 섹션 -->
+
+				<!-- 통신사 선택 섹션 -->
+				<section class="telcom-choice-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">통신사를 선택해주세요</h2>
+						</div>
+						<div class="sec-body">
+							<ul class="choice-list">
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<span class="choice-con">
+											<img src="../../assets/images/common/img-choice-kt.png" alt="KT" />
+											<strong class="tit">KT</strong>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<span class="choice-con">
+											<img src="../../assets/images/common/img-choice-lg.png" alt="KT" />
+											<strong class="tit">LG</strong>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<span class="choice-con">
+											<img src="../../assets/images/common/img-choice-sk.png" alt="KT" />
+											<strong class="tit">SK</strong>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<span class="choice-con">
+											<img src="../../assets/images/common/img-choice-skylife.png" alt="KT" />
+											<strong class="tit">SkyLife</strong>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<span class="choice-con">
+											<img src="../../assets/images/common/img-choice-lghv.png" alt="KT" />
+											<strong class="tit">LG HelloVision</strong>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<span class="choice-con">
+											<img src="../../assets/images/common/img-choice-skb.png" alt="KT" />
+											<strong class="tit">SKB(알뜰)</strong>
+										</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- // 통신사 선택 섹션 -->
+
+				<!-- 인터넷 선택 섹션 -->
+				<section class="internet-choice-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">사용하실 인터넷을 선택해주세요</h2>
+						</div>
+						<div class="sec-body">
+							<ul class="choice-list">
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">100Mbps</strong>
+											<span class="txt"><i class="ui-icn icn-20-speed-gr" aria-hidden="true"></i>보통속도</span>
+											<span class="txt"><i class="ui-icn icn-20-user-gr" aria-hidden="true"></i>1~2인 가구</span>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">500Mbps</strong>
+											<span class="txt"><i class="ui-icn icn-20-speed-gr" aria-hidden="true"></i>빠른속도</span>
+											<span class="txt"><i class="ui-icn icn-20-user-gr" aria-hidden="true"></i>4인 가구</span>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">1Gbps</strong>
+											<span class="txt"><i class="ui-icn icn-20-speed-gr" aria-hidden="true"></i>매우 빠른 속도</span>
+											<span class="txt"><i class="ui-icn icn-20-user-gr" aria-hidden="true"></i>라이브 전문 방송인</span>
+										</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="option-list">
+								<li class="option-item">
+									<label class="ui-chk chk-style1">
+										<input type="checkbox" name="frmInternet">
+										<span class="chk"><span>공유기와 함께</span></span>
+									</label>
+								</li>
+								<li class="option-item">
+									<label class="ui-chk chk-style1">
+										<input type="checkbox" name="frmInternet">
+										<span class="chk"><span>TV와 함께</span></span>
+									</label>
+								</li>
+								<li class="option-item">
+									<label class="ui-chk chk-style1">
+										<input type="checkbox" name="frmInternet">
+										<span class="chk"><span>전화와 함께</span></span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- // 인터넷 선택 섹션 -->
+
+				<!-- TV채널 선택 섹션 -->
+				<section class="chanel-choice-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<span class="sec-label">TV와 함께</span>
+							<h2 class="sec-tit">TV 채널을 선택해주세요</h2>
+						</div>
+						<div class="sec-body">
+							<ul class="choice-list">
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">236채널</strong>
+											<span class="txt">가성비가 좋은 채널</span>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">240채널</strong>
+											<span class="txt">합리적인 가격의 채널</span>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">263채널</strong>
+											<span class="txt">프리미엄 채널</span>
+										</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- // TV채널 선택 섹션 -->
+
+				<!-- 전화 선택 섹션 -->
+				<section class="call-choice-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<span class="sec-label">전화와 함께</span>
+							<h2 class="sec-tit">전화를 선택해주세요</h2>
+						</div>
+						<div class="sec-body">
+							<ul class="choice-list">
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmCall" onchange="setRadioSelected('frmCall', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">옵션 1</strong>
+											<span class="txt">옵션 설명이 들어갑니다.</span>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmCall" onchange="setRadioSelected('frmCall', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">옵션 2</strong>
+											<span class="txt">옵션 설명이 들어갑니다.</span>
+										</span>
+									</label>
+								</li>
+								<li class="choice-item">
+									<label class="choice-rdo">
+										<input type="radio" name="frmCall" onchange="setRadioSelected('frmCall', '.choice-rdo')">
+										<span class="choice-con">
+											<strong class="tit">옵션 3</strong>
+											<span class="txt">옵션 설명이 들어갑니다.</span>
+										</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- // 전화 선택 섹션 -->
+
+				<!-- 요금제 누눈에 보기 섹션 -->
+				<section class="plan-view-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">KT 요금제 한눈에 보기</h2>
+						</div>
+						<div class="sec-body">
+							<div class="plan-table">
+								<img src="../../assets/images/common/img-plan-table.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // 요금제 누눈에 보기 섹션 -->
+
+				<!-- 인터넷 가입절차 섹션 -->
+				<section class="join-steps-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">인터넷 가입 절차 알려드려요</h2>
+						</div>
+						<div class="sec-body">
+							<ol class="join-steps">
+								<li>
+									<em class="num">1</em>
+									<dl class="con">
+										<dt>친절 상담</dt>
+										<dd>최적요금제 추천, 업셀링 NO!</dd>
+									</dl>
+								</li>
+								<li>
+									<em class="num">2</em>
+									<dl class="con">
+										<dt>신청서 작성</dt>
+										<dd>3분이면 작성완료!</dd>
+									</dl>
+								</li>
+								<li>
+									<em class="num">3</em>
+									<dl class="con">
+										<dt>본사 접수</dt>
+										<dd>상담 후 3시간 이내</dd>
+									</dl>
+								</li>
+								<li>
+									<em class="num">4</em>
+									<dl class="con">
+										<dt>설치 완료</dt>
+										<dd>원하는 날짜에 설치 가능! (신청 후 1~2일)</dd>
+									</dl>
+								</li>
+								<li>
+									<em class="num">5</em>
+									<dl class="con">
+										<dt>사은품 입금</dt>
+										<dd>설치 당일 혹은 익일 입금!</dd>
+									</dl>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+				<!-- // 인터넷 가입절차 섹션 -->
+
+				<!-- 납부금액 알림 섹션 -->
+				<section class="payment-noti-sec">
+					<div class="sec-inner">
+						<div class="payment-noti">
+							<div class="payment-tit">
+								<h2 class="blind">월 납부금액 알려드릴게요.</h2>
+								<p class="charge"><strong>월 25,500원</strong></p>
+								<p class="freeGift">현급 지급 사은품 <strong>최대 480,000원</strong></p>
+								<p class="explan"><i class="ui-icn icn-14-noti-gr"></i>자세한 요금은 상담 시 안내드릴게요</p>
+							</div>
+							<div class="payment-btn">
+								<button type="button" class="ui-btn btn-action primary" data-bs-toggle="modal" data-bs-target="#FI0101P01Modal">
+									<span>신청하기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- // 납부금액 알림 섹션 -->
 			</div>
 			<!-- // content -->
 		</main>
@@ -104,6 +419,38 @@
 		<nav class="floating-nav"></nav>
 		<!-- // floating Nav- -->
 	</div>
+
+	<!--
+		[모달 가이드]
+		모달 효과 : fade (공통), fade-pc (풀팝업일때)
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+		화면 이름 : 화면아이디-page (modal-select 제외)
+	-->
+	<!-- 인터넷 상품 상담 신청하기 modal basic -->
+	<div class="modal modal-basic fade" id="FI0101P01Modal" tabindex="-1" role="dialog" aria-labelledby="FI0101P01ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-I01-01-P01-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="FI0101P01ModalLabel"></h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+
+				</div>
+				<div class="modal-body">
+					<section>
+						<div class="sec-inner">
+							<p>인터넷 상품 상담 신청하기 페이지로 이동</p>
+							<p><a href="./F-I01-01-P01.html">F-I01-01-P01.html</a></p>
+						</div>
+					</section>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // 인터넷 상품 상담 신청하기 modal basic -->
 </body>
 
 </html>

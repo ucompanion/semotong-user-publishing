@@ -132,93 +132,75 @@
 						</div>
 						<div class="sec-body">
 							<ul class="ratePlan-filter-list">
+								<!-- 필수 - 필터버튼 -->
 								<li>
 									<!-- ui-filter: input.scss 가이드에 포함 -->
-									<button type="button" class="ui-filter h-36" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
-										<i class="ui-icn icn-24-filter-gr" aria-label="필터"></i>
+									<button type="button" class="filter-btn is-setting" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+										<i class="ui-icn icn-24-filter-gr" aria-hidden="true"></i>
+										<span>필터</span>
 									</button>
 									<span class="split" aria-hidden="true"></span>
 								</li>
+
+								<!--  Cases -->
 								<li>
-									<!-- 선택된 필터: is-selected -->
-									<div class="ui-sel h-36 is-selected">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectDataModal">
-											<span>데이터<em>1</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button type="button" class="filter-btn">
+										<i class="ui-icn icn-24-refresh-gr" aria-label="새로고침"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel is-selected" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectPriceModal">
-											<span>가격<em>1</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>데이터</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSpeedModal">
-											<span>소진시 속도<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>가격</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSaleModal">
-											<span>할인 기간<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>소진시 속도</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCallModal">
-											<span>통화<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>할인 기간</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSmsModal">
-											<span>문자<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>통화</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectNetModal">
-											<span>통신 정보<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>문자</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCombiModal">
-											<span>인터넷 결합<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>통신정보</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectAddServiceModal">
-											<span>부가 서비스<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>인터넷 결합</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectTelecomModal">
-											<span>통신사<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>부가 서비스</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 							</ul>
 						</div>
@@ -831,186 +813,6 @@
 		</div>
 	</div>
 	<!-- // 정렬 modal select -->
-
-	<!-- 데이터 modal select -->
-	<div class="modal modal-select fade" id="selectDataModal" tabindex="-1" role="dialog" aria-labelledby="selectDataModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectDataModalLabel">데이터</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 데이터 modal select -->
-
-	<!-- 가격 modal select -->
-	<div class="modal modal-select fade" id="selectPriceModal" tabindex="-1" role="dialog" aria-labelledby="selectPriceModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectPriceModalLabel">가격</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 가격 modal select -->
-
-	<!-- 소진시속도 modal select -->
-	<div class="modal modal-select fade" id="selectSpeedModal" tabindex="-1" role="dialog" aria-labelledby="selectSpeedModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectSpeedModalLabel">소진시 속도</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 소진시속도 modal select -->
-
-	<!-- 할인기간 modal select -->
-	<div class="modal modal-select fade" id="selectSaleModal" tabindex="-1" role="dialog" aria-labelledby="selectSaleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectSaleModalLabel">할인 기간</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 할인기간 modal select -->
-
-	<!-- 통화 modal select -->
-	<div class="modal modal-select fade" id="selectCallModal" tabindex="-1" role="dialog" aria-labelledby="selectCallModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectCallModalLabel">통화</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 통화 modal select -->
-
-	<!-- 문자 modal select -->
-	<div class="modal modal-select fade" id="selectSmsModal" tabindex="-1" role="dialog" aria-labelledby="selectSmsModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectSmsModalLabel">문자</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 문자 modal select -->
-
-	<!-- 통신정보 modal select -->
-	<div class="modal modal-select fade" id="selectNetModal" tabindex="-1" role="dialog" aria-labelledby="selectNetModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectNetModalLabel">통신 정보</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 통신정보 modal select -->
-
-	<!-- 인터넷결합 modal select -->
-	<div class="modal modal-select fade" id="selectCombiModal" tabindex="-1" role="dialog" aria-labelledby="selectCombiModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectCombiModalLabel">인터넷 결합</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 인터넷결합 modal select -->
-
-	<!-- 부가서비스 modal select -->
-	<div class="modal modal-select fade" id="selectAddServiceModal" tabindex="-1" role="dialog" aria-labelledby="selectAddServiceModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectAddServiceModalLabel">부가 서비스</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 부가서비스 modal select -->
-
-	<!-- 통신사 modal select -->
-	<div class="modal modal-select fade" id="selectTelecomModal" tabindex="-1" role="dialog" aria-labelledby="selectTelecomModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title" id="selectTelecomModalLabel">통신사</h3>
-					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-				</div>
-				<div class="modal-body">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 통신사 modal select -->
 </body>
 
 </html>

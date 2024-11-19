@@ -26,9 +26,9 @@
 		function toggleActiveClass(checkbox, targetId) {
 			const targetElement = document.getElementById(targetId);
 			if (checkbox.checked) {
-				targetElement.classList.add('is-active');
+				targetElement.classList.add('is-sale');
 			} else {
-				targetElement.classList.remove('is-active');
+				targetElement.classList.remove('is-sale');
 			}
 		}
 
@@ -40,6 +40,16 @@
 				slidesPerView: 'auto',
 				freeMode: true,
 				freeModeMomentum: true,
+				resistance: true,
+				resistanceRatio: 0,
+				slideToClickedSlide: true
+			});
+
+			// 비슷한 요금제 스와이프
+			const similarPlanSwiper = new Swiper(".similar-plan-swiper", {
+				threshold: 3,
+				spaceBetween: 10,
+				slidesPerView: 'auto',
 				resistance: true,
 				resistanceRatio: 0
 			});
@@ -202,7 +212,7 @@
 										<dt class="tit">유심 구매 시 오늘 바로 개통 가능!</dt>
 										<dd>가까운 편의점이나 지하철역에서 <br>유심을 구매할 수 있어요.</dd>
 									</dl>
-									<button class="buyinfo-btn">
+									<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#FP0201P03Modal">
 										<span>구매처가 궁금하신가요?</span>
 									</button>
 								</div>
@@ -226,13 +236,13 @@
 							</button>
 
 							<label class="ui-chk chk-style1">
-								<input type="checkbox" name="frmCombi">
+								<input type="checkbox" name="frmCombi" onchange="toggleActiveClass(this, 'paymentNoti')" />
 								<span class="chk"><span>인터넷 결합 시 할인 금액 보기</span></span>
 							</label>
 
-							<div class="check-guide">
-								<p class="check-tit"><strong>Check!</strong></p>
-								<ul class="check-list">
+							<div class="noti-box">
+								<p class="box-tit"><strong>Check!</strong></p>
+								<ul class="box-list">
 									<li>인터넷 결합 상품은 알뜰폰 가입 후 상담, 설치 후 선택하신인터넷 결합 상품의 혜택을 받으실 수 있어요.</li>
 									<li>혜택 정보는 통신사별로 상이하니 신청 시 상담사에게 확인 부탁드려요.</li>
 								</ul>
@@ -247,7 +257,7 @@
 					<div class="swiper tab-swiper">
 						<div class="swiper-wrapper" role="tablist">
 							<div class="swiper-slide" role="presentation">
-								<button class="tab-link active" id="tab-01" data-bs-toggle="tab" data-bs-target="#tab-01-pane" type="button" role="tab" aria-controls="tab-01-pane" aria-selected="true">요금제 상세 정보</button>
+								<button class="tab-link" id="tab-01" data-bs-toggle="tab" data-bs-target="#tab-01-pane" type="button" role="tab" aria-controls="tab-01-pane" aria-selected="false">요금제 상세 정보</button>
 							</div>
 							<div class="swiper-slide" role="presentation">
 								<button class="tab-link" id="tab-02" data-bs-toggle="tab" data-bs-target="#tab-02-pane" type="button" role="tab" aria-controls="tab-02-pane" aria-selected="false">사은품</button>
@@ -256,7 +266,7 @@
 								<button class="tab-link" id="tab-03" data-bs-toggle="tab" data-bs-target="#tab-03-pane" type="button" role="tab" aria-controls="tab-03-pane" aria-selected="false">통신사 리뷰</button>
 							</div>
 							<div class="swiper-slide" role="presentation">
-								<button class="tab-link" id="tab-04" data-bs-toggle="tab" data-bs-target="#tab-04-pane" type="button" role="tab" aria-controls="tab-04-pane" aria-selected="false">지주묻는 질문</button>
+								<button class="tab-link active" id="tab-04" data-bs-toggle="tab" data-bs-target="#tab-04-pane" type="button" role="tab" aria-controls="tab-04-pane" aria-selected="true">지주묻는 질문</button>
 							</div>
 						</div>
 					</div>
@@ -265,7 +275,8 @@
 
 				<!-- 탭 패널 -->
 				<div class="tab-content">
-					<div class="F-P02-01-T01-page tab-pane fade show active" id="tab-01-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+					<!-- 요금제 상세 정보 탭 -->
+					<div class="F-P02-01-T01-page tab-pane fade" id="tab-01-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 						<!-- sticky 확인을 위한 임시 높이값 -->
 						<section style="height: 1000px;">
 							<div class="sec-inner">
@@ -273,40 +284,216 @@
 							</div>
 						</section>
 					</div>
+					<!-- // 요금제 상세 정보 탭 -->
+
+					<!-- 사은품 탭 -->
 					<div class="F-P02-01-T02-page tab-pane fade" id="tab-02-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 						<!-- sticky 확인을 위한 임시 높이값 -->
 						<section style="height: 1000px;">
 							<div class="sec-inner">
-								<a href="./F-P02-01-T02.html">F-P02-01-T01.html 페이지로 이동</a>
+								<a href="./F-P02-01-T02.html">F-P02-01-T02.html 페이지로 이동</a>
 							</div>
 						</section>
 					</div>
+					<!-- // 사은품 탭 -->
+
+					<!-- 통신사 리뷰 탭 -->
 					<div class="F-P02-01-T03-page tab-pane fade" id="tab-03-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 						<!-- sticky 확인을 위한 임시 높이값 -->
 						<section style="height: 1000px;">
 							<div class="sec-inner">
-								<a href="./F-P02-01-T03.html">F-P02-01-T01.html 페이지로 이동</a>
+								<a href="./F-P02-01-T03.html">F-P02-01-T03.html 페이지로 이동</a>
 							</div>
 						</section>
 					</div>
-					<div class="F-P02-01-T04-page tab-pane fade" id="tab-04-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
-						<!-- sticky 확인을 위한 임시 높이값 -->
-						<section style="height: 1000px;">
+					<!-- // 통신사 리뷰 탭 -->
+
+					<!-- 자주묻는 질문 -->
+					<div class="F-P02-01-T04-page tab-pane fade show active" id="tab-04-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+						<!-- 자주묻는 질문 섹션 -->
+						<section class="faq-sec">
 							<div class="sec-inner">
-								<a href="./F-P02-01-T04.html">F-P02-01-T01.html 페이지로 이동</a>
+								<!-- 자주묻는 질문 아코디언 -->
+								<div class="faq-accordion" id="faqAccordion">
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccordionOne"
+												aria-expanded="false" aria-controls="faqAccordionOne">
+												<span><em>Q.</em>쓰던 번호 그대로 알뜰폰 가입할 수 있나요?</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="faqAccordionOne" class="acco-collapse collapse" data-bs-parent="#faqAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요. 문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요. 문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#faqAccordionTwo" aria-expanded="false" aria-controls="faqAccordionTwo">
+												<span><em>Q.</em>기존 통신사를 해지하고 알뜰폰 가입해야 하나요?</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="faqAccordionTwo" class="acco-collapse collapse" data-bs-parent="#faqAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>번호이동으로 요금제 신청을 완료하고 개통이 완료되면 기존 통신사는 자동으로 해지됩니다. 신규가입으로 개통했다면, 기존 통신사는 유지되어요.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acco-item">
+										<h3 class="acco-header">
+											<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#faqAccordionThree" aria-expanded="false" aria-controls="faqAccordionThree">
+												<span><em>Q.</em>두줄 케이스 두줄 케이스 두줄 케이스 두줄 케이스 두줄 케이스 두줄 케이스 두줄 케이스 두줄 케이스 두줄 케이스</span>
+												<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
+											</button>
+										</h3>
+										<div id="faqAccordionThree" class="acco-collapse collapse" data-bs-parent="#faqAccordion">
+											<div class="acco-body">
+												<div class="acco-answer">
+													<p>문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요. 문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요. 문자의 '기본제공' 혜택 제한 기준은 아래를 참고하세요</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // 자주묻는 질문 아코디언 -->
 							</div>
 						</section>
+						<!-- // 자주묻는 질문 섹션 -->
+
+						<!-- 알뜽폰 개통 방법 -->
+						<section class="account-sol-sec">
+							<div class="sec-inner">
+								<h2 class="sec-tit">알뜰폰 개통 방법 궁금하시죠?</h2>
+								<div class="ui-tab tab-style3">
+									<ul class="tab-list" role="tablist">
+										<li class="tab-item" role="presentation">
+											<button class="tab-link active" id="tab-11" data-bs-toggle="tab" data-bs-target="#tab-11-pane" type="button" role="tab" aria-controls="tab-11-pane" aria-selected="true">쓰던 번호로 개통</button>
+										</li>
+										<li class="tab-item" role="presentation">
+											<button class="tab-link" id="tab-12" data-bs-toggle="tab" data-bs-target="#tab-12-pane" type="button" role="tab" aria-controls="tab-12-pane" aria-selected="false">새 번호 사용</button>
+										</li>
+									</ul>
+								</div>
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
+										<ol class="solution-steps">
+											<li><em class="num">1</em><strong>번호이동</strong>으로 가입 신청</li>
+											<li><em class="num">2</em>유심 배송 시작</li>
+											<li><em class="num">3</em>유심 받으면 개통 요청</li>
+											<li><em class="num">4</em>기존 통신사가 끊기면 유심 교체 후 바로 사용!</li>
+										</ol>
+									</div>
+									<div class="tab-pane fade" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
+										<ol class="solution-steps">
+											<li><em class="num">1</em><strong>신규가입</strong>으로 가입 신청</li>
+											<li><em class="num">2</em>유심 배송 시작</li>
+											<li><em class="num">3</em>유심 받으면 개통 요청</li>
+											<li><em class="num">4</em>개통 완료 안내 받으면 유심 꽂아 바로 사용!</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- // 알뜽폰 개통 방법 -->
 					</div>
+					<!-- // 자주묻는 질문 -->
+
 				</div>
 				<!-- // 탭 패널 -->
 
-				<!-- 요금제 신청 섹션 -->
-				<section class="payment-noti-sec" id="paymentNotiSec">
+				<!-- 비슷한 요금제 섹션 -->
+				<section class="similar-plan-sec">
 					<div class="sec-inner">
-						<div class="payment-noti">
+						<div class="sec-header">
+							<h2 class="sec-tit">비슷한 요금제</h2>
+						</div>
+						<div class="sec-body">
+							<!-- 비슷한 요금제 스와이프 -->
+							<div class="swiper similar-plan-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="similar-plan-card">
+											<div class="card-body">
+												<p class="card-tit"><strong>[SKT] 150G+최대5Mbps</strong></p>
+												<dl class="card-con">
+													<dt>음성</dt>
+													<dd>무제한+부가통화 300분</dd>
+													<dt>데이터</dt>
+													<dd>71GB+다 쓰면 최대 5Mbps</dd>
+													<dt>문자메시지</dt>
+													<dd>기본제공</dd>
+												</dl>
+												<p class="card-charge">19,540원</p>
+												<button type="button" class="card-button">
+													<span class="blind">요금제 자세히보기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="similar-plan-card">
+											<div class="card-body">
+												<p class="card-tit"><strong>[SKT] 150G+최대5Mbps aaaaaaaaaaaaaaaaaaaaa</strong></p>
+												<dl class="card-con">
+													<dt>음성</dt>
+													<dd>무제한+부가통화+부가기능 300분</dd>
+													<dt>데이터</dt>
+													<dd>71GB+다 쓰면 최대 5Mbps aaaaaaaaaaaaaaaa</dd>
+													<dt>문자메시지</dt>
+													<dd>기본제공</dd>
+												</dl>
+												<p class="card-charge">19,540원</p>
+												<button type="button" class="card-button">
+													<span class="blind">요금제 자세히보기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="similar-plan-card">
+											<div class="card-body">
+												<p class="card-tit"><strong>[SKT] 150G+최대5Mbps</strong></p>
+												<dl class="card-con">
+													<dt>음성</dt>
+													<dd>무제한+부가통화 300분</dd>
+													<dt>데이터</dt>
+													<dd>71GB+다 쓰면 최대 5Mbps</dd>
+													<dt>문자메시지</dt>
+													<dd>기본제공</dd>
+												</dl>
+												<p class="card-charge">19,540원</p>
+												<button type="button" class="card-button">
+													<span class="blind">요금제 자세히보기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // 비슷한 요금제 스와이프 -->
+						</div>
+					</div>
+				</section>
+				<!-- // 비슷한 요금제 섹션 -->
+
+				<!-- 요금제 신청 섹션 -->
+				<section class="payment-noti-sec">
+					<div class="sec-inner">
+						<!-- Case 인터넷 결합 시 할인 금액 보기: is-sale 클래스 추가 -->
+						<div class="payment-noti" id="paymentNoti">
 							<div class="payment-tit">
 								<h2 class="blind">월 납부금액 알려드릴게요.</h2>
-								<p class="charge"><strong>월 25,500원</strong></p>
+								<p class="charge"><strong>월 25,500원</strong></p> <!-- Case 월 납부금액 보기 -->
+								<p class="charge-sale"><strong>월 25,500원</strong><span>(인터넷 결합 할인 예상 금액)</span></p> <!-- Case 인터넷 결합 시 할인 금액 보기 -->
 								<p class="explan"><em>7</em>개월 이후 <em class="price">45,000원</em>으로 변동돼요!</p>
 							</div>
 							<div class="payment-con">
@@ -332,14 +519,6 @@
 			<!-- // content -->
 		</main>
 		<!-- // Container -->
-
-		<!-- Footer (include_footer.html) -->
-		<footer class="footer"></footer>
-		<!-- // Footer -->
-
-		<!-- floating Nav (include_floatingNav.html) -->
-		<nav class="floating-nav"></nav>
-		<!-- // floating Nav- -->
 	</div>
 </body>
 

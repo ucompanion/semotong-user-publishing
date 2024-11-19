@@ -8,5 +8,150 @@
 
 // s: 자주하는 질문 페이지
 .F-P02-01-T04-page {
+	// s: 자주묻는 질문 섹션
+	.faq-sec {
+		// 자주묻는 질문 아코디언
+		.faq-accordion {
+			margin: 0 calc(#{$mobile-outer-spacer} * -1);
+			margin-top: -14rem;
+
+			.collapsing {
+				height: 0;
+				overflow: hidden;
+				transition: height .35s ease;
+			}
+			.collapse:not(.show) {
+				display: none;
+			}
+			.acco-button .ui-icn {
+				transition: transform .35s ease;
+			}
+			.acco-button[aria-expanded='true'] .ui-icn {
+				transform: rotate(180deg);
+			}
+
+			// 아코디언 스타일
+			.acco-item {
+				padding: 14rem $mobile-outer-spacer;
+				border-bottom: 1px solid #EFF0F0;
+			}
+			.acco-header {
+				position: relative;
+
+				.acco-button {
+					display: flex;
+					align-items: center;
+					width: 100%;
+					text-align: left;
+					> span {
+						position: relative;
+						display: block;
+						padding-left: 16rem;
+						padding-right: 12rem;
+						font-weight: 500;
+						font-size: 14rem;
+						line-height: 20rem;
+						max-height: 40rem;
+						@include ellipsis2;
+						em {
+							position: absolute;
+							left: 0;
+							top: 0;
+							color: #542FDD;
+						}
+					}
+					.ui-icn {
+						margin-left: auto;
+					}
+				}
+			}
+
+			.acco-body {
+				margin-top: 16rem;
+				.acco-answer {
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #2A2B2D;
+				}
+			}
+			@include media-tablet-xs {
+				margin: 0;
+			}
+		}
+		// 자주묻는 질문 아코디언
+	}
+	// e: 자주묻는 질문 섹션
+
+	// s: 알뜰폰 개통 방법
+	.account-sol-sec {
+		margin-top: 30rem;
+
+		.sec-tit {
+			font-weight: 600;
+			font-size: 16rem;
+			line-height: 22rem;
+			color: #000;
+			text-align: center;
+		}
+		.ui-tab {
+			display: flex;
+			justify-content: center;
+			margin-top: 16rem;
+			.tab-list {
+				width: 268rem;
+			}
+		}
+		.tab-content {
+			height: auto;
+			overflow: hidden;
+			margin-top: 16rem;
+			padding-bottom: 0;
+		}
+		.solution-steps {
+			padding: 20rem;
+			border-radius: 4rem;
+			background-color: #F4F5F8;
+			li {
+				display: flex;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #46484B;
+				& + li {
+					margin-top: 26rem;
+					.num::after {
+						content:'';
+						position: absolute;
+						left: calc(50% - 1px);
+						bottom: calc(100% + 4rem);
+						display: block;
+						width: 2rem;
+						height: 18rem;
+						background: url('../images/common/line-18-step.svg') no-repeat center center;
+					}
+				}
+				.num {
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 24rem;
+					height: 24rem;
+					margin-right: 10rem;
+					border-radius: 50%;
+					background-color: #CDC2F5;
+					font-weight: 700;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #542FDD;
+				}
+				strong {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	// e: 알뜰폰 개통 방법
 }
 // e: 자주하는 질문 페이지

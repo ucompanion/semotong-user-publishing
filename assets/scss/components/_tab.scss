@@ -91,7 +91,7 @@
 	position: sticky;
 	top: $mobile-height-header;
 	overflow: hidden;
-	padding-bottom: 30rem;
+	padding-bottom: 20rem;
 	padding-top: 16rem;
 	background-color: #fff;
 	z-index: 10;
@@ -135,7 +135,7 @@
 }
 @include media-tablet-xs {
 	.container {
-		.tab-style1 {
+		.tab-style2 {
 			top: $pc-height-header;
 			padding-top: 16rem;
 		}
@@ -151,6 +151,34 @@
 					justify-content: center;
 					flex: 1 1 auto;
 					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+/* 스타일3 */
+.tab-style3 {
+	width: 100%;
+	.tab-list {
+		display: flex;
+		padding: 4rem;
+		border-radius: 20rem;
+		background-color: #EFF0F0;
+		.tab-item {
+			flex: 1 1 auto;
+			width: 100%;
+			.tab-link {
+				width: 100%;
+				padding: 8rem;
+				border-radius: 20rem;
+				font-weight: 600;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #63666A;
+				text-align: center;
+				&.active {
+					background-color: #fff;
 				}
 			}
 		}
