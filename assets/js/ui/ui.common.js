@@ -154,10 +154,28 @@ function setDropdown(button) {
 
 // Spy Scroll
 function setSpyScroll() {
-	const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]')
-	dataSpyList.forEach(dataSpyEl => {
-	  bootstrap.ScrollSpy.getInstance(dataSpyEl).refresh()
-	})
+	const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]');
+
+	function updateDataSpyElements() {
+		dataSpyList.forEach(dataSpyEl => {
+			// 마지막 자식 요소의 최소 높이 계산 및 설정
+			const lastChild = dataSpyEl.lastElementChild;
+			if (lastChild) {
+				const minHeight = dataSpyEl.offsetHeight;
+
+				lastChild.style.minHeight = `${minHeight > 0 ? minHeight : 0}px`;
+			}
+
+			// ScrollSpy 인스턴스 refresh
+			bootstrap.ScrollSpy.getInstance(dataSpyEl)?.refresh();
+		});
+	}
+
+	// 최초 실행
+	updateDataSpyElements();
+
+	// 리사이즈 이벤트 처리
+	window.addEventListener('resize', updateDataSpyElements);
 }
 
 // Card Expand
