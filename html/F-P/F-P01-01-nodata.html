@@ -132,93 +132,75 @@
 						</div>
 						<div class="sec-body">
 							<ul class="ratePlan-filter-list">
+								<!-- 필수 - 필터버튼 -->
 								<li>
 									<!-- ui-filter: input.scss 가이드에 포함 -->
-									<button type="button" class="ui-filter h-36" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
-										<i class="ui-icn icn-24-filter-gr" aria-label="필터"></i>
+									<button type="button" class="filter-btn is-setting" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+										<i class="ui-icn icn-24-filter-gr" aria-hidden="true"></i>
+										<span>필터</span>
 									</button>
 									<span class="split" aria-hidden="true"></span>
 								</li>
+
+								<!--  Cases -->
 								<li>
-									<!-- 선택된 필터: is-selected -->
-									<div class="ui-sel h-36 is-selected">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectDataModal">
-											<span>데이터<em>1</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button type="button" class="filter-btn">
+										<i class="ui-icn icn-24-refresh-gr" aria-label="새로고침"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel is-selected" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectPriceModal">
-											<span>가격<em>1</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>데이터</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSpeedModal">
-											<span>소진시 속도<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>가격</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSaleModal">
-											<span>할인 기간<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>소진시 속도</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCallModal">
-											<span>통화<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>할인 기간</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSmsModal">
-											<span>문자<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>통화</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectNetModal">
-											<span>통신 정보<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>문자</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectCombiModal">
-											<span>인터넷 결합<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>통신정보</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectAddServiceModal">
-											<span>부가 서비스<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>인터넷 결합</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 								<li>
-									<div class="ui-sel h-36">
-										<button type="button" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectTelecomModal">
-											<span>통신사<em class="blind">0</em></span>
-											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
-										</button>
-									</div>
+									<button class="filter-chip">
+										<span>부가 서비스</span>
+										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+									</button>
 								</li>
 							</ul>
 						</div>
