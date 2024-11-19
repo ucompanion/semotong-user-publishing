@@ -106,7 +106,7 @@
 		background-color: #EFF0F0;
 	}
 	.tab-swiper {
-		overflow: visible;
+		// overflow: visible;
 	}
 	.swiper-wrapper {
 		position: relative;
@@ -145,11 +145,11 @@
 			@include in-sec;
 			.swiper-wrapper {
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-around;
+				overflow: hidden;
 				.swiper-slide {
 					display: flex;
 					justify-content: center;
-					flex: 1 1 auto;
 					text-align: center;
 				}
 			}
