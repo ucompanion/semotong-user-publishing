@@ -15,12 +15,12 @@ $pc-inner-content: 720rem;
 $pc-bottom-spacer: 48rem;
 $mobile-outer-spacer: 16rem;
 $mobile-inner-content: 320rem;
-$mobile-bottom-spacer: calc(32rem + #{$safe-area-bottom});
+$mobile-bottom-spacer: 32rem;
 
 // 공통요소 사이즈
 $pc-height-header: 80rem;
 $mobile-height-header: 60rem;
-$height-footer: calc(76rem + #{$safe-area-bottom});
+$height-footer: 76rem;
 
 // 컬러 강조
 $color-primary: #542FDD; // 첫번째

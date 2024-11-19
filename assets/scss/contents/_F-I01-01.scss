@@ -208,7 +208,7 @@
 	// s: 요금제 신청 섹션
 	.payment-noti-sec {
 		position: sticky;
-		bottom: $height-footer;
+		bottom: 0;
 		left: 0;
 		z-index: 100;
 		margin-top: auto;

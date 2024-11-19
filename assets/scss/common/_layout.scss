@@ -16,7 +16,8 @@ html {
 .wrapper {
 	min-height: 100%;
 	min-width: 320px;
-	padding-top: $mobile-height-header
+	padding-top: $mobile-height-header;
+	padding-bottom: $safe-area-bottom;
 }
 
 .wrapper,
@@ -294,7 +295,7 @@ section {
 .floating-menu {
 	--btn-size: 60rem;
 	position: fixed;
-	bottom: calc(#{$height-footer} + 20rem);
+	bottom: calc(#{$height-footer} + #{$safe-area-bottom} + 20rem);
 	right: 20rem;
 	z-index: 100;
 	width: var(--btn-size);
@@ -386,7 +387,7 @@ section {
 	bottom: 0;
 	z-index: 300;
 	width: 100%;
-	height: $height-footer;
+	height: calc(#{$height-footer} + #{$safe-area-bottom});
 	min-width: $mobile-inner-content;
 	background-color: #fff;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
@@ -436,10 +437,11 @@ section {
 	}
 }
 
+
 // Sub Wrapper
 .sub-wrapper {
 	.footer {
-		padding-bottom: $safe-area-bottom;
+		padding-bottom: 0;
 	}
 	.floating-menu {
 		bottom: calc(#{$safe-area-bottom} + 20rem);
@@ -449,6 +451,11 @@ section {
 @include media-tablet-xs {
 	.wrapper {
 		padding-top: $pc-height-header
+	}
+	.main-wrapper.none-footer {
+		.container {
+			padding-bottom: $height-footer;
+		}
 	}
 	.header-mobile {
 		position: relative;
