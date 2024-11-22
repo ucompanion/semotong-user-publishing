@@ -188,9 +188,9 @@ html {
 		}
 	}
 }
-.is-scroll-first .header-desktop {
-	border-color: transparent;
-}
+// .is-scroll-first .header-desktop {
+// 	border-color: transparent;
+// }
 
 // Header Mobile Nav
 .modal.aside-modal {
@@ -520,6 +520,8 @@ body.is-scroll-first {
 		padding-bottom: $safe-area-bottom;
 	}
 	.header-mobile {
+		margin-top: 40rem;
+		margin-bottom: 20rem;
 		position: relative;
 		box-shadow: none;
 		.btn-aside {

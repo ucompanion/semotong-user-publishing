@@ -107,11 +107,11 @@
 		}
 
 		.review-list {
-			@include review-list-basic;
+			@include review-list-02;
 		}
 
 		.review-card {
-			@include review-card-basic;
+			@include review-card-02;
 		}
 
 	}
