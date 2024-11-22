@@ -16,11 +16,17 @@ $media-mobile-landscape: 940px; // 아이폰 14 프로 맥스 가로모드의 �
 	}
 }
 
+@mixin media-mobile-landscape {
+	@media all and (min-width: $media-mobile-landscape) and (min-height: $media-mobile-xl) {
+		@content;
+	}
+}
+
 @mixin media-tablet-xs {
 	@media all and (min-width: $media-tablet-xs) {
 		@content;
 	}
-	@media all and (min-width: $media-mobile-landscape) and (min-height: $media-mobile-xl) {
+	@include media-mobile-landscape {
 		@content;
 	}
 }
@@ -39,7 +45,7 @@ $media-mobile-landscape: 940px; // 아이폰 14 프로 맥스 가로모드의 �
 
 // 사용자정의 해상도
 @mixin media-min-width($width) {
-	@media all and (max-width: $width) {
+	@media all and (min-width: $width) {
 		@content;
 	}
 }

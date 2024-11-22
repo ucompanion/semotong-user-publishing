@@ -48,45 +48,11 @@
 		.review-user-sat {
 			margin-top: 10rem;
 			.review-list {
-				margin-left: calc(#{$mobile-outer-spacer} * -1);
-				margin-right: calc(#{$mobile-outer-spacer} * -1);
-				.review-item {
-					border-bottom: 1px solid #EFF0F0;
-				}
+				@include review-list-basic;
 			}
 
 			.review-card {
-				display: flex;
-				flex-wrap: wrap;
-				padding: 14rem $mobile-outer-spacer;
-
-				.review-name {
-					margin-right: 10rem;
-					font-weight: 700;
-					font-size: 14rem;
-					line-height: 16rem;
-				}
-
-				.review-sat {
-					display: inline-flex;
-					gap: 4rem;
-					align-items: center;
-					.val {
-						font-weight: 500;
-						font-size: 14rem;
-						line-height: 16rem;
-						color: #46484B;
-					}
-				}
-
-				.review-con {
-					margin-top: 8rem;
-					font-weight: 500;
-					font-size: 14rem;
-					line-height: 20rem;
-					max-height: 60rem;
-					@include ellipsis3;
-				}
+				@include review-card-basic;
 			}
 		}
 	}

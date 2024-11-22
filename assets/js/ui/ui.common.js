@@ -123,9 +123,21 @@ function setResized() {
 function floatingMenuHandler(layerid, btnId){
 	var layer = document.getElementById(layerid);
 	var btn = document.getElementById(btnId);
+	var menu = btn.closest('.floating-menu');
+	var backdrop = document.querySelector('.floating-backdrop');
+	var body = document.body;
 
+	menu.classList.toggle("is-active");
 	layer.classList.toggle("show");
+	backdrop.classList.toggle("show");
 	btn.setAttribute("aria-expanded", btn.getAttribute("aria-expanded") === "false" ? "true" : "false");
+
+	// body의 overflow:hidden 처리
+    if (layer.classList.contains("show")) {
+        body.classList.add("menu-open");
+    } else {
+        body.classList.remove("menu-open");
+    }
 }
 
 /*-------------------------------------------------------------------

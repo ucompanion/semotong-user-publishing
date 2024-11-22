@@ -24,9 +24,6 @@
 	line-height: 22rem;
 	font-weight: 500;
 	color: #000000;
-	&:focus {
-		outline-color: #000;
-	}
 }
 
 @mixin input-h-36 {
@@ -78,6 +75,10 @@
 
 	.btn-clear {
 		display: none;
+	}
+
+	.btn-srch {
+		padding: 15rem;
 	}
 
 	&.fluid {

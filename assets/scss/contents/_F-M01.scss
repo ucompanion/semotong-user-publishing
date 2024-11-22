@@ -11,7 +11,7 @@
 
 	// s: 비주얼 섹션
 	.visual-sec {
-		background-color: $color-primary;
+		background-color: #5465FF;
 		color: #fff;
 
 		.sec-body {
@@ -19,21 +19,21 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			height: 250rem;
-			padding-bottom: 26rem;
+			height: 220rem;
+			padding-bottom: 30rem;
 
 			.sec-tit {
-				font-size: 24rem;
 				font-weight: 700;
-				em {
-					color: $color-secondary;
-				}
+				font-size: 22rem;
+				line-height: 30rem;
 			}
 
 			.sec-img {
 				position: absolute;
 				right: 0;
-				bottom: 100rem;
+				bottom: 68rem;
+				width: 108rem;
+				height: 131rem;
 			}
 
 			.sec-btn {
@@ -47,6 +47,7 @@
 					font-size: 16rem;
 					line-height: 22rem;
 					color: #0D173F;
+					box-shadow: 0rem 2rem 10rem 0 rgba(0,0,0,.4);
 				}
 			}
 		}
@@ -58,79 +59,158 @@
 		overflow: hidden;
 		padding-top: var(--sec-inner-padding);
 		padding-bottom: var(--sec-inner-padding);
-		background-color: #DEE9FF;
+		background-color: #BFD7FF;
 		@include sec-basic;
+		.sec-header {
+			.sec-tit {
+				color: #2D3CBC;
+			}
+		}
+
+		.deal-timer {
+			.timer-txt {
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 16rem;
+				color: #2D3CBC;
+			}
+			.timer-labels {
+				display: flex;
+				align-items: center;
+				margin-top: 10rem;
+				gap: 4rem;
+				.label-num {
+					position: relative;
+					width: 32rem;
+					height: 42rem;
+					overflow: hidden;
+					border:1px solid #5465ff;
+					border-radius: 6px;
+					background-color: #fff;
+					font-weight: 700;
+					font-size: 26rem;
+					line-height: 30rem;
+					color: #000;
+					&::before {
+						content:'';
+						display: block;
+						width: 100%;
+						height: 21rem;
+						background: linear-gradient(180deg, #F4F5F8 47.83%, #C5D1F1 100%);
+						border-bottom: 1px solid rgba(95, 146, 231, 0.4);
+					}
+					> span {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.label-split {
+					display: flex;
+					flex-direction: column;
+					width: 4rem;
+					height: 14rem;
+					justify-content: space-between;
+					margin: 0 1rem;
+					&::before,
+					&::after {
+						content:'';
+						display: block;
+						width: 4rem;
+						height: 4rem;
+						background-color: #fff;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
 		.deal-swiper {
 			overflow: visible;
 			width: 100%;
+			margin-top: 30rem;
 			.swiper-slide {
-				width: 185px;
+				width: 248px;
 				opacity: 0.5;
 				transition: opacity 0.2s ease;
 				&-active {
 					opacity: 1;
 				}
 			}
+			@include media-tablet-xs {
+				overflow: hidden;
+				.swiper-slide {
+					opacity: 1;
+					width: 233rem;
+				}
+			}
 		}
 		.deal-card {
-			width: 217rem;
-			height: 213rem;
+			position: relative;
+			width: 100%;
 			padding: 16rem;
-			padding: 11rem 16rem 21rem 16rem;
-			margin: -11rem -16rem -21rem -16rem;
-			background: url('../images/contents/main-deal-card.png') no-repeat center center / 217rem 213rem;
+			padding-top: 20rem;
 			box-sizing: border-box;
+			background-color: #fff;
 			.card-body {
-				height: 132rem;
-				width: calc(100% - 36rem);
-				margin: auto;
-				padding: 16rem 0;
-				border-bottom: 2px solid rgba(239, 240, 240, 1);
-				// background-color: rgba(0,0,0,0.5);
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				padding-bottom: 6rem;
 
 				.card-label {
-					margin-bottom: 10rem;
-				}
-				.card-tit {
-					font-weight: 700;
-					font-size: 18rem;
-					line-height: 22rem;
-					color: #2A2B2D;
-					max-height: 44rem;
-					white-space: pre-line;
-					@include ellipsis2;
+					position: absolute;
+					top: 0;
+					right: 16rem;
+					em {
+						display: inline-flex;
+						padding: 4rem 8rem;
+						border-radius: 0 0 10rem 10rem;
+						background-color: #5465FF;
+						font-weight: 600;
+						font-size: 12rem;
+						line-height: 14rem;
+						color: #fff;
+					}
 				}
 				.card-info {
-					margin-top: 6rem;
-					font-weight: 600;
-					font-size: 13rem;
-					color: #828588;
+					font-weight: 500;
+					font-size: 12rem;
+					line-height: 14rem;
+					color: #63666A;
 					@include ellipsis1;
+				}
+				.card-tit {
+					margin-top: 4rem;
+					font-weight: 700;
+					font-size: 16rem;
+					line-height: 20rem;
+					color: #000;
+					height: 40rem;
+					white-space: pre-line;
+					@include ellipsis2;
 				}
 			}
 			.card-footer {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				height: 49rem;
-				width: calc(100% - 32rem);
-				margin: auto;
-				.card-brand {
+				padding-top: 13rem;
+
+				.card-partner {
 					position: relative;
-					width: 50rem;
-					height: 18rem;
+					height: 26rem;
 					img {
-						position: absolute;
-						left: 50%;
-						top: 50%;
 						height: 100%;
-						transform: translate(-50%, -50%);
 					}
 				}
 				.card-charge {
 					font-weight: 700;
-					font-size: 16rem;
-					line-height: 18rem;
+					font-size: 20rem;
+					line-height: 28rem;
+					color: #2D3CBC;
 				}
 			}
 		}
@@ -142,13 +222,22 @@
 		@include sec-basic;
 		padding-top: var(--sec-inner-padding);
 		padding-bottom: var(--sec-inner-padding);
-		background-color: rgba(35, 13, 111, 0.1);
+		background-color: rgba(191, 215, 255, 0.5);
 		.ratePlanA-list {
 			@include ratePlanA-list;
 		}
 
 		.ratePlanA-card {
 			@include ratePlanA-card;
+			box-shadow: none;
+			.card-body {
+				.card-charge {
+					color: #5465FF;
+				}
+				.card-data {
+					background-color: #3143BB;
+				}
+			}
 		}
 	}
 	// e: 나에게 맞는 요금제 섹션
@@ -189,47 +278,52 @@
 		@include sec-basic;
 		margin-top: var(--sec-outer-margin);
 
-		.review-list {
-			@include review-list;
+		.review-swiper {
+			.swiper-slide {
+				width: 270rem;
+			}
+			@include media-tablet-xs {
+				overflow: hidden;
+			}
+		}
 
-			.review-card {
+		.review-card {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 20rem;
+			border-radius: 2rem;
+			border:1px solid #EFF0F0;
+
+			.card-rating {
 				display: flex;
-				flex-wrap: wrap;
-				padding: 20rem;
-				border-radius: 2rem;
-				border:1px solid #EFF0F0;
+				align-items: center;
 
-				.card-rating {
-					display: flex;
-					align-items: center;
-
-					.val {
-						margin-left: 7rem;
-						padding-top: 1rem;
-						font-weight: 700;
-						font-size: 24rem;
-						line-height: 26rem;
-					}
+				.val {
+					margin-left: 7rem;
+					padding-top: 1rem;
+					font-weight: 700;
+					font-size: 24rem;
+					line-height: 26rem;
 				}
+			}
 
-				.card-name {
-					margin-left: auto;
-					padding: 5rem 0;
-					font-weight: 500;
-					font-size: 14rem;
-					line-height: 18rem;
-					color: #828588;
-				}
+			.card-name {
+				margin-left: auto;
+				padding: 5rem 0;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 18rem;
+				color: #828588;
+			}
 
-				.card-cont {
-					width: 100%;
-					margin-top: 10rem;
-					max-height: 60rem;
-					font-weight: 500;
-					font-size: 14rem;
-					line-height: 20rem;
-					@include ellipsis3;
-				}
+			.card-cont {
+				width: 100%;
+				margin-top: 10rem;
+				max-height: 60rem;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				@include ellipsis3;
 			}
 		}
 	}
@@ -246,11 +340,40 @@
 
 	// s: 파트너사 섹션
 	.partner-sec {
+		overflow: hidden;
 		@include sec-basic;
 		margin-top: var(--sec-outer-margin);
 		padding-top: var(--sec-inner-padding);
 		padding-bottom: var(--sec-inner-padding);
-		background-color: #F3F6FC;
+		background-color: #EFF0F0;
+
+		.partner-swiper {
+			overflow: visible;
+			.swiper-wrapper {
+				transition-timing-function: linear !important;
+			}
+			.swiper-slide {
+				width: 88rem;
+			}
+		}
+		.partner-link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 88rem;
+			height: 88rem;
+			border-radius: 50%;
+			background-color: #fff;
+			img {
+				max-height: 32rem;
+				max-width: 80rem;
+			}
+		}
+		@include media-tablet-xs {
+			.sec-inner {
+				overflow: hidden;
+			}
+		}
 	}
 	// e: 파트너사 섹션
 }

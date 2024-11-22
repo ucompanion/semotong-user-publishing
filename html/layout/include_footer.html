@@ -2,7 +2,7 @@
 <section class="footer-sec">
 	<div class="logo-area">
 		<div class="logo-footer">
-			<img src="../../assets/images/common/img-logo-footer-wh.png" alt="세모통 로고" />
+			<img src="../../assets/images/common/img-logo-footer.svg" alt="세모통 로고" />
 		</div>
 	</div>
 
@@ -28,10 +28,10 @@
 
 	<div class="info-area">
 		<div class="info-cont">
-			<strong class="info-tit">(주)세모통</strong>
-			<p class="info-txt">사업자등록번호 : 000-00-000000 | 대표 : 한수진</p>
-			<p class="info-txt">통신판매업 신고번호 : 2000-서울강남-00000</p>
-			<p class="info-txt">주소 : 서울 강남구 테헤란로</p>
+			<strong class="info-tit">(주)유테크온</strong>
+			<p class="info-txt">사업자등록번호 : 429-81-03454</p>
+			<p class="info-txt">대표 : 김계영</p>
+			<p class="info-txt">주소 : 서울특별시 강남구 봉은사로 50길 29, 4층 (역삼동, 휘정빌딩)</p>
 			<p class="info-txt">이메일 : Help@semotong.com</p>
 		</div>
 		<div class="info-cont">
@@ -51,18 +51,29 @@
 <!-- 플로팅 메뉴 -->
 <div class="floating-menu">
 	<!-- aria-expanded: true/false -->
-	<button type="button" id="floatingMenuBtn" class="ui-btn btn-menu" aria-expanded="false" aria-haspopup="menu" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingMenuBtn')">
-		<i class="icn">로고</i>
+	<button type="button" class="ui-btn btn-menu" id="floatingBtn" aria-expanded="false" aria-haspopup="menu" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingBtn')">
+		<i class="ui-icn icn-30-floating-logo" aria-label="Floating Menu"></i>
+		<i class="ui-icn icn-30-floating-close" aria-label="Floating Menu"></i>
 	</button>
 	<button type="button" class="ui-btn btn-top" onclick="window.scrollTo({top:0, left:0, behavior: 'smooth'})">
-		<i class="icn">TOP</i>
+		<!-- <i class="ui-icn icn-30-floating-top" aria-label="Scroll Top"></i> -->
+		<span>TOP</span>
 	</button>
 	<div class="floating-layer fade" id="floatingMenuLayer">
 		<!-- a태그, button태그 무관합니다. -->
-		<button type="button" class="ui-btn">이용후기</button>
-		<button type="button" class="ui-btn">친구추천</button>
-		<button type="button" class="ui-btn">카카오톡</button>
-		<button type="button" class="ui-btn" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingMenuBtn')">닫기</button>
+		<button type="button" class="ui-btn btn-item">
+			<i class="ui-icn icn-24-floating-review" aria-hidden="true"></i>
+			<span>이용후기</span>
+		</button>
+		<button type="button" class="ui-btn">
+			<i class="ui-icn icn-24-floating-recom" aria-hidden="true"></i>
+			<span>친구추천</span>
+		</button>
+		<button type="button" class="ui-btn">
+			<i class="ui-icn icn-24-floating-kakao" aria-hidden="true"></i>
+			<span>카카오톡</span>
+		</button>
 	</div>
 </div>
+<div class="floating-backdrop fade" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingBtn')"></div>
 <!-- // 플로팅 메뉴 -->

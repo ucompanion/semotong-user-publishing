@@ -163,6 +163,20 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 
+@mixin tab-sec-basic {
+	margin-bottom: 60rem;
+
+	.sec-header {
+		margin-bottom: 14rem;
+		.sec-tit {
+			font-weight: 700;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #2A2B2D;
+		}
+	}
+}
+
 @mixin floating-sec {
 	position: sticky;
 	bottom: 0;
@@ -781,7 +795,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	align-items: center;
 	width: 100%;
 	padding: 17rem 16rem;
-	border-radius: 24rem;
+	border-radius: 2rem;
 	background-color: #F2F5FB;
 	.recom-con {
 		flex:1 1 auto;
@@ -869,7 +883,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 
-// 리뷰 목록
+// 리뷰 목록(리뷰 관리)
 @mixin review-list {
 	display: flex;
 	flex-direction: column;
@@ -1024,6 +1038,59 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				margin-top: 16rem;
 			}
 		}
+	}
+}
+
+// 리뷰 목록(전체공통)
+@mixin review-list-basic {
+	margin-left: calc(#{$mobile-outer-spacer} * -1);
+	margin-right: calc(#{$mobile-outer-spacer} * -1);
+	.review-item {
+		border-bottom: 1px solid #EFF0F0;
+	}
+	@include media-tablet-xs {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+// 리뷰 카드(전체공통)
+@mixin review-card-basic {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 14rem $mobile-outer-spacer;
+
+	.review-name {
+		margin-right: 10rem;
+		font-weight: 700;
+		font-size: 14rem;
+		line-height: 16rem;
+	}
+
+	.review-sat {
+		display: inline-flex;
+		gap: 4rem;
+		align-items: center;
+		.val {
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 16rem;
+			color: #46484B;
+		}
+	}
+
+	.review-con {
+		margin-top: 8rem;
+		font-weight: 500;
+		font-size: 14rem;
+		line-height: 20rem;
+		max-height: 60rem;
+		@include ellipsis3;
+	}
+
+	@include media-tablet-xs {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -1660,3 +1727,145 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 // e: 인터넷 결합 설문 라디오
+
+// s: 자주묻는 질문
+@mixin faq-accordion {
+	margin: 0 calc(#{$mobile-outer-spacer} * -1);
+	margin-top: -14rem;
+
+	.collapsing {
+		height: 0;
+		overflow: hidden;
+		transition: height .35s ease;
+	}
+	.collapse:not(.show) {
+		display: none;
+	}
+	.acco-button .ui-icn {
+		transition: transform .35s ease;
+	}
+	.acco-button[aria-expanded='true'] .ui-icn {
+		transform: rotate(180deg);
+	}
+
+	// 아코디언 스타일
+	.acco-item {
+		padding: 14rem $mobile-outer-spacer;
+		border-bottom: 1px solid #EFF0F0;
+	}
+	.acco-header {
+		position: relative;
+
+		.acco-button {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			text-align: left;
+			> span {
+				position: relative;
+				display: block;
+				padding-left: 16rem;
+				padding-right: 12rem;
+				font-weight: 600;
+				font-size: 14rem;
+				line-height: 20rem;
+				max-height: 40rem;
+				@include ellipsis2;
+				em {
+					position: absolute;
+					left: 0;
+					top: 0;
+					color: #542FDD;
+				}
+			}
+			.ui-icn {
+				margin-left: auto;
+			}
+		}
+	}
+
+	.acco-body {
+		margin-top: 16rem;
+		.acco-answer {
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #2A2B2D;
+		}
+	}
+	@include media-tablet-xs {
+		margin: 0;
+	}
+}
+// e: 자주묻는 질문
+
+// s: 알뜰폰 개통 방법
+@mixin account-sol-sec {
+	margin-top: 30rem;
+
+	.sec-tit {
+		font-weight: 600;
+		font-size: 16rem;
+		line-height: 22rem;
+		color: #000;
+		text-align: center;
+	}
+	.ui-tab {
+		display: flex;
+		justify-content: center;
+		margin-top: 16rem;
+		.tab-list {
+			width: 268rem;
+		}
+	}
+	.tab-content {
+		height: auto;
+		overflow: hidden;
+		margin-top: 16rem;
+		padding-bottom: 0;
+	}
+	.solution-steps {
+		padding: 20rem;
+		border-radius: 4rem;
+		background-color: #F4F5F8;
+		li {
+			display: flex;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #46484B;
+			& + li {
+				margin-top: 26rem;
+				.num::after {
+					content:'';
+					position: absolute;
+					left: calc(50% - 1px);
+					bottom: calc(100% + 4rem);
+					display: block;
+					width: 2rem;
+					height: 18rem;
+					background: url('../images/common/line-18-step.svg') no-repeat center center;
+				}
+			}
+			.num {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 24rem;
+				height: 24rem;
+				margin-right: 10rem;
+				border-radius: 50%;
+				background-color: #CDC2F5;
+				font-weight: 700;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #542FDD;
+			}
+			strong {
+				font-weight: 700;
+			}
+		}
+	}
+}
+// e: 알뜰폰 개통 방법

@@ -116,6 +116,10 @@
 		width: auto;
 		flex: none;
 	}
+
+	.tab-list {
+		gap: 16rem;
+	}
 	.tab-link {
 		position: relative;
 		display: block;
@@ -138,11 +142,8 @@
 		.tab-style2 {
 			top: $pc-height-header;
 			padding-top: 16rem;
-		}
-		.tab-style2 {
 			padding-left: 0;
 			padding-right: 0;
-			@include in-sec;
 			.swiper-wrapper {
 				display: flex;
 				justify-content: space-around;
@@ -151,6 +152,13 @@
 					display: flex;
 					justify-content: center;
 					text-align: center;
+				}
+			}
+			.tab-list {
+				justify-content: space-around;
+				@include in-sec;
+				.tab-item {
+					flex:1 1 auto;
 				}
 			}
 		}
