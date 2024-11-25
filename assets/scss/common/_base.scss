@@ -287,14 +287,10 @@ select:focus {
 }
 
 // IOS
-[tabindex='0'],
-a,
-button,
-input,
-textarea,
-select {
+[tabindex='0'] {
 	-webkit-tap-highlight-color: transparent;
 }
+
 // Scroll Style
 .is-desktop {
 	/* 전체 스크롤바 색상 및 두께 */
