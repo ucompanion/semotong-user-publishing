@@ -217,7 +217,7 @@ function setPopover(selector){
 }
 
 // Select Valued
-function setSelectValued(buttonId, option){
+function setSelectValued(buttonId, option, selected){
 	var button = document.querySelector(buttonId);
 	var buttonSpan = document.querySelector(buttonId + '>span');
 
@@ -234,6 +234,12 @@ function setSelectValued(buttonId, option){
 
     // buttonSpan의 텍스트를 선택된 option의 텍스트로 설정
     buttonSpan.textContent = option.textContent;
+
+	// 선택된 상태를 강조하는 경우
+	if (selected === 'is-selected') {
+		var select = document.querySelector(buttonId).parentNode;
+		select.classList.add('is-selected');
+	}
 }
 
 // Radio Selected

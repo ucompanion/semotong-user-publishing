@@ -244,10 +244,11 @@
 			font-size: 20rem;
 			color: #000;
 		}
-		// .btn-close {
-		// 	display: none;
-		// 	top: 18rem;
-		// }
+		.btn-close {
+			position: absolute;
+			right: $mobile-outer-spacer;
+			top: 18rem;
+		}
 	}
 	.modal-footer {
 		@include out-sec;
@@ -265,6 +266,11 @@
 		}
 		.modal-content {
 			border-radius: 10rem;
+		}
+		.modal-header {
+			.btn-close {
+				right: $pc-outer-spacer;
+			}
 		}
 	}
 }
