@@ -252,6 +252,9 @@
 
 		.floating-cont {
 			.charge {
+				display: flex;
+				align-items: center;
+				gap: 4rem;
 				font-weight: 700;
 				font-size: 18rem;
 				line-height: 24rem;

@@ -164,9 +164,10 @@ html {
 		.title {
 			.logo {
 				display: block;
-				width: 68rem;
-				height: 28rem;
-				background: url('../images/common/img-logo-header-bk.png') no-repeat center center / contain;
+				width: 90rem;
+				height: 32rem;
+				mask: url('../images/common/img-logo-header-wh.svg') no-repeat center center / contain;
+				background-color: #000000;
 			}
 		}
 
