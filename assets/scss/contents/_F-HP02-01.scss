@@ -196,6 +196,7 @@
 						vertical-align: middle;
 					}
 					th {
+						width: max(82rem, 20vw);
 						padding: 12rem 10rem;
 						background-color: #F9F9F9;
 						text-align: center;
@@ -226,8 +227,17 @@
 			margin-left: 0;
 			margin-right: 0;
 
-			.detail-color {
-				margin-right: 0;
+			.hp-detail-cont {
+				.detail-color {
+					margin-right: 0;
+				}
+				.detail-spec {
+					.spec-table {
+						th {
+							width: 150rem;
+						}
+					}
+				}
 			}
 		}
 	}
