@@ -227,8 +227,11 @@
 		}
 
 		@include media-tablet-xs {
-			margin-left: 0;
-			margin-right: 0;
+			.hp-detail-view {
+				margin-left: 0;
+				margin-right: 0;
+				border-radius: 10rem;
+			}
 
 			.hp-detail-cont {
 				.detail-color {
