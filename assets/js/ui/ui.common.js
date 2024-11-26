@@ -217,29 +217,46 @@ function setPopover(selector){
 }
 
 // Select Valued
-function setSelectValued(buttonId, option, selected){
-	var button = document.querySelector(buttonId);
-	var buttonSpan = document.querySelector(buttonId + '>span');
+function setSelectValued(buttonId, option, selected) {
+    var button = document.querySelector(buttonId);
+    var buttonSpan = document.querySelector(buttonId + ' > span');
+    var placeholderValue = button.dataset.placeholder;
 
-    // option 요소에 is-selected 클래스 추가
-    option.classList.add('is-selected');
-    button.classList.remove('is-placeholder');
+    // 이미 선택된 항목인 경우: 초기화 처리
+    if (option.classList.contains('is-selected')) {
+        // 버튼 텍스트를 placeholder 값으로 초기화
+        buttonSpan.textContent = placeholderValue;
 
-    // 다른 형제 요소들에서 is-selected 클래스 제거
-    Array.from(option.parentNode.children).forEach(sibling => {
-        if (sibling !== option) {
+        // 버튼 및 부모 요소에서 선택 상태 제거
+        button.classList.add('is-placeholder');
+        button.parentNode.classList.remove('is-selected');
+
+        // 모든 옵션에서 선택 클래스 제거
+        Array.from(option.parentNode.children).forEach(sibling => {
             sibling.classList.remove('is-selected');
+        });
+
+    } else {
+        // 새로 선택된 항목 처리
+        option.classList.add('is-selected');
+        button.classList.remove('is-placeholder');
+
+        // 다른 형제 요소에서 is-selected 클래스 제거
+        Array.from(option.parentNode.children).forEach(sibling => {
+            if (sibling !== option) {
+                sibling.classList.remove('is-selected');
+            }
+        });
+
+        // 버튼 텍스트를 선택된 옵션의 텍스트로 설정
+        buttonSpan.textContent = option.textContent;
+
+        // 선택된 상태 강조
+        if (selected === 'is-selected') {
+            var select = button.parentNode;
+            select.classList.add('is-selected');
         }
-    });
-
-    // buttonSpan의 텍스트를 선택된 option의 텍스트로 설정
-    buttonSpan.textContent = option.textContent;
-
-	// 선택된 상태를 강조하는 경우
-	if (selected === 'is-selected') {
-		var select = document.querySelector(buttonId).parentNode;
-		select.classList.add('is-selected');
-	}
+    }
 }
 
 // Radio Selected
