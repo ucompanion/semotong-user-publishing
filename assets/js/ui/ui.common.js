@@ -312,6 +312,7 @@ function setLikeButton(){
 	}
 }
 
+// Tel Input 정규식
 function setRegularNumber(input){
 	input.value = input.value.replace(/[^0-9- ]/g, '');
 }
