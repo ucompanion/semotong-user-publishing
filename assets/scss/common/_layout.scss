@@ -531,7 +531,7 @@ body.is-scroll-first {
 		}
 		&.only-mo ~ .container .content,
 		&.only-mo + .container .content {
-			padding-top: 30rem;
+			padding-top: calc(#{$pc-bottom-spacer});
 		}
 	}
 	.header-desktop {

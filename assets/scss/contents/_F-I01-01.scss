@@ -33,7 +33,6 @@
 			.intro-con {
 				flex:1 1 auto;
 				.tit {
-					margin-top: 10rem;
 					font-weight: 700;
 					font-size: 14rem;
 					line-height: 20rem;
@@ -44,6 +43,7 @@
 					}
 				}
 				.txt {
+					margin-top: 10rem;
 					font-weight: 500;
 					font-size: 14rem;
 					line-height: 20rem;
@@ -76,6 +76,36 @@
 	}
 	// e: 통신사 선택 섹션
 
+	// s: 상품 선택 섹션
+	.product-choice-sec {
+		margin-top: var(--sec-outer-margin);
+		@include sec-basic;
+
+		.choice-list {
+			@include choice-list;
+		}
+		.choice-rdo {
+			@include choice-rdo;
+
+			.choice-con {
+				.icons {
+					display: flex;
+					align-items: center;
+				}
+				.tit {
+					margin-top: 12rem;
+				}
+				.txt {
+					margin-top: 4rem;
+					font-weight: 600;
+					color: $color-primary;
+				}
+
+			}
+		}
+	}
+	// e: 상품 선택 섹션
+
 	// s: 인터넷 선택 섹션
 	.internet-choice-sec {
 		margin-top: var(--sec-outer-margin);
@@ -86,48 +116,26 @@
 		}
 		.choice-rdo {
 			@include choice-rdo;
-		}
-		.option-list {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 4rem 20rem;
-			margin-top: 12rem;
-			.chk-style1 {
-				min-width: 150rem;
+
+			.choice-con {
+				position: relative;
+				.ui-icn {
+					position: absolute;
+					right: 0;
+					top: -2rem;
+				}
+				.tit {
+					margin-bottom: 12rem;
+				}
+				.txt + .txt {
+					margin-top: 2rem;
+				}
 			}
 		}
 	}
 	// e: 인터넷 선택 섹션
 
-	// s: TV채널 선택 섹션
-	.chanel-choice-sec {
-		margin-top: var(--sec-outer-margin);
-		@include sec-basic;
-
-		.choice-list {
-			@include choice-list;
-		}
-		.choice-rdo {
-			@include choice-rdo;
-		}
-	}
-	// e: TV채널 선택 섹션
-
-	// s: 전화 선택 섹션
-	.call-choice-sec {
-		margin-top: var(--sec-outer-margin);
-		@include sec-basic;
-
-		.choice-list {
-			@include choice-list;
-		}
-		.choice-rdo {
-			@include choice-rdo;
-		}
-	}
-	// e: 전화 선택 섹션
-
-	// s: 요금제 누눈에 보기 섹션
+	// s: 요금제 한눈에 보기 섹션
 	.plan-view-sec {
 		margin-top: var(--sec-outer-margin);
 		@include sec-basic;
@@ -145,7 +153,7 @@
 			}
 		}
 	}
-	// e: 요금제 누눈에 보기 섹션
+	// e: 요금제 한눈에 보기 섹션
 
 	// s: 인터넷 가입절차 섹션
 	.join-steps-sec {
@@ -169,7 +177,7 @@
 						bottom: 100%;
 						display: block;
 						width: 2rem;
-						height: 44rem;
+						height: 46rem;
 						background-color: #EAE6FB;
 					}
 				}
@@ -213,8 +221,8 @@
 		z-index: 100;
 		margin-top: auto;
 		padding-top: 20rem;
-		padding-bottom: 32rem;
-		margin-bottom: -32rem;
+		padding-bottom: 24rem;
+		margin-bottom: calc(#{$mobile-bottom-spacer} * -1);
 		background-color: #fff;
 		border-radius: 20rem 20rem 0 0;
 		box-shadow: 0 -4rem 20rem 0 rgba(0,0,0,0.1);
@@ -279,7 +287,6 @@
 			box-shadow: none;
 			border-radius: 0;
 			bottom: 0;
-			padding-bottom: $pc-bottom-spacer;
 			margin-bottom: calc(#{$pc-bottom-spacer} * -1);
 
 		}
