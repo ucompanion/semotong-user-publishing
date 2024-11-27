@@ -234,6 +234,7 @@ section   {
 	}
 }
 
+
 // Footer
 .footer {
 	padding-bottom: calc(#{$height-footer} + #{$safe-area-bottom});
@@ -521,12 +522,16 @@ body.is-scroll-first {
 		padding-bottom: $safe-area-bottom;
 	}
 	.header-mobile {
-		margin-top: 40rem;
-		margin-bottom: 20rem;
+		margin-top: 30rem;
+		margin-bottom: 10rem;
 		position: relative;
 		box-shadow: none;
 		.btn-aside {
 			display: none;
+		}
+		&.only-mo ~ .container .content,
+		&.only-mo + .container .content {
+			padding-top: 30rem;
 		}
 	}
 	.header-desktop {
@@ -538,4 +543,10 @@ body.is-scroll-first {
 	.floating-menu {
 		bottom: calc(#{$safe-area-bottom} + var(--btn-gap));
 	}
+}
+
+// Modal Demo Page
+.modal-demo-page {
+	@include flex-fill-height;
+	justify-content: center;
 }

@@ -1382,7 +1382,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			padding: 36rem 20rem;
+			padding: 36rem 18rem;
 			width:calc(50% - 6rem);
 			border: 1px solid #EFF0F0;
 			border-radius: 2rem;
@@ -1402,11 +1402,13 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				.rdo {
 					text-align: center;
 					span {
+						display: block;
 						padding-left: 0;
 						font-size: 14rem;
 						line-height: 20rem;
 						word-break: keep-all;
 						color: #5A5D60;
+						text-align: center;
 						em {
 							display: block;
 							margin-bottom: 4rem;
