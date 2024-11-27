@@ -144,8 +144,10 @@
 		.plan-table {
 			width: 100%;
 			overflow-x: auto;
+			overscroll-behavior:auto;
 			img {
 				width: 720rem;
+				max-width: 720rem;
 			}
 		}
 	}
