@@ -277,7 +277,7 @@
 		left: 0;
 		z-index: 100;
 		margin-top: auto;
-		padding-top: 20rem;
+		padding-top: 24rem;
 		padding-bottom: 24rem;
 		margin-bottom: calc(#{$mobile-bottom-spacer} * -1);
 		background-color: #fff;
@@ -288,12 +288,19 @@
 			.payment-tit {
 				padding: 0 4rem;
 				.charge {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
 					font-weight: 700;
 					font-size: 20rem;
 					line-height: 28rem;
 					color: #000;
 				}
 				.freeGift {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-top: 8rem;
 					strong {
 						font-weight: 600;
 						color: $color-primary;
@@ -304,34 +311,12 @@
 					align-items: center;
 					gap: 4rem;
 					margin-top: 8rem;
+					padding-top: 8rem;
+					border-top: 1px solid #EFF0F0;
 					font-weight: 400;
 					font-size: 14rem;
 					line-height: 16rem;
 					color: #63666A;
-				}
-			}
-			.payment-con {
-				margin-top: 13rem;
-				padding: 8rem 12rem;
-				border-radius: 4rem;
-				background-color: #F4F5F8;
-				.item {
-					display: flex;
-					justify-content: space-between;
-					font-size: 12rem;
-					line-height: 16rem;
-					.tit {
-						display: block;
-						font-weight: 500;
-					}
-					.charge {
-						display: block;
-						font-weight: 700;
-						text-align: right;
-					}
-					& + .item {
-						margin-top: 2rem;
-					}
 				}
 			}
 			.payment-btn {
@@ -346,6 +331,18 @@
 			bottom: 0;
 			margin-bottom: calc(#{$pc-bottom-spacer} * -1);
 
+			.payment-noti {
+				display: flex;
+				gap: 24rem;
+				.payment-tit {
+					flex: 1 1 auto;
+				}
+				.payment-btn {
+					flex: none;
+					width: 200rem;
+					margin-top: 0;
+				}
+			}
 		}
 	}
 	// e: 요금제 신청 섹션
