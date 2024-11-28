@@ -3,6 +3,7 @@
 /*-------------------------------------------------------------------
 	Guide
 -------------------------------------------------------------------*/
+.sub_page {padding-bottom: 60rem; padding-top: 20rem;}
 /* Section */
 .g-section {color:#222;}
 .g-section + .g-section {margin-top:40px;}

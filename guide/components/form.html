@@ -28,8 +28,8 @@
 		<!-- Container -->
 		<div class="container">
 			<main id="content" class="content" role="main">
-				<div class="content-body out-sec">
-					<div class="in-sec">
+				<div class="content-body">
+					<div class="out-sec in-sec">
 						<h1 class="g-h1">Form Elements</h1>
 					</div>
 					<!-- Section -->
@@ -38,17 +38,13 @@
 							<h2 class="g-h2">기본 구조</h2>
 						</div>
 						<div class="g-section-body">
-							<ul class="g-desc">
-								<li>&lt;label&gt; 태그는 for/id 반드시 연결한다.</li>
-								<li>&lt;label&gt; 생략된 input, select, textbox 는 반드시 title을 추가한다.</li>
-								<li>title은 가급적 입력형식 우선순위로 설명한다. </li>
-								<li>서식들의 아이디는 다른 기능과 중복되지 않도록 frm아이디 규칙을 적용한다.</li>
-							</ul>
 							<xmp style="max-height: 400px;">
+<!-- Input -->
 <div class="ui-inp">
 	<input type="text" name="" id="frm아이디" value="" placeholder="Placeholder" title="" class="inp" />
 </div>
 
+<!-- Input on-right -->
 <div class="ui-inp">
 	<input type="text" name="" id="frm아이디" value="" placeholder="Placeholder" title="" class="inp" />
 	<div class="on-right">
@@ -56,34 +52,38 @@
 	</div>
 </div>
 
+<!-- Textarea -->
 <div class="ui-textarea">
 	<textarea name="" id="frm아이디" cols="50" rows="2" class="textarea"></textarea>
 </div>
 
+<!-- Select -->
 <div class="ui-sel">
-	<select name="" id="frm아이디"  title="" class="sel">
-		<option value="">콤보상자1</option>
-		<option value="">콤보상자2</option>
-	</select>
+	<!-- 선택전 is-placeholder, (선택후 삭제) -->
+	<button type="button" id="frmType" class="sel is-placeholder" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+		<span>문의유형 선택</span>
+		<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+	</button>
 </div>
 
-<div class="ui-chk">
-	<input type="checkbox" name="" id="frm아이디" class="chk" />
-	<label for="frm아이디"><span>체크박스</span></label>
+<!-- Checkbox -->
+<label class="ui-chk">
+	<input type="checkbox" name="" id="frm아이디" />
+	<span class="chk"><span>체크박스</span></span>
+</label>
+
+<!-- Radio -->
+<label class="ui-rdo">
+	<input type="radio" name="" id="frm아이디" />
+	<span class="rdo"><span>체크박스</span></span>
+</label>
+
+<!-- Switch -->
+<div class="ui-switch">
+	<input type="checkbox" name="sSwitch1" id="sSwitch11" value="">
+	<label for="sSwitch11"></label>
 </div>
 
-<div class="ui-rdo">
-	<input type="radio" name="" id="frm아이디" class="rdo" />
-	<label for="frm아이디"><span>체크박스</span></label>
-</div>
-
-<div class="frm-file">
-	<input type="text" id="frm제목아이디" title="첨부 파일명" class="input" readonly />
-	<label class="ui-btn" role="button">
-		<input type="file" name="" value="찾아보기" tabindex="-1" aria-hidden="true" />
-		첨부
-	</label>
-</div>
 							</xmp>
 						</div>
 					</section>
@@ -97,44 +97,31 @@
 						<div class="g-section-body">
 							<div class="ui-inp">
 								<input type="text" name="" id="frmInp1" value="" placeholder="Placeholder" title="" class="inp" />
+							</div>
+							<div class="ui-inp">
 								<input type="text" name="" value="" placeholder="Placeholder" title="" class="inp" disabled />
 							</div>
 							<br>
+							<br>
+							<div class="ui-inp">
+								<input type="tel" name="" id="frmTitle" value="" placeholder="전화번호를 입력해 주세요." title="" class="inp" oninput="setRegularNumber(this)"/>
+							</div>
+							<div class="ui-inp">
+								<input type="text" name="" value="" placeholder="검색어를 입력해 주세요." class="inp" />
+								<div class="on-right">
+									<button type="button" class="ui-btn btn-srch">
+										<i class="ui-icn icn-20-srch-bk" aria-label="검색"></i>
+									</button>
+								</div>
+							</div>
+							<!-- <br>
 							<br>
 							<div class="ui-inp">
 								<input type="text" name="" id="frmInp2" value="입력된 글자 (삭제가능)" placeholder="Placeholder" title="" class="inp" />
 								<div class="on-right">
 									<button type="button" class="ui-btn btn-clear" onclick="InputClearHandler('#frmInp2')"><i class="ui-icn">삭제</i></button>
 								</div>
-							</div>
-							<div class="ui-inp">
-								<input type="text" name="" id="frmInp3" value="입력된 글자 (Disabled)" placeholder="Placeholder" title="" class="inp" disabled />
-								<div class="on-right">
-									<button type="button" class="ui-btn btn-clear" onclick="InputClearHandler('#frmInp3')"><i class="ui-icn">삭제</i></button>
-								</div>
-							</div>
-							<div class="ui-inp">
-								<input type="text" name="" id="frmInp4" value="입력된 글자 (Readonly)" placeholder="Placeholder" title="" class="inp" readonly />
-								<div class="on-right">
-									<button type="button" class="ui-btn btn-clear" onclick="InputClearHandler('#frmInp4')"><i class="ui-icn">삭제</i></button>
-								</div>
-							</div>
-							<br>
-							<br>
-							<div class="ui-inp">
-								<input type="text" name="" id="frmInp5" value="입력된 글자 (삭제가능)" placeholder="Placeholder" title="" class="inp" />
-								<div class="on-right">
-									<button type="button" class="ui-btn btn-clear" onclick="InputClearHandler('#frmInp5')"><i class="ui-icn">삭제</i></button>
-									<button type="button" class="ui-btn"><i class="ui-icn">검색</i></button>
-								</div>
-							</div>
-							<div class="ui-inp">
-								<input type="text" name="" id="frmInp6" value="입력된 글자 (Disabled)" placeholder="Placeholder" title="" class="inp" disabled />
-								<div class="on-right">
-									<button type="button" class="ui-btn btn-clear" onclick="InputClearHandler('#frmInp6')"><i class="ui-icn">삭제</i></button>
-									<button type="button" class="ui-btn"><i class="ui-icn">검색</i></button>
-								</div>
-							</div>
+							</div> -->
 						</div>
 					</section>
 					<!-- // Section -->
@@ -146,7 +133,8 @@
 						</div>
 						<div class="g-section-body">
 							<div class="ui-textarea">
-								<textarea name="" id="frm아이디" cols="50" rows="5" class="textarea"></textarea>
+								<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea"></textarea>
+								<p class="bytes"><em class="count">0/</em>1,000</p>
 							</div>
 						</div>
 					</section>
@@ -215,22 +203,22 @@
 							<h2 class="g-h2">Checkbox</h2>
 						</div>
 						<div class="g-section-body">
-							<div class="ui-chk">
+							<label class="ui-chk chk-style1">
 								<input type="checkbox" name="sCheck1" id="sCheck11" checked>
-								<label for="sCheck11"><span class="blind">숨김처리</span></label>
-							</div>
-							<div class="ui-chk">
+								<span class="chk"><span>Checked</span></span>
+							</label>
+							<label class="ui-chk chk-style1">
 								<input type="checkbox" name="sCheck1" id="sCheck12">
-								<label for="sCheck12"><span>Label</span></label>
-							</div>
-							<div class="ui-chk">
+								<span class="chk"><span>Default</span></span>
+							</label>
+							<!-- <label class="ui-chk chk-style1">
 								<input type="checkbox" name="sCheck1" id="sCheck13" disabled>
-								<label for="sCheck13"><span>Disabled</span></label>
-							</div>
-							<div class="ui-chk">
+								<span class="chk"><span>Disabled</span></span>
+							</label> -->
+							<label class="ui-chk chk-style1">
 								<input type="checkbox" name="sCheck1" id="sCheck14">
-								<label for="sCheck14"><span>라벨이<br>두줄인 경우</span></label>
-							</div>
+								<span class="chk"><span>라벨이<br>두줄인 경우</span></span>
+							</label>
 						</div>
 					</section>
 					<!-- // Section -->
@@ -241,22 +229,22 @@
 							<h2 class="g-h2">Radio</h2>
 						</div>
 						<div class="g-section-body">
-							<div class="ui-rdo">
+							<label class="ui-rdo rdo-style1">
 								<input type="radio" name="sRadio1" id="sRadio11" checked>
-								<label for="sRadio11"><span class="blind">숨김처리</span></label>
-							</div>
-							<div class="ui-rdo">
+								<span class="rdo"><span>Checked</span></span>
+							</label>
+							<label class="ui-rdo rdo-style1">
 								<input type="radio" name="sRadio1" id="sRadio12">
-								<label for="sRadio12"><span>Label</span></label>
-							</div>
-							<div class="ui-rdo">
-								<input type="radio" name="sRadio1" id="sRadio13" disabled>
-								<label for="sRadio13"><span>Disabled</span></label>
-							</div>
-							<div class="ui-rdo">
+								<span class="rdo"><span>Default</span></span>
+							</label>
+							<!-- <label class="ui-rdo rdo-style1">
+								<input type="checkbox" name="sRadio1" id="sRadio13" disabled>
+								<span class="rdo"><span>Disabled</span></span>
+							</label> -->
+							<label class="ui-rdo rdo-style1">
 								<input type="radio" name="sRadio1" id="sRadio14">
-								<label for="sRadio14"><span>라벨이<br>두줄인 경우</span></label>
-							</div>
+								<span class="rdo"><span>라벨이<br>두줄인 경우</span></span>
+							</label>
 						</div>
 					</section>
 					<!-- // Section -->
@@ -283,22 +271,23 @@
 								<input type="checkbox" name="sSwitch1" id="sSwitch14" value="" checked disabled>
 								<label for="sSwitch14"></label>
 							</div>
-						</div>
-					</section>
-					<!-- // Section -->
-
-					<!-- Section -->
-					<section class="g-section in-sec">
-						<div class="g-section-head">
-							<h2 class="g-h2">File</h2>
-						</div>
-						<div class="g-section-body">
-							<div class="ui-file">
-								<input type="text" id="frm제목아이디" title="첨부 파일명" class="inp" readonly />
-								<label class="ui-btn btn-frm" role="button">
-									<input type="file" name="" value="찾아보기" tabindex="-1" aria-hidden="true" class="file" />
-									첨부
-								</label>
+							<br>
+							<br>
+							<div class="ui-switch xs">
+								<input type="checkbox" name="sSwitch2" id="sSwitch21" value="">
+								<label for="sSwitch21"></label>
+							</div>
+							<div class="ui-switch xs">
+								<input type="checkbox" name="sSwitch2" id="sSwitch22" value="" checked>
+								<label for="sSwitch22"></label>
+							</div>
+							<div class="ui-switch xs">
+								<input type="checkbox" name="sSwitch2" id="sSwitch23" value="" disabled>
+								<label for="sSwitch23"></label>
+							</div>
+							<div class="ui-switch xs">
+								<input type="checkbox" name="sSwitch2" id="sSwitch24" value="" checked disabled>
+								<label for="sSwitch24"></label>
 							</div>
 						</div>
 					</section>

@@ -28,28 +28,64 @@
 		<!-- Container -->
 		<div class="container">
 			<main id="content" class="content" role="main">
-				<div class="content-body out-sec">
-					<div class="in-sec">
+				<div class="content-body">
+					<div class="out-sec in-sec">
 						<h1 class="g-h1">Buttons</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">일반 버튼</h2>
+							<h2 class="g-h2">기본 구조</h2>
 						</div>
 						<div class="g-section-body">
+							<xmp>
+<!-- 텍스트 버튼 -->
+<button type="button" class="ui-btn btn-[유형]">
+	<span></span>
+</button>
+
+<!-- 아이콘 버튼 -->
+<button type="button" class="ui-btn btn-[유형]">
+	<i class="ui-icn icn-[아이콘]" aria-label=""></i>
+</button>
+							</xmp>
+						</div>
+					</section>
+					<!-- // Section -->
+
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">모달 버튼 (alert, confirm)</h2>
+						</div>
+						<div class="g-section-body">
+							<div style="display: flex;">
+								<button type="button" class="ui-btn btn-modal normal">
+									<span>아니오</span>
+								</button>
+								<button type="button" class="ui-btn btn-modal primary">
+									<span>예</span>
+								</button>
+							</div>
 						</div>
 					</section>
 					<!-- // Section -->
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">아이콘 버튼</h2>
+							<h2 class="g-h2">페이지 버튼</h2>
 						</div>
 						<div class="g-section-body">
-							<button type="button" class="ui-btn btn-more">
-								<span>더보기</span>
-								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							<button type="button" class="ui-btn btn-action primary">
+								<span>버튼</span>
+							</button>
+							<button type="button" class="ui-btn btn-sub xl">
+								<span>버튼</span>
+							</button>
+							<br>
+							<br>
+							<button type="button" class="ui-btn btn-sub xs">
+								<span>버튼</span>
 							</button>
 						</div>
 					</section>
@@ -57,9 +93,33 @@
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">링크 버튼</h2>
+							<h2 class="g-h2">더보기 버튼</h2>
 						</div>
 						<div class="g-section-body">
+							<button type="button" class="ui-btn btn-more">
+								<span>더보기</span>
+								<i class="ui-icn icn-14-more-gr" aria-hidden="true"></i>
+							</button>
+							<button type="button" class="ui-btn btn-more-list">
+								<i class="ui-icn icn-16-more-list-gr" aria-hidden="true"></i>
+								<span>더보기</span>
+							</button>
+							<button type="button" class="ui-btn btn-more-list">
+								<span>다른 요금제를 안내해 드릴까요?</span>
+								<i class="ui-icn icn-16-more-02-gr" aria-hidden="true"></i>
+							</button>
+						</div>
+					</section>
+					<!-- // Section -->
+					<!-- Section -->
+					<section class="g-section in-sec">
+						<div class="g-section-head">
+							<h2 class="g-h2">텍스트 버튼</h2>
+						</div>
+						<div class="g-section-body">
+							<button type="button" class="ui-btn btn-texted">
+								<span>개인정보 수집 이용</span>
+							</button>
 						</div>
 					</section>
 					<!-- // Section -->

@@ -30,7 +30,9 @@
 -------------------------------------------------------------------*/
 // s: 팝업 버튼
 .btn-modal {
+	min-width: 50%;
 	height: 56rem;
+	padding: 0 16rem;
 	font-weight: 500;
 	font-size: 16rem;
 	line-height: 22rem;
@@ -173,6 +175,8 @@
 		padding: 10rem 12rem;
 		border-radius: 4rem;
 		font-weight: 600;
+		font-size: 14rem;
+		line-height: 20rem;
 	}
 }
 // e: 서브 버튼
