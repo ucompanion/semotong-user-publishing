@@ -18,19 +18,20 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
-	<script></script>
-
-	<style>
-		html {
-			font-size: 1px;
+	<script>
+		function planViewHendler(id){
+			const planViewSec = document.querySelectorAll('.plan-view-sec');
+			planViewSec.forEach((element) => {
+				if (element.id === id) {
+					// 주어진 id와 일치하는 요소는 is-hide 클래스 제거
+					element.classList.remove('is-hide');
+				} else {
+					// 나머지 요소는 is-hide 클래스 추가
+					element.classList.add('is-hide');
+				}
+			});
 		}
-
-		img {
-	vertical-align: middle;
-	max-width: 100%;
-}
-
-	</style>
+	</script>
 </head>
 
 <body>
@@ -102,7 +103,7 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<!-- 2024-11-27 조찬기 : 통신사, 상품, 인터넷 변경 -->
+			<!-- 2024-11-28 조찬기 : 주요내용 전체변경 -->
 
 			<div class="content F-I01-01-page">
 				<!-- 인터넷 소개 섹션 -->
@@ -131,7 +132,7 @@
 							<ul class="choice-list">
 								<li class="choice-item">
 									<label class="choice-rdo is-selected">
-										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')" checked>
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo'); planViewHendler('planViewKT')" checked>
 										<span class="choice-con">
 											<img src="../../assets/images/common/img-choice-kt.png" alt="KT" />
 										</span>
@@ -139,41 +140,41 @@
 								</li>
 								<li class="choice-item">
 									<label class="choice-rdo">
-										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo'); planViewHendler('planViewLGUplus')">
 										<span class="choice-con">
-											<img src="../../assets/images/common/img-choice-lg.png" alt="KT" />
+											<img src="../../assets/images/common/img-choice-lg.png" alt="LG U+" />
 										</span>
 									</label>
 								</li>
 								<li class="choice-item">
 									<label class="choice-rdo">
-										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo'); planViewHendler('planViewSK')">
 										<span class="choice-con">
-											<img src="../../assets/images/common/img-choice-sk.png" alt="KT" />
+											<img src="../../assets/images/common/img-choice-sk.png" alt="SK" />
 										</span>
 									</label>
 								</li>
 								<li class="choice-item">
 									<label class="choice-rdo">
-										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo'); planViewHendler('planViewSkylife')">
 										<span class="choice-con">
-											<img src="../../assets/images/common/img-choice-skylife.png" alt="KT" />
+											<img src="../../assets/images/common/img-choice-skylife.png" alt="skyLife" />
 										</span>
 									</label>
 								</li>
 								<li class="choice-item">
 									<label class="choice-rdo">
-										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo'); planViewHendler('planViewLGHV')">
 										<span class="choice-con">
-											<img src="../../assets/images/common/img-choice-lghv.png" alt="KT" />
+											<img src="../../assets/images/common/img-choice-lghv.png" alt="LG HelloVision" />
 										</span>
 									</label>
 								</li>
 								<li class="choice-item">
 									<label class="choice-rdo">
-										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo')">
+										<input type="radio" name="frmTelecom" onchange="setRadioSelected('frmTelecom', '.choice-rdo'); planViewHendler('planViewSKB')">
 										<span class="choice-con">
-											<img src="../../assets/images/common/img-choice-skb.png" alt="KT" />
+											<img src="../../assets/images/common/img-choice-skb.png" alt="SKB" />
 										</span>
 									</label>
 								</li>
@@ -286,19 +287,96 @@
 				</section>
 				<!-- // 인터넷 선택 섹션 -->
 
-				<!-- 요금제 누눈에 보기 섹션 -->
-				<section class="plan-view-sec">
+				<!-- 요금제 누눈에 보기 섹션 - 숨김처리: is-hide -->
+				<!-- Case KT -->
+				<section class="plan-view-sec" id="planViewKT">
 					<div class="sec-inner">
 						<div class="sec-header">
 							<h2 class="sec-tit">KT 요금제 한눈에 보기</h2>
 						</div>
 						<div class="sec-body">
 							<div class="plan-table">
-								<img src="../../assets/images/common/img-plan-table.png" alt="" />
+								<script>$('#planViewKT .plan-table').load('./include-table-kt.html')</script>
 							</div>
 						</div>
 					</div>
 				</section>
+				<!-- //Case KT -->
+
+				<!-- Case LGU+ -->
+				<section class="plan-view-sec is-hide" id="planViewLGUplus">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">LGU+ 요금제 한눈에 보기</h2>
+						</div>
+						<div class="sec-body">
+							<div class="plan-table">
+								<script>$('#planViewLGUplus .plan-table').load('./include-table-lg.html')</script>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Case LGU+ -->
+
+				<!-- Case SK -->
+				<section class="plan-view-sec is-hide" id="planViewSK">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">SK 요금제 한눈에 보기</h2>
+						</div>
+						<div class="sec-body">
+							<div class="plan-table">
+								<script>$('#planViewSK .plan-table').load('./include-table-sk.html')</script>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Case SK -->
+
+				<!-- Case skylife -->
+				<section class="plan-view-sec is-hide" id="planViewSkylife">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">skylife 요금제 한눈에 보기</h2>
+						</div>
+						<div class="sec-body">
+							<div class="plan-table">
+								<script>$('#planViewSkylife .plan-table').load('./include-table-skylife.html')</script>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Case skylife -->
+
+				<!-- Case 헬로비전 -->
+				<section class="plan-view-sec is-hide" id="planViewLGHV">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">LG HelloVision 요금제 한눈에 보기</h2>
+						</div>
+						<div class="sec-body">
+							<div class="plan-table">
+								<script>$('#planViewLGHV .plan-table').load('./include-table-lghv.html')</script>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Case 헬로비전 -->
+
+				<!-- Case SKB -->
+				<section class="plan-view-sec is-hide" id="planViewSKB">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">SKB 요금제 한눈에 보기</h2>
+						</div>
+						<div class="sec-body">
+							<div class="plan-table">
+								<script>$('#planViewSKB .plan-table').load('./include-table-skb.html')</script>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Case SKB -->
 				<!-- // 요금제 누눈에 보기 섹션 -->
 
 				<!-- 인터넷 가입절차 섹션 -->

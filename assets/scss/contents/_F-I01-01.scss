@@ -136,6 +136,10 @@
 		margin-top: var(--sec-outer-margin);
 		@include sec-basic;
 
+		&.is-hide {
+			display: none;
+		}
+
 		.sec-inner {
 			padding-top: var(--sec-outer-margin);
 			border-top: 1px solid #EFF0F0;
@@ -145,9 +149,64 @@
 			width: 100%;
 			overflow-x: auto;
 			overscroll-behavior:auto;
-			img {
-				width: 720rem;
-				max-width: 720rem;
+
+			table {
+				width: $pc-inner-content;
+				table-layout: fixed;
+				border-collapse: collapse;
+				border-spacing: 0;
+				td {
+					padding: 8rem;
+					border:1px solid #dddddd;
+					font-weight: 500;
+					font-size: 14rem;
+					line-height: 22rem;
+					color: #2a2b2d;
+					word-break: keep-all;
+					vertical-align: middle;
+					text-align: center;
+				}
+				thead {
+					td {
+						font-weight: 600;
+						background-color: #f1eefb;
+						&:first-child {
+							width: 125rem;
+						}
+					}
+					tr:first-child td[rowspan='2'] {
+						border-bottom: 1px solid $color-primary;
+					}
+					tr:last-child td {
+						border-bottom: 1px solid $color-primary;
+					}
+				}
+				tbody {
+					tr:nth-child(odd) {
+						td {
+							color: #888b8e;
+						}
+					}
+					td.product {
+						font-weight: 600;
+						color: #2a2b2d !important;
+						.chenel {
+							display: inline-block;
+							margin-top: 4rem;
+							padding: 2rem 8rem;
+							background-color: $color-primary;
+							border-radius: 4rem;
+							font-weight: 600;
+							font-size: 12rem;
+							color: #fff;
+							vertical-align: top;
+						}
+					}
+					td.price {
+						font-weight: 600;
+						color: $color-primary !important;
+					}
+				}
 			}
 		}
 	}
