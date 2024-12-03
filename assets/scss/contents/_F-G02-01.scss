@@ -1,0 +1,70 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : 세모통 백서
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+// s: 세모통 백서 페이지
+.F-G02-01-page {
+
+	// 페이시 여백
+	@include bottom-spacer;
+
+	// s: 세모통 백서 섹션
+	.howto-sec {
+		.howto-list-wrap {
+			margin-top: 16rem;
+
+			.howto-toolbar {
+				padding: 16rem 0;
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+			}
+
+			.howto-list {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 20rem;
+			}
+
+			.howto-card {
+				display: block;
+				width: 100%;
+				border-radius: 2rem;
+				overflow: hidden;
+				box-shadow: $box-shadow-16;
+				.card-thumb {
+					width: 100%;
+					aspect-ratio: 328/184;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+				.card-cont {
+					padding: 20rem 16rem;
+					p {
+						font-weight: 700;
+						font-size: 16rem;
+						line-height: 22rem;
+						color: #46484B;
+						.is-keyword {
+							color: $color-primary;
+						}
+					}
+				}
+			}
+		}
+
+		@include media-tablet-xs {
+			.howto-list-wrap {
+				.howto-list {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+		}
+	}
+	// e: 세모통 백서 섹션
+}
+// e: 세모통 백서 페이지

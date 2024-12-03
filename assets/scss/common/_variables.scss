@@ -1196,8 +1196,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding-top: 30rem;
-	padding-bottom: 30rem;
+	max-width: 328rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30rem 16rem;
+
 	.ui-icn {
 		margin-bottom: 8rem;
 	}
@@ -1767,11 +1770,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			align-items: center;
 			width: 100%;
 			text-align: left;
+			padding-right: 24rem;
 			> span {
 				position: relative;
 				display: block;
 				padding-left: 16rem;
-				padding-right: 12rem;
 				font-weight: 600;
 				font-size: 14rem;
 				line-height: 20rem;
@@ -1785,7 +1788,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				}
 			}
 			.ui-icn {
-				margin-left: auto;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
 			}
 		}
 	}
@@ -1796,7 +1802,34 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			font-weight: 500;
 			font-size: 14rem;
 			line-height: 20rem;
-			color: #2A2B2D;
+			color: #46484B;
+
+			ol {
+				display: flex;
+				flex-direction: column;
+				gap: 4rem;
+				font-size: 12rem;
+				line-height: 16rem;
+				margin-top: 8rem;
+				margin-bottom: 8rem;
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				li {
+					position: relative;
+					counter-increment: item;
+					padding-left: 12rem;
+					&::before {
+						content: counter(item) ". ";
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+				}
+			}
 		}
 	}
 	@include media-tablet-xs {
