@@ -250,21 +250,22 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 
 // 요금제 카테고리 카드
 @mixin ratePlanA-card {
+	padding: 16rem 12rem;
+	background-color: #fff;
 	@include box-shadow-10;
 
 	.card-thumb {
-		width: 100%;
-		aspect-ratio: 156 / 115;
-		background-color: #EFF0F0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		img {
-			width: 100%;
-			height: 100%;
+			width: 40rem;
+			height: 40rem;
 		}
 	}
 	.card-body {
-		padding: 12rem 12rem 14rem 12rem;
-		background-color: #fff;
 		text-align: center;
+		margin-top: 12rem;
 
 		.card-tit {
 			font-weight: 700;
@@ -272,7 +273,8 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			line-height: 20rem;
 			color: #46484B;
 		}
-		.card-txt {
+		.card-tag {
+			margin-top: 2rem;
 			font-weight: 500;
 			font-size: 12rem;
 			line-height: 16rem;
@@ -280,23 +282,19 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 
 		.card-charge {
-			margin-top: 4rem;
+			margin-top: 12rem;
 			font-weight: 600;
 			font-size: 16rem;
 			line-height: 22rem;
-			color: $color-primary;
+			color: #7C5FE5;
 		}
 
 		.card-data {
-			display: inline-block;
-			margin-top: 8rem;
-			padding: 4rem 12rem;
-			background-color: #210197;
-			border-radius: 20rem;
+			margin-top: 2rem;
 			font-weight: 700;
-			font-size: 16rem;
-			line-height: 22rem;
-			color: #fff;
+			font-size: 20rem;
+			line-height: 28rem;
+			color: $color-primary;
 			vertical-align: top;
 		}
 	}
