@@ -195,31 +195,43 @@ html {
 
 // Header Mobile Nav
 .modal.aside-modal {
-	top: 0;
-	height: 100%;
-	transition-duration: 0.1s;
 	.modal-dialog {
-		display: block;
-		width: 100%;
-		height: 100%;
-		margin-left: auto;
-		// background: #fff;
 		transform: translateX(105%);
 		transition-duration: 0.1s;
 		.modal-content {
-			display: block;
-			padding: 20px;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			max-height: 100%;
-			box-shadow: none;
-			border-radius: 0;
 		}
+	}
+	&.fade {
+		transition: opacity .1s linear;
 	}
 	&.show {
 		.modal-dialog {
 			transform: translateX(0%);
+		}
+	}
+
+	.aside-nav-sec {
+		margin-top: 32rem;
+
+		.aside-nav {
+			.nav-item + .nav-item {
+				margin-top: 12rem;
+			}
+			.nav-link {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				padding: 12rem 18rem;
+				font-weight: 600;
+				font-size: 20rem;
+				line-height: 28rem;
+				color: #36383A;
+				text-align: left;
+
+				.ui-icn {
+					margin-right: 8rem;
+				}
+			}
 		}
 	}
 }
