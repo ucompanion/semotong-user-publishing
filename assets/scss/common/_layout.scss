@@ -227,6 +227,9 @@ html {
 				line-height: 28rem;
 				color: #36383A;
 				text-align: left;
+				&:hover {
+					background-color: #EFF0F0;
+				}
 
 				.ui-icn {
 					margin-right: 8rem;
