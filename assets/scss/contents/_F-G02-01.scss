@@ -16,15 +16,27 @@
 
 			.howto-toolbar {
 				padding: 16rem 0;
-				font-weight: 500;
-				font-size: 12rem;
-				line-height: 16rem;
+				.count {
+					font-weight: 500;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #63666A;
+				}
 			}
 
 			.howto-list {
-				display: grid;
-				grid-template-columns: 1fr;
+				display: flex;
+				flex-wrap: wrap;
 				gap: 20rem;
+				.howto-item {
+					width: 100%;
+				}
+
+				@include media-tablet-xs {
+					.howto-item {
+						width: calc(50% - 20px/2);
+					}
+				}
 			}
 
 			.howto-card {

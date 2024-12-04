@@ -62,9 +62,12 @@
 		.faq-accordion-wrap {
 			.faq-toolbar {
 				padding: 16rem 0;
-				font-weight: 500;
-				font-size: 12rem;
-				line-height: 16rem;
+				.count {
+					font-weight: 500;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #63666A;
+				}
 			}
 
 			.faq-accordion {
@@ -114,8 +117,6 @@
 
 			.nodata {
 				@include nodata;
-				padding-top: 60rem;
-				padding-bottom: 60rem;
 				.btn-sub {
 					margin-top: 16rem;
 				}

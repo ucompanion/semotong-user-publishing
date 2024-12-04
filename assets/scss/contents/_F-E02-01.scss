@@ -1,31 +1,25 @@
 @charset "utf-8";
 /*-------------------------------------------------------------------
-	분류그룹 : 공지사항
+	분류그룹 : 이벤트 종료
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
-// s: 공지사항 페이지
-.F-CS02-01-page {
+// s: 이벤트 종료 페이지
+.F-E02-01-page {
 
 	// 페이시 여백
-	padding-top: 20rem;
 	@include bottom-spacer;
 
 	// s: 공지사항 목록 섹션
-	.notice-list-sec {
-		.notice-list-wrap {
-			margin-top: 24rem;
-
-			.notice-list {
+	.eventEnd-sec {
+		.eventEnd-list-wrap {
+			.eventEnd-list {
 				border-top: 1px solid #2A2B2D;
-				// 1차 수정: 리스트 여백 적용
-				// margin-left: calc(#{$mobile-outer-spacer} * -1);
-				// margin-right: calc(#{$mobile-outer-spacer} * -1);
 
-				.notice-item {
+				.eventEnd-item {
 					border-bottom: 1px solid #EFF0F0;
 				}
 
-				.notice-post {
+				.eventEnd-post {
 					position: relative;
 					display: flex;
 					align-items: center;
@@ -34,7 +28,7 @@
 					padding-left: 12rem;
 					padding-right: 12rem;
 
-					.notice-cont {
+					.eventEnd-cont {
 						display: block;
 						flex:1 1 auto;
 						.tit {
@@ -60,7 +54,7 @@
 					}
 
 					&:hover {
-						.notice-cont {
+						.eventEnd-cont {
 							.tit {
 								color: $color-primary;
 								text-decoration: underline;
@@ -69,29 +63,10 @@
 						}
 					}
 				}
-
-				// 1차 수정: 리스트 여백 적용
-				// @include media-tablet-xs {
-				// 	margin-left: 0;
-				// 	margin-right: 0;
-				// }
 			}
 		}
 	}
 	// e: 공지사항 목록 섹션
 
-	// s: 이벤트 섹션
-	.event-sec {
-		margin-top: 50rem;
-
-		.event-swiper {
-			@include event-swiper;
-		}
-
-		.event-bnr {
-			@include event-bnr;
-		}
-	}
-	// e: 이벤트 섹션
 }
-// e: 공지사항 페이지
+// e: 이벤트 종료 페이지

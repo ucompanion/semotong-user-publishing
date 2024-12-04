@@ -1199,7 +1199,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	max-width: 328rem;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 30rem 16rem;
+	padding: 60rem 16rem;
 
 	.ui-icn {
 		margin-bottom: 8rem;
@@ -1790,8 +1790,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			.ui-icn {
 				position: absolute;
 				right: 0;
-				top: 50%;
-				transform: translateY(-50%);
+				top: calc(50% - 8rem);
 			}
 		}
 	}
