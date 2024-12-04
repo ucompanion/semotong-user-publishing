@@ -15,10 +15,10 @@ $(function(){
 		else if ($('.F-I01-01-page').length) {
 			$nav.find('.nav-item').eq(2).find('.nav-link').addClass('is-selected');
 		}
-		else if ($('.F-M01-01-page').length) {
+		else if ($('.F-HP01-01-page').length) {
 			$nav.find('.nav-item').eq(3).find('.nav-link').addClass('is-selected');
 		}
-		else if ($('.F-HP01-01-page').length) {
+		else if ($('.F-E01-01-page').length) {
 			$nav.find('.nav-item').eq(4).find('.nav-link').addClass('is-selected');
 		}
 		else if ($('.F-MY01-01-page').length) {
