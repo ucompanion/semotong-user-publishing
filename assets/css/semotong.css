@@ -803,6 +803,7 @@ html {
   z-index: 200;
   width: 100%;
   background-color: #fff;
+  height: 60rem;
   border-bottom: 1px solid #EFF0F0;
   min-width: 320rem;
   padding-left: 16rem;
@@ -826,7 +827,7 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 60rem;
+  height: 100%;
   gap: 12rem;
   padding: 0;
   width: 100%;
@@ -17698,4 +17699,246 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P03-01-page .page-moving-sec .page-moving .brand img {
   max-width: 100%;
   height: 24rem;
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : 이용약관
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-TM01-page {
+  padding-top: 16rem;
+  padding-bottom: 32rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM01-page {
+    padding-bottom: 48rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM01-page {
+    padding-bottom: 48rem;
+  }
+}
+.F-TM01-page .terms-content {
+  color: #2A2B2D;
+  margin-top: 24rem;
+}
+.F-TM01-page .terms-content:first-child {
+  margin-top: 0;
+}
+.F-TM01-page .terms-content .terms-title {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16rem;
+}
+.F-TM01-page .terms-content .terms-title h2 {
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 28rem;
+  color: #000;
+}
+.F-TM01-page .terms-content .terms-title .ui-sel {
+  margin-top: 8rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM01-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM01-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM01-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM01-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+.F-TM01-page .terms-content h3 {
+  margin-top: 30rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #000;
+}
+.F-TM01-page .terms-content ol > li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+}
+.F-TM01-page .terms-content ol > li + li {
+  margin-top: 8rem;
+}
+.F-TM01-page .terms-content ol > li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM01-page .terms-content ol ul > li {
+  position: relative;
+  padding-left: 12rem;
+  color: #46484B;
+}
+.F-TM01-page .terms-content ol ul > li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM01-page .terms-content dl dt {
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+.F-TM01-page .terms-content dl dt ~ dt {
+  margin-top: 8rem;
+}
+.F-TM01-page .terms-content .terms-tbl {
+  border-top: 1px solid #46484B;
+}
+.F-TM01-page .terms-content .terms-tbl th, .F-TM01-page .terms-content .terms-tbl td {
+  padding: 8rem 10rem;
+}
+.F-TM01-page .terms-content .terms-tbl th {
+  padding: 8rem 0;
+  font-weight: 600;
+  background-color: #f1f3f5;
+}
+.F-TM01-page .terms-content .terms-tbl td {
+  border-bottom: 1px solid #f1f3f5;
+}
+.F-TM01-page .terms-content p + .terms-tbl,
+.F-TM01-page .terms-content p + ol,
+.F-TM01-page .terms-content ol + p,
+.F-TM01-page .terms-content dl + p,
+.F-TM01-page .terms-content p + dl {
+  margin-top: 16rem;
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : 개인정보처리방침
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-TM02-page {
+  padding-top: 16rem;
+  padding-bottom: 32rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM02-page {
+    padding-bottom: 48rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM02-page {
+    padding-bottom: 48rem;
+  }
+}
+.F-TM02-page .terms-content {
+  color: #2A2B2D;
+  margin-top: 24rem;
+}
+.F-TM02-page .terms-content:first-child {
+  margin-top: 0;
+}
+.F-TM02-page .terms-content .terms-title {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16rem;
+}
+.F-TM02-page .terms-content .terms-title h2 {
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 28rem;
+  color: #000;
+}
+.F-TM02-page .terms-content .terms-title .ui-sel {
+  margin-top: 8rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM02-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM02-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM02-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM02-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+.F-TM02-page .terms-content h3 {
+  margin-top: 30rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #000;
+}
+.F-TM02-page .terms-content ol > li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+}
+.F-TM02-page .terms-content ol > li + li {
+  margin-top: 8rem;
+}
+.F-TM02-page .terms-content ol > li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM02-page .terms-content ol ul > li {
+  position: relative;
+  padding-left: 12rem;
+  color: #46484B;
+}
+.F-TM02-page .terms-content ol ul > li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM02-page .terms-content dl dt {
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+.F-TM02-page .terms-content dl dt ~ dt {
+  margin-top: 8rem;
+}
+.F-TM02-page .terms-content .terms-tbl {
+  border-top: 1px solid #46484B;
+}
+.F-TM02-page .terms-content .terms-tbl th, .F-TM02-page .terms-content .terms-tbl td {
+  padding: 8rem 10rem;
+}
+.F-TM02-page .terms-content .terms-tbl th {
+  padding: 8rem 0;
+  font-weight: 600;
+  background-color: #f1f3f5;
+}
+.F-TM02-page .terms-content .terms-tbl td {
+  border-bottom: 1px solid #f1f3f5;
+}
+.F-TM02-page .terms-content p + .terms-tbl,
+.F-TM02-page .terms-content p + ol,
+.F-TM02-page .terms-content ol + p,
+.F-TM02-page .terms-content dl + p,
+.F-TM02-page .terms-content p + dl {
+  margin-top: 16rem;
 }

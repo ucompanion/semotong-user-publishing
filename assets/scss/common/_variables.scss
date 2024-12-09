@@ -1905,3 +1905,104 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 // e: 알뜰폰 개통 방법
+
+// s: 약관
+@mixin terms-content {
+	color: #2A2B2D;
+	margin-top: 24rem;
+	&:first-child {
+		margin-top: 0;
+	}
+	.terms-title {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 16rem;
+
+		h2 {
+			font-weight: 700;
+			font-size: 20rem;
+			line-height: 28rem;
+			color: #000;
+		}
+		.ui-sel {
+			margin-top: 8rem;
+		}
+		@include media-tablet-xs {
+			align-items: center;
+			.ui-sel {
+				width: 200rem;
+				margin-top: 0rem;
+				margin-left: auto;
+			}
+		}
+	}
+	h3 {
+		margin-top: 30rem;
+		margin-bottom: 4rem;
+		font-weight: 600;
+		font-size: 16rem;
+		line-height: 24rem;
+		color: #000;
+	}
+	ol {
+		> li {
+			position: relative;
+			counter-increment: item;
+			padding-left: 12rem;
+			& + li {
+				margin-top: 8rem;
+			}
+			&::before {
+				content: counter(item) ". ";
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+
+		ul {
+			> li {
+				position: relative;
+				padding-left: 12rem;
+				color: #46484B;
+				&::before {
+					content: '-';
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+	}
+	dl {
+		dt {
+			margin-bottom: 4rem;
+			font-weight: 600;
+		}
+		dt ~ dt {
+			margin-top: 8rem;
+		}
+	}
+	.terms-tbl {
+		border-top: 1px solid #46484B;
+		th, td {
+			padding: 8rem 10rem;
+		}
+		th {
+			padding: 8rem 0;
+			font-weight: 600;
+			background-color: #f1f3f5;
+		}
+		td {
+			border-bottom: 1px solid #f1f3f5;
+		}
+	}
+	p + .terms-tbl,
+	p + ol,
+	ol + p,
+	dl + p,
+	p + dl {
+		margin-top: 16rem;
+	}
+}
+// e: 약관

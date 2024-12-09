@@ -51,6 +51,7 @@ html {
 	z-index: 200;
 	width: 100%;
 	background-color: #fff;
+	height: $mobile-height-header;
 	border-bottom: 1px solid #EFF0F0;
 	@include out-sec;
 	transition: all 0.2s ease;
@@ -59,7 +60,7 @@ html {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		height: $mobile-height-header;
+		height: 100%;
 		gap: 12rem;
 		padding: 0;
 		@include in-sec;
