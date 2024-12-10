@@ -7,22 +7,25 @@
 .F-MY01-05-page {
 
 	// 페이시 여백
+	padding-top: 20rem; /* 1차 수정: 제목 추가로 여백 적용 */
 	@include bottom-spacer;
 
 	// s: 상품리스트 섹션
-	.ratePlanC-sec {
+	.ratePlanD-sec {
 		@include sec-basic;
 		.sec-header {
 			margin-bottom: 0;
 		}
 
 		// 요금제 상품 리스트 공통
-		.ratePlanC-list {
-			@include ratePlanC-list;
+		.ratePlanD-list {
+			/* 1차 수정: ratePlanD-list 추가 */
+			@include ratePlanD-list;
 
 			// 요금제 상품 리스트 카드 공통
-			.ratePlanC-card {
-				@include ratePlanC-card;
+			/* 1차 수정: ratePlanD-card 수정 */
+			.ratePlanD-card {
+				@include ratePlanD-card;
 			}
 		}
 
