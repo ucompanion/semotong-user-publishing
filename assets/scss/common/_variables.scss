@@ -949,7 +949,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			font-size: 12rem;
 			line-height: 16rem;
 			color: #63666A;
-			&.is-written { /* 1차 수정: is-written 로 변경 */
+			&.is-written { /* 1차 수정 : is-written 로 변경 */
 				background-color: #EAE6FB;
 				color: $color-primary;
 			}
@@ -1730,7 +1730,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	border-radius: 4rem;
 	padding: 20rem;
 	border: 1px solid transparent;
-	/* 1차 수정: IOS 호환성 대응 */
+	/* 1차 수정 : IOS 호환성 대응 */
 	input {
 		position: absolute;
 		left: 0;
