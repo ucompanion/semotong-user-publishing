@@ -90,10 +90,11 @@
 		.ratePlanC-toolbar {
 			display: flex;
 			align-items: center;
-			gap: 12rem;
+			gap: 8rem; /* 1차 수정 : 툴바 간격 줄임 */
 			.opt {
 				display: flex;
 				align-items: center;
+				flex: none;
 				gap: 4rem;
 				p {
 					font-weight: 500;
@@ -104,13 +105,19 @@
 			}
 			.sort {
 				display: flex;
+				flex: 1 1 auto;
 				margin-left: auto;
+				overflow: hidden;
 				.ui-btn {
 					font-weight: 600;
 					font-size: 12rem;
 					line-height: 16rem;
 					color: #36383A;
 					gap: 4rem;
+					width: 100%;
+					> span {
+						@include ellipsis1;
+					}
 				}
 			}
 		}

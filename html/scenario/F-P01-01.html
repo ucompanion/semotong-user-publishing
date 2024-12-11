@@ -408,7 +408,7 @@
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
-													<button type="button" class="ui-btn">
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
@@ -499,7 +499,7 @@
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
-													<button type="button" class="ui-btn">
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
@@ -565,7 +565,7 @@
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
-													<button type="button" class="ui-btn">
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
@@ -669,7 +669,7 @@
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
-													<button type="button" class="ui-btn">
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
@@ -760,7 +760,7 @@
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
-													<button type="button" class="ui-btn">
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
@@ -826,7 +826,7 @@
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
-													<button type="button" class="ui-btn">
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
@@ -877,7 +877,7 @@
 		모달 기본 : modal
 		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
 		화면 이름 : 화면아이디-page (modal-select 제외)
-		// 1차 수정: fade-pc 사용안함, fade 공통으로 사용
+		// 1차 수정 : fade-pc 사용안함, fade 공통으로 사용
 	-->
 	<!-- 필터 modal basic -->
 	<div class="modal modal-basic fade" id="FP0101P01Modal" tabindex="-1" role="dialog" aria-labelledby="FP0101P01ModalLabel" aria-hidden="true">
@@ -1331,6 +1331,45 @@
 		</div>
 	</div>
 	<!-- // 정렬 modal select -->
+
+	<!--
+		[모달 가이드]
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+	-->
+	<!-- 2024-12-11 조찬기 : 공유하기 모달 추가
+		- modal.scss에 공유하기 관련 스타일 추가되엇습니다.
+		- 1차 수정 : alert 헤더 스타일 추가, 1차 수정 : 공유하기 스타일 추가
+	 -->
+	<!-- 공유하기 Modal Alert -->
+	<div class="modal modal-alert fade" id="shareModal" tabindex="-1" role="alertdialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="shareModalLabel">공유하기</h3>
+				</div>
+				<div class="modal-body">
+					<section class="share-sec">
+						<button type="button" class="ui-btn">
+							<i class="ui-icn icn-80-kakao" aria-hidden="true"></i>
+							<span>카카오톡</span>
+						</button>
+						<button type="button" class="ui-btn">
+							<i class="ui-icn icn-80-copy" aria-hidden="true"></i>
+							<span>URL 복사</span>
+						</button>
+					</section>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
+						<span>닫기</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 공유하기 Modal Alert -->
+
 </body>
 
 </html>

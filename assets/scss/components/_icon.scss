@@ -39,7 +39,7 @@
 }
 
 // 추가하고 싶은 크기를 배열에 나열
-$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 30, 32, 44, 48, 50, 62, 100, 110);
+$icn-sizes: (12, 14, 16, 18, 20, 24, 28, 30, 32, 44, 48, 50, 62, 80, 100, 110);
 
 @each $size in $icn-sizes {
 	[class*='icn-#{$size}'] {
@@ -79,6 +79,8 @@ $bg-icons: (
 	(icn-14-plan-star-pr, svg),
 	(icn-14-plan-expand-bk, svg),
 	(icn-14-plan-more-gr, svg),
+	(icn-14-plan-data-pr, svg),
+	(icn-14-plan-sale-pr, svg),
 
 	// 16
 	(icn-16-more-gr, svg),
@@ -172,6 +174,10 @@ $bg-icons: (
 
 	// 62
 	(icn-62-motong, png),
+
+	// 80
+	(icn-80-kakao, svg),
+	(icn-80-copy, svg),
 
 	// 100
 	(icn-100-nodata-recom, svg),

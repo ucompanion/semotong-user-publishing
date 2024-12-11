@@ -1241,7 +1241,7 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 
 .sub-wrapper .footer {
-  padding-bottom: env(safe-area-inset-bottom, 0)/1.7;
+  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정 : 서브 푸터 calc 적용 */
 }
 .sub-wrapper .floating-menu {
   bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
@@ -1257,7 +1257,7 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-top: 80rem;
   }
   .footer {
-    padding-bottom: env(safe-area-inset-bottom, 0)/1.7;
+    padding-bottom: 0; /* 1차 수정 : 피시 푸터 여백 초기화 */
   }
   .header-mobile {
     margin-top: 30rem;
@@ -1286,7 +1286,7 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-top: 80rem;
   }
   .footer {
-    padding-bottom: env(safe-area-inset-bottom, 0)/1.7;
+    padding-bottom: 0; /* 1차 수정 : 피시 푸터 여백 초기화 */
   }
   .header-mobile {
     margin-top: 30rem;
@@ -1847,6 +1847,11 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 62rem;
 }
 
+[class*=icn-80] {
+  width: 80rem;
+  height: 80rem;
+}
+
 [class*=icn-100] {
   width: 100rem;
   height: 100rem;
@@ -1928,6 +1933,14 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .icn-14-plan-more-gr::before {
   background-image: url("../images/common/icn-14-plan-more-gr.svg");
+}
+
+.icn-14-plan-data-pr::before {
+  background-image: url("../images/common/icn-14-plan-data-pr.svg");
+}
+
+.icn-14-plan-sale-pr::before {
+  background-image: url("../images/common/icn-14-plan-sale-pr.svg");
 }
 
 .icn-16-more-gr::before {
@@ -2426,6 +2439,14 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-62-motong.png");
 }
 
+.icn-80-kakao::before {
+  background-image: url("../images/common/icn-80-kakao.svg");
+}
+
+.icn-80-copy::before {
+  background-image: url("../images/common/icn-80-copy.svg");
+}
+
 .icn-100-nodata-recom::before {
   background-image: url("../images/common/icn-100-nodata-recom.svg");
 }
@@ -2766,6 +2787,18 @@ body.is-scroll-first .floating-menu .btn-top {
 .modal-confirm .modal-content {
   width: 312rem;
 }
+.modal-alert .modal-content .modal-header,
+.modal-confirm .modal-content .modal-header { /* 1차 수정 : alert 헤더 스타일 추가 */ }
+.modal-alert .modal-content .modal-header .modal-title:not(.blind),
+.modal-confirm .modal-content .modal-header .modal-title:not(.blind) {
+  min-width: 100%;
+  padding: 24rem 16rem 0 16rem;
+  font-size: 22rem;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
 .modal-alert .modal-content section,
 .modal-confirm .modal-content section {
   min-width: 100%;
@@ -2795,6 +2828,28 @@ body.is-scroll-first .floating-menu .btn-top {
 .modal-confirm .modal-content .msg-sec .sec-txt .txt-primary {
   color: #2F01D5;
 }
+.modal-alert .modal-content .share-sec,
+.modal-confirm .modal-content .share-sec { /* 1차 수정 : 공유하기 스타일 추가 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44rem;
+  padding: 32rem 16rem;
+}
+.modal-alert .modal-content .share-sec .ui-btn,
+.modal-confirm .modal-content .share-sec .ui-btn {
+  display: flex;
+  flex-direction: column;
+}
+.modal-alert .modal-content .share-sec .ui-btn span,
+.modal-confirm .modal-content .share-sec .ui-btn span {
+  display: block;
+  text-align: center;
+  margin-top: 8rem;
+  font-weight: 500;
+  font-size: 16rem;
+  line-height: 22rem;
+}
 .modal-alert .modal-footer,
 .modal-confirm .modal-footer {
   display: flex;
@@ -2823,7 +2878,7 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 100%;
   max-width: 100%;
   max-height: 100%;
-  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7 / 2);
+  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정 : 모달여백 계산식 수정 */
 }
 .modal-full .modal-header {
   display: flex;
@@ -2943,7 +2998,7 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   max-width: 480rem;
   border-radius: 20rem 20rem 0 0;
-  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7 / 2);
+  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정 : 모달여백 계산식 수정 */
 }
 .modal-select .modal-header,
 .modal-basic .modal-header {
@@ -5688,6 +5743,18 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CS02-01-page .notice-list-sec .notice-list-wrap .notice-list {
   border-top: 1px solid #2A2B2D;
+  /* 1차 수정 : 리스트 여백 취소 */
+  /*
+  	margin-left: calc(16rem * -1);
+  	margin-right: calc(16rem * -1);
+  */
+  /* 1차 수정 : 리스트 여백 취소 */
+  /*
+  @include media-tablet-xs {
+  	margin-left: 0;
+  	margin-right: 0;
+  }
+  */
 }
 .F-CS02-01-page .notice-list-sec .notice-list-wrap .notice-list .notice-item {
   border-bottom: 1px solid #EFF0F0;
@@ -7157,6 +7224,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 4rem;
   padding: 20rem;
   border: 1px solid transparent;
+  /* 1차 수정 : IOS 호환성 대응 */
 }
 .F-I01-01-page .telcom-choice-sec .choice-rdo input {
   position: absolute;
@@ -7261,6 +7329,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 4rem;
   padding: 20rem;
   border: 1px solid transparent;
+  /* 1차 수정 : IOS 호환성 대응 */
 }
 .F-I01-01-page .product-choice-sec .choice-rdo input {
   position: absolute;
@@ -7374,6 +7443,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 4rem;
   padding: 20rem;
   border: 1px solid transparent;
+  /* 1차 수정 : IOS 호환성 대응 */
 }
 .F-I01-01-page .internet-choice-sec .choice-rdo input {
   position: absolute;
@@ -8683,11 +8753,12 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar {
   display: flex;
   align-items: center;
-  gap: 12rem;
+  gap: 8rem; /* 1차 수정 : 툴바 간격 줄임 */
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .opt {
   display: flex;
   align-items: center;
+  flex: none;
   gap: 4rem;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .opt p {
@@ -8698,7 +8769,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .sort {
   display: flex;
+  flex: 1 1 auto;
   margin-left: auto;
+  overflow: hidden;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .sort .ui-btn {
   font-weight: 600;
@@ -8706,6 +8779,12 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #36383A;
   gap: 4rem;
+  width: 100%;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .sort .ui-btn > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list {
   display: flex;
@@ -10145,6 +10224,30 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-state.is-current {
   color: #2801B5;
 }
+.F-MY01-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 6rem;
+}
+.F-MY01-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label .split {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #CDC2F5;
+}
+.F-MY01-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label .label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #542FDD;
+}
+.F-MY01-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label .label .ui-icn {
+  margin-right: 2rem;
+}
 .F-MY01-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-tit {
   font-weight: 600;
   font-size: 20rem;
@@ -10447,7 +10550,7 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #63666A;
 }
-.F-MY01-02-P01-page .review-sec .review-list .review-card .card-body .card-label.is-written {
+.F-MY01-02-P01-page .review-sec .review-list .review-card .card-body .card-label.is-written { /* 1차 수정 : is-written 로 변경 */
   background-color: #EAE6FB;
   color: #542FDD;
 }
@@ -11670,6 +11773,7 @@ body.is-scroll-first .floating-menu .btn-top {
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 .F-MY01-05-page {
+  padding-top: 20rem; /* 1차 수정 : 제목 추가로 여백 적용 */
   padding-bottom: 32rem;
 }
 @media all and (min-width: 768px) {
@@ -11682,11 +11786,11 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-bottom: 48rem;
   }
 }
-.F-MY01-05-page .ratePlanC-sec .sec-header {
+.F-MY01-05-page .ratePlanD-sec .sec-header {
   position: relative;
   margin-bottom: 16rem;
 }
-.F-MY01-05-page .ratePlanC-sec .sec-header .sec-label {
+.F-MY01-05-page .ratePlanD-sec .sec-header .sec-label {
   display: inline-block;
   margin-bottom: 8rem;
   padding: 4rem 8rem;
@@ -11697,7 +11801,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 2rem;
   color: #542FDD;
 }
-.F-MY01-05-page .ratePlanC-sec .sec-header .sec-tit {
+.F-MY01-05-page .ratePlanD-sec .sec-header .sec-tit {
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -11705,92 +11809,91 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 24rem;
   color: #2A2B2D;
 }
-.F-MY01-05-page .ratePlanC-sec .sec-header .sec-tit .ui-icn {
+.F-MY01-05-page .ratePlanD-sec .sec-header .sec-tit .ui-icn {
   margin-right: 4rem;
 }
-.F-MY01-05-page .ratePlanC-sec .sec-header .sec-explain {
+.F-MY01-05-page .ratePlanD-sec .sec-header .sec-explain {
   margin-top: 4rem;
   font-weight: 600;
   font-size: 14rem;
   color: #63666A;
 }
-.F-MY01-05-page .ratePlanC-sec .sec-header .btn-more {
+.F-MY01-05-page .ratePlanD-sec .sec-header .btn-more {
   position: absolute;
   right: 0;
   top: 0;
 }
-.F-MY01-05-page .ratePlanC-sec .sec-header {
+.F-MY01-05-page .ratePlanD-sec .sec-header {
   margin-bottom: 0;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list { /* 1차 수정 : ratePlanD-list 추가 */
   display: flex;
   flex-wrap: wrap;
   gap: 16rem;
   padding-top: 16rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-item {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-item {
   width: 100%;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card {
-  padding: 0 15rem;
-  box-shadow: 0rem 3rem 16rem 0 rgba(0, 0, 0, 0.08);
-  border-radius: 2rem;
-  border: 1px solid transparent;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-body {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card { /* 1차 수정 : ratePlanD-card로 변경 */
   position: relative;
-  padding: 16rem 0;
+  padding: 0 16rem;
+  box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-body .card-button {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-button {
   position: absolute;
-  left: -16rem;
-  right: -16rem;
+  left: 0;
+  right: 0;
   top: 0;
   bottom: 0;
   z-index: 1;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-footer {
-  padding: 12rem 0 20rem;
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-body {
+  padding: 16rem 0 20rem 0;
+}
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-footer {
+  padding: 8rem 0 12rem 0;
   border-top: 1px solid #EFF0F0;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit {
-  display: flex;
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-opening {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  right: 16rem;
+  height: 24rem;
   align-items: center;
-  gap: 4rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit .label {
-  padding: 2rem 8rem;
-  border-radius: 4rem;
+  justify-content: center;
+  padding: 0 6rem;
   font-weight: 500;
   font-size: 12rem;
-  line-height: 16rem;
-  color: #fff;
+  font-style: 16rem;
+  color: #5FCDB0;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #E6F7F2;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit .label.primary {
-  background-color: #542FDD;
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-state {
+  margin-bottom: 4rem;
+  font-weight: 500;
+  font-size: 12rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit .label.secondary {
-  background-color: #2FBE98;
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-state.is-current {
+  color: #2801B5;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-label {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  margin-bottom: 2rem;
   gap: 6rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-label .split {
   display: inline-block;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   background-color: #CDC2F5;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-label .label {
   display: inline-flex;
   align-items: center;
   font-weight: 600;
@@ -11798,34 +11901,29 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #542FDD;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label .ui-ico {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-label .label .ui-icn {
   margin-right: 2rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit {
-  display: flex;
-  font-weight: 700;
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-tit {
+  font-weight: 600;
   font-size: 20rem;
   color: #000;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
-  z-index: 10;
-  margin-left: 8rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-info {
   display: flex;
   align-items: center;
   gap: 6rem;
   margin-top: 8rem;
   padding: 2rem 0;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info .split {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-info .split {
   display: inline-block;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   background-color: #CFD0D1;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info .label {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-info .label {
   display: inline-flex;
   align-items: center;
   color: #494949;
@@ -11833,204 +11931,32 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 12rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info .label .ui-icn {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-info .label .ui-icn {
   margin-right: 4rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-charge {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .brand {
-  display: flex;
   align-items: center;
-  height: 25rem;
-  gap: 4rem;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .brand img {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-charge .brand {
+  height: 28rem;
+}
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-charge .brand img {
   height: 100%;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .brand .brand-rating {
-  display: inline-flex;
-  align-items: center;
-  padding: 3rem 8rem 3rem 4rem;
-  border: 1px solid #CDC2F5;
-  border-radius: 15rem;
-  color: #542FDD;
-  font-weight: 500;
-  font-size: 12rem;
-  line-height: 14rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-charge .charge {
   position: relative;
   top: 2rem;
   text-align: right;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card .card-charge .charge .charge-tit {
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
-  font-weight: 500;
-  font-size: 12rem;
-  line-height: 16rem;
-  color: #828588;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util-tooltip {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util-tooltip .tit {
-  font-weight: 700;
-  font-size: 14rem;
-  line-height: 16rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util-btn {
-  display: flex;
-  align-items: center;
-  gap: 12rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status {
-  margin-top: 16rem;
-  padding: 11rem 16rem;
-  background-color: #F4F5F8;
-  border-radius: 2rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .tit {
-  display: block;
-  flex: 1 1 auto;
-  overflow: hidden;
-  font-weight: 600;
-  font-size: 12rem;
-  line-height: 16rem;
-  color: #000000;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .tit em {
-  color: #542FDD;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .ui-btn {
-  margin-left: auto;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-list li {
-  position: relative;
-  width: 100%;
-  padding-left: 20rem;
-  font-weight: 500;
-  font-size: 12rem;
-  line-height: 16rem;
-  color: #36383A;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-list li .ui-icn {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-expanded {
-  display: none;
-  width: 100%;
-  margin-top: 4rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift.is-expanded .tit {
-  display: none;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift.is-expanded .status-gift-expanded {
-  display: block;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice {
-  display: flex;
-  align-items: center;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .ui-icn:first-child {
-  margin-right: 4rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .txt {
-  font-weight: 600;
-  font-size: 12rem;
-  line-height: 16rem;
-  color: #36383A;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .txt em {
-  color: #542FDD;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .split {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 10rem;
-  background-color: #CFD0D1;
-  margin: 0 8rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
-  align-items: center;
-  font-weight: 600;
-  font-size: 12rem;
-  line-height: 14rem;
-  color: #828588;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
-  margin-top: 32rem;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con {
-  text-align: center;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt {
-  font-weight: 700;
-  font-size: 16rem;
-  line-height: 22rem;
-  color: #000;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
-  margin-top: 6rem;
-  font-weight: 600;
-  font-size: 14rem;
-  line-height: 20rem;
-  color: #36383A;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card.plan-best {
-  border-color: #542FDD;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card.plan-best .card-best {
-  background: linear-gradient(90deg, #6039EE 0%, #3A1EA2 100%);
-  padding: 6rem 11rem;
-  margin: 0 -15rem;
-  border-bottom: 1px solid transparent;
-}
-.F-MY01-05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card.plan-best .card-best p {
-  display: flex;
-  gap: 4rem;
-  color: #fff;
-  font-weight: 500;
-  font-size: 12re;
-  line-height: 18rem;
-}
-.F-MY01-05-page .ratePlanC-sec .nodata {
+.F-MY01-05-page .ratePlanD-sec .nodata {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -12044,31 +11970,31 @@ body.is-scroll-first .floating-menu .btn-top {
   padding: 60rem 16rem;
   margin: 20vh 0;
 }
-.F-MY01-05-page .ratePlanC-sec .nodata .ui-icn {
+.F-MY01-05-page .ratePlanD-sec .nodata .ui-icn {
   margin-bottom: 8rem;
 }
-.F-MY01-05-page .ratePlanC-sec .nodata .nodata-tit {
+.F-MY01-05-page .ratePlanD-sec .nodata .nodata-tit {
   font-weight: 700;
   font-size: 16rem;
   line-height: 24rem;
   color: #36383A;
 }
-.F-MY01-05-page .ratePlanC-sec .nodata .nodata-txt {
+.F-MY01-05-page .ratePlanD-sec .nodata .nodata-txt {
   font-weight: 500;
   font-size: 14rem;
   line-height: 20rem;
   color: #5A5D60;
 }
-.F-MY01-05-page .ratePlanC-sec .nodata .nodata-tit + .nodata-txt {
+.F-MY01-05-page .ratePlanD-sec .nodata .nodata-tit + .nodata-txt {
   margin-top: 4rem;
 }
 @media all and (min-width: 768px) {
-  .F-MY01-05-page .ratePlanC-sec .nodata {
+  .F-MY01-05-page .ratePlanD-sec .nodata {
     margin: 120px 0;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-MY01-05-page .ratePlanC-sec .nodata {
+  .F-MY01-05-page .ratePlanD-sec .nodata {
     margin: 120px 0;
   }
 }
@@ -12212,6 +12138,30 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY02-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-state.is-current {
   color: #2801B5;
+}
+.F-MY02-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 6rem;
+}
+.F-MY02-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label .split {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #CDC2F5;
+}
+.F-MY02-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label .label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #542FDD;
+}
+.F-MY02-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-label .label .ui-icn {
+  margin-right: 2rem;
 }
 .F-MY02-01-page .my-info-sec .my-info-rateplan-data .ratePlanD-card .card-tit {
   font-weight: 600;
@@ -17670,6 +17620,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding: 0 12rem 32rem 12rem;
 }
 .F-P03-01-page .page-moving-sec {
+  /* margin-top: 26rem; 1차 수정건: 여백 삭제 */
   padding: 16rem 12rem 12rem 12rem;
   background-color: #F4F5F8;
 }
