@@ -87,10 +87,10 @@
 		}
 
 		// 요금제 상품 툴바
-		.ratePlanC-toolbar {
+		.ratePlanC-toolbar { /* 1차 수정: 툴바 전체 수정(셀렉트 말줄임 적용) */
 			display: flex;
 			align-items: center;
-			gap: 8rem; /* 1차 수정 : 툴바 간격 줄임 */
+			gap: 8rem;
 			.opt {
 				display: flex;
 				align-items: center;
@@ -105,7 +105,6 @@
 			}
 			.sort {
 				display: flex;
-				flex: 1 1 auto;
 				margin-left: auto;
 				overflow: hidden;
 				.ui-btn {

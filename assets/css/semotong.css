@@ -8750,10 +8750,10 @@ body.is-scroll-first .floating-menu .btn-top {
     border-top: 1px solid #EFF0F0;
   }
 }
-.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar {
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar { /* 1차 수정: 툴바 전체 수정(셀렉트 말줄임 적용) */
   display: flex;
   align-items: center;
-  gap: 8rem; /* 1차 수정 : 툴바 간격 줄임 */
+  gap: 8rem;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .opt {
   display: flex;
@@ -8769,7 +8769,6 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .sort {
   display: flex;
-  flex: 1 1 auto;
   margin-left: auto;
   overflow: hidden;
 }
