@@ -516,7 +516,7 @@ body.is-scroll-first {
 // Sub Wrapper
 .sub-wrapper {
 	.footer {
-		padding-bottom: calc(#{$safe-area-bottom}); /* 1차 수정: calc 적용 */
+		padding-bottom: calc(#{$safe-area-bottom}); /* 1차 수정: 서브 푸터 calc 적용 */
 	}
 	.floating-menu {
 		bottom: calc(#{$safe-area-bottom} + var(--btn-gap));
@@ -535,7 +535,7 @@ body.is-scroll-first {
 		padding-top: $pc-height-header
 	}
 	.footer {
-		padding-bottom: 0; /* 1차 수정: 피시 여백 초기화 */
+		padding-bottom: 0; /* 1차 수정: 피시 푸터 여백 초기화 */
 	}
 	.header-mobile {
 		margin-top: 30rem;

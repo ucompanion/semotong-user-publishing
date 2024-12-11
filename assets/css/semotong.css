@@ -1241,7 +1241,7 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 
 .sub-wrapper .footer {
-  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정: calc 적용 */
+  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정: 서브 푸터 calc 적용 */
 }
 .sub-wrapper .floating-menu {
   bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
@@ -1257,7 +1257,7 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-top: 80rem;
   }
   .footer {
-    padding-bottom: 0; /* 1차 수정: 피시 여백 초기화 */
+    padding-bottom: 0; /* 1차 수정: 피시 푸터 여백 초기화 */
   }
   .header-mobile {
     margin-top: 30rem;
@@ -1286,7 +1286,7 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-top: 80rem;
   }
   .footer {
-    padding-bottom: 0; /* 1차 수정: 피시 여백 초기화 */
+    padding-bottom: 0; /* 1차 수정: 피시 푸터 여백 초기화 */
   }
   .header-mobile {
     margin-top: 30rem;
@@ -2831,7 +2831,7 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 100%;
   max-width: 100%;
   max-height: 100%;
-  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정: 계산식 수정 */
+  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정: 모달여백 계산식 수정 */
 }
 .modal-full .modal-header {
   display: flex;
@@ -2951,7 +2951,7 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   max-width: 480rem;
   border-radius: 20rem 20rem 0 0;
-  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정: 계산식 수정 */
+  padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정: 모달여백 계산식 수정 */
 }
 .modal-select .modal-header,
 .modal-basic .modal-header {
@@ -8706,7 +8706,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar {
   display: flex;
   align-items: center;
-  gap: 8rem; /* 1차 수정: 간격 줄임 */
+  gap: 8rem; /* 1차 수정: 툴바 간격 줄임 */
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar .opt {
   display: flex;
@@ -10502,9 +10502,8 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #63666A;
-  /* 1차 수정: Case 작성완료 클래스명 수정 (내 후기 관리) */
 }
-.F-MY01-02-P01-page .review-sec .review-list .review-card .card-body .card-label.is-written {
+.F-MY01-02-P01-page .review-sec .review-list .review-card .card-body .card-label.is-written { /* 1차 수정: is-written 로 변경 */
   background-color: #EAE6FB;
   color: #542FDD;
 }
@@ -11780,18 +11779,16 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-05-page .ratePlanD-sec .sec-header {
   margin-bottom: 0;
 }
-.F-MY01-05-page .ratePlanD-sec .ratePlanD-list {
-  /* 1차 수정: ratePlanD-list 추가 */
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list { /* 1차 수정: ratePlanD-list 추가 */
   display: flex;
   flex-wrap: wrap;
   gap: 16rem;
   padding-top: 16rem;
-  /* 1차 수정: ratePlanD-card 수정 */
 }
 .F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-item {
   width: 100%;
 }
-.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card {
+.F-MY01-05-page .ratePlanD-sec .ratePlanD-list .ratePlanD-card { /* 1차 수정: ratePlanD-card로 변경 */
   position: relative;
   padding: 0 16rem;
   box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
@@ -17576,6 +17573,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding: 0 12rem 32rem 12rem;
 }
 .F-P03-01-page .page-moving-sec {
+  /* margin-top: 26rem; 1차 수정건: 여백 삭제 */
   padding: 16rem 12rem 12rem 12rem;
   background-color: #F4F5F8;
 }

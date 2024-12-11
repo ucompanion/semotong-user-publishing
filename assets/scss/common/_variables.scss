@@ -949,8 +949,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			font-size: 12rem;
 			line-height: 16rem;
 			color: #63666A;
-			/* 1차 수정: Case 작성완료 클래스명 수정 (내 후기 관리) */
-			&.is-written {
+			&.is-written { /* 1차 수정: is-written 로 변경 */
 				background-color: #EAE6FB;
 				color: $color-primary;
 			}
