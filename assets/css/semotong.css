@@ -4795,7 +4795,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB03-06-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
 }
-.F-CB03-06-page .cb-graph-sec {
+.F-CB03-06-page .cb-graph-sec { /* 1차 수정 : 그래프 cb-graph-sec 전체 수정 */
   margin-top: 16rem;
   margin-bottom: 24rem;
 }
