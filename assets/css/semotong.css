@@ -10521,7 +10521,6 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-02-P01-page .review-sec {
   /* 2024-12-12 내후기관리 review-sec 전체수정 */
-  padding-top: 24rem;
 }
 .F-MY01-02-P01-page .review-sec .sec-header {
   position: relative;
@@ -10561,6 +10560,7 @@ body.is-scroll-first .floating-menu .btn-top {
   top: 0;
 }
 .F-MY01-02-P01-page .review-sec .sec-header {
+  padding-top: 24rem;
   margin-bottom: 14rem;
 }
 .F-MY01-02-P01-page .review-sec .sec-header .sec-explain {

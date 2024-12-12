@@ -15,8 +15,8 @@
 	.review-sec {
 		/* 2024-12-12 내후기관리 review-sec 전체수정 */
 		@include sec-basic;
-		padding-top: 24rem;
 		.sec-header {
+			padding-top: 24rem;
 			margin-bottom: 14rem;
 			.sec-explain {
 				margin-top: 6rem;
