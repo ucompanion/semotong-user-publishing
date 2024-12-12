@@ -10712,6 +10712,16 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-02-P01-page .review-sec .review-list .review-card .card-footer .card-wait .wait-action {
   margin-top: 16rem;
 }
+@media all and (min-width: 768px) {
+  .F-MY01-02-P01-page .review-sec .sec-header br {
+    display: none;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-MY01-02-P01-page .review-sec .sec-header br {
+    display: none;
+  }
+}
 .F-MY01-02-P01-page .nodata-sec {
   display: flex;
   flex-direction: column;

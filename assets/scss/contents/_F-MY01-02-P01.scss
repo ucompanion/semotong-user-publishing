@@ -30,6 +30,14 @@
 				@include review-card;
 			}
 		}
+
+		@include media-tablet-xs {
+			.sec-header {
+				br {
+					display: none;
+				}
+			}
+		}
 	}
 	// e: 리뷰 섹션
 
