@@ -13,10 +13,20 @@
 
 	// s: 리뷰 섹션
 	.review-sec {
+		/* 2024-12-12 내후기관리 review-sec 전체수정 */
+		@include sec-basic;
+		padding-top: 24rem;
+		.sec-header {
+			margin-bottom: 14rem;
+			.sec-explain {
+				margin-top: 6rem;
+			}
+		}
+
 		.review-list {
 			@include review-list;
 
-			.review-card {
+			.review-card { /* 2024-12-12 내후기관리 review-card 전체수정 */
 				@include review-card;
 			}
 		}
