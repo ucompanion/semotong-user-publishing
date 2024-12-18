@@ -18,7 +18,7 @@
 			align-items: center;
 			gap: 8rem;
 			padding: 16rem;
-			padding-left: 0;
+			/* padding-left: 0; 2차 수정 : 캐릭터 이미지 교체 여백수정 */
 			border-radius: 10rem;
 			background-color: #F4F5F8;
 			.intro-img {
@@ -136,9 +136,9 @@
 		margin-top: var(--sec-outer-margin);
 		@include sec-basic;
 
-		&.is-hide {
-			display: none;
-		}
+		// &.is-hide {
+		// 	display: none;
+		// }
 
 		.sec-inner {
 			padding-top: var(--sec-outer-margin);
@@ -173,6 +173,13 @@
 						&:first-child {
 							width: 125rem;
 						}
+						p.info {
+							margin-top: 4rem;
+							font-size: 12px;
+							font-weight: 400;
+							line-height: 16rem;
+							color: #333;
+						}
 					}
 					tr:first-child td[rowspan='2'] {
 						border-bottom: 1px solid $color-primary;
@@ -205,6 +212,11 @@
 					td.price {
 						font-weight: 600;
 						color: $color-primary !important;
+					}
+				}
+				&.table-small {
+					tbody td {
+						font-size: 12rem;
 					}
 				}
 			}

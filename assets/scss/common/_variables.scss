@@ -85,12 +85,12 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 
 // 모달 하단여백
 @mixin modal-spacer {
-	.modal-body {
-		padding-bottom: 16rem;
-		margin-bottom: 8rem;
+	.modal-body { /* 2차 수정 : 모달 여백 수정 */
+		// padding-bottom: 16rem;
+		margin-bottom: 32rem;
 	}
-	.modal-footer {
-		padding-top: 20rem;
+	.modal-footer { /* 2차 수정 : 모달 여백 수정 */
+		padding-top: 8rem;
 		padding-bottom: 24rem;
 	}
 }
@@ -401,7 +401,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				font-size: 12rem;
 				line-height: 16rem;
 				color: #fff;
-				&.primary {
+				&.primary { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+					position: relative;
+					z-index: 10;
 					background-color: $color-primary;
 				}
 				&.secondary {
@@ -421,7 +423,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				border-radius: 50%;
 				background-color: #CDC2F5;
 			}
-			.label {
+			.label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+				position: relative;
+				z-index: 10;
 				display: inline-flex;
 				align-items: center;
 				font-weight: 600;

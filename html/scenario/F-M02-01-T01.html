@@ -213,9 +213,10 @@
 									</button>
 								</div>
 								<div class="sort">
+									<!-- 2차 수정 : 모든화면 추천순제외 -->
 									<button type="button" class="ui-btn" id="frmSort" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSortModal">
 										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
-										<span>추천순</span>
+										<span>낮은 가격 순</span>
 										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
 									</button>
 								</div>
@@ -230,7 +231,7 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
@@ -240,7 +241,7 @@
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -321,7 +322,7 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
@@ -331,7 +332,7 @@
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -387,7 +388,7 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
@@ -397,7 +398,7 @@
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -625,10 +626,10 @@
 							<ul class="select-listbox" role="listbox">
 								<!-- setSelectValued 는 퍼블 확인용입니다. -->
 								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
-								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
+								<!-- <li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li> 2차 수정 : 모든화면 추천순제외 -->
+								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">선택 많은 순</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">할인 기간 후 낮은 가격 순</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">할인기간 후 낮은 가격 순</li><!-- 2차 수정 : 할인기간으로 띄어쓰기 수정 -->
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">데이터 많은 순</li>
 							</ul>
 						</div>

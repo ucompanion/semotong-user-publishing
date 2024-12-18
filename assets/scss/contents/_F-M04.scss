@@ -23,7 +23,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			padding: 0 10rem;
+			padding: 4rem 10rem 0 10rem; /* 2차 수정 : 검색제외 여백수정 */
 
 			.partner-tit {
 				width: 100%;
