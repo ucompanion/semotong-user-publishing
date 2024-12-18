@@ -7579,6 +7579,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-I01-01-page .plan-view-sec.is-hide {
+  display: none;
+}
 .F-I01-01-page .plan-view-sec .sec-inner {
   padding-top: var(--sec-outer-margin);
   border-top: 1px solid #EFF0F0;

@@ -136,9 +136,9 @@
 		margin-top: var(--sec-outer-margin);
 		@include sec-basic;
 
-		// &.is-hide {
-		// 	display: none;
-		// }
+		&.is-hide {
+			display: none;
+		}
 
 		.sec-inner {
 			padding-top: var(--sec-outer-margin);
