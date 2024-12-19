@@ -219,33 +219,6 @@
 		<main role="main" class="container">
 			<!-- content -->
 			<div class="content F-P01-01-page">
-				<!-- 요금제 카테고리 섹션 -->
-				<section class="ratePlan-cate-sec">
-					<div class="sec-inner">
-						<ul class="ratePlan-cate-list">
-							<li>
-								<button type="button" class="ratePlan-cate-btn">
-									<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
-									<span>인터넷<br> 결합 요금제</span>
-								</button>
-							</li>
-							<li>
-								<button type="button" class="ratePlan-cate-btn">
-									<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
-									<span>장기 할인<br> 요금제</span>
-								</button>
-							</li>
-							<li>
-								<button type="button" class="ratePlan-cate-btn">
-									<i class="ui-icn icn-44-plan-cate-03" aria-hidden="true"></i>
-									<span>평생 할인<br> 요금제</span>
-								</button>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<!-- // 요금제 카테고리 섹션 -->
-
 				<!-- 요금제 필터 섹션 -->
 				<section class="ratePlan-filter-sec">
 					<div class="sec-inner">
@@ -254,11 +227,40 @@
 							<p class="sec-explain">요금제 구성을 알려주시면 세모통이 추천해드려요!</p>
 						</div>
 						<div class="sec-body">
+							<!-- 요금제 배너목록 -->
+							<!-- 2차 수정 : 요금제 카테고리 위치 변경 -->
+							<ul class="ratePlan-cate-list">
+								<li>
+									<button type="button" class="ratePlan-cate-btn">
+										<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
+										<span>인터넷<br> 결합 요금제</span>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="ratePlan-cate-btn">
+										<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
+										<span>장기 할인<br> 요금제</span>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="ratePlan-cate-btn">
+										<i class="ui-icn icn-44-plan-cate-03" aria-hidden="true"></i>
+										<span>평생 할인<br> 요금제</span>
+									</button>
+								</li>
+							</ul>
+							<!-- // 요금제 배너목록 -->
+
+							<!-- 필터목록 -->
+							<!-- 2차 수정 : 필터 키워드형으로 변경
+								- 새로고침 제외, 키워드 설정완료 태태추가, 삭제버튼 제외
+							 -->
 							<ul class="ratePlan-filter-list">
 								<!-- 필수 - 필터버튼 -->
 								<li>
+									<!-- Case 설정완료시 is-setting 추가 -->
 									<!-- ui-filter: input.scss 가이드에 포함 -->
-									<button type="button" class="filter-btn is-setting" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+									<button type="button" class="filter-btn" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
 										<i class="ui-icn icn-24-filter-gr" aria-hidden="true"></i>
 										<span>필터</span>
 									</button>
@@ -266,66 +268,68 @@
 								</li>
 
 								<!--  Cases -->
-								<li>
+								<!-- <li>
 									<button type="button" class="filter-btn">
 										<i class="ui-icn icn-24-refresh-gr" aria-label="새로고침"></i>
 									</button>
-								</li>
+								</li> -->
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<!-- Case 설정완료시 is-setting 추가 -->
+									<button class="filter-chip">
 										<span>데이터</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>가격</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>소진시 속도</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>할인 기간</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>통화</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>문자</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>통신정보</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>인터넷 결합</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
-									<button type="button" class="filter-chip" onclick="removeHendler(this)">
+									<button class="filter-chip">
 										<span>부가 서비스</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 							</ul>
+							<!-- // 필터목록 -->
 						</div>
 					</div>
 				</section>
@@ -343,7 +347,7 @@
 									<!-- 2차 수정 : 모든화면 추천순제외 -->
 									<button type="button" class="ui-btn" id="frmSort" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSortModal">
 										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
-										<span>추천순</span>
+										<span>낮은 가격 순</span>
 										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
 									</button>
 								</div>
