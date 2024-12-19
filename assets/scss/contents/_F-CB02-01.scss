@@ -27,5 +27,22 @@
 		// e: 요금제 상품 리스트
 	}
 	// e: 요금제 상품 섹션
+
+	// s: 요금제 상품 섹션
+	.cb-ratePlanE-sec {
+		margin-top: 24rem;
+
+		// s: 요금제 상품 리스트
+		.ratePlanE-list {
+			@include ratePlanE-list;
+
+			// 요금제 상품 리스트 카드
+			.ratePlanE-card {
+				@include ratePlanE-card;
+			}
+		}
+		// e: 요금제 상품 리스트
+	}
+	// e: 요금제 상품 섹션
 }
 // e: 대표 추천 요금제 페이지

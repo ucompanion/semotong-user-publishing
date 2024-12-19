@@ -3963,6 +3963,115 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12re;
   line-height: 18rem;
 }
+.F-CB02-01-page .cb-ratePlanE-sec {
+  margin-top: 24rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+  padding-top: 16rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-item {
+  width: 100%;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card {
+  position: relative;
+  padding: 0 16rem;
+  box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-button {
+  position: absolute;
+  left: -16rem;
+  right: -16rem;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-body {
+  position: relative;
+  padding: 16rem 0 20rem 0;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-body .card-charge .charge .charge-tit {
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #542FDD;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-footer {
+  padding: 8rem 0 12rem 0;
+  border-top: 1px solid #EFF0F0;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-opening {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  right: 16rem;
+  height: 24rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6rem;
+  font-weight: 500;
+  font-size: 12rem;
+  font-style: 16rem;
+  color: #5FCDB0;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #E6F7F2;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-tit {
+  margin-bottom: 12rem;
+  font-weight: 600;
+  font-size: 18rem;
+  color: #000;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list .card-charge-item {
+  width: 100%;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-more {
+  margin-top: 2rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .brand {
+  display: flex;
+  align-items: center;
+  height: 22rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .brand img {
+  height: 100%;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .brand .brand-rating {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4rem;
+  padding: 3rem 8rem 3rem 4rem;
+  border: 1px solid #CDC2F5;
+  border-radius: 15rem;
+  color: #542FDD;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 14rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .charge {
+  position: relative;
+  top: 2rem;
+  text-align: right;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .charge .charge-tit {
+  font-weight: 600;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
+}
 
 /*-------------------------------------------------------------------
 	분류그룹 : 다른 요금제 안내
@@ -9543,6 +9652,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   align-items: center;
   gap: 4rem;
+  flex: none; /* 3차 수정 : 툴바 옵션 가변방지 추가 */
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-toolbar .opt p {
   font-weight: 500;

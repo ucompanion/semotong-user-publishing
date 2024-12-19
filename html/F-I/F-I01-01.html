@@ -478,21 +478,70 @@
 		<div class="modal-dialog">
 			<div class="modal-content F-I01-01-P01-page">
 				<div class="modal-header">
-					<h3 class="modal-title" id="FI0101P01ModalLabel"></h3>
+					<h3 class="modal-title" id="FI0101P01ModalLabel">KT</h3>
 					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
 						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
 					</button>
 
 				</div>
 				<div class="modal-body">
-					<section>
+					<!-- 상담신청 섹션 -->
+					<section class="consult-frm-sec">
 						<div class="sec-inner">
-							<p>인터넷 상품 상담 신청하기 페이지로 이동</p>
-							<p><a href="./F-I01-01-P01.html">F-I01-01-P01.html</a></p>
+							<div class="sec-header">
+								<h4 class="sec-tit">빠르게 연락드릴게요.</h4>
+							</div>
+							<div class="sec-body">
+								<div class="consult-msg">
+									<i class="ui-icn icn-14-noti-gr" aria-hidden="true"></i>
+									<p>이미 KT 인터넷을 쓰고 계시다면 사은품은 지급되지 않아요. 사은품은 신규가입자 대상이에요.</p>
+								</div>
+
+								<!-- 등록폼 -->
+								<div class="consult-frm">
+									<!-- 이름 선택 -->
+									<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
+									<div class="frm-field">
+										<div class="frm-title">
+											<label class="tit" for="frmName">이름</label>
+										</div>
+										<div class="frm-content">
+											<div class="ui-inp">
+												<input type="text" name="" id="frmName" value="" placeholder="이름을 입력해 주세요." title="" class="inp" />
+											</div>
+										</div>
+									</div>
+									<!-- // 이름 선택 -->
+
+									<!-- 전화번호 입력 -->
+									<div class="frm-field">
+										<div class="frm-title">
+											<label for="frmTitle" class="tit">전화번호</label>
+										</div>
+										<div class="frm-content">
+											<div class="ui-inp">
+												<input type="tel" name="" id="frmTitle" value="" placeholder="전화번호를 입력해 주세요." title="" class="inp" oninput="setRegularNumber(this)"/>
+											</div>
+										</div>
+									</div>
+									<!-- // 전화번호 입력 -->
+								</div>
+								<!-- // 등록폼 -->
+
+								<div class="consult-links">
+									<button type="button" class="ui-btn btn-texted"><span>개인정보 수집 이용</span></button>
+									<button type="button" class="ui-btn btn-texted"><span>개인정보 제3자 제공</span></button>
+								</div>
+							</div>
 						</div>
 					</section>
+					<!-- // 상담신청 섹션 -->
 				</div>
-				<div class="modal-footer"></div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-action primary">
+						<span>상담 신청하기</span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
