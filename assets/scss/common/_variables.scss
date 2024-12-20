@@ -1413,10 +1413,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	.collapse:not(.show) {
 		display: none;
 	}
-	.accordion-button .ui-icn {
+	.acco-button .ui-icn { /* 2024-12-20 조찬기 : acco-button 으로 변경 */
 		transition: transform .35s ease;
 	}
-	.accordion-button[aria-expanded='true'] .ui-icn {
+	.acco-button[aria-expanded='true'] .ui-icn { /* 2024-12-20 조찬기 : acco-button 으로 변경 */
 		transform: rotate(180deg);
 	}
 

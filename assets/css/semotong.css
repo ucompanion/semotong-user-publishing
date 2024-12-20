@@ -5640,10 +5640,10 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CS01-T02-page .inq-list-sec .inq-accordion .collapse:not(.show) {
   display: none;
 }
-.F-CS01-T02-page .inq-list-sec .inq-accordion .accordion-button .ui-icn {
+.F-CS01-T02-page .inq-list-sec .inq-accordion .acco-button .ui-icn { /* 2024-12-20 조찬기 : acco-button 으로 변경 */
   transition: transform 0.35s ease;
 }
-.F-CS01-T02-page .inq-list-sec .inq-accordion .accordion-button[aria-expanded=true] .ui-icn {
+.F-CS01-T02-page .inq-list-sec .inq-accordion .acco-button[aria-expanded=true] .ui-icn { /* 2024-12-20 조찬기 : acco-button 으로 변경 */
   transform: rotate(180deg);
 }
 .F-CS01-T02-page .inq-list-sec .inq-accordion .acco-item {
