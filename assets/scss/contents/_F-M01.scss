@@ -10,6 +10,14 @@
 	--sec-outer-margin: 50rem;
 	--sec-inner-padding: 40rem;
 
+	// Type2 Bg
+	&.type2 section {
+		width: 100%;
+		max-width: 1020rem;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	// s: 비주얼 섹션
 	.visual-sec {
 		position: relative;
