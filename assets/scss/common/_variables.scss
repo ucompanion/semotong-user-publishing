@@ -1857,6 +1857,8 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	border-radius: 4rem;
 	padding: 20rem;
 	border: 1px solid transparent;
+	cursor: pointer;
+
 	/* 1차 수정 : IOS 호환성 대응 */
 	input {
 		position: absolute;

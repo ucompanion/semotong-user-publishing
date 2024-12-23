@@ -36,14 +36,14 @@
 
 		document.addEventListener("DOMContentLoaded", () => {
 			// 추천딜 스와이프
-		    var productChoiceSwiper = new Swiper(".product-choice-swiper", {
+		    var productChoiceSwiper = new Swiper("#productSwiper", {
 				threshold: 3,
 				slidesPerView: 'auto',
 				spaceBetween: 12,
 			});
 
 			// 인터넷 선택 스와이프
-		    var internetChoiceSwiper = new Swiper(".internet-choice-swiper", {
+		    var internetChoiceSwiper = new Swiper("#internetSwiper", {
 				threshold: 3,
 				slidesPerView: 'auto',
 				spaceBetween: 12,
@@ -216,7 +216,7 @@
 						</div>
 						<div class="sec-body">
 							<!-- 2024-12-23 조찬기 : 상품 Swiper 적용 ([SCSS] 상품 Swiper 적용)-->
-							<div class="swiper product-choice-swiper">
+							<div class="swiper choice-swiper" id="productSwiper">
 								<ul class="choice-list swiper-wrapper">
 									<li class="choice-item swiper-slide">
 										<label class="choice-rdo">
@@ -323,7 +323,7 @@
 						</div>
 						<div class="sec-body">
 							<!-- 2024-12-23 조찬기 : 인터넷 Swiper 적용 ([SCSS] 인터넷 Swiper 적용)-->
-							<div class="swiper internet-choice-swiper">
+							<div class="swiper choice-swiper" id="internetSwiper">
 								<ul class="choice-list swiper-wrapper">
 									<li class="choice-item swiper-slide">
 										<label class="choice-rdo">

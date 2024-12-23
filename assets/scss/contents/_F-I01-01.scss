@@ -75,10 +75,17 @@
 	// s: 상품 선택 섹션
 	.product-choice-sec {
 		margin-top: var(--sec-outer-margin);
+		overflow: hidden;
 		@include sec-basic;
 
-		.choice-list { /* 상품 Swiper 적용 */
-			@include choice-swiper;
+		.choice-swiper { /* 상품 Swiper 적용 및 list 수정 */
+			overflow: visible;
+			@include media-tablet-xs {
+				overflow: hidden;
+			}
+			.choice-list {
+				@include choice-swiper;
+			}
 		}
 		.choice-rdo {
 			@include choice-rdo;
@@ -107,10 +114,17 @@
 	// s: 인터넷 선택 섹션
 	.internet-choice-sec {
 		margin-top: var(--sec-outer-margin);
+		overflow: hidden;
 		@include sec-basic;
 
-		.choice-list { /* 인터넷 Swiper 적용 */
-			@include choice-swiper;
+		.choice-swiper { /* 인터넷 Swiper 적용 및 list 수정 */
+			overflow: visible;
+			@include media-tablet-xs {
+				overflow: hidden;
+			}
+			.choice-list {
+				@include choice-swiper;
+			}
 		}
 		.choice-rdo {
 			@include choice-rdo;

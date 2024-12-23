@@ -7382,6 +7382,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 4rem;
   padding: 20rem;
   border: 1px solid transparent;
+  cursor: pointer;
   /* 1차 수정 : IOS 호환성 대응 */
 }
 .F-I01-01-page .telcom-choice-sec .choice-rdo input {
@@ -7425,6 +7426,7 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I01-01-page .product-choice-sec {
   margin-top: var(--sec-outer-margin);
+  overflow: hidden;
 }
 .F-I01-01-page .product-choice-sec .sec-header {
   position: relative;
@@ -7463,8 +7465,20 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-I01-01-page .product-choice-sec .choice-list { /* 상품 Swiper 적용 */ }
-.F-I01-01-page .product-choice-sec .choice-list > li {
+.F-I01-01-page .product-choice-sec .choice-swiper { /* 상품 Swiper 적용 및 list 수정 */
+  overflow: visible;
+}
+@media all and (min-width: 768px) {
+  .F-I01-01-page .product-choice-sec .choice-swiper {
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-I01-01-page .product-choice-sec .choice-swiper {
+    overflow: hidden;
+  }
+}
+.F-I01-01-page .product-choice-sec .choice-swiper .choice-list > li {
   width: 232rem;
 }
 .F-I01-01-page .product-choice-sec .choice-rdo {
@@ -7475,6 +7489,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 4rem;
   padding: 20rem;
   border: 1px solid transparent;
+  cursor: pointer;
   /* 1차 수정 : IOS 호환성 대응 */
 }
 .F-I01-01-page .product-choice-sec .choice-rdo input {
@@ -7525,6 +7540,7 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I01-01-page .internet-choice-sec {
   margin-top: var(--sec-outer-margin);
+  overflow: hidden;
 }
 .F-I01-01-page .internet-choice-sec .sec-header {
   position: relative;
@@ -7563,8 +7579,20 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-I01-01-page .internet-choice-sec .choice-list { /* 인터넷 Swiper 적용 */ }
-.F-I01-01-page .internet-choice-sec .choice-list > li {
+.F-I01-01-page .internet-choice-sec .choice-swiper { /* 인터넷 Swiper 적용 및 list 수정 */
+  overflow: visible;
+}
+@media all and (min-width: 768px) {
+  .F-I01-01-page .internet-choice-sec .choice-swiper {
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-I01-01-page .internet-choice-sec .choice-swiper {
+    overflow: hidden;
+  }
+}
+.F-I01-01-page .internet-choice-sec .choice-swiper .choice-list > li {
   width: 232rem;
 }
 .F-I01-01-page .internet-choice-sec .choice-rdo {
@@ -7575,6 +7603,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 4rem;
   padding: 20rem;
   border: 1px solid transparent;
+  cursor: pointer;
   /* 1차 수정 : IOS 호환성 대응 */
 }
 .F-I01-01-page .internet-choice-sec .choice-rdo input {
