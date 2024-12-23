@@ -78,7 +78,7 @@
 		overflow: hidden;
 		@include sec-basic;
 
-		.choice-swiper { /* 상품 Swiper 적용 및 list 수정 */
+		.choice-swiper { /* 2024-12-23 조찬기 상품 Swiper 적용 및 list 수정 */
 			overflow: visible;
 			@include media-tablet-xs {
 				overflow: hidden;
@@ -90,14 +90,14 @@
 		.choice-rdo {
 			@include choice-rdo;
 
-			.choice-con {
+			.choice-con { /* 2024-12-23 조찬기 상품 내용 수정 */
 				// .icons {
 				// 	display: flex;
 				// 	align-items: center;
 				// }
 				.tit {
 					display: flex;
-					align-items: center;
+					align-items: flex-start;
 					height: 48rem;
 				}
 				.txt {
@@ -117,7 +117,7 @@
 		overflow: hidden;
 		@include sec-basic;
 
-		.choice-swiper { /* 인터넷 Swiper 적용 및 list 수정 */
+		.choice-swiper { /* 2024-12-23 조찬기 인터넷 Swiper 적용 및 list 수정 */
 			overflow: visible;
 			@include media-tablet-xs {
 				overflow: hidden;

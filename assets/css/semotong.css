@@ -7465,7 +7465,7 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-I01-01-page .product-choice-sec .choice-swiper { /* 상품 Swiper 적용 및 list 수정 */
+.F-I01-01-page .product-choice-sec .choice-swiper { /* 2024-12-23 조찬기 상품 Swiper 적용 및 list 수정 */
   overflow: visible;
 }
 @media all and (min-width: 768px) {
@@ -7528,9 +7528,10 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #fff;
   border-color: #542FDD;
 }
+.F-I01-01-page .product-choice-sec .choice-rdo .choice-con { /* 2024-12-23 조찬기 상품 내용 수정 */ }
 .F-I01-01-page .product-choice-sec .choice-rdo .choice-con .tit {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 48rem;
 }
 .F-I01-01-page .product-choice-sec .choice-rdo .choice-con .txt {
@@ -7579,7 +7580,7 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-I01-01-page .internet-choice-sec .choice-swiper { /* 인터넷 Swiper 적용 및 list 수정 */
+.F-I01-01-page .internet-choice-sec .choice-swiper { /* 2024-12-23 조찬기 인터넷 Swiper 적용 및 list 수정 */
   overflow: visible;
 }
 @media all and (min-width: 768px) {
