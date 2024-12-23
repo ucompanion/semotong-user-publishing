@@ -7463,21 +7463,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-I01-01-page .product-choice-sec .choice-list {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
-  gap: 12rem;
-}
-@media all and (min-width: 768px) {
-  .F-I01-01-page .product-choice-sec .choice-list {
-    grid-template-columns: 1fr 1fr 1fr !important;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-I01-01-page .product-choice-sec .choice-list {
-    grid-template-columns: 1fr 1fr 1fr !important;
-  }
+.F-I01-01-page .product-choice-sec .choice-list { /* 상품 Swiper 적용 */ }
+.F-I01-01-page .product-choice-sec .choice-list > li {
+  width: 232rem;
 }
 .F-I01-01-page .product-choice-sec .choice-rdo {
   position: relative;
@@ -7525,12 +7513,10 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #fff;
   border-color: #542FDD;
 }
-.F-I01-01-page .product-choice-sec .choice-rdo .choice-con .icons {
+.F-I01-01-page .product-choice-sec .choice-rdo .choice-con .tit {
   display: flex;
   align-items: center;
-}
-.F-I01-01-page .product-choice-sec .choice-rdo .choice-con .tit {
-  margin-top: 12rem;
+  height: 48rem;
 }
 .F-I01-01-page .product-choice-sec .choice-rdo .choice-con .txt {
   margin-top: 4rem;
@@ -7577,21 +7563,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-I01-01-page .internet-choice-sec .choice-list {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
-  gap: 12rem;
-}
-@media all and (min-width: 768px) {
-  .F-I01-01-page .internet-choice-sec .choice-list {
-    grid-template-columns: 1fr 1fr 1fr !important;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-I01-01-page .internet-choice-sec .choice-list {
-    grid-template-columns: 1fr 1fr 1fr !important;
-  }
+.F-I01-01-page .internet-choice-sec .choice-list { /* 인터넷 Swiper 적용 */ }
+.F-I01-01-page .internet-choice-sec .choice-list > li {
+  width: 232rem;
 }
 .F-I01-01-page .internet-choice-sec .choice-rdo {
   position: relative;

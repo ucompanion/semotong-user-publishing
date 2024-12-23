@@ -1841,6 +1841,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		grid-template-columns: 1fr 1fr 1fr !important;
 	}
 }
+@mixin choice-swiper {
+	> li {
+		width: 232rem;
+	}
+}
 // e: 인터넷 결합 설문 목록
 
 // s: 인터넷 결합 설문 라디오

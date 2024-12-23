@@ -18,6 +18,8 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@7.0.0/swiper-bundle.min.js"></script>
 	<script>
 		function planViewHendler(id){
 			const planViewSec = document.querySelectorAll('.plan-view-sec');
@@ -31,6 +33,22 @@
 				}
 			});
 		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			// 추천딜 스와이프
+		    var productChoiceSwiper = new Swiper(".product-choice-swiper", {
+				threshold: 3,
+				slidesPerView: 'auto',
+				spaceBetween: 12,
+			});
+
+			// 인터넷 선택 스와이프
+		    var internetChoiceSwiper = new Swiper(".internet-choice-swiper", {
+				threshold: 3,
+				slidesPerView: 'auto',
+				spaceBetween: 12,
+			});
+		})
 	</script>
 </head>
 
@@ -197,50 +215,101 @@
 							<h2 class="sec-tit">상품을 선택해주세요.</h2>
 						</div>
 						<div class="sec-body">
-							<ul class="choice-list">
-								<li class="choice-item">
-									<label class="choice-rdo">
-										<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
-										<span class="choice-con">
-											<span class="icons">
-												<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
+							<!-- 2024-12-23 조찬기 : 상품 Swiper 적용 ([SCSS] 상품 Swiper 적용)-->
+							<div class="swiper product-choice-swiper">
+								<ul class="choice-list swiper-wrapper">
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <span class="icons">
+													<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
+												</span> -->
+												<strong class="tit">인터넷</strong>
+												<span class="txt">&nbsp;</span>
 											</span>
-											<strong class="tit">인터넷</strong>
-											<span class="txt">월 16,500원</span>
-										</span>
-									</label>
-								</li>
-								<li class="choice-item">
-									<label class="choice-rdo">
-										<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
-										<span class="choice-con">
-											<span class="icons">
-												<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
-												<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
-												<i class="ui-icn icn-28-tv-gr" aria-hidden="true"></i>
+										</label>
+									</li>
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <span class="icons">
+													<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tv-gr" aria-hidden="true"></i>
+												</span> -->
+												<strong class="tit">인터넷+베이직</strong>
+												<span class="txt">236채널</span>
 											</span>
-											<strong class="tit">인터넷+TV</strong>
-											<span class="txt">월 20,500원</span>
-										</span>
-									</label>
-								</li>
-								<li class="choice-item">
-									<label class="choice-rdo">
-										<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
-										<span class="choice-con">
-											<span class="icons">
-												<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
-												<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
-												<i class="ui-icn icn-28-tv-gr" aria-hidden="true"></i>
-												<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
-												<i class="ui-icn icn-28-tel-gr" aria-hidden="true"></i>
+										</label>
+									</li>
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <span class="icons">
+													<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tv-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tel-gr" aria-hidden="true"></i>
+												</span> -->
+												<strong class="tit">인터넷+라이트</strong>
+												<span class="txt">240채널</span>
 											</span>
-											<strong class="tit">인터넷+TV+집 전화</strong>
-											<span class="txt">월 26,500원</span>
-										</span>
-									</label>
-								</li>
-							</ul>
+										</label>
+									</li>
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <span class="icons">
+													<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tv-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tel-gr" aria-hidden="true"></i>
+												</span> -->
+												<strong class="tit">인터넷+에센스</strong>
+												<span class="txt">283채널</span>
+											</span>
+										</label>
+									</li>
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <span class="icons">
+													<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tv-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tel-gr" aria-hidden="true"></i>
+												</span> -->
+												<strong class="tit">인터넷+<br>키즈랜드팩 초이스</strong>
+												<span class="txt">266채널</span>
+											</span>
+										</label>
+									</li>
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmInternet" onchange="setRadioSelected('frmInternet', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <span class="icons">
+													<i class="ui-icn icn-28-antena-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tv-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-16-plus-gr" aria-hidden="true"></i>
+													<i class="ui-icn icn-28-tel-gr" aria-hidden="true"></i>
+												</span> -->
+												<strong class="tit">인터넷+넷플릭스 HD</strong>
+												<span class="txt">266채널</span>
+											</span>
+										</label>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -253,41 +322,44 @@
 							<h2 class="sec-tit">사용하실 인터넷을 선택해주세요.</h2>
 						</div>
 						<div class="sec-body">
-							<ul class="choice-list">
-								<li class="choice-item">
-									<label class="choice-rdo">
-										<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
-										<span class="choice-con">
-											<i class="ui-icn icn-28-bps-100m" aria-hidden="true"></i>
-											<strong class="tit">100Mbps</strong>
-											<span class="txt">보통 속도</span>
-											<span class="txt">1~2인 가구</span>
-										</span>
-									</label>
-								</li>
-								<li class="choice-item">
-									<label class="choice-rdo">
-										<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
-										<span class="choice-con">
-											<i class="ui-icn icn-28-bps-500m" aria-hidden="true"></i>
-											<strong class="tit">500Mbps</strong>
-											<span class="txt">빠른 속도</span>
-											<span class="txt">4인 가구</span>
-										</span>
-									</label>
-								</li>
-								<li class="choice-item">
-									<label class="choice-rdo">
-										<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
-										<span class="choice-con">
-											<i class="ui-icn icn-28-bps-1g" aria-hidden="true"></i>
-											<strong class="tit">1Gbps</strong>
-											<span class="txt">매우 빠른 속도</span>
-											<span class="txt">라이브 전문 방송인</span>
-										</span>
-									</label>
-								</li>
-							</ul>
+							<!-- 2024-12-23 조찬기 : 인터넷 Swiper 적용 ([SCSS] 인터넷 Swiper 적용)-->
+							<div class="swiper internet-choice-swiper">
+								<ul class="choice-list swiper-wrapper">
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <i class="ui-icn icn-28-bps-100m" aria-hidden="true"></i> -->
+												<strong class="tit">100Mbps</strong>
+												<span class="txt">보통 속도</span>
+												<span class="txt">1~2인 가구</span>
+											</span>
+										</label>
+									</li>
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <i class="ui-icn icn-28-bps-1g" aria-hidden="true"></i> -->
+												<strong class="tit">500Gbps</strong>
+												<span class="txt">매우 빠른 속도</span>
+												<span class="txt">라이브 전문 방송인</span>
+											</span>
+										</label>
+									</li>
+									<li class="choice-item swiper-slide">
+										<label class="choice-rdo">
+											<input type="radio" name="frmChanel" onchange="setRadioSelected('frmChanel', '.choice-rdo')">
+											<span class="choice-con">
+												<!-- <i class="ui-icn icn-28-bps-1g" aria-hidden="true"></i> -->
+												<strong class="tit">1Gbps</strong>
+												<span class="txt">매우 빠른 속도</span>
+												<span class="txt">라이브 전문 방송인</span>
+											</span>
+										</label>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
