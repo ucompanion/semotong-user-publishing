@@ -163,10 +163,10 @@ html {
 		// @include in-sec;
 
 		.title {
-			.logo {
+			.logo { /* 3차 수정 : 로고 사이즈 변경 */
 				display: block;
-				width: 90rem;
-				height: 32rem;
+				width: 80rem;
+				height: 24rem;
 				mask: url('../images/common/img-logo-header-wh.svg') no-repeat center center / contain;
 				background-color: #000000;
 			}

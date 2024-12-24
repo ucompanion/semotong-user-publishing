@@ -925,10 +925,10 @@ html {
   max-width: 940rem;
   margin: 0 auto;
 }
-.header-desktop .header-sec .title .logo {
+.header-desktop .header-sec .title .logo { /* 3차 수정 : 로고 사이즈 변경 */
   display: block;
-  width: 90rem;
-  height: 32rem;
+  width: 80rem;
+  height: 24rem;
   -webkit-mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
           mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
   background-color: #000000;
@@ -2368,7 +2368,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-30-floating-close.svg");
 }
 
-.icn-30-floating-top::before {
+.icn-30-floating-top::before { /* 3차 수정 : 푸터 Top버튼 이미지 교체 */
   background-image: url("../images/common/icn-30-floating-top.svg");
 }
 
