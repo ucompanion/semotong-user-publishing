@@ -8075,17 +8075,17 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-right: auto;
   margin-left: auto;
 }
-.F-M01-page.type3 .sec-outer {
+.F-M01-page.typeA .sec-outer {
   width: 100%;
   max-width: 1020rem;
   margin-right: auto;
   margin-left: auto;
 }
-.F-M01-page.type3 .visual-sec {
+.F-M01-page.typeA .visual-sec {
   padding: 0;
   background: #F2F5FB;
 }
-.F-M01-page.type3 .visual-sec .sec-outer {
+.F-M01-page.typeA .visual-sec .sec-outer {
   min-width: 320rem;
   padding-left: 16rem;
   padding-right: 16rem;
@@ -8095,22 +8095,22 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #3C239A;
 }
 @media all and (min-width: 768px) {
-  .F-M01-page.type3 .visual-sec .sec-outer {
+  .F-M01-page.typeA .visual-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-M01-page.type3 .visual-sec .sec-outer {
+  .F-M01-page.typeA .visual-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
   }
 }
-.F-M01-page.type3 .deal-sec {
+.F-M01-page.typeA .deal-sec {
   padding: 0;
   background: #F2F5FB;
 }
-.F-M01-page.type3 .deal-sec .sec-outer {
+.F-M01-page.typeA .deal-sec .sec-outer {
   min-width: 320rem;
   padding-left: 16rem;
   padding-right: 16rem;
@@ -8120,16 +8120,20 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-bottom: var(--sec-inner-padding);
 }
 @media all and (min-width: 768px) {
-  .F-M01-page.type3 .deal-sec .sec-outer {
+  .F-M01-page.typeA .deal-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-M01-page.type3 .deal-sec .sec-outer {
+  .F-M01-page.typeA .deal-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
   }
+}
+.F-M01-page.typeB .visual-sec {
+  padding: 0;
+  padding-top: var(--sec-inner-padding);
 }
 .F-M01-page .visual-sec {
   position: relative;

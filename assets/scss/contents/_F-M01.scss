@@ -19,7 +19,7 @@
 	}
 
 	// TypeA Bg
-	&.type3 {
+	&.typeA {
 		.sec-outer {
 			width: 100%;
 			max-width: 1020rem;
@@ -45,6 +45,14 @@
 				padding-top: var(--sec-inner-padding);
 				padding-bottom: var(--sec-inner-padding);
 			}
+		}
+	}
+
+	// TypeB Bg
+	&.typeB {
+		.visual-sec {
+			padding: 0;
+			padding-top: var(--sec-inner-padding);
 		}
 	}
 
