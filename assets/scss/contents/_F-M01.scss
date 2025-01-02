@@ -18,11 +18,41 @@
 		margin-left: auto;
 	}
 
+	// TypeA Bg
+	&.type3 {
+		.sec-outer {
+			width: 100%;
+			max-width: 1020rem;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.visual-sec {
+			padding: 0;
+			background: #F2F5FB;
+			.sec-outer {
+				@include out-sec;
+				padding-top: var(--sec-inner-padding);
+				background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
+				background-color: #3C239A;
+			}
+		}
+		.deal-sec {
+			padding: 0;
+			background: #F2F5FB;
+			.sec-outer {
+				@include out-sec;
+				background-color: #CDC2F5;
+				padding-top: var(--sec-inner-padding);
+				padding-bottom: var(--sec-inner-padding);
+			}
+		}
+	}
+
 	// s: 비주얼 섹션
 	.visual-sec {
 		position: relative;
 		margin-top: calc(-1 * #{$mobile-height-header});
-		background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
+		background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
 		background-color: #3C239A;
 		overflow: hidden;
 		color: #fff;

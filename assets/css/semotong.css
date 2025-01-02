@@ -950,7 +950,7 @@ html {
   color: #542FDD;
 }
 
-/* 3차 수정 메인때문에 */
+/* 3차 수정 스크롤 처음일때 투명처리 */
 .is-scroll-first .header-desktop {
   border-color: transparent;
 }
@@ -1285,6 +1285,33 @@ body.is-scroll-first .floating-menu .btn-top {
   .floating-menu {
     bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
   }
+  .typeA-wrapper .header-desktop .header-sec .title .logo {
+    width: 100rem;
+    height: 30rem;
+  }
+  .typeA-wrapper .header-desktop .header-sec .title .logo:hover {
+    background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+    -webkit-mask: none;
+            mask: none;
+  }
+  .typeB-wrapper .header-desktop {
+    background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
+    background-color: #3C239A;
+    border-bottom: 0;
+  }
+  .typeB-wrapper .header-desktop .header-sec .header-nav .nav-list .nav-link {
+    color: #fff;
+  }
+  .typeB-wrapper .header-desktop .header-sec .title .logo {
+    width: 120rem;
+    height: 36rem;
+    background-color: #fff;
+  }
+  .typeB-wrapper .header-desktop .header-sec .title .logo:hover {
+    background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
+    -webkit-mask: none;
+            mask: none;
+  }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
   .wrapper {
@@ -1313,6 +1340,33 @@ body.is-scroll-first .floating-menu .btn-top {
   }
   .floating-menu {
     bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
+  }
+  .typeA-wrapper .header-desktop .header-sec .title .logo {
+    width: 100rem;
+    height: 30rem;
+  }
+  .typeA-wrapper .header-desktop .header-sec .title .logo:hover {
+    background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+    -webkit-mask: none;
+            mask: none;
+  }
+  .typeB-wrapper .header-desktop {
+    background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
+    background-color: #3C239A;
+    border-bottom: 0;
+  }
+  .typeB-wrapper .header-desktop .header-sec .header-nav .nav-list .nav-link {
+    color: #fff;
+  }
+  .typeB-wrapper .header-desktop .header-sec .title .logo {
+    width: 120rem;
+    height: 36rem;
+    background-color: #fff;
+  }
+  .typeB-wrapper .header-desktop .header-sec .title .logo:hover {
+    background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
+    -webkit-mask: none;
+            mask: none;
   }
 }
 .modal-demo-page {
@@ -8021,10 +8075,66 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-right: auto;
   margin-left: auto;
 }
+.F-M01-page.type3 .sec-outer {
+  width: 100%;
+  max-width: 1020rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.F-M01-page.type3 .visual-sec {
+  padding: 0;
+  background: #F2F5FB;
+}
+.F-M01-page.type3 .visual-sec .sec-outer {
+  min-width: 320rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
+  transition: padding 0.2s ease;
+  padding-top: var(--sec-inner-padding);
+  background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
+  background-color: #3C239A;
+}
+@media all and (min-width: 768px) {
+  .F-M01-page.type3 .visual-sec .sec-outer {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M01-page.type3 .visual-sec .sec-outer {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+.F-M01-page.type3 .deal-sec {
+  padding: 0;
+  background: #F2F5FB;
+}
+.F-M01-page.type3 .deal-sec .sec-outer {
+  min-width: 320rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
+  transition: padding 0.2s ease;
+  background-color: #CDC2F5;
+  padding-top: var(--sec-inner-padding);
+  padding-bottom: var(--sec-inner-padding);
+}
+@media all and (min-width: 768px) {
+  .F-M01-page.type3 .deal-sec .sec-outer {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M01-page.type3 .deal-sec .sec-outer {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
 .F-M01-page .visual-sec {
   position: relative;
   margin-top: calc(-1 * 60rem);
-  background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
+  background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
   background-color: #3C239A;
   overflow: hidden;
   color: #fff;

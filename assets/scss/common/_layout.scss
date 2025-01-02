@@ -560,6 +560,33 @@ body.is-scroll-first {
 	.floating-menu {
 		bottom: calc(#{$safe-area-bottom} + var(--btn-gap));
 	}
+
+	// TypeA, TypeB
+	.typeA-wrapper .header-desktop .header-sec .title .logo {
+		width: 100rem;
+		height: 30rem;
+		&:hover {
+			background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+			mask: none;
+		}
+	}
+	.typeB-wrapper .header-desktop {
+		background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
+		background-color: #3C239A;
+		border-bottom: 0;
+		.header-sec .header-nav .nav-list .nav-link {
+			color: #fff;
+		}
+	}
+	.typeB-wrapper .header-desktop .header-sec .title .logo {
+		width: 120rem;
+		height: 36rem;
+		background-color: #fff;
+		&:hover {
+			background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
+			mask: none;
+		}
+	}
 }
 
 // Modal Demo Page
