@@ -8132,7 +8132,6 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-M01-page.typeB .visual-sec {
-  padding: 0;
   padding-top: var(--sec-inner-padding);
 }
 .F-M01-page .visual-sec {
