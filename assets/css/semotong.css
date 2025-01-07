@@ -950,8 +950,7 @@ html {
   color: #542FDD;
 }
 
-/* 3차 수정 스크롤 처음일때 투명처리 */
-.is-scroll-first .header-desktop {
+.is-scroll-first .header-desktop { /* 3차 수정 : 스크롤 처음일때 투명처리 */
   border-color: transparent;
 }
 
@@ -1285,30 +1284,12 @@ body.is-scroll-first .floating-menu .btn-top {
   .floating-menu {
     bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
   }
-  .typeA-wrapper .header-desktop .header-sec .title .logo {
+  .header-desktop .header-sec .title .logo { /* 3차 수정 : 롤호버 로고 적용 */
     width: 100rem;
     height: 30rem;
   }
-  .typeA-wrapper .header-desktop .header-sec .title .logo:hover {
+  .header-desktop .header-sec .title .logo:hover {
     background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
-    -webkit-mask: none;
-            mask: none;
-  }
-  .typeB-wrapper .header-desktop {
-    background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
-    background-color: #3C239A;
-    border-bottom: 0;
-  }
-  .typeB-wrapper .header-desktop .header-sec .header-nav .nav-list .nav-link {
-    color: #fff;
-  }
-  .typeB-wrapper .header-desktop .header-sec .title .logo {
-    width: 120rem;
-    height: 36rem;
-    background-color: #fff;
-  }
-  .typeB-wrapper .header-desktop .header-sec .title .logo:hover {
-    background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
     -webkit-mask: none;
             mask: none;
   }
@@ -1341,30 +1322,12 @@ body.is-scroll-first .floating-menu .btn-top {
   .floating-menu {
     bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
   }
-  .typeA-wrapper .header-desktop .header-sec .title .logo {
+  .header-desktop .header-sec .title .logo { /* 3차 수정 : 롤호버 로고 적용 */
     width: 100rem;
     height: 30rem;
   }
-  .typeA-wrapper .header-desktop .header-sec .title .logo:hover {
+  .header-desktop .header-sec .title .logo:hover {
     background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
-    -webkit-mask: none;
-            mask: none;
-  }
-  .typeB-wrapper .header-desktop {
-    background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
-    background-color: #3C239A;
-    border-bottom: 0;
-  }
-  .typeB-wrapper .header-desktop .header-sec .header-nav .nav-list .nav-link {
-    color: #fff;
-  }
-  .typeB-wrapper .header-desktop .header-sec .title .logo {
-    width: 120rem;
-    height: 36rem;
-    background-color: #fff;
-  }
-  .typeB-wrapper .header-desktop .header-sec .title .logo:hover {
-    background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
     -webkit-mask: none;
             mask: none;
   }
@@ -8069,23 +8032,23 @@ body.is-scroll-first .floating-menu .btn-top {
   --sec-outer-margin: 50rem;
   --sec-inner-padding: 40rem;
 }
-.F-M01-page.type2 section {
+.F-M01-page .sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
   width: 100%;
   max-width: 1020rem;
   margin-right: auto;
   margin-left: auto;
 }
-.F-M01-page.typeA .sec-outer {
-  width: 100%;
-  max-width: 1020rem;
-  margin-right: auto;
-  margin-left: auto;
+.F-M01-page .visual-sec {
+  position: relative;
+  margin-top: calc(-1 * 60rem);
+  padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+  background: #F2F5FB; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+  /* background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%); 3차 수정 : 메인 레이아웃 변경 삭제 */
+  /* background-color: #3C239A; 3차 수정 : 메인 레이아웃 변경 삭제 */
+  overflow: hidden;
+  color: #fff;
 }
-.F-M01-page.typeA .visual-sec {
-  padding: 0;
-  background: #F2F5FB;
-}
-.F-M01-page.typeA .visual-sec .sec-outer {
+.F-M01-page .visual-sec .sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
   min-width: 320rem;
   padding-left: 16rem;
   padding-right: 16rem;
@@ -8095,52 +8058,16 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #3C239A;
 }
 @media all and (min-width: 768px) {
-  .F-M01-page.typeA .visual-sec .sec-outer {
+  .F-M01-page .visual-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-M01-page.typeA .visual-sec .sec-outer {
+  .F-M01-page .visual-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
   }
-}
-.F-M01-page.typeA .deal-sec {
-  padding: 0;
-  background: #F2F5FB;
-}
-.F-M01-page.typeA .deal-sec .sec-outer {
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
-  transition: padding 0.2s ease;
-  background-color: #CDC2F5;
-  padding-top: var(--sec-inner-padding);
-  padding-bottom: var(--sec-inner-padding);
-}
-@media all and (min-width: 768px) {
-  .F-M01-page.typeA .deal-sec .sec-outer {
-    padding-left: 23rem;
-    padding-right: 23rem;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-M01-page.typeA .deal-sec .sec-outer {
-    padding-left: 23rem;
-    padding-right: 23rem;
-  }
-}
-.F-M01-page.typeB .visual-sec {
-  padding-top: var(--sec-inner-padding);
-}
-.F-M01-page .visual-sec {
-  position: relative;
-  margin-top: calc(-1 * 60rem);
-  background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
-  background-color: #3C239A;
-  overflow: hidden;
-  color: #fff;
 }
 .F-M01-page .visual-sec .sec-body {
   position: relative;
@@ -8234,7 +8161,9 @@ body.is-scroll-first .floating-menu .btn-top {
   overflow: hidden;
   padding-top: var(--sec-inner-padding);
   padding-bottom: var(--sec-inner-padding);
-  background-color: #CDC2F5;
+  padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+  background: #F2F5FB; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+  /* background-color: #CDC2F5; 3차 수정 : 메인 레이아웃 변경 삭제 */
 }
 .F-M01-page .deal-sec .sec-header {
   position: relative;
@@ -8272,6 +8201,27 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M01-page .deal-sec .sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
+  min-width: 320rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
+  transition: padding 0.2s ease;
+  background-color: #CDC2F5;
+  padding-top: var(--sec-inner-padding);
+  padding-bottom: var(--sec-inner-padding);
+}
+@media all and (min-width: 768px) {
+  .F-M01-page .deal-sec .sec-outer {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M01-page .deal-sec .sec-outer {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
 }
 .F-M01-page .deal-sec .sec-header .sec-tit {
   color: #000000;

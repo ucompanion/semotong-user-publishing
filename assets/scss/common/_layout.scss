@@ -190,8 +190,7 @@ html {
 		}
 	}
 }
-/* 3차 수정 스크롤 처음일때 투명처리 */
-.is-scroll-first .header-desktop {
+.is-scroll-first .header-desktop { /* 3차 수정 : 스크롤 처음일때 투명처리 */
 	border-color: transparent;
 }
 
@@ -561,8 +560,8 @@ body.is-scroll-first {
 		bottom: calc(#{$safe-area-bottom} + var(--btn-gap));
 	}
 
-	// TypeA, TypeB
-	.typeA-wrapper .header-desktop .header-sec .title .logo {
+	// 롤호버 적용
+	.header-desktop .header-sec .title .logo { /* 3차 수정 : 롤호버 로고 적용 */
 		width: 100rem;
 		height: 30rem;
 		&:hover {
@@ -570,23 +569,23 @@ body.is-scroll-first {
 			mask: none;
 		}
 	}
-	.typeB-wrapper .header-desktop {
-		background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
-		background-color: #3C239A;
-		border-bottom: 0;
-		.header-sec .header-nav .nav-list .nav-link {
-			color: #fff;
-		}
-	}
-	.typeB-wrapper .header-desktop .header-sec .title .logo {
-		width: 120rem;
-		height: 36rem;
-		background-color: #fff;
-		&:hover {
-			background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
-			mask: none;
-		}
-	}
+	// .typeB-wrapper .header-desktop {
+	// 	background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
+	// 	background-color: #3C239A;
+	// 	border-bottom: 0;
+	// 	.header-sec .header-nav .nav-list .nav-link {
+	// 		color: #fff;
+	// 	}
+	// }
+	// .typeB-wrapper .header-desktop .header-sec .title .logo {
+	// 	width: 120rem;
+	// 	height: 36rem;
+	// 	background-color: #fff;
+	// 	&:hover {
+	// 		background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
+	// 		mask: none;
+	// 	}
+	// }
 }
 
 // Modal Demo Page
