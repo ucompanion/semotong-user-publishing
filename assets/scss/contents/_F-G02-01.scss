@@ -69,16 +69,8 @@
 			}
 		}
 
-		.img-view {
-			display: flex;
-			flex-direction: column;
-			gap: 20rem;
-			text-align: center;
-			figcaption {
-				font-weight: 600;
-				font-size: 16rem;
-				text-align: left;
-			}
+		.data-view {
+			@include data-view;
 		}
 
 		@include media-tablet-xs {

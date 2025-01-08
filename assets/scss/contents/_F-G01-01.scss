@@ -11,7 +11,9 @@
 
 	// s: 알뜰폰이란 섹션
 	.intro-sec {
-		text-align: center;
+		.data-view {
+			@include data-view;
+		}
 	}
 	// e: 알뜰폰이란 섹션
 }

@@ -6381,8 +6381,26 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-bottom: 48rem;
   }
 }
-.F-G01-01-page .intro-sec {
-  text-align: center;
+.F-G01-01-page .intro-sec .data-view p {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 22rem;
+}
+.F-G01-01-page .intro-sec .data-view img {
+  display: block;
+  margin: 20rem auto;
+}
+@media all and (min-width: 768px) {
+  .F-G01-01-page .intro-sec .data-view p {
+    font-size: 16rem;
+    line-height: 24rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-G01-01-page .intro-sec .data-view p {
+    font-size: 16rem;
+    line-height: 24rem;
+  }
 }
 
 /*-------------------------------------------------------------------
@@ -6461,16 +6479,26 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G02-01-page .howto-sec .howto-list-wrap .howto-card .card-cont p .is-keyword {
   color: #542FDD;
 }
-.F-G02-01-page .howto-sec .img-view {
-  display: flex;
-  flex-direction: column;
-  gap: 20rem;
-  text-align: center;
+.F-G02-01-page .howto-sec .data-view p {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 22rem;
 }
-.F-G02-01-page .howto-sec .img-view figcaption {
-  font-weight: 600;
-  font-size: 16rem;
-  text-align: left;
+.F-G02-01-page .howto-sec .data-view img {
+  display: block;
+  margin: 20rem auto;
+}
+@media all and (min-width: 768px) {
+  .F-G02-01-page .howto-sec .data-view p {
+    font-size: 16rem;
+    line-height: 24rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-G02-01-page .howto-sec .data-view p {
+    font-size: 16rem;
+    line-height: 24rem;
+  }
 }
 @media all and (min-width: 768px) {
   .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {

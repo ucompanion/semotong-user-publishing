@@ -2171,3 +2171,22 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 // e: 약관
+
+// s: 상세 데이터
+@mixin data-view {
+	p {
+		font-weight: 500;
+		font-size: 14rem;
+		line-height: 22rem;
+	}
+	img {
+		display: block;
+		margin: 20rem auto;
+	}
+	@include media-tablet-xs {
+		p {
+			font-size: 16rem;
+			line-height: 24rem;
+		}
+	}
+}
