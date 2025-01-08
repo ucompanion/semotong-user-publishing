@@ -6381,6 +6381,9 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-bottom: 48rem;
   }
 }
+.F-G01-01-page .intro-sec {
+  text-align: center;
+}
 
 /*-------------------------------------------------------------------
 	분류그룹 : 세모통 백서
@@ -6458,14 +6461,31 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G02-01-page .howto-sec .howto-list-wrap .howto-card .card-cont p .is-keyword {
   color: #542FDD;
 }
+.F-G02-01-page .howto-sec .img-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  text-align: center;
+}
+.F-G02-01-page .howto-sec .img-view figcaption {
+  font-weight: 600;
+  font-size: 16rem;
+  text-align: left;
+}
 @media all and (min-width: 768px) {
   .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {
     grid-template-columns: 1fr 1fr;
+  }
+  .F-G02-01-page .howto-sec .img-view figcaption {
+    font-size: 18rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
   .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {
     grid-template-columns: 1fr 1fr;
+  }
+  .F-G02-01-page .howto-sec .img-view figcaption {
+    font-size: 18rem;
   }
 }
 

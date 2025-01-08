@@ -69,10 +69,27 @@
 			}
 		}
 
+		.img-view {
+			display: flex;
+			flex-direction: column;
+			gap: 20rem;
+			text-align: center;
+			figcaption {
+				font-weight: 600;
+				font-size: 16rem;
+				text-align: left;
+			}
+		}
+
 		@include media-tablet-xs {
 			.howto-list-wrap {
 				.howto-list {
 					grid-template-columns: 1fr 1fr;
+				}
+			}
+			.img-view {
+				figcaption {
+					font-size: 18rem;
 				}
 			}
 		}
