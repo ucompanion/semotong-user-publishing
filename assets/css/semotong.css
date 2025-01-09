@@ -965,7 +965,31 @@ html {
   transform: translateX(0%);
 }
 .modal.aside-modal .aside-nav-sec {
-  margin-top: 32rem;
+  /* margin-top: 32rem; 4차 수정 : 전체메뉴 간격 삭제 */
+}
+.modal.aside-modal .aside-nav-sec .aside-logo .logo { /* 4차 수정 : 전체메뉴 로고 추가 */
+  display: block;
+  width: 80rem;
+  height: 24rem;
+  margin-left: 18rem;
+  margin-bottom: 30rem;
+  -webkit-mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
+          mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
+  background-color: #000000;
+}
+@media all and (min-width: 768px) {
+  .modal.aside-modal .aside-nav-sec .aside-logo .logo:hover { /* 4차 수정 : 전체메뉴 로고 추가 */
+    background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+    -webkit-mask: none;
+            mask: none;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .modal.aside-modal .aside-nav-sec .aside-logo .logo:hover { /* 4차 수정 : 전체메뉴 로고 추가 */
+    background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+    -webkit-mask: none;
+            mask: none;
+  }
 }
 .modal.aside-modal .aside-nav-sec .aside-nav .nav-item + .nav-item {
   margin-top: 12rem;
@@ -1268,6 +1292,7 @@ body.is-scroll-first .floating-menu .btn-top {
     margin-bottom: 10rem;
     position: relative;
     box-shadow: none;
+    border-bottom: 0; /* 4차 수정 : 피시에서 모바일헤더 라인 삭제 */
   }
   .header-mobile .btn-aside {
     display: none;
@@ -1306,6 +1331,7 @@ body.is-scroll-first .floating-menu .btn-top {
     margin-bottom: 10rem;
     position: relative;
     box-shadow: none;
+    border-bottom: 0; /* 4차 수정 : 피시에서 모바일헤더 라인 삭제 */
   }
   .header-mobile .btn-aside {
     display: none;
@@ -10429,7 +10455,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-MY01-01-page .my-info-sec {
-  margin-top: 20rem;
+  /* margin-top:20rem; 4차 수정 : 나의정보 상단여백 삭제 */
 }
 .F-MY01-01-page .my-info-sec .my-info-profile {
   position: relative;
@@ -10444,6 +10470,11 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: rgb(99, 102, 106);
+}
+.F-MY01-01-page .my-info-sec .my-info-profile .btn-cs { /* 4차 수정 : 나의정보 고객센터 버튼 추가 */
+  position: absolute;
+  right: 0;
+  top: -4rem;
 }
 .F-MY01-01-page .my-info-sec .my-info-rateplan-data {
   margin-top: 16rem;
@@ -12408,7 +12439,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-MY02-01-page .my-info-sec {
-  margin-top: 20rem;
+  /* margin-top:20rem; 4차 수정 : 나의정보 상단여백 삭제 */
 }
 .F-MY02-01-page .my-info-sec .my-info-profile {
   position: relative;
@@ -12423,6 +12454,11 @@ body.is-scroll-first .floating-menu .btn-top {
   font-weight: 500;
   font-size: 14rem;
   color: rgb(99, 102, 106);
+}
+.F-MY02-01-page .my-info-sec .my-info-profile .btn-cs { /* 4차 수정 : 나의정보 고객센터 버튼 추가 */
+  position: absolute;
+  right: 0;
+  top: -4rem;
 }
 .F-MY02-01-page .my-info-sec .my-info-profile .btn-kakao {
   margin-top: 16rem;

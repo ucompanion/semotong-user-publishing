@@ -212,7 +212,25 @@ html {
 	}
 
 	.aside-nav-sec {
-		margin-top: 32rem;
+		/* margin-top: 32rem; 4차 수정 : 전체메뉴 간격 삭제 */
+		.aside-logo {
+			.logo { /* 4차 수정 : 전체메뉴 로고 추가 */
+				display: block;
+				width: 80rem;
+				height: 24rem;
+				margin-left: 18rem;
+				margin-bottom: 30rem;
+				mask: url('../images/common/img-logo-header-wh.svg') no-repeat center center / contain;
+				background-color: #000000;
+
+				@include media-tablet-xs {
+					&:hover { /* 4차 수정 : 전체메뉴 로고 추가 */
+						background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+						mask: none;
+					}
+				}
+			}
+		}
 
 		.aside-nav {
 			.nav-item + .nav-item {
@@ -542,6 +560,7 @@ body.is-scroll-first {
 		margin-bottom: 10rem;
 		position: relative;
 		box-shadow: none;
+		border-bottom: 0; /* 4차 수정 : 피시에서 모바일헤더 라인 삭제 */
 		.btn-aside {
 			display: none;
 		}
