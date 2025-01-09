@@ -10555,7 +10555,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-MY01-01-page .my-info-sec {
-  /* margin-top:20rem; 4차 수정 : 나의정보 상단여백 삭제 */
+  margin-top: 10rem; /* 4차 수정 : 나의정보 상단여백 조정 */
 }
 .F-MY01-01-page .my-info-sec .my-info-profile {
   position: relative;
@@ -12557,7 +12557,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-MY02-01-page .my-info-sec {
-  /* margin-top:20rem; 4차 수정 : 나의정보 상단여백 삭제 */
+  margin-top: 10rem; /* 4차 수정 : 나의정보 상단여백 조정 */
 }
 .F-MY02-01-page .my-info-sec .my-info-profile {
   position: relative;
