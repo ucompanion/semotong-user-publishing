@@ -6594,6 +6594,10 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 20rem;
   color: #46484B;
 }
+.F-G02-01-page .notice-detail-sec .notice-detail .detail-body .data-view img {
+  display: block;
+  margin: 16rem auto;
+}
 .F-G02-01-page .notice-detail-sec .notice-detail .detail-body .data-view p + p {
   margin-top: 8rem;
 }
