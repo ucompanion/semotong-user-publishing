@@ -967,28 +967,22 @@ html {
 .modal.aside-modal .aside-nav-sec {
   /* margin-top: 32rem; 4차 수정 : 전체메뉴 간격 삭제 */
 }
-.modal.aside-modal .aside-nav-sec .aside-logo .logo { /* 4차 수정 : 전체메뉴 로고 추가 */
+.modal.aside-modal .aside-nav-sec .aside-logo .logo { /* 4차 수정 : 전체메뉴 로고 추가 (img-logo-header-bk-only.svg 추가) */
   display: block;
   width: 80rem;
   height: 24rem;
   margin-left: 18rem;
   margin-bottom: 30rem;
-  -webkit-mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
-          mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
-  background-color: #000000;
+  background: url("../images/common/img-logo-header-bk-only.svg") no-repeat center center/contain;
 }
 @media all and (min-width: 768px) {
   .modal.aside-modal .aside-nav-sec .aside-logo .logo:hover { /* 4차 수정 : 전체메뉴 로고 추가 */
     background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
-    -webkit-mask: none;
-            mask: none;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
   .modal.aside-modal .aside-nav-sec .aside-logo .logo:hover { /* 4차 수정 : 전체메뉴 로고 추가 */
     background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
-    -webkit-mask: none;
-            mask: none;
   }
 }
 .modal.aside-modal .aside-nav-sec .aside-nav .nav-item + .nav-item {
