@@ -35,11 +35,16 @@
 		}
 
 		document.addEventListener("DOMContentLoaded", () => {
-			// 추천딜 스와이프
+			// 상품 스와이프
 		    var productChoiceSwiper = new Swiper("#productSwiper", {
 				threshold: 3,
 				slidesPerView: 'auto',
 				spaceBetween: 12,
+				// 4차 수정 : 상풍 스와이프 버튼 옵션 추가
+				navigation: {
+					nextEl: ".product-choice-sec .choice-button-next",
+					prevEl: ".product-choice-sec .choice-button-prev",
+				}
 			});
 
 			// 인터넷 선택 스와이프
@@ -47,6 +52,11 @@
 				threshold: 3,
 				slidesPerView: 'auto',
 				spaceBetween: 12,
+				// 4차 수정 : 인터넷 스와이프 버튼 옵션 추가
+				navigation: {
+					nextEl: ".internet-choice-sec .choice-button-next",
+					prevEl: ".internet-choice-sec .choice-button-prev",
+				}
 			});
 		})
 	</script>
@@ -313,6 +323,13 @@
 									</li>
 								</ul>
 							</div>
+							<!-- 4차 수정 : 상품 스와이프 버튼 추가 -->
+							<button type="button" class="ui-btn choice-button-prev">
+								<i class="ui-icn icn-28-arw" aria-label="Prev"></i>
+							</button>
+							<button type="button" class="ui-btn choice-button-next">
+								<i class="ui-icn icn-28-arw" aria-label="Next"></i>
+							</button>
 						</div>
 					</div>
 				</section>
@@ -365,6 +382,13 @@
 									</li>
 								</ul>
 							</div>
+							<!-- 4차 수정 : 인터넷 스와이프 버튼 추가 -->
+							<button type="button" class="ui-btn choice-button-prev">
+								<i class="ui-icn icn-28-arw" aria-label="Prev"></i>
+							</button>
+							<button type="button" class="ui-btn choice-button-next">
+								<i class="ui-icn icn-28-arw" aria-label="Next"></i>
+							</button>
 						</div>
 					</div>
 				</section>

@@ -592,6 +592,26 @@
   background-image: url("../images/common/icn-28-bps-1g.svg");
 }
 
+.icn-28-arw::before { /* 4차 수정 : 스와이프 아이콘 추가(여기부터) */
+  background-image: url("../images/common/icn-28-arw.svg");
+}
+
+.icn-28-arw::after {
+  content: "";
+  background-image: url("../images/common/icn-28-arw-hover.svg");
+}
+
+.ui-btn:hover .icn-28-arw::before,
+.ui-btn:active .icn-28-arw::before,
+.ui-btn:focus-visible .icn-28-arw::before {
+  transform: translateY(110%);
+}
+.ui-btn:hover .icn-28-arw::after,
+.ui-btn:active .icn-28-arw::after,
+.ui-btn:focus-visible .icn-28-arw::after { /* 4차 수정 : 스와이프 아이콘 추가(여기까지) */
+  transform: translateY(0%);
+}
+
 .icn-30-floating-logo::before {
   background-image: url("../images/common/icn-30-floating-logo.svg");
 }

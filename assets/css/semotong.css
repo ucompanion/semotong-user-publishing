@@ -2397,6 +2397,27 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-28-bps-1g.svg");
 }
 
+.icn-28-arw::before { /* 4차 수정 : 스와이프 아이콘 추가(여기부터) */
+  background-image: url("../images/common/icn-28-arw.svg");
+}
+
+.icn-28-arw::after {
+  content: "";
+  background-image: url("../images/common/icn-28-arw-hover.svg");
+}
+
+.ui-btn:hover .icn-28-arw::before,
+.ui-btn:active .icn-28-arw::before,
+.ui-btn:focus-visible .icn-28-arw::before {
+  transform: translateY(110%);
+}
+
+.ui-btn:hover .icn-28-arw::after,
+.ui-btn:active .icn-28-arw::after,
+.ui-btn:focus-visible .icn-28-arw::after { /* 4차 수정 : 스와이프 아이콘 추가(여기까지) */
+  transform: translateY(0%);
+}
+
 .icn-30-floating-logo::before {
   background-image: url("../images/common/icn-30-floating-logo.svg");
 }
@@ -7601,6 +7622,27 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-I01-01-page .product-choice-sec .sec-body { /* 4차 수정 : 상품 스와이프 추가(여기부터) */
+  position: relative;
+}
+.F-I01-01-page .product-choice-sec .sec-body .choice-button-prev,
+.F-I01-01-page .product-choice-sec .sec-body .choice-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  transform: translate(50%, -50%);
+  width: 28rem;
+  height: 28rem;
+}
+.F-I01-01-page .product-choice-sec .sec-body .choice-button-prev {
+  right: auto;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.F-I01-01-page .product-choice-sec .sec-body .swiper-button-disabled { /* 4차 수정 : 상품 스와이프 추가(여기까지) */
+  display: none;
+}
 .F-I01-01-page .product-choice-sec .choice-swiper { /* 2024-12-23 조찬기 상품 Swiper 적용 및 list 수정 */
   overflow: visible;
 }
@@ -7715,6 +7757,27 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-I01-01-page .internet-choice-sec .sec-body { /* 4차 수정 : 인터넷 스와이프 추가(여기부터) */
+  position: relative;
+}
+.F-I01-01-page .internet-choice-sec .sec-body .choice-button-prev,
+.F-I01-01-page .internet-choice-sec .sec-body .choice-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  transform: translate(50%, -50%);
+  width: 28rem;
+  height: 28rem;
+}
+.F-I01-01-page .internet-choice-sec .sec-body .choice-button-prev {
+  right: auto;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.F-I01-01-page .internet-choice-sec .sec-body .swiper-button-disabled { /* 4차 수정 : 인터넷 스와이프 추가(여기까지) */
+  display: none;
 }
 .F-I01-01-page .internet-choice-sec .choice-swiper { /* 2024-12-23 조찬기 인터넷 Swiper 적용 및 list 수정 */
   overflow: visible;
