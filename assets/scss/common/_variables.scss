@@ -499,19 +499,24 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				line-height: 14rem;
 			}
 		}
-		.charge {
+		.charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
 			position: relative;
 			top: 2rem;
+			height: 40rem;
 			text-align: right;
 
-			.charge-tit {
+			.charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+				margin-bottom: 2rem;
 				font-weight: 700;
 				font-size: 16rem;
 				line-height: 22rem;
 				color: #1B0179;
 			}
-			.charge-txt {
-				margin-top: 2rem;
+			.charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+				margin-top: 0rem;
 				font-weight: 500;
 				font-size: 12rem;
 				line-height: 16rem;
@@ -630,11 +635,15 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			}
 
 			.ui-btn {
+				margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
 				align-items: center;
 				font-weight: 600;
 				font-size: 12rem;
 				line-height: 14rem;
 				color: #828588;
+				> span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+					margin-left: 4rem;
+				}
 			}
 
 		}

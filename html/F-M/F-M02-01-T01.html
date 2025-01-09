@@ -123,7 +123,7 @@
 						<div class="ratePlanB-card">
 							<div class="card-body">
 								<p class="card-img" aria-hidden="true"><img src="../../assets/images/common/img-plan-price-low.png" alt="" /></p>
-								<p class="card-tit"><strong>초저가 요금제</strong></p>
+								<p class="card-tit"><strong>월 110원 부터 갓성비</strong></p>
 								<p class="card-txt">저렴한 요금을 찾고 있어요.</p>
 								<p class="card-tag">
 									<span class="tag">#저렴</span>
@@ -188,11 +188,12 @@
 						<div class="ratePlanC-list-wrap">
 							<!-- 요금제 상품 툴바 -->
 							<div class="ratePlanC-toolbar">
+								<!-- 4차 수정 : 12워월 / 24개월로 수정 -->
 								<div class="opt">
 									<!-- checkbox.scss에 포함 -->
 									<div class="ui-switch xs">
-										<input type="checkbox" name="frmMonth12" id="frmMonth12" value="" checked />
-										<label for="frmMonth12"></label>
+										<input type="checkbox" name="frmMonth1" id="frmMonth11" value="" />
+										<label for="frmMonth11"></label>
 									</div>
 									<p>12개월 총액</p>
 									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
@@ -203,10 +204,10 @@
 								<div class="opt">
 									<!-- checkbox.scss에 포함 -->
 									<div class="ui-switch xs">
-										<input type="checkbox" name="frmMonth12" id="frmMonth12" value="" />
+										<input type="checkbox" name="frmMonth1" id="frmMonth12" value="" />
 										<label for="frmMonth12"></label>
 									</div>
-									<p>12개월 총액</p>
+									<p>24개월 총액</p>
 									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 										data-bs-content="할인기간 포함된 12/24개월 요금 총액이에요.">
 										<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -220,6 +221,10 @@
 										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
 									</button>
 								</div>
+							</div>
+							<!-- 4차 수정 : 요금제 개수 추가 -->
+							<div class="ratePlanC-toolbar">
+								<p class="count">총 9,999개 요금제</p>
 							</div>
 							<!-- // 요금제 상품 툴바 -->
 
@@ -261,7 +266,7 @@
 												</div>
 												<div class="charge">
 													<p class="charge-tit">58,700원</p>
-													<p class="charge-txt">7개월 이후 49,000원</p>
+													<!-- <p class="charge-txt">7개월 이후 49,000원</p> -->
 												</div>
 											</div>
 											<!-- 카드 클릭영역  -->
@@ -447,13 +452,16 @@
 											<!-- Case 선택한상태정보 -->
 											<div class="card-status">
 												<div class="status-choice">
+													<!-- 4차 수정 : 요금제 카드 공통 신청정보 제외
 													<div class="choice">
 														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span class="txt"><em>52</em>명 선택</span>
 														<span class="split"></span>
 														<span class="txt"><em>12</em>명 신청 중</span>
-													</div>
+													</div> -->
 													<button type="button" class="ui-btn" aria-expanded="false">
+														<!-- 4차 수정 : 요금제 카드 공통 오류문의 아이콘 추가 -->
+														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span>오류 문의</span>
 														<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
 													</button>

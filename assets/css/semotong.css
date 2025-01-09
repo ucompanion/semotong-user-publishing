@@ -3842,19 +3842,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -3969,11 +3974,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -4409,19 +4418,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -4536,11 +4550,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -5251,19 +5269,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -5378,11 +5401,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -6505,42 +6532,66 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G02-01-page .howto-sec .howto-list-wrap .howto-card .card-cont p .is-keyword {
   color: #542FDD;
 }
-.F-G02-01-page .howto-sec .data-view p {
+@media all and (min-width: 768px) {
+  .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .F-G02-01-page .howto-sec .img-view figcaption {
+    font-size: 18rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .F-G02-01-page .howto-sec .img-view figcaption {
+    font-size: 18rem;
+  }
+}
+.F-G02-01-page .notice-detail-sec { /* 4차 수정 : notice-detail-sec 전체 추가 */ }
+.F-G02-01-page .notice-detail-sec .notice-detail {
+  border-top: 1px solid #2A2B2D;
+}
+.F-G02-01-page .notice-detail-sec .notice-detail .detail-header {
+  padding: 20rem 8rem;
+  border-bottom: 1px solid #EFF0F0;
+}
+.F-G02-01-page .notice-detail-sec .notice-detail .detail-header .tit {
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #2A2B2D;
+}
+.F-G02-01-page .notice-detail-sec .notice-detail .detail-header .date {
+  margin-top: 8rem;
   font-weight: 500;
   font-size: 14rem;
-  line-height: 22rem;
+  line-height: 20rem;
+  color: #96989B;
 }
-.F-G02-01-page .howto-sec .data-view img {
-  display: block;
-  margin: 20rem auto;
+.F-G02-01-page .notice-detail-sec .notice-detail .detail-body {
+  padding: 32rem 8rem;
+  border-bottom: 1px solid #EFF0F0;
 }
-@media all and (min-width: 768px) {
-  .F-G02-01-page .howto-sec .data-view p {
-    font-size: 16rem;
-    line-height: 24rem;
-  }
+.F-G02-01-page .notice-detail-sec .notice-detail .detail-body .data-view {
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
 }
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-G02-01-page .howto-sec .data-view p {
-    font-size: 16rem;
-    line-height: 24rem;
-  }
+.F-G02-01-page .notice-detail-sec .notice-detail .detail-body .data-view p + p {
+  margin-top: 8rem;
 }
-@media all and (min-width: 768px) {
-  .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {
-    grid-template-columns: 1fr 1fr;
-  }
-  .F-G02-01-page .howto-sec .img-view figcaption {
-    font-size: 18rem;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {
-    grid-template-columns: 1fr 1fr;
-  }
-  .F-G02-01-page .howto-sec .img-view figcaption {
-    font-size: 18rem;
-  }
+.F-G02-01-page .floating-sec { /* 4차 수정 : floating-sec 전체 추가 */
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex: none;
+  padding-top: 20rem;
+  padding-bottom: 32rem;
+  margin-bottom: -32rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0rem, rgb(255, 255, 255) 20rem);
 }
 
 /*-------------------------------------------------------------------
@@ -9100,6 +9151,9 @@ body.is-scroll-first .floating-menu .btn-top {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-toolbar + .ratePlanC-toolbar { /* 4차 수정 : 요금제 개수 추가 */
+  margin-top: 20rem;
+}
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list {
   display: flex;
   flex-wrap: wrap;
@@ -9243,19 +9297,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -9370,11 +9429,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -9966,19 +10029,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -10093,11 +10161,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -11430,19 +11502,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -11557,11 +11634,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -11896,19 +11977,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -12023,11 +12109,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -13116,19 +13206,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -13243,11 +13338,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -13822,19 +13921,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-charge .charge {
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit {
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -13949,11 +14053,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -15093,19 +15201,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -15220,11 +15333,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -15908,19 +16025,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -16035,11 +16157,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -16624,19 +16750,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -16751,11 +16882,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -17375,19 +17510,24 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   top: 2rem;
+  height: 40rem;
   text-align: right;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #1B0179;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt {
-  margin-top: 2rem;
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -17502,11 +17642,15 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0 8rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
   font-size: 12rem;
   line-height: 14rem;
   color: #828588;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
