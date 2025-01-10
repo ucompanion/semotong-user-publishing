@@ -16652,6 +16652,20 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-T02-page .noti-box .box-body.is-hide {
   display: none;
 }
+.F-P02-01-T02-page .free-gift-list { /* 2025-01-10 조찬기 : 사은품 UI 변경 건 */
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+.F-P02-01-T02-page .free-gift-list li {
+  padding: 20rem 16rem;
+  border-radius: 2rem;
+  background-color: #f4f4f4;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
 
 /*-------------------------------------------------------------------
 	분류그룹 : 통신사 리뷰
