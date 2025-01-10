@@ -16657,7 +16657,7 @@ body.is-scroll-first .floating-menu .btn-top {
   flex-direction: column;
   gap: 6rem;
 }
-.F-P02-01-T02-page .free-gift-list li {
+.F-P02-01-T02-page .free-gift-list li { /* 2025-01-10 조찬기 : 사은품 UI 변경 건 */
   padding: 20rem 16rem;
   border-radius: 2rem;
   background-color: #f4f4f4;
