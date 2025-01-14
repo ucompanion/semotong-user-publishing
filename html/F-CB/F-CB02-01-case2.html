@@ -29,6 +29,22 @@
 			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
 
 		});
+
+		function extandHandler(button, id) {
+			// 'cardListExtend01' 요소 가져오기
+			var ulElement = document.getElementById(id);
+			
+			// is-expanded 클래스 토글
+			ulElement.classList.toggle('is-expanded');
+			
+			// 'this'의 자식 span 요소 텍스트 토글
+			var spanElement = button.querySelector('span');
+			if (ulElement.classList.contains('is-expanded')) {
+				spanElement.textContent = '닫기';  // '전체' -> '닫기'
+			} else {
+				spanElement.textContent = '전체보기';  // '닫기' -> '전체'
+			}
+		}
 	</script>
 </head>
 
@@ -104,7 +120,106 @@
 													</button>
 												</div>
 												<div class="card-footer">
-													<ul class="card-charge-list">
+													<ul class="card-charge-list" id="cardListExtend01">
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">20,000원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">21,000원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">21,200원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">20,000원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">21,000원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">21,200원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">20,000원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">21,000원</p>
+																</div>
+															</div>
+														</li>
+														<li class="card-charge-item">
+															<div class="card-charge">
+																<div class="brand">
+																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
+																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+																</div>
+																<div class="charge">
+																	<p class="charge-tit">21,200원</p>
+																</div>
+															</div>
+														</li>
 														<li class="card-charge-item">
 															<div class="card-charge">
 																<div class="brand">
@@ -140,7 +255,8 @@
 														</li>
 													</ul>
 													<div class="card-charge-more">
-														<button type="button" class="ui-btn btn-sub xl">
+														<!-- 5차 수정 : 전체보기/닫기 토글 스크립트 참고 -->
+														<button type="button" class="ui-btn btn-sub xl" onclick="extandHandler(this, 'cardListExtend01')">
 															<span>전체보기</span>
 														</button>
 													</div>
@@ -170,7 +286,7 @@
 													</button>
 												</div>
 												<div class="card-footer">
-													<ul class="card-charge-list">
+													<ul class="card-charge-list" id="cardListExtend02">
 														<li class="card-charge-item">
 															<div class="card-charge">
 																<div class="brand">
@@ -193,23 +309,12 @@
 																</div>
 															</div>
 														</li>
-														<li class="card-charge-item">
-															<div class="card-charge">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,200원</p>
-																</div>
-															</div>
-														</li>
 													</ul>
-													<div class="card-charge-more">
-														<button type="button" class="ui-btn btn-sub xl">
+													<!-- <div class="card-charge-more">
+														<button type="button" class="ui-btn btn-sub xl" onclick="extandHandler(this, 'cardListExtend02')">
 															<span>전체보기</span>
 														</button>
-													</div>
+													</div> -->
 												</div>
 												<!-- 카드 클릭영역  -->
 											</div>

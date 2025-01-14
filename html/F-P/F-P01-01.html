@@ -23,6 +23,13 @@
 			// Bootstrap Popover + Custom
 			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
 		})
+
+		// qos modal
+		function openQosModal(id) {
+			var QosModal = new bootstrap.Modal(document.getElementById(id));
+			QosModal.show();
+		}
+
 	</script>
 </head>
 
@@ -266,8 +273,9 @@
 											</div>
 											<div class="card-tit">
 												<strong>[SKT] 150GB+최대 5Mbps</strong>
-												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+												<!-- 5차 수정 : QoS 툴팁을 팝업으로 변경 -->
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 												</button>
 											</div>
@@ -297,8 +305,8 @@
 											<div class="card-util">
 												<div class="card-util-tooltip">
 													<strong class="tit">밀리의 서재</strong>
-													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+													<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 													</button>
 												</div>
@@ -358,8 +366,8 @@
 											</div>
 											<div class="card-tit">
 												<strong>[SKT] 150GB+최대 5Mbps</strong>
-												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 												</button>
 											</div>
@@ -389,8 +397,8 @@
 											<div class="card-util">
 												<div class="card-util-tooltip">
 													<strong class="tit">밀리의 서재</strong>
-													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+													<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 													</button>
 												</div>
@@ -424,8 +432,8 @@
 											</div>
 											<div class="card-tit">
 												<strong>[SKT] 150GB+최대 5Mbps</strong>
-												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 												</button>
 											</div>
@@ -874,6 +882,61 @@
 					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
 						<span>닫기</span>
 					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 공유하기 Modal Alert -->
+
+	<!-- QOS Modal Alert -->
+	<!-- 5차 수정 : QoS 팝업 추가 -->
+	<div class="modal modal-basic fade" id="QosModal" tabindex="-1" role="dialog" aria-labelledby="QosModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="QosModalLabel">QoS(데이터 소진 시 속도) </h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<section class="qos-sec">
+						<table class="qos-table">
+							<caption>
+								<strong>QoS(데이터 소진 시 속도) 표</strong>
+								<p>속도, 인터넷, 유튜브 재생 속도 로 구성됨</p>
+							</caption>
+							<colgroup>
+								<col style="width: 80rem;" />
+								<col style="width: auto;" />
+								<col style="width: 80rem;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">전송 속도</th>
+									<th scope="col">인터넷</th>
+									<th scope="col">재생 속도</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1Mbps</td>
+									<td>텍스트와 용량이 작은 <br>이미지 페이지 이용 가능</td>
+									<td>480p</td>
+								</tr>
+								<tr>
+									<td>3Mbps</td>
+									<td>용량이 큰 이미지 파일 등 <br>큰 불편함 없이 이용 가능</td>
+									<td>720p</td>
+								</tr>
+								<tr>
+									<td>5Mbps</td>
+									<td>대부분 쾌적하게 이용 가능</td>
+									<td>100p</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
 				</div>
 			</div>
 		</div>

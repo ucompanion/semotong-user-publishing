@@ -4101,6 +4101,11 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   gap: 20rem;
+  max-height: 110rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+  overflow: hidden; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+  max-height: none;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list .card-charge-item {
   width: 100%;
@@ -4170,6 +4175,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-02-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
+}
+.F-CB02-02-page .cb-ratePlanA-sec {
+  padding-bottom: 10rem; /* 5차 수정 : 요금제목록 그림자 가려짐 대응 */
 }
 .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-list {
   display: grid;
@@ -4858,6 +4866,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB03-04-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
+}
+.F-CB03-04-page .cb-ratePlanA-sec {
+  padding-bottom: 10rem; /* 5차 수정 : 요금제목록 그림자 가려짐 대응 */
 }
 .F-CB03-04-page .cb-ratePlanA-sec .ratePlanA-list {
   display: grid;
@@ -14190,6 +14201,29 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-page .nodata .nodata-tit + .nodata-txt {
   margin-top: 4rem;
+}
+
+.qos-table { /* 5차 수정 : QoS 팝업 추가(여기부터) */
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.qos-table td, .qos-table th {
+  padding: 8rem;
+  border: 1px solid #dddddd;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 22rem;
+  color: #2a2b2d;
+  word-break: keep-all;
+  vertical-align: middle;
+  text-align: center;
+}
+.qos-table thead th { /* 5차 수정 : QoS 팝업 추가(여기까지) */
+  font-weight: 600;
+  background-color: #f1eefb;
+  border-bottom: 1px solid #542FDD;
 }
 
 /*-------------------------------------------------------------------
