@@ -23,6 +23,13 @@
 			// Bootstrap Popover + Custom
 			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
 		})
+
+		// qos modal
+		function openQosModal(id) {
+			var QosModal = new bootstrap.Modal(document.getElementById(id));
+			QosModal.show();
+		}
+
 	</script>
 </head>
 
@@ -40,7 +47,7 @@
 			</div>
 
 			<div class="header-sec">
-				<h1 class="title"><a href="../scenario/F-M01.html" class="logo"><span class="blind">세모통</span></a></h1>
+				<h1 class="title"><a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a></h1>
 				<nav class="header-nav">
 					<ul class="nav-list">
 						<li class="nav-item">
@@ -84,7 +91,7 @@
 		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
 		<header class="header-mobile only-mo">
 			<section class="header-sec">
-				<h1 class="title"><a href="../scenario/F-M01.html" class="logo"><span class="blind">세모통</span></a></h1>
+				<h1 class="title"><a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a></h1>
 				<button type="button" class="ui-btn btn-aside" data-bs-toggle="modal" data-bs-target="#asideModal">
 					<i class="ui-icn icn-32-anb-bk" aria-label="메뉴열기"></i>
 				</button>
@@ -102,30 +109,10 @@
 			<!-- content -->
 			<div class="content F-P01-01-page">
 				<!-- 요금제 카테고리 섹션 -->
-				<section class="ratePlan-cate-sec">
+				<!-- <section class="ratePlan-cate-sec">
 					<div class="sec-inner">
-						<ul class="ratePlan-cate-list">
-							<li>
-								<button type="button" class="ratePlan-cate-btn">
-									<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
-									<span>인터넷<br> 결합 요금제</span>
-								</button>
-							</li>
-							<li>
-								<button type="button" class="ratePlan-cate-btn">
-									<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
-									<span>장기 할인<br> 요금제</span>
-								</button>
-							</li>
-							<li>
-								<button type="button" class="ratePlan-cate-btn">
-									<i class="ui-icn icn-44-plan-cate-03" aria-hidden="true"></i>
-									<span>평생 할인<br> 요금제</span>
-								</button>
-							</li>
-						</ul>
 					</div>
-				</section>
+				</section> -->
 				<!-- // 요금제 카테고리 섹션 -->
 
 				<!-- 요금제 필터 섹션 -->
@@ -136,11 +123,40 @@
 							<p class="sec-explain">요금제 구성을 알려주시면 세모통이 추천해드려요!</p>
 						</div>
 						<div class="sec-body">
+							<!-- 요금제 배너목록 -->
+							<!-- 2차 수정 : 요금제 카테고리 위치 변경 -->
+							<ul class="ratePlan-cate-list">
+								<li>
+									<button type="button" class="ratePlan-cate-btn">
+										<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
+										<span>인터넷<br> 결합 요금제</span>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="ratePlan-cate-btn">
+										<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
+										<span>장기 할인<br> 요금제</span>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="ratePlan-cate-btn">
+										<i class="ui-icn icn-44-plan-cate-03" aria-hidden="true"></i>
+										<span>평생 할인<br> 요금제</span>
+									</button>
+								</li>
+							</ul>
+							<!-- // 요금제 배너목록 -->
+
+							<!-- 필터목록 -->
+							<!-- 2차 수정 : 필터 키워드형으로 변경
+								- 새로고침 제외, 키워드 설정완료 태태추가, 삭제버튼 제외
+							 -->
 							<ul class="ratePlan-filter-list">
 								<!-- 필수 - 필터버튼 -->
 								<li>
+									<!-- Case 설정완료시 is-setting 추가 -->
 									<!-- ui-filter: input.scss 가이드에 포함 -->
-									<button type="button" class="filter-btn is-setting" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+									<button type="button" class="filter-btn" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
 										<i class="ui-icn icn-24-filter-gr" aria-hidden="true"></i>
 										<span>필터</span>
 									</button>
@@ -148,66 +164,68 @@
 								</li>
 
 								<!--  Cases -->
-								<li>
+								<!-- <li>
 									<button type="button" class="filter-btn">
 										<i class="ui-icn icn-24-refresh-gr" aria-label="새로고침"></i>
 									</button>
-								</li>
+								</li> -->
 								<li>
+									<!-- Case 설정완료시 is-setting 추가 -->
 									<button class="filter-chip">
 										<span>데이터</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
 										<span>가격</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
 										<span>소진시 속도</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
 										<span>할인 기간</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
 										<span>통화</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
 										<span>문자</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
 										<span>통신정보</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
 										<span>인터넷 결합</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 								<li>
 									<button class="filter-chip">
-										<span>부가 서비스</span>
-										<i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i>
+										<span>통신사</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
 									</button>
 								</li>
 							</ul>
+							<!-- // 필터목록 -->
 						</div>
 					</div>
 				</section>
@@ -222,9 +240,10 @@
 							<div class="ratePlanC-toolbar">
 								<p class="count">총&nbsp;<em>9,999개</em>&nbsp;요금제</p>
 								<div class="sort">
+									<!-- 2차 수정 : 모든화면 추천순제외 -->
 									<button type="button" class="ui-btn" id="frmSort" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSortModal">
 										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
-										<span>추천순</span>
+										<span>낮은 가격 순</span>
 										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
 									</button>
 								</div>
@@ -235,23 +254,28 @@
 							<ul class="ratePlanC-list">
 								<li class="ratePlanC-item">
 									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<!--
+										2차 수정 : 서비스카드 공통 망제공자 제목에 추가
+										2차 수정 : 서비스카드 공통 툴팁 추가
+									 -->
 									<div class="ratePlanC-card">
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
-												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
+												<!-- 5차 수정 : QoS 툴팁을 팝업으로 변경 -->
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 												</button>
 											</div>
@@ -281,8 +305,8 @@
 											<div class="card-util">
 												<div class="card-util-tooltip">
 													<strong class="tit">밀리의 서재</strong>
-													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+													<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 													</button>
 												</div>
@@ -331,19 +355,19 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
-												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 												</button>
 											</div>
@@ -373,8 +397,8 @@
 											<div class="card-util">
 												<div class="card-util-tooltip">
 													<strong class="tit">밀리의 서재</strong>
-													<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-														data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+													<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+													<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 													</button>
 												</div>
@@ -397,19 +421,19 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
-												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 												</button>
 											</div>
@@ -456,13 +480,15 @@
 											<!-- Case 선택한상태정보 -->
 											<div class="card-status">
 												<div class="status-choice">
+													<!-- 신청정보 제외
 													<div class="choice">
 														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span class="txt"><em>52</em>명 선택</span>
 														<span class="split"></span>
 														<span class="txt"><em>12</em>명 신청 중</span>
-													</div>
+													</div> -->
 													<button type="button" class="ui-btn" aria-expanded="false">
+														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span>오류 문의</span>
 														<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
 													</button>
@@ -501,17 +527,17 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -592,17 +618,17 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -658,17 +684,17 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -717,13 +743,16 @@
 											<!-- Case 선택한상태정보 -->
 											<div class="card-status">
 												<div class="status-choice">
+													<!-- 4차 수정 : 요금제 카드 공통 신청정보 제외
 													<div class="choice">
 														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span class="txt"><em>52</em>명 선택</span>
 														<span class="split"></span>
 														<span class="txt"><em>12</em>명 신청 중</span>
-													</div>
+													</div> -->
 													<button type="button" class="ui-btn" aria-expanded="false">
+														<!-- 4차 수정 : 요금제 카드 공통 오류문의 아이콘 추가 -->
+														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span>오류 문의</span>
 														<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
 													</button>
@@ -806,10 +835,10 @@
 							<ul class="select-listbox" role="listbox">
 								<!-- setSelectValued 는 퍼블 확인용입니다. -->
 								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
-								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
+								<!-- <li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li> 2차 수정 : 모든화면 추천순제외 -->
+								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">선택 많은 순</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">할인 기간 후 낮은 가격 순</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">할인기간 후 낮은 가격 순</li><!-- 2차 수정 : 할인기간으로 띄어쓰기 수정 -->
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">데이터 많은 순</li>
 							</ul>
 						</div>
@@ -853,6 +882,61 @@
 					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
 						<span>닫기</span>
 					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 공유하기 Modal Alert -->
+
+	<!-- QOS Modal Alert -->
+	<!-- 5차 수정 : QoS 팝업 추가 -->
+	<div class="modal modal-basic fade" id="QosModal" tabindex="-1" role="dialog" aria-labelledby="QosModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="QosModalLabel">QoS(데이터 소진 시 속도) </h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<section class="qos-sec">
+						<table class="qos-table">
+							<caption>
+								<strong>QoS(데이터 소진 시 속도) 표</strong>
+								<p>속도, 인터넷, 유튜브 재생 속도 로 구성됨</p>
+							</caption>
+							<colgroup>
+								<col style="width: 80rem;" />
+								<col style="width: auto;" />
+								<col style="width: 80rem;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">전송 속도</th>
+									<th scope="col">인터넷</th>
+									<th scope="col">재생 속도</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1Mbps</td>
+									<td>텍스트와 용량이 작은 <br>이미지 페이지 이용 가능</td>
+									<td>480p</td>
+								</tr>
+								<tr>
+									<td>3Mbps</td>
+									<td>용량이 큰 이미지 파일 등 <br>큰 불편함 없이 이용 가능</td>
+									<td>720p</td>
+								</tr>
+								<tr>
+									<td>5Mbps</td>
+									<td>대부분 쾌적하게 이용 가능</td>
+									<td>100p</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
 				</div>
 			</div>
 		</div>

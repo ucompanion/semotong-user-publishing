@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="세모통" />
 	<meta name="description" content="세모통" />
-	<title>카드형 요금제 선택 | 세모통</title>
+	<title>추천 요금제 | 세모통</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -53,7 +53,7 @@
 			</div>
 
 			<div class="header-sec">
-				<h1 class="title"><a href="../scenario/F-M01.html" class="logo"><span class="blind">세모통</span></a></h1>
+				<h1 class="title"><a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a></h1>
 				<nav class="header-nav">
 					<ul class="nav-list">
 						<li class="nav-item">
@@ -123,7 +123,7 @@
 						<div class="ratePlanB-card">
 							<div class="card-body">
 								<p class="card-img" aria-hidden="true"><img src="../../assets/images/common/img-plan-price-low.png" alt="" /></p>
-								<p class="card-tit"><strong>초저가 요금제</strong></p>
+								<p class="card-tit"><strong>월 110원 부터 갓성비</strong></p>
 								<p class="card-txt">저렴한 요금을 찾고 있어요.</p>
 								<p class="card-tag">
 									<span class="tag">#저렴</span>
@@ -146,7 +146,10 @@
 									<button type="button" class="keyword-btn is-selected" aria-selected="true"><span>전체</span></button>
 								</div>
 								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>인터넷 결합 요금제</span></button>
+									<button type="button" class="keyword-btn" aria-selected="false"><span>데이터</span></button>
+								</div>
+								<div class="swiper-slide">
+									<button type="button" class="keyword-btn" aria-selected="false"><span>가격</span></button>
 								</div>
 								<div class="swiper-slide">
 									<button type="button" class="keyword-btn" aria-selected="false"><span>소진시 속도</span></button>
@@ -155,25 +158,19 @@
 									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
 								</div>
 								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
+									<button type="button" class="keyword-btn" aria-selected="false"><span>통화</span></button>
 								</div>
 								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
+									<button type="button" class="keyword-btn" aria-selected="false"><span>문자</span></button>
 								</div>
 								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
+									<button type="button" class="keyword-btn" aria-selected="false"><span>통신정보</span></button>
 								</div>
 								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
+									<button type="button" class="keyword-btn" aria-selected="false"><span>인터넷 결합</span></button>
 								</div>
 								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="keyword-btn" aria-selected="false"><span>할인 기간</span></button>
+									<button type="button" class="keyword-btn" aria-selected="false"><span>통신사</span></button>
 								</div>
 							</div>
 						</div>
@@ -188,6 +185,7 @@
 						<div class="ratePlanC-list-wrap">
 							<!-- 요금제 상품 툴바 -->
 							<div class="ratePlanC-toolbar">
+								<!-- 4차 수정 : 12워월 / 24개월로 수정 -->
 								<div class="opt">
 									<!-- checkbox.scss에 포함 -->
 									<div class="ui-switch xs">
@@ -203,22 +201,27 @@
 								<div class="opt">
 									<!-- checkbox.scss에 포함 -->
 									<div class="ui-switch xs">
-										<input type="checkbox" name="frmMonth12" id="frmMonth12" value="" />
-										<label for="frmMonth12"></label>
+										<input type="checkbox" name="frmMonth24" id="frmMonth24" value="" />
+										<label for="frmMonth24"></label>
 									</div>
-									<p>12개월 총액</p>
+									<p>24개월 총액</p>
 									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 										data-bs-content="할인기간 포함된 12/24개월 요금 총액이에요.">
 										<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
 									</button>
 								</div>
 								<div class="sort">
+									<!-- 2차 수정 : 모든화면 추천순제외 -->
 									<button type="button" class="ui-btn" id="frmSort" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSortModal">
 										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
-										<span>추천순</span>
+										<span>낮은 가격 순</span>
 										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
 									</button>
 								</div>
+							</div>
+							<!-- 4차 수정 : 요금제 개수 추가 -->
+							<div class="ratePlanC-toolbar">
+								<p class="count">총 9,999개 요금제</p>
 							</div>
 							<!-- // 요금제 상품 툴바 -->
 
@@ -230,17 +233,17 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -260,7 +263,7 @@
 												</div>
 												<div class="charge">
 													<p class="charge-tit">58,700원</p>
-													<p class="charge-txt">7개월 이후 49,000원</p>
+													<!-- <p class="charge-txt">7개월 이후 49,000원</p> -->
 												</div>
 											</div>
 											<!-- 카드 클릭영역  -->
@@ -321,17 +324,17 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -387,17 +390,17 @@
 										<div class="card-body">
 											<div class="card-label">
 												<div class="card-label-benefit">
-													<span class="label primary">단독특가</span>
+													<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
 													<span class="label secondary">+20GB</span>
 												</div>
 												<div class="card-label-option">
-													<span class="label"><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="기다리지 않고 직접 바로 빠르게 개통하실 수 있어요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>셀프개통</button>
 													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</span>
+													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
 												</div>
 											</div>
 											<div class="card-tit">
-												<strong>150GB+최대 5Mbps</strong>
+												<strong>[SKT] 150GB+최대 5Mbps</strong>
 												<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
 													data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
 													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
@@ -446,13 +449,16 @@
 											<!-- Case 선택한상태정보 -->
 											<div class="card-status">
 												<div class="status-choice">
+													<!-- 4차 수정 : 요금제 카드 공통 신청정보 제외
 													<div class="choice">
 														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span class="txt"><em>52</em>명 선택</span>
 														<span class="split"></span>
 														<span class="txt"><em>12</em>명 신청 중</span>
-													</div>
+													</div> -->
 													<button type="button" class="ui-btn" aria-expanded="false">
+														<!-- 4차 수정 : 요금제 카드 공통 오류문의 아이콘 추가 -->
+														<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
 														<span>오류 문의</span>
 														<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
 													</button>
@@ -625,10 +631,10 @@
 							<ul class="select-listbox" role="listbox">
 								<!-- setSelectValued 는 퍼블 확인용입니다. -->
 								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
-								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
+								<!-- <li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li> 2차 수정 : 모든화면 추천순제외 -->
+								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">선택 많은 순</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">할인 기간 후 낮은 가격 순</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">할인기간 후 낮은 가격 순</li><!-- 2차 수정 : 할인기간으로 띄어쓰기 수정 -->
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">데이터 많은 순</li>
 							</ul>
 						</div>

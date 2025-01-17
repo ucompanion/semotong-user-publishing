@@ -85,12 +85,12 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 
 // 모달 하단여백
 @mixin modal-spacer {
-	.modal-body {
-		padding-bottom: 16rem;
-		margin-bottom: 8rem;
+	.modal-body { /* 2차 수정 : 모달 여백 수정 */
+		// padding-bottom: 16rem;
+		margin-bottom: 32rem;
 	}
-	.modal-footer {
-		padding-top: 20rem;
+	.modal-footer { /* 2차 수정 : 모달 여백 수정 */
+		padding-top: 8rem;
 		padding-bottom: 24rem;
 	}
 }
@@ -401,7 +401,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				font-size: 12rem;
 				line-height: 16rem;
 				color: #fff;
-				&.primary {
+				&.primary { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+					position: relative;
+					z-index: 10;
 					background-color: $color-primary;
 				}
 				&.secondary {
@@ -421,7 +423,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				border-radius: 50%;
 				background-color: #CDC2F5;
 			}
-			.label {
+			.label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+				position: relative;
+				z-index: 10;
 				display: inline-flex;
 				align-items: center;
 				font-weight: 600;
@@ -495,19 +499,24 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				line-height: 14rem;
 			}
 		}
-		.charge {
+		.charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
 			position: relative;
 			top: 2rem;
+			height: 40rem;
 			text-align: right;
 
-			.charge-tit {
+			.charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+				margin-bottom: 2rem;
 				font-weight: 700;
 				font-size: 16rem;
 				line-height: 22rem;
 				color: #1B0179;
 			}
-			.charge-txt {
-				margin-top: 2rem;
+			.charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+				margin-top: 0rem;
 				font-weight: 500;
 				font-size: 12rem;
 				line-height: 16rem;
@@ -626,11 +635,15 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			}
 
 			.ui-btn {
+				margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
 				align-items: center;
 				font-weight: 600;
 				font-size: 12rem;
 				line-height: 14rem;
 				color: #828588;
+				> span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+					margin-left: 4rem;
+				}
 			}
 
 		}
@@ -814,6 +827,127 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 
+// 요금제 상품 상세 목록
+@mixin ratePlanE-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16rem;
+	padding-top: 16rem;
+
+	.ratePlanE-item {
+		width: 100%;
+	}
+}
+
+// 요금제 상품 상세 카드
+@mixin ratePlanE-card {
+	position: relative;
+	padding: 0 16rem;
+	@include box-shadow-10;
+	.card-button {
+		position: absolute;
+		left: -16rem;
+		right: -16rem;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+	.card-body {
+		position: relative;
+		padding: 16rem 0 20rem 0;
+
+		.card-charge {
+			.charge {
+				.charge-tit {
+					font-weight: 700;
+					font-size: 18rem;
+					line-height: 24rem;
+					color: $color-primary;
+				}
+			}
+		}
+	}
+	.card-footer {
+		padding: 8rem 0 12rem 0;
+		border-top: 1px solid #EFF0F0;
+	}
+	.card-opening {
+		display: inline-flex;
+		position: absolute;
+		top: 0;
+		right: 16rem;
+		height: 24rem;
+		align-items: center;
+		justify-content: center;
+		padding: 0 6rem;
+		font-weight: 500;
+		font-size: 12rem;
+		font-style: 16rem;
+		color: #5FCDB0;
+		border-radius: 0 0 2rem 2rem;
+		background-color: #E6F7F2;
+	}
+	.card-tit {
+		margin-bottom: 12rem;
+		font-weight: 600;
+		font-size: 18rem;
+		color: #000;
+	}
+	.card-charge-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20rem;
+		max-height: 110rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+		overflow: hidden; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+		&.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+			max-height: none; 
+		}
+		.card-charge-item {
+			width: 100%;
+		}
+	}
+	.card-charge-more {
+		margin-top: 2rem;
+	}
+	.card-charge {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.brand {
+			display: flex;
+			align-items: center;
+			height: 22rem;
+			img {
+				height: 100%;
+			}
+			.brand-rating {
+				display: inline-flex;
+				align-items: center;
+				margin-left: 4rem;
+				padding: 3rem 8rem 3rem 4rem;
+				border:1px solid #CDC2F5;
+				border-radius: 15rem;
+				color: $color-primary;
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 14rem;
+			}
+		}
+		.charge {
+			position: relative;
+			top: 2rem;
+			text-align: right;
+
+			.charge-tit {
+				font-weight: 600;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #46484B;
+			}
+		}
+	}
+}
+
 // 추천 요금제 목록
 @mixin recom-list {
 	display: flex;
@@ -937,7 +1071,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	.card-body {
 		display: flex;
 		flex-wrap: wrap;
-		padding:16rem 0;
+		padding:16rem 0 0 0;
 
 		.card-label {
 			display: inline-flex;
@@ -963,9 +1097,12 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			flex-direction: column;
 			justify-content: center;
 			width: 100%;
-			height: 52rem;
+			height: 68rem;
 			margin-top: 10rem;
+			margin-bottom: 6rem;
+			padding-bottom: 16rem;
 			padding-left: calc(52rem + 12rem);
+			border-bottom: 1px solid #EFF0F0;
 			.card-brand {
 				position: absolute;
 				left: 0;
@@ -1002,8 +1139,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 	}
 	.card-footer {
-		border-top: 1px solid #EFF0F0;
-		padding: 16rem 0 24rem;
+		padding: 10rem 0 24rem;
 
 		// 작성완료
 		.card-written {
@@ -1291,10 +1427,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	.collapse:not(.show) {
 		display: none;
 	}
-	.accordion-button .ui-icn {
+	.acco-button .ui-icn { /* 2024-12-20 조찬기 : acco-button 으로 변경 */
 		transition: transform .35s ease;
 	}
-	.accordion-button[aria-expanded='true'] .ui-icn {
+	.acco-button[aria-expanded='true'] .ui-icn { /* 2024-12-20 조찬기 : acco-button 으로 변경 */
 		transform: rotate(180deg);
 	}
 
@@ -1719,6 +1855,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		grid-template-columns: 1fr 1fr 1fr !important;
 	}
 }
+@mixin choice-swiper {
+	> li {
+		width: 232rem;
+	}
+}
 // e: 인터넷 결합 설문 목록
 
 // s: 인터넷 결합 설문 라디오
@@ -1730,6 +1871,8 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	border-radius: 4rem;
 	padding: 20rem;
 	border: 1px solid transparent;
+	cursor: pointer;
+
 	/* 1차 수정 : IOS 호환성 대응 */
 	input {
 		position: absolute;
@@ -2042,3 +2185,22 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 // e: 약관
+
+// s: 상세 데이터
+@mixin data-view {
+	p {
+		font-weight: 500;
+		font-size: 14rem;
+		line-height: 22rem;
+	}
+	img {
+		display: block;
+		margin: 20rem auto;
+	}
+	@include media-tablet-xs {
+		p {
+			font-size: 16rem;
+			line-height: 24rem;
+		}
+	}
+}

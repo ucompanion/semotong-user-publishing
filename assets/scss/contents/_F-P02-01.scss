@@ -23,7 +23,7 @@
 	// e: 요금제 상품 섹션
 
 	// s: 요금제 결합
-	.ratePlan-combi-sec {
+	.ratePlan-combi-sec { /* 2차 수정 : 체크박스 삭제, 간격 수정 */
 		margin-top: 50rem;
 		margin-bottom: 34rem;
 		@include sec-basic;
@@ -34,12 +34,12 @@
 				max-width: 100%;
 			}
 		}
-		.ui-chk {
-			margin-top: 14rem;
-		}
+		/* .ui-chk {
+		 	margin-top: 14rem;
+		} */
 
 		.noti-box {
-			margin-top: 12rem;
+			margin-top: 14rem;
 			@include noti-box;
 		}
 	}

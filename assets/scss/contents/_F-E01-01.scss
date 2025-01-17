@@ -49,7 +49,8 @@
 			}
 			.sort {
 				display: flex;
-				.ui-btn {
+				.ui-btn { /* 2차 수정 : 정렬버튼 여백수정 */
+					gap: 4rem;
 					line-height: 16rem;
 				}
 			}

@@ -10,15 +10,74 @@
 	--sec-outer-margin: 50rem;
 	--sec-inner-padding: 40rem;
 
+	// Type2 Bg
+	// &.type2 section {
+	// 	width: 100%;
+	// 	max-width: 1020rem;
+	// 	margin-right: auto;
+	// 	margin-left: auto;
+	// }
+
+	// TypeA Bg
+	// &.typeA {
+	// 	.sec-outer {
+	// 		width: 100%;
+	// 		max-width: 1020rem;
+	// 		margin-right: auto;
+	// 		margin-left: auto;
+	// 	}
+	// 	.visual-sec {
+	// 		padding: 0;
+	// 		background: #F2F5FB;
+	// 		.sec-outer {
+	// 			@include out-sec;
+	// 			padding-top: var(--sec-inner-padding);
+	// 			background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
+	// 			background-color: #3C239A;
+	// 		}
+	// 	}
+	// 	.deal-sec {
+	// 		padding: 0;
+	// 		background: #F2F5FB;
+	// 		.sec-outer {
+	// 			@include out-sec;
+	// 			background-color: #CDC2F5;
+	// 			padding-top: var(--sec-inner-padding);
+	// 			padding-bottom: var(--sec-inner-padding);
+	// 		}
+	// 	}
+	// }
+
+	// TypeB Bg
+	// &.typeB {
+	// 	.visual-sec {
+	// 		// padding: 0;
+	// 		padding-top: var(--sec-inner-padding);
+	// 	}
+	// }
+	.sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
+		width: 100%;
+		max-width: 1020rem;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	// s: 비주얼 섹션
 	.visual-sec {
 		position: relative;
 		margin-top: calc(-1 * #{$mobile-height-header});
-		background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
-		background-color: #3C239A;
+		padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+		background: #F2F5FB; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+		/* background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%); 3차 수정 : 메인 레이아웃 변경 삭제 */
+		/* background-color: #3C239A; 3차 수정 : 메인 레이아웃 변경 삭제 */
 		overflow: hidden;
 		color: #fff;
-
+		.sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
+			@include out-sec;
+			padding-top: var(--sec-inner-padding);
+			background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
+			background-color: #3C239A;
+		}
 		.sec-body {
 			position: relative;
 			height: calc(220rem + #{$mobile-height-header});
@@ -47,7 +106,7 @@
 
 			.sec-img {
 				position: absolute;
-				right: 0;
+				right: 12rem; /* 2차 수정 : 봇 이미지 위치 수정 */
 				bottom: 76rem;
 				width: 140rem;
 				height: 122rem;
@@ -109,8 +168,16 @@
 		overflow: hidden;
 		padding-top: var(--sec-inner-padding);
 		padding-bottom: var(--sec-inner-padding);
-		background-color: #CDC2F5;
+		padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+		background: #F2F5FB; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+		/* background-color: #CDC2F5; 3차 수정 : 메인 레이아웃 변경 삭제 */
 		@include sec-basic;
+		.sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
+			@include out-sec;
+			background-color: #CDC2F5;
+			padding-top: var(--sec-inner-padding);
+			padding-bottom: var(--sec-inner-padding);
+		}
 		.sec-header {
 			.sec-tit {
 				color: #000000;

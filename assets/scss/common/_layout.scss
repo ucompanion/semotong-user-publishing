@@ -163,10 +163,10 @@ html {
 		// @include in-sec;
 
 		.title {
-			.logo {
+			.logo { /* 3차 수정 : 로고 사이즈 변경 */
 				display: block;
-				width: 90rem;
-				height: 32rem;
+				width: 80rem;
+				height: 24rem;
 				mask: url('../images/common/img-logo-header-wh.svg') no-repeat center center / contain;
 				background-color: #000000;
 			}
@@ -190,9 +190,9 @@ html {
 		}
 	}
 }
-// .is-scroll-first .header-desktop {
-// 	border-color: transparent;
-// }
+.is-scroll-first .header-desktop { /* 3차 수정 : 스크롤 처음일때 투명처리 */
+	border-color: transparent;
+}
 
 // Header Mobile Nav
 .modal.aside-modal {
@@ -212,7 +212,23 @@ html {
 	}
 
 	.aside-nav-sec {
-		margin-top: 32rem;
+		/* margin-top: 32rem; 4차 수정 : 전체메뉴 간격 삭제 */
+		.aside-logo {
+			.logo { /* 4차 수정 : 전체메뉴 로고 추가 (img-logo-header-bk-only.svg 추가) */
+				display: block;
+				width: 80rem;
+				height: 24rem;
+				margin-left: 18rem;
+				margin-bottom: 30rem;
+				background: url("../images/common/img-logo-header-bk-only.svg") no-repeat center center/contain;
+
+				@include media-tablet-xs {
+					&:hover { /* 4차 수정 : 전체메뉴 로고 추가 */
+						background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+					}
+				}
+			}
+		}
 
 		.aside-nav {
 			.nav-item + .nav-item {
@@ -542,6 +558,7 @@ body.is-scroll-first {
 		margin-bottom: 10rem;
 		position: relative;
 		box-shadow: none;
+		border-bottom: 0; /* 4차 수정 : 피시에서 모바일헤더 라인 삭제 */
 		.btn-aside {
 			display: none;
 		}
@@ -559,6 +576,33 @@ body.is-scroll-first {
 	.floating-menu {
 		bottom: calc(#{$safe-area-bottom} + var(--btn-gap));
 	}
+
+	// 롤호버 적용
+	.header-desktop .header-sec .title .logo { /* 3차 수정 : 롤호버 로고 적용 */
+		width: 100rem;
+		height: 30rem;
+		&:hover {
+			background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+			mask: none;
+		}
+	}
+	// .typeB-wrapper .header-desktop {
+	// 	background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%);
+	// 	background-color: #3C239A;
+	// 	border-bottom: 0;
+	// 	.header-sec .header-nav .nav-list .nav-link {
+	// 		color: #fff;
+	// 	}
+	// }
+	// .typeB-wrapper .header-desktop .header-sec .title .logo {
+	// 	width: 120rem;
+	// 	height: 36rem;
+	// 	background-color: #fff;
+	// 	&:hover {
+	// 		background: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
+	// 		mask: none;
+	// 	}
+	// }
 }
 
 // Modal Demo Page

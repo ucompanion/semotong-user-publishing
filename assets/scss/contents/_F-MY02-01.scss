@@ -13,7 +13,7 @@
 
 	// s: 나의정보 섹션
 	.my-info-sec {
-		margin-top:20rem;
+		margin-top:10rem; /* 4차 수정 : 나의정보 상단여백 조정 */
 
 		// 나의정보
 		.my-info-profile {
@@ -28,6 +28,11 @@
 				font-weight: 500;
 				font-size: 14rem;
 				color: rgba(99, 102, 106, 1);
+			}
+			.btn-cs { /* 4차 수정 : 나의정보 고객센터 버튼 추가 */
+				position: absolute;
+				right: 0;
+				top: -4rem;
 			}
 			.btn-kakao {
 				margin-top: 16rem;

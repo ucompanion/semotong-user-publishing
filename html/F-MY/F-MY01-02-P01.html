@@ -57,11 +57,12 @@
 					<!-- 탭 목록 -->
 					<div class="ui-tab tab-style1">
 						<ul class="tab-list" role="tablist">
+							<!-- 2차 범위에 오픈
 							<li class="tab-item" role="presentation">
-								<button class="tab-link active" id="tab-11" data-bs-toggle="tab" data-bs-target="#tab-11-pane" type="button" role="tab" aria-controls="tab-11-pane" aria-selected="true">구매 상품 후기</button>
-							</li>
+								<button class="tab-link active" id="tab-11" data-bs-toggle="tab" data-bs-target="#tab-11-pane" type="button" role="tab" aria-controls="tab-11-pane" aria-selected="false">구매 상품 후기</button>
+							</li> -->
 							<li class="tab-item" role="presentation">
-								<button class="tab-link" id="tab-12" data-bs-toggle="tab" data-bs-target="#tab-12-pane" type="button" role="tab" aria-controls="tab-12-pane" aria-selected="false">세모통 후기</button>
+								<button class="tab-link active" id="tab-12" data-bs-toggle="tab" data-bs-target="#tab-12-pane" type="button" role="tab" aria-controls="tab-12-pane" aria-selected="true">세모통 후기</button>
 							</li>
 						</ul>
 					</div>
@@ -69,7 +70,7 @@
 
 					<!-- 탭 패널 -->
 					<div class="tab-content">
-						<!-- 탭 패널: 내가 추천한 친구 -->
+						<!-- 탭 패널: 구매 상품 후기 -->
 						<div class="tab-pane fade show active" id="tab-11-pane" role="tabpanel" aria-labelledby="tab-11" tabindex="0">
 							<!-- 리뷰 섹션 -->
 							<section class="review-sec">
@@ -126,7 +127,7 @@
 													<!-- Case 작성대기 (입력후) -->
 													<div class="card-wait">
 														<div class="wait-rating">
-															<p class="rating-tit">요금제는 어떠셧나요?</p>
+															<p class="rating-tit">서비스는 어떠셧나요?</p>
 															<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
 															<div class="rating-star" aria-label="평점: 4점">
 																<button type="button" class="ui-btn is-selected" aria-selected="true" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
@@ -173,7 +174,7 @@
 													<!-- Case 작성대기 (입력후) -->
 													<div class="card-wait">
 														<div class="wait-rating">
-															<p class="rating-tit">요금제는 어떠셧나요?</p>
+															<p class="rating-tit">서비스는 어떠셧나요?</p>
 															<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
 															<div class="rating-star" aria-label="평점: 0점">
 																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
@@ -213,34 +214,145 @@
 							</section>
 							<!-- // 리뷰 섹션 -->
 						</div>
-						<!-- // 탭 패널: 내가 추천한 친구 -->
+						<!-- // 탭 패널: 구매 상품 후기 -->
 
-						<!-- 탭 패널: 나를 추천한 친구 -->
+						<!-- 탭 패널: 세모통 후기 -->
 						<div class="tab-pane fade" id="tab-12-pane" role="tabpanel" aria-labelledby="tab-12" tabindex="0">
-							<!-- nodata 섹션 -->
-							<section class="nodata-sec">
+							<!-- 리뷰 섹션 -->
+							<!-- 2024-12-12 조찬기 : 세모통후기 추가 (.F-MY01-02-P01-page .review-sec {} 전체 확인 부탁드립니다.) -->
+							<section class="review-sec">
 								<div class="sec-inner">
-									<!-- Case 추천내역 없음 -->
-									<div class="nodata">
-										<i class="ui-icn icn-100-nodata-recom" aria-hidden="true"></i>
-										<p class="nodata-tit"><strong>개통 완료 후 14일이 지난 건만 <br>평점, 후기를 남길 수 있어요.</strong></p>
+									<div class="sec-header">
+										<h2 class="sec-tit">김세모 고객님, <br>세모통 서비스는 어떠셨나요?</h2>
+										<p class="sec-explain">고객님의 의견으로 더 좋은 서비스를<br>드릴 수 있도록 노력할게요.</p>
 									</div>
-									<!-- // Case 추천내역 없음 -->
-								</div>
-							</section>
-							<!-- // nodata 섹션 -->
+									<div class="sec-body">
+										<!-- 리뷰 목록 -->
+										<ul class="review-list">
+											<li class="review-item">
+												<!-- 리뷰 카드 -->
+												<div class="review-card">
+													<div class="card-body">
+														<p class="card-label is-written">작성완료</p>
+														<button type="button" class="ui-btn card-remove">
+															<i class="ui-icn icn-20-remove-gr" aria-label="삭제"></i>
+														</button>
+													</div>
+													<div class="card-footer">
+														<!-- Case 작성완료 -->
+														<div class="card-written">
+															<p class="written-sat">
+																<i class="ui-icn icn-16-star-pr" aria-hidden="true"></i>
+																<strong class="val">5.0</strong>
+															</p>
+															<button type="button" class="ui-btn written-mod">
+																<span>수정</span>
+															</button>
+															<!-- Textarea 에서 작성한 그대로 테스트 -->
+															<p class="written-cont">저렴하지만 실속 있어서 좋아요
+저렴하지만 실속 있어서 좋아요</p>
+														</div>
+													</div>
+												</div>
+												<!-- // 리뷰 카드 -->
+											</li>
+											<li class="review-item">
+												<!-- 리뷰 카드 -->
+												<div class="review-card">
+													<div class="card-body">
+														<p class="card-label">작성대기</p>
+														<button type="button" class="ui-btn">
+															<i class="ui-icn icn-20-remove-gr" aria-label="삭제"></i>
+														</button>
+													</div>
+													<div class="card-footer">
+														<!-- Case 작성대기 (입력후) -->
+														<div class="card-wait">
+															<div class="wait-rating">
+																<p class="rating-tit">서비스는 어떠셧나요?</p>
+																<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
+																<div class="rating-star" aria-label="평점: 4점">
+																	<button type="button" class="ui-btn is-selected" aria-selected="true" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
+																	<button type="button" class="ui-btn is-selected" aria-selected="true" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="2별"></i></button>
+																	<button type="button" class="ui-btn is-selected" aria-selected="true" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="3별"></i></button>
+																	<button type="button" class="ui-btn is-selected" aria-selected="true" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="4별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="5별"></i></button>
+																</div>
+															</div>
+															<div class="wait-frm">
+																<div class="ui-textarea">
+																	<!-- textarea placeholder의 줄바꿈 된 내용은 임의대로 들여쓰기 하면 안됩니다. -->
+																	<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea" placeholder="고객님의 소중한 의견을 적어주세요.
+(최소 10자 이상)">저렴하지만 실속 있어서 좋아요
+저렴하지만 실속 있어서 좋아요</textarea>
+																	<p class="bytes"><em class="count">13/</em>500</p>
+																</div>
+															</div>
+															<div class="wait-action">
+																<button type="button" class="ui-btn btn-action primary">
+																	<span>등록하기</span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- // 리뷰 카드 -->
+											</li>
+											<li class="review-item">
+												<!-- 리뷰 카드 -->
+												<div class="review-card">
+													<div class="card-body">
+														<p class="card-label">작성대기</p>
+														<button type="button" class="ui-btn">
+															<i class="ui-icn icn-20-remove-gr" aria-label="삭제"></i>
+														</button>
+													</div>
+													<div class="card-footer">
+														<!-- Case 작성대기 (입력후) -->
+														<div class="card-wait">
+															<div class="wait-rating">
+																<p class="rating-tit">서비스는 어떠셧나요?</p>
+																<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
+																<div class="rating-star" aria-label="평점: 0점">
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="2별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="3별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="4별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="5별"></i></button>
+																</div>
+															</div>
+															<div class="wait-frm">
+																<div class="ui-textarea">
+																	<!-- textarea placeholder의 줄바꿈 된 내용은 임의대로 들여쓰기 하면 안됩니다. -->
+																	<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea" placeholder="고객님의 소중한 의견을 적어주세요.
+(최소 10자 이상)"></textarea>
+																	<p class="bytes"><em class="count">0/</em>500</p>
+																</div>
+															</div>
+															<div class="wait-action">
+																<button type="button" class="ui-btn btn-action primary" disabled>
+																	<span>등록하기</span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- // 리뷰 카드 -->
+											</li>
+										</ul>
+										<!-- // 리뷰 목록 -->
 
-							<!-- 플로팅 섹션 -->
-							<section class="floating-sec">
-								<div class="sec-inner">
-									<button type="button" class="ui-btn btn-action primary">
-										<span>요금제 보러가기</span>
-									</button>
+										<!-- Case 목록이 많은 경우 더보기 -->
+										<button type="button" class="ui-btn btn-more-list">
+											<i class="ui-icn icn-16-more-list-gr" aria-hidden="true"></i>
+											<span>더보기</span>
+										</button>
+									</div>
 								</div>
 							</section>
-							<!-- // 플로팅 섹션 -->
+							<!-- // 리뷰 섹션 -->
 						</div>
-						<!-- // 탭 패널: 나를 추천한 친구 -->
+						<!-- // 탭 패널: 세모통 후기 -->
 					</div>
 					<!-- // 탭 패널 -->
 				</div>

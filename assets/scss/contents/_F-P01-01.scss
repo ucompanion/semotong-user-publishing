@@ -11,12 +11,35 @@
 	@include bottom-spacer;
 
 	// s: 요금제 카테고리 섹션
-	.ratePlan-cate-sec {
-		.ratePlan-cate-list {
+	// .ratePlan-cate-sec {
+	// }
+	// e: 요금제 카테고리 섹션
+
+	// s: 요금제 필터 섹션
+	.ratePlan-filter-sec {
+		.sec-header {
+			margin-bottom: 32rem;
+			.sec-tit {
+				font-weight: 600;
+				font-size: 18rem;
+				line-height: 25rem;
+				color: #000;
+			}
+			.sec-explain {
+				margin-top: 4rem;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #5A5D60;
+			}
+		}
+
+		.ratePlan-cate-list { /* 2차 수정 : 요금제 카테고리 위치 변경 */
 			display: flex;
 			gap: 8rem;
 			overflow: auto;
 			margin: 0 calc(#{$mobile-outer-spacer} * -1);
+			margin-bottom: 28rem;
 			&::-webkit-scrollbar {
 				height: 0rem;
 			}
@@ -61,29 +84,6 @@
 				&:nth-child(3) .ratePlan-cate-btn {
 					background-color: #EDF8F0;
 				}
-			}
-		}
-	}
-	// e: 요금제 카테고리 섹션
-
-	// s: 요금제 필터 섹션
-	.ratePlan-filter-sec {
-		margin-top: 32rem;
-
-		.sec-header {
-			margin-bottom: 28rem;
-			.sec-tit {
-				font-weight: 600;
-				font-size: 18rem;
-				line-height: 25rem;
-				color: #000;
-			}
-			.sec-explain {
-				margin-top: 4rem;
-				font-weight: 500;
-				font-size: 14rem;
-				line-height: 20rem;
-				color: #5A5D60;
 			}
 		}
 
@@ -138,10 +138,11 @@
 							background-color: #EA2A2A;
 						}
 					}
-					& + .split {
-						@include split-set(36rem, #CFD0D1);
-						margin-left: 8rem;
-					}
+				}
+
+				.split {
+					@include split-set(36rem, #CFD0D1);
+					margin-left: 8rem;
 				}
 
 				.filter-chip {
@@ -157,6 +158,11 @@
 					font-size: 14rem;
 					line-height: 20rem;
 					color: #36383A;
+					&.is-setting {
+						background-color: #EAE6FB;
+						border-color: $color-primary;
+						color: $color-primary;
+					}
 				}
 			}
 			@include media-tablet-xs {
@@ -245,3 +251,31 @@
 
 }
 // e: 요금제 페이지
+
+
+// Qos테이블
+.qos-table { /* 5차 수정 : QoS 팝업 추가(여기부터) */
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	td, th {
+		padding: 8rem;
+		border:1px solid #dddddd;
+		font-weight: 500;
+		font-size: 14rem;
+		line-height: 22rem;
+		color: #2a2b2d;
+		word-break: keep-all;
+		vertical-align: middle;
+		text-align: center;
+	}
+	thead {
+		th { /* 5차 수정 : QoS 팝업 추가(여기까지) */
+			font-weight: 600;
+			background-color: #f1eefb;
+			border-bottom: 1px solid #542FDD;
+		}
+	}
+}
+

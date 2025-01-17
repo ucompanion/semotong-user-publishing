@@ -18,7 +18,7 @@
 			align-items: center;
 			gap: 8rem;
 			padding: 16rem;
-			padding-left: 0;
+			/* padding-left: 0; 2차 수정 : 캐릭터 이미지 교체 여백수정 */
 			border-radius: 10rem;
 			background-color: #F4F5F8;
 			.intro-img {
@@ -75,21 +75,51 @@
 	// s: 상품 선택 섹션
 	.product-choice-sec {
 		margin-top: var(--sec-outer-margin);
+		overflow: hidden;
 		@include sec-basic;
+		.sec-body { /* 4차 수정 : 상품 스와이프 추가(여기부터) */
+			position: relative;
+			.choice-button-prev,
+			.choice-button-next {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				z-index: 10;
+				transform: translate(50%, -50%);
+				width: 28rem;
+				height: 28rem;
+			}
+			.choice-button-prev {
+				right: auto;
+				left: 0;
+				transform: translate(-50%, -50%) rotate(180deg);
+			}
+			.swiper-button-disabled { /* 4차 수정 : 상품 스와이프 추가(여기까지) */
+				display: none;
+			}
+		}
 
-		.choice-list {
-			@include choice-list;
+		.choice-swiper { /* 2024-12-23 조찬기 상품 Swiper 적용 및 list 수정 */
+			overflow: visible;
+			@include media-tablet-xs {
+				overflow: hidden;
+			}
+			.choice-list {
+				@include choice-swiper;
+			}
 		}
 		.choice-rdo {
 			@include choice-rdo;
 
-			.choice-con {
-				.icons {
-					display: flex;
-					align-items: center;
-				}
+			.choice-con { /* 2024-12-23 조찬기 상품 내용 수정 */
+				// .icons {
+				// 	display: flex;
+				// 	align-items: center;
+				// }
 				.tit {
-					margin-top: 12rem;
+					display: flex;
+					align-items: flex-start;
+					height: 48rem;
 				}
 				.txt {
 					margin-top: 4rem;
@@ -105,10 +135,38 @@
 	// s: 인터넷 선택 섹션
 	.internet-choice-sec {
 		margin-top: var(--sec-outer-margin);
+		overflow: hidden;
 		@include sec-basic;
+		.sec-body { /* 4차 수정 : 인터넷 스와이프 추가(여기부터) */
+			position: relative;
+			.choice-button-prev,
+			.choice-button-next {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				z-index: 10;
+				transform: translate(50%, -50%);
+				width: 28rem;
+				height: 28rem;
+			}
+			.choice-button-prev {
+				right: auto;
+				left: 0;
+				transform: translate(-50%, -50%) rotate(180deg);
+			}
+			.swiper-button-disabled { /* 4차 수정 : 인터넷 스와이프 추가(여기까지) */
+				display: none;
+			}
+		}
 
-		.choice-list {
-			@include choice-list;
+		.choice-swiper { /* 2024-12-23 조찬기 인터넷 Swiper 적용 및 list 수정 */
+			overflow: visible;
+			@include media-tablet-xs {
+				overflow: hidden;
+			}
+			.choice-list {
+				@include choice-swiper;
+			}
 		}
 		.choice-rdo {
 			@include choice-rdo;
@@ -173,6 +231,13 @@
 						&:first-child {
 							width: 125rem;
 						}
+						p.info {
+							margin-top: 4rem;
+							font-size: 12px;
+							font-weight: 400;
+							line-height: 16rem;
+							color: #333;
+						}
 					}
 					tr:first-child td[rowspan='2'] {
 						border-bottom: 1px solid $color-primary;
@@ -205,6 +270,11 @@
 					td.price {
 						font-weight: 600;
 						color: $color-primary !important;
+					}
+				}
+				&.table-small {
+					tbody td {
+						font-size: 12rem;
 					}
 				}
 			}
