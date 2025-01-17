@@ -18573,3 +18573,245 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-TM02-page .terms-content p + dl {
   margin-top: 16rem;
 }
+
+/*-------------------------------------------------------------------
+	분류그룹 : 개인정보 수집 이용 동의
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-TM03-page {
+  padding-top: 16rem;
+  padding-bottom: 32rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM03-page {
+    padding-bottom: 48rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM03-page {
+    padding-bottom: 48rem;
+  }
+}
+.F-TM03-page .terms-content {
+  color: #2A2B2D;
+  margin-top: 24rem;
+}
+.F-TM03-page .terms-content:first-child {
+  margin-top: 0;
+}
+.F-TM03-page .terms-content .terms-title {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16rem;
+}
+.F-TM03-page .terms-content .terms-title h2 {
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 28rem;
+  color: #000;
+}
+.F-TM03-page .terms-content .terms-title .ui-sel {
+  margin-top: 8rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM03-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM03-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM03-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM03-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+.F-TM03-page .terms-content h3 {
+  margin-top: 30rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #000;
+}
+.F-TM03-page .terms-content ol > li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+}
+.F-TM03-page .terms-content ol > li + li {
+  margin-top: 8rem;
+}
+.F-TM03-page .terms-content ol > li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM03-page .terms-content ol ul > li {
+  position: relative;
+  padding-left: 12rem;
+  color: #46484B;
+}
+.F-TM03-page .terms-content ol ul > li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM03-page .terms-content dl dt {
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+.F-TM03-page .terms-content dl dt ~ dt {
+  margin-top: 8rem;
+}
+.F-TM03-page .terms-content .terms-tbl {
+  border-top: 1px solid #46484B;
+}
+.F-TM03-page .terms-content .terms-tbl th, .F-TM03-page .terms-content .terms-tbl td {
+  padding: 8rem 10rem;
+}
+.F-TM03-page .terms-content .terms-tbl th {
+  padding: 8rem 0;
+  font-weight: 600;
+  background-color: #f1f3f5;
+}
+.F-TM03-page .terms-content .terms-tbl td {
+  border-bottom: 1px solid #f1f3f5;
+}
+.F-TM03-page .terms-content p + .terms-tbl,
+.F-TM03-page .terms-content p + ol,
+.F-TM03-page .terms-content ol + p,
+.F-TM03-page .terms-content dl + p,
+.F-TM03-page .terms-content p + dl {
+  margin-top: 16rem;
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : 개인정보 제3자 동의
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-TM04-page {
+  padding-top: 16rem;
+  padding-bottom: 32rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM04-page {
+    padding-bottom: 48rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM04-page {
+    padding-bottom: 48rem;
+  }
+}
+.F-TM04-page .terms-content {
+  color: #2A2B2D;
+  margin-top: 24rem;
+}
+.F-TM04-page .terms-content:first-child {
+  margin-top: 0;
+}
+.F-TM04-page .terms-content .terms-title {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16rem;
+}
+.F-TM04-page .terms-content .terms-title h2 {
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 28rem;
+  color: #000;
+}
+.F-TM04-page .terms-content .terms-title .ui-sel {
+  margin-top: 8rem;
+}
+@media all and (min-width: 768px) {
+  .F-TM04-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM04-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-TM04-page .terms-content .terms-title {
+    align-items: center;
+  }
+  .F-TM04-page .terms-content .terms-title .ui-sel {
+    width: 200rem;
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+}
+.F-TM04-page .terms-content h3 {
+  margin-top: 30rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #000;
+}
+.F-TM04-page .terms-content ol > li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+}
+.F-TM04-page .terms-content ol > li + li {
+  margin-top: 8rem;
+}
+.F-TM04-page .terms-content ol > li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM04-page .terms-content ol ul > li {
+  position: relative;
+  padding-left: 12rem;
+  color: #46484B;
+}
+.F-TM04-page .terms-content ol ul > li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-TM04-page .terms-content dl dt {
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+.F-TM04-page .terms-content dl dt ~ dt {
+  margin-top: 8rem;
+}
+.F-TM04-page .terms-content .terms-tbl {
+  border-top: 1px solid #46484B;
+}
+.F-TM04-page .terms-content .terms-tbl th, .F-TM04-page .terms-content .terms-tbl td {
+  padding: 8rem 10rem;
+}
+.F-TM04-page .terms-content .terms-tbl th {
+  padding: 8rem 0;
+  font-weight: 600;
+  background-color: #f1f3f5;
+}
+.F-TM04-page .terms-content .terms-tbl td {
+  border-bottom: 1px solid #f1f3f5;
+}
+.F-TM04-page .terms-content p + .terms-tbl,
+.F-TM04-page .terms-content p + ol,
+.F-TM04-page .terms-content ol + p,
+.F-TM04-page .terms-content dl + p,
+.F-TM04-page .terms-content p + dl {
+  margin-top: 16rem;
+}
