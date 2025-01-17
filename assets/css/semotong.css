@@ -3080,7 +3080,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .modal-select .modal-content,
 .modal-basic .modal-content {
   width: 100%;
-  max-width: 480rem;
+  max-width: 100%; /* 6차 수정 : 반응형 너비 대응 */
   border-radius: 20rem 20rem 0 0;
   padding-bottom: calc(env(safe-area-inset-bottom, 0)/1.7); /* 1차 수정 : 모달여백 계산식 수정 */
 }
@@ -3156,6 +3156,7 @@ body.is-scroll-first .floating-menu .btn-top {
   .modal-select .modal-content,
   .modal-basic .modal-content {
     border-radius: 10rem;
+    max-width: 480rem; /* 6차 수정 : 반응형 너비 대응 */
   }
   .modal-select .modal-header .btn-close,
   .modal-basic .modal-header .btn-close {
@@ -3171,6 +3172,7 @@ body.is-scroll-first .floating-menu .btn-top {
   .modal-select .modal-content,
   .modal-basic .modal-content {
     border-radius: 10rem;
+    max-width: 480rem; /* 6차 수정 : 반응형 너비 대응 */
   }
   .modal-select .modal-header .btn-close,
   .modal-basic .modal-header .btn-close {
@@ -8218,6 +8220,31 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   gap: 12rem;
   margin-top: 32rem;
+}
+.F-I01-01-P01-page .consult-frm-sec .consult-terms { /* 6차 수정 : 동의여부 구조로 변경 (여기부터) */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 32rem;
+}
+.F-I01-01-P01-page .consult-frm-sec .consult-terms .consult-terms-all {
+  padding-bottom: 8rem;
+  margin-bottom: 6rem;
+  border-bottom: 1px solid #EFF0F0;
+}
+.F-I01-01-P01-page .consult-frm-sec .consult-terms .consult-terms-all .chk-style1 .chk > span {
+  font-weight: 700;
+  font-size: 16rem;
+  color: #222;
+}
+.F-I01-01-P01-page .consult-frm-sec .consult-terms .consult-terms-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.F-I01-01-P01-page .consult-frm-sec .consult-terms .consult-terms-item .btn-more { /* 6차 수정 : 동의여부 구조로 변경 (여기까지) */
+  width: 28rem;
+  height: 28rem;
 }
 
 /*-------------------------------------------------------------------

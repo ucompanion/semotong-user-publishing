@@ -45,6 +45,32 @@
 			gap: 12rem;
 			margin-top: 32rem;
 		}
+
+		.consult-terms { /* 6차 수정 : 동의여부 구조로 변경 (여기부터) */
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			margin-top: 32rem;
+			.consult-terms-all {
+				padding-bottom: 8rem;
+				margin-bottom: 6rem;
+				border-bottom: 1px solid #EFF0F0;
+				.chk-style1 .chk > span {
+					font-weight: 700;
+					font-size: 16rem;
+					color: #222;
+				}
+			}
+			.consult-terms-item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.btn-more { /* 6차 수정 : 동의여부 구조로 변경 (여기까지) */
+					width: 28rem;
+					height: 28rem;
+				}
+			}
+		}
 	}
 	// e: 상담신청 섹션
 }

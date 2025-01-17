@@ -100,9 +100,32 @@
 								</div>
 								<!-- // 등록폼 -->
 
-								<div class="consult-links">
-									<button type="button" class="ui-btn btn-texted"><span>개인정보 수집 이용</span></button>
-									<button type="button" class="ui-btn btn-texted"><span>개인정보 제3자 제공</span></button>
+								<!-- 6차 수정 : 동의여부 구조로 변경 -->
+								<div class="consult-terms">
+									<div class="consult-terms-all">
+										<label class="ui-chk chk-style1">
+											<input type="checkbox" name="consult-terms" id="consult-terms0">
+											<span class="chk"><span>전체 동의</span></span>
+										</label>
+									</div>
+									<div class="consult-terms-item">
+										<label class="ui-chk chk-style1">
+											<input type="checkbox" name="consult-terms" id="consult-terms1">
+											<span class="chk"><span>개인정보 수집 이용</span></span>
+										</label>
+										<button type="button" class="btn btn-more">
+											<i class="ui-icn icn-16-more-gr" aria-label="개인정보 수집 이용 자세히 보기"></i>
+										</button>
+									</div>
+									<div class="consult-terms-item">
+										<label class="ui-chk chk-style1">
+											<input type="checkbox" name="consult-terms" id="consult-terms2">
+											<span class="chk"><span>개인정보 제3자 제공</span></span>
+										</label>
+										<button type="button" class="btn btn-more">
+											<i class="ui-icn icn-16-more-gr" aria-label="개인정보 제3자 제공 자세히 보기"></i>
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>

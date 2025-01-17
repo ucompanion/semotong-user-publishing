@@ -259,7 +259,7 @@
 
 	.modal-content {
 		width: 100%;
-		max-width: 480rem;
+		max-width: 100%; /* 6차 수정 : 반응형 너비 대응 */
 		border-radius: 20rem 20rem 0 0;
 		padding-bottom: calc(#{$safe-area-bottom}); /* 1차 수정 : 모달여백 계산식 수정 */
 	}
@@ -296,6 +296,7 @@
 		}
 		.modal-content {
 			border-radius: 10rem;
+			max-width: 480rem; /* 6차 수정 : 반응형 너비 대응 */
 		}
 		.modal-header {
 			.btn-close {
