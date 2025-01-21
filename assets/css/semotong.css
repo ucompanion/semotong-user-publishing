@@ -12,7 +12,7 @@
   font-family: "Pretendard Variable";
   font-weight: 45 920;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
   src: url("../fonts/PretendardVariable/PretendardVariable.woff2") format("woff2-variations");
 }
 @font-face {
