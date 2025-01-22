@@ -8,13 +8,7 @@
 /*-------------------------------------------------------------------
 	@Fonts
 -------------------------------------------------------------------*/
-@font-face {
-  font-family: "Pretendard Variable";
-  font-weight: 45 920;
-  font-style: normal;
-  font-display: block;
-  src: url("../fonts/PretendardVariable/PretendardVariable.woff2") format("woff2-variations");
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
 /*-------------------------------------------------------------------
 	@Resets
 -------------------------------------------------------------------*/
@@ -120,7 +114,7 @@ html {
 
 body {
   color: #444;
-  font-family: "Pretendard Variable", "sans-serif";
+  font-family: "Pretendard", "sans-serif";
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: -0.02em;
