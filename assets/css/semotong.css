@@ -8924,7 +8924,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .review-sec .review-card .card-cont {
   width: 100%;
   margin-top: 10rem;
-  max-height: 60rem;
+  height: 60rem; /* 2025-02-03 조찬기 : 리뷰 높이값 3줄 고정 */
   font-weight: 500;
   font-size: 14rem;
   line-height: 20rem;
@@ -10599,6 +10599,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #46484B;
 }
 .F-M04-02-P01-page .review-sec .review-card .review-con {
+  width: 100%; /* 2025-02-03 조찬기 : 리뷰 내용 내려가게 수정 */
   margin-top: 8rem;
   font-weight: 500;
   font-size: 14rem;
@@ -13112,6 +13113,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #46484B;
 }
 .F-O01-page .review-sec .review-card .review-con {
+  width: 100%; /* 2025-02-03 조찬기 : 리뷰 내용 내려가게 수정 */
   margin-top: 8rem;
   font-weight: 500;
   font-size: 14rem;
@@ -17452,6 +17454,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #46484B;
 }
 .F-P02-01-T03-page .review-sec .review-user-sat .review-card .review-con {
+  width: 100%; /* 2025-02-03 조찬기 : 리뷰 내용 내려가게 수정 */
   margin-top: 8rem;
   font-weight: 500;
   font-size: 14rem;

@@ -431,7 +431,7 @@
 			.card-cont {
 				width: 100%;
 				margin-top: 10rem;
-				max-height: 60rem;
+				height: 60rem; /* 2025-02-03 조찬기 : 리뷰 높이값 3줄 고정 */
 				font-weight: 500;
 				font-size: 14rem;
 				line-height: 20rem;

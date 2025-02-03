@@ -1250,6 +1250,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 
 	.review-con {
+		width: 100%; /* 2025-02-03 조찬기 : 리뷰 내용 내려가게 수정 */
 		margin-top: 8rem;
 		font-weight: 500;
 		font-size: 14rem;
