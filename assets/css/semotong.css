@@ -6212,11 +6212,13 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-E01-01-page .eventIng-sec .eventIng-list .eventIng-card .card-thumb {
   width: 100%;
-  aspect-ratio: 328/184;
+  aspect-ratio: 328/204; /* 2025-02-04 조찬기 : 이벤트 썸네일 비율 조정 */
 }
-.F-E01-01-page .eventIng-sec .eventIng-list .eventIng-card .card-thumb img {
+.F-E01-01-page .eventIng-sec .eventIng-list .eventIng-card .card-thumb img { /* 2025-02-04 조찬기 : 이벤트 썸네일 width, height 추가 */
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .F-E01-01-page .eventIng-sec .eventIng-list .eventIng-card .card-cont {
   padding: 20rem 16rem;
