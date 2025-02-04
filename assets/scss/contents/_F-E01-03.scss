@@ -44,6 +44,15 @@
 						margin-top: 8rem;
 					}
 				}
+
+				.ratePlanC-list {
+					margin-top: 24rem;
+					@include ratePlanC-list;
+
+				}
+				.ratePlanC-card {
+					@include ratePlanC-card;
+				}
 			}
 		}
 	}
