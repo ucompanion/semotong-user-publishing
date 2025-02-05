@@ -7,8 +7,19 @@
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
 	@Fonts
--------------------------------------------------------------------*/
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+
+
+-------------------------------------------------------------------*/
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: block;
+  src: url("../fonts/PretendardVariable/PretendardVariable.woff2") format("woff2-variations");
+}
+
+
 /*-------------------------------------------------------------------
 	@Resets
 -------------------------------------------------------------------*/
@@ -114,7 +125,7 @@ html {
 
 body {
   color: #444;
-  font-family: "Pretendard", "sans-serif";
+  font-family: "Pretendard Variable", "sans-serif";
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: -0.02em;
@@ -1083,7 +1094,7 @@ section .sec-inner {
 
 .floating-menu {
   --btn-size: 54rem;
-  --btn-gap: 40rem;
+  --btn-gap: 90rem;
   position: fixed;
   bottom: calc(76rem + env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
   right: 20rem;
@@ -3204,7 +3215,7 @@ body.is-scroll-first .floating-menu .btn-top {
 	@@ 공통
 -------------------------------------------------------------------*/
 .ui-popover {
-  z-index: 99;
+  z-index: 9999;
 }
 
 .popover-arrow {
@@ -5773,6 +5784,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #5A5D60;
+  white-space: pre-wrap;  
 }
 .F-CS01-T02-page .inq-list-sec .inq-accordion .acco-header .acco-info {
   display: flex;
@@ -5814,6 +5826,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #2A2B2D;
+  white-space:pre-wrap;
 }
 .F-CS01-T02-page .inq-list-sec .feedback-msg {
   margin-top: 20rem;
@@ -9077,6 +9090,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .recom-sec .recom-list .recom-item {
   width: 100%;
 }
+
+.F-M01-page .recom-sec .recom-list .recom-item img{
+  width: 100%;
+}
+
 .F-M01-page .recom-sec .recom-list .recom-bnr {
   display: flex;
   align-items: center;
