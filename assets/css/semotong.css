@@ -4279,14 +4279,15 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   gap: 4rem;
 }
-.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tag .tag {
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 추천요금제 태그강조 수정 */
   padding: 2rem 7rem 1rem 7rem;
   border-radius: 12rem;
-  border: 1px solid #CDC2F5;
+  /* border: 1px solid #CDC2F5; */
   font-weight: 500;
   font-size: 12rem;
   line-height: 17rem;
-  color: #542FDD;
+  color: #fff;
+  background-color: #542FDD;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list {
   display: flex;
@@ -9411,14 +9412,15 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   gap: 4rem;
 }
-.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tag .tag {
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 추천요금제 태그강조 수정 */
   padding: 2rem 7rem 1rem 7rem;
   border-radius: 12rem;
-  border: 1px solid #CDC2F5;
+  /* border: 1px solid #CDC2F5; */
   font-weight: 500;
   font-size: 12rem;
   line-height: 17rem;
-  color: #542FDD;
+  color: #fff;
+  background-color: #542FDD;
 }
 .F-M02-01-T01-page .keyword-sec {
   overflow: hidden;
@@ -14745,10 +14747,12 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-P01-page .filter-range-frm .range-wrapper .range {
   -webkit-appearance: none;
+  -moz-appearance: none;
   width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  height: 6rem;
   background-color: transparent;
   pointer-events: none;
 }
@@ -14758,10 +14762,25 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 6rem;
   pointer-events: none;
 }
+.F-P01-01-P01-page .filter-range-frm .range-wrapper .range::-moz-range-track {
+  height: 6rem;
+  background: transparent;
+  border-radius: 6rem;
+}
 .F-P01-01-P01-page .filter-range-frm .range-wrapper .range::-webkit-slider-thumb {
   -webkit-appearance: none;
   position: relative;
   top: -13rem;
+  width: 32rem;
+  height: 32rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #EFF0F0;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.F-P01-01-P01-page .filter-range-frm .range-wrapper .range::-moz-range-thumb {
   width: 32rem;
   height: 32rem;
   background: #fff;

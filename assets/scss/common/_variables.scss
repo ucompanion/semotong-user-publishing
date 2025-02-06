@@ -339,14 +339,15 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		position: relative;
 		display: flex;
 		gap: 4rem;
-		.tag {
+		.tag { /* 7차 수정 : 추천요금제 태그강조 수정 */
 			padding:  2rem 7rem 1rem 7rem;
 			border-radius: 12rem;
-			border: 1px solid #CDC2F5;
+			/* border: 1px solid #CDC2F5; */
 			font-weight: 500;
 			font-size: 12rem;
 			line-height: 17rem;
-			color: $color-primary;
+			color: #fff;
+			background-color: $color-primary;
 		}
 	}
 }
