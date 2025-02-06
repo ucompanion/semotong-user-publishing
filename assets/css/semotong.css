@@ -7,19 +7,14 @@
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
 	@Fonts
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
-
-
 -------------------------------------------------------------------*/
 @font-face {
-  font-family: "Pretendard Variable";
+  font-family: "Pretendard";
   font-weight: 45 920;
   font-style: normal;
   font-display: block;
   src: url("../fonts/PretendardVariable/PretendardVariable.woff2") format("woff2-variations");
 }
-
-
 /*-------------------------------------------------------------------
 	@Resets
 -------------------------------------------------------------------*/
@@ -60,6 +55,7 @@ menu,
 nav,
 section,
 button,
+form,
 select,
 textarea,
 input,
@@ -125,7 +121,7 @@ html {
 
 body {
   color: #444;
-  font-family: "Pretendard Variable", "sans-serif";
+  font-family: "Pretendard", "sans-serif";
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: -0.02em;
@@ -3431,12 +3427,14 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-right: 23rem;
   }
 }
-.tab-style2::before {
+.tab-style2::before { /* 7차 수정 : 탭 스티키 라인 수정 */
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   top: 41rem;
   width: 100%;
+  max-width: 720rem;
   height: 1rem;
   background-color: #EFF0F0;
 }
@@ -3474,6 +3472,8 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-top: 16rem;
     padding-left: 0;
     padding-right: 0;
+  }
+  .container .tab-style2 .tab-swiper { /* 7차 수정 : 탭 스티키 레이아웃 수정 */
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -3506,6 +3506,8 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-top: 16rem;
     padding-left: 0;
     padding-right: 0;
+  }
+  .container .tab-style2 .tab-swiper { /* 7차 수정 : 탭 스티키 레이아웃 수정 */
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -4290,7 +4292,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   gap: 4rem;
 }
-.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 추천요금제 태그강조 수정 */
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 선택요금제 태그강조 수정 */
   padding: 2rem 7rem 1rem 7rem;
   border-radius: 12rem;
   /* border: 1px solid #CDC2F5; */
@@ -4299,6 +4301,28 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 17rem;
   color: #fff;
   background-color: #542FDD;
+}
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom { /* 7차 수정 : 추천요금제인 경우 타입 추가 */
+  min-width: 320rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
+  transition: padding 0.2s ease;
+  background-color: #F2F5FB;
+}
+@media all and (min-width: 768px) {
+  .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom .recom-bnr {
+  cursor: default;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list {
   display: flex;
@@ -4835,6 +4859,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #542FDD;
 }
 .F-CB03-03-page .cb-event-sec .event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-CB03-03-page .cb-event-sec .event-bnr img {
@@ -5785,7 +5810,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #5A5D60;
-  white-space: pre-wrap;  
+  white-space: pre-wrap;
 }
 .F-CS01-T02-page .inq-list-sec .inq-accordion .acco-header .acco-info {
   display: flex;
@@ -5827,7 +5852,6 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #2A2B2D;
-  white-space:pre-wrap;
 }
 .F-CS01-T02-page .inq-list-sec .feedback-msg {
   margin-top: 20rem;
@@ -6082,6 +6106,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #542FDD;
 }
 .F-CS02-01-page .event-sec .event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-CS02-01-page .event-sec .event-bnr img {
@@ -7262,6 +7287,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-HP01-01-page .event-sec .event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-HP01-01-page .event-sec .event-bnr img {
@@ -9091,11 +9117,6 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .recom-sec .recom-list .recom-item {
   width: 100%;
 }
-
-.F-M01-page .recom-sec .recom-list .recom-item img{
-  width: 100%;
-}
-
 .F-M01-page .recom-sec .recom-list .recom-bnr {
   display: flex;
   align-items: center;
@@ -9174,10 +9195,12 @@ body.is-scroll-first .floating-menu .btn-top {
   flex-direction: column;
   gap: 12rem;
 }
-.F-M01-page .special-event-sec .special-event-list .special-event-item {
+.F-M01-page .special-event-sec .special-event-list li {
+  display: flex; /* 7차 수정 : 불필요한 여백 잡아줌 */
   width: 100%;
 }
 .F-M01-page .special-event-sec .special-event-list .special-event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-M01-page .special-event-sec .special-event-list .special-event-bnr img {
@@ -9280,7 +9303,17 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .event-sec {
   margin-top: var(--sec-outer-margin);
 }
+.F-M01-page .event-sec .event-list { /* 7차 수정 : 이벤트 목록 구조 적용 */
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+.F-M01-page .event-sec .event-list li {
+  display: flex; /* 7차 수정 : 불필요한 여백 잡아줌 */
+  width: 100%;
+}
 .F-M01-page .event-sec .event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-M01-page .event-sec .event-bnr img {
@@ -9430,7 +9463,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   gap: 4rem;
 }
-.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 추천요금제 태그강조 수정 */
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 선택요금제 태그강조 수정 */
   padding: 2rem 7rem 1rem 7rem;
   border-radius: 12rem;
   /* border: 1px solid #CDC2F5; */
@@ -9439,6 +9472,28 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 17rem;
   color: #fff;
   background-color: #542FDD;
+}
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom { /* 7차 수정 : 추천요금제인 경우 타입 추가 */
+  min-width: 320rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
+  transition: padding 0.2s ease;
+  background-color: #F2F5FB;
+}
+@media all and (min-width: 768px) {
+  .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom .recom-bnr {
+  cursor: default;
 }
 .F-M02-01-T01-page .keyword-sec {
   overflow: hidden;
@@ -9483,10 +9538,16 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #EAE6FB;
   color: #542FDD;
 }
+.F-M02-01-T01-page .ratePlanB-sec + .ratePlanC-sec { /* 7차 수정 : 추천요금제인 경우 여백수정 추가 */
+  margin-top: 30rem;
+}
+.F-M02-01-T01-page .ratePlanB-sec + .ratePlanC-sec .sec-inner {
+  padding-top: 0;
+  border-top: 0;
+}
 .F-M02-01-T01-page .ratePlanC-sec {
   margin-top: 16rem;
   padding-top: 16rem;
-  border-top: 1px solid #EFF0F0;
 }
 .F-M02-01-T01-page .ratePlanC-sec .sec-header {
   position: relative;
@@ -9976,6 +10037,37 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M02-01-T01-page .recom-bnr-sec .recom-swiper { /* 7차 수정 : 추천배너 스와이프로 변경 */ }
+.F-M02-01-T01-page .recom-bnr-sec .recom-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 4rem;
+}
+.F-M02-01-T01-page .recom-bnr-sec .recom-swiper .swiper-pagination-bullet {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border-radius: 3rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.F-M02-01-T01-page .recom-bnr-sec .recom-swiper .swiper-pagination-bullet-active {
+  width: 12rem;
+  background-color: #542FDD;
+}
+.F-M02-01-T01-page .recom-bnr-sec .recom-bnr { /* 7차 수정 : 추천배너 스와이프로 변경 */
+  display: flex;
+  width: 100%;
+}
+.F-M02-01-T01-page .recom-bnr-sec .recom-bnr img {
+  width: 100%;
+  border-radius: 2rem;
+  vertical-align: top;
 }
 .F-M02-01-T01-page .faq-sec {
   margin-top: var(--sec-outer-margin);
@@ -11282,6 +11374,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #542FDD;
 }
 .F-MY01-01-page .event-sec .event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-MY01-01-page .event-sec .event-bnr img {
@@ -13288,6 +13381,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #542FDD;
 }
 .F-MY02-01-page .event-sec .event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-MY02-01-page .event-sec .event-bnr img {
@@ -13852,6 +13946,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #542FDD;
 }
 .F-O01-page .event-sec .event-bnr {
+  display: flex;
   width: 100%;
 }
 .F-O01-page .event-sec .event-bnr img {
@@ -14857,7 +14952,7 @@ body.is-scroll-first .floating-menu .btn-top {
   align-items: center;
   gap: 8rem;
   padding: 16rem;
-  padding-left: 0;
+  /* padding-left: 0; 7차 수정 : 유심 구매 안내 수정 */
   border-radius: 10rem;
   background-color: #F4F5F8;
 }
@@ -15024,7 +15119,7 @@ body.is-scroll-first .floating-menu .btn-top {
   align-items: center;
   gap: 8rem;
   padding: 16rem;
-  padding-left: 0;
+  /* padding-left: 0; 7차 수정 : 유심 구매 안내 수정 */
   border-radius: 10rem;
   background-color: #F4F5F8;
 }
@@ -15191,7 +15286,7 @@ body.is-scroll-first .floating-menu .btn-top {
   align-items: center;
   gap: 8rem;
   padding: 16rem;
-  padding-left: 0;
+  /* padding-left: 0; 7차 수정 : 유심 구매 안내 수정 */
   border-radius: 10rem;
   background-color: #F4F5F8;
 }
@@ -15358,7 +15453,7 @@ body.is-scroll-first .floating-menu .btn-top {
   align-items: center;
   gap: 8rem;
   padding: 16rem;
-  padding-left: 0;
+  /* padding-left: 0; 7차 수정 : 유심 구매 안내 수정 */
   border-radius: 10rem;
   background-color: #F4F5F8;
 }
@@ -15852,6 +15947,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12re;
   line-height: 18rem;
 }
+.F-P02-01-page .ratePlanC-sec + .ui-tab { /* 7차 수정 : 결합배너 미노출시 여백 대응 */
+  margin-top: 34rem;
+}
 .F-P02-01-page .ratePlan-combi-sec { /* 2차 수정 : 체크박스 삭제, 간격 수정 */
   margin-top: 50rem;
   margin-bottom: 34rem;
@@ -15896,12 +15994,36 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-P02-01-page .ratePlan-combi-sec .combi-bnr {
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 4rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border-radius: 3rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet-active {
+  width: 12rem;
+  background-color: #542FDD;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-bnr { /* 7차 수정 : 결합배너 스와이프로 변경 */
   display: flex;
   width: 100%;
 }
 .F-P02-01-page .ratePlan-combi-sec .combi-bnr img {
-  max-width: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  vertical-align: top;
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;
@@ -16676,6 +16798,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12re;
   line-height: 18rem;
 }
+.F-P02-01-page .ratePlanC-sec + .ui-tab { /* 7차 수정 : 결합배너 미노출시 여백 대응 */
+  margin-top: 34rem;
+}
 .F-P02-01-page .ratePlan-combi-sec { /* 2차 수정 : 체크박스 삭제, 간격 수정 */
   margin-top: 50rem;
   margin-bottom: 34rem;
@@ -16720,12 +16845,36 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-P02-01-page .ratePlan-combi-sec .combi-bnr {
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 4rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border-radius: 3rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet-active {
+  width: 12rem;
+  background-color: #542FDD;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-bnr { /* 7차 수정 : 결합배너 스와이프로 변경 */
   display: flex;
   width: 100%;
 }
 .F-P02-01-page .ratePlan-combi-sec .combi-bnr img {
-  max-width: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  vertical-align: top;
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;
@@ -17415,6 +17564,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12re;
   line-height: 18rem;
 }
+.F-P02-01-page .ratePlanC-sec + .ui-tab { /* 7차 수정 : 결합배너 미노출시 여백 대응 */
+  margin-top: 34rem;
+}
 .F-P02-01-page .ratePlan-combi-sec { /* 2차 수정 : 체크박스 삭제, 간격 수정 */
   margin-top: 50rem;
   margin-bottom: 34rem;
@@ -17459,12 +17611,36 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-P02-01-page .ratePlan-combi-sec .combi-bnr {
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 4rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border-radius: 3rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet-active {
+  width: 12rem;
+  background-color: #542FDD;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-bnr { /* 7차 수정 : 결합배너 스와이프로 변경 */
   display: flex;
   width: 100%;
 }
 .F-P02-01-page .ratePlan-combi-sec .combi-bnr img {
-  max-width: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  vertical-align: top;
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;
@@ -18176,6 +18352,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12re;
   line-height: 18rem;
 }
+.F-P02-01-page .ratePlanC-sec + .ui-tab { /* 7차 수정 : 결합배너 미노출시 여백 대응 */
+  margin-top: 34rem;
+}
 .F-P02-01-page .ratePlan-combi-sec { /* 2차 수정 : 체크박스 삭제, 간격 수정 */
   margin-top: 50rem;
   margin-bottom: 34rem;
@@ -18220,12 +18399,36 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
-.F-P02-01-page .ratePlan-combi-sec .combi-bnr {
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 4rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border-radius: 3rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet-active {
+  width: 12rem;
+  background-color: #542FDD;
+}
+.F-P02-01-page .ratePlan-combi-sec .combi-bnr { /* 7차 수정 : 결합배너 스와이프로 변경 */
   display: flex;
   width: 100%;
 }
 .F-P02-01-page .ratePlan-combi-sec .combi-bnr img {
-  max-width: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  vertical-align: top;
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;

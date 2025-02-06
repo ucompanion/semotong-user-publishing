@@ -339,7 +339,7 @@ section   {
 // 플로팅 메뉴
 .floating-menu {
 	--btn-size: 54rem;
-	--btn-gap: 40rem;
+	--btn-gap: 90rem;
 	position: fixed;
 	bottom: calc(#{$height-footer} + #{$safe-area-bottom} + var(--btn-gap));
 	right: 20rem;
