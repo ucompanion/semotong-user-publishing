@@ -830,7 +830,9 @@ html {
   margin-right: auto;
   max-width: 720rem;
 }
-.header-mobile .header-sec .title {
+.header-mobile .header-sec .title { /* 로고 베타 추가 */
+  display: flex;
+  align-items: center;
   flex: 1 1 auto;
   margin-right: auto;
   font-size: 20rem;
@@ -841,13 +843,18 @@ html {
   white-space: nowrap;
 }
 .header-mobile .header-sec .title .logo {
-  display: block;
+  display: inline-block;
   width: 80rem;
   height: 24rem;
   -webkit-mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
           mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
   background-color: #000000;
   transition: all 0.2s ease;
+}
+.header-mobile .header-sec .title .logo-beta { /* 로고 베타 추가 */ }
+.header-mobile .header-sec .title .logo-beta img {
+  height: 20rem;
+  margin-left: 6rem;
 }
 .header-mobile .header-sec .ui-btn {
   width: 32rem;

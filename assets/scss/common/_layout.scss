@@ -65,7 +65,9 @@ html {
 		padding: 0;
 		@include in-sec;
 
-		.title {
+		.title { /* 로고 베타 추가 */
+			display: flex;
+			align-items: center;
 			flex: 1 1 auto;
 			margin-right: auto;
 			font-size: 20rem;
@@ -74,12 +76,18 @@ html {
 			@include ellipsis1;
 
 			.logo {
-				display: block;
+				display: inline-block;
 				width: 80rem;
 				height: 24rem;
 				mask: url('../images/common/img-logo-header-wh.svg') no-repeat center center / contain;
 				background-color: #000000;
 				transition: all 0.2s ease;
+			}
+			.logo-beta { /* 로고 베타 추가 */
+				img {
+					height: 20rem;
+					margin-left: 6rem;
+				}
 			}
 		}
 
