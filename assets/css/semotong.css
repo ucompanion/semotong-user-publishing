@@ -920,6 +920,10 @@ html {
   max-width: 940rem;
   margin: 0 auto;
 }
+.header-desktop .header-sec .title {
+  display: flex; /* 로고 베타 추가 */
+  align-items: center;
+}
 .header-desktop .header-sec .title .logo { /* 3차 수정 : 로고 사이즈 변경 */
   display: block;
   width: 80rem;
@@ -927,6 +931,11 @@ html {
   -webkit-mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
           mask: url("../images/common/img-logo-header-wh.svg") no-repeat center center/contain;
   background-color: #000000;
+}
+.header-desktop .header-sec .title .logo-beta { /* 로고 베타 추가 */ }
+.header-desktop .header-sec .title .logo-beta img {
+  height: 20rem;
+  margin-left: 6rem;
 }
 .header-desktop .header-sec .header-nav {
   margin-left: auto;

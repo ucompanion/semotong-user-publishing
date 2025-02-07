@@ -163,12 +163,20 @@ html {
 		// @include in-sec;
 
 		.title {
+			display: flex; /* 로고 베타 추가 */
+			align-items: center;
 			.logo { /* 3차 수정 : 로고 사이즈 변경 */
 				display: block;
 				width: 80rem;
 				height: 24rem;
 				mask: url('../images/common/img-logo-header-wh.svg') no-repeat center center / contain;
 				background-color: #000000;
+			}
+			.logo-beta { /* 로고 베타 추가 */
+				img {
+					height: 20rem;
+					margin-left: 6rem;
+				}
 			}
 		}
 
