@@ -14860,12 +14860,12 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-P01-page .filter-range-frm .range-wrapper .range {
   -webkit-appearance: none;
-  -moz-appearance: none; /* 7차 수정 : Firefox 호환 추가 */
+  -moz-appearance: none; /* 7차 수정 : range Firefox 호환 추가 */
   width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 6rem; /* 7차 수정 : Firefox 호환 추가 */
+  height: 6rem; /* 7차 수정 : range Firefox 호환 추가 */
   background-color: transparent;
   pointer-events: none;
 }
@@ -14875,7 +14875,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 6rem;
   pointer-events: none;
 }
-.F-P01-01-P01-page .filter-range-frm .range-wrapper .range::-moz-range-track { /* 7차 수정 : Firefox 호환 추가 */
+.F-P01-01-P01-page .filter-range-frm .range-wrapper .range::-moz-range-track { /* 7차 수정 : range Firefox 호환 추가 */
   height: 6rem;
   background: transparent;
   border-radius: 6rem;
@@ -14893,7 +14893,7 @@ body.is-scroll-first .floating-menu .btn-top {
   cursor: pointer;
   pointer-events: auto;
 }
-.F-P01-01-P01-page .filter-range-frm .range-wrapper .range::-moz-range-thumb { /* 7차 수정 : Firefox 호환 추가 */
+.F-P01-01-P01-page .filter-range-frm .range-wrapper .range::-moz-range-thumb { /* 7차 수정 : range Firefox 호환 추가 */
   width: 32rem;
   height: 32rem;
   background: #fff;
