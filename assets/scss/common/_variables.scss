@@ -6,8 +6,7 @@
 $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 
 // 웹폰트
-$font-primary: 'Pretendard Variable', 'sans-serif';
-$font-secondary: 'YJ_Obang';
+$font-primary: 'Pretendard', 'sans-serif';
 
 // 본문영역 사이즈 (최대 여백포함 768 기준)
 $pc-outer-spacer: 23rem;
@@ -340,14 +339,24 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		position: relative;
 		display: flex;
 		gap: 4rem;
-		.tag {
+		.tag { /* 7차 수정 : 선택요금제 태그강조 수정 */
 			padding:  2rem 7rem 1rem 7rem;
 			border-radius: 12rem;
-			border: 1px solid #CDC2F5;
+			/* border: 1px solid #CDC2F5; */
 			font-weight: 500;
 			font-size: 12rem;
 			line-height: 17rem;
-			color: $color-primary;
+			color: #fff;
+			background-color: $color-primary;
+		}
+	}
+
+	// 추천 요금제
+	&.type-recom { /* 7차 수정 : 추천요금제인 경우 타입 추가 */
+		@include out-sec;
+		background-color: #F2F5FB;
+		.recom-bnr {
+			cursor: default;
 		}
 	}
 }
@@ -900,7 +909,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		max-height: 110rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
 		overflow: hidden; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
 		&.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
-			max-height: none; 
+			max-height: none;
 		}
 		.card-charge-item {
 			width: 100%;
@@ -1000,6 +1009,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	gap: 12rem;
 
 	.special-event-item {
+		display: flex; /* 7차 수정 : 불필요한 여백 제거하기 */
 		width: 100%;
 	}
 }
@@ -1040,9 +1050,21 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 
 }
+// 이벤트 목록
+@mixin event-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12rem;
+
+	li {
+		display: flex; /* 7차 수정 : 불필요한 여백 잡아줌 */
+		width: 100%;
+	}
+}
 
 // 이벤트 배너
 @mixin event-bnr {
+	display: flex;
 	width: 100%;
 
 	img {
@@ -1251,6 +1273,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 
 	.review-con {
+		width: 100%; /* 2025-02-03 조찬기 : 리뷰 내용 내려가게 수정 */
 		margin-top: 8rem;
 		font-weight: 500;
 		font-size: 14rem;
@@ -1468,6 +1491,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			font-size: 14rem;
 			line-height: 20rem;
 			color: #5A5D60;
+			white-space: pre-wrap;
 		}
 		.acco-info {
 			display: flex;
@@ -1721,7 +1745,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		align-items: center;
 		gap: 8rem;
 		padding: 16rem;
-		padding-left: 0;
+		/* padding-left: 0; 7차 수정 : 유심 구매 안내 수정 */
 		border-radius: 10rem;
 		background-color: #F4F5F8;
 		.intro-img {

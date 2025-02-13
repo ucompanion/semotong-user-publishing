@@ -53,6 +53,19 @@
 				resistance: true,
 				resistanceRatio: 0
 			});
+
+			// 결합배너 스와이프
+			var combiSwiper = new Swiper(".combi-swiper", {
+				threshold: 3,
+				spaceBetween: 10,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
 		});
 	</script>
 </head>
@@ -71,7 +84,11 @@
 			</div>
 
 			<div class="header-sec">
-				<h1 class="title"><a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a></h1>
+				<h1 class="title">
+					<!-- 로고 베타 추가 -->
+					<a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a>
+					<span class="logo-beta"><img src="../../assets/images/common/img-logo-header-beta.png" alt=""></span>
+				</h1>
 				<nav class="header-nav">
 					<ul class="nav-list">
 						<li class="nav-item">
@@ -114,7 +131,11 @@
 		<!-- Header Mobile -->
 		<header class="header-mobile only-mo">
 			<section class="header-sec">
-				<h1 class="title"><a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a></h1>
+				<h1 class="title">
+					<!-- 로고 베타 추가 -->
+					<a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a>
+					<span class="logo-beta"><img src="../../assets/images/common/img-logo-header-beta.png" alt=""></span>
+				</h1>
 				<button type="button" class="ui-btn btn-aside" data-bs-toggle="modal" data-bs-target="#asideModal">
 					<i class="ui-icn icn-32-anb-bk" aria-label="메뉴열기"></i>
 				</button>
@@ -235,10 +256,24 @@
 							<h2 class="sec-tit">인터넷 결합되는 요금제에요!</h2>
 						</div>
 						<div class="sec-body">
-							<button type="button" class="combi-bnr">
-								<img src="../../assets/images/upload/@bnr-event-02-mo.png" alt="이벤트 내용" class="only-mo" />
-								<img src="../../assets/images/upload/@bnr-event-02-pc.png" alt="이벤트 내용" class="only-pc" />
-							</button>
+							<!-- 7차 수정 : 결합배너 스와이프로 변경 -->
+							<div class="swiper combi-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<button type="button" class="combi-bnr">
+											<img src="../../assets/images/upload/@bnr-event-01-mo.png" alt="이벤트 내용" class="only-mo" />
+											<img src="../../assets/images/upload/@bnr-event-01-pc.png" alt="이벤트 내용" class="only-pc" />
+										</button>
+									</div>
+									<div class="swiper-slide">
+										<button type="button" class="combi-bnr">
+											<img src="../../assets/images/upload/@bnr-event-02-mo.png" alt="이벤트 내용" class="only-mo" />
+											<img src="../../assets/images/upload/@bnr-event-02-pc.png" alt="이벤트 내용" class="only-pc" />
+										</button>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
 
 							<!-- 2차 수정 : 체크박스 삭제
 							<label class="ui-chk chk-style1">

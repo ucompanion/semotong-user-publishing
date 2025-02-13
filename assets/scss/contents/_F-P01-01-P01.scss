@@ -155,10 +155,12 @@
 
 			.range {
 				-webkit-appearance: none;
+				-moz-appearance: none; /* 7차 수정 : range Firefox 호환 추가 */
 				width: 100%;
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
+				height: 6rem; /* 7차 수정 : range Firefox 호환 추가 */
 				background-color: transparent;
 				pointer-events: none;
 			}
@@ -168,6 +170,12 @@
 				background: transparent;
 				border-radius: 6rem;
 				pointer-events: none;
+			}
+
+			.range::-moz-range-track { /* 7차 수정 : range Firefox 호환 추가 */
+				height: 6rem;
+				background: transparent;
+				border-radius: 6rem;
 			}
 
 			.range::-webkit-slider-thumb {
@@ -180,6 +188,17 @@
 				border-radius: 50%;
 				border: 1px solid #EFF0F0;
 				box-shadow: 0 0 4rem 0 rgba(0,0,0,0.15);
+				cursor: pointer;
+				pointer-events: auto;
+			}
+
+			.range::-moz-range-thumb { /* 7차 수정 : range Firefox 호환 추가 */
+				width: 32rem;
+				height: 32rem;
+				background: #fff;
+				border-radius: 50%;
+				border: 1px solid #EFF0F0;
+				box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.15);
 				cursor: pointer;
 				pointer-events: auto;
 			}
