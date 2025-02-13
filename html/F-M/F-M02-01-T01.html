@@ -35,19 +35,6 @@
 				resistance: true,
 				resistanceRatio: 0
 			});
-
-			// 추천배너 스와이프
-			var recomSwiper = new Swiper(".recom-swiper", {
-				threshold: 3,
-				spaceBetween: 10,
-				pagination: {
-					el: ".swiper-pagination",
-				},
-				autoplay: {
-					delay: 2500,
-					disableOnInteraction: false,
-				},
-			});
 		})
 	</script>
 </head>
@@ -66,11 +53,7 @@
 			</div>
 
 			<div class="header-sec">
-				<h1 class="title">
-					<!-- 로고 베타 추가 -->
-					<a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a>
-					<span class="logo-beta"><img src="../../assets/images/common/img-logo-header-beta.png" alt=""></span>
-				</h1>
+				<h1 class="title"><a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a></h1>
 				<nav class="header-nav">
 					<ul class="nav-list">
 						<li class="nav-item">
@@ -503,27 +486,13 @@
 				<section class="recom-bnr-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
-							<h2 class="sec-tit">초저가와 결합하면 좋은 인터넷 상품 추천드려요!</h2>
+							<h2 class="sec-tit">초저가와 결합하면 좋은<br>인터넷 상품 추천드려요!</h2>
 						</div>
 						<div class="sec-body">
-							<!-- 7차 수정 : 추천배너 스와이프로 변경 -->
-							<div class="swiper recom-swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<button type="button" class="recom-bnr">
-											<img src="../../assets/images/upload/@bnr-event-01-mo.png" alt="이벤트 내용" class="only-mo" />
-											<img src="../../assets/images/upload/@bnr-event-01-pc.png" alt="이벤트 내용" class="only-pc" />
-										</button>
-									</div>
-									<div class="swiper-slide">
-										<button type="button" class="recom-bnr">
-											<img src="../../assets/images/upload/@bnr-event-02-mo.png" alt="이벤트 내용" class="only-mo" />
-											<img src="../../assets/images/upload/@bnr-event-02-pc.png" alt="이벤트 내용" class="only-pc" />
-										</button>
-									</div>
-								</div>
-								<div class="swiper-pagination"></div>
-							</div>
+							<button type="button" class="recom-bnr">
+								<img src="../../assets/images/upload/@bnr-event-01-mo.png" alt="이벤트 내용" class="only-mo" />
+								<img src="../../assets/images/upload/@bnr-event-01-pc.png" alt="이벤트 내용" class="only-pc" />
+							</button>
 						</div>
 					</div>
 				</section>

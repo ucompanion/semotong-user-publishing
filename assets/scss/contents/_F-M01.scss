@@ -376,10 +376,10 @@
 		margin-top: var(--sec-outer-margin);
 
 		.special-event-list {
-			@include event-list;
+			@include special-event-list;
 
 			.special-event-bnr {
-				@include event-bnr;
+				@include special-event-bnr;
 			}
 		}
 	}
@@ -431,7 +431,7 @@
 			.card-cont {
 				width: 100%;
 				margin-top: 10rem;
-				height: 60rem; /* 2025-02-03 조찬기 : 리뷰 높이값 3줄 고정 */
+				max-height: 60rem;
 				font-weight: 500;
 				font-size: 14rem;
 				line-height: 20rem;
@@ -444,10 +444,6 @@
 	// s: 이벤트 섹션
 	.event-sec {
 		margin-top: var(--sec-outer-margin);
-
-		.event-list { /* 7차 수정 : 이벤트 목록 구조 적용 */
-			@include event-list;
-		}
 		.event-bnr {
 			@include event-bnr;
 		}

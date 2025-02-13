@@ -96,16 +96,17 @@
 	background-color: #fff;
 	z-index: 10;
 	@include out-sec;
-	&::before { /* 7차 수정 : 탭 스티키 라인 수정 */
+	&::before {
 		content:'';
 		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 0;
 		top: 41rem;
 		width: 100%;
-		max-width: 720rem;
 		height: 1rem;
 		background-color: #EFF0F0;
+	}
+	.tab-swiper {
+		// overflow: visible;
 	}
 	.swiper-wrapper {
 		position: relative;
@@ -143,9 +144,7 @@
 			padding-top: 16rem;
 			padding-left: 0;
 			padding-right: 0;
-			.tab-swiper { /* 7차 수정 : 탭 스티키 레이아웃 수정 */
-				@include in-sec;
-			}
+			@include in-sec;
 			.swiper-wrapper {
 				display: flex;
 				justify-content: space-around;
