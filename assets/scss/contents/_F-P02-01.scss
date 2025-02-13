@@ -19,10 +19,6 @@
 		.ratePlanC-card {
 			@include ratePlanC-card;
 		}
-
-		+ .ui-tab { /* 7차 수정 : 결합배너 미노출시 여백 대응 */
-			margin-top: 34rem;
-		}
 	}
 	// e: 요금제 상품 섹션
 
@@ -31,15 +27,13 @@
 		margin-top: 50rem;
 		margin-bottom: 34rem;
 		@include sec-basic;
-
-		.combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */
-			@include event-swiper;
+		.combi-bnr {
+			display: flex;
+			width: 100%;
+			img {
+				max-width: 100%;
+			}
 		}
-
-		.combi-bnr { /* 7차 수정 : 결합배너 스와이프로 변경 */
-			@include event-bnr;
-		}
-
 		/* .ui-chk {
 		 	margin-top: 14rem;
 		} */

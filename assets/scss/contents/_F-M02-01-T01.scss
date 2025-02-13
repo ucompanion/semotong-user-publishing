@@ -68,19 +68,11 @@
 	}
 	// e: 키워드 섹션
 
-	// 예외케이스
-	.ratePlanB-sec + .ratePlanC-sec { /* 7차 수정 : 추천요금제인 경우 여백수정 추가 */
-		margin-top: 30rem;
-		.sec-inner {
-			padding-top: 0;
-			border-top: 0;
-		}
-	}
-
 	// s: 상품리스트 섹션
 	.ratePlanC-sec {
 		margin-top: 16rem;
 		padding-top: 16rem;
+		border-top: 1px solid #EFF0F0;
 		@include sec-basic;
 
 		@include media-tablet-xs {
@@ -155,14 +147,6 @@
 	.recom-bnr-sec {
 		margin-top: var(--sec-outer-margin);
 		@include sec-basic;
-
-		.recom-swiper { /* 7차 수정 : 추천배너 스와이프로 변경 */
-			@include event-swiper;
-		}
-		.recom-bnr { /* 7차 수정 : 추천배너 스와이프로 변경 */
-			@include event-bnr;
-		}
-
 	}
 	// e: 상품추천 섹션
 
