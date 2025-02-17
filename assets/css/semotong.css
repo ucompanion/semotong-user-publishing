@@ -16465,20 +16465,21 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body {
   margin-top: 16rem;
 }
-.F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer {
+.F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer { /* 8차 수정 : 요금제 상세 정보 수정(여기부터) */
   display: flex;
   flex-direction: column;
   gap: 8rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14rem;
   line-height: 20rem;
   color: #46484B;
 }
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer h3 {
+  font-weight: 700;
   color: #2A2B2D;
 }
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer div {
-  margin-top: 4rem;
+  margin-top: 16rem;
   margin-bottom: 4rem;
 }
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer div:first-child {
@@ -16488,11 +16489,8 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-bottom: 0;
 }
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer ol {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  font-size: 12rem;
-  line-height: 16rem;
+  font-size: 14rem;
+  line-height: 22rem;
   margin-top: 8rem;
   margin-bottom: 8rem;
 }
@@ -16505,7 +16503,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer ol li {
   position: relative;
   counter-increment: item;
+  margin-top: 8rem;
   padding-left: 12rem;
+  padding-bottom: 8rem;
+  border-bottom: 1px solid #ddd;
+  font-weight: 400;
 }
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer ol li::before {
   content: counter(item) ". ";
@@ -16513,7 +16515,12 @@ body.is-scroll-first .floating-menu .btn-top {
   left: 0;
   top: 0;
 }
-.F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer small {
+.F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer ol li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco .acco-body .acco-answer small { /* 8차 수정 : 요금제 상세 정보 수정(여기까지) */
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;

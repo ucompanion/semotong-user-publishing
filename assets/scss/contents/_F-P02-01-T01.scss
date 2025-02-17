@@ -107,20 +107,21 @@
 
 			.acco-body {
 				margin-top: 16rem;
-				.acco-answer {
+				.acco-answer { /* 8차 수정 : 요금제 상세 정보 수정(여기부터) */
 					display: flex;
 					flex-direction: column;
 					gap: 8rem;
-					font-weight: 600;
+					font-weight: 500;
 					font-size: 14rem;
 					line-height: 20rem;
 					color: #46484B;
 
 					h3 {
+						font-weight: 700;
 						color: #2A2B2D;
 					}
 					div {
-						margin-top: 4rem;
+						margin-top: 16rem;
 						margin-bottom: 4rem;
 						&:first-child {
 							margin-top: 0;
@@ -130,11 +131,8 @@
 						}
 					}
 					ol {
-						display: flex;
-						flex-direction: column;
-						gap: 4rem;
-						font-size: 12rem;
-						line-height: 16rem;
+						font-size: 14rem;
+						line-height: 22rem;
 						margin-top: 8rem;
 						margin-bottom: 8rem;
 						&:first-child {
@@ -146,16 +144,25 @@
 						li {
 							position: relative;
 							counter-increment: item;
+							margin-top: 8rem;
 							padding-left: 12rem;
+							padding-bottom: 8rem;
+							border-bottom: 1px solid #ddd;
+							font-weight: 400;
 							&::before {
 								content: counter(item) ". ";
 								position: absolute;
 								left: 0;
 								top: 0;
 							}
+							&:last-child {
+								border-bottom: 0;
+								padding-bottom: 0;
+								margin-bottom: 0;
+							}
 						}
 					}
-					small {
+					small { /* 8차 수정 : 요금제 상세 정보 수정(여기까지) */
 						font-weight: 500;
 						font-size: 12rem;
 						line-height: 16rem;
