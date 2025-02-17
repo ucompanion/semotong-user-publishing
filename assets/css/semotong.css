@@ -7836,9 +7836,7 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-bottom: 48rem;
   }
 }
-.F-I01-01-page .event-sec { /* 8차 수정 : 인벤트 섹션 추가(여기부터) */
-  margin-top: var(--sec-outer-margin);
-}
+.F-I01-01-page .event-sec .event-swiper { /* 8차 수정 : 인벤트 섹션 추가(여기부터) */ }
 .F-I01-01-page .event-sec .event-swiper .swiper-pagination {
   position: static;
   display: flex;
