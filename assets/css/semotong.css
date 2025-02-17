@@ -8891,10 +8891,10 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #fff;
   border-radius: 50%;
 }
-.F-M01-page .deal-sec .deal-swiper {
+.F-M01-page .deal-sec .deal-swiper { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기부터) */
   overflow: visible;
   width: 100%;
-  margin-top: 30rem;
+  /* margin-top: 30rem; */
 }
 .F-M01-page .deal-sec .deal-swiper .swiper-slide {
   width: 248px;
@@ -8923,12 +8923,12 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-M01-page .deal-sec .deal-button-prev,
-.F-M01-page .deal-sec .deal-button-next { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기부터) */
+.F-M01-page .deal-sec .deal-button-next {
   position: absolute;
-  top: 169rem;
+  bottom: 71rem;
   right: 0;
   z-index: 10;
-  transform: translate(50%, -50%);
+  transform: translate(50%, 50%);
   width: 28rem;
   height: 28rem;
 }
