@@ -666,6 +666,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				font-size: 16rem;
 				line-height: 22rem;
 				color: #000;
+				&:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+					margin-bottom: 10rem;
+				}
 			}
 			dd {
 				margin-top: 6rem;
@@ -1972,6 +1975,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			width: 100%;
 			text-align: left;
 			padding-right: 24rem;
+			> .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+				flex: none;
+			}
 			> span {
 				position: relative;
 				display: block;

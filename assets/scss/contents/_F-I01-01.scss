@@ -12,47 +12,61 @@
 	@include bottom-spacer;
 
 	// s: 인터넷 소개 섹션
-	.internet-intro-sec {
-		.intro-box {
-			display: flex;
-			align-items: center;
-			gap: 8rem;
-			padding: 16rem;
-			/* padding-left: 0; 2차 수정 : 캐릭터 이미지 교체 여백수정 */
-			border-radius: 10rem;
-			background-color: #F4F5F8;
-			.intro-img {
-				flex: none;
-				width: 80rem;
-				height: 80rem;
-				img {
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.intro-con {
-				flex:1 1 auto;
-				.tit {
-					font-weight: 700;
-					font-size: 14rem;
-					line-height: 20rem;
-					word-break: keep-all;
-					color: #2A2B2D;
-					em {
-						color: $color-primary;
-					}
-				}
-				.txt {
-					margin-top: 10rem;
-					font-weight: 500;
-					font-size: 14rem;
-					line-height: 20rem;
-					color: #5A5D60;
-				}
-			}
+	// .internet-intro-sec {
+	// 	.intro-box {
+	// 		display: flex;
+	// 		align-items: center;
+	// 		gap: 8rem;
+	// 		padding: 16rem;
+	// 		/* padding-left: 0; 2차 수정 : 캐릭터 이미지 교체 여백수정 */
+	// 		border-radius: 10rem;
+	// 		background-color: #F4F5F8;
+	// 		.intro-img {
+	// 			flex: none;
+	// 			width: 80rem;
+	// 			height: 80rem;
+	// 			img {
+	// 				width: 100%;
+	// 				height: 100%;
+	// 			}
+	// 		}
+	// 		.intro-con {
+	// 			flex:1 1 auto;
+	// 			.tit {
+	// 				font-weight: 700;
+	// 				font-size: 14rem;
+	// 				line-height: 20rem;
+	// 				word-break: keep-all;
+	// 				color: #2A2B2D;
+	// 				em {
+	// 					color: $color-primary;
+	// 				}
+	// 			}
+	// 			.txt {
+	// 				margin-top: 10rem;
+	// 				font-weight: 500;
+	// 				font-size: 14rem;
+	// 				line-height: 20rem;
+	// 				color: #5A5D60;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// e: 인터넷 소개 섹션
+
+	// s: 이벤트 섹션
+	.event-sec { /* 8차 수정 : 인벤트 섹션 추가(여기부터) */
+		margin-top: var(--sec-outer-margin);
+
+		.event-swiper {
+			@include event-swiper;
+		}
+
+		.event-bnr { /* 8차 수정 : 인벤트 섹션 추가(여기까지) */
+			@include event-bnr;
 		}
 	}
-	// e: 인터넷 소개 섹션
+	// e: 이벤트 섹션
 
 	// s: 통신사 선택 섹션
 	.telcom-choice-sec {

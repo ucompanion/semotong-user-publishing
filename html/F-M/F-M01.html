@@ -31,6 +31,11 @@
 				pagination: {
 					el: ".swiper-pagination",
 				},
+				// 8차 수정 : 추천딜 스와이프 버튼 옵션 추가
+				navigation: {
+					nextEl: ".deal-sec .deal-button-next",
+					prevEl: ".deal-sec .deal-button-prev",
+				}
 			});
 
 			// 리뷰 스와이프
@@ -243,8 +248,32 @@
 											</div>
 											<!-- 추천딜 상품 -->
 										</div>
+										<div class="swiper-slide">
+											<!-- 추천딜 상품 -->
+											<div class="deal-card" role="button" tabindex="0">
+												<div class="card-body">
+													<div class="card-label">
+														<em class="ui-label style-1 item-recom">추천</em>
+													</div>
+													<h3 class="card-info">셀프로 더 할인된 요금제</h3>
+													<p class="card-tit">셀프 LTE유심 7GB+</p>
+												</div>
+												<div class="card-footer">
+													<p class="card-partner"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></p>
+													<p class="card-charge"><em>월 18,700원</em></p>
+												</div>
+											</div>
+											<!-- 추천딜 상품 -->
+										</div>
 									</div>
 								</div>
+								<!-- 8차 수정 : 추천딜 스와이프 버튼 추가 -->
+								<button type="button" class="ui-btn deal-button-prev">
+									<i class="ui-icn icn-28-arw" aria-label="Prev"></i>
+								</button>
+								<button type="button" class="ui-btn deal-button-next">
+									<i class="ui-icn icn-28-arw" aria-label="Next"></i>
+								</button>
 							</div>
 						</div>
 					</div>

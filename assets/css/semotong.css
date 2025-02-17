@@ -4030,6 +4030,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -4636,6 +4639,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
@@ -5491,6 +5497,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
@@ -6722,6 +6731,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -7141,6 +7153,9 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   text-align: left;
   padding-right: 24rem;
+}
+.F-G03-01-page .faq-sec .faq-accordion-wrap .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  flex: none;
 }
 .F-G03-01-page .faq-sec .faq-accordion-wrap .faq-accordion .acco-header .acco-button > span {
   position: relative;
@@ -7821,43 +7836,38 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-bottom: 48rem;
   }
 }
-.F-I01-01-page .internet-intro-sec .intro-box {
+.F-I01-01-page .event-sec { /* 8차 수정 : 인벤트 섹션 추가(여기부터) */
+  margin-top: var(--sec-outer-margin);
+}
+.F-I01-01-page .event-sec .event-swiper .swiper-pagination {
+  position: static;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8rem;
-  padding: 16rem;
-  /* padding-left: 0; 2차 수정 : 캐릭터 이미지 교체 여백수정 */
-  border-radius: 10rem;
-  background-color: #F4F5F8;
+  margin-top: 8rem;
+  gap: 4rem;
 }
-.F-I01-01-page .internet-intro-sec .intro-box .intro-img {
-  flex: none;
-  width: 80rem;
-  height: 80rem;
+.F-I01-01-page .event-sec .event-swiper .swiper-pagination-bullet {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border-radius: 3rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
 }
-.F-I01-01-page .internet-intro-sec .intro-box .intro-img img {
+.F-I01-01-page .event-sec .event-swiper .swiper-pagination-bullet-active {
+  width: 12rem;
+  background-color: #542FDD;
+}
+.F-I01-01-page .event-sec .event-bnr { /* 8차 수정 : 인벤트 섹션 추가(여기까지) */
+  display: flex;
   width: 100%;
-  height: 100%;
 }
-.F-I01-01-page .internet-intro-sec .intro-box .intro-con {
-  flex: 1 1 auto;
-}
-.F-I01-01-page .internet-intro-sec .intro-box .intro-con .tit {
-  font-weight: 700;
-  font-size: 14rem;
-  line-height: 20rem;
-  word-break: keep-all;
-  color: #2A2B2D;
-}
-.F-I01-01-page .internet-intro-sec .intro-box .intro-con .tit em {
-  color: #542FDD;
-}
-.F-I01-01-page .internet-intro-sec .intro-box .intro-con .txt {
-  margin-top: 10rem;
-  font-weight: 500;
-  font-size: 14rem;
-  line-height: 20rem;
-  color: #5A5D60;
+.F-I01-01-page .event-sec .event-bnr img {
+  width: 100%;
+  border-radius: 2rem;
+  vertical-align: top;
 }
 .F-I01-01-page .telcom-choice-sec {
   margin-top: var(--sec-outer-margin);
@@ -8821,6 +8831,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .sec-header .sec-tit .ui-icn {
   margin-left: 4rem;
 }
+.F-M01-page .deal-sec .sec-body {
+  position: relative;
+}
 .F-M01-page .deal-sec .deal-timer .timer-txt {
   font-weight: 500;
   font-size: 14rem;
@@ -8910,6 +8923,24 @@ body.is-scroll-first .floating-menu .btn-top {
     opacity: 1;
     width: 233rem;
   }
+}
+.F-M01-page .deal-sec .deal-button-prev,
+.F-M01-page .deal-sec .deal-button-next { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기부터) */
+  position: absolute;
+  top: 169rem;
+  right: 0;
+  z-index: 10;
+  transform: translate(50%, -50%);
+  width: 28rem;
+  height: 28rem;
+}
+.F-M01-page .deal-sec .deal-button-prev {
+  right: auto;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.F-M01-page .deal-sec .swiper-button-disabled { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기까지) */
+  display: none;
 }
 .F-M01-page .deal-sec .deal-card {
   position: relative;
@@ -9959,6 +9990,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -10156,6 +10190,9 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   text-align: left;
   padding-right: 24rem;
+}
+.F-M02-01-T01-page .faq-sec .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  flex: none;
 }
 .F-M02-01-T01-page .faq-sec .faq-accordion .acco-header .acco-button > span {
   position: relative;
@@ -10721,6 +10758,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
@@ -12197,6 +12237,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -12671,6 +12714,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
@@ -13903,6 +13949,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -14618,6 +14667,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
@@ -15939,6 +15991,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -16790,6 +16845,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -17555,6 +17613,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
@@ -18344,6 +18405,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #000;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 10rem;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
@@ -18751,6 +18815,9 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   text-align: left;
   padding-right: 24rem;
+}
+.F-P02-01-T04-page .faq-sec .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  flex: none;
 }
 .F-P02-01-T04-page .faq-sec .faq-accordion .acco-header .acco-button > span {
   position: relative;
