@@ -8935,7 +8935,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .deal-button-prev {
   right: auto;
   left: 0;
-  transform: translate(-50%, -50%) rotate(180deg);
+  transform: translate(-50%, 50%) rotate(180deg);
 }
 .F-M01-page .deal-sec .swiper-button-disabled { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기까지) */
   display: none;
