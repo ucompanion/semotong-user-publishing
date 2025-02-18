@@ -17,6 +17,9 @@ html {
 	min-height: 100%;
 	min-width: 320px;
 	padding-top: $mobile-height-header;
+	&.only-container {
+		padding-top: 0;
+	}
 }
 
 .wrapper,
@@ -564,7 +567,7 @@ body.is-scroll-first {
 }
 @include media-tablet-xs {
 	.wrapper {
-		padding-top: $pc-height-header
+		padding-top: $pc-height-header;
 	}
 	.footer {
 		padding-bottom: 0; /* 1차 수정 : 피시 푸터 여백 초기화 */

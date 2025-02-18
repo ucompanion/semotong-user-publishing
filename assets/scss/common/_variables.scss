@@ -425,6 +425,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			align-items: center;
 			justify-content: flex-end;
 			gap: 6rem;
+			margin-left: auto;
 			.split {
 				display: inline-block;
 				width: 3rem;
@@ -551,6 +552,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			display: flex;
 			align-items: center;
 			gap: 12rem;
+			margin-left: auto;
 		}
 	}
 	.card-status {
