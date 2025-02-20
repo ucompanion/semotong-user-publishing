@@ -731,6 +731,12 @@ html {
   min-width: 320px;
   padding-top: 60rem;
 }
+.wrapper.only-container {
+  padding-top: 0;
+}
+.wrapper.only-container .header-mobile {
+  position: sticky;
+}
 
 .wrapper,
 .container,
@@ -1292,6 +1298,9 @@ body.is-scroll-first .floating-menu .btn-top {
   .wrapper.only-container {
     padding-top: 0;
   }
+  .wrapper.only-container .header-mobile {
+    position: relative;
+  }
   .footer {
     padding-bottom: 0; /* 1차 수정 : 피시 푸터 여백 초기화 */
   }
@@ -1333,6 +1342,9 @@ body.is-scroll-first .floating-menu .btn-top {
   }
   .wrapper.only-container {
     padding-top: 0;
+  }
+  .wrapper.only-container .header-mobile {
+    position: relative;
   }
   .footer {
     padding-bottom: 0; /* 1차 수정 : 피시 푸터 여백 초기화 */

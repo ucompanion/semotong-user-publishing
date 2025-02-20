@@ -17,6 +17,12 @@ html {
 	min-height: 100%;
 	min-width: 320px;
 	padding-top: $mobile-height-header;
+	&.only-container {
+		padding-top: 0;
+		.header-mobile {
+			position: sticky;
+		}
+	}
 }
 
 .wrapper,
@@ -567,6 +573,9 @@ body.is-scroll-first {
 		padding-top: $pc-height-header;
 		&.only-container {
 			padding-top: 0;
+			.header-mobile {
+				position: relative;
+			}
 		}
 	}
 	.footer {
