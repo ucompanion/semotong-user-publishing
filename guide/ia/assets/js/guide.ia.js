@@ -13,7 +13,8 @@ var ia = {
         +'<nav class="g-gnb">'
         +'    <ul>'
         +'        <li><a href="index.html">가이드</a></li>'
-        +'        <li><a href="page.html">페이지</a></li>'
+        +'        <li><a href="page.html">1차 개발</a></li>'
+        +'        <li><a href="page_2nd.html">2차 개발</a></li>'
         +'    </ul>'
         +'</nav>';
 		$('.g-header').html(html_header);
