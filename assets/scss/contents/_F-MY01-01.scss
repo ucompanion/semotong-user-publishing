@@ -65,6 +65,33 @@
 				}
 			}
 
+			// 내 S캐쉬
+			&-myCash {
+				margin-top: 12rem;
+				@include box-shadow-10;
+				padding: 16rem;
+				.myCash-tit {
+					width: 100%;
+					font-weight: 500;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #2801B5;
+				}
+				.myCash-con {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin-top: 12rem;
+					.myCash-val {
+						.ui-btn {
+							font-weight: 700;
+							font-size: 16rem;
+							line-height: 22rem;
+						}
+					}
+				}
+			}
+
 			// 요금제 대시보드
 			&-status {
 				margin-top: 12rem;
@@ -104,7 +131,7 @@
 
 				.status-more {
 					position: relative;
-					padding: 8rem 30rem;
+					padding: 8rem 16rem;
 					&::before {
 						content:'';
 						display: block;

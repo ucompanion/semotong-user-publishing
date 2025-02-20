@@ -478,6 +478,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			margin-left: 8rem;
 		}
 	}
+	.card-name {
+		margin-top: 4rem;
+		font-size: 12rem;
+		color: #777;
+	}
 	.card-info {
 		display: flex;
 		align-items: center;
@@ -805,9 +810,29 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 
 	.card-tit {
+		display: flex;
 		font-weight: 600;
 		font-size: 20rem;
 		color: #000;
+		.label {
+			position: relative;
+			top: 4rem;
+			margin-right: 4rem;
+			flex:none;
+			padding: 2rem 8rem;
+			border-radius: 4rem;
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 16rem;
+			height: 20rem;
+			color: #fff;
+			vertical-align: middle;
+			&.primary { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+				position: relative;
+				z-index: 10;
+				background-color: $color-primary;
+			}
+		}
 	}
 	.card-info {
 		display: flex;

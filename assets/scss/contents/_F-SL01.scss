@@ -12,6 +12,10 @@
 	.event-benefit-sec {
 		margin-bottom:50rem;
 		@include sec-basic;
+
+		.event-bnr + .event-benefit {
+			margin-top: 10rem;
+		}
 	}
 	// e: 이벤트 혜택
 
