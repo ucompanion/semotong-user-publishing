@@ -1762,6 +1762,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding: 15rem 19rem;
   border: 1px solid #EFF0F0;
   border-radius: 4rem;
+  text-align: center;
 }
 .rdo-style2 .rdo span, .F-QU-page .survey-list .survey-rdo .rdo span, .F-CB03-03-page .cb-survey-sec .survey-list .survey-rdo .rdo span, .F-CB03-02-page .cb-survey-sec .survey-list .survey-rdo .rdo span, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo span {
   display: block;
@@ -1770,7 +1771,6 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 16rem;
   line-height: 22rem;
   color: #46484B;
-  text-align: center;
 }
 .rdo-style2 .rdo small, .F-QU-page .survey-list .survey-rdo .rdo small, .F-CB03-03-page .cb-survey-sec .survey-list .survey-rdo .rdo small, .F-CB03-02-page .cb-survey-sec .survey-list .survey-rdo .rdo small, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo small {
   display: block;
@@ -1779,7 +1779,6 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #5A5D60;
-  text-align: center;
 }
 .rdo-style2 .rdo.type-icn span, .F-QU-page .survey-list .survey-rdo .rdo.type-icn span, .F-CB03-03-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn span, .F-CB03-02-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn span, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn span {
   font-weight: 700;
