@@ -1780,6 +1780,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 20rem;
   color: #5A5D60;
 }
+.rdo-style2 .rdo.type-icn, .F-QU-page .survey-list .survey-rdo .rdo.type-icn, .F-CB03-03-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn, .F-CB03-02-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn {
+  text-align: left;
+}
 .rdo-style2 .rdo.type-icn span, .F-QU-page .survey-list .survey-rdo .rdo.type-icn span, .F-CB03-03-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn span, .F-CB03-02-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn span, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn span {
   font-weight: 700;
 }
@@ -3795,6 +3798,9 @@ body.is-scroll-first .floating-menu .btn-top {
   .container .tab-style2 .tab-list .tab-item {
     flex: 1 1 auto;
   }
+  .only-container .container .tab-style1 {
+    top: 0;
+  }
   .only-container .container .tab-style2 {
     top: 0;
   }
@@ -3831,6 +3837,9 @@ body.is-scroll-first .floating-menu .btn-top {
   }
   .container .tab-style2 .tab-list .tab-item {
     flex: 1 1 auto;
+  }
+  .only-container .container .tab-style1 {
+    top: 0;
   }
   .only-container .container .tab-style2 {
     top: 0;
@@ -21266,6 +21275,9 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 56rem;
   padding-bottom: calc(32rem + env(safe-area-inset-bottom, 0)/1.7);
 }
+.F-QU-page section .sec-inner {
+  max-width: 560rem;
+}
 .F-QU-page .simple-open-sec {
   flex: 1 1 auto;
   padding-bottom: 20rem;
@@ -21316,7 +21328,8 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 28rem;
 }
 .F-QU-page .simple-open-sec .sec-body .tab-style1 {
-  padding-top: 0;
+  top: 0;
+  margin-top: -20rem;
   padding-left: 0;
   padding-right: 0;
 }
