@@ -33,10 +33,10 @@
 		function extandHandler(button, id) {
 			// 'cardListExtend01' 요소 가져오기
 			var ulElement = document.getElementById(id);
-			
+
 			// is-expanded 클래스 토글
 			ulElement.classList.toggle('is-expanded');
-			
+
 			// 'this'의 자식 span 요소 텍스트 토글
 			var spanElement = button.querySelector('span');
 			if (ulElement.classList.contains('is-expanded')) {
@@ -105,6 +105,13 @@
 												<div class="card-body">
 													<div class="card-tit">
 														<strong>[SKT] 150GB+최대 5Mbps</strong>
+													</div>
+													<div class="card-info">
+														<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+														<span class="split" aria-hidden="true"></span>
+														<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+														<span class="split" aria-hidden="true"></span>
+														<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
 													</div>
 													<div class="card-charge">
 														<div class="brand">

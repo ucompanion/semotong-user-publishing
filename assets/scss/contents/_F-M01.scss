@@ -192,6 +192,7 @@
 		}
 
 		.deal-timer {
+			margin-bottom: 30rem;
 			.timer-txt {
 				font-weight: 500;
 				font-size: 14rem;
@@ -256,7 +257,6 @@
 		.deal-swiper { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기부터) */
 			overflow: visible;
 			width: 100%;
-			/* margin-top: 30rem; */
 			.swiper-slide {
 				width: 248px;
 				opacity: 0.5;

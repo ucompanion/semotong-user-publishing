@@ -4220,6 +4220,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
@@ -4409,6 +4416,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: relative;
   padding: 16rem 0 20rem 0;
 }
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-body .card-charge {
+  margin-top: 12rem;
+}
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-body .card-charge .charge .charge-tit {
   font-weight: 700;
   font-size: 18rem;
@@ -4436,10 +4446,34 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #E6F7F2;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-tit {
-  margin-bottom: 12rem;
   font-weight: 600;
   font-size: 18rem;
   color: #000;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-info {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-info .split {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #CFD0D1;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-info .label {
+  display: inline-flex;
+  align-items: center;
+  color: #494949;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 12rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-info .label .ui-icn {
+  margin-right: 4rem;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list {
   display: flex;
@@ -4856,6 +4890,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
@@ -5646,6 +5687,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
@@ -7005,6 +7053,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util {
   display: flex;
@@ -8934,9 +8989,18 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  font-size: 20rem;
-  line-height: 28rem;
+  font-size: 18rem;
+  line-height: 26rem;
   color: #000;
+}
+.F-I01-01-page .payment-noti-sec .payment-noti .payment-tit .merge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 26rem;
+  color: #2FBE98;
 }
 .F-I01-01-page .payment-noti-sec .payment-noti .payment-tit .freeGift {
   display: flex;
@@ -9342,6 +9406,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .sec-body {
   position: relative;
 }
+.F-M01-page .deal-sec .deal-timer {
+  margin-bottom: 30rem;
+}
 .F-M01-page .deal-sec .deal-timer .timer-txt {
   font-weight: 500;
   font-size: 14rem;
@@ -9404,7 +9471,6 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .deal-swiper { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기부터) */
   overflow: visible;
   width: 100%;
-  /* margin-top: 30rem; */
 }
 .F-M01-page .deal-sec .deal-swiper .swiper-slide {
   width: 248px;
@@ -10405,6 +10471,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
@@ -11207,6 +11280,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
@@ -11698,6 +11778,797 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : 추천 요금제
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-M05-page {
+  --sec-outer-margin: 50rem;
+  padding-bottom: 32rem;
+}
+@media all and (min-width: 768px) {
+  .F-M05-page {
+    padding-bottom: 48rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M05-page {
+    padding-bottom: 48rem;
+  }
+}
+.F-M05-page .ratePlanC-sec {
+  padding-top: 16rem;
+}
+.F-M05-page .ratePlanC-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-M05-page .ratePlanC-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-M05-page .ratePlanC-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-M05-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+.F-M05-page .ratePlanC-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-M05-page .ratePlanC-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media all and (min-width: 768px) {
+  .F-M05-page .ratePlanC-sec {
+    margin-top: 16rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .F-M05-page .ratePlanC-sec .sec-inner {
+    padding-top: 16rem;
+    border-top: 1px solid #EFF0F0;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M05-page .ratePlanC-sec {
+    margin-top: 16rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .F-M05-page .ratePlanC-sec .sec-inner {
+    padding-top: 16rem;
+    border-top: 1px solid #EFF0F0;
+  }
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-toolbar { /* 1차 수정: 툴바 전체 수정(셀렉트 말줄임 적용) */
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-toolbar .sort {
+  display: flex;
+  margin-left: auto;
+  overflow: hidden;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-toolbar .sort .ui-btn {
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #36383A;
+  gap: 4rem;
+  width: 100%;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-toolbar .sort .ui-btn > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-toolbar + .ratePlanC-toolbar { /* 4차 수정 : 요금제 개수 추가 */
+  margin-top: 20rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+  padding-top: 16rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-item {
+  width: 100%;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card {
+  padding: 0 15rem;
+  box-shadow: 0rem 3rem 16rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  border: 1px solid transparent;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-body {
+  position: relative;
+  padding: 16rem 0;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-body .card-button {
+  position: absolute;
+  left: -16rem;
+  right: -16rem;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-footer {
+  padding: 12rem 0 20rem;
+  border-top: 1px solid #EFF0F0;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit .label {
+  padding: 2rem 8rem;
+  border-radius: 4rem;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #fff;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit .label.primary { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+  position: relative;
+  z-index: 10;
+  background-color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-benefit .label.secondary {
+  background-color: #2FBE98;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6rem;
+  flex: none;
+  margin-left: auto;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #CDC2F5;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label .ui-ico {
+  margin-right: 2rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit {
+  display: flex;
+  font-weight: 700;
+  font-size: 20rem;
+  color: #000;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .label {
+  position: relative;
+  top: 4rem;
+  margin-right: 4rem;
+  flex: none;
+  padding: 2rem 8rem;
+  border-radius: 4rem;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  height: 20rem;
+  color: #fff;
+  vertical-align: middle;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .label.primary { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
+  position: relative;
+  z-index: 10;
+  background-color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
+  z-index: 10;
+  margin-left: 8rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
+  margin-top: 4rem;
+  font-size: 12rem;
+  color: #777;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  margin-top: 8rem;
+  padding: 2rem 0;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info .split {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #CFD0D1;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info .label {
+  display: inline-flex;
+  align-items: center;
+  color: #494949;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 12rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-info .label .ui-icn {
+  margin-right: 4rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .brand {
+  display: flex;
+  align-items: center;
+  height: 25rem;
+  gap: 4rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .brand img {
+  height: 100%;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .brand .brand-rating {
+  display: inline-flex;
+  align-items: center;
+  padding: 3rem 8rem 3rem 4rem;
+  border: 1px solid #CDC2F5;
+  border-radius: 15rem;
+  color: #542FDD;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 14rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  top: 2rem;
+  height: 40rem;
+  text-align: right;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #1B0179;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+  margin-top: 0rem;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #828588;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util-tooltip {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util-tooltip .tit {
+  font-weight: 700;
+  font-size: 14rem;
+  line-height: 16rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util-btn {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+  margin-left: auto;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status {
+  margin-top: 16rem;
+  padding: 11rem 16rem;
+  background-color: #F4F5F8;
+  border-radius: 2rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .tit {
+  display: block;
+  flex: 1 1 auto;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .tit em {
+  color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .ui-btn {
+  margin-left: auto;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-list li {
+  position: relative;
+  width: 100%;
+  padding-left: 20rem;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #36383A;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-list li .ui-icn {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift .status-gift-expanded {
+  display: none;
+  width: 100%;
+  margin-top: 4rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift.is-expanded .tit {
+  display: none;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-gift.is-expanded .status-gift-expanded {
+  display: block;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice {
+  display: flex;
+  align-items: center;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .ui-icn:first-child {
+  margin-right: 4rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .txt {
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #36383A;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .txt em {
+  color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .choice .split {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 10rem;
+  background-color: #CFD0D1;
+  margin: 0 8rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn {
+  margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  align-items: center;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 14rem;
+  color: #828588;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+  margin-left: 4rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
+  margin-top: 32rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con {
+  text-align: center;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+  margin-bottom: 20rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo .buyinfo-con dd {
+  margin-top: 6rem;
+  font-weight: 600;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #36383A;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card.plan-best {
+  border-color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card.plan-best .card-best {
+  background: linear-gradient(90deg, #6039EE 0%, #3A1EA2 100%);
+  padding: 6rem 11rem;
+  margin: 0 -15rem;
+  border-bottom: 1px solid transparent;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card.plan-best .card-best p {
+  display: flex;
+  gap: 4rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12re;
+  line-height: 18rem;
+}
+.F-M05-page .ratePlanC-sec .nodata {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 328rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60rem 16rem;
+}
+.F-M05-page .ratePlanC-sec .nodata .ui-icn {
+  margin-bottom: 8rem;
+}
+.F-M05-page .ratePlanC-sec .nodata .nodata-tit {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #36383A;
+}
+.F-M05-page .ratePlanC-sec .nodata .nodata-txt {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #5A5D60;
+}
+.F-M05-page .ratePlanC-sec .nodata .nodata-tit + .nodata-txt {
+  margin-top: 4rem;
+}
+.F-M05-page .recom-bnr-sec {
+  margin-top: var(--sec-outer-margin);
+}
+.F-M05-page .recom-bnr-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-M05-page .recom-bnr-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-M05-page .recom-bnr-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-M05-page .recom-bnr-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-M05-page .recom-bnr-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+.F-M05-page .recom-bnr-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-M05-page .recom-bnr-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-M05-page .recom-bnr-sec .recom-swiper { /* 7차 수정 : 추천배너 스와이프로 변경 */ }
+.F-M05-page .recom-bnr-sec .recom-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 4rem;
+}
+.F-M05-page .recom-bnr-sec .recom-swiper .swiper-pagination-bullet {
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border-radius: 3rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.F-M05-page .recom-bnr-sec .recom-swiper .swiper-pagination-bullet-active {
+  width: 12rem;
+  background-color: #542FDD;
+}
+.F-M05-page .recom-bnr-sec .recom-bnr { /* 7차 수정 : 추천배너 스와이프로 변경 */
+  display: flex;
+  width: 100%;
+}
+.F-M05-page .recom-bnr-sec .recom-bnr img {
+  width: 100%;
+  border-radius: 2rem;
+  vertical-align: top;
+}
+.F-M05-page .faq-sec {
+  margin-top: var(--sec-outer-margin);
+}
+.F-M05-page .faq-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-M05-page .faq-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-M05-page .faq-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-M05-page .faq-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-M05-page .faq-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+.F-M05-page .faq-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-M05-page .faq-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-M05-page .faq-sec .faq-accordion {
+  margin: 0 calc(16rem * -1);
+  margin-top: -14rem;
+}
+.F-M05-page .faq-sec .faq-accordion .collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+.F-M05-page .faq-sec .faq-accordion .collapse:not(.show) {
+  display: none;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-button .ui-icn {
+  transition: transform 0.35s ease;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-button[aria-expanded=true] .ui-icn {
+  transform: rotate(180deg);
+}
+.F-M05-page .faq-sec .faq-accordion .acco-item {
+  padding: 14rem 16rem;
+  border-bottom: 1px solid #EFF0F0;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-header {
+  position: relative;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-header .acco-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding-right: 24rem;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  flex: none;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-header .acco-button > span {
+  position: relative;
+  display: block;
+  padding-left: 16rem;
+  font-weight: 600;
+  font-size: 14rem;
+  line-height: 20rem;
+  max-height: 40rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-header .acco-button > span em {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #542FDD;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-header .acco-button .ui-icn {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 8rem);
+}
+.F-M05-page .faq-sec .faq-accordion .acco-body {
+  margin-top: 16rem;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-body .acco-answer {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-body .acco-answer ol {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  font-size: 12rem;
+  line-height: 16rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-body .acco-answer ol:first-child {
+  margin-top: 0;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-body .acco-answer ol:last-child {
+  margin-bottom: 0;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-body .acco-answer ol li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+}
+.F-M05-page .faq-sec .faq-accordion .acco-body .acco-answer ol li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media all and (min-width: 768px) {
+  .F-M05-page .faq-sec .faq-accordion {
+    margin: 0;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M05-page .faq-sec .faq-accordion {
+    margin: 0;
+  }
+}
+.F-M05-page .account-sol-sec {
+  margin-top: var(--sec-outer-margin);
+  margin-top: 30rem;
+}
+.F-M05-page .account-sol-sec .sec-tit {
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+  text-align: center;
+}
+.F-M05-page .account-sol-sec .ui-tab {
+  display: flex;
+  justify-content: center;
+  margin-top: 16rem;
+}
+.F-M05-page .account-sol-sec .ui-tab .tab-list {
+  width: 268rem;
+}
+.F-M05-page .account-sol-sec .tab-content {
+  height: auto;
+  overflow: hidden;
+  margin-top: 16rem;
+  padding-bottom: 0;
+}
+.F-M05-page .account-sol-sec .solution-steps {
+  padding: 20rem;
+  border-radius: 4rem;
+  background-color: #F4F5F8;
+}
+.F-M05-page .account-sol-sec .solution-steps li {
+  display: flex;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
+}
+.F-M05-page .account-sol-sec .solution-steps li + li {
+  margin-top: 26rem;
+}
+.F-M05-page .account-sol-sec .solution-steps li + li .num::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 1px);
+  bottom: calc(100% + 4rem);
+  display: block;
+  width: 2rem;
+  height: 18rem;
+  background: url("../images/common/line-18-step.svg") no-repeat center center;
+}
+.F-M05-page .account-sol-sec .solution-steps li .num {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24rem;
+  height: 24rem;
+  margin-right: 10rem;
+  border-radius: 50%;
+  background-color: #CDC2F5;
+  font-weight: 700;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #542FDD;
+}
+.F-M05-page .account-sol-sec .solution-steps li strong {
+  font-weight: 700;
+}
+.F-M05-page .account-sol-sec .sec-tit {
+  font-size: 20rem;
+  line-height: 28rem;
+  text-align: left;
 }
 
 /*-------------------------------------------------------------------
@@ -12764,6 +13635,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
@@ -13273,6 +14151,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
@@ -14583,6 +15468,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
@@ -15332,6 +16224,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
@@ -16693,6 +17592,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
@@ -17253,6 +18159,9 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #36383A;
 }
+.F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-card .card-body .card-info + .card-info {
+  margin-top: 10rem;
+}
 .F-P02-01-T01-page .ratePlan-detail-sec .ratePlan-detail-acco {
   margin: 0 calc(16rem * -1);
   margin-top: 30rem;
@@ -17584,6 +18493,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-util {
   display: flex;
@@ -18384,6 +19300,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-util {
   display: flex;
@@ -19206,6 +20129,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-util {
   display: flex;
@@ -20220,6 +21150,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
+}
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
@@ -20712,6 +21649,13 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-charge .charge .charge-point {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #542FDD;
 }
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-util {
   display: flex;

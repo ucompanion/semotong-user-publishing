@@ -374,9 +374,18 @@
 					justify-content: space-between;
 					align-items: center;
 					font-weight: 700;
-					font-size: 20rem;
-					line-height: 28rem;
+					font-size: 18rem;
+					line-height: 26rem;
 					color: #000;
+				}
+				.merge {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-weight: 700;
+					font-size: 18rem;
+					line-height: 26rem;
+					color: $color-secondary;
 				}
 				.freeGift {
 					display: flex;
