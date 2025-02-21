@@ -56,6 +56,7 @@
 			line-height: 20rem;
 			color: #5A5D60;
 		}
+
 	}
 	input:checked + .chk {
 		> span {
@@ -67,6 +68,27 @@
 		}
 		&::after {
 			opacity: 1;
+		}
+	}
+
+	&.xl {
+		input {
+			top: 2rem;
+			width: 24rem;
+			height: 24rem;
+		}
+		.chk {
+			padding-left: 24rem;
+			&::before,
+			&::after {
+				width: 24rem;
+				height: 24rem;
+				background-size: 24rem;
+			}
+			> span {
+				font-size: 16rem;
+				line-height: 24rem;
+			}
 		}
 	}
 }
@@ -148,7 +170,63 @@
 	}
 }
 
+.rdo-style2 {
+	display: flex;
+	width: 100%;
+	.rdo::before,
+	.rdo::after,
+	input {
+		display: none;
+	}
 
+	.rdo {
+		display: block;
+		width: 100%;
+		padding: 15rem 19rem;
+		border:1px solid #EFF0F0;
+		border-radius: 4rem;
+		span {
+			display: block;
+			padding-left: 0;
+			font-weight: 500;
+			font-size: 16rem;
+			line-height: 22rem;
+			color: #46484B;
+			text-align: center;
+		}
+		small {
+			display: block;
+			padding-left: 0;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #5A5D60;
+		}
+
+		&.type-icn {
+			span {
+				font-weight: 700;
+			}
+			[class*=icn-50] {
+				margin-right: 16rem;
+			}
+		}
+	}
+	input:checked + .rdo {
+		border-color: $color-primary;
+		background-color: #EAE6FB;
+		span {
+			color: $color-primary
+		}
+	}
+	input:disabled + .rdo {
+		border-color: #EFF0F0;
+		background-color: #EFF0F0;
+		span {
+			color: #96989B;
+		}
+	}
+}
 /*-------------------------------------------------------------------
 	@@ Swich
 -------------------------------------------------------------------*/

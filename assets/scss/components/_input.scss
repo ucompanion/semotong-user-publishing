@@ -36,6 +36,15 @@
 	color: #36383A;
 }
 
+@mixin input-errored {
+	&.is-errored {
+		.sel,
+		.inp {
+			border-color: $color-error;
+		}
+	}
+}
+
 /*-------------------------------------------------------------------
 	@@ Input
 -------------------------------------------------------------------*/
@@ -44,6 +53,7 @@
 	display: inline-block;
 	position: relative;
 	width: 100%;
+	@include input-errored;
 
 	.inp {
 		@include input-style;
@@ -132,6 +142,7 @@
 /* 스타일 */
 .ui-sel {
 	width: 100%;
+	@include input-errored;
 
 	.sel {
 		display: flex;
@@ -139,6 +150,24 @@
 		align-items: center;
 		gap: 2rem;
 		@include input-style;
+		@include input-placeholder;
+
+		// 파트너사인 경우
+		.partner-option {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-right: 12rem;
+			.partner-img {
+				display: flex;
+				justify-content: flex-end;
+				height: 22rem;
+				img {
+					height: 100%;
+				}
+			}
+		}
 	}
 	&.fluid {
 		width: 100%;

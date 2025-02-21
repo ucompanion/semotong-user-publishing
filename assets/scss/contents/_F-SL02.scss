@@ -7,8 +7,7 @@
 .F-SL-01-page {
 
 	// 페이지별 섹션 여백 설정
-	--sec-outer-margin: 50rem;
-	@include bottom-spacer;
+	padding-bottom: calc(40rem + $safe-area-bottom);
 
 	// s: 상품리스트 섹션
 	.ratePlanC-sec {

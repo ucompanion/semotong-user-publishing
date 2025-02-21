@@ -7,3 +7,11 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 // s: 기본
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
+.collapse:not(.show) {
+	display: none;
+}

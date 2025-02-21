@@ -313,8 +313,11 @@
 		flex-direction: column;
 		gap: 4rem;
 		li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 			position: relative;
-			padding: 10rem 0rem;
+			padding: 10rem 30rem 10rem 0rem;
 			font-weight: 500;
 			font-size: 16rem;
 			line-height: 24rem;
@@ -334,5 +337,56 @@
 				}
 			}
 		}
+		&.type-partners {
+			li {
+				padding-right: 0;
+				.partner-img {
+					display: flex;
+				}
+				&.is-selected {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
 	}
 }
+
+// s: 은행선택 팝업
+.select-bank-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 4rem;
+
+	@include media-mobile-xl {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	@include media-tablet-xs {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.select-bank {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		aspect-ratio: 1/1;
+		border-radius: 4rem;
+		background-color: #F4F4F4;
+		.name {
+			display: block;
+			margin-top: 7rem;
+			font-weight: 500;
+			font-size: 16rem;
+			line-height: 22rem;
+		}
+	}
+	.is-selected .select-bank {
+		background-color: #2801B5;
+		.name {
+			color: #fff;
+		}
+	}
+}
+// e: 은행선택 팝업

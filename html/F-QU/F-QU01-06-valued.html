@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>간편개통 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+</head>
+
+<body>
+	<!-- 레이아웃이 없는 경우  -->
+	<div class="wrapper only-container">
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-QU-page F-QU01-06-page">
+				<!-- 간편개통 섹션 -->
+				<section class="simple-open-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">현재 사용중이신 <br>휴대폰 번호를 알려주세요.</h2>
+							<p class="sec-explain">개인정보는 안전하게 보관해서 개통에만 사용되어요.</p>
+						</div>
+						<div class="sec-body">
+							<!-- 등록폼 -->
+							<div class="basic-frm">
+								<!-- 통신사 선택 -->
+								<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label class="tit" for="frmName">통신사</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-sel">
+											<!-- 선택전 is-placeholder, (선택후 삭제) -->
+											<!-- <button type="button" id="frmType" class="sel is-placeholder" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+												<span>통신사를 선택해 주세요.</span>
+												<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+											</button> -->
+
+											<!-- 선택후 Case 기본값 Valued -->
+											<!-- <button type="button" id="frmType" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+												<span>KT</span>
+												<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+											</button> -->
+
+											<!-- 선택후 Case 파트너사 Valued -->
+											 <!-- 선택전 is-placeholder, (선택후 삭제) -->
+											<button type="button" id="frmType" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+												<span class="partner-option">
+													<strong class="partner-name">헬로모바일</strong>
+													<span class="partner-img"><img src="../../assets/images/partner/logo-lghellovision.svg" alt="Hello Mobile" /></span>
+												</span>
+												<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- // 통신사 선택 -->
+
+								<!-- 전화번호 입력 -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label for="frmTitle" class="tit">휴대폰 번호</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-inp">
+											<input type="tel" name="" id="frmTitle" value="010-2222-3333" placeholder="010-0000-0000" title="" class="inp" oninput="setRegularNumber(this)"/>
+										</div>
+									</div>
+								</div>
+								<!-- // 전화번호 입력 -->
+							</div>
+							<!-- // 등록폼 -->
+						</div>
+					</div>
+				</section>
+				<!-- // 간편개통 섹션 -->
+
+				<!-- 플로팅 섹션 -->
+				<section class="floating-sec">
+					<div class="sec-inner">
+						<button type="button" class="ui-btn btn-action primary">
+							<span>다음</span>
+						</button>
+					</div>
+				</section>
+				<!-- // 페이지 섹션 -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>

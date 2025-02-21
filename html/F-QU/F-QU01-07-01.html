@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>간편개통 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+</head>
+
+<body>
+	<!-- 레이아웃이 없는 경우  -->
+	<div class="wrapper only-container">
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-QU-page F-QU01-07-01-page">
+				<!-- 간편개통 섹션 -->
+				<section class="simple-open-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">유심 정보를 적어주세요.</h2>
+						</div>
+						<div class="sec-body">
+							<!-- 유심카드 -->
+							 <div class="usim-image">
+								<img src="../../assets/images/common/img-usim-demo.png" alt="">
+							 </div>
+							<!-- //유심카드 -->
+							<!-- 등록폼 -->
+							<div class="basic-frm">
+								<!-- 일련번호 입력 -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label for="frmTitle" class="tit">일련번호</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-inp">
+											<input type="tel" name="" id="frmTitle" value="" placeholder="1234567891234567891F" title="" class="inp" oninput="setRegularNumber(this)"/>
+										</div>
+									</div>
+								</div>
+								<!-- // 일련번호 입력 -->
+							</div>
+							<!-- // 등록폼 -->
+						</div>
+					</div>
+				</section>
+				<!-- // 간편개통 섹션 -->
+
+				<!-- 플로팅 섹션 -->
+				<section class="floating-sec">
+					<div class="sec-inner">
+						<button type="button" class="ui-btn btn-action primary" disabled>
+							<span>다음</span>
+						</button>
+					</div>
+				</section>
+				<!-- // 페이지 섹션 -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>

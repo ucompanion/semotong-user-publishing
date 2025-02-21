@@ -80,6 +80,11 @@
   height: 32rem;
 }
 
+[class*=icn-34] {
+  width: 34rem;
+  height: 34rem;
+}
+
 [class*=icn-44] {
   width: 44rem;
   height: 44rem;
@@ -113,6 +118,11 @@
 [class*=icn-110] {
   width: 110rem;
   height: 110rem;
+}
+
+[class*=icn-140] {
+  width: 120rem;
+  height: 120rem;
 }
 
 /*-------------------------------------------------------------------
@@ -272,6 +282,14 @@
   background-image: url("../images/common/icn-16-plus-gr.svg");
 }
 
+.icn-16-info-gr::before {
+	background-image: url("../images/common/icn-16-info-gr.svg");
+}
+
+.icn-16-acco-gr::before {
+	background-image: url("../images/common/icn-16-acco-gr.svg");
+}
+
 .icn-18-kakao-bk::before {
   background-image: url("../images/common/icn-18-kakao-bk.png");
 }
@@ -334,6 +352,18 @@
 
 .icn-20-pin-gr::before { /* 2차 수정 : 고정게시글 아이콘 추가 */
   background-image: url("../images/common/icn-20-pin-gr.svg");
+}
+
+.icn-20-set-aos::before {
+  background-image: url("../images/common/icn-20-set-aos.png");
+}
+
+.icn-20-set-ios::before {
+  background-image: url("../images/common/icn-20-set-ios.png");
+}
+
+.icn-20-link-wh::before {
+  background-image: url("../images/common/icn-20-link-wh.svg");
 }
 
 .icn-24-nav-01-gr::before {
@@ -644,6 +674,50 @@
   background-image: url("../images/common/icn-32-remove-bk.svg");
 }
 
+.icn-34-bank-hb::before {
+  background-image: url("../images/bank/icn-34-bank-hb.png");
+}
+
+.icn-34-bank-ibk::before {
+	background-image: url("../images/bank/icn-34-bank-ibk.png");
+}
+
+.icn-34-bank-kakao::before {
+  background-image: url("../images/bank/icn-34-bank-kakao.png");
+}
+
+.icn-34-bank-kb::before {
+  background-image: url("../images/bank/icn-34-bank-kb.png");
+}
+
+.icn-34-bank-kbank::before {
+  background-image: url("../images/bank/icn-34-bank-kbank.png");
+}
+
+.icn-34-bank-nh::before {
+  background-image: url("../images/bank/icn-34-bank-nh.png");
+}
+
+.icn-34-bank-sb::before {
+  background-image: url("../images/bank/icn-34-bank-sb.png");
+}
+
+.icn-34-bank-sc::before {
+  background-image: url("../images/bank/icn-34-bank-sc.png");
+}
+
+.icn-34-bank-toss::before {
+	background-image: url("../images/bank/icn-34-bank-toss.png");
+}
+
+.icn-34-bank-wb::before {
+	background-image: url("../images/bank/icn-34-bank-wb.png");
+}
+
+.icn-34-bank-wo::before {
+  background-image: url("../images/bank/icn-34-bank-wo.png");
+}
+
 .icn-44-plan-cate-01::before {
   background-image: url("../images/common/icn-44-plan-cate-01.png");
 }
@@ -701,15 +775,23 @@
 }
 
 .icn-50-sat-bad::after {
-  content: "";
-  background-image: url("../images/common/icn-50-sat-bad-sel.svg");
+	content: "";
+	background-image: url("../images/common/icn-50-sat-bad-sel.svg");
 }
 
 .is-selected .icn-50-sat-bad::before {
-  transform: translateY(110%);
+	transform: translateY(110%);
 }
 .is-selected .icn-50-sat-bad::after {
-  transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.icn-50-cert-kakao::before {
+  background-image: url("../images/common/icn-50-cert-kakao.png");
+}
+
+.icn-50-cert-card::before {
+  background-image: url("../images/common/icn-50-cert-card.png");
 }
 
 .icn-62-motong::before { /* 2차 수정 : 캐릭터 이미지 파일 교체 */
@@ -746,4 +828,8 @@
 
 .icn-110-nodata-cry::before {
   background-image: url("../images/common/icn-110-nodata-cry.svg");
+}
+
+.icn-140-complete::before {
+  background-image: url("../images/common/icn-140-complete.svg");
 }

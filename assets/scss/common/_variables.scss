@@ -28,9 +28,9 @@ $color-point: purple; // 기타 임시값
 
 // 컬러 상태
 $color-success: green; // 성공 임시값
-$color-fail: #FD4A4A; // 실패
+$color-fail: #EA2A2A; // 실패
 $color-complete: skyblue; // 완료 임시값
-$color-error: #FD4A4A; // 에러
+$color-error: #EA2A2A; // 에러
 $color-warning: orange; // 경고 임시값
 $color-caution: orange; // 주의 임시값
 $color-danger: orange; // 위험 임시값
@@ -147,9 +147,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			.ui-icn {
 				margin-right: 4rem;
 			}
+			+ .sec-explain {
+				margin-top: 4rem;
+			}
 		}
 		.sec-explain {
-			margin-top: 4rem;
 			font-weight: 600;
 			font-size: 14rem;
 			color: #63666A;
@@ -186,6 +188,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	padding-bottom: 32rem;
 	margin-bottom: -32rem; // 공간은 차지하지만 간격은 영향주지 않는다.
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0rem, rgba(255, 255, 255, 1) 20rem);
+
+	.btn-action + .btn-action {
+		margin-top: 14rem;
+	}
 }
 
 // 구분선
@@ -1468,21 +1474,69 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 @mixin basic-frm {
 	display: flex;
 	flex-direction: column;
-	gap: 32rem;
+	gap: 20rem;
+
+	.frm-field-group {
+		display: flex;
+		flex-direction: column;
+		gap: 20rem;
+	}
 
 	.frm-field {
 		display: flex;
 		flex-direction: column;
-		gap: 10rem;
 		width: 100%;
 
 		.frm-title {
+			margin-bottom: 10rem;
 			.tit {
 				font-weight: 600;
 				font-size: 16rem;
 				line-height: 22rem;
 				color: #000;
 			}
+		}
+
+		.frm-group {
+			display: flex;
+			align-items: center;
+			gap: 8rem;
+			.btn-sub {
+				margin: 0;
+				height: 52rem;
+				width: auto;
+			}
+			+ .frm-group {
+				margin-top: 10rem;
+			}
+			.frm-split {
+				color: #D9D9D9;
+			}
+
+			// 운전면허번호
+			&.type-car {
+				.ui-inp .inp {
+					text-align: center;
+				}
+				.ui-inp:nth-child(3) {
+					flex:none;
+					width:25%;
+				}
+			}
+		}
+	}
+
+	.frm-alert {
+		display: none;
+		margin-top: 6rem;
+		font-weight: 500;
+		font-size: 14rem;
+		line-height: 20rem;
+		&.is-show {
+			display: block;
+		}
+		&.is-errored {
+			color: $color-error;
 		}
 	}
 }
@@ -1681,36 +1735,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		margin-top: 12rem;
 	}
 	.survey-rdo {
-		display: flex;
-		width: 100%;
-		.rdo::before,
-		.rdo::after,
-		input {
-			display: none;
-		}
-
-		.rdo {
-			display: block;
-			width: 100%;
-			padding: 15rem 19rem;
-			border:1px solid #EFF0F0;
-			border-radius: 4rem;
-			span {
-				display: block;
-				padding-left: 0;
-				font-weight: 500;
-				font-size: 16rem;
-				line-height: 22rem;
-				color: #46484B;
-			}
-		}
-		input:checked + .rdo {
-			border-color: $color-primary;
-			background-color: #EAE6FB;
-			span {
-				color: $color-primary
-			}
-		}
+		@extend .rdo-style2;
 	}
 }
 
@@ -2281,3 +2306,48 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 	}
 }
+
+// s: 스텝
+@mixin basic-steps {
+	li {
+		display: flex;
+		align-items: center;
+		padding: 10rem 0;
+		font-weight: 500;
+		font-size: 14rem;
+		line-height: 20rem;
+		color: #46484B;
+		.num {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 24rem;
+			height: 24rem;
+			margin-right: 10rem;
+			border-radius: 50%;
+			background-color: #EAE6FB;
+			font-weight: 700;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #542FDD;
+		}
+		.tit {
+			font-weight: 500;
+			font-size: 16rem;
+			line-height: 22rem;
+			color: #000;
+			strong {
+				font-weight: 700;
+			}
+		}
+		.txt {
+			margin-top: 2rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #63666A;
+		}
+	}
+}
+// e: 스텝

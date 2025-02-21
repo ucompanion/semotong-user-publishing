@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>간편개통 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<script>
+		function tabHandler(targetId, element) {
+			document.querySelectorAll("[id$='-pane']").forEach(el => el.classList.remove("active"));
+
+			const targetElement = document.getElementById(targetId);
+			if (targetElement) {
+				targetElement.classList.add("active");
+			}
+
+			// 라디오 버튼 체크 여부 확인 (선택 사항)
+			if (element) {
+				element.checked = true;
+			}
+		};
+	</script>
+</head>
+
+<body>
+	<!-- 레이아웃이 없는 경우  -->
+	<div class="wrapper only-container">
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-QU-page F-QU01-13-page">
+				<!-- 간편개통 섹션 -->
+				<section class="complete-sec">
+					<div class="sec-inner">
+						<div class="complete-wrap">
+							<i class="ui-icn icn-140-complete" aria-hidden="true"></i>
+							<strong>간편 개통 신청이 완료되었어요!</strong>
+						</div>
+					</div>
+				</section>
+				<!-- // 간편개통 섹션 -->
+
+				<!-- 플로팅 섹션 -->
+				<section class="floating-sec">
+					<div class="sec-inner">
+						<button type="button" class="ui-btn btn-action primary">
+							<span>신청한 요금제 확인하기</span>
+							<i class="ui-icn icn-20-link-wh" aria-hidden="true"></i>
+						</button>
+						<button type="button" class="ui-btn btn-action primary">
+							<span>인터넷 결합하고 알뜰폰 할인하러 가기</span>
+							<i class="ui-icn icn-20-link-wh" aria-hidden="true"></i>
+						</button>
+					</div>
+				</section>
+				<!-- // 페이지 섹션 -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>

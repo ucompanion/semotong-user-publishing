@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>간편개통 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- 페이지 스크립트 영역 -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// 모달 바로 볼 수 있도록 호출
+			var FQU0106P02Modal = new bootstrap.Modal(document.getElementById('FQU0106P02Modal'));
+			FQU0106P02Modal.show();
+		});
+	</script></head>
+
+<body>
+	<!-- 레이아웃이 없는 경우  -->
+	<div class="wrapper only-container"></div>
+
+	<!--
+		[모달 가이드]
+		모달 효과 : fade (공통)
+		모달 기본 : modal
+		모달 유형 : modal-full / modal-basic / modal-alert / modal-confirm / modal-select
+		화면 이름 : 화면아이디-page (modal-select 제외)
+		// 1차 수정 : fade-pc 사용안함, fade 공통으로 사용
+	-->
+	<!-- 정렬 modal select -->
+	<div class="modal modal-select fade" id="FQU0106P02Modal" tabindex="-1" role="dialog" aria-labelledby="FQU0106P02ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="FQU0106P02ModalLabel">통신사</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 콤보박스 섹션 -->
+					<section class="select-sec">
+						<div class="sec-inner">
+							<!-- modal-select 공통 -->
+							<ul class="select-listbox type-partners" role="listbox">
+								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">고고모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-gogofactory.svg" alt="고고모바일" /></span>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">리브엠</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-liivm.svg" alt="KB Liiv m" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">모바일모나</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-mobilemona.svg" alt="MO-NA" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">안심모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-s1mobile.svg" alt="에스원 안심모바일" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">위너스텔</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-well.svg" alt="위너스텔" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">이야기모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-eyagi.svg" alt="이야기 모바일" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">핀다이렉트</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-pindirect.svg" alt="pindirect" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">헬로모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-lghellovision.svg" alt="Hello Mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">에이모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-amobile.svg" alt="A mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">KT</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-kt.svg" alt="KT" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">KT모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-ktmmobile.svg" alt="KT M mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">KT스카이라이프</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-ktskylife.svg" alt="KT skyLife" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">SK7모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-sk7mobile.svg" alt="SK 7 mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">SK텔레콤</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-sktelecom.svg" alt="SK telecom" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">스마트텔</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-smartel.svg" alt="SMT" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">U+유모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">여유알뜰모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-yytelecom.svg" alt="여유알뜰모바일" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">스노우맨</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">스네이크모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-shakemobile.svg" alt="Shake mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">아이즈모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-eyes.svg" alt="아이즈 모바일" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">에렐모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">이지모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-egmobile.svg" alt="EG Mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">찬스모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-chance.svg" alt="chance Mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">프리티</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-freet.svg" alt="프리티" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">인스모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-ins.svg" alt="INS MOBILE" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">KCTV제주</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-kctvjeju.svg" alt="KCTV" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">KG모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-kgmobile.svg" alt="KG 모바일+" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">LG U+</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-lguplus.svg" alt="LG U+" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">마블링</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-marvelring.svg" alt="marvelring" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">모빙</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-mobing.svg" alt="Mobing" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">슈가모바일</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-sugar.svg" alt="sugar Mobile" /></button>
+								</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal">
+									<strong class="partner-name">티플러스</strong>
+									<span class="partner-img"><img src="../../assets/images/partner/logo-tplus.svg" alt="tplus" /></button>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<!-- // 콤보박스 섹션 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 정렬 modal select -->
+</body>
+
+</html>
