@@ -23,20 +23,48 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@7.0.0/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
+			// 타임딜 이벤트 팝업 확인용
+			var FM01P01Modal = new bootstrap.Modal(document.getElementById('FM01P01Modal'));
+			FM01P01Modal.show();
+
 			// 추천딜 스와이프
 		    var dealSwiper = new Swiper(".deal-swiper", {
 				threshold: 3,
 				slidesPerView: 'auto',
 				spaceBetween: 10,
-				pagination: {
-					el: ".swiper-pagination",
-				},
 				// 8차 수정 : 추천딜 스와이프 버튼 옵션 추가
 				navigation: {
 					nextEl: ".deal-sec .deal-button-next",
 					prevEl: ".deal-sec .deal-button-prev",
 				}
 			});
+
+			// s: 내게 맞는 요금제
+			let ratePlanASwiper = null;
+			function initSwiper() {
+				if (window.innerWidth >= 768 && !ratePlanASwiper) {
+					// 모바일 화면일 때 Swiper 초기화
+					ratePlanASwiper = new Swiper(".ratePlanA-swiper", {
+						threshold: 3,
+						slidesPerView: 'auto',
+						spaceBetween: 10,
+						breakpoints: {
+							768: {
+								navigation: {
+									nextEl: ".ratePlanA-sec .ratePlanA-button-next",
+									prevEl: ".ratePlanA-sec .ratePlanA-button-prev",
+								},
+							}
+						}
+					});
+				} else if (window.innerWidth < 768 && ratePlanASwiper) {
+					ratePlanASwiper.destroy(true, true);
+					ratePlanASwiper = null;
+				}
+			}
+			initSwiper();
+			window.addEventListener('resize', initSwiper);
+			// e: 내게 맞는 요금제
 
 			// 리뷰 스와이프
 		    var reviewSwiper = new Swiper(".review-swiper", {
@@ -63,6 +91,11 @@
 					enabled: false, // 키보드 제어 비활성화
 				},
 			});
+
+			// 타임딜 퍼블리싱 확인용
+			setTimeout(() => {
+				document.getElementById('dealBefore').style.display = 'none';
+			}, 3000);
 		})
 	</script>
 </head>
@@ -170,18 +203,59 @@
 				</section>
 				<!-- // 비주얼 섹션 -->
 
-				<!-- 메인 추천딜 섹션 -->
+				<!-- 메인 타임딜 섹션 -->
 				<section class="deal-sec">
 					<!-- 3차 수정 : 메인 레이아웃 변경 sec-outer 추가 -->
-					<div class="sec-outer">
+					<!-- Case 타임딜 오픈 전 (퍼블 확인용으로 3초뒤 숨김처리) -->
+					<div class="deal-before sec-outer" id="dealBefore">
 						<div class="sec-inner">
 							<div class="sec-header">
 								<!-- <h2 class="sec-tit">세모통 얼리버드 추천딜<i class="ui-icn icn-24-clock"></i></h2> -->
-								<h2 class="sec-tit">세모통 추천딜</h2>
+								<h2 class="sec-tit">세모통 타임딜<i class="ui-icn icn-24-clock-wh"></i></h2>
 							</div>
 							<div class="sec-body">
 								<div class="deal-timer">
-									<p class="timer-txt">이벤트 종료까지 남은 시간</p>
+									<div class="timer-labels">
+										<span class="label-num"><span>1</span></span>
+										<span class="label-num"><span>0</span></span>
+										<span class="label-num"><span>0</span></span>
+										<span class="label-split" aria-label=":"></span>
+										<span class="label-num"><span>2</span></span>
+										<span class="label-num"><span>9</span></span>
+										<span class="label-split" aria-label=":"></span>
+										<span class="label-num"><span>4</span></span>
+										<span class="label-num"><span>7</span></span>
+										<span class="label-text">후</span>
+										<span class="label-text">오픈됩니다.</span>
+									</div>
+								</div>
+								<div class="deal-share">
+									<div class="deal-share-char">
+										<img src="../../assets/images/common/img-80-int-char.png" alt="" />
+									</div>
+									<div class="deal-share-box">
+										<p class="tit"><em>세모통 타임딜</em> 공유하기</p>
+										<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
+											<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //Case 타임딜 오픈 전 -->
+					<!-- Case 타임딜 오픈 후 -->
+					<div class="sec-outer">
+						<div class="sec-inner">
+							<div class="sec-header">
+								<h2 class="sec-tit">세모통 타임딜<i class="ui-icn icn-24-clock"></i></h2>
+								<button type="button" class="ui-btn btn-more" data-bs-toggle="modal" data-bs-target="#FM01P01Modal">
+									<span>타임딜?</span>
+								</button>
+							</div>
+							<div class="sec-body">
+								<div class="deal-timer">
+									<p class="timer-txt">얼리버스 선착순 72시간 한정!</p>
 									<div class="timer-labels">
 										<span class="label-num"><span>1</span></span>
 										<span class="label-num"><span>0</span></span>
@@ -278,8 +352,9 @@
 							</div>
 						</div>
 					</div>
+					<!-- //Case 타임딜 오픈 후 -->
 				</section>
-				<!-- // 추천딜 섹션 -->
+				<!-- // 타임딜 섹션 -->
 
 				<!-- 내게 맞는 요금제 섹션 -->
 				<section class="ratePlanA-sec">
@@ -291,61 +366,94 @@
 						<div class="sec-body">
 							<!-- 요금제 공통 타입 A : 요금제 리스트 타입 -->
 							<!-- 4차 수정 : 내게 맞는 요금제 현행화 -->
-							<ul class="ratePlanA-list">
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-kakao.png" alt="" />
+							<div class="swiper ratePlanA-swiper">
+								<ul class="ratePlanA-list swiper-wrapper">
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-01.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>메신저, 웹서핑, <br>저화질영상 정도면 충분!</strong></p>
+												<p class="card-tag">#가볍게 #실속형</p>
+												<p class="card-charge">월 4,400원 부터</p>
+												<p class="card-data"><strong>7GB+</strong></p>
+											</div>
 										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>카톡이나 저화질로<br>동영상을 시청해요.</strong></p>
-											<p class="card-tag">#추천 #합리파</p>
-											<p class="card-charge">월 9,900원 부터</p>
-											<p class="card-data"><strong>7GB+</strong></p>
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-02.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>적당한 데이터로 <br>일상에서 무난하게!</strong></p>
+												<p class="card-tag">#딱좋아 #합리파</p>
+												<p class="card-charge">월 7,000원 부터</p>
+												<p class="card-data"><strong>10GB+</strong></p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-melon.png" alt="" />
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-03.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>웹툰, 음악, <br>유튜브도 부담없이!</strong></p>
+												<p class="card-tag">#즐겨보자 #BGM필수</p>
+												<p class="card-charge">월 10,900원 부터</p>
+												<p class="card-data"><strong>15GB+</strong></p>
+											</div>
 										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>웹툰이나<br>음악을 들어요.</strong></p>
-											<p class="card-tag">#음악 #동영상</p>
-											<p class="card-charge">월 15,900원 부터</p>
-											<p class="card-data"><strong>15GB+</strong></p>
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-04.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>동영상+게임 자유롭게! <br>사실상 무제한급!</strong></p>
+												<p class="card-tag">#렉없는 삶 #마음껏</p>
+												<p class="card-charge">월 16,900원 부터</p>
+												<p class="card-data"><strong>71GB+</strong></p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-youtube.png" alt="" />
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-05.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>데이터 걱정없이 <br>무제한!</strong></p>
+												<p class="card-tag">#끝판왕 #제한없이</p>
+												<p class="card-charge">월 19,000원 부터</p>
+												<p class="card-data"><strong>100GB+</strong></p>
+											</div>
 										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>동영상을 시청하거나<br>게임을 자주해요.</strong></p>
-											<p class="card-tag">#게임 #무제한</p>
-											<p class="card-charge">월 21,900원 부터</p>
-											<p class="card-data"><strong>71GB+</strong></p>
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-06.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>저렴하게, <br>똑똑하게!</strong></p>
+												<p class="card-tag">#알뜰파 #세컨폰</p>
+												<p class="card-charge">월 110원 부터</p>
+												<p class="card-data"><strong>가성비</strong></p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-low.png" alt="" />
-										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>저렴한 요금을<br>찾고 있어요.</strong></p>
-											<p class="card-tag">#저렴 #세컨폰</p>
-											<p class="card-charge">월 110원 부터</p>
-											<p class="card-data"><strong>갓성비</strong></p>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<!-- // 요금제 공통 타입 A : 요금제 리스트 타입 -->
+									</li>
+								</ul>
+							</div>
+							<button type="button" class="ui-btn ratePlanA-button-prev">
+								<i class="ui-icn icn-28-arw" aria-label="Prev"></i>
+							</button>
+							<button type="button" class="ui-btn ratePlanA-button-next">
+								<i class="ui-icn icn-28-arw" aria-label="Next"></i>
+							</button>
 						</div>
 					</div>
 				</section>
@@ -699,6 +807,64 @@
 		<nav class="floating-nav"></nav>
 		<!-- // floating Nav- -->
 	</div>
+
+	<!-- 공유하기 Modal Alert -->
+	<div class="modal modal-alert fade" id="shareModal" tabindex="-1" role="alertdialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="shareModalLabel">공유하기</h3>
+				</div>
+				<div class="modal-body">
+					<section class="share-sec">
+						<button type="button" class="ui-btn">
+							<i class="ui-icn icn-80-kakao" aria-hidden="true"></i>
+							<span>카카오톡</span>
+						</button>
+						<button type="button" class="ui-btn">
+							<i class="ui-icn icn-80-copy" aria-hidden="true"></i>
+							<span>URL 복사</span>
+						</button>
+					</section>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
+						<span>닫기</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 공유하기 Modal Alert -->
+
+	<!-- modal default -->
+	<div class="modal modal-default fade" id="FM01P01Modal" tabindex="-1" role="dialog" aria-labelledby="FM01P01ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-M01-P01-page">
+				<div class="modal-header">
+					<h3 class="modal-title blind" id="FM01P01ModalLabel">타임딜 안내</h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-wh" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 이벤트 혜택 섹션 -->
+					<section class="event-timedeal-sec">
+						<div class="sec-inner">
+							<div class="event-timedeal-head">
+								<img src="../../assets/images/contents/main-timedeal-head.png" alt="한 주 동안만 열리는 반.짝.특.가! 매일 11시! 타임딜" />
+							</div>
+							<div class="event-timedeal-body">
+								<img src="../../assets/images/contents/main-timedeal-body.png" alt="한 주 동안만 열리는 반.짝.특.가! 매일 11시! 타임딜" />
+							</div>
+						</div>
+					</section>
+					<!-- // 이벤트 혜택 섹션 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // modal default -->
 </body>
 
 </html>

@@ -247,6 +247,24 @@
 
 }
 
+// Default
+.modal-default {
+	.modal-dialog {
+		justify-content: center;
+		transform: translate(0, 50px);
+	}
+	.modal-content {
+		border-radius: 10rem;
+	}
+	.modal-header {
+		.btn-close {
+			position: absolute;
+			top: 14rem;
+			right: 14rem;
+		}
+	}
+}
+
 // Select, Basic 공통
 .modal-select,
 .modal-basic {
@@ -269,10 +287,12 @@
 		@include out-sec;
 		padding-top: 20rem;
 		padding-bottom: 10rem;
+		padding-right: 50rem;
 		.modal-title {
 			font-weight: 600;
 			font-size: 20rem;
 			color: #000;
+			word-break: keep-all;
 		}
 		.btn-close {
 			position: absolute;

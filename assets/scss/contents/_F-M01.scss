@@ -185,6 +185,10 @@
 					margin-left: 4rem;
 				}
 			}
+			.btn-more {
+				color: $color-primary;
+				font-weight: 600;
+			}
 		}
 
 		.sec-body {
@@ -203,7 +207,7 @@
 				display: flex;
 				align-items: center;
 				margin-top: 10rem;
-				gap: 4rem;
+				gap: 6rem;
 				.label-num {
 					position: relative;
 					width: 32rem;
@@ -360,15 +364,94 @@
 	}
 	// e: 추천딜 섹션
 
+	// s: 추천딜 섹션 (오픈전 추가)
+	.deal-sec { /* 추천딜 섹션 (오픈전 추가) */
+		position: relative;
+
+		.deal-before {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			height: 100%;
+			z-index: 20;
+			transform: translate(-50%, 0%);
+			background-color: rgba(54, 56, 58, 0.8);
+			backdrop-filter: blur(10px);
+
+			.sec-header .sec-tit {
+				color: #fff;
+			}
+
+			// 타이머 스킨변경
+			.deal-timer .timer-labels {
+				flex-wrap: wrap;
+				.label-num {
+					border: 0;
+					color: $color-primary;
+					&::before {
+						display: none;
+					}
+				}
+				.label-text {
+					font-weight: 600;
+					font-size: 20rem;
+					line-height: 40rem;
+					color: #fff;
+				}
+			}
+
+			// 공유하기
+			.deal-share {
+				position: relative;
+				margin-top: 17rem;
+				padding-top: 100rem;
+				.deal-share-char {
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 80rem;
+					height: 80rem;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.deal-share-box {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 10rem 16rem;
+					background-color: #F4F5F8;
+					border-radius: 2rem;
+					.tit {
+						font-weight: 600;
+						font-size: 12rem;
+						line-height: 16rem;
+						color: #000;
+						em {
+							color: $color-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+	// s: 추천딜 섹션 (오픈전 추가)
+
 	// s: 나에게 맞는 요금제 섹션
 	.ratePlanA-sec {
 		@include sec-basic;
 		padding-top: var(--sec-inner-padding);
 		padding-bottom: var(--sec-inner-padding);
 		background-color: #F2F5FB;
+		.sec-body {
+			position: relative;
+		}
 		.ratePlanA-list {
 			@include ratePlanA-list;
 		}
+
+		@include ratePlanA-swiper;
 
 		.ratePlanA-card {
 			@include ratePlanA-card;

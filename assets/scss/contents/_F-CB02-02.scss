@@ -15,8 +15,18 @@
 	// s: 요금제 카테고리 섹션
 	.cb-ratePlanA-sec {
 		padding-bottom: 10rem; /* 5차 수정 : 요금제목록 그림자 가려짐 대응 */
+		.sec-inner {
+			position: relative;
+		}
 		.ratePlanA-list {
 			@include ratePlanA-list;
+		}
+
+		@include ratePlanA-swiper;
+		@include media-tablet-xs {
+			.ratePlanA-swiper {
+				padding: 10rem;
+			}
 		}
 
 		.ratePlanA-card {

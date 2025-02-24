@@ -21,5 +21,19 @@
 		}
 	}
 	// e: 챗봇 설문 섹션
+
+	// s: 이벤트 섹션
+	.cb-event-sec {
+		margin-top: 28rem;
+
+		.event-swiper {
+			@include event-swiper;
+		}
+
+		.event-bnr {
+			@include event-bnr;
+		}
+	}
+	// e: 이벤트 섹션
 }
 // e: 통신사 선택 페이지

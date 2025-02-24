@@ -235,10 +235,10 @@
 							<div class="ratePlanC-toolbar">
 								<p class="count">총&nbsp;<em>9,999개</em>&nbsp;요금제</p>
 								<div class="sort">
-									<!-- 2차 수정 : 모든화면 추천순제외 -->
+									<!-- 2차 수정 : 모든화면 추천순제외 (2차개발시 원복) -->
 									<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#selectSortModal">
 										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
-										<span>낮은 가격 순</span>
+										<span>추천순</span>
 										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
 									</button>
 								</div>
@@ -341,8 +341,8 @@
 							<ul class="select-listbox" role="listbox">
 								<!-- setSelectValued 는 퍼블 확인용입니다. -->
 								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
-								<!-- <li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li> 2차 수정 : 모든화면 추천순제외 -->
-								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
+								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">추천순</li> <!-- 2차 수정 : 모든화면 추천순제외 (2차개발 원복) -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">낮은 가격 순</li>
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">선택 많은 순</li>
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">할인기간 후 낮은 가격 순</li><!-- 2차 수정 : 할인기간으로 띄어쓰기 수정 -->
 								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">데이터 많은 순</li>

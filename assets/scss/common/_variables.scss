@@ -24,7 +24,7 @@ $height-footer: 76rem;
 // 컬러 강조
 $color-primary: #542FDD; // 첫번째
 $color-secondary: #2FBE98; // 두번째
-$color-point: purple; // 기타 임시값
+$color-point: #E43558; // 기타
 
 // 컬러 상태
 $color-success: green; // 성공 임시값
@@ -249,7 +249,43 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	gap: 12rem;
 
 	@include media-tablet-xs {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		display: flex;
+		gap: 0;
+		.ratePlanA-item {
+			width: 172rem;
+			flex: none;
+		}
+	}
+}
+// 요금제 카테고리 버튼
+@mixin ratePlanA-swiper {
+	.ratePlanA-button-prev,
+	.ratePlanA-button-next {
+		display: none;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		z-index: 10;
+		transform: translate(50%, -50%);
+		width: 28rem;
+		height: 28rem;
+	}
+	.ratePlanA-button-prev {
+		right: auto;
+		left: 0;
+		transform: translate(-50%, -50%) rotate(180deg);
+	}
+	.swiper-button-disabled {
+		display: none;
+	}
+	@include media-tablet-xs {
+		.ratePlanA-button-prev,
+		.ratePlanA-button-next {
+			display: block;
+		}
+		.swiper-button-disabled {
+			display: none;
+		}
 	}
 }
 
@@ -449,39 +485,23 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				font-size: 12rem;
 				line-height: 16rem;
 				color: $color-primary;
-				.ui-ico {
+				.ui-icn {
 					margin-right: 2rem;
 				}
 			}
 		}
 	}
 	.card-tit {
-		display: flex;
 		font-weight: 700;
 		font-size: 20rem;
 		color: #000;
-		.label {
-			position: relative;
-			top: 4rem;
-			margin-right: 4rem;
-			flex:none;
-			padding: 2rem 8rem;
-			border-radius: 4rem;
-			font-weight: 500;
-			font-size: 12rem;
-			line-height: 16rem;
-			height: 20rem;
-			color: #fff;
-			vertical-align: middle;
-			&.primary { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
-				position: relative;
-				z-index: 10;
-				background-color: $color-primary;
-			}
-		}
 		.ui-btn {
 			z-index: 10;
-			margin-left: 8rem;
+			top: 2rem;
+			margin-left: 4rem;
+		}
+		.ui-icn {
+			top: -2rem;
 		}
 	}
 	.card-name {
@@ -520,10 +540,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		margin-top: 8rem;
 		.brand {
 			display: flex;
 			align-items: center;
-			height: 25rem;
+			height: 20rem;
 			gap: 4rem;
 			img {
 				height: 100%;
@@ -531,7 +552,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			.brand-rating {
 				display: inline-flex;
 				align-items: center;
-				padding: 3rem 8rem 3rem 4rem;
+				padding: 2rem 8rem 2rem 4rem;
 				border:1px solid #CDC2F5;
 				border-radius: 15rem;
 				color: $color-primary;
@@ -546,7 +567,6 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			justify-content: flex-end;
 			position: relative;
 			top: 2rem;
-			height: 40rem;
 			text-align: right;
 
 			.charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
@@ -554,7 +574,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				font-weight: 700;
 				font-size: 16rem;
 				line-height: 22rem;
-				color: #1B0179;
+				color: #000;
 			}
 			.charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
 				margin-top: 0rem;
@@ -564,11 +584,18 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				color: #828588;
 			}
 			.charge-point {
+				display: flex;
+				align-items: center;
 				margin-bottom: 2rem;
 				font-weight: 700;
-				font-size: 16rem;
-				line-height: 22rem;
-				color: $color-primary;
+				font-size: 18rem;
+				line-height: 24rem;
+				color: $color-point;
+				.tit {
+					font-size: 12rem;
+					line-height: 24rem;
+					margin-right: 4rem;
+				}
 			}
 		}
 	}
@@ -929,19 +956,43 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		padding: 16rem 0 20rem 0;
 
 		.card-charge {
+			align-items: flex-end;
 			margin-top: 12rem;
 			.charge {
 				.charge-tit {
 					font-weight: 700;
 					font-size: 18rem;
 					line-height: 24rem;
-					color: $color-primary;
+					color: #000;
+				}
+
+				.charge-point {
+					display: flex;
+					align-items: center;
+					margin-bottom: 2rem;
+					font-weight: 700;
+					font-size: 18rem;
+					line-height: 24rem;
+					color: $color-point;
+					.tit {
+						font-size: 12rem;
+						line-height: 24rem;
+						margin-right: 4rem;
+					}
+				}
+
+				.charge-txt {
+					margin-top: 2rem;
+					font-weight: 500;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #828588;
 				}
 			}
 		}
 	}
 	.card-footer {
-		padding: 8rem 0 12rem 0;
+		padding: 16rem 0 12rem 0;
 		border-top: 1px solid #EFF0F0;
 	}
 	.card-opening {
@@ -963,7 +1014,12 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	.card-tit {
 		font-weight: 600;
 		font-size: 18rem;
+		line-height: 24rem;
 		color: #000;
+		.ui-icn {
+			position: relative;
+			top: -2rem;
+		}
 	}
 	.card-info {
 		display: flex;
@@ -996,7 +1052,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		display: flex;
 		flex-direction: column;
 		gap: 20rem;
-		max-height: 110rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+		max-height: 100rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
 		overflow: hidden; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
 		&.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
 			max-height: none;
@@ -1015,7 +1071,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		.brand {
 			display: flex;
 			align-items: center;
-			height: 22rem;
+			height: 20rem;
 			img {
 				height: 100%;
 			}
@@ -1023,7 +1079,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				display: inline-flex;
 				align-items: center;
 				margin-left: 4rem;
-				padding: 3rem 8rem 3rem 4rem;
+				padding: 2rem 8rem 2rem 4rem;
 				border:1px solid #CDC2F5;
 				border-radius: 15rem;
 				color: $color-primary;
@@ -1990,7 +2046,8 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 }
 @mixin choice-swiper {
 	> li {
-		width: 232rem;
+		width: 160rem;
+		height: 150rem;
 	}
 }
 // e: 인터넷 결합 설문 목록
@@ -2000,10 +2057,12 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	height: 100%;
 	background-color: #F4F5F8;
 	border-radius: 4rem;
-	padding: 20rem;
+	padding: 16rem 20rem;
 	border: 1px solid transparent;
+	box-sizing: border-box;
 	cursor: pointer;
 
 	/* 1차 수정 : IOS 호환성 대응 */
@@ -2021,27 +2080,35 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		z-index: 10;
 		display: block;
 		width: 100%;
-		img {
-			height: 40rem;
-		}
 		.tit {
 			display: block;
+			margin-bottom: 4rem;
 			font-weight: 600;
-			font-size: 18rem;
-			line-height: 24rem;
+			font-size: 16rem;
+			line-height: 22rem;
 			color: #2A2B2D;
 		}
 		.txt {
 			display: block;
 			font-weight: 500;
-			font-size: 16rem;
-			line-height: 20rem;
+			font-size: 12rem;
+			line-height: 16rem;
 			color: #63666A;
 		}
 	}
 
+	input:checked + .choice-con .ui-icn {
+		&::before {
+			transform: translateY(110%);
+		}
+
+		&::after {
+			transform: translateY(0%);
+		}
+	}
+
 	&.is-selected {
-		background-color: #fff;
+		background-color: #EAE6FB;
 		border-color: $color-primary;
 	}
 }

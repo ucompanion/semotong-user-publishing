@@ -1,30 +1,18 @@
 @charset "utf-8";
 /*-------------------------------------------------------------------
-	분류그룹 : 추천 요금제
+	분류그룹 : MNO 요금제
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
-// s: 추천 요금제 페이지
+// s: MNO 요금제 페이지
 .F-M05-page {
 
 	// 페이지별 섹션 여백 설정
-	--sec-outer-margin: 50rem;
 	@include bottom-spacer;
 
 	// s: 상품리스트 섹션
 	.ratePlanC-sec {
 		padding-top: 16rem;
 		@include sec-basic;
-
-		@include media-tablet-xs {
-			margin-top: 16rem;
-			padding-top: 0;
-			border-top: 0;
-
-			.sec-inner {
-				padding-top: 16rem;
-				border-top: 1px solid #EFF0F0;
-			}
-		}
 
 		// 요금제 상품 툴바
 		.ratePlanC-toolbar { /* 1차 수정: 툴바 전체 수정(셀렉트 말줄임 적용) */
@@ -70,46 +58,5 @@
 
 	}
 	// e: 상품리스트 섹션
-
-	// s: 상품추천 섹션
-	.recom-bnr-sec {
-		margin-top: var(--sec-outer-margin);
-		@include sec-basic;
-
-		.recom-swiper { /* 7차 수정 : 추천배너 스와이프로 변경 */
-			@include event-swiper;
-		}
-		.recom-bnr { /* 7차 수정 : 추천배너 스와이프로 변경 */
-			@include event-bnr;
-		}
-
-	}
-	// e: 상품추천 섹션
-
-	// s: 자주묻는 질문 섹션
-	.faq-sec {
-		margin-top: var(--sec-outer-margin);
-		@include sec-basic;
-
-		// 자주묻는 질문 아코디언
-		.faq-accordion {
-			@include faq-accordion;
-		}
-		// 자주묻는 질문 아코디언
-	}
-	// e: 자주묻는 질문 섹션
-
-	// s: 알뜰폰 개통 방법
-	.account-sol-sec {
-		margin-top: var(--sec-outer-margin);
-		@include account-sol-sec;
-		.sec-tit {
-			font-size: 20rem;
-			line-height: 28rem;
-			text-align: left;
-		}
-	}
-	// e: 알뜰폰 개통 방법
-
 }
-// e: 추천 요금제 페이지
+// e: MNO 요금제 페이지

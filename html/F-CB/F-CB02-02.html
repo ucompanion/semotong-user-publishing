@@ -18,11 +18,43 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@7.0.0/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// 모달 바로 볼 수 있도록 호출
 			var FCB0202Modal = new bootstrap.Modal(document.getElementById('FCB0202Modal'));
 			FCB0202Modal.show();
+
+			// 모달이 완전히 나타난 후 실행됨!
+			document.getElementById("FCB0202Modal").addEventListener("shown.bs.modal", function () {
+				// s: 내게 맞는 요금제
+				let ratePlanASwiper = null;
+				function initSwiper() {
+					if (window.innerWidth >= 768 && !ratePlanASwiper) {
+						// 모바일 화면일 때 Swiper 초기화
+						ratePlanASwiper = new Swiper(".ratePlanA-swiper", {
+							threshold: 3,
+							slidesPerView: 'auto',
+							spaceBetween: 10,
+							breakpoints: {
+								768: {
+									navigation: {
+										nextEl: ".cb-ratePlanA-sec .ratePlanA-button-next",
+										prevEl: ".cb-ratePlanA-sec .ratePlanA-button-prev",
+									},
+								}
+							}
+						});
+					} else if (window.innerWidth < 768 && ratePlanASwiper) {
+						ratePlanASwiper.destroy(true, true);
+						ratePlanASwiper = null;
+					}
+				}
+				initSwiper();
+				window.addEventListener('resize', initSwiper);
+				// e: 내게 맞는 요금제
+			});
 		});
 	</script>
 </head>
@@ -76,60 +108,94 @@
 					<section class="cb-ratePlanA-sec">
 						<div class="sec-inner">
 							<!-- 요금제 공통 타입 A : 요금제 리스트 타입 -->
-							<ul class="ratePlanA-list">
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-kakao.png" alt="" />
+							<div class="swiper ratePlanA-swiper">
+								<ul class="ratePlanA-list swiper-wrapper">
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-01.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>메신저, 웹서핑, <br>저화질영상 정도면 충분!</strong></p>
+												<p class="card-tag">#가볍게 #실속형</p>
+												<p class="card-charge">월 4,400원 부터</p>
+												<p class="card-data"><strong>7GB+</strong></p>
+											</div>
 										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>웹서핑, 카톡을<br>주로 사용해요.</strong></p>
-											<p class="card-tag">#추천 #합리파</p>
-											<p class="card-charge">월 0원 부터</p>
-											<p class="card-data"><strong>7GB+</strong></p>
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-02.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>적당한 데이터로 <br>일상에서 무난하게!</strong></p>
+												<p class="card-tag">#딱좋아 #합리파</p>
+												<p class="card-charge">월 7,000원 부터</p>
+												<p class="card-data"><strong>10GB+</strong></p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-melon.png" alt="" />
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-03.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>웹툰, 음악, <br>유튜브도 부담없이!</strong></p>
+												<p class="card-tag">#즐겨보자 #BGM필수</p>
+												<p class="card-charge">월 10,900원 부터</p>
+												<p class="card-data"><strong>15GB+</strong></p>
+											</div>
 										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>웹툰이나<br>음악을 들어요.</strong></p>
-											<p class="card-tag">#음악 #동영상</p>
-											<p class="card-charge">월 15,900원 부터</p>
-											<p class="card-data"><strong>15GB+</strong></p>
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-04.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>동영상+게임 자유롭게! <br>사실상 무제한급!</strong></p>
+												<p class="card-tag">#렉없는 삶 #마음껏</p>
+												<p class="card-charge">월 16,900원 부터</p>
+												<p class="card-data"><strong>71GB+</strong></p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-youtube.png" alt="" />
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-05.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>데이터 걱정없이 <br>무제한!</strong></p>
+												<p class="card-tag">#끝판왕 #제한없이</p>
+												<p class="card-charge">월 19,000원 부터</p>
+												<p class="card-data"><strong>100GB+</strong></p>
+											</div>
 										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>동영상을 시청하거나<br>게임을 자주해요.</strong></p>
-											<p class="card-tag">#게임 #무제한</p>
-											<p class="card-charge">월 21,900원 부터</p>
-											<p class="card-data"><strong>71GB+</strong></p>
+									</li>
+									<li class="ratePlanA-item swiper-slide">
+										<div class="ratePlanA-card" role="button" tabindex="0">
+											<div class="card-thumb">
+												<img src="../../assets/images/common/icn-40-plan-cate-06.png" alt="" />
+											</div>
+											<div class="card-body">
+												<p class="card-tit"><strong>저렴하게, <br>똑똑하게!</strong></p>
+												<p class="card-tag">#알뜰파 #세컨폰</p>
+												<p class="card-charge">월 110원 부터</p>
+												<p class="card-data"><strong>가성비</strong></p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class="ratePlanA-item">
-									<div class="ratePlanA-card" role="button" tabindex="0">
-										<div class="card-thumb">
-											<img src="../../assets/images/common/img-plan-price-low.png" alt="" />
-										</div>
-										<div class="card-body">
-											<p class="card-tit"><strong>저렴한 요금을<br>찾고 있어요.</strong></p>
-											<p class="card-tag">#저렴 #세컨폰</p>
-											<p class="card-charge">월 110원 부터</p>
-											<p class="card-data"><strong>갓성비</strong></p>
-										</div>
-									</div>
-								</li>
-							</ul>
+									</li>
+								</ul>
+							</div>
+							<button type="button" class="ui-btn ratePlanA-button-prev">
+								<i class="ui-icn icn-28-arw" aria-label="Prev"></i>
+							</button>
+							<button type="button" class="ui-btn ratePlanA-button-next">
+								<i class="ui-icn icn-28-arw" aria-label="Next"></i>
+							</button>
 							<!-- // 요금제 공통 타입 A : 요금제 리스트 타입 -->
 						</div>
 					</section>

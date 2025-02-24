@@ -67,18 +67,44 @@
 	// e: 이벤트 섹션
 
 	// s: 통신사 선택 섹션
-	.telcom-choice-sec {
+	.telecom-choice-sec {
 		margin-top: var(--sec-outer-margin);
 		@include sec-basic;
 
-		.choice-list {
-			@include choice-list;
-			grid-template-columns: 1fr 1fr;
+		.telecom-list {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 8rem;
+			@include media-mobile-xl {
+				gap: 20rem;
+			}
+			@include media-tablet-xs {
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+				gap: 8rem;
+			}
 		}
-		.choice-rdo {
-			@include choice-rdo;
-			.choice-con {
-				text-align: center;
+		.telecom-rdo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			background-color: #F4F5F8;
+			.telecom-con,
+			.ui-icn {
+				width: 100%;
+				height: 100%;
+			}
+			input:checked + .telecom-con .ui-icn {
+				&::before {
+					transform: translateY(110%);
+				}
+
+				&::after {
+					transform: translateY(0%);
+				}
+
 			}
 		}
 	}
@@ -186,12 +212,9 @@
 			.choice-con {
 				position: relative;
 				.ui-icn {
-					position: absolute;
-					right: 0;
-					top: -2rem;
-				}
-				.tit {
-					margin-bottom: 12rem;
+					margin-top: 36rem;
+					width: 40rem;
+					height: 20rem;
 				}
 				.txt + .txt {
 					margin-top: 2rem;
@@ -374,24 +397,30 @@
 					justify-content: space-between;
 					align-items: center;
 					font-weight: 700;
-					font-size: 18rem;
-					line-height: 26rem;
+					font-size: 20rem;
+					line-height: 28rem;
 					color: #000;
 				}
 				.merge {
 					display: flex;
-					justify-content: space-between;
 					align-items: center;
+					justify-content: flex-end;
+					margin-top: 2rem;
 					font-weight: 700;
 					font-size: 18rem;
 					line-height: 26rem;
-					color: $color-secondary;
+					color: $color-primary;
+					em {
+						font-size: 12rem;
+						line-height: 16rem;
+						margin-right: 4rem;
+					}
 				}
 				.freeGift {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					margin-top: 8rem;
+					margin-top: 6rem;
 					strong {
 						font-weight: 600;
 						color: $color-primary;
