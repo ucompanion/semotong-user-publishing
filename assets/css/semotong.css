@@ -3587,6 +3587,9 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 
+.modal-select .modal-body {
+  margin-bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + 16rem);
+}
 .modal-select .select-listbox {
   display: flex;
   flex-direction: column;
@@ -10206,18 +10209,18 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 
 /*-------------------------------------------------------------------
-	분류그룹 : MNO 요금제
+	분류그룹 : 타임딜 안내
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
-.F-M01-P01-page .event-timedeal-sec {
+.F-M01-P01-page .timedeal-sec {
   padding: 0;
   max-width: 320rem;
 }
-.F-M01-P01-page .event-timedeal-sec .event-timedeal-body {
+.F-M01-P01-page .timedeal-sec .timedeal-body {
   position: relative;
   margin-top: -120rem;
 }
-.F-M01-P01-page .event-timedeal-sec img {
+.F-M01-P01-page .timedeal-sec img {
   max-width: 100%;
 }
 

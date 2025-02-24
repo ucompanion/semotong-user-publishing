@@ -328,6 +328,9 @@
 
 // Selkect
 .modal-select {
+	.modal-body {
+		margin-bottom: calc(#{$safe-area-bottom} + 16rem);
+	}
 	.select-listbox {
 		display: flex;
 		flex-direction: column;
