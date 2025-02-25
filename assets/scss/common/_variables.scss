@@ -2485,3 +2485,54 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 // e: 스텝
+
+// s: 완료
+@mixin complete-sec {
+	@include flex-fill-height;
+
+	.sec-inner {
+		@include flex-fill-height;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.complete-wrap {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			strong {
+				display: block;
+				margin-top: 20rem;
+				text-align: center;
+				font-weight: 700;
+				font-size: 20rem;
+				line-height: 28rem;
+				color: #000;
+			}
+			.msg-fail {
+				margin-top: 15rem;
+				text-align: center;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #E55F61;
+			}
+			.msg-complete {
+				margin-top: 15rem;
+				text-align: center;
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #46484B;
+				em {
+					font-weight: 700;
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}
+// e: 완료

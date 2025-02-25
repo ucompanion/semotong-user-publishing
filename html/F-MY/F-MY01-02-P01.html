@@ -24,6 +24,10 @@
 			var FMY0102P01Modal = new bootstrap.Modal(document.getElementById('FMY0102P01Modal'));
 			FMY0102P01Modal.show();
 		});
+		function openModal(id) {
+			var PartnersModal = new bootstrap.Modal(document.getElementById(id));
+			PartnersModal.show();
+		}
 	</script>
 </head>
 
@@ -53,16 +57,16 @@
 						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
 					</button>
 				</div>
+				<!-- modal-body -->
 				<div class="modal-body">
 					<!-- 탭 목록 -->
 					<div class="ui-tab tab-style1">
 						<ul class="tab-list" role="tablist">
-							<!-- 2차 범위에 오픈
 							<li class="tab-item" role="presentation">
-								<button class="tab-link active" id="tab-11" data-bs-toggle="tab" data-bs-target="#tab-11-pane" type="button" role="tab" aria-controls="tab-11-pane" aria-selected="false">구매 상품 후기</button>
-							</li> -->
+								<button class="tab-link active" id="tab-11" data-bs-toggle="tab" data-bs-target="#tab-11-pane" type="button" role="tab" aria-controls="tab-11-pane" aria-selected="true">구매 상품 후기</button>
+							</li>
 							<li class="tab-item" role="presentation">
-								<button class="tab-link active" id="tab-12" data-bs-toggle="tab" data-bs-target="#tab-12-pane" type="button" role="tab" aria-controls="tab-12-pane" aria-selected="true">세모통 후기</button>
+								<button class="tab-link" id="tab-12" data-bs-toggle="tab" data-bs-target="#tab-12-pane" type="button" role="tab" aria-controls="tab-12-pane" aria-selected="false">세모통 후기</button>
 							</li>
 						</ul>
 					</div>
@@ -78,7 +82,7 @@
 									<!-- 리뷰 목록 -->
 									<ul class="review-list">
 										<li class="review-item">
-											<!-- 리뷰 카드 -->
+											<!-- Case 리뷰 결과 -->
 											<div class="review-card">
 												<div class="card-body">
 													<p class="card-label is-written">작성완료</p>
@@ -107,10 +111,10 @@
 													</div>
 												</div>
 											</div>
-											<!-- // 리뷰 카드 -->
+											<!-- // Case 리뷰 결과 -->
 										</li>
 										<li class="review-item">
-											<!-- 리뷰 카드 -->
+											<!-- Case 리뷰 수정 전 -->
 											<div class="review-card">
 												<div class="card-body">
 													<p class="card-label">작성대기</p>
@@ -127,7 +131,53 @@
 													<!-- Case 작성대기 (입력후) -->
 													<div class="card-wait">
 														<div class="wait-rating">
-															<p class="rating-tit">서비스는 어떠셧나요?</p>
+															<p class="rating-tit">통신사는 어떠셧나요?</p>
+															<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
+															<div class="rating-star" aria-label="평점: 0점">
+																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
+																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="2별"></i></button>
+																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="3별"></i></button>
+																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="4별"></i></button>
+																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="5별"></i></button>
+															</div>
+														</div>
+														<div class="wait-frm">
+															<div class="ui-textarea">
+																<!-- textarea placeholder의 줄바꿈 된 내용은 임의대로 들여쓰기 하면 안됩니다. -->
+																<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea" placeholder="고객님의 소중한 의견을 적어주세요.
+(최소 10자 이상)"></textarea>
+																<p class="bytes"><em class="count">0/</em>500</p>
+															</div>
+														</div>
+														<div class="wait-action">
+															<button type="button" class="ui-btn btn-action primary" disabled>
+																<span>등록하기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- // Case 리뷰 수정 전 -->
+										</li>
+										<li class="review-item">
+											<!-- Case 리뷰 수정 중 -->
+											<div class="review-card">
+												<div class="card-body">
+													<p class="card-label">작성대기</p>
+													<button type="button" class="ui-btn">
+														<i class="ui-icn icn-20-remove-gr" aria-label="삭제"></i>
+													</button>
+													<div class="card-cont">
+														<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></p>
+														<p class="card-title"><strong>월110GB+매일2GB+3Mbps</strong></p>
+														<p class="card-date">개통일 24.08.01</p>
+													</div>
+												</div>
+												<div class="card-footer">
+													<!-- Case 작성대기 (입력후) -->
+													<div class="card-wait">
+														<div class="wait-rating">
+															<p class="rating-tit">통신사는 어떠셧나요?</p>
 															<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
 															<div class="rating-star" aria-label="평점: 4점">
 																<button type="button" class="ui-btn is-selected" aria-selected="true" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
@@ -154,53 +204,7 @@
 													</div>
 												</div>
 											</div>
-											<!-- // 리뷰 카드 -->
-										</li>
-										<li class="review-item">
-											<!-- 리뷰 카드 -->
-											<div class="review-card">
-												<div class="card-body">
-													<p class="card-label">작성대기</p>
-													<button type="button" class="ui-btn">
-														<i class="ui-icn icn-20-remove-gr" aria-label="삭제"></i>
-													</button>
-													<div class="card-cont">
-														<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></p>
-														<p class="card-title"><strong>월110GB+매일2GB+3Mbps</strong></p>
-														<p class="card-date">개통일 24.08.01</p>
-													</div>
-												</div>
-												<div class="card-footer">
-													<!-- Case 작성대기 (입력후) -->
-													<div class="card-wait">
-														<div class="wait-rating">
-															<p class="rating-tit">서비스는 어떠셧나요?</p>
-															<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
-															<div class="rating-star" aria-label="평점: 0점">
-																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
-																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="2별"></i></button>
-																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="3별"></i></button>
-																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="4별"></i></button>
-																<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="5별"></i></button>
-															</div>
-														</div>
-														<div class="wait-frm">
-															<div class="ui-textarea">
-																<!-- textarea placeholder의 줄바꿈 된 내용은 임의대로 들여쓰기 하면 안됩니다. -->
-																<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea" placeholder="고객님의 소중한 의견을 적어주세요.
-(최소 10자 이상)"></textarea>
-																<p class="bytes"><em class="count">0/</em>500</p>
-															</div>
-														</div>
-														<div class="wait-action">
-															<button type="button" class="ui-btn btn-action primary" disabled>
-																<span>등록하기</span>
-															</button>
-														</div>
-													</div>
-												</div>
-											</div>
-											<!-- // 리뷰 카드 -->
+											<!-- // Case 리뷰 중 -->
 										</li>
 									</ul>
 									<!-- // 리뷰 목록 -->
@@ -230,13 +234,73 @@
 										<!-- 리뷰 목록 -->
 										<ul class="review-list">
 											<li class="review-item">
-												<!-- 리뷰 카드 -->
+												<!-- Case 리뷰 카드 등록 -->
+												<div class="review-card">
+													<div class="card-footer">
+														<!-- 통신사 선택 -->
+														<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
+														<div class="basic-frm">
+															 <div class="frm-field">
+																 <div class="frm-title">
+																	 <label class="tit" for="frmTelecom">통신사를 선택해주세요.</label>
+																 </div>
+																 <div class="frm-content">
+																	 <div class="ui-sel">
+																		 <!-- 선택전 is-placeholder, (선택후 삭제) -->
+																		 <button type="button" id="frmTelecom" class="sel is-placeholder" role="combobox" aria-haspopup="listbox" onclick="openModal('PartnersModal')">
+																			 <span>통신사를 선택해 주세요.</span>
+																			 <i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
+																		 </button>
+																	 </div>
+																 </div>
+															 </div>
+														</div>
+														<!-- // 통신사 선택 -->
+
+														<!-- Case 작성대기 (입력후) -->
+														<div class="card-wait">
+															<div class="wait-rating">
+																<p class="rating-tit">통신사는 어떠셧나요?</p>
+																<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
+																<div class="rating-star" aria-label="평점: 0점">
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="2별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="3별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="4별"></i></button>
+																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="5별"></i></button>
+																</div>
+															</div>
+															<div class="wait-frm">
+																<div class="ui-textarea">
+																	<!-- textarea placeholder의 줄바꿈 된 내용은 임의대로 들여쓰기 하면 안됩니다. -->
+																	<textarea name="" id="frmTextarea" cols="50" rows="2" class="textarea" placeholder="고객님의 소중한 의견을 적어주세요.
+(최소 10자 이상)"></textarea>
+																	<p class="bytes"><em class="count">0/</em>500</p>
+																</div>
+															</div>
+															<div class="wait-action">
+																<button type="button" class="ui-btn btn-action primary" disabled>
+																	<span>등록하기</span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- // Case 리뷰 카드 등록 -->
+
+											</li>
+											<li class="review-item">
+												<!-- Case 리뷰 카드 결과 -->
 												<div class="review-card">
 													<div class="card-body">
 														<p class="card-label is-written">작성완료</p>
 														<button type="button" class="ui-btn card-remove">
 															<i class="ui-icn icn-20-remove-gr" aria-label="삭제"></i>
 														</button>
+														<div class="card-cont">
+															<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></p>
+															<p class="card-title"><strong>월110GB+매일2GB+3Mbps</strong></p>
+														</div>
 													</div>
 													<div class="card-footer">
 														<!-- Case 작성완료 -->
@@ -254,22 +318,27 @@
 														</div>
 													</div>
 												</div>
-												<!-- // 리뷰 카드 -->
+												<!-- // Case 리뷰 카드 결과 -->
 											</li>
 											<li class="review-item">
-												<!-- 리뷰 카드 -->
+												<!-- Case 리뷰 카드 수정 중 -->
 												<div class="review-card">
 													<div class="card-body">
 														<p class="card-label">작성대기</p>
 														<button type="button" class="ui-btn">
 															<i class="ui-icn icn-20-remove-gr" aria-label="삭제"></i>
 														</button>
+														<div class="card-cont">
+															<p class="card-brand"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></p>
+															<p class="card-title"><strong>월110GB+매일2GB+3Mbps</strong></p>
+															<p class="card-date">개통일 24.08.01</p>
+														</div>
 													</div>
 													<div class="card-footer">
 														<!-- Case 작성대기 (입력후) -->
 														<div class="card-wait">
 															<div class="wait-rating">
-																<p class="rating-tit">서비스는 어떠셧나요?</p>
+																<p class="rating-tit">통신사는 어떠셧나요?</p>
 																<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
 																<div class="rating-star" aria-label="평점: 4점">
 																	<button type="button" class="ui-btn is-selected" aria-selected="true" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
@@ -296,10 +365,10 @@
 														</div>
 													</div>
 												</div>
-												<!-- // 리뷰 카드 -->
+												<!-- // Case 리뷰 카드 수정 중 -->
 											</li>
 											<li class="review-item">
-												<!-- 리뷰 카드 -->
+												<!-- Case 리뷰 카드 수정 전 -->
 												<div class="review-card">
 													<div class="card-body">
 														<p class="card-label">작성대기</p>
@@ -311,7 +380,7 @@
 														<!-- Case 작성대기 (입력후) -->
 														<div class="card-wait">
 															<div class="wait-rating">
-																<p class="rating-tit">서비스는 어떠셧나요?</p>
+																<p class="rating-tit">통신사는 어떠셧나요?</p>
 																<!-- 선택후: 평점수정, is-selected, aria-selected="true" -->
 																<div class="rating-star" aria-label="평점: 0점">
 																	<button type="button" class="ui-btn" aria-selected="false" onclick="setRating(this)"><i class="ui-icn icn-24-star-gr" aria-label="1별"></i></button>
@@ -337,7 +406,7 @@
 														</div>
 													</div>
 												</div>
-												<!-- // 리뷰 카드 -->
+												<!-- // Case 리뷰 카드 수정 전 -->
 											</li>
 										</ul>
 										<!-- // 리뷰 목록 -->
@@ -356,10 +425,148 @@
 					</div>
 					<!-- // 탭 패널 -->
 				</div>
+				<!-- //modal-body -->
+				<!-- modal-footer -->
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-action primary">
+						<span>추가하기</span>
+					</button>
+				</div>
+				<!-- // modal-footer -->
 			</div>
 		</div>
 	</div>
 	<!-- // modal default -->
+
+	<!-- 정렬 modal select -->
+	<div class="modal modal-select fade" id="PartnersModal" tabindex="-1" role="dialog" aria-labelledby="PartnersModalLabel" aria-hidden="true" style="z-index: 3000;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="PartnersModalLabel">통신사</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 콤보박스 섹션 -->
+					<section class="select-sec">
+						<div class="sec-inner">
+							<!-- modal-select 공통 -->
+							<ul class="select-listbox" role="listbox">
+								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+								 <!-- KT -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">헬로비젼</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">씨엔커뮤니케이션</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에넥스텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">코드모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KT파워텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">위너스텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">ACN코리아</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">앤텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에스원</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">장성모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">아이즈비전</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">토스모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">제이씨티</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KTM모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">유니컴즈</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">미니게이트</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">더원플랫폼</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">핀플레이</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">드림라인</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KCT</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">와이엘랜드</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">큰사람</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">니즈텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KT스카이라이프</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에이프러스</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">한국PMO</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">스마텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">국민은행</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">이텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">인스모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">고고팩토리</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">더피엔엘</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에르엘KT</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">핀샷</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">오파스넷</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">친구아이엔씨</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">한패스모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KT</li>
+								<!-- // KT -->
+
+								<!-- U+ -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">토스모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">미디어로그</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">서경방송</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">제주방송</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">와이엘랜드</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">ACN코리아</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">코드모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">유니컴즈</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">큰사람</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">스마텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에넥스텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">시월텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">조이텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">아이즈비전</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">핀플레이</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에스원</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">원텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">국민은행</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">헬로비젼</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">핀샷</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">화인통신</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KPMO</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">엔티온텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">인스코리아</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">엔페이넷</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">앤텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">코나아이</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">CK커뮤스트리</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KCT</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에르엘</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">위너스텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">한패스모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">사람과</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">마블프로듀스</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KG모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">글로벌머니익스프레스</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">친구모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">찬스모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">우리은행</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">LG유플러스</li>
+								<!-- //U+ -->
+
+								 <!-- SKT -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">아이즈비전</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">유니컴즈</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">큰사람</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">스마텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">SK텔링크</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KCT</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에스원</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">프리텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">헬로비젼</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">에넥스텔레콤</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">조이텔</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">토스모바일</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">국민은행</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">핀플레이</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">SK텔레콤</li>
+								<!-- //SKT -->
+							</ul>
+						</div>
+					</section>
+					<!-- // 콤보박스 섹션 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 정렬 modal select -->
+
 </body>
 
 </html>

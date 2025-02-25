@@ -28,6 +28,12 @@
 
 			.review-card { /* 2024-12-12 내후기관리 review-card 전체수정 */
 				@include review-card;
+
+				.basic-frm {
+					width: 100%;
+					@include basic-frm;
+					margin-bottom: 16rem;
+				}
 			}
 		}
 

@@ -2924,6 +2924,14 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-140-complete.svg");
 }
 
+.icn-140-change::before {
+  background-image: url("../images/common/icn-140-change.svg");
+}
+
+.icn-140-fail::before {
+  background-image: url("../images/common/icn-140-fail.svg");
+}
+
 .icn-h20-speed-low::before {
   background-image: url("../images/common/icn-h20-speed-low.svg");
 }
@@ -13311,6 +13319,69 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-02-P01-page .review-sec .review-list .review-card .card-footer .card-wait .wait-action {
   margin-top: 16rem;
 }
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  margin-bottom: 16rem;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-title {
+  margin-bottom: 10rem;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-title .tit {
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-group {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-group .btn-sub {
+  margin: 0;
+  height: 52rem;
+  width: auto;
+  min-width: 100rem;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-group + .frm-group {
+  margin-top: 10rem;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-group .frm-split {
+  color: #D9D9D9;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-group.type-car .ui-inp .inp {
+  text-align: center;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-field .frm-group.type-car .ui-inp:nth-child(3) {
+  flex: none;
+  width: 25%;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-alert {
+  display: none;
+  margin-top: 6rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-alert.is-show {
+  display: block;
+}
+.F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-alert.is-errored {
+  color: #EA2A2A;
+}
 @media all and (min-width: 768px) {
   .F-MY01-02-P01-page .review-sec .sec-header br {
     display: none;
@@ -21175,6 +21246,79 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #63666A;
 }
+.F-SC02-page .complete-sec {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.F-SC02-page .complete-sec .sec-inner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.F-SC02-page .complete-sec .sec-inner .complete-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.F-SC02-page .complete-sec .sec-inner .complete-wrap strong {
+  display: block;
+  margin-top: 20rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 28rem;
+  color: #000;
+}
+.F-SC02-page .complete-sec .sec-inner .complete-wrap .msg-fail {
+  margin-top: 15rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #E55F61;
+}
+.F-SC02-page .complete-sec .sec-inner .complete-wrap .msg-complete {
+  margin-top: 15rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
+}
+.F-SC02-page .complete-sec .sec-inner .complete-wrap .msg-complete em {
+  font-weight: 700;
+  color: #542FDD;
+}
+.F-SC02-page .complete-sec .sCash-box {
+  width: 100%;
+  margin-top: 30rem;
+  box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rem;
+}
+.F-SC02-page .complete-sec .sCash-box .sCash-tit {
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #2801B5;
+}
+.F-SC02-page .complete-sec .sCash-box .sCash-val {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #63666A;
+}
 
 /*-------------------------------------------------------------------
 	분류그룹 : 추천 요금제
@@ -22678,6 +22822,26 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 20rem;
   line-height: 28rem;
   color: #000;
+}
+.F-QU-page .complete-sec .sec-inner .complete-wrap .msg-fail {
+  margin-top: 15rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #E55F61;
+}
+.F-QU-page .complete-sec .sec-inner .complete-wrap .msg-complete {
+  margin-top: 15rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
+}
+.F-QU-page .complete-sec .sec-inner .complete-wrap .msg-complete em {
+  font-weight: 700;
+  color: #542FDD;
 }
 
 /*-------------------------------------------------------------------

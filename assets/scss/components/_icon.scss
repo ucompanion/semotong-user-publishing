@@ -1009,6 +1009,14 @@
 	background-image: url("../images/common/icn-140-complete.svg");
 }
 
+.icn-140-change::before {
+	background-image: url("../images/common/icn-140-change.svg");
+}
+
+.icn-140-fail::before {
+	background-image: url("../images/common/icn-140-fail.svg");
+}
+
 .icn-h20-speed-low::before {
 	background-image: url("../images/common/icn-h20-speed-low.svg");
 }

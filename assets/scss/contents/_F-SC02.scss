@@ -60,5 +60,35 @@
 		}
 	}
 	// e: 내 S캐쉬
+
+	// s: 완료 섹션
+	.complete-sec {
+		@include complete-sec;
+
+		.sCash-box {
+			width: 100%;
+			margin-top: 30rem;
+			@include box-shadow-10;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 16rem;
+
+			.sCash-tit {
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #2801B5;
+			}
+			.sCash-val {
+				font-weight: 700;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #63666A;
+			}
+		}
+	}
+	// e: 완료 섹션
+
 }
 // e: S캐쉬 전환하기

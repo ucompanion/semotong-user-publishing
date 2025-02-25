@@ -55,32 +55,7 @@
 
 	// s: 완료 섹션
 	.complete-sec {
-		@include flex-fill-height;
-
-		.sec-inner {
-			@include flex-fill-height;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			.complete-wrap {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-
-				strong {
-					display: block;
-					margin-top: 20rem;
-					text-align: center;
-					font-weight: 700;
-					font-size: 20rem;
-					line-height: 28rem;
-					color: #000;
-				}
-			}
-		}
+		@include complete-sec;
 	}
 	// e: 완료 섹션
 }
