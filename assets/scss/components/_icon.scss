@@ -67,6 +67,11 @@
 	height: 24rem;
 }
 
+[class*=icn-26] {
+	width: 26rem;
+	height: 26rem;
+}
+
 [class*=icn-28] {
 	width: 28rem;
 	height: 28rem;
@@ -173,6 +178,10 @@
 
 .icn-12-antena-gr::before {
 	background-image: url("../images/common/icn-12-antena-gr.svg");
+}
+
+.icn-12-wifi-gr::before {
+	background-image: url("../images/common/icn-12-wifi-gr.svg");
 }
 
 .icn-12-plan-check-pr::before {
@@ -630,6 +639,14 @@
 	background-image: url("../images/common/icn-24-aside-06.svg");
 }
 
+.icn-26-npay::before {
+	background-image: url("../images/common/icn-26-npay.png");
+}
+
+.icn-26-cash::before {
+	background-image: url("../images/common/icn-26-cash.png");
+}
+
 .icn-28-moving::before {
 	background-image: url("../images/common/icn-28-moving.png");
 }
@@ -1043,5 +1060,14 @@
 
 	&::before {
 		background-image: url("../images/common/icn-h20-lgu.png");
+	}
+}
+
+.icn-h20-lgu-02 {
+	width: 20rem;
+	height: 20rem;
+
+	&::before {
+		background-image: url("../images/common/icn-h20-lgu-02.png");
 	}
 }

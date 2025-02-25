@@ -26,15 +26,15 @@
 	flex-direction: column;
 	flex-grow: 1;
 	flex-basis: auto;
-	.tab-pane {
-		display: none;
-		flex-direction: column;
-		flex-grow: 1;
-		flex-basis: auto;
-		width: 100%;
-		&.active {
-			display: flex;
-		}
+}
+.tab-pane {
+	display: none;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-basis: auto;
+	width: 100%;
+	&.active {
+		display: flex;
 	}
 }
 

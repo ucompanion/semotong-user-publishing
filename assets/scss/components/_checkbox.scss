@@ -168,6 +168,12 @@
 			background-color: #fff;
 		}
 	}
+	&.has-icn {
+		[class*=icn-26] {
+			top: -3rem;
+			margin-right: 8rem;
+		}
+	}
 }
 
 .rdo-style2 {
@@ -185,7 +191,6 @@
 		padding: 15rem 19rem;
 		border:1px solid #EFF0F0;
 		border-radius: 4rem;
-		text-align: center;
 		span {
 			display: block;
 			padding-left: 0;
@@ -205,8 +210,13 @@
 
 		&.type-icn {
 			text-align: left;
-			span {
+			> span {
+				display: flex;
+				align-items: center;
 				font-weight: 700;
+			}
+			[class*=icn-h20] {
+				margin-right: 4rem;
 			}
 			[class*=icn-50] {
 				margin-right: 16rem;

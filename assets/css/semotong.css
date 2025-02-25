@@ -1738,6 +1738,10 @@ body.is-scroll-first .floating-menu .btn-top {
   border-color: #A692ED;
   background-color: #fff;
 }
+.rdo-style1.has-icn [class*=icn-26] {
+  top: -3rem;
+  margin-right: 8rem;
+}
 
 .rdo-style2, .F-QU-page .survey-list .survey-rdo, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo {
   display: flex;
@@ -1758,7 +1762,6 @@ body.is-scroll-first .floating-menu .btn-top {
   padding: 15rem 19rem;
   border: 1px solid #EFF0F0;
   border-radius: 4rem;
-  text-align: center;
 }
 .rdo-style2 .rdo span, .F-QU-page .survey-list .survey-rdo .rdo span, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo span {
   display: block;
@@ -1779,8 +1782,13 @@ body.is-scroll-first .floating-menu .btn-top {
 .rdo-style2 .rdo.type-icn, .F-QU-page .survey-list .survey-rdo .rdo.type-icn, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn {
   text-align: left;
 }
-.rdo-style2 .rdo.type-icn span, .F-QU-page .survey-list .survey-rdo .rdo.type-icn span, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn span {
+.rdo-style2 .rdo.type-icn > span, .F-QU-page .survey-list .survey-rdo .rdo.type-icn > span, .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn > span {
+  display: flex;
+  align-items: center;
   font-weight: 700;
+}
+.rdo-style2 .rdo.type-icn [class*=icn-h20], .F-QU-page .survey-list .survey-rdo .rdo.type-icn [class*=icn-h20], .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn [class*=icn-h20] {
+  margin-right: 4rem;
 }
 .rdo-style2 .rdo.type-icn [class*=icn-50], .F-QU-page .survey-list .survey-rdo .rdo.type-icn [class*=icn-50], .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn [class*=icn-50] {
   margin-right: 16rem;
@@ -1974,6 +1982,11 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 24rem;
 }
 
+[class*=icn-26] {
+  width: 26rem;
+  height: 26rem;
+}
+
 [class*=icn-28] {
   width: 28rem;
   height: 28rem;
@@ -2080,6 +2093,10 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .icn-12-antena-gr::before {
   background-image: url("../images/common/icn-12-antena-gr.svg");
+}
+
+.icn-12-wifi-gr::before {
+  background-image: url("../images/common/icn-12-wifi-gr.svg");
 }
 
 .icn-12-plan-check-pr::before {
@@ -2537,6 +2554,14 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-24-aside-06.svg");
 }
 
+.icn-26-npay::before {
+  background-image: url("../images/common/icn-26-npay.png");
+}
+
+.icn-26-cash::before {
+  background-image: url("../images/common/icn-26-cash.png");
+}
+
 .icn-28-moving::before {
   background-image: url("../images/common/icn-28-moving.png");
 }
@@ -2948,6 +2973,14 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .icn-h20-lgu::before {
   background-image: url("../images/common/icn-h20-lgu.png");
+}
+
+.icn-h20-lgu-02 {
+  width: 20rem;
+  height: 20rem;
+}
+.icn-h20-lgu-02::before {
+  background-image: url("../images/common/icn-h20-lgu-02.png");
 }
 
 /*-------------------------------------------------------------------
@@ -3777,6 +3810,7 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0;
   height: 52rem;
   width: auto;
+  min-width: 100rem;
 }
 .address-srch-sec .basic-frm .frm-field .frm-group + .frm-group {
   margin-top: 10rem;
@@ -3988,14 +4022,15 @@ body.is-scroll-first .floating-menu .btn-top {
   flex-grow: 1;
   flex-basis: auto;
 }
-.tab-content .tab-pane {
+
+.tab-pane {
   display: none;
   flex-direction: column;
   flex-grow: 1;
   flex-basis: auto;
   width: 100%;
 }
-.tab-content .tab-pane.active {
+.tab-pane.active {
   display: flex;
 }
 
@@ -6299,6 +6334,7 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0;
   height: 52rem;
   width: auto;
+  min-width: 100rem;
 }
 .F-CS01-T01-page .inq-frm-sec .basic-frm .frm-field .frm-group + .frm-group {
   margin-top: 10rem;
@@ -6700,6 +6736,7 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0;
   height: 52rem;
   width: auto;
+  min-width: 100rem;
 }
 .F-CS01-T02-page .inq-frm-sec .basic-frm .frm-field .frm-group + .frm-group {
   margin-top: 10rem;
@@ -8571,6 +8608,7 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0;
   height: 52rem;
   width: auto;
+  min-width: 100rem;
 }
 .F-HP02-01-P01-page .consult-frm-sec .consult-frm .frm-field .frm-group + .frm-group {
   margin-top: 10rem;
@@ -9405,6 +9443,7 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0;
   height: 52rem;
   width: auto;
+  min-width: 100rem;
 }
 .F-I01-01-P01-page .consult-frm-sec .consult-frm .frm-field .frm-group + .frm-group {
   margin-top: 10rem;
@@ -10285,6 +10324,12 @@ body.is-scroll-first .floating-menu .btn-top {
   padding: 20rem;
   border-radius: 2rem;
   border: 1px solid #EFF0F0;
+}
+.F-M01-page .review-sec .review-card .card-telecom {
+  display: flex;
+  align-items: center;
+  height: 28rem;
+  margin-right: 12rem;
 }
 .F-M01-page .review-sec .review-card .card-rating {
   display: flex;
@@ -12123,6 +12168,15 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-wrap: wrap;
   padding: 14rem 16rem;
+}
+.F-M04-02-P01-page .review-sec .review-card .review-telecom {
+  display: flex;
+  align-items: center;
+  height: 16rem;
+  margin-right: 12rem;
+}
+.F-M04-02-P01-page .review-sec .review-card .review-telecom img {
+  height: 100%;
 }
 .F-M04-02-P01-page .review-sec .review-card .review-name {
   margin-right: 10rem;
@@ -15263,6 +15317,15 @@ body.is-scroll-first .floating-menu .btn-top {
   flex-wrap: wrap;
   padding: 14rem 16rem;
 }
+.F-O01-page .review-sec .review-card .review-telecom {
+  display: flex;
+  align-items: center;
+  height: 16rem;
+  margin-right: 12rem;
+}
+.F-O01-page .review-sec .review-card .review-telecom img {
+  height: 100%;
+}
 .F-O01-page .review-sec .review-card .review-name {
   margin-right: 10rem;
   font-weight: 700;
@@ -15882,8 +15945,8 @@ body.is-scroll-first .floating-menu .btn-top {
   left: 25rem;
   z-index: 2;
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   background-color: #EA2A2A;
 }
@@ -17857,17 +17920,15 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;
-  padding: 20rem 16rem;
   border-radius: 2rem;
-  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-tit {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-tit {
   margin-bottom: 12rem;
   font-weight: 700;
   font-size: 14rem;
   line-height: 20rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li {
   position: relative;
   padding-left: 18rem;
   font-weight: 500;
@@ -17876,7 +17937,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #63666A;
   word-break: keep-all;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li::before {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li::before {
   content: "";
   display: block;
   position: absolute;
@@ -17887,20 +17948,23 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #63666A;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li + li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li + li {
   margin-top: 6rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header {
   position: relative;
+  padding: 20rem 16rem;
   padding-right: 20rem;
+  margin-top: 10rem;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-title {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-title {
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand {
   position: absolute;
   left: 0;
   top: 0;
@@ -17910,14 +17974,19 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: flex-end;
   align-items: center;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand[aria-expanded=true] .ui-icn {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand .ui-icn {
+  right: 16rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand[aria-expanded=true] .ui-icn {
+  position: absolute;
   transform: rotate(180deg);
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header + .box-body {
-  margin-top: 16rem;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body {
+  overflow: hidden;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-body.is-hide {
-  display: none;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body .noti-box-con {
+  padding: 0 16rem 20rem 16rem;
 }
 .F-P02-01-page .payment-noti-sec {
   position: sticky;
@@ -18750,17 +18819,15 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;
-  padding: 20rem 16rem;
   border-radius: 2rem;
-  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-tit {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-tit {
   margin-bottom: 12rem;
   font-weight: 700;
   font-size: 14rem;
   line-height: 20rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li {
   position: relative;
   padding-left: 18rem;
   font-weight: 500;
@@ -18769,7 +18836,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #63666A;
   word-break: keep-all;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li::before {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li::before {
   content: "";
   display: block;
   position: absolute;
@@ -18780,20 +18847,23 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #63666A;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li + li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li + li {
   margin-top: 6rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header {
   position: relative;
+  padding: 20rem 16rem;
   padding-right: 20rem;
+  margin-top: 10rem;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-title {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-title {
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand {
   position: absolute;
   left: 0;
   top: 0;
@@ -18803,14 +18873,19 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: flex-end;
   align-items: center;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand[aria-expanded=true] .ui-icn {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand .ui-icn {
+  right: 16rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand[aria-expanded=true] .ui-icn {
+  position: absolute;
   transform: rotate(180deg);
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header + .box-body {
-  margin-top: 16rem;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body {
+  overflow: hidden;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-body.is-hide {
-  display: none;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body .noti-box-con {
+  padding: 0 16rem 20rem 16rem;
 }
 .F-P02-01-page .payment-noti-sec {
   position: sticky;
@@ -19025,17 +19100,15 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 
 .F-P02-01-T02-page .noti-box {
-  padding: 20rem 16rem;
   border-radius: 2rem;
-  background-color: #f4f4f4;
 }
-.F-P02-01-T02-page .noti-box .box-tit {
+.F-P02-01-T02-page .noti-box .noti-box-tit {
   margin-bottom: 12rem;
   font-weight: 700;
   font-size: 14rem;
   line-height: 20rem;
 }
-.F-P02-01-T02-page .noti-box .box-list li {
+.F-P02-01-T02-page .noti-box .noti-box-list li {
   position: relative;
   padding-left: 18rem;
   font-weight: 500;
@@ -19044,7 +19117,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #63666A;
   word-break: keep-all;
 }
-.F-P02-01-T02-page .noti-box .box-list li::before {
+.F-P02-01-T02-page .noti-box .noti-box-list li::before {
   content: "";
   display: block;
   position: absolute;
@@ -19055,20 +19128,23 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #63666A;
 }
-.F-P02-01-T02-page .noti-box .box-list li + li {
+.F-P02-01-T02-page .noti-box .noti-box-list li + li {
   margin-top: 6rem;
 }
-.F-P02-01-T02-page .noti-box .box-header {
+.F-P02-01-T02-page .noti-box .noti-box-header {
   position: relative;
+  padding: 20rem 16rem;
   padding-right: 20rem;
+  margin-top: 10rem;
+  background-color: #f4f4f4;
 }
-.F-P02-01-T02-page .noti-box .box-header .box-title {
+.F-P02-01-T02-page .noti-box .noti-box-header .noti-box-title {
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-P02-01-T02-page .noti-box .box-header .box-expand {
+.F-P02-01-T02-page .noti-box .noti-box-header .noti-box-expand {
   position: absolute;
   left: 0;
   top: 0;
@@ -19078,14 +19154,19 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: flex-end;
   align-items: center;
 }
-.F-P02-01-T02-page .noti-box .box-header .box-expand[aria-expanded=true] .ui-icn {
+.F-P02-01-T02-page .noti-box .noti-box-header .noti-box-expand .ui-icn {
+  right: 16rem;
+}
+.F-P02-01-T02-page .noti-box .noti-box-header .noti-box-expand[aria-expanded=true] .ui-icn {
+  position: absolute;
   transform: rotate(180deg);
 }
-.F-P02-01-T02-page .noti-box .box-header + .box-body {
-  margin-top: 16rem;
+.F-P02-01-T02-page .noti-box .noti-box-body {
+  overflow: hidden;
+  background-color: #f4f4f4;
 }
-.F-P02-01-T02-page .noti-box .box-body.is-hide {
-  display: none;
+.F-P02-01-T02-page .noti-box .noti-box-body .noti-box-con {
+  padding: 0 16rem 20rem 16rem;
 }
 .F-P02-01-T02-page .free-gift-list { /* 2025-01-10 조찬기 : 사은품 UI 변경 건 */
   display: flex;
@@ -19548,17 +19629,15 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;
-  padding: 20rem 16rem;
   border-radius: 2rem;
-  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-tit {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-tit {
   margin-bottom: 12rem;
   font-weight: 700;
   font-size: 14rem;
   line-height: 20rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li {
   position: relative;
   padding-left: 18rem;
   font-weight: 500;
@@ -19567,7 +19646,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #63666A;
   word-break: keep-all;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li::before {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li::before {
   content: "";
   display: block;
   position: absolute;
@@ -19578,20 +19657,23 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #63666A;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li + li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li + li {
   margin-top: 6rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header {
   position: relative;
+  padding: 20rem 16rem;
   padding-right: 20rem;
+  margin-top: 10rem;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-title {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-title {
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand {
   position: absolute;
   left: 0;
   top: 0;
@@ -19601,14 +19683,19 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: flex-end;
   align-items: center;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand[aria-expanded=true] .ui-icn {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand .ui-icn {
+  right: 16rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand[aria-expanded=true] .ui-icn {
+  position: absolute;
   transform: rotate(180deg);
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header + .box-body {
-  margin-top: 16rem;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body {
+  overflow: hidden;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-body.is-hide {
-  display: none;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body .noti-box-con {
+  padding: 0 16rem 20rem 16rem;
 }
 .F-P02-01-page .payment-noti-sec {
   position: sticky;
@@ -19878,6 +19965,15 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-wrap: wrap;
   padding: 14rem 16rem;
+}
+.F-P02-01-T03-page .review-sec .review-user-sat .review-card .review-telecom {
+  display: flex;
+  align-items: center;
+  height: 16rem;
+  margin-right: 12rem;
+}
+.F-P02-01-T03-page .review-sec .review-user-sat .review-card .review-telecom img {
+  height: 100%;
 }
 .F-P02-01-T03-page .review-sec .review-user-sat .review-card .review-name {
   margin-right: 10rem;
@@ -20368,17 +20464,15 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlan-combi-sec .noti-box {
   margin-top: 14rem;
-  padding: 20rem 16rem;
   border-radius: 2rem;
-  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-tit {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-tit {
   margin-bottom: 12rem;
   font-weight: 700;
   font-size: 14rem;
   line-height: 20rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li {
   position: relative;
   padding-left: 18rem;
   font-weight: 500;
@@ -20387,7 +20481,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #63666A;
   word-break: keep-all;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li::before {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li::before {
   content: "";
   display: block;
   position: absolute;
@@ -20398,20 +20492,23 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #63666A;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-list li + li {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-list li + li {
   margin-top: 6rem;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header {
   position: relative;
+  padding: 20rem 16rem;
   padding-right: 20rem;
+  margin-top: 10rem;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-title {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-title {
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand {
   position: absolute;
   left: 0;
   top: 0;
@@ -20421,14 +20518,19 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: flex-end;
   align-items: center;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header .box-expand[aria-expanded=true] .ui-icn {
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand .ui-icn {
+  right: 16rem;
+}
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-header .noti-box-expand[aria-expanded=true] .ui-icn {
+  position: absolute;
   transform: rotate(180deg);
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-header + .box-body {
-  margin-top: 16rem;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body {
+  overflow: hidden;
+  background-color: #f4f4f4;
 }
-.F-P02-01-page .ratePlan-combi-sec .noti-box .box-body.is-hide {
-  display: none;
+.F-P02-01-page .ratePlan-combi-sec .noti-box .noti-box-body .noti-box-con {
+  padding: 0 16rem 20rem 16rem;
 }
 .F-P02-01-page .payment-noti-sec {
   position: sticky;
@@ -20959,6 +21061,17 @@ body.is-scroll-first .floating-menu .btn-top {
 -------------------------------------------------------------------*/
 .F-SC02-page {
   padding-top: 10rem;
+  padding-bottom: 32rem;
+}
+@media all and (min-width: 768px) {
+  .F-SC02-page {
+    padding-bottom: 48rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-SC02-page {
+    padding-bottom: 48rem;
+  }
 }
 .F-SC02-page .sCash-sec .sCash-box {
   box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
@@ -20980,66 +21093,87 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #63666A;
 }
-.F-SC02-page .sCash-sec .basic-frm {
-  margin-top: 34rem;
+.F-SC02-page .sCash-sec .sCash-frm {
+  margin-top: 32rem;
+}
+.F-SC02-page .sCash-sec .sCash-frm .sCash-frm-field + .sCash-frm-field {
+  margin-top: 20rem;
+}
+.F-SC02-page .sCash-sec .sCash-frm .tab-pane {
+  margin-top: 8rem;
+}
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm {
   display: flex;
   flex-direction: column;
   gap: 20rem;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field-group {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field-group {
   display: flex;
   flex-direction: column;
   gap: 20rem;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-title {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-title {
   margin-bottom: 10rem;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-title .tit {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-title .tit {
   font-weight: 600;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-group {
   display: flex;
   align-items: center;
   gap: 8rem;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group .btn-sub {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-group .btn-sub {
   margin: 0;
   height: 52rem;
   width: auto;
+  min-width: 100rem;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group + .frm-group {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-group + .frm-group {
   margin-top: 10rem;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group .frm-split {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-group .frm-split {
   color: #D9D9D9;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group.type-car .ui-inp .inp {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-group.type-car .ui-inp .inp {
   text-align: center;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group.type-car .ui-inp:nth-child(3) {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-field .frm-group.type-car .ui-inp:nth-child(3) {
   flex: none;
   width: 25%;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-alert {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-alert {
   display: none;
   margin-top: 6rem;
   font-weight: 500;
   font-size: 14rem;
   line-height: 20rem;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-alert.is-show {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-alert.is-show {
   display: block;
 }
-.F-SC02-page .sCash-sec .basic-frm .frm-alert.is-errored {
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-alert.is-errored {
   color: #EA2A2A;
+}
+.F-SC02-page .sCash-sec .sChash-guide {
+  margin-top: 40rem;
+  border-radius: 4rem;
+  padding: 16rem;
+  background-color: #F4F5F8;
+}
+.F-SC02-page .sCash-sec .sChash-guide li {
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #63666A;
 }
 
 /*-------------------------------------------------------------------
@@ -22486,6 +22620,7 @@ body.is-scroll-first .floating-menu .btn-top {
   margin: 0;
   height: 52rem;
   width: auto;
+  min-width: 100rem;
 }
 .F-QU-page .basic-frm .frm-field .frm-group + .frm-group {
   margin-top: 10rem;

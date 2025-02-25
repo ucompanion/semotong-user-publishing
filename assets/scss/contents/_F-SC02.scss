@@ -5,7 +5,10 @@
 -------------------------------------------------------------------*/
 // s: S캐쉬 전환하기
 .F-SC02-page {
+	// 페이시 여백
 	padding-top: 10rem;
+	@include bottom-spacer;
+
 	// s: 내 S캐쉬
 	.sCash-sec {
 		.sCash-box {
@@ -29,9 +32,31 @@
 			}
 		}
 
-		.basic-frm {
-			margin-top: 34rem;
-			@include basic-frm;
+		.sCash-frm {
+			margin-top: 32rem;
+			.sCash-frm-field + .sCash-frm-field {
+				margin-top: 20rem;
+			}
+			.tab-pane {
+				margin-top: 8rem;
+			}
+
+			.basic-frm {
+				@include basic-frm;
+			}
+		}
+
+		.sChash-guide {
+			margin-top: 40rem;
+			border-radius: 4rem;
+			padding: 16rem;
+			background-color: #F4F5F8;
+			li {
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #63666A;
+			}
 		}
 	}
 	// e: 내 S캐쉬

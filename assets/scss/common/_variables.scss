@@ -1416,6 +1416,15 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	flex-wrap: wrap;
 	padding: 14rem $mobile-outer-spacer;
 
+	.review-telecom {
+		display: flex;
+		align-items: center;
+		height: 16rem;
+		margin-right: 12rem;
+		img {
+			height: 100%;
+		}
+	}
 	.review-name {
 		margin-right: 10rem;
 		font-weight: 700;
@@ -1612,6 +1621,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				margin: 0;
 				height: 52rem;
 				width: auto;
+				min-width: 100rem;
 			}
 			+ .frm-group {
 				margin-top: 10rem;
@@ -1848,16 +1858,14 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 
 // 가이드박스
 @mixin noti-box {
-	padding: 20rem 16rem;
 	border-radius: 2rem;
-	background-color: #f4f4f4;
-	.box-tit {
+	.noti-box-tit {
 		margin-bottom: 12rem;
 		font-weight: 700;
 		font-size: 14rem;
 		line-height: 20rem;
 	}
-	.box-list {
+	.noti-box-list {
 		li {
 			position: relative;
 			padding-left: 18rem;
@@ -1884,17 +1892,20 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 
 	// Expand
-	.box-header {
+	.noti-box-header {
 		position: relative;
+		padding: 20rem 16rem;
 		padding-right: 20rem;
+		margin-top: 10rem;
+		background-color: #f4f4f4;
 
-		.box-title {
+		.noti-box-title {
 			font-weight: 700;
 			font-size: 16rem;
 			line-height: 22rem;
 			color: #000;
 		}
-		.box-expand {
+		.noti-box-expand {
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -1903,18 +1914,23 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
+			.ui-icn {
+				right: 16rem;
+			}
 			&[aria-expanded="true"] {
 				.ui-icn {
+					position: absolute;
 					transform: rotate(180deg);
 				}
 			}
 		}
 	}
-	.box-header + .box-body {
-		margin-top: 16rem;
-	}
-	.box-body.is-hide {
-		display: none;
+	.noti-box-body {
+		overflow: hidden;
+		background-color: #f4f4f4;
+		.noti-box-con {
+			padding: 0 16rem 20rem 16rem;
+		}
 	}
 }
 
