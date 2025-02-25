@@ -21131,7 +21131,7 @@ body.is-scroll-first .floating-menu .btn-top {
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 .F-SC02-page {
-  padding-top: 10rem;
+  padding-top: 56rem;
   padding-bottom: 32rem;
 }
 @media all and (min-width: 768px) {
@@ -21143,6 +21143,45 @@ body.is-scroll-first .floating-menu .btn-top {
   .F-SC02-page {
     padding-bottom: 48rem;
   }
+}
+.F-SC02-page .sCash-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-SC02-page .sCash-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-SC02-page .sCash-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-SC02-page .sCash-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-SC02-page .sCash-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+.F-SC02-page .sCash-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-SC02-page .sCash-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .F-SC02-page .sCash-sec .sCash-box {
   box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
