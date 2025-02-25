@@ -2669,6 +2669,38 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/bank/icn-34-bank-wo.png");
 }
 
+.icn-34-bank-bnk::before {
+  background-image: url("../images/bank/icn-34-bank-bnk.png");
+}
+
+.icn-34-bank-kjb::before {
+  background-image: url("../images/bank/icn-34-bank-kjb.png");
+}
+
+.icn-34-bank-dgb::before {
+  background-image: url("../images/bank/icn-34-bank-dgb.png");
+}
+
+.icn-34-bank-kdb::before {
+  background-image: url("../images/bank/icn-34-bank-kdb.png");
+}
+
+.icn-34-bank-kfcc::before {
+  background-image: url("../images/bank/icn-34-bank-kfcc.png");
+}
+
+.icn-34-bank-suhyup::before {
+  background-image: url("../images/bank/icn-34-bank-suhyup.png");
+}
+
+.icn-34-bank-shinhyup::before {
+  background-image: url("../images/bank/icn-34-bank-shinhyup.png");
+}
+
+.icn-34-bank-citi::before {
+  background-image: url("../images/bank/icn-34-bank-citi.png");
+}
+
 .icn-40-plan-cate-01::before {
   background-image: url("../images/common/icn-44-plan-cate-01.png");
 }
@@ -3338,10 +3370,10 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 
 .modal-full .modal-body { /* 2차 수정 : 모달 여백 수정 */
-  margin-bottom: 32rem;
+  margin-bottom: 24rem;
 }
 .modal-full .modal-footer { /* 2차 수정 : 모달 여백 수정 */
-  padding-top: 8rem;
+  padding-top: 16rem;
   padding-bottom: 24rem;
 }
 .modal-full.fade {
@@ -3470,11 +3502,11 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .modal-select .modal-body,
 .modal-basic .modal-body { /* 2차 수정 : 모달 여백 수정 */
-  margin-bottom: 32rem;
+  margin-bottom: 24rem;
 }
 .modal-select .modal-footer,
 .modal-basic .modal-footer { /* 2차 수정 : 모달 여백 수정 */
-  padding-top: 8rem;
+  padding-top: 16rem;
   padding-bottom: 24rem;
 }
 .modal-select .modal-dialog,
@@ -3671,6 +3703,175 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .select-bank-list .is-selected .select-bank .name {
   color: #fff;
+}
+
+.address-srch-page .modal-body {
+  padding-top: 16rem;
+}
+
+.address-srch-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.address-srch-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.address-srch-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.address-srch-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.address-srch-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+.address-srch-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.address-srch-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.address-srch-sec .sec-body {
+  margin-bottom: 20rem;
+}
+.address-srch-sec .basic-frm {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+.address-srch-sec .basic-frm .frm-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+.address-srch-sec .basic-frm .frm-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.address-srch-sec .basic-frm .frm-field .frm-title {
+  margin-bottom: 10rem;
+}
+.address-srch-sec .basic-frm .frm-field .frm-title .tit {
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.address-srch-sec .basic-frm .frm-field .frm-group {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.address-srch-sec .basic-frm .frm-field .frm-group .btn-sub {
+  margin: 0;
+  height: 52rem;
+  width: auto;
+}
+.address-srch-sec .basic-frm .frm-field .frm-group + .frm-group {
+  margin-top: 10rem;
+}
+.address-srch-sec .basic-frm .frm-field .frm-group .frm-split {
+  color: #D9D9D9;
+}
+.address-srch-sec .basic-frm .frm-field .frm-group.type-car .ui-inp .inp {
+  text-align: center;
+}
+.address-srch-sec .basic-frm .frm-field .frm-group.type-car .ui-inp:nth-child(3) {
+  flex: none;
+  width: 25%;
+}
+.address-srch-sec .basic-frm .frm-alert {
+  display: none;
+  margin-top: 6rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+}
+.address-srch-sec .basic-frm .frm-alert.is-show {
+  display: block;
+}
+.address-srch-sec .basic-frm .frm-alert.is-errored {
+  color: #EA2A2A;
+}
+
+.address-list-wrap {
+  margin-top: 20rem;
+}
+.address-list-wrap .address-list .address-item {
+  padding: 10rem;
+  border-bottom: 1px solid #EFF0F0;
+}
+.address-list-wrap .address-list .address-item:first-child {
+  border-top: 1px solid #EFF0F0;
+}
+
+.address-wrap .address-zipcode {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #262626;
+}
+.address-wrap .address-zipcode small {
+  margin-left: 4rem;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 22rem;
+  color: #828588;
+}
+.address-wrap .address-cont {
+  margin-top: 6rem;
+}
+.address-wrap .address-cont .address-row {
+  display: flex;
+  align-items: flex-start;
+}
+.address-wrap .address-cont .address-row + .address-row {
+  margin-top: 8rem;
+}
+.address-wrap .address-cont .address-row .address-label {
+  flex: none;
+  width: 48rem;
+  margin-right: 4rem;
+  padding: 2rem 8rem;
+  border-radius: 4rem;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  text-align: center;
+}
+.address-wrap .address-cont .address-row .address-label.new {
+  color: #542FDD;
+  background-color: #EAE6FB;
+}
+.address-wrap .address-cont .address-row .address-label.old {
+  color: #63666A;
+  background-color: #EFF0F0;
+}
+.address-wrap .address-cont .address-row .address-name {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #555555;
 }
 
 /*-------------------------------------------------------------------
@@ -4668,7 +4869,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   gap: 20rem;
-  max-height: 100rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+  max-height: 130rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
   overflow: hidden; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
@@ -4715,6 +4916,20 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #46484B;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .charge .charge-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 14rem;
+  line-height: 22rem;
+  color: #E43558;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .charge .charge-point .tit {
+  font-size: 12rem;
+  line-height: 24rem;
+  margin-right: 4rem;
 }
 
 /*-------------------------------------------------------------------
@@ -20643,6 +20858,104 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P03-01-page .page-moving-sec .page-moving .brand img {
   max-width: 100%;
   height: 24rem;
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : S캐쉬 보유현황
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-SC01-P01-page .sCash-sec .sCash-box {
+  margin-top: 12rem;
+  box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rem;
+}
+.F-SC01-P01-page .sCash-sec .sCash-box .sCash-tit {
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #2801B5;
+}
+.F-SC01-P01-page .sCash-sec .sCash-box .sCash-val {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #63666A;
+}
+.F-SC01-P01-page .sCash-sec .sCash-info {
+  margin-top: 10rem;
+  text-align: right;
+  font-size: 10rem;
+  line-height: 14rem;
+  color: #BFBFBF;
+}
+.F-SC01-P01-page .sCash-sec .sCash-list-wrap {
+  margin-top: 16rem;
+}
+.F-SC01-P01-page .sCash-sec .sCash-list-wrap .sCash-list .sCash-item + .sCash-item {
+  margin-top: 4rem;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem 0;
+  gap: 10rem;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .sCash-val,
+.F-SC01-P01-page .sCash-sec .sCash-wrap .sCash-label {
+  flex: none;
+  flex: none;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .sCash-con {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34rem;
+  height: 34rem;
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #fff;
+  border-radius: 50%;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .label.plus {
+  background-color: #7C5FE5;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .label.minus {
+  background-color: #E55F61;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .date {
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #5A5D60;
+}
+.F-SC01-P01-page .sCash-sec .sCash-wrap .val {
+  min-width: 106rem;
+  font-weight: 500;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #63666A;
+  text-align: right;
 }
 
 /*-------------------------------------------------------------------

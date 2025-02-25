@@ -50,18 +50,8 @@
 											</button> -->
 
 											<!-- 선택후 Case 기본값 Valued -->
-											<!-- <button type="button" id="frmType" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
-												<span>KT</span>
-												<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
-											</button> -->
-
-											<!-- 선택후 Case 파트너사 Valued -->
-											 <!-- 선택전 is-placeholder, (선택후 삭제) -->
-											<button type="button" id="frmType" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
-												<span class="partner-option">
-													<strong class="partner-name">헬로모바일</strong>
-													<span class="partner-img"><img src="../../assets/images/partner/logo-lghellovision.svg" alt="Hello Mobile" /></span>
-												</span>
+											<button type="button" id="frmTelecom" class="sel" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectModal">
+												<span>헬로모바일</span>
 												<i class="ui-icn icn-20-select-arw" aria-hidden="true"></i>
 											</button>
 										</div>
@@ -102,6 +92,40 @@
 		</main>
 		<!-- // Container -->
 	</div>
+
+	<!-- 정렬 modal select -->
+	<div class="modal modal-select fade" id="FQU0106P01Modal" tabindex="-1" role="dialog" aria-labelledby="FQU0106P01ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="FQU0106P01ModalLabel">통신사</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 콤보박스 섹션 -->
+					<section class="select-sec">
+						<div class="sec-inner">
+							<!-- modal-select 공통 -->
+							<ul class="select-listbox" role="listbox">
+								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+								<li role="option" tabindex="0" data-bs-dismiss="modal" class="is-selected" onclick="setSelectValued('#frmTelecom', this)">SKT</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KT</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">LGU+</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">SKT 알뜰폰</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">KT 알뜰폰</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmTelecom', this)">LGU+ 알뜰폰</li>
+							</ul>
+						</div>
+					</section>
+					<!-- // 콤보박스 섹션 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 정렬 modal select -->
 </body>
 
 </html>

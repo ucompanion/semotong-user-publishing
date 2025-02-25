@@ -413,3 +413,84 @@
 	}
 }
 // e: 은행선택 팝업
+
+// s: 주소공통 팝업
+.address-srch-page {
+	.modal-body {
+		padding-top: 16rem;
+	}
+}
+.address-srch-sec {
+	@include sec-basic;
+	.sec-body {
+		margin-bottom: 20rem;
+	}
+	.basic-frm {
+		@include basic-frm;
+	}
+}
+.address-list-wrap {
+	margin-top: 20rem;
+	.address-list {
+		.address-item {
+			padding: 10rem;
+			border-bottom:1px solid #EFF0F0;
+			&:first-child {
+				border-top:1px solid #EFF0F0;;
+			}
+		}
+	}
+}
+.address-wrap {
+	.address-zipcode {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 16rem;
+		line-height: 22rem;
+		color: #262626;
+		small {
+			margin-left: 4rem;
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 22rem;
+			color: #828588;
+		}
+	}
+	.address-cont {
+		margin-top: 6rem;
+		.address-row {
+			display: flex;
+			align-items: flex-start;
+			+ .address-row {
+				margin-top: 8rem;
+			}
+			.address-label {
+				flex: none;
+				width: 48rem;
+				margin-right: 4rem;
+				padding: 2rem 8rem;
+				border-radius: 4rem;
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				text-align: center;
+				&.new {
+					color: $color-primary;
+					background-color: #EAE6FB;
+				}
+				&.old {
+					color: #63666A;
+					background-color: #EFF0F0;
+				}
+			}
+			.address-name {
+				font-weight: 500;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #555555;
+			}
+		}
+	}
+}
+// e: 주소공통 팝업
