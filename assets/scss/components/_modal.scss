@@ -338,7 +338,7 @@
 		li {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			// justify-content: space-between;
 			position: relative;
 			padding: 10rem 30rem 10rem 0rem;
 			font-weight: 500;
@@ -360,16 +360,10 @@
 				}
 			}
 		}
-		&.type-partners {
+		&.has-img {
 			li {
-				padding-right: 0;
-				.partner-img {
-					display: flex;
-				}
-				&.is-selected {
-					&::after {
-						display: none;
-					}
+				.ui-icn {
+					margin-right: 12rem;
 				}
 			}
 		}

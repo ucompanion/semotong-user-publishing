@@ -3630,7 +3630,6 @@ body.is-scroll-first .floating-menu .btn-top {
 .modal-select .select-listbox li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   position: relative;
   padding: 10rem 30rem 10rem 0rem;
   font-weight: 500;
@@ -3652,14 +3651,8 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 20rem;
   background: url("../images/common/icn-20-select-chk-sel.svg") no-repeat center center/contain;
 }
-.modal-select .select-listbox.type-partners li {
-  padding-right: 0;
-}
-.modal-select .select-listbox.type-partners li .partner-img {
-  display: flex;
-}
-.modal-select .select-listbox.type-partners li.is-selected::after {
-  display: none;
+.modal-select .select-listbox.has-img li .ui-icn {
+  margin-right: 12rem;
 }
 
 .select-bank-list {
