@@ -4811,7 +4811,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #828588;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-footer {
-  padding: 16rem 0 12rem 0;
+  padding: 16rem 0 16rem 0;
   border-top: 1px solid #EFF0F0;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-opening {
@@ -4869,14 +4869,16 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   gap: 20rem;
-  max-height: 130rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
-  overflow: hidden; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
-}
-.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
-  max-height: none;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list .card-charge-item {
   width: 100%;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list .card-charge-item:nth-child(3) ~ .card-charge-item {
+  display: none;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */ }
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-list.is-expanded .card-charge-item:nth-child(3) ~ .card-charge-item {
+  display: block;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge-more {
   margin-top: 2rem;
@@ -4923,12 +4925,12 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-bottom: 2rem;
   font-weight: 700;
   font-size: 14rem;
-  line-height: 22rem;
+  line-height: 20rem;
   color: #E43558;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanE-list .ratePlanE-card .card-charge .charge .charge-point .tit {
   font-size: 12rem;
-  line-height: 24rem;
+  line-height: 20rem;
   margin-right: 4rem;
 }
 
@@ -20956,6 +20958,95 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   color: #63666A;
   text-align: right;
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : S캐쉬 전환하기
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-SC02-page {
+  padding-top: 10rem;
+}
+.F-SC02-page .sCash-sec .sCash-box {
+  box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rem;
+}
+.F-SC02-page .sCash-sec .sCash-box .sCash-tit {
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #2801B5;
+}
+.F-SC02-page .sCash-sec .sCash-box .sCash-val {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #63666A;
+}
+.F-SC02-page .sCash-sec .basic-frm {
+  margin-top: 34rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-title {
+  margin-bottom: 10rem;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-title .tit {
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group .btn-sub {
+  margin: 0;
+  height: 52rem;
+  width: auto;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group + .frm-group {
+  margin-top: 10rem;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group .frm-split {
+  color: #D9D9D9;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group.type-car .ui-inp .inp {
+  text-align: center;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-field .frm-group.type-car .ui-inp:nth-child(3) {
+  flex: none;
+  width: 25%;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-alert {
+  display: none;
+  margin-top: 6rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-alert.is-show {
+  display: block;
+}
+.F-SC02-page .sCash-sec .basic-frm .frm-alert.is-errored {
+  color: #EA2A2A;
 }
 
 /*-------------------------------------------------------------------

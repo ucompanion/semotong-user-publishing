@@ -992,7 +992,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 	}
 	.card-footer {
-		padding: 16rem 0 12rem 0;
+		padding: 16rem 0 16rem 0;
 		border-top: 1px solid #EFF0F0;
 	}
 	.card-opening {
@@ -1052,13 +1052,16 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		display: flex;
 		flex-direction: column;
 		gap: 20rem;
-		max-height: 130rem; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
-		overflow: hidden; /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
-		&.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
-			max-height: none;
-		}
 		.card-charge-item {
 			width: 100%;
+			&:nth-child(3) ~ .card-charge-item {
+				display: none;
+			}
+		}
+		&.is-expanded { /* 5차 수정 : 요금제공통 전체보기/닫기 토글 */
+			.card-charge-item:nth-child(3) ~ .card-charge-item {
+				display: block;
+			}
 		}
 	}
 	.card-charge-more {
@@ -1105,11 +1108,11 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				margin-bottom: 2rem;
 				font-weight: 700;
 				font-size: 14rem;
-				line-height: 22rem;
+				line-height: 20rem;
 				color: $color-point;
 				.tit {
 					font-size: 12rem;
-					line-height: 24rem;
+					line-height: 20rem;
 					margin-right: 4rem;
 				}
 			}

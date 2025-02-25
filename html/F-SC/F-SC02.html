@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>S캐쉬 전환하기 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- 페이지 스크립트 영역 -->
+	<!-- Swiper Librarys -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// 이벤트 스와이프
+		    var eventSwiper = new Swiper(".event-swiper", {
+				threshold: 3,
+				spaceBetween: 10,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
+		})
+	</script>
+</head>
+
+<body>
+	<!-- 레이아웃 유형구분
+		메인: main-wrapper,
+		서브: sub-wrapper,
+		기타: [기타]-wrapper
+	 -->
+	<div class="wrapper main-wrapper">
+		<!-- Header Deaktop -->
+		<header class="header-desktop">
+			<div class="header-skip">
+				<a href="#content">본문 바로가기</a>
+			</div>
+
+			<div class="header-sec">
+				<h1 class="title">
+					<!-- 로고 베타 추가 -->
+					<a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a>
+					<span class="logo-beta"><img src="../../assets/images/common/img-logo-header-beta.png" alt=""></span>
+				</h1>
+				<nav class="header-nav">
+					<ul class="nav-list">
+						<li class="nav-item">
+							<!-- 선택된 상태 : is-selected -->
+							<a href="../F-G/F-G01-01.html" role="link" class="ui-btn nav-link">
+								<span>세모통 설명서</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../scenario/F-P01-01.html" role="link" class="ui-btn nav-link">
+								<span>요금제</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-I/F-I01-01.html" role="link" class="ui-btn nav-link">
+								<span>인터넷</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-HP/F-HP01-01.html" role="link" class="ui-btn nav-link">
+								<span>휴대폰</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-E/F-E01-01.html" role="link" class="ui-btn nav-link">
+								<span>이벤트</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../F-MY/F-MY01-01.html" role="link" class="ui-btn nav-link">
+								<span>마이페이지</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- // Header Deaktop -->
+
+		<!-- Header Mobile -->
+		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
+		<!-- 4차 수정 : 마이페이지 헤더 수정
+			- 모바일 헤더 only-mo 클래스 추가
+			- 모바일 헤더 '마이페이지'를 로고로 변경
+			- 모바일 헤더 '고객센터' 버튼을 '나의정보 영역'으로 이동
+		 -->
+		<header class="header-mobile only-mo">
+			<section class="header-sec">
+				<h1 class="title">S캐쉬 전환하기</h1>
+			</section>
+			<!-- // Header Mobile -->
+		</header>
+		<!-- // Header -->
+
+		<!-- Aside Modal (include_mobileNav.html) -->
+		<aside class="modal modal-full fade aside-modal" id="asideModal" tabindex="-1" role="dialog" aria-labelledby="asideModalLabel" aria-hidden="true"></aside>
+		<!-- Aside Modal -->
+
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-SC02-page">
+				<!-- S캐쉬 섹션 -->
+				<section class="sCash-sec">
+					<div class="sec-inner">
+						<!-- 내 S캐쉬 -->
+						<div class="sCash-box">
+							<p class="sCash-tit">내 S캐쉬</p>
+							<p class="sCash-val">15,000 캐쉬</p>
+						</div>
+						<!-- //내 S캐쉬 -->
+
+						<!-- 등록폼 -->
+						<div class="basic-frm">
+							<!-- 납부방법 선택 -->
+							<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
+							<div class="frm-field">
+								<div class="frm-title">
+									<label class="ui-rdo rdo-style1 tit">
+										<input type="radio" name="sRadio1" id="sRadio11">
+										<span class="rdo"><span>네이버 포인트 전환</span></span>
+									</label>
+								</div>
+								<div class="frm-content">
+									<ul class="frm-group">
+										<label class="ui-rdo rdo-style2">
+											<input type="radio" name="frmSurvey" id="FQU0111-01" aria-controls="FQU0111-01-pane" checked onchange="tabHandler('FQU0111-01-pane', this)" />
+											<span class="rdo"><span>카드</span></span>
+										</label>
+										<label class="ui-rdo rdo-style2">
+											<input type="radio" name="frmSurvey" id="FQU0111-02" aria-controls="FQU0111-02-pane" onchange="tabHandler('FQU0111-02-pane', this)" />
+											<span class="rdo"><span>계좌이체</span></span>
+										</label>
+									</ul>
+								</div>
+							</div>
+							<!-- // 납부방법 선택 -->
+						</div>
+					</div>
+				</section>
+				<!-- // S캐쉬 섹션 -->
+ 			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+
+		<!-- Footer (include_footer.html) -->
+		<footer class="footer"></footer>
+		<!-- // Footer -->
+
+		<!-- floating Nav (include_floatingNav.html) -->
+		<nav class="floating-nav"></nav>
+		<!-- // floating Nav- -->
+	</div>
+</body>
+
+</html>

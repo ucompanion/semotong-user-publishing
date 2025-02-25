@@ -1,0 +1,39 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	분류그룹 : S캐쉬 전환하기
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+// s: S캐쉬 전환하기
+.F-SC02-page {
+	padding-top: 10rem;
+	// s: 내 S캐쉬
+	.sCash-sec {
+		.sCash-box {
+			@include box-shadow-10;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 16rem;
+
+			.sCash-tit {
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #2801B5;
+			}
+			.sCash-val {
+				font-weight: 700;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #63666A;
+			}
+		}
+
+		.basic-frm {
+			margin-top: 34rem;
+			@include basic-frm;
+		}
+	}
+	// e: 내 S캐쉬
+}
+// e: S캐쉬 전환하기
