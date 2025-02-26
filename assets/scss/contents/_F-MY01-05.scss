@@ -16,6 +16,29 @@
 		.sec-header {
 			margin-bottom: 0;
 		}
+		// 요금제 상품 툴바
+		.ratePlanC-toolbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.count {
+				font-weight: 500;
+				font-size: 12rem;
+				line-height: 16rem;
+				color: #63666A;
+			}
+			.sort {
+				display: flex;
+				margin-left: auto;
+				.ui-btn {
+					font-weight: 600;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #36383A;
+					gap: 4rem;
+				}
+			}
+		}
 
 		// 요금제 상품 리스트 공통
 		.ratePlanD-list { /* 1차 수정 : ratePlanD-list 추가 */

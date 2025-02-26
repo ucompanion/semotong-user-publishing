@@ -160,11 +160,17 @@
 							<!-- 요금제 공통 타입 D : 요금제 상품 상세 -->
 							<div class="ratePlanD-card">
 								<div class="card-body">
-									<p class="card-opening">24.11.05 개통</p>
+									<!-- 2025-02-26 조찬기 : 상태값 문구적용 -->
+									<p class="card-opening">24.11.05 개통완료</p>
 									<p class="card-state is-current">현재 사용 중인 요금제</p>
 									<div class="card-tit">
-										<span class="label primary">SKT</span>
 										<strong>150GB+최대 5Mbps</strong>
+										<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#QosModal">
+											<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+										</button>
+									</div>
+									<div class="card-name">
+										<p>[모빌카드 스페셜] 통화, 데이터 마음대로 11GB+</p>
 									</div>
 									<div class="card-info">
 										<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
@@ -181,6 +187,8 @@
 										<div class="brand"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></div>
 										<div class="charge">
 											<p class="charge-tit">월 158,700원</p>
+											<p class="charge-point"><em class="tit">실제 체감가</em> 18,100원</p>
+											<p class="charge-txt">7개월 이후 41,800원</p>
 										</div>
 									</div>
 								</div>
@@ -315,6 +323,62 @@
 		<nav class="floating-nav"></nav>
 		<!-- // floating Nav- -->
 	</div>
+
+	<!-- QOS Modal Alert -->
+	<!-- 5차 수정 : QoS 팝업 추가 -->
+	<div class="modal modal-basic fade" id="QosModal" tabindex="-1" role="dialog" aria-labelledby="QosModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="QosModalLabel">QoS(데이터 소진 시 속도) </h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<section class="qos-sec">
+						<table class="qos-table">
+							<caption>
+								<strong>QoS(데이터 소진 시 속도) 표</strong>
+								<p>속도, 인터넷, 유튜브 재생 속도 로 구성됨</p>
+							</caption>
+							<colgroup>
+								<col style="width: 80rem;" />
+								<col style="width: auto;" />
+								<col style="width: 80rem;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">전송 속도</th>
+									<th scope="col">인터넷</th>
+									<th scope="col">재생 속도</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1Mbps</td>
+									<td>텍스트와 용량이 작은 <br>이미지 페이지 이용 가능</td>
+									<td>480p</td>
+								</tr>
+								<tr>
+									<td>3Mbps</td>
+									<td>용량이 큰 이미지 파일 등 <br>큰 불편함 없이 이용 가능</td>
+									<td>720p</td>
+								</tr>
+								<tr>
+									<td>5Mbps</td>
+									<td>대부분 쾌적하게 이용 가능</td>
+									<td>100p</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // QOS Modal Alert -->
+
 </body>
 
 </html>

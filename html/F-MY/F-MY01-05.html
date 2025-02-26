@@ -111,27 +111,39 @@
 				<!-- 1차 수정 : 제목 추가 및 ratePlanD 으로 변경 -->
 				<section class="ratePlanD-sec">
 					<div class="sec-inner">
-						<div class="sec-header">
+						<!-- 2025-02-26 조찬기 : 개통완료 제목삭제 -->
+						<!-- <div class="sec-header">
 							<h2 class="sec-tit">개통 완료</h2>
-						</div>
+						</div> -->
 						<div class="sec-body">
 							<!-- 요금제 공통 타입 D : 요금제 상품 리스트 -->
 							<div class="ratePlanD-list-wrap">
+								<!-- 2025-02-26 조찬기 : 요금제 목록 Sort 추가 -->
+								<!-- 요금제 상품 툴바 -->
+								<div class="ratePlanC-toolbar">
+									<div class="sort">
+										<button type="button" class="ui-btn" id="frmSort" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSortModal">
+											<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
+											<span>전체</span>
+											<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+								<!-- // 요금제 상품 툴바 -->
 								<ul class="ratePlanD-list">
 									<li class="ratePlanD-item">
 										<!-- 요금제 공통 타입 D : 요금제 상품 상세 -->
 										<div class="ratePlanD-card">
 											<div class="card-body">
-												<p class="card-opening">24.11.05 개통</p>
-												<div class="card-label">
-													<span class="label"><i class="ui-icn icn-14-plan-sale-pr" aria-hidden="true"></i>단독특가</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-14-plan-data-pr" aria-hidden="true"></i>+20GB</span>
-													<span class="split" aria-hidden="true"></span>
-													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="간편개통을 하시면 통신사에서 개통을 도와드려요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>간편개통</button>
-												</div>
+												<p class="card-opening">24.11.05 개통완료</p>
 												<div class="card-tit">
 													<strong>150GB+최대 5Mbps</strong>
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#QosModal">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-name">
+													<p>[모빌카드 스페셜] 통화, 데이터 마음대로 11GB+</p>
 												</div>
 												<div class="card-info">
 													<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
@@ -148,6 +160,8 @@
 													<div class="brand"><img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" /></div>
 													<div class="charge">
 														<p class="charge-tit">월 158,700원</p>
+														<p class="charge-point"><em class="tit">실제 체감가</em> 18,100원</p>
+														<p class="charge-txt">7개월 이후 41,800원</p>
 													</div>
 												</div>
 											</div>
@@ -162,16 +176,22 @@
 										<!-- 요금제 공통 타입 D : 요금제 상품 상세 -->
 										<div class="ratePlanD-card">
 											<div class="card-body">
-												<p class="card-opening">24.11.05 개통</p>
-												<div class="card-label">
+												<p class="card-opening">24.11.05 배송중</p>
+												<!-- <div class="card-label">
 													<span class="label"><i class="ui-icn icn-14-plan-sale-pr" aria-hidden="true"></i>단독특가</span>
 													<span class="split" aria-hidden="true"></span>
 													<span class="label"><i class="ui-icn icn-14-plan-data-pr" aria-hidden="true"></i>+20GB</span>
 													<span class="split" aria-hidden="true"></span>
 													<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="간편개통을 하시면 통신사에서 개통을 도와드려요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>간편개통</button>
-												</div>
+												</div> -->
 												<div class="card-tit">
 													<strong>150GB+최대 5Mbps</strong>
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#QosModal">
+														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+													</button>
+												</div>
+												<div class="card-name">
+													<p>[모빌카드 스페셜] 통화, 데이터 마음대로 11GB+</p>
 												</div>
 												<div class="card-info">
 													<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
@@ -216,8 +236,96 @@
 		</main>
 		<!-- // Container -->
 	</div>
-
 	<!-- <div class="popover ui-popover popover-style1 bs-popover-auto fade show" role="tooltip" id="popover568253" data-popper-placement="top" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -694px);"><div class="popover-arrow" style="position: absolute; left: 0px; transform: translate(106px, 0px);"></div><div class="popover-body">텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.</div></div> -->
+
+	<!-- QOS Modal Alert -->
+	<!-- 5차 수정 : QoS 팝업 추가 -->
+	<div class="modal modal-basic fade" id="QosModal" tabindex="-1" role="dialog" aria-labelledby="QosModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="QosModalLabel">QoS(데이터 소진 시 속도) </h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<section class="qos-sec">
+						<table class="qos-table">
+							<caption>
+								<strong>QoS(데이터 소진 시 속도) 표</strong>
+								<p>속도, 인터넷, 유튜브 재생 속도 로 구성됨</p>
+							</caption>
+							<colgroup>
+								<col style="width: 80rem;" />
+								<col style="width: auto;" />
+								<col style="width: 80rem;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">전송 속도</th>
+									<th scope="col">인터넷</th>
+									<th scope="col">재생 속도</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1Mbps</td>
+									<td>텍스트와 용량이 작은 <br>이미지 페이지 이용 가능</td>
+									<td>480p</td>
+								</tr>
+								<tr>
+									<td>3Mbps</td>
+									<td>용량이 큰 이미지 파일 등 <br>큰 불편함 없이 이용 가능</td>
+									<td>720p</td>
+								</tr>
+								<tr>
+									<td>5Mbps</td>
+									<td>대부분 쾌적하게 이용 가능</td>
+									<td>100p</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // QOS Modal Alert -->
+
+	<!-- 정렬 modal select -->
+	<div class="modal modal-select fade" id="selectSortModal" tabindex="-1" role="dialog" aria-labelledby="selectSortModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="selectSortModalLabel">정렬기준 선택</h3>
+					<!-- 닫기버튼은 CSS로 숨기고 필요시 활성화 예정 -->
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 콤보박스 섹션 -->
+					<section class="select-sec">
+						<div class="sec-inner">
+							<!-- modal-select 공통 -->
+							<ul class="select-listbox" role="listbox">
+								<!-- setSelectValued 는 퍼블 확인용입니다. -->
+								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
+								<li class="is-selected" role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">전체</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">신청완료</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">배송중</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">개통완료</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelectValued('#frmSort', this)">개통취소</li>
+							</ul>
+						</div>
+					</section>
+					<!-- // 콤보박스 섹션 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 정렬 modal select -->
 </body>
 
 </html>

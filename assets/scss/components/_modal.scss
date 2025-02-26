@@ -319,6 +319,7 @@
 			max-width: 480rem; /* 6차 수정 : 반응형 너비 대응 */
 		}
 		.modal-header {
+			padding-right: 50rem;
 			.btn-close {
 				right: $pc-outer-spacer;
 			}

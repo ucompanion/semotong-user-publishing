@@ -14,5 +14,39 @@
 			width: 100%;
 		}
 	}
+	.help-msg {
+		margin-top: 10rem;
+		// padding: 8rem 14rem;
+		// background-color: #F4F5F8;
+		// border-radius: 10rem;
+
+		.help-msg-tit {
+			display: flex;
+			align-items: flex-start;
+			gap: 6rem;
+			font-weight: 500;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #000;
+			.ui-icn {
+				top: 2rem;
+			}
+		}
+
+		.help-msg-list {
+			margin-top: 12rem;
+			li {
+				font-size: 12rem;
+				line-height: 16rem;
+				word-break: keep-all;
+				color: #5A5D60;
+				em {
+					flex: none;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
 }
 // e: 유심 정보 입력
