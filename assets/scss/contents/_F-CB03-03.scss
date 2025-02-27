@@ -172,5 +172,15 @@
 	}
 	// e: 요금제 상품 섹션
 
+	// Case 검색결과 없음
+	.nodata {
+		height: 300rem;
+		@include nodata;
+	}
+
+	.modal-footer {
+		flex-wrap: wrap;
+		gap: 10rem;
+	}
 }
 // e: 추천 요금제 매칭 페이지

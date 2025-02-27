@@ -6192,6 +6192,42 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12re;
   line-height: 18rem;
 }
+.F-CB03-06-page .nodata {
+  height: 300rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 328rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60rem 16rem;
+}
+.F-CB03-06-page .nodata .ui-icn {
+  margin-bottom: 8rem;
+}
+.F-CB03-06-page .nodata .nodata-tit {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #36383A;
+}
+.F-CB03-06-page .nodata .nodata-txt {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #5A5D60;
+}
+.F-CB03-06-page .nodata .nodata-tit + .nodata-txt {
+  margin-top: 4rem;
+}
+.F-CB03-06-page .modal-footer {
+  flex-wrap: wrap;
+  gap: 10rem;
+}
 
 /*-------------------------------------------------------------------
 	분류그룹 : 1:1 문의 탭
