@@ -73,6 +73,13 @@
 		}
 	}
 
+	.inp-txt {
+		@include input-style;
+		border:0;
+		background-color: #f5f5f5;
+
+	}
+
 	.on-right {
 		display: flex;
 		align-items: center;

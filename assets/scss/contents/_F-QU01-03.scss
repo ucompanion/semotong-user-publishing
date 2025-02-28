@@ -40,7 +40,12 @@
 				margin-bottom: 0;
 			}
 			.chk-style1 .chk > span {
-				letter-spacing: -0.04em;
+				font-size: 15rem;
+				letter-spacing: -0.07em;
+			}
+			.btn-more { /* 6차 수정 : 동의여부 구조로 변경 (여기까지) */
+				width: 28rem;
+				height: 28rem;
 			}
 		}
 	}

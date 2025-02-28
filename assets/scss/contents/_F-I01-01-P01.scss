@@ -14,7 +14,7 @@
 			font-size: 18rem;
 		}
 		.sec-body {
-			margin-top: 16rem;
+			margin-top: 8rem;
 		}
 		.consult-msg {
 			position: relative;
@@ -35,6 +35,7 @@
 			}
 		}
 		.consult-frm {
+			margin-top: 20rem;
 			@include basic-frm;
 		}
 

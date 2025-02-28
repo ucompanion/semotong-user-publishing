@@ -52,6 +52,7 @@
 									</figure>
 
 									<!-- 등록폼 -->
+									<!-- 2025-02-28 조찬기 : 이름, 주민번호 입력필드가 아닌것으로 변경  -->
 									<div class="basic-frm">
 										<!-- 이름 입력 -->
 										<div class="frm-field">
@@ -60,7 +61,8 @@
 											</div>
 											<div class="frm-content">
 												<div class="ui-inp">
-													<input type="tel" name="" id="frmName" value="" placeholder="홍길동" title="" class="inp" />
+													<!-- <input type="tel" name="" id="frmName" value="" placeholder="홍길동" title="" class="inp" /> -->
+													 <p class="inp-txt">세모통</p>
 												</div>
 											</div>
 										</div>
@@ -74,11 +76,13 @@
 											<div class="frm-content">
 												<div class="frm-group">
 													<div class="ui-inp">
-														<input type="tel" name="" id="frmSocialNo" value="" placeholder="YYMMDD" title="" class="inp" oninput="setRegularNumber(this)"/>
+														<!-- <input type="tel" name="" id="frmSocialNo" value="" placeholder="YYMMDD" title="" class="inp" oninput="setRegularNumber(this)"/> -->
+														<p class="inp-txt">800101</p>
 													</div>
 													<span class="frm-split">-</span>
 													<div class="ui-inp">
-														<input type="password" name="" id="frmSocialNo" value="" placeholder="뒷자리(7자리)" title="" class="inp" oninput="setRegularNumber(this)"/>
+														<!-- <input type="password" name="" id="frmSocialNo" value="" placeholder="뒷자리(7자리)" title="" class="inp" oninput="setRegularNumber(this)"/> -->
+														<p class="inp-txt">*******</p>
 													</div>
 												</div>
 											</div>
@@ -109,6 +113,7 @@
 									</figure>
 
 									<!-- 등록폼 -->
+									<!-- 2025-02-28 조찬기 : 이름, 생년월일 입력필드가 아닌것으로 변경  -->
 									<div class="basic-frm">
 										<!-- 이름 입력 -->
 										<div class="frm-field">
@@ -117,11 +122,26 @@
 											</div>
 											<div class="frm-content">
 												<div class="ui-inp">
-													<input type="tel" name="" id="frmName02" value="" placeholder="홍길동" title="" class="inp" />
+													<!-- <input type="tel" name="" id="frmName02" value="" placeholder="홍길동" title="" class="inp" /> -->
+													<p class="inp-txt">세모통</p>
 												</div>
 											</div>
 										</div>
 										<!-- // 이름 입력 -->
+
+										<!-- 생년월일 입력 -->
+										<div class="frm-field">
+											<div class="frm-title">
+												<label for="frmBirthday" class="tit">생년월일</label>
+											</div>
+											<div class="frm-content">
+												<div class="ui-inp">
+													<!-- <input type="tel" name="" id="frmBirthday" value="" placeholder="예) 20211012" title="" class="inp" oninput="setRegularNumber(this)"/> -->
+													<p class="inp-txt">20211012</p>
+												</div>
+											</div>
+										</div>
+										<!-- // 생년월일 입력 -->
 
 										<!-- 운전면허번호 선택 -->
 										<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
@@ -147,19 +167,6 @@
 											</div>
 										</div>
 										<!-- // 운전면허번호 선택 -->
-
-										<!-- 생년월일 입력 -->
-										<div class="frm-field">
-											<div class="frm-title">
-												<label for="frmBirthday" class="tit">생년월일</label>
-											</div>
-											<div class="frm-content">
-												<div class="ui-inp">
-													<input type="tel" name="" id="frmBirthday" value="" placeholder="예) 20211012" title="" class="inp" oninput="setRegularNumber(this)"/>
-												</div>
-											</div>
-										</div>
-										<!-- // 생년월일 입력 -->
 
 										<!-- 발급일자 입력 -->
 										<div class="frm-field">

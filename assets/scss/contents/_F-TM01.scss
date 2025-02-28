@@ -3,15 +3,12 @@
 	분류그룹 : 이용약관
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
-// s: 이용약관 페이지
-.F-TM01-page {
-
+// s: 이용약관
+.terms-content {
 	// 페이시 여백
 	padding-top: 16rem;
 	@include bottom-spacer;
-
-	.terms-content {
-		@include terms-content;
-	}
+	@include terms-content;
+	max-width: 1200rem;
 }
-// e: 이용약관 페이지
+// e: 이용약관
