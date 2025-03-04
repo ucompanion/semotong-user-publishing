@@ -75,6 +75,20 @@
 				.charge-sale {
 					display: none;
 				}
+				.charge-point {
+					display: flex;
+					align-items: center;
+					margin-bottom: 2rem;
+					font-weight: 700;
+					font-size: 18rem;
+					line-height: 24rem;
+					color: $color-point;
+					.tit {
+						font-size: 12rem;
+						line-height: 24rem;
+						margin-right: 4rem;
+					}
+				}
 				.explan {
 					margin-top: 1rem;
 					font-weight: 500;

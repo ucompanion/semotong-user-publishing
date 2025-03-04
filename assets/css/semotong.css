@@ -18263,6 +18263,20 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-sale {
   display: none;
 }
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #E43558;
+}
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point .tit {
+  font-size: 12rem;
+  line-height: 24rem;
+  margin-right: 4rem;
+}
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .explan {
   margin-top: 1rem;
   font-weight: 500;
@@ -19162,6 +19176,20 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-sale {
   display: none;
 }
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #E43558;
+}
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point .tit {
+  font-size: 12rem;
+  line-height: 24rem;
+  margin-right: 4rem;
+}
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .explan {
   margin-top: 1rem;
   font-weight: 500;
@@ -19971,6 +19999,20 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-sale {
   display: none;
+}
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #E43558;
+}
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point .tit {
+  font-size: 12rem;
+  line-height: 24rem;
+  margin-right: 4rem;
 }
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .explan {
   margin-top: 1rem;
@@ -20806,6 +20848,20 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-sale {
   display: none;
+}
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #E43558;
+}
+.F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .charge-point .tit {
+  font-size: 12rem;
+  line-height: 24rem;
+  margin-right: 4rem;
 }
 .F-P02-01-page .payment-noti-sec .payment-noti .payment-tit .explan {
   margin-top: 1rem;
