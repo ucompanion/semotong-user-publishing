@@ -16,40 +16,52 @@
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+	<!-- 페이지 스크립트 영역 -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// 모달 바로 볼 수 있도록 호출
+			var completeModal = new bootstrap.Modal(document.getElementById('completeModal'));
+			completeModal.show();
+		});
+	</script>
 </head>
 
 <body>
 	<!-- 레이아웃이 없는 경우  -->
-	<div class="wrapper only-container">
-		<!-- Container -->
-		<main role="main" class="container">
-			<!-- content -->
-			<div class="content F-SC02-page">
-				<!-- 완료 섹션 -->
-				<section class="complete-sec">
-					<div class="sec-inner">
-						<div class="complete-wrap">
-							<i class="ui-icn icn-140-change" aria-hidden="true"></i>
-							<strong>포인트를 전환하시겠어요?</strong>
-						</div>
-					</div>
-				</section>
-				<!-- // 완료 섹션 -->
+	<div class="wrapper only-container"></div>
 
-				<!-- 플로팅 섹션 -->
-				<section class="floating-sec">
-					<div class="sec-inner">
-						<button type="button" class="ui-btn btn-action primary">
-							<span>네, 전환할게요</span>
-						</button>
-					</div>
-				</section>
-				<!-- // 플로팅 섹션 -->
+	<!-- 2025-03-05 조찬기 : 페이지를 모달로 변경 -->
+	<div class="modal modal-basic fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="completeModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-SC02-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="completeModalLabel"></h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+
+				</div>
+				<div class="modal-body">
+					<!-- 완료 섹션 -->
+					<section class="complete-sec">
+						<div class="sec-inner">
+							<div class="complete-wrap">
+								<i class="ui-icn icn-140-change" aria-hidden="true"></i>
+								<strong>포인트를 전환하시겠어요?</strong>
+							</div>
+						</div>
+					</section>
+					<!-- // 완료 섹션 -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-action primary">
+						<span>네, 전환할게요</span>
+					</button>
+				</div>
 			</div>
-			<!-- // content -->
-		</main>
-		<!-- // Container -->
+		</div>
 	</div>
+
 </body>
 
 </html>

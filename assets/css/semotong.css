@@ -21367,17 +21367,17 @@ body.is-scroll-first .floating-menu .btn-top {
 	분류그룹 : S캐쉬 전환하기
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
-.F-SC02-page {
+.F-SC02-page.content {
   padding-top: 56rem;
   padding-bottom: 32rem;
 }
 @media all and (min-width: 768px) {
-  .F-SC02-page {
+  .F-SC02-page.content {
     padding-bottom: 48rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-SC02-page {
+  .F-SC02-page.content {
     padding-bottom: 48rem;
   }
 }
@@ -21576,6 +21576,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SC02-page .complete-sec .sCash-box {
   width: 100%;
   margin-top: 30rem;
+  margin-bottom: 10rem;
   box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
   border-radius: 2rem;
   display: flex;
