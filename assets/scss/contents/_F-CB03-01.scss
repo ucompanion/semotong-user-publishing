@@ -18,6 +18,10 @@
 		// 설문 리스트
 		.survey-list {
 			@include survey-list;
+
+			.survey-rdo .rdo.type-icn > span {
+				font-weight: 500;
+			}
 		}
 	}
 	// e: 챗봇 설문 섹션

@@ -5607,6 +5607,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo > span {
   text-align: left;
 }
+.F-CB03-01-page .cb-survey-sec .survey-list .survey-rdo .rdo.type-icn > span {
+  font-weight: 500;
+}
 .F-CB03-01-page .cb-event-sec {
   margin-top: 28rem;
 }
@@ -8984,7 +8987,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I01-01-page .product-choice-sec .choice-rdo .choice-con .tit {
   display: flex;
   align-items: flex-start;
-  height: 48rem;
+  min-height: 48rem;
 }
 .F-I01-01-page .product-choice-sec .choice-rdo .choice-con .txt {
   margin-top: 4rem;
