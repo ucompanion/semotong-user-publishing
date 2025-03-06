@@ -10049,6 +10049,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .deal-before .deal-share .deal-share-box .tit em {
   color: #542FDD;
 }
+@media all and (min-width: 480px) {
+  .F-M01-page .deal-sec .deal-before .deal-share {
+    margin-top: 46rem;
+  }
+}
 .F-M01-page .ratePlanA-sec {
   padding-top: var(--sec-inner-padding);
   padding-bottom: var(--sec-inner-padding);
