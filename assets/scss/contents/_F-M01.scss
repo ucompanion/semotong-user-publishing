@@ -378,33 +378,46 @@
 			background-color: rgba(54, 56, 58, 0.8);
 			backdrop-filter: blur(10px);
 
-			.sec-header .sec-tit {
-				color: #fff;
+			.sec-header {
+				margin-bottom: 12rem;
+				.sec-tit {
+					color: #fff;
+				}
+				.sec-explain {
+					margin-top: 0;
+					color: #CDC2F5;
+					font-size: 20rem;
+					line-height: 28rem;
+					font-weight: 700;
+				}
 			}
 
 			// 타이머 스킨변경
-			.deal-timer .timer-labels {
-				flex-wrap: wrap;
-				.label-num {
-					border: 0;
-					color: $color-primary;
-					&::before {
-						display: none;
+			.deal-timer {
+				margin-bottom: 0;
+				.timer-labels {
+					flex-wrap: wrap;
+					.label-num {
+						border: 0;
+						color: $color-primary;
+						&::before {
+							display: none;
+						}
 					}
-				}
-				.label-text {
-					font-weight: 600;
-					font-size: 20rem;
-					line-height: 40rem;
-					color: #fff;
+					.label-text {
+						font-weight: 600;
+						font-size: 20rem;
+						line-height: 40rem;
+						color: #fff;
+					}
 				}
 			}
 
 			// 공유하기
 			.deal-share {
 				position: relative;
-				margin-top: 17rem;
-				padding-top: 100rem;
+				margin-top: 0;
+				padding-top: 88rem;
 				.deal-share-char {
 					position: absolute;
 					right: 0;

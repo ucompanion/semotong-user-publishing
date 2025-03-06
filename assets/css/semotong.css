@@ -9984,8 +9984,21 @@ body.is-scroll-first .floating-menu .btn-top {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+.F-M01-page .deal-sec .deal-before .sec-header {
+  margin-bottom: 12rem;
+}
 .F-M01-page .deal-sec .deal-before .sec-header .sec-tit {
   color: #fff;
+}
+.F-M01-page .deal-sec .deal-before .sec-header .sec-explain {
+  margin-top: 0;
+  color: #CDC2F5;
+  font-size: 20rem;
+  line-height: 28rem;
+  font-weight: 700;
+}
+.F-M01-page .deal-sec .deal-before .deal-timer {
+  margin-bottom: 0;
 }
 .F-M01-page .deal-sec .deal-before .deal-timer .timer-labels {
   flex-wrap: wrap;
@@ -10005,8 +10018,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M01-page .deal-sec .deal-before .deal-share {
   position: relative;
-  margin-top: 17rem;
-  padding-top: 100rem;
+  margin-top: 0;
+  padding-top: 88rem;
 }
 .F-M01-page .deal-sec .deal-before .deal-share .deal-share-char {
   position: absolute;
