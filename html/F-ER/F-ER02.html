@@ -9,30 +9,17 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="세모통" />
 	<meta name="description" content="세모통" />
-	<title>최근 본 요금제 | 세모통</title>
+	<title>간편개통 | 세모통</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
-
-	<!-- 페이지 스크립트 영역 -->
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			// Bootstrap Popover + Custom
-			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
-		})
-	</script>
 </head>
 
 <body>
-	<!-- 레이아웃 유형구분
-		메인: main-wrapper,
-		서브: sub-wrapper,
-		기타: [기타]-wrapper
-	 -->
-	<div class="wrapper sub-wrapper">
+	<div class="wrapper sub-container">
 		<!-- Header Deaktop -->
 		<header class="header-desktop">
 			<div class="header-skip">
@@ -85,46 +72,52 @@
 		<!-- // Header Deaktop -->
 
 		<!-- Header Mobile -->
-		<header class="header-mobile">
+		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
+		<!-- 4차 수정 : 마이페이지 헤더 수정
+			- 모바일 헤더 only-mo 클래스 추가
+			- 모바일 헤더 '마이페이지'를 로고로 변경
+			- 모바일 헤더 '고객센터' 버튼을 '나의정보 영역'으로 이동
+		 -->
+		<header class="header-mobile only-mo">
 			<section class="header-sec">
-				<button type="button" class="ui-btn">
-					<i class="ui-icn icn-32-back-bk" aria-label="뒤로가기"></i>
-				</button>
-				<h1 class="title">최근 본 요금제</h1>
+				<h1 class="title">
+					<!-- 로고 베타 추가 -->
+					<a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a>
+					<!-- <span class="logo-beta"><img src="../../assets/images/common/img-logo-header-beta.png" alt=""></span> -->
+				</h1>
 				<button type="button" class="ui-btn btn-aside" data-bs-toggle="modal" data-bs-target="#asideModal">
-					<i class="ui-icn icn-32-anb-bk" aria-label="전체메뉴"></i>
+					<i class="ui-icn icn-32-anb-bk" aria-label="메뉴열기"></i>
 				</button>
 			</section>
-			<!-- // Mobile Header -->
+			<!-- // Header Mobile -->
 		</header>
 		<!-- // Header -->
 
-		<!-- Mobile Nav Modal (include_mobileNav.html) -->
+		<!-- Aside Modal (include_mobileNav.html) -->
 		<aside class="modal modal-full fade aside-modal" id="asideModal" tabindex="-1" role="dialog" aria-labelledby="asideModalLabel" aria-hidden="true"></aside>
-		<!-- Mobile Nav Modal -->
+		<!-- Aside Modal -->
 
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<div class="content F-MY01-03-page">
-				<!-- Case 노데이터 섹션 -->
-				<section class="nodata-sec">
+			<div class="content F-ER-page F-ER01-page">
+				<!-- 간편개통 섹션 -->
+				<section class="error-sec">
 					<div class="sec-inner">
-						<!-- 최근 본 요금제 없음 -->
 						<div class="nodata">
-							<i class="ui-icn icn-100-nodata-recent" aria-hidden="true"></i>
-							<p class="nodata-tit"><strong>아직 둘러 본 요금제가 없어요.</strong></p>
+							<i class="ui-icn icn-110-nodata-cry" aria-hidden="true"></i>
+							<p class="nodata-tit"><strong>앗, 오류가 발생했어요.</strong></p>
+							<p class="nodata-txt">빠르게 조치할게요.</p>
 						</div>
-						<!-- // 최근 본 요금제 없음 -->
 					</div>
 				</section>
-				<!-- // Case 노데이터 섹션 -->
+				<!-- // 간편개통 섹션 -->
 
 				<!-- 플로팅 섹션 -->
 				<section class="floating-sec">
 					<div class="sec-inner">
 						<button type="button" class="ui-btn btn-action primary">
-							<span>요금제 보러가기</span>
+							<span>홈으로 가기</span>
 						</button>
 					</div>
 				</section>
@@ -134,8 +127,6 @@
 		</main>
 		<!-- // Container -->
 	</div>
-
-	<!-- <div class="popover ui-popover popover-style1 bs-popover-auto fade show" role="tooltip" id="popover568253" data-popper-placement="top" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -694px);"><div class="popover-arrow" style="position: absolute; left: 0px; transform: translate(106px, 0px);"></div><div class="popover-body">텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.</div></div> -->
 </body>
 
 </html>

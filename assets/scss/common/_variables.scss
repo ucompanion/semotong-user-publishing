@@ -2630,3 +2630,13 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 }
 // e: 완료
+
+// s: 시스템에러
+@mixin error-sec {
+	@include flex-fill-height;
+
+	.sec-inner {
+		@include flex-fill-height;
+	}
+}
+// e: 시스템에러

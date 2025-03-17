@@ -90,6 +90,7 @@ html {
 				transition: all 0.2s ease;
 			}
 			.logo-beta { /* 로고 베타 추가 */
+				display: none;
 				img {
 					height: 20rem;
 					margin-left: 6rem;

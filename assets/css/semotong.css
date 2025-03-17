@@ -857,7 +857,9 @@ html {
   background-color: #000000;
   transition: all 0.2s ease;
 }
-.header-mobile .header-sec .title .logo-beta { /* 로고 베타 추가 */ }
+.header-mobile .header-sec .title .logo-beta { /* 로고 베타 추가 */
+  display: none;
+}
 .header-mobile .header-sec .title .logo-beta img {
   height: 20rem;
   margin-left: 6rem;
@@ -23276,4 +23278,56 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-QU01-10-01-page .persnal-card img {
   width: 210rem;
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : 시스템에러
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-ER-page {
+  padding-top: 56rem;
+  padding-bottom: calc(32rem + env(safe-area-inset-bottom, 0)/1.7);
+}
+.F-ER-page .error-sec {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.F-ER-page .error-sec .sec-inner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.F-ER-page .error-sec .nodata {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 328rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60rem 16rem;
+}
+.F-ER-page .error-sec .nodata .ui-icn {
+  margin-bottom: 8rem;
+}
+.F-ER-page .error-sec .nodata .nodata-tit {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #36383A;
+}
+.F-ER-page .error-sec .nodata .nodata-txt {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #5A5D60;
+}
+.F-ER-page .error-sec .nodata .nodata-tit + .nodata-txt {
+  margin-top: 4rem;
 }
