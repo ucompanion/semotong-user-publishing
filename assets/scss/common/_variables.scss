@@ -2323,22 +2323,27 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		border-radius: 4rem;
 		background-color: #F4F5F8;
 		li {
+			position: relative;
 			display: flex;
+			padding-bottom: 26rem;
 			font-weight: 500;
 			font-size: 14rem;
 			line-height: 20rem;
 			color: #46484B;
-			& + li {
-				margin-top: 26rem;
-				.num::after {
-					content:'';
-					position: absolute;
-					left: calc(50% - 1px);
-					bottom: calc(100% + 4rem);
-					display: block;
-					width: 2rem;
-					height: 18rem;
-					background: url('../images/common/line-18-step.svg') no-repeat center center;
+			&::after {
+				content:'';
+				position: absolute;
+				left: 11rem;
+				top: 28rem;
+				bottom: 4rem;
+				display: block;
+				width: 2rem;
+				background: url('../images/common/line-18-step.svg') repeat-y center center;
+			}
+			&:last-child {
+				padding-bottom: 0;
+				&::after {
+					display: none;
 				}
 			}
 			.num {
@@ -2355,6 +2360,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				font-size: 14rem;
 				line-height: 20rem;
 				color: #542FDD;
+			}
+			.inline-block {
+				display: inline-block;
 			}
 			strong {
 				font-weight: 700;

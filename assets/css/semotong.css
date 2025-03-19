@@ -11575,24 +11575,29 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #F4F5F8;
 }
 .F-M02-01-T01-page .account-sol-sec .solution-steps li {
+  position: relative;
   display: flex;
+  padding-bottom: 26rem;
   font-weight: 500;
   font-size: 14rem;
   line-height: 20rem;
   color: #46484B;
 }
-.F-M02-01-T01-page .account-sol-sec .solution-steps li + li {
-  margin-top: 26rem;
-}
-.F-M02-01-T01-page .account-sol-sec .solution-steps li + li .num::after {
+.F-M02-01-T01-page .account-sol-sec .solution-steps li::after {
   content: "";
   position: absolute;
-  left: calc(50% - 1px);
-  bottom: calc(100% + 4rem);
+  left: 11rem;
+  top: 28rem;
+  bottom: 4rem;
   display: block;
   width: 2rem;
-  height: 18rem;
-  background: url("../images/common/line-18-step.svg") no-repeat center center;
+  background: url("../images/common/line-18-step.svg") repeat-y center center;
+}
+.F-M02-01-T01-page .account-sol-sec .solution-steps li:last-child {
+  padding-bottom: 0;
+}
+.F-M02-01-T01-page .account-sol-sec .solution-steps li:last-child::after {
+  display: none;
 }
 .F-M02-01-T01-page .account-sol-sec .solution-steps li .num {
   position: relative;
@@ -11608,6 +11613,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #542FDD;
+}
+.F-M02-01-T01-page .account-sol-sec .solution-steps li .inline-block {
+  display: inline-block;
 }
 .F-M02-01-T01-page .account-sol-sec .solution-steps li strong {
   font-weight: 700;
@@ -21401,24 +21409,29 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #F4F5F8;
 }
 .F-P02-01-T04-page .account-sol-sec .solution-steps li {
+  position: relative;
   display: flex;
+  padding-bottom: 26rem;
   font-weight: 500;
   font-size: 14rem;
   line-height: 20rem;
   color: #46484B;
 }
-.F-P02-01-T04-page .account-sol-sec .solution-steps li + li {
-  margin-top: 26rem;
-}
-.F-P02-01-T04-page .account-sol-sec .solution-steps li + li .num::after {
+.F-P02-01-T04-page .account-sol-sec .solution-steps li::after {
   content: "";
   position: absolute;
-  left: calc(50% - 1px);
-  bottom: calc(100% + 4rem);
+  left: 11rem;
+  top: 28rem;
+  bottom: 4rem;
   display: block;
   width: 2rem;
-  height: 18rem;
-  background: url("../images/common/line-18-step.svg") no-repeat center center;
+  background: url("../images/common/line-18-step.svg") repeat-y center center;
+}
+.F-P02-01-T04-page .account-sol-sec .solution-steps li:last-child {
+  padding-bottom: 0;
+}
+.F-P02-01-T04-page .account-sol-sec .solution-steps li:last-child::after {
+  display: none;
 }
 .F-P02-01-T04-page .account-sol-sec .solution-steps li .num {
   position: relative;
@@ -21434,6 +21447,9 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #542FDD;
+}
+.F-P02-01-T04-page .account-sol-sec .solution-steps li .inline-block {
+  display: inline-block;
 }
 .F-P02-01-T04-page .account-sol-sec .solution-steps li strong {
   font-weight: 700;
