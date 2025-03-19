@@ -179,6 +179,7 @@
 			padding-bottom: var(--sec-inner-padding);
 		}
 		.sec-header {
+			display: flex;
 			.sec-tit {
 				color: #000000;
 				.ui-icn {
@@ -379,6 +380,7 @@
 			backdrop-filter: blur(10px);
 
 			.sec-header {
+				display: block;
 				margin-bottom: 12rem;
 				.sec-tit {
 					color: #fff;

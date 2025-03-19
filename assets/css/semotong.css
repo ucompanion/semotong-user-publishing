@@ -2170,6 +2170,10 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-14-more-gr.svg");
 }
 
+.icn-14-more-pr::before {
+  background-image: url("../images/common/icn-14-more-pr.svg");
+}
+
 .icn-14-noti-gr::before {
   background-image: url("../images/common/icn-14-noti-gr.svg");
 }
@@ -3865,6 +3869,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.address-srch-sec .sec-header .btn-more.static {
+  position: static;
 }
 .address-srch-sec .sec-body {
   margin-bottom: 20rem;
@@ -6375,6 +6382,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-CS01-page .motongcb-intro-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-CS01-page .motongcb-intro-sec .sec-header .sec-tit {
   position: relative;
   display: flex;
@@ -6560,6 +6570,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-CS01-page .motongcb-intro-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-CS01-page .motongcb-intro-sec .sec-header .sec-tit {
   position: relative;
@@ -7978,6 +7991,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-G03-01-page .faq-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-G03-01-page .faq-sec .keyword-swiper {
   padding-bottom: 16rem;
   overflow: visible;
@@ -8869,6 +8885,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-I01-01-page .telecom-choice-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-I01-01-page .telecom-choice-sec .telecom-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -8953,6 +8972,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-I01-01-page .product-choice-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-I01-01-page .product-choice-sec .sec-body { /* 4차 수정 : 상품 스와이프 추가(여기부터) */
   position: relative;
@@ -9099,6 +9121,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-I01-01-page .internet-choice-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-I01-01-page .internet-choice-sec .sec-body { /* 4차 수정 : 인터넷 스와이프 추가(여기부터) */
   position: relative;
 }
@@ -9243,6 +9268,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-I01-01-page .plan-view-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-I01-01-page .plan-view-sec.is-hide {
   display: none;
 }
@@ -9359,6 +9387,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-I01-01-page .join-steps-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-I01-01-page .join-steps-sec .join-steps li {
   display: flex;
@@ -9819,6 +9850,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-M01-page .deal-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-M01-page .deal-sec .sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
   min-width: 320rem;
   padding-left: 16rem;
@@ -9839,6 +9873,9 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-left: 23rem;
     padding-right: 23rem;
   }
+}
+.F-M01-page .deal-sec .sec-header {
+  display: flex;
 }
 .F-M01-page .deal-sec .sec-header .sec-tit {
   color: #000000;
@@ -10047,6 +10084,7 @@ body.is-scroll-first .floating-menu .btn-top {
           backdrop-filter: blur(10px);
 }
 .F-M01-page .deal-sec .deal-before .sec-header {
+  display: block;
   margin-bottom: 12rem;
 }
 .F-M01-page .deal-sec .deal-before .sec-header .sec-tit {
@@ -10159,6 +10197,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M01-page .ratePlanA-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-M01-page .ratePlanA-sec .sec-body {
   position: relative;
@@ -10315,6 +10356,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-M01-page .recom-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-M01-page .recom-sec .recom-list {
   display: flex;
   flex-direction: column;
@@ -10398,6 +10442,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-M01-page .special-event-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-M01-page .special-event-sec .special-event-list {
   display: flex;
   flex-direction: column;
@@ -10457,6 +10504,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M01-page .review-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-M01-page .review-sec .review-swiper .swiper-slide {
   width: 270rem;
@@ -10582,6 +10632,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M01-page .partner-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-M01-page .partner-sec .partner-swiper {
   overflow: visible;
@@ -10821,6 +10874,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M02-01-T01-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 @media all and (min-width: 768px) {
   .F-M02-01-T01-page .ratePlanC-sec {
@@ -11304,6 +11360,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-M02-01-T01-page .recom-bnr-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-M02-01-T01-page .recom-bnr-sec .recom-swiper { /* 7차 수정 : 추천배너 스와이프로 변경 */ }
 .F-M02-01-T01-page .recom-bnr-sec .recom-swiper .swiper-pagination {
   position: static;
@@ -11376,6 +11435,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M02-01-T01-page .faq-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-M02-01-T01-page .faq-sec .faq-accordion {
   margin: 0 calc(16rem * -1);
@@ -11653,6 +11715,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M03-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-toolbar {
   display: flex;
@@ -12104,6 +12169,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-M03-page .recom-bnr-sec .sec-header .btn-more.static {
+  position: static;
+}
 
 /*-------------------------------------------------------------------
 	분류그룹 : 세모통 파트너사
@@ -12162,6 +12230,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M04-page .partner-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-M04-page .partner-sec .partner-srch {
   margin-bottom: 40rem;
@@ -12432,6 +12503,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-M05-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-M05-page .ratePlanC-sec .ratePlanC-toolbar { /* 1차 수정: 툴바 전체 수정(셀렉트 말줄임 적용) */
   display: flex;
@@ -13342,6 +13416,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-MY01-02-P01-page .review-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-MY01-02-P01-page .review-sec .sec-header {
   padding-top: 24rem;
   margin-bottom: 14rem;
@@ -13806,6 +13883,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-MY01-03-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-MY01-03-page .ratePlanC-sec .sec-header {
   margin-bottom: 0;
@@ -14314,6 +14394,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-MY01-04-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-MY01-04-page .ratePlanC-sec .sec-header {
   margin-bottom: 0;
@@ -14824,6 +14907,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-MY01-05-page .ratePlanD-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-MY01-05-page .ratePlanD-sec .sec-header {
   margin-bottom: 0;
@@ -16378,6 +16464,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P01-01-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
+}
 @media all and (min-width: 768px) {
   .F-P01-01-page .ratePlanC-sec {
     margin-top: 16rem;
@@ -16462,6 +16551,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-P01-01-page .recent-ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-P01-01-page .recent-ratePlanC-sec .sec-header {
   margin-bottom: 0;
@@ -16928,6 +17020,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P01-01-P01-page .filter-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-P01-01-P01-page .filter-sec .sec-header {
   display: flex;
   justify-content: space-between;
@@ -17217,6 +17312,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P02-01-P03-page .usimBuy-store-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-P02-01-P03-page .usimBuy-store-sec .usim-img {
   width: 100%;
   height: 212rem;
@@ -17385,6 +17483,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-P02-01-P04-page .usimBuy-store-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-P02-01-P04-page .usimBuy-store-sec .usim-img {
   width: 100%;
@@ -17555,6 +17656,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P02-01-P05-page .usimBuy-store-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-P02-01-P05-page .usimBuy-store-sec .usim-img {
   width: 100%;
   height: 212rem;
@@ -17723,6 +17827,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-P02-01-P06-page .usimBuy-store-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-P02-01-P06-page .usimBuy-store-sec .usim-img {
   width: 100%;
@@ -18222,6 +18329,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P02-01-page .ratePlan-combi-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
   position: static;
@@ -18477,6 +18587,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-P02-01-page .similar-plan-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-P02-01-page .similar-plan-sec .similar-plan-swiper .swiper-wrapper .swiper-slide {
   width: 240rem;
@@ -19135,6 +19248,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P02-01-page .ratePlan-combi-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
   position: static;
@@ -19390,6 +19506,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-P02-01-page .similar-plan-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-P02-01-page .similar-plan-sec .similar-plan-swiper .swiper-wrapper .swiper-slide {
   width: 240rem;
@@ -19959,6 +20078,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P02-01-page .ratePlan-combi-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
   position: static;
@@ -20214,6 +20336,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-P02-01-page .similar-plan-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-P02-01-page .similar-plan-sec .similar-plan-swiper .swiper-wrapper .swiper-slide {
   width: 240rem;
@@ -20808,6 +20933,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-P02-01-page .ratePlan-combi-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper { /* 7차 수정 : 결합배너 스와이프로 변경 */ }
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination {
   position: static;
@@ -21063,6 +21191,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-P02-01-page .similar-plan-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-P02-01-page .similar-plan-sec .similar-plan-swiper .swiper-wrapper .swiper-slide {
   width: 240rem;
@@ -21503,6 +21634,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-SC02-page .sCash-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-SC02-page .sCash-sec .sCash-box {
   box-shadow: 0rem 4rem 10rem 0 rgba(0, 0, 0, 0.08);
   border-radius: 2rem;
@@ -21592,6 +21726,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-alert.is-errored {
   color: #EA2A2A;
+}
+.F-SC02-page .sCash-sec .sCash-frm .basic-frm .frm-group .btn-more {
+  margin-left: auto;
 }
 .F-SC02-page .sCash-sec .sChash-guide {
   margin-top: 40rem;
@@ -21730,6 +21867,9 @@ body.is-scroll-first .floating-menu .btn-top {
   right: 0;
   top: 0;
 }
+.F-SL01-page .event-benefit-sec .sec-header .btn-more.static {
+  position: static;
+}
 .F-SL01-page .event-benefit-sec .event-bnr + .event-benefit {
   margin-top: 10rem;
 }
@@ -21771,6 +21911,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-SL01-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-SL01-page .ratePlanC-sec .ratePlanC-list {
   display: flex;
@@ -22203,6 +22346,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-SL-01-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
 }
 @media all and (min-width: 768px) {
   .F-SL-01-page .ratePlanC-sec {
@@ -22654,6 +22800,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-bottom: 32rem;
   color: #2A2B2D;
   margin-top: 24rem;
+  word-break: keep-all;
   max-width: 1200rem;
 }
 @media all and (min-width: 768px) {
@@ -22819,6 +22966,10 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-top: 16rem;
 }
 
+.modal-body .terms-content {
+  padding-top: 0;
+}
+
 /*-------------------------------------------------------------------
 	분류그룹 : 개인정보 제3자 동의
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
@@ -22872,6 +23023,9 @@ body.is-scroll-first .floating-menu .btn-top {
   position: absolute;
   right: 0;
   top: 0;
+}
+.F-QU-page .simple-open-sec .sec-header .btn-more.static {
+  position: static;
 }
 .F-QU-page .simple-open-sec .sec-header {
   margin-bottom: 40rem;

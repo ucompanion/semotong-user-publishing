@@ -11,4 +11,8 @@
 	@include terms-content;
 	max-width: 1200rem;
 }
+
+.modal-body .terms-content {
+	padding-top: 0;
+}
 // e: 이용약관

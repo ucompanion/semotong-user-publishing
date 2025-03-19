@@ -103,6 +103,11 @@
 															<input type="checkbox" name="sCheck1" id="sCheck12">
 															<span class="chk"><span>(필수) 개인정보 수집 및 이용 동의</span></span>
 														</label>
+														<!-- 2025-03-19 조찬기 : 약관 보기 버튼 추가 -->
+														<button type="button" class="ui-btn btn-more" data-bs-toggle="modal" data-bs-target="#termsModal">
+															<span>보기</span>
+															<i class="ui-icn icn-16-more-gr" aria-hidden="true"></i>
+														</button>
 													</div>
 												</div>
 											</div>
@@ -113,9 +118,10 @@
 
 								<div class="sCash-frm-field">
 									<!-- 캐쉬백 신청 선택 -->
+									<!-- 2025-03-19 조찬기 : 캐쉬백 신청 설명 추가 -->
 									<label class="ui-rdo rdo-style1 has-icn">
 										<input type="radio" name="FSC02Radio" id="FSC02-02" onchange="tabHandler('FSC02-02-pane', this)">
-										<span class="rdo"><span><i class="ui-icn icn-26-cash"></i>캐쉬백 신청</span></span>
+										<span class="rdo"><span><i class="ui-icn icn-26-cash"></i>캐쉬백 신청 (10,000캐쉬 이상 보유시 신청가능)</span></span>
 									</label>
 
 									<div class="tab-pane" id="FSC02-02-pane" role="tabpanel" aria-labelledby="FSC02-02" tabindex="0">
@@ -192,6 +198,7 @@
 									<li>※ S캐쉬 네이버 포인트 전환은 1,000원부터 가능해요.</li>
 									<li>※ 캐쉬백은 본인 명의의 계좌로만 신청 가능해요.</li>
 									<li>※ 캐쉬백 신청은 10,000원부터 가능해요.</li>
+									<li>※ 캐쉬백은 확인 과정을 거친 후 순차적으로 지급해 드려요.</li><!-- 2025-03-19 조찬기 : 유의사항 설명 추가 -->
 								</ul>
 							</div>
 							<!-- //캐쉬가이드 -->
@@ -357,6 +364,51 @@
 	</div>
 	<!-- // 은행선택 Modal -->
 
+	<!-- 이용동의 Modal -->
+	<!-- 2025-03-19 조찬기 : 이용동의 Modal 추가 -->
+	<div class="modal fade modal-full" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-TM-page">
+				<div class="modal-header">
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 컨텐츠 섹션 -->
+					<section>
+						<div class="terms-content">
+							<div class="terms-title">
+								<h2 id="termsModalLabel">네이버 포인트 전환 개인정보 수집 및 이용 동의</h2>
+							</div>
+
+							<h3>1. 수집 및 이용 목적</h3>
+							<p>- 세모통 포인트(통칭 ‘S캐쉬’)를 네이버페이 포인트 전환 시 이용</p>
+
+							<h3>2. 수집 항목</h3>
+							<p>- CI, 네이버페이 회원번호</p>
+
+							<h3>3. 보유기간</h3>
+							<p>- 회원탈퇴 시까지 보관 <br>(단, 관계 법령에 따라 고객님의 개인정보를 보존하여야 하는 경우, 회사는 해당 법령에서 정한 기간동안 보관합니다.)</p>
+						  	<p>- 웹사이트 방문기록 : 3개월 (통신비밀보호법)</p>
+						  	<p>- 계약 또는 청약철회 등에 관한 기록 : 5년(전자상거래법)</p>
+						  	<p>- 대금결제 및 재화 등의 공급에 관한 기록 : 5년(전자상거래법)</p>
+						  	<p>- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래법)</p>
+						  	<p>- 신용정보의 수집·처리 및 이용 등에 관한 기록 : 3년(신용정보의 이용 및 보호에 관한 법률)</p>
+						 	<p>* 유효기간이라 함은 일정기간(1년) 서비스를 이용하지 않은 경우로써, 탈퇴 등의 조치가 적용됩니다.</p>
+						</div>
+					</section>
+					<!-- // 컨텐츠 섹션 -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-action primary">
+						<span>확인</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 이용동의 Modal -->
 </body>
 
 </html>

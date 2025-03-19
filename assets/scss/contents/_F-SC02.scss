@@ -46,6 +46,9 @@
 
 			.basic-frm {
 				@include basic-frm;
+				.frm-group .btn-more {
+					margin-left: auto;
+				}
 			}
 		}
 

@@ -160,6 +160,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			position: absolute;
 			right: 0;
 			top: 0;
+			&.static {
+				position: static;
+			}
 		}
 	}
 }
@@ -2365,6 +2368,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 @mixin terms-content {
 	color: #2A2B2D;
 	margin-top: 24rem;
+	word-break: keep-all;
 	&:first-child {
 		margin-top: 0;
 	}
