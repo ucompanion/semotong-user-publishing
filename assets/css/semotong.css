@@ -1114,7 +1114,7 @@ section .sec-inner {
 
 .floating-menu {
   --btn-size: 54rem;
-  --btn-gap: 90rem;
+  --btn-gap: 30rem;
   position: fixed;
   bottom: calc(76rem + env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
   right: 20rem;
@@ -4026,7 +4026,7 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 
 [data-popper-placement^=bottom] .popover-arrow {
-  bottom: 100%;
+  bottom: 99%;
 }
 
 [data-popper-placement^=right] .popover-arrow {
@@ -4599,6 +4599,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -4619,11 +4622,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -4685,6 +4685,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -5364,6 +5365,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -5384,11 +5388,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -5450,6 +5451,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -6004,6 +6006,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -6024,11 +6029,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -6090,6 +6092,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -7405,6 +7408,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-label-option .split:first-child, .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -7425,11 +7431,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -7491,6 +7494,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -11010,6 +11014,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -11030,11 +11037,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -11096,6 +11100,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -11827,6 +11832,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -11847,11 +11855,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -11913,6 +11918,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -12613,6 +12619,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -12633,11 +12642,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -12699,6 +12705,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -13970,6 +13977,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -13990,11 +14000,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -14056,6 +14063,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -14481,6 +14489,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -14501,11 +14512,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -14567,6 +14575,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -15884,6 +15893,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -15904,11 +15916,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -15970,6 +15979,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -16638,6 +16648,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -16658,11 +16671,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -16724,6 +16734,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -18011,6 +18022,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:first-child, .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -18031,11 +18045,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -18097,6 +18108,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -18930,6 +18942,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:first-child, .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -18950,11 +18965,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -19016,6 +19028,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -19760,6 +19773,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:first-child, .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -19780,11 +19796,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -19846,6 +19859,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -20615,6 +20629,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:first-child, .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -20635,11 +20652,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -20701,6 +20715,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -22004,6 +22019,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -22024,11 +22042,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -22090,6 +22105,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
@@ -22498,6 +22514,9 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 50%;
   background-color: #CDC2F5;
 }
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:first-child, .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .split:last-child {
+  display: none;
+}
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-label-option .label { /* 2차 수정 : 서비스카드 공통 툴팁 대응 */
   position: relative;
   z-index: 10;
@@ -22518,11 +22537,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
-  top: 2rem;
+  top: 1rem;
   margin-left: 4rem;
-}
-.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-tit .ui-icn {
-  top: -2rem;
 }
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-name {
   margin-top: 4rem;
@@ -22584,6 +22600,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   top: 2rem;
   text-align: right;
