@@ -343,9 +343,10 @@
 			}
 			.card-footer {
 				display: flex;
-				align-items: center;
+				align-items: flex-end;
 				justify-content: space-between;
-				padding-top: 13rem;
+				padding-top: 17rem;
+				padding-bottom: 0rem;
 
 				.card-partner {
 					display: flex;
@@ -353,9 +354,10 @@
 					flex:1 1 auto;
 					width: 100%;
 					// height: 14rem;
-					padding-right: 4rem;
-					max-height: 14rem;
-					max-width: 72rem;
+					// padding-right: 4rem;
+					max-height: 18rem;
+					max-width: 70rem;
+					padding: 1rem 0;
 					img {
 						max-width: 100%;
 						// height: 100%;
@@ -367,31 +369,32 @@
 				.card-charge {
 					font-weight: 700;
 					font-size: 20rem;
-					line-height: 28rem;
+					line-height: 24rem;
 					color: $color-primary;
 					text-align: right;
 				}
 				.card-point {
-					display: flex;
-					align-items: center;
-					justify-content: flex-end;
 					width: 100%;
 					text-align: right;
 					font-weight: 700;
-					font-size: 11rem;
-					line-height: 16rem;
+					font-size: 15rem;
+					line-height: 18rem;
 					color: $color-point;
 					letter-spacing: -0.1em;
 					.tit {
-						margin-right: 4rem;
-						font-size: 10rem;
+						display: block;
+						text-align: right;
+						// margin-right: 4rem;
+						font-size: 12rem;
 					}
 				}
 
 				&.has-point {
 					align-items: flex-end;
-					padding-top: 7rem;
+					padding-top: 5rem;
+					padding-bottom: 0;
 					.card-charge {
+						display: none;
 						font-size: 12rem;
 						line-height: 18rem;
 					}

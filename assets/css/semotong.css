@@ -10056,18 +10056,19 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M01-page .deal-sec .deal-card .card-footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  padding-top: 13rem;
+  padding-top: 17rem;
+  padding-bottom: 0rem;
 }
 .F-M01-page .deal-sec .deal-card .card-footer .card-partner {
   display: flex;
   position: relative;
   flex: 1 1 auto;
   width: 100%;
-  padding-right: 4rem;
-  max-height: 14rem;
-  max-width: 72rem;
+  max-height: 18rem;
+  max-width: 70rem;
+  padding: 1rem 0;
 }
 .F-M01-page .deal-sec .deal-card .card-footer .card-partner img {
   max-width: 100%;
@@ -10078,31 +10079,31 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .deal-card .card-footer .card-charge {
   font-weight: 700;
   font-size: 20rem;
-  line-height: 28rem;
+  line-height: 24rem;
   color: #542FDD;
   text-align: right;
 }
 .F-M01-page .deal-sec .deal-card .card-footer .card-point {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   width: 100%;
   text-align: right;
   font-weight: 700;
-  font-size: 11rem;
-  line-height: 16rem;
+  font-size: 15rem;
+  line-height: 18rem;
   color: #E43558;
   letter-spacing: -0.1em;
 }
 .F-M01-page .deal-sec .deal-card .card-footer .card-point .tit {
-  margin-right: 4rem;
-  font-size: 10rem;
+  display: block;
+  text-align: right;
+  font-size: 12rem;
 }
 .F-M01-page .deal-sec .deal-card .card-footer.has-point {
   align-items: flex-end;
-  padding-top: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 0;
 }
 .F-M01-page .deal-sec .deal-card .card-footer.has-point .card-charge {
+  display: none;
   font-size: 12rem;
   line-height: 18rem;
 }
