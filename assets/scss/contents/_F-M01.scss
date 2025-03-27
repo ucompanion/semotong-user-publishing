@@ -263,10 +263,15 @@
 			overflow: visible;
 			width: 100%;
 			.swiper-slide {
-				width: 248px;
+				width: 248rem;
 				opacity: 0.5;
 				transition: opacity 0.2s ease;
 				&-active {
+					opacity: 1;
+				}
+			}
+			&.no-scroll {
+				.swiper-slide {
 					opacity: 1;
 				}
 			}

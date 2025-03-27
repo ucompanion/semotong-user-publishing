@@ -18,36 +18,10 @@
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
 	<!-- 페이지 스크립트 영역 -->
-	<!-- Swiper Librarys -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			// Bootstrap Popover + Custom
 			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
-
-			// 키워드 스와이프
-		    var keywordSwiper = new Swiper(".keyword-swiper", {
-				threshold: 3,
-				slidesPerView: 'auto',
-				spaceBetween: 8,
-				freeMode: true,
-				resistance: true,
-				resistanceRatio: 0
-			});
-
-			// 추천배너 스와이프
-			var recomSwiper = new Swiper(".recom-swiper", {
-				threshold: 3,
-				spaceBetween: 10,
-				pagination: {
-					el: ".swiper-pagination",
-				},
-				autoplay: {
-					delay: 2500,
-					disableOnInteraction: false,
-				},
-			});
 		})
 
 		// qos modal

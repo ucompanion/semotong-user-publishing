@@ -648,7 +648,7 @@
 								</div>
 							</div>
 							<div class="payment-btn">
-								<button type="button" class="ui-btn btn-action primary">
+								<button type="button" class="ui-btn btn-action primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
 									<span>신청하기</span>
 								</button>
 							</div>
@@ -661,6 +661,32 @@
 		</main>
 		<!-- // Container -->
 	</div>
+
+	<!-- 2025-03-27 조찬기 : 가입유형선택 Modal confirm -->
+	<div class="modal modal-confirm fade" id="confirmModal" tabindex="-1" role="alertdialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title blind" id="confirmModalLabel">Confirm Message</h3>
+				</div>
+				<div class="modal-body">
+					<section class="msg-sec">
+						<h4 class="sec-tit">가입 유형 선택</h4>
+						<p class="sec-txt">어떤 방법으로 신청하시겠어요?</p>
+					</section>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
+						<span>신규가입</span>
+					</button>
+					<button type="button" class="ui-btn btn-modal primary" data-bs-dismiss="modal">
+						<span>번호이동</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 가입유형선택 Modal confirm -->
 </body>
 
 </html>

@@ -117,6 +117,10 @@
 							<div class="detail-header">
 								<h2 class="tit"><strong>[안내] 카카오 회원가입 후 로그인이 안될 때 안내</strong></h2>
 								<p class="date">2024.11.01</p>
+								<!-- 2025-03-27 조찬기 : 공유하기 추가 -->
+								<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
+									<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+								</button>
 							</div>
 							<div class="detail-body">
 								<div class="data-view">
@@ -460,6 +464,35 @@
 							</tbody>
 						</table>
 					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 공유하기 Modal Alert -->
+
+	<!-- 공유하기 Modal Alert -->
+	<div class="modal modal-alert fade" id="shareModal" tabindex="-1" role="alertdialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="shareModalLabel">공유하기</h3>
+				</div>
+				<div class="modal-body">
+					<section class="share-sec">
+						<button type="button" class="ui-btn">
+							<i class="ui-icn icn-80-kakao" aria-hidden="true"></i>
+							<span>카카오톡</span>
+						</button>
+						<button type="button" class="ui-btn">
+							<i class="ui-icn icn-80-copy" aria-hidden="true"></i>
+							<span>URL 복사</span>
+						</button>
+					</section>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-modal normal" data-bs-dismiss="modal">
+						<span>닫기</span>
+					</button>
 				</div>
 			</div>
 		</div>

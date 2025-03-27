@@ -32,7 +32,18 @@
 				navigation: {
 					nextEl: ".deal-sec .deal-button-next",
 					prevEl: ".deal-sec .deal-button-prev",
-				}
+				},
+				// 2025-03-27 조찬기 : 타임딜 활성화UI 조건개선 (옵션 추가)
+				loop: true,
+				watchOverflow: true,
+				on: {
+					init() {
+						setTimeout(() => checkScrollable(dealSwiper, ".deal-swiper"), 0);
+					},
+					resize() {
+						setTimeout(() => checkScrollable(dealSwiper, ".deal-swiper"), 0);
+					},
+				},
 			});
 
 			// s: 내게 맞는 요금제
@@ -88,6 +99,17 @@
 				},
 			});
 
+			// 2025-03-27 조찬기 : 타임딜 활성화UI 조건개선 (스와이프 상태감지)
+			function checkScrollable(thisSwiper, swiperSelector) {
+				const swiperContainer = document.querySelector(swiperSelector);
+				console.log(thisSwiper);
+				if (!thisSwiper || thisSwiper.isLocked === undefined) return;
+				if (thisSwiper.isLocked) {
+					swiperContainer.classList.add("no-scroll");
+				} else {
+					swiperContainer.classList.remove("no-scroll");
+				}
+			}
 			// 타임딜 퍼블리싱 확인용
 			setTimeout(() => {
 				document.getElementById('dealBefore').style.display = 'none';
@@ -277,7 +299,6 @@
 								<div class="swiper deal-swiper">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
-											<!-- 추천딜 상품 -->
 											<div class="deal-card" role="button" tabindex="0">
 												<div class="card-body">
 													<div class="card-label">
@@ -293,10 +314,8 @@
 													<p class="card-point"><em class="tit">실제체감가</em> (12개월동안) 10,000원</p>
 												</div>
 											</div>
-											<!-- 추천딜 상품 -->
 										</div>
 										<div class="swiper-slide">
-											<!-- 추천딜 상품 -->
 											<div class="deal-card" role="button" tabindex="0">
 												<div class="card-body">
 													<div class="card-label">
@@ -311,10 +330,8 @@
 													<p class="card-point"><em class="tit">실제체감가</em> (9개월동안) 0원</p>
 												</div>
 											</div>
-											<!-- 추천딜 상품 -->
 										</div>
-										<div class="swiper-slide">
-											<!-- 추천딜 상품 -->
+										<!-- <div class="swiper-slide">
 											<div class="deal-card" role="button" tabindex="0">
 												<div class="card-body">
 													<div class="card-label">
@@ -328,10 +345,8 @@
 													<p class="card-charge">월 18,700원</p>
 												</div>
 											</div>
-											<!-- 추천딜 상품 -->
 										</div>
 										<div class="swiper-slide">
-											<!-- 추천딜 상품 -->
 											<div class="deal-card" role="button" tabindex="0">
 												<div class="card-body">
 													<div class="card-label">
@@ -345,8 +360,7 @@
 													<p class="card-charge">월 18,700원</p>
 												</div>
 											</div>
-											<!-- 추천딜 상품 -->
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<!-- 8차 수정 : 추천딜 스와이프 버튼 추가 -->
