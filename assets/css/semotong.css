@@ -9907,10 +9907,8 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .sec-body {
   position: relative;
 }
-.F-M01-page .deal-sec .deal-timer {
-  margin-bottom: 30rem;
-}
 .F-M01-page .deal-sec .deal-timer .timer-txt {
+  margin-bottom: 10rem;
   font-weight: 500;
   font-size: 14rem;
   line-height: 16rem;
@@ -9919,7 +9917,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .deal-timer .timer-labels {
   display: flex;
   align-items: center;
-  margin-top: 10rem;
+  margin-bottom: 30rem;
   gap: 6rem;
 }
 .F-M01-page .deal-sec .deal-timer .timer-labels .label-num {
@@ -10126,6 +10124,14 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec { /* 추천딜 섹션 (오픈전 추가) */
   position: relative;
 }
+.F-M01-page .deal-sec .deal-before,
+.F-M01-page .deal-sec .deal-before .sec-inner,
+.F-M01-page .deal-sec .deal-before .sec-inner .sec-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+}
 .F-M01-page .deal-sec .deal-before {
   position: absolute;
   left: 50%;
@@ -10171,7 +10177,10 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #fff;
 }
 .F-M01-page .deal-sec .deal-before .deal-share {
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   margin-top: 0;
   padding-top: 88rem;
 }
@@ -10202,11 +10211,6 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M01-page .deal-sec .deal-before .deal-share .deal-share-box .tit em {
   color: #542FDD;
-}
-@media all and (min-width: 480px) {
-  .F-M01-page .deal-sec .deal-before .deal-share {
-    margin-top: 46rem;
-  }
 }
 .F-M01-page .ratePlanA-sec {
   padding-top: var(--sec-inner-padding);

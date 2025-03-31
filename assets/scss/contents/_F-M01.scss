@@ -197,8 +197,8 @@
 		}
 
 		.deal-timer {
-			margin-bottom: 30rem;
 			.timer-txt {
+				margin-bottom: 10rem;
 				font-weight: 500;
 				font-size: 14rem;
 				line-height: 16rem;
@@ -207,7 +207,7 @@
 			.timer-labels {
 				display: flex;
 				align-items: center;
-				margin-top: 10rem;
+				margin-bottom: 30rem;
 				gap: 6rem;
 				.label-num {
 					position: relative;
@@ -413,6 +413,12 @@
 	.deal-sec { /* 추천딜 섹션 (오픈전 추가) */
 		position: relative;
 
+		.deal-before,
+		.deal-before .sec-inner,
+		.deal-before .sec-inner .sec-body {
+			@include flex-fill-height;
+		}
+
 		.deal-before {
 			position: absolute;
 			left: 50%;
@@ -461,7 +467,10 @@
 
 			// 공유하기
 			.deal-share {
-				position: relative;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
 				margin-top: 0;
 				padding-top: 88rem;
 				.deal-share-char {
@@ -491,9 +500,6 @@
 							color: $color-primary;
 						}
 					}
-				}
-				@include media-mobile-xl {
-					margin-top: 46rem;
 				}
 			}
 		}
