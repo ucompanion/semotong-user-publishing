@@ -337,6 +337,7 @@ section   {
 		}
 
 		.info-area {
+			position: relative;
 			.info-cont {
 				margin-top: 30rem;
 				color: #B7B9BA;
@@ -353,6 +354,16 @@ section   {
 				}
 				&:nth-child(3) {
 					margin-top: 10rem;
+				}
+			}
+			.info-mark {
+				position: absolute;
+				right: 100rem;
+				bottom: -2rem;
+				width: 30rem;
+				@include media-tablet-xs {
+					right: 0;
+					width: 40rem;
 				}
 			}
 		}
