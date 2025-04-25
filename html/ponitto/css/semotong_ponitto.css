@@ -490,12 +490,6 @@ html {
 .modal-open .header-mobile {
 	padding-right: 26rem;
 }
-@media all and (min-width: 1200px) {
-	.header-mobile {
-		padding-left: 23rem;
-		padding-right: 23rem;
-	}
-}
 
 .header-mobile .header-sec {
 	display: flex;
@@ -715,6 +709,7 @@ html {
 }
 
 .modal.aside-modal .modal-dialog {
+	align-items: flex-end;
 	padding-left: 50rem;
 	transform: translateX(105%);
 	transition-duration: 0.1s;
@@ -730,6 +725,7 @@ html {
 
 .modal.aside-modal .modal-content {
 	padding: 20rem 24rem;
+	max-width: 420rem;
 }
 .modal.aside-modal .modal-header {
 	min-width: 100%;
@@ -793,10 +789,6 @@ html {
 	line-height: 24rem;
 	color: #36383A;
 	text-align: left;
-}
-
-.modal.aside-modal .aside-nav-sec .aside-nav .nav-link:hover {
-	background-color: #EFF0F0;
 }
 
 .modal.aside-modal .aside-nav-sec .aside-service .service-link,
@@ -931,9 +923,12 @@ body.menu-open {
 		height: calc(32rem * var(--scale));
 	}
 
-	.modal.aside-modal .modal-dialog {
-		padding-left: 0;
+	.modal.aside-modal .modal-content {
+		height: 100%;
+		max-height: 100%;
+		border-radius: 0;
 	}
+
 }
 
 @media all and (min-width: 1200px) {
@@ -945,8 +940,17 @@ body.menu-open {
 		display: block;
 	}
 
+	.header-mobile {
+		padding-left: 23rem;
+		padding-right: 23rem;
+	}
+
 	.header-mobile .btn-aside {
 		display: none;
+	}
+
+	.modal.aside-modal .modal-dialog {
+		align-items: center;
 	}
 
 }
@@ -1303,6 +1307,10 @@ body.menu-open {
 	- 클래스명과 파일명을 매칭 (폴더와 확장자를 분리)
 	- 컬러 호버와, 파일 호버의 대응 추가
 -------------------------------------------------------------------*/
+.icn-14-info-gr::before {
+	background-image: url("../images/common/icn-14-info-gr.svg");
+}
+
 .icn-28-arw::before {
 	/* 4차 수정 : 스와이프 아이콘 추가(여기부터) */
 	background-image: url("../images/common/icn-28-arw.svg");
