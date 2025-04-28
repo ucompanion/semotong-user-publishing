@@ -409,6 +409,45 @@
 }
 // e: 은행선택 팝업
 
+// s: 파트너사선택 팝업
+.select-partner-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 8rem;
+
+	@include media-mobile-xl {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	@include media-tablet-xs {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.select-partner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 78rem;
+		border-radius: 4rem;
+		border: 1px solid #F4F4F4;
+		img {
+			height: 20rem;
+		}
+		.name {
+			display: block;
+			margin-top: 8rem;
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 18rem;
+			color: #000;
+		}
+	}
+	.is-selected .select-partner {
+		border-color: #2801B5;
+	}
+}
+// e: 파트너사선택 팝업
+
 // s: 주소공통 팝업
 .address-srch-page {
 	.modal-body {

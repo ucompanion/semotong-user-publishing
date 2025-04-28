@@ -1682,6 +1682,19 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 					width:25%;
 				}
 			}
+
+			// 일련번호
+			&.type-serial {
+				.ui-inp .inp {
+					padding-left: 8rem;
+					padding-right: 8rem;
+					text-align: center;
+					@include media-mobile-xl {
+						padding-left: 17rem;
+						padding-right: 17rem;
+					}
+				}
+			}
 		}
 	}
 
