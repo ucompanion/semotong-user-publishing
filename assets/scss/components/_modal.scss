@@ -416,7 +416,7 @@
 	gap: 8rem;
 
 	@include media-mobile-xl {
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 	@include media-tablet-xs {
 		grid-template-columns: 1fr 1fr 1fr;
