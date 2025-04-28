@@ -3868,12 +3868,16 @@ body.is-scroll-first .floating-menu .btn-top {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.select-partner-list .select-partner-item {
+  overflow: hidden;
+}
 .select-partner-list .select-partner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 78rem;
+  padding: 4rem;
   border-radius: 4rem;
   border: 1px solid #F4F4F4;
 }
@@ -3882,11 +3886,16 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .select-partner-list .select-partner .name {
   display: block;
+  width: 100%;
   margin-top: 8rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 18rem;
   color: #000;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .select-partner-list .is-selected .select-partner {
   border-color: #2801B5;

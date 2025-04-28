@@ -422,12 +422,16 @@
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
+	.select-partner-item {
+		overflow: hidden;
+	}
 	.select-partner {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		height: 78rem;
+		padding: 4rem;
 		border-radius: 4rem;
 		border: 1px solid #F4F4F4;
 		img {
@@ -435,11 +439,14 @@
 		}
 		.name {
 			display: block;
+			width: 100%;
 			margin-top: 8rem;
 			font-weight: 500;
 			font-size: 12rem;
 			line-height: 18rem;
 			color: #000;
+			text-align: center;
+			@include ellipsis1;
 		}
 	}
 	.is-selected .select-partner {
