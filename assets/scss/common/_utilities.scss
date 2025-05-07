@@ -179,12 +179,6 @@ $colors: (
 	warning: $color-warning,
 	caution: $color-warning,
 	danger: $color-danger,
-
-	// 아이템
-	item-best: $color-item-best,
-	item-recom: $color-item-recom,
-	item3: $color-item3,
-
 );
 
 @each $name, $color in $colors {

@@ -23,28 +23,7 @@
 			// 모달 바로 볼 수 있도록 호출
 			var FCB0201Modal = new bootstrap.Modal(document.getElementById('FCB0201Modal'));
 			FCB0201Modal.show();
-
-			// Bootstrap Popover + Custom
-			// 모달에서 띄우는 팝오버인 경우 - const container = popoverTriggerEl.closest('.modal-body') ? '.modal-body' : 'body'; 스크립트 조건부 처리 확인 필요
-			setPopover('ui-popover popover-style1'); // 공통 컴포넌트 규칙 ui- 반영
-
 		});
-
-		function extandHandler(button, id) {
-			// 'cardListExtend01' 요소 가져오기
-			var ulElement = document.getElementById(id);
-
-			// is-expanded 클래스 토글
-			ulElement.classList.toggle('is-expanded');
-
-			// 'this'의 자식 span 요소 텍스트 토글
-			var spanElement = button.querySelector('span');
-			if (ulElement.classList.contains('is-expanded')) {
-				spanElement.textContent = '닫기';  // '전체' -> '닫기'
-			} else {
-				spanElement.textContent = '전체보기';  // '닫기' -> '전체'
-			}
-		}
 	</script>
 </head>
 
@@ -86,7 +65,8 @@
 								<i class="ui-icn icn-62-motong" aria-hidden="true"></i>
 							</div>
 							<div class="intro-con">
-								<p>알뜰폰을 사용중이신 고객님께 <br> 자신있게 추천하는 대표 요금제예요.</p>
+								<!-- 2025-05-08 조찬기 : 제목 변경 -->
+								<p>인기있는 요금제 구성을 <br> 바로 비교해 보세요.</p>
 							</div>
 						</div>
 					</section>
@@ -100,7 +80,8 @@
 								<div class="ratePlanE-list-wrap">
 									<ul class="ratePlanE-list">
 										<li class="ratePlanE-item">
-											<!-- 요금제 공통 타입 D : 요금제 상품 상세 -->
+											<!-- 요금제 공통 타입 E : 요금제 상품 상세 -->
+											<!-- 2025-05-08 조찬기 : 요금제 카드 UI/UX 개선 -->
 											<div class="ratePlanE-card">
 												<div class="card-body">
 													<!-- 2025-02-26 조찬기 : 요금제에 관리자 등록문구 추가 -->
@@ -113,179 +94,174 @@
 														<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
 														<span class="split" aria-hidden="true"></span>
 														<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
-														<span class="split" aria-hidden="true"></span>
-														<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span>
+														<!-- <span class="split" aria-hidden="true"></span>
+														<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span> -->
 													</div>
-													<div class="card-charge">
-														<div class="brand">
-															<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
-															<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-														</div>
-														<div class="charge">
-															<p class="charge-tit">19,540원</p>
-															<p class="charge-point"><em class="tit">실제 체감가</em> 18,100원</p>
-															<p class="charge-txt">7개월 이후 41,800원</p>
-														</div>
-													</div>
-													<button type="button" class="card-button">
-														<span class="blind">요금제 자세히 보기</span>
-													</button>
 												</div>
+
 												<div class="card-footer">
-													<ul class="card-charge-list" id="cardListExtend01">
-														<li class="card-charge-item">
-															<!-- 5차 수정 : 추천목록 버튼처리 role="button" -->
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+													<!-- 서브 카드리스트 -->
+													<ul class="ratePlanC-list">
+														<li class="ratePlanC-item">
+															<div class="ratePlanC-card outlined is-recom">
+																<!-- Case 세모통 추천 -->
+																<div class="card-badge">
+																	<p><img src="../../assets/images/common/badge-card-recom.svg" alt="세모통 추천" /></p>
 																</div>
-																<div class="charge">
-																	<p class="charge-tit">20,000원</p>
-																	<p class="charge-point"><em class="tit">실제 체감가</em> 18,100원</p>
+																<div class="card-body">
+																	<div class="card-util">
+																		<div class="card-util-label">
+																			<span class="label skt">SKT</span>
+																			<span class="label kt">KT</span>
+																			<span class="label lgu">LGU</span>
+																			<span class="label main">대표</span>
+																			<span class="label price">최저가보장</span>
+																			<span class="label benefit">최대혜택</span>
+																		</div>
+																	</div>
+																	<div class="card-charge">
+																		<div class="brand">
+																			<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+																		</div>
+																		<div class="charge">
+																			<p class="charge-tit">58,700원</p>
+																			<p class="charge-point"><em class="tit">실제 체감가</em> 70,000원</p>
+																			<p class="charge-txt">7개월 이후 49,000원</p>
+																		</div>
+																	</div>
+																	<!-- 카드 클릭영역  -->
+																	<button type="button" class="card-button">
+																		<span class="blind">요금제 자세히 보기</span>
+																	</button>
 																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,000원</p>
-																	<p class="charge-point"><em class="tit">실제 체감가</em> 18,100원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,200원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">20,000원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,000원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,200원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">20,000원</p>
+																<div class="card-footer">
+																	<!-- Case 사은품확인 -->
+																	<div class="card-status">
+																		<div class="status-gift" id="cardExpand12">
+																			<p class="status-gift-tit">
+																				<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+																				<span class="count">+3</span>
+																				<span class="tit">네이버포인트 매월 5천원 제공</span>
+																			</p>
+																			<button type="button" class="ui-btn" aria-expanded="false" onclick="cardExpand('#cardExpand12', this)">
+																				<i class="ui-icn icn-16-plan-expand-gr" aria-label="자세히보기"></i>
+																			</button>
+																			<div class="status-gift-expanded">
+																				<ul class="status-gift-list">
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+																						네이버포인트 매월 5천원 제공
+																					</li>
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-gift.png" alt="" aria-hidden="true" class="img" />
+																						신세계orCU 상품권 30,000원권
+																					</li>
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-scash.png" alt="" aria-hidden="true" class="img" />
+																						[세모통] 2만 S캐쉬 제공
+																					</li>
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-data.png" alt="" aria-hidden="true" class="img" />
+																						추가데이터 15GB
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+														<li class="ratePlanC-item">
+															<div class="ratePlanC-card outlined">
+																<div class="card-body">
+																	<div class="card-util">
+																		<div class="card-util-label">
+																			<span class="label skt">SKT</span>
+																			<span class="label kt">KT</span>
+																			<span class="label lgu">LGU</span>
+																			<span class="label main">대표</span>
+																			<span class="label price">최저가보장</span>
+																			<span class="label benefit">최대혜택</span>
+																		</div>
+																	</div>
+																	<div class="card-charge">
+																		<div class="brand">
+																			<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+																		</div>
+																		<div class="charge">
+																			<p class="charge-tit">58,700원</p>
+																			<p class="charge-point"><em class="tit">실제 체감가</em> 70,000원</p>
+																			<p class="charge-txt">7개월 이후 49,000원</p>
+																		</div>
+																	</div>
+																	<!-- 카드 클릭영역  -->
+																	<button type="button" class="card-button">
+																		<span class="blind">요금제 자세히 보기</span>
+																	</button>
 																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,000원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,200원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">20,000원</p>
-																</div>
-															</div>
-														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,000원</p>
+																<div class="card-footer">
+																	<div class="card-status">
+																		<div class="status-gift" id="cardExpand12">
+																			<p class="status-gift-tit">
+																				<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+																				<!-- <span class="count">+3</span> -->
+																				<span class="tit">네이버포인트 매월 5천원 제공</span>
+																			</p>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-erel.svg" alt="EREL Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,200원</p>
+														<li class="ratePlanC-item">
+															<div class="ratePlanC-card outlined">
+																<div class="card-body">
+																	<div class="card-util">
+																		<div class="card-util-label">
+																			<span class="label skt">SKT</span>
+																			<span class="label kt">KT</span>
+																			<span class="label lgu">LGU</span>
+																			<span class="label main">대표</span>
+																			<span class="label price">최저가보장</span>
+																			<span class="label benefit">최대혜택</span>
+																		</div>
+																	</div>
+																	<div class="card-charge">
+																		<div class="brand">
+																			<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+																		</div>
+																		<div class="charge">
+																			<p class="charge-tit">58,700원</p>
+																			<p class="charge-txt">7개월 이후 49,000원</p>
+																		</div>
+																	</div>
+																	<!-- 카드 클릭영역  -->
+																	<button type="button" class="card-button">
+																		<span class="blind">요금제 자세히 보기</span>
+																	</button>
 																</div>
 															</div>
 														</li>
 													</ul>
-													<div class="card-charge-more">
+													<!-- //서브 카드리스트 -->
+
+													<div class="card-list-more">
 														<!-- 5차 수정 : 전체보기/닫기 토글 -->
-														<button type="button" class="ui-btn btn-sub xl" onclick="extandHandler(this, 'cardListExtend01')">
-															<span>전체보기</span>
+														<button type="button" class="ui-btn btn-sub xl">
+															<span>더보기</span>
 														</button>
 													</div>
 												</div>
-												<!-- 카드 클릭영역  -->
 											</div>
-											<!-- // 요금제 공통 타입 D : 요금제 상품 상세 -->
+											<!-- // 요금제 공통 타입 E : 요금제 상품 상세 -->
 										</li>
+
 										<li class="ratePlanE-item">
-											<!-- 요금제 공통 타입 D : 요금제 상품 상세 -->
+											<!-- 요금제 공통 타입 E : 요금제 상품 상세 -->
 											<div class="ratePlanE-card">
 												<div class="card-body">
+													<!-- 2025-02-26 조찬기 : 요금제에 관리자 등록문구 추가 -->
 													<div class="card-tit">
-														<strong>150GB+최대 5Mbps</strong>
+														<strong>밀리의 서재 150GB+최대 5Mbps</strong>
 													</div>
 													<div class="card-info">
 														<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
@@ -293,58 +269,149 @@
 														<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
 														<span class="split" aria-hidden="true"></span>
 														<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
-														<span class="split" aria-hidden="true"></span>
-														<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span>
+														<!-- <span class="split" aria-hidden="true"></span>
+														<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span> -->
 													</div>
-													<div class="card-charge">
-														<div class="brand">
-															<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
-															<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-														</div>
-														<div class="charge">
-															<p class="charge-tit">19,540원</p>
-															<p class="charge-point"><em class="tit">실제 체감가</em> 18,100원</p>
-															<p class="charge-txt">7개월 이후 41,800원</p>
-														</div>
-													</div>
-													<button type="button" class="card-button">
-														<span class="blind">요금제 자세히 보기</span>
-													</button>
 												</div>
+
 												<div class="card-footer">
-													<ul class="card-charge-list" id="cardListExtend02">
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-uplusumobile.svg" alt="U+ U Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-																</div>
-																<div class="charge">
-																	<p class="charge-tit">20,000원</p>
+													<!-- 서브 카드리스트 -->
+													<ul class="ratePlanC-list">
+														<li class="ratePlanC-item">
+															<div class="ratePlanC-card outlined">
+																<div class="card-body">
+																	<div class="card-util">
+																		<div class="card-util-label">
+																			<span class="label skt">SKT</span>
+																			<span class="label kt">KT</span>
+																			<span class="label lgu">LGU</span>
+																			<span class="label main">대표</span>
+																			<span class="label price">최저가보장</span>
+																			<span class="label benefit">최대혜택</span>
+																		</div>
+																	</div>
+																	<div class="card-charge">
+																		<div class="brand">
+																			<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+																		</div>
+																		<div class="charge">
+																			<p class="charge-tit">58,700원</p>
+																			<p class="charge-txt">7개월 이후 49,000원</p>
+																		</div>
+																	</div>
+																	<!-- 카드 클릭영역  -->
+																	<button type="button" class="card-button">
+																		<span class="blind">요금제 자세히 보기</span>
+																	</button>
 																</div>
 															</div>
 														</li>
-														<li class="card-charge-item">
-															<div class="card-charge" role="button">
-																<div class="brand">
-																	<img src="../../assets/images/partner/logo-freet.svg" alt="프리티 Mobile" />
-																	<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
+														<li class="ratePlanC-item">
+															<div class="ratePlanC-card outlined">
+																<div class="card-body">
+																	<div class="card-util">
+																		<div class="card-util-label">
+																			<span class="label skt">SKT</span>
+																			<span class="label kt">KT</span>
+																			<span class="label lgu">LGU</span>
+																			<span class="label main">대표</span>
+																			<span class="label price">최저가보장</span>
+																			<span class="label benefit">최대혜택</span>
+																		</div>
+																	</div>
+																	<div class="card-charge">
+																		<div class="brand">
+																			<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+																		</div>
+																		<div class="charge">
+																			<p class="charge-tit">58,700원</p>
+																			<p class="charge-txt">7개월 이후 49,000원</p>
+																		</div>
+																	</div>
+																	<!-- 카드 클릭영역  -->
+																	<button type="button" class="card-button">
+																		<span class="blind">요금제 자세히 보기</span>
+																	</button>
 																</div>
-																<div class="charge">
-																	<p class="charge-tit">21,000원</p>
+															</div>
+														</li>
+														<li class="ratePlanC-item">
+															<div class="ratePlanC-card outlined">
+																<div class="card-body">
+																	<div class="card-util">
+																		<div class="card-util-label">
+																			<span class="label skt">SKT</span>
+																			<span class="label kt">KT</span>
+																			<span class="label lgu">LGU</span>
+																			<span class="label main">대표</span>
+																			<span class="label price">최저가보장</span>
+																			<span class="label benefit">최대혜택</span>
+																		</div>
+																	</div>
+																	<div class="card-charge">
+																		<div class="brand">
+																			<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+																		</div>
+																		<div class="charge">
+																			<p class="charge-tit">58,700원</p>
+																			<p class="charge-point"><em class="tit">실제 체감가</em> 70,000원</p>
+																			<p class="charge-txt">7개월 이후 49,000원</p>
+																		</div>
+																	</div>
+																	<!-- 카드 클릭영역  -->
+																	<button type="button" class="card-button">
+																		<span class="blind">요금제 자세히 보기</span>
+																	</button>
+																</div>
+																<div class="card-footer">
+																	<!-- Case 사은품확인 -->
+																	<div class="card-status">
+																		<div class="status-gift" id="cardExpand22">
+																			<p class="status-gift-tit">
+																				<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+																				<span class="count">+3</span>
+																				<span class="tit">네이버포인트 매월 5천원 제공</span>
+																			</p>
+																			<button type="button" class="ui-btn" aria-expanded="false" onclick="cardExpand('#cardExpand22', this)">
+																				<i class="ui-icn icn-16-plan-expand-gr" aria-label="자세히보기"></i>
+																			</button>
+																			<div class="status-gift-expanded">
+																				<ul class="status-gift-list">
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+																						네이버포인트 매월 5천원 제공
+																					</li>
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-gift.png" alt="" aria-hidden="true" class="img" />
+																						신세계orCU 상품권 30,000원권
+																					</li>
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-scash.png" alt="" aria-hidden="true" class="img" />
+																						[세모통] 2만 S캐쉬 제공
+																					</li>
+																					<li>
+																						<img src="../../assets/images/upload/@benefit-data.png" alt="" aria-hidden="true" class="img" />
+																						추가데이터 15GB
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</li>
 													</ul>
-													<!-- <div class="card-charge-more">
-														<button type="button" class="ui-btn btn-sub xl" onclick="extandHandler(this, 'cardListExtend02')">
-															<span>전체보기</span>
+													<!-- //서브 카드리스트 -->
+
+													<div class="card-list-more">
+														<!-- 5차 수정 : 전체보기/닫기 토글 -->
+														<button type="button" class="ui-btn btn-sub xl">
+															<span>더보기</span>
 														</button>
-													</div> -->
+													</div>
 												</div>
-												<!-- 카드 클릭영역  -->
 											</div>
-											<!-- // 요금제 공통 타입 D : 요금제 상품 상세 -->
+											<!-- // 요금제 공통 타입 E : 요금제 상품 상세 -->
 										</li>
 									</ul>
 

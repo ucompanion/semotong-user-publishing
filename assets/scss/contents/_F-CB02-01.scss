@@ -40,6 +40,19 @@
 			.ratePlanE-card {
 				@include ratePlanE-card;
 			}
+
+		}
+		// e: 요금제 상품 리스트
+
+		// s: 요금제 상품 리스트
+		.ratePlanC-list {
+			@include ratePlanC-list;
+
+			// 요금제 상품 리스트 카드
+			.ratePlanC-card {
+				@include ratePlanC-card;
+			}
+
 		}
 		// e: 요금제 상품 리스트
 	}
