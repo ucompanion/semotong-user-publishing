@@ -481,12 +481,13 @@ html {
 	left: 0;
 	z-index: 200;
 	width: 100%;
-	background-color: #fff;
+	background-color: rgba(255,255,255,.6);
 	height: 50rem;
-	border-bottom: 1px solid #EFF0F0;
 	min-width: 320rem;
 	padding-left: 16rem;
 	padding-right: 16rem;
+	box-shadow: 0 10rem 30rem rgba(51, 51, 51, .3);
+	backdrop-filter: blur(30rem);
 }
 .os-macos .modal-open .header-mobile,
 .os-windows .modal-open .header-mobile {
@@ -544,7 +545,7 @@ html {
 }
 
 .is-scroll-first .header-mobile {
-	border-color: transparent;
+	box-shadow: none;
 }
 
 .is-scroll-first .header-mobile.primary {
@@ -563,8 +564,9 @@ html {
 	z-index: 300;
 	width: 100%;
 	padding: 0 40rem;
-	background-color: #fff;
-	border-bottom: 1px solid #EFF0F0;
+	background-color: rgba(255,255,255,.6);
+	box-shadow: 0 10rem 30rem rgba(51, 51, 51, .3);
+	backdrop-filter: blur(30rem);
 	transition: all 0.2s ease;
 }
 
@@ -634,7 +636,7 @@ html {
 
 .header-desktop .header-sec .header-nav .nav-list {
 	display: flex;
-	gap: 30rem;
+	gap: 18rem;
 }
 
 .header-desktop .header-sec .header-nav .nav-list .nav-link {
@@ -643,6 +645,46 @@ html {
 	font-size: 18rem;
 	line-height: 24rem;
 	color: #2A2B2D;
+}
+.header-desktop .header-sec .header-nav .nav-list .is-on .nav-link {
+	color: #2c7ef6;
+}
+.header-desktop .header-sec .header-nav .nav-list .nav-depth2 {
+    position: absolute;
+    top: calc(100% - 30rem);
+    left: -2rem;
+    min-width: 140rem;
+    padding: 25rem;
+    border: 1px solid #000;
+    border-radius: 5rem;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30rem);
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+}
+
+.header-desktop .header-sec .header-nav .nav-list .nav-item.is-on .nav-depth2 {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	z-index: 1;
+}
+
+.header-desktop .header-sec .header-nav .nav-list .nav-depth2 li:not(:last-child) {
+    margin-bottom: 5rem;
+}
+
+.header-desktop .header-sec .header-nav .nav-list .nav-depth2 a {
+	display: inline-flex;
+	width: 100%;
+	white-space: nowrap;
+	font-size: 16rem;
+	line-height: 1.8;
+	color: #666;
+	font-weight: 600;
+	transition: all .3s ease;
 }
 
 .header-desktop .header-sec .header-nav .nav-list .nav-link.is-selected {
@@ -675,9 +717,9 @@ html {
 }
 
 .header-desktop .header-sec .header-util .member-list .member-link {
-	padding: 0rem 12rem 1rem 12rem;
+	padding: 0rem 12rem 0rem 12rem;
 	font-size: 15rem;
-	line-height: 22rem;
+	line-height: 32rem;
 	font-weight: 500;
 	color: #fff;
 	background-color: #222;
@@ -706,8 +748,7 @@ html {
 }
 
 .is-scroll-first .header-desktop {
-	/* 3차 수정 : 스크롤 처음일때 투명처리 */
-	border-color: transparent;
+	box-shadow: none;
 }
 
 .modal.aside-modal .modal-dialog {
@@ -787,7 +828,7 @@ html {
 	justify-content: flex-start;
 	padding: 8rem 0rem;
 	font-weight: 600;
-	font-size: 15rem;
+	font-size: 16rem;
 	line-height: 24rem;
 	color: #36383A;
 	text-align: left;
@@ -796,7 +837,7 @@ html {
 .modal.aside-modal .aside-nav-sec .aside-service .service-link,
 .modal.aside-modal .aside-nav-sec .aside-nav .sub-nav-link {
 	padding: 4rem 0;
-	font-size: 12rem;
+	font-size: 14rem;
 	line-height: 18rem;
 }
 
