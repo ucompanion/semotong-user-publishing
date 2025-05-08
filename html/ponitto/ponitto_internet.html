@@ -35,15 +35,28 @@
 
 		document.addEventListener("DOMContentLoaded", () => {
 			// GNB Trigger
+			const nav = document.querySelector('.header-desktop .header-nav');
 			const navItems = document.querySelectorAll('.header-desktop .header-nav .nav-item');
+
+			let currentItem = null;
 
 			navItems.forEach(function (item) {
 				item.addEventListener('mouseenter', function () {
+					// 이전에 켜진 메뉴 끄기
+					if (currentItem && currentItem !== item) {
+						currentItem.classList.remove('is-on');
+					}
 					item.classList.add('is-on');
+					currentItem = item;
 				});
-				item.addEventListener('mouseleave', function () {
+			});
+
+			// nav 전체를 벗어나면 모든 메뉴 닫기
+			nav.addEventListener('mouseleave', function () {
+				navItems.forEach(function (item) {
 					item.classList.remove('is-on');
 				});
+				currentItem = null;
 			});
 
 			// 상품 스와이프
