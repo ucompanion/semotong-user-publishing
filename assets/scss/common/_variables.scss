@@ -453,15 +453,17 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	.card-util {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		margin-bottom: 12rem;
 		&-label {
 			display: flex;
+			flex: none;
 			gap: 2rem;
 			font-size: 10rem;
 			line-height: 12rem;
 			.label {
 				display: inline-block;
-				padding: 1rem 4rem 2rem;
+				padding: 2rem 4rem 4rem;
 				border-radius: 2rem;
 				color: #fff;
 				&.skt {
