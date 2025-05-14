@@ -1478,7 +1478,14 @@ body.is-scroll-first .floating-menu .btn-top {
   z-index: 3;
 }
 
-/* 강조 */
+/* 개발요청 옵션 */
+.ui-btn.no-cursor {
+  cursor: default !important;
+}
+.ui-btn.no-cursor:hover {
+  cursor: default !important;
+}
+
 /*-------------------------------------------------------------------
 	@@ 유형
 -------------------------------------------------------------------*/

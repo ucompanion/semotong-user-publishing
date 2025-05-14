@@ -21,9 +21,16 @@
 		position: relative;
 		z-index: 3;
 	}
+
+}
+/* 개발요청 옵션 */
+.ui-btn.no-cursor {
+	cursor: default !important;
+	&:hover {
+		cursor: default !important;
+	}
 }
 
-/* 강조 */
 
 /*-------------------------------------------------------------------
 	@@ 유형
