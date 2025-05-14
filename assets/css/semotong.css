@@ -19665,6 +19665,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   align-items: center;
   flex: none;
+  width: 70rem;
   height: 20rem;
   gap: 8rem;
 }
