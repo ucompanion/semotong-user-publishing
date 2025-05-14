@@ -448,7 +448,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 	}
 	.card-footer {
-		margin-top: 12rem;
+		margin-top: 16rem;
 	}
 	.card-util {
 		display: flex;
@@ -458,10 +458,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			display: flex;
 			gap: 2rem;
 			font-size: 10rem;
-			line-height: 14rem;
+			line-height: 12rem;
 			.label {
 				display: inline-block;
-				padding: 2rem 4rem 3rem;
+				padding: 1rem 4rem 2rem;
 				border-radius: 2rem;
 				color: #fff;
 				&.skt {
@@ -577,7 +577,6 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			justify-content: flex-end;
 			align-items: flex-end;
 			position: relative;
-			top: 2rem;
 			text-align: right;
 
 			.charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
@@ -1076,42 +1075,6 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				line-height: 12rem;
 				.ui-icn {
 					margin-right: 4rem;
-				}
-			}
-		}
-
-		.card-charge {
-			align-items: flex-end;
-			margin-top: 12rem;
-			.charge {
-				.charge-tit {
-					font-weight: 700;
-					font-size: 18rem;
-					line-height: 24rem;
-					color: #000;
-				}
-
-				.charge-point {
-					display: flex;
-					align-items: center;
-					margin-bottom: 2rem;
-					font-weight: 700;
-					font-size: 18rem;
-					line-height: 24rem;
-					color: $color-point;
-					.tit {
-						font-size: 12rem;
-						line-height: 24rem;
-						margin-right: 4rem;
-					}
-				}
-
-				.charge-txt {
-					margin-top: 2rem;
-					font-weight: 500;
-					font-size: 12rem;
-					line-height: 16rem;
-					color: #828588;
 				}
 			}
 		}
