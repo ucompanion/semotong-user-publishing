@@ -107,14 +107,28 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="../scenario/F-P01-01.html" role="link" class="ui-btn nav-link">
-								<span>알뜰폰</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="../scenario/F-P01-01.html" role="link" class="ui-btn nav-link">
-								<span>통신3사</span>
-							</a>
+							<div class="ui-dropdown">
+								<a href="../scenario/F-P01-01.html" role="link" class="ui-btn nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+									<span>요금제 찾기</span>
+								</a>
+								<div class="dropdown-menu">
+									<ul class="sub-nav">
+										<li class="sub-nav-item">
+											<a href="../scenario/F-P01-01.html" role="link" class="ui-btn sub-nav-link">
+												<span>알뜰요금제</span>
+											</a>
+										</li>
+										<li class="sub-nav-item">
+											<a href="../scenario/F-P01-01.html" role="link" class="ui-btn sub-nav-link">
+												<i class="ui-icn icn-h20-sk" aria-label="SKT"></i>
+												<i class="ui-icn icn-h20-kt" aria-label="KT"></i>
+												<i class="ui-icn icn-h20-lgu-02" aria-label="U+"></i>
+												요금제
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</li>
 						<li class="nav-item">
 							<a href="../F-I/F-I01-01.html" role="link" class="ui-btn nav-link">
@@ -197,7 +211,7 @@
 									<div class="card-util-label">
 										<span class="label skt">SKT</span>
 										<span class="label kt">KT</span>
-										<span class="label lgu">LGU</span>
+										<span class="label lgu">U+</span>
 										<span class="label semotong">세모통</span>
 										<span class="label merge">인터넷 결합</span>
 										<span class="label open">간편개통</span>
@@ -240,10 +254,10 @@
 										<p class="charge-txt">7개월 이후 49,000원</p>
 									</div>
 								</div>
-								<!-- 카드 클릭영역  -->
-								<button type="button" class="card-button">
+								<!-- 카드 클릭영역 (상세에서는 사용하지 않음)  -->
+								<!-- <button type="button" class="card-button">
 									<span class="blind">요금제 자세히 보기</span>
-								</button>
+								</button> -->
 							</div>
 						</div>
 						<!--  // 요금제 공통 타입 C : 요금제 상품 카드 -->
