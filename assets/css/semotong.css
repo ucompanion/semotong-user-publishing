@@ -1314,13 +1314,6 @@ body.is-scroll-first .floating-menu .btn-top {
   letter-spacing: -0.02em;
   font-weight: 500;
 }
-.floating-nav .nav-list .nav-item .nav-link .icn-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  height: 24rem;
-}
 .floating-nav .nav-list .nav-item .nav-link > span {
   display: block;
   width: 100%;
@@ -1335,6 +1328,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .floating-nav .nav-list .nav-item .nav-link.is-selected > span {
   font-weight: 600;
   color: #542FDD;
+}
+.floating-nav .nav-list .nav-item .nav-link.is-selected .icn-24-nav-04-gr {
+  -webkit-mask: url("../images/common/icn-24-nav-04-gr.svg") no-repeat 0 0/100%;
+          mask: url("../images/common/icn-24-nav-04-gr.svg") no-repeat 0 0/100%;
+  background-color: #542FDD;
 }
 .floating-nav .nav-list .nav-item .nav-link:not(.is-selected) .icn-h20-sk::before {
   -webkit-mask: url("../images/common/icn-h20-sk.png") no-repeat 0 0/100%;
@@ -2587,10 +2585,6 @@ body.is-scroll-first .floating-menu .btn-top {
 .icn-24-nav-04-gr::after {
   content: "";
   background-image: url("../images/common/icn-24-nav-04-pre.svg");
-}
-
-.icn-24-nav-04-gr {
-  background-image: url("../images/common/icn-24-nav-04-sel.svg");
 }
 
 .ui-btn:hover .icn-24-nav-04-gr::before,
