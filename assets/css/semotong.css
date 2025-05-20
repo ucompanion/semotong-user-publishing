@@ -2576,6 +2576,10 @@ body.is-scroll-first .floating-menu .btn-top {
   transform: translateY(-110%);
 }
 
+.icn-24-nav-04-gr {
+  width: 52rem;
+}
+
 .icn-24-nav-04-gr::before {
   background-image: url("../images/common/icn-24-nav-04-gr.svg");
 }
