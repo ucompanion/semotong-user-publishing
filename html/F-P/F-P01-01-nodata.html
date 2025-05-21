@@ -124,24 +124,28 @@
 			<!-- content -->
 			<div class="content F-P01-01-page">
 				<!-- 요금제 카테고리 섹션 -->
-				<!-- <section class="ratePlan-cate-sec">
+				<section class="ratePlan-cate-sec">
 					<div class="sec-inner">
 					</div>
-				</section> -->
+				</section>
 				<!-- // 요금제 카테고리 섹션 -->
 
 				<!-- 요금제 필터 섹션 -->
 				<section class="ratePlan-filter-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
-							<h2 class="sec-tit">알뜰요금제 비교</h2>
-							<p class="sec-explain">데이터, 통신망, 혜택을 쉽게 확인해 보세요.</p>
+							<h2 class="sec-tit">어떤 요금제를 찾고 계세요?</h2>
+							<p class="sec-explain">요금제 구성을 알려주시면 세모통이 추천해드려요!</p>
 						</div>
 						<div class="sec-body">
 							<!-- 요금제 배너목록 -->
-							<!-- 2차 수정 : 요금제 카테고리 위치 변경 -->
-							<!-- 8차 수정 : 요금제 카테고리 순서 변경 -->
-							<!-- 2025-05-20 검색으로 변경 <ul class="ratePlan-cate-list">
+							<ul class="ratePlan-cate-list">
+								<li>
+									<button type="button" class="ratePlan-cate-btn">
+										<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
+										<span>인터넷<br> 결합 요금제</span>
+									</button>
+								</li>
 								<li>
 									<button type="button" class="ratePlan-cate-btn">
 										<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
@@ -154,75 +158,82 @@
 										<span>평생 할인<br> 요금제</span>
 									</button>
 								</li>
-								<li>
-									<button type="button" class="ratePlan-cate-btn">
-										<i class="ui-icn icn-44-plan-cate-01" aria-hidden="true"></i>
-										<span>인터넷<br> 결합 요금제</span>
-									</button>
-								</li>
-							</ul> -->
+							</ul>
 							<!-- // 요금제 배너목록 -->
 
 							<!-- 필터목록 -->
-							<!-- 2차 수정 : 필터 키워드형으로 변경
-								- 새로고침 제외, 키워드 설정완료 태태추가, 삭제버튼 제외
-							-->
-							<!-- 2025-05-20 조찬기 : 요금제 목록 UI/UX 개선 -->
-							<div class="ratePlan-search">
-								<div class="ratePlan-search-form">
-									<div class="ui-inp">
-										<input type="text" name="" value="" placeholder="검색어를 입력해 주세요." class="inp" data-bs-toggle="modal" data-bs-target="#searchModal" />
-										<div class="on-right">
-											<span class="ui-btn btn-srch">
-												<i class="ui-icn icn-20-srch-bk" aria-label="검색"></i>
-											</span>
-										</div>
-									</div>
-									<button type="button" class="ui-btn filter-btn" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
-										<i class="ui-icn icn-24-filter-bk" aria-hidden="true"></i>
-										<span class="blind">필터</span>
+							<ul class="ratePlan-filter-list">
+								<!-- 필수 - 필터버튼 -->
+								<li>
+									<!-- ui-filter: input.scss 가이드에 포함 -->
+									<button type="button" class="filter-btn is-setting" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+										<i class="ui-icn icn-24-filter-gr" aria-hidden="true"></i>
+										<span>필터</span>
 									</button>
-								</div>
+									<span class="split" aria-hidden="true"></span>
+								</li>
 
-								<div class="ratePlan-search-cont">
-									<div class="ratePlan-search-title">
-										<p class="tit">어떤 요금제가 필요하세요?</p>
-									</div>
-									<ul class="ratePlan-chip-list">
-										<li>
-											<!-- Case 선택시 is-selected 추가 -->
-											<button class="ratePlan-chip is-selected">
-												<span>전체</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>인터넷 결합 요금제</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>소진시 속도</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>할인 기간</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>오직! 세모통에서만</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>OTT 구독 혜택</span>
-											</button>
-										</li>
-									</ul>
-								</div>
-							</div>
+								<!--  Cases -->
+								<!-- <li>
+									<button type="button" class="filter-btn">
+										<i class="ui-icn icn-24-refresh-gr" aria-label="새로고침"></i>
+									</button>
+								</li> -->
+								<li>
+									<button class="filter-chip is-setting">
+										<span>데이터</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip is-setting">
+										<span>가격</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip is-setting">
+										<span>소진시 속도</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>할인 기간</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>통화</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>문자</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>통신정보</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>인터넷 결합</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>부가 서비스</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+							</ul>
 							<!-- // 필터목록 -->
 						</div>
 					</div>
@@ -237,45 +248,17 @@
 							<!-- 요금제 상품 툴바 -->
 							<div class="ratePlanC-toolbar">
 								<p class="count">총&nbsp;<em>9,999개</em>&nbsp;요금제</p>
-							</div>
-							<!-- // 요금제 상품 툴바 -->
-
-							<!-- 요금제 상품 툴바 -->
-							<div class="ratePlanC-toolbar">
-								<!-- 4차 수정 : 12워월 / 24개월로 수정 -->
-								<div class="opt">
-									<!-- checkbox.scss에 포함 -->
-									<div class="ui-switch xs">
-										<input type="checkbox" name="frmMonth12" id="frmMonth12" value="" checked />
-										<label for="frmMonth12"></label>
-									</div>
-									<p>12개월 총액</p>
-									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-										data-bs-content="할인기간 포함된 12/24개월 요금 총액이에요.">
-										<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-									</button>
-								</div>
-								<div class="opt">
-									<!-- checkbox.scss에 포함 -->
-									<div class="ui-switch xs">
-										<input type="checkbox" name="frmMonth24" id="frmMonth24" value="" />
-										<label for="frmMonth24"></label>
-									</div>
-									<p>24개월 총액</p>
-									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-										data-bs-content="할인기간 포함된 12/24개월 요금 총액이에요.">
-										<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-									</button>
-								</div>
 								<div class="sort">
 									<!-- 2차 수정 : 모든화면 추천순제외 (2차개발시 원복) -->
-									<button type="button" class="ui-btn" id="frmSort" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSortModal">
+									<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#selectSortModal">
 										<i class="ui-icn icn-16-sort-gr" aria-hidden="true"></i>
 										<span>추천순</span>
 										<i class="ui-icn icn-16-select-arw" aria-hidden="true"></i>
 									</button>
 								</div>
 							</div>
+							<!-- // 요금제 상품 툴바 -->
+
 							<!-- Case nodata -->
 							<div class="nodata">
 								<i class="ui-icn icn-100-nodata-recom" aria-hidden="true"></i>

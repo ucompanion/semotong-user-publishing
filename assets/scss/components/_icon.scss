@@ -188,22 +188,6 @@
 	background-image: url("../images/common/icn-12-plan-check-pr.svg");
 }
 
-.icn-12-compare-sel::before {
-	background-image: url("../images/common/icn-12-plus-dr.svg");
-}
-
-.icn-12-compare-sel {
-	background-image: url("../images/common/icn-12-check-pr.svg");
-}
-
-.is-selected .icn-12-compare-sel {
-	background-position: center center;
-}
-
-.is-selected .icn-12-compare-sel::before {
-	transform: translateY(-110%);
-}
-
 .icn-14-more-gr::before {
 	background-image: url("../images/common/icn-14-more-gr.svg");
 }
@@ -323,22 +307,6 @@
 
 .icn-16-plus-gr::before {
 	background-image: url("../images/common/icn-16-plus-gr.svg");
-}
-
-.icn-16-compare-sel::before {
-	background-image: url("../images/common/icn-16-plus-dr.svg");
-}
-
-.icn-16-compare-sel {
-	background-image: url("../images/common/icn-16-check-pr.svg");
-}
-
-.is-selected .icn-16-compare-sel {
-	background-position: center center;
-}
-
-.is-selected .icn-16-compare-sel::before {
-	transform: translateY(-110%);
 }
 
 .icn-16-info-gr::before {
@@ -649,9 +617,6 @@
 .icn-24-filter-gr::before {
 	background-image: url("../images/common/icn-24-filter-gr.svg");
 }
-.icn-24-filter-bk::before {
-	background-image: url("../images/common/icn-24-filter-bk.svg");
-}
 
 .icn-24-refresh-gr::before {
 	background-image: url("../images/common/icn-24-refresh-gr.svg");
@@ -691,10 +656,6 @@
 
 .icn-24-aside-06::before {
 	background-image: url("../images/common/icn-24-aside-06.svg");
-}
-
-.icn-24-close-bk::before {
-	background-image: url("../images/common/icn-24-close-bk.svg");
 }
 
 .icn-26-npay::before {

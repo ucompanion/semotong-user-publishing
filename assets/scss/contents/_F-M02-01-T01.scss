@@ -25,47 +25,47 @@
 	// e: 카드형 요금제 섹션
 
 	// s: 키워드 섹션
-	// .keyword-sec {
-	// 	overflow: hidden;
-	// 	margin-top: 30rem;
+	.keyword-sec {
+		overflow: hidden;
+		margin-top: 30rem;
 
-	// 	.keyword-list {
-	// 		display: flex;
-	// 		flex-wrap: wrap;
-	// 		gap: 8rem;
-	// 	}
+		.keyword-list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8rem;
+		}
 
-	// 	.keyword-swiper {
-	// 		overflow: visible;
-	// 		.swiper-wrapper {
-	// 			.swiper-slide {
-	// 				width: auto;
-	// 			}
-	// 		}
-	// 		@include media-tablet-xs {
-	// 			overflow: hidden;
-	// 		}
-	// 	}
+		.keyword-swiper {
+			overflow: visible;
+			.swiper-wrapper {
+				.swiper-slide {
+					width: auto;
+				}
+			}
+			@include media-tablet-xs {
+				overflow: hidden;
+			}
+		}
 
-	// 	.keyword-btn {
-	// 		display: flex;
-	// 		justify-content: center;
-	// 		align-items: center;
-	// 		height: 36rem;
-	// 		padding: 0 9rem;
-	// 		font-weight: 500;
-	// 		font-size: 14rem;
-	// 		color: #36383A;
-	// 		border-radius: 6rem;
-	// 		border:1px solid transparent;
-	// 		background-color: #EFF0F0;
-	// 		&.is-selected {
-	// 			border-color: $color-primary;
-	// 			background-color: #EAE6FB;
-	// 			color: $color-primary;
-	// 		}
-	// 	}
-	// }
+		.keyword-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 36rem;
+			padding: 0 9rem;
+			font-weight: 500;
+			font-size: 14rem;
+			color: #36383A;
+			border-radius: 6rem;
+			border:1px solid transparent;
+			background-color: #EFF0F0;
+			&.is-selected {
+				border-color: $color-primary;
+				background-color: #EAE6FB;
+				color: $color-primary;
+			}
+		}
+	}
 	// e: 키워드 섹션
 
 	// 예외케이스
@@ -79,6 +79,8 @@
 
 	// s: 상품리스트 섹션
 	.ratePlanC-sec {
+		margin-top: 16rem;
+		padding-top: 16rem;
 		@include sec-basic;
 
 		@include media-tablet-xs {

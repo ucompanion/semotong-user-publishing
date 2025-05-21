@@ -30,33 +30,6 @@
 			QosModal.show();
 		}
 
-		// selected toggle
-		function selectedToggle(el) {
-			const id = el.dataset.compareId;
-			const allSelected = document.querySelectorAll('.btn-compare.is-selected');
-			const isAlreadySelected = el.classList.contains('is-selected');
-
-			// 선택 해제는 언제든지 가능
-			if (isAlreadySelected || allSelected.length < 6) {
-				// 해당 ID 그룹 모두 토글
-				const pairedButtons = document.querySelectorAll(`.btn-compare[data-compare-id="${id}"]`);
-				pairedButtons.forEach(btn => btn.classList.toggle('is-selected', !isAlreadySelected));
-			}
-
-			// 선택된 개수 다시 계산
-			const selectedCount = document.querySelectorAll('.btn-compare.is-selected').length / 2;
-
-			// 모든 count 요소 갱신
-			document.querySelectorAll('.btn-compare .count').forEach(countEl => {
-				countEl.textContent = selectedCount;
-			});
-
-			// 비교 뷰 클래스 처리
-			const compareView = document.querySelector('.btn-compare-view');
-			if (compareView) {
-				compareView.classList.toggle('is-compared', selectedCount >= 1);
-			}
-		}
 	</script>
 </head>
 
@@ -168,14 +141,14 @@
 				<section class="ratePlan-filter-sec">
 					<div class="sec-inner">
 						<div class="sec-header">
-							<h2 class="sec-tit">알뜰요금제 비교</h2>
-							<p class="sec-explain">데이터, 통신망, 혜택을 쉽게 확인해 보세요.</p>
+							<h2 class="sec-tit">어떤 요금제를 찾고 계세요?</h2>
+							<p class="sec-explain">요금제 구성을 알려주시면 세모통이 추천해드려요!</p>
 						</div>
 						<div class="sec-body">
 							<!-- 요금제 배너목록 -->
 							<!-- 2차 수정 : 요금제 카테고리 위치 변경 -->
 							<!-- 8차 수정 : 요금제 카테고리 순서 변경 -->
-							<!-- 2025-05-20 검색으로 변경 <ul class="ratePlan-cate-list">
+							<ul class="ratePlan-cate-list">
 								<li>
 									<button type="button" class="ratePlan-cate-btn">
 										<i class="ui-icn icn-44-plan-cate-02" aria-hidden="true"></i>
@@ -194,70 +167,88 @@
 										<span>인터넷<br> 결합 요금제</span>
 									</button>
 								</li>
-							</ul> -->
+							</ul>
 							<!-- // 요금제 배너목록 -->
 
-							<!-- 검색영역 -->
+							<!-- 필터목록 -->
 							<!-- 2차 수정 : 필터 키워드형으로 변경
 								- 새로고침 제외, 키워드 설정완료 태태추가, 삭제버튼 제외
-							-->
-							<!-- 2025-05-21 조찬기 : 요금제 화면 UI/UX 개선 -->
-							<div class="ratePlan-search">
-								<div class="ratePlan-search-form">
-									<div class="ui-inp">
-										<input type="text" name="" value="" placeholder="검색어를 입력해 주세요." class="inp" data-bs-toggle="modal" data-bs-target="#searchModal" />
-										<div class="on-right">
-											<span class="ui-btn btn-srch">
-												<i class="ui-icn icn-20-srch-bk" aria-label="검색"></i>
-											</span>
-										</div>
-									</div>
-									<button type="button" class="ui-btn filter-btn is-setting" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
-										<i class="ui-icn icn-24-filter-bk" aria-hidden="true"></i>
-										<span class="blind">필터</span>
+							 -->
+							<ul class="ratePlan-filter-list">
+								<!-- 필수 - 필터버튼 -->
+								<li>
+									<!-- Case 설정완료시 is-setting 추가 -->
+									<!-- ui-filter: input.scss 가이드에 포함 -->
+									<button type="button" class="filter-btn is-setting" data-bs-toggle="modal" data-bs-target="#FP0101P01Modal">
+										<i class="ui-icn icn-24-filter-gr" aria-hidden="true"></i>
+										<span>필터</span>
 									</button>
-								</div>
+									<span class="split" aria-hidden="true"></span>
+								</li>
 
-								<div class="ratePlan-search-cont">
-									<div class="ratePlan-search-title">
-										<p class="tit">어떤 요금제가 필요하세요?</p>
-									</div>
-									<ul class="ratePlan-chip-list">
-										<li>
-											<!-- Case 선택시 is-selected 추가 -->
-											<button class="ratePlan-chip is-selected">
-												<span>전체</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>인터넷 결합 요금제</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>소진시 속도</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>할인 기간</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>오직! 세모통에서만</span>
-											</button>
-										</li>
-										<li>
-											<button class="ratePlan-chip">
-												<span>OTT 구독 혜택</span>
-											</button>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- // 검색영역 -->
+								<!--  Cases -->
+								<!-- <li>
+									<button type="button" class="filter-btn">
+										<i class="ui-icn icn-24-refresh-gr" aria-label="새로고침"></i>
+									</button>
+								</li> -->
+								<li>
+									<!-- Case 설정완료시 is-setting 추가 -->
+									<button class="filter-chip">
+										<span>데이터</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>가격</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>소진시 속도</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>할인 기간</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>통화</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>문자</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>통신정보</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>인터넷 결합</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+								<li>
+									<button class="filter-chip">
+										<span>통신사</span>
+										<!-- <i class="ui-icn icn-16-remove-bk" aria-label="삭제"></i> -->
+									</button>
+								</li>
+							</ul>
+							<!-- // 필터목록 -->
 						</div>
 					</div>
 				</section>
@@ -268,39 +259,9 @@
 					<div class="sec-inner">
 						<!-- 요금제 상품그룹 -->
 						<div class="ratePlanC-list-wrap">
-							<!-- 4차 수정 : 요금제 개수 추가 -->
-							<div class="ratePlanC-toolbar">
-								<p class="count">총 9,999개 요금제</p>
-							</div>
-							<!-- // 요금제 상품 툴바 -->
-
 							<!-- 요금제 상품 툴바 -->
 							<div class="ratePlanC-toolbar">
-								<!-- 4차 수정 : 12워월 / 24개월로 수정 -->
-								<div class="opt">
-									<!-- checkbox.scss에 포함 -->
-									<div class="ui-switch xs">
-										<input type="checkbox" name="frmMonth12" id="frmMonth12" value="" checked />
-										<label for="frmMonth12"></label>
-									</div>
-									<p>12개월 총액</p>
-									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-										data-bs-content="할인기간 포함된 12/24개월 요금 총액이에요.">
-										<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-									</button>
-								</div>
-								<div class="opt">
-									<!-- checkbox.scss에 포함 -->
-									<div class="ui-switch xs">
-										<input type="checkbox" name="frmMonth24" id="frmMonth24" value="" />
-										<label for="frmMonth24"></label>
-									</div>
-									<p>24개월 총액</p>
-									<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-										data-bs-content="할인기간 포함된 12/24개월 요금 총액이에요.">
-										<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-									</button>
-								</div>
+								<p class="count">총&nbsp;<em>9,999개</em>&nbsp;요금제</p>
 								<div class="sort">
 									<!-- 2차 수정 : 모든화면 추천순제외 (2차개발시 원복) -->
 									<button type="button" class="ui-btn" id="frmSort" role="combobox" aria-haspopup="listbox" data-bs-toggle="modal" data-bs-target="#selectSortModal">
@@ -310,6 +271,7 @@
 									</button>
 								</div>
 							</div>
+							<!-- // 요금제 상품 툴바 -->
 
 							<!-- 요금제 공통 타입 C : 요금제 상품 리스트 -->
 							<ul class="ratePlanC-list">
@@ -332,15 +294,6 @@
 													<span class="label open">간편개통</span>
 												</div>
 												<div class="card-util-btn">
-													<!-- 비교하기 -->
-													<div class="card-compare-pc only-pc">
-														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-1" onclick="selectedToggle(this)">
-															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
-															<span>비교하기</span>
-															<span class="count">3</span>
-														</button>
-													</div>
-
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
@@ -349,10 +302,6 @@
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
-											</div>
-											<!-- 2025-05-20 조찬기 : 요금제 카드 UI 개선 (소제목 추가) -->
-											<div class="card-stit">
-												<p>The 착한 데이터 유심 11GB</p>
 											</div>
 											<div class="card-tit">
 												<strong>150GB+최대 5Mbps</strong>
@@ -424,15 +373,6 @@
 													</div>
 												</div>
 											</div>
-
-											<!-- 비교하기 -->
-											<div class="card-compare-mo only-mo">
-												<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-1" onclick="selectedToggle(this)">
-													<i class="ui-icn icn-16-compare-sel" aria-hidden="true"></i>
-													<span>비교하기</span>
-													<span class="count">3</span>
-												</button>
-											</div>
 										</div>
 									</div>
 									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
@@ -451,14 +391,6 @@
 													<span class="label open">간편개통</span>
 												</div>
 												<div class="card-util-btn">
-													<!-- 비교하기 -->
-													<div class="card-compare-pc only-pc">
-														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-2" onclick="selectedToggle(this)">
-															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
-															<span>비교하기</span>
-															<span class="count">3</span>
-														</button>
-													</div>
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
@@ -467,9 +399,6 @@
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
-											</div>
-											<div class="card-stit">
-												<p>The 착한 데이터 유심 11GB</p>
 											</div>
 											<div class="card-tit">
 												<strong>150GB+최대 5Mbps</strong>
@@ -516,15 +445,6 @@
 													</p>
 												</div>
 											</div>
-
-											<!-- 비교하기 -->
-											<div class="card-compare-mo only-mo">
-												<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-2" onclick="selectedToggle(this)">
-													<i class="ui-icn icn-16-compare-sel" aria-hidden="true"></i>
-													<span>비교하기</span>
-													<span class="count">3</span>
-												</button>
-											</div>
 										</div>
 									</div>
 									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
@@ -543,14 +463,6 @@
 													<span class="label open">간편개통</span>
 												</div>
 												<div class="card-util-btn">
-													<!-- 비교하기 -->
-													<div class="card-compare-pc only-pc">
-														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-3" onclick="selectedToggle(this)">
-															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
-															<span>비교하기</span>
-															<span class="count">3</span>
-														</button>
-													</div>
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
@@ -559,9 +471,6 @@
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
-											</div>
-											<div class="card-stit">
-												<p>The 착한 데이터 유심 11GB</p>
 											</div>
 											<div class="card-tit">
 												<strong>150GB+최대 5Mbps</strong>
@@ -597,16 +506,6 @@
 											<button type="button" class="card-button">
 												<span class="blind">요금제 자세히 보기</span>
 											</button>
-										</div>
-										<div class="card-footer">
-											<!-- 비교하기 -->
-											<div class="card-compare-mo only-mo">
-												<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-3" onclick="selectedToggle(this)">
-													<i class="ui-icn icn-16-compare-sel" aria-hidden="true"></i>
-													<span>비교하기</span>
-													<span class="count">3</span>
-												</button>
-											</div>
 										</div>
 									</div>
 									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
@@ -648,14 +547,6 @@
 													<span class="label open">간편개통</span>
 												</div>
 												<div class="card-util-btn">
-													<!-- 비교하기 -->
-													<div class="card-compare-pc only-pc">
-														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-4" onclick="selectedToggle(this)">
-															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
-															<span>비교하기</span>
-															<span class="count">3</span>
-														</button>
-													</div>
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
@@ -664,9 +555,6 @@
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
-											</div>
-											<div class="card-stit">
-												<p>The 착한 데이터 유심 11GB</p>
 											</div>
 											<div class="card-tit">
 												<strong>150GB+최대 5Mbps</strong>
@@ -736,15 +624,6 @@
 													</div>
 												</div>
 											</div>
-
-											<!-- 비교하기 -->
-											<div class="card-compare-mo only-mo">
-												<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-4" onclick="selectedToggle(this)">
-													<i class="ui-icn icn-16-compare-sel" aria-hidden="true"></i>
-													<span>비교하기</span>
-													<span class="count">3</span>
-												</button>
-											</div>
 										</div>
 									</div>
 									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
@@ -763,14 +642,6 @@
 													<span class="label open">간편개통</span>
 												</div>
 												<div class="card-util-btn">
-													<!-- 비교하기 -->
-													<div class="card-compare-pc only-pc">
-														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-5" onclick="selectedToggle(this)">
-															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
-															<span>비교하기</span>
-															<span class="count">3</span>
-														</button>
-													</div>
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
@@ -779,9 +650,6 @@
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
-											</div>
-											<div class="card-stit">
-												<p>The 착한 데이터 유심 11GB</p>
 											</div>
 											<div class="card-tit">
 												<strong>150GB+최대 5Mbps</strong>
@@ -827,15 +695,6 @@
 													</p>
 												</div>
 											</div>
-
-											<!-- 비교하기 -->
-											<div class="card-compare-mo only-mo">
-												<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-5" onclick="selectedToggle(this)">
-													<i class="ui-icn icn-16-compare-sel" aria-hidden="true"></i>
-													<span>비교하기</span>
-													<span class="count">3</span>
-												</button>
-											</div>
 										</div>
 									</div>
 									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
@@ -854,14 +713,6 @@
 													<span class="label open">간편개통</span>
 												</div>
 												<div class="card-util-btn">
-													<!-- 비교하기 -->
-													<div class="card-compare-pc only-pc">
-														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-6" onclick="selectedToggle(this)">
-															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
-															<span>비교하기</span>
-															<span class="count">3</span>
-														</button>
-													</div>
 													<button type="button" class="ui-btn is-selected" aria-selected="true">
 														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
 													</button>
@@ -870,9 +721,6 @@
 														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
 													</button>
 												</div>
-											</div>
-											<div class="card-stit">
-												<p>The 착한 데이터 유심 11GB</p>
 											</div>
 											<div class="card-tit">
 												<strong>150GB+최대 5Mbps</strong>
@@ -907,17 +755,6 @@
 											<button type="button" class="card-button">
 												<span class="blind">요금제 자세히 보기</span>
 											</button>
-										</div>
-										<div class="card-footer">
-											<!-- 비교하기 -->
-											<div class="card-compare-mo only-mo">
-												<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-6" onclick="selectedToggle(this)">
-													<i class="ui-icn icn-16-compare-sel" aria-hidden="true"></i>
-													<span>비교하기</span>
-													<span class="count">3</span>
-												</button>
-											</div>
-
 										</div>
 									</div>
 									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
@@ -1104,32 +941,6 @@
 		</div>
 	</div>
 	<!-- // QOS Modal Alert -->
-
-	<!-- 검색 modal full -->
-	<div class="modal modal-full" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content F-P01-01-srch-page">
-				<div class="modal-header">
-					<h3 class="modal-title" id="searchModalLabel"></h3>
-					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
-					</button>
-
-				</div>
-				<div class="modal-body">
-					<!-- 컨텐츠 섹션 -->
-					<section class="컨텐츠-sec">
-						<!-- 모달 가이드 -->
-						<p>검색팝업 페이지로 이동</p>
-						<a href="./F-P01-01-SRCH-P01.html">F-P01-01-SRCH-P01.html</a>
-					</section>
-					<!-- // 컨텐츠 섹션 -->
-				</div>
-				<div class="modal-footer"></div>
-			</div>
-		</div>
-	</div>
-	<!-- // 검색 modal full -->
 </body>
 
 </html>

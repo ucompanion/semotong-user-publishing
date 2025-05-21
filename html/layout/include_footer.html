@@ -59,12 +59,6 @@
 
 <!-- 플로팅 메뉴 -->
 <div class="floating-menu">
-	<!-- 2025-05-20 조찬기 : 요금제 비교하기 추가 -->
-	<!-- 비교할때 is-compared -->
-	<button type="button" class="ui-btn btn-compare-view">
-		<span>비교<br>보기</span>
-	</button>
-
 	<!-- aria-expanded: true/false -->
 	<button type="button" class="ui-btn btn-menu" id="floatingBtn" aria-expanded="false" aria-haspopup="menu" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingBtn')">
 		<i class="ui-icn icn-30-floating-logo" aria-label="Floating Menu"></i>
@@ -74,8 +68,6 @@
 	<button type="button" class="ui-btn btn-top" onclick="window.scrollTo({top:0, left:0, behavior: 'smooth'})">
 		<i class="ui-icn icn-30-floating-top" aria-label="Scroll Top"></i>
 	</button>
-
-
 	<div class="floating-layer fade" id="floatingMenuLayer">
 		<!-- a태그, button태그 무관합니다. -->
 		<button type="button" class="ui-btn btn-item">

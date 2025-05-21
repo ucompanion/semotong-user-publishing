@@ -256,8 +256,8 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 // 요금제 카테고리 목록
 @mixin ratePlanA-list {
 	display: grid;
-	grid-template-columns: 1fr;
-	gap: 10rem;
+	grid-template-columns: 1fr 1fr;
+	gap: 12rem;
 
 	@include media-tablet-xs {
 		display: flex;
@@ -302,69 +302,52 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 
 // 요금제 카테고리 카드
 @mixin ratePlanA-card {
-	position: relative;
-	padding: 20rem;
+	padding: 16rem 12rem;
 	background-color: #fff;
-	box-sizing: border-box;
-	border-radius: 8rem;
+	@include box-shadow-10;
 
 	.card-thumb {
-		position: absolute;
-		right: 12rem;
-		top: calc(50% - 24rem);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		img {
-			width: 48rem;
-			height: 48rem;
+			width: 40rem;
+			height: 40rem;
 		}
 	}
 	.card-body {
-		text-align: left;
+		text-align: center;
+		margin-top: 12rem;
 
 		.card-tit {
 			font-weight: 700;
-			font-size: 20rem;
-			line-height: 28rem;
-			color: #000;
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #46484B;
+		}
+		.card-tag {
+			margin-top: 2rem;
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 16rem;
+			color: #5A5D60;
 		}
 
 		.card-charge {
+			margin-top: 12rem;
 			font-weight: 600;
-			font-size: 14rem;
-			line-height: 20rem;
+			font-size: 16rem;
+			line-height: 22rem;
+			color: #7C5FE5;
+		}
+
+		.card-data {
+			margin-top: 2rem;
+			font-weight: 700;
+			font-size: 20rem;
+			line-height: 28rem;
 			color: $color-primary;
-		}
-
-		.card-explain {
-			margin-top: 4rem;
-			font-weight: 600;
-			font-size: 12rem;
-			line-height: 16rem;
-			color: #828588;
-			br {
-				display: none;
-			}
-		}
-	}
-
-	@include media-mobile-xl {
-		height: 180rem;
-		.card-thumb {
-			position: absolute;
-			right: 12rem;
-			top: auto;
-			bottom: 12rem;
-			img {
-				width: 40rem;
-				height: 40rem;
-			}
-		}
-		.card-body {
-			.card-explain {
-				margin-top: 8rem;
-				br {
-					all: unset;
-				}
-			}
+			vertical-align: top;
 		}
 	}
 }
@@ -372,14 +355,16 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 // 선택 요금제 카드
 @mixin ratePlanB-card {
 	position: relative;
-	padding: 20rem 16rem;
-	background-color: #F2F5FB;
+	padding: 16rem;
+	padding-right: 156rem;
+	border-radius: 2rem;
+	background-color: #EAE6FB;
 	.card-img {
 		position: absolute;
 		right: 16rem;
-		top: 20rem;
-		width: 40rem;
-		height: 40rem;
+		bottom: calc(50% - 40rem);
+		width: 80rem;
+		height: 80rem;
 		img {
 			width: 100%;
 			height: 100%;
@@ -387,56 +372,44 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 	}
 	.card-tit {
 		position: relative;
-		font-weight: 700;
-		font-size: 16rem;
-		line-height: 22rem;
-		color: #000000;
-	}
-	.card-charge {
-		margin-top: 2rem;
+		margin-top: 4rem;
 		font-weight: 600;
-		font-size: 12rem;
-		line-height: 16rem;
-		color: $color-primary;
-	}
-	.card-guide {
-		margin-top: 16rem;
-		padding: 16rem;
-		background-color: #fff;
-		border-radius: 8rem;
-		.tit {
-			display: flex;
-			align-items: center;
-			margin-bottom: 8rem;
-			font-weight: 700;
-			font-size: 14rem;
-			line-height: 20rem;
-			color: #36383A;
+		font-size: 18rem;
+		line-height: 24rem;
+		color: #000000;
 
-			.ui-icn {
-				margin-right: 4rem;
-			}
+	}
+	.card-txt {
+		position: relative;
+		margin-top: 4rem;
+		font-weight: 500;
+		font-size: 14rem;
+		line-height: 20rem;
+		color: #46484B;
+	}
+	.card-tag {
+		margin-top: 18rem;
+		position: relative;
+		display: flex;
+		gap: 4rem;
+		.tag { /* 7차 수정 : 선택요금제 태그강조 수정 */
+			padding:  2rem 7rem 1rem 7rem;
+			border-radius: 12rem;
+			/* border: 1px solid #CDC2F5; */
+			font-weight: 500;
+			font-size: 12rem;
+			line-height: 17rem;
+			color: #fff;
+			background-color: $color-primary;
 		}
-		.list {
-			li {
-				position: relative;
-				padding-left: 16rem;
-				font-weight: 500;
-				font-size: 12rem;
-				line-height: 16rem;
-				color: #63666A;
-				&::before {
-					content: '';
-					display: block;
-					position: absolute;
-					left: 5rem;
-					top: 7rem;
-					width: 3rem;
-					height: 3rem;
-					background-color: #63666A;
-					border-radius: 50%;
-				}
-			}
+	}
+
+	// 추천 요금제
+	&.type-recom { /* 7차 수정 : 추천요금제인 경우 타입 추가 */
+		@include out-sec;
+		background-color: #F2F5FB;
+		.recom-bnr {
+			cursor: default;
 		}
 	}
 }
@@ -530,13 +503,6 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			gap: 12rem;
 			margin-left: auto;
 		}
-	}
-	.card-stit {
-		margin-bottom: 3rem;
-		font-weight: 500;
-		font-size: 10rem;
-		line-height: 14rem;
-		color: #96989B;
 	}
 	.card-tit {
 		font-weight: 700;
@@ -783,121 +749,6 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				}
 			}
 
-		}
-	}
-	.card-status + .card-compare-mo {
-		margin-top: 12rem;
-	}
-	.card-compare-pc {
-		.btn-compare {
-			width: auto;
-			height: 20rem;
-			padding: 0 7rem;
-			gap: 2rem;
-			border-radius: 4rem;
-			border: 1px solid transparent;
-			font-size: 12rem;
-			line-height: 16rem;
-			font-weight: 600;
-			color: #5A5D60;
-			vertical-align: top;
-
-			.icn-selection {
-				display: none;
-			}
-			.count {
-				display: none;
-				align-items: center;
-				justify-content: center;
-				width: 12rem;
-				height: 12rem;
-				padding: 0 1px 1px 0;
-				font-weight: 500;
-				font-size: 10rem;
-				line-height: 12rem;
-				border-radius: 50%;
-				background-color: $color-primary;
-				color: #fff;
-			}
-			&.outlined {
-				border-color: #CFD0D1;
-				background-color: #fff;
-				&:active {
-					background-color: #fff;
-				}
-			}
-			&.is-selected {
-				color: $color-primary;
-
-				.icn-default {
-					display: none;
-				}
-				.icn-selection {
-					display: inline-flex;
-				}
-				.count {
-					display: inline-flex;
-				}
-
-				&.outlined {
-					border-color: $color-primary;
-				}
-			}
-		}
-	}
-	.card-compare-mo {
-		.btn-compare {
-			width: 100%;
-			height: 38rem;
-			gap: 2rem;
-			border-radius: 4rem;
-			border: 1px solid transparent;
-			font-size: 12rem;
-			line-height: 16rem;
-			font-weight: 600;
-			color: #5A5D60;
-
-			.icn-selection {
-				display: none;
-			}
-			.count {
-				display: none;
-				align-items: center;
-				justify-content: center;
-				width: 16rem;
-				height: 16rem;
-				padding: 0 1px 1px 0;
-				font-weight: 500;
-				font-size: 10rem;
-				line-height: 12rem;
-				border-radius: 50%;
-				background-color: $color-primary;
-				color: #fff;
-			}
-			&.outlined {
-				border-color: #CFD0D1;
-				background-color: #fff;
-				&:active {
-					background-color: #fff;
-				}
-			}
-			&.is-selected {
-				color: $color-primary;
-
-				.icn-default {
-					display: none;
-				}
-				.icn-selection {
-					display: inline-flex;
-				}
-				.count {
-					display: inline-flex;
-				}
-
-				&.outlined {
-					border-color: $color-primary;
-				}
-			}
 		}
 	}
 	.card-buyinfo {
