@@ -117,17 +117,13 @@
 					border-radius: 4rem;
 					background-color: #fff;
 					border:1px solid #CFD0D1;
-					> span {
-						display: block;
-						padding-right: 4rem;
-					}
 					&.is-setting {
 						border-color: #36383A;
 						&::after {
 							content:'';
 							position: absolute;
-							top: 6rem;
-							left: 25rem;
+							top: 12rem;
+							left: 33rem;
 							z-index: 2;
 							display: block;
 							width: 5rem;

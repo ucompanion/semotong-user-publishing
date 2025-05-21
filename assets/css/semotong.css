@@ -18652,18 +18652,14 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #fff;
   border: 1px solid #CFD0D1;
 }
-.F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-form .filter-btn > span {
-  display: block;
-  padding-right: 4rem;
-}
 .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-form .filter-btn.is-setting {
   border-color: #36383A;
 }
 .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-form .filter-btn.is-setting::after {
   content: "";
   position: absolute;
-  top: 6rem;
-  left: 25rem;
+  top: 12rem;
+  left: 33rem;
   z-index: 2;
   display: block;
   width: 5rem;
