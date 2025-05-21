@@ -479,6 +479,9 @@ select:focus {
   .only-pc {
     display: block !important;
   }
+  .only-mo-br {
+    display: none;
+  }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
   .only-mo {
@@ -486,6 +489,9 @@ select:focus {
   }
   .only-pc {
     display: block !important;
+  }
+  .only-mo-br {
+    display: none;
   }
 }
 /*-------------------------------------------------------------------
@@ -6071,15 +6077,15 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tit {
   position: relative;
   font-weight: 700;
-  font-size: 16rem;
-  line-height: 22rem;
+  font-size: 18rem;
+  line-height: 24rem;
   color: #000000;
 }
 .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-charge {
   margin-top: 2rem;
   font-weight: 600;
-  font-size: 12rem;
-  line-height: 16rem;
+  font-size: 16rem;
+  line-height: 22rem;
   color: #542FDD;
 }
 .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-guide {
@@ -12236,15 +12242,15 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tit {
   position: relative;
   font-weight: 700;
-  font-size: 16rem;
-  line-height: 22rem;
+  font-size: 18rem;
+  line-height: 24rem;
   color: #000000;
 }
 .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-charge {
   margin-top: 2rem;
   font-weight: 600;
-  font-size: 12rem;
-  line-height: 16rem;
+  font-size: 16rem;
+  line-height: 22rem;
   color: #542FDD;
 }
 .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-guide {
@@ -19630,6 +19636,25 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list li + li {
   margin-top: 16rem;
+}
+.F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list li {
+  animation: slideInUp, fadeIn forwards;
+  animation-duration: 1s;
+}
+.F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list li:nth-child(2) {
+  animation-delay: 1.3s;
+}
+.F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list li:nth-child(3) {
+  animation-delay: 2.3s;
+}
+.F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list li:nth-child(4) {
+  animation-delay: 3.3s;
+}
+.F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list li:nth-child(5) {
+  animation-delay: 4.3s;
 }
 .F-P01-01-srch-page .ratePlan-vogue-sec .ratePlan-search-cont .ratePlan-vogue-list .ratePlan-vogue-link {
   display: flex;
