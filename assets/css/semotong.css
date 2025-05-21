@@ -1182,6 +1182,7 @@ section .sec-inner {
   height: var(--btn-size);
   background-color: #fff;
   border-radius: 50%;
+  margin-top: 10rem;
   color: #333;
   box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
 }
@@ -1191,8 +1192,17 @@ section .sec-inner {
 .floating-menu > .ui-btn:active {
   background-color: #EFF0F0;
 }
+.floating-menu > .ui-btn.btn-compare-view {
+  display: none;
+  font-weight: 700;
+  background-color: #EAE6FB;
+  color: #542FDD;
+  line-height: 110%;
+}
+.floating-menu > .ui-btn.btn-compare-view.is-compared {
+  display: inline-flex;
+}
 .floating-menu .btn-top {
-  margin-top: 10rem;
   transition: all 0.2s ease;
 }
 .floating-menu .floating-layer {
@@ -2253,6 +2263,22 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-12-plan-check-pr.svg");
 }
 
+.icn-12-compare-sel::before {
+  background-image: url("../images/common/icn-12-plus-dr.svg");
+}
+
+.icn-12-compare-sel {
+  background-image: url("../images/common/icn-12-check-pr.svg");
+}
+
+.is-selected .icn-12-compare-sel {
+  background-position: center center;
+}
+
+.is-selected .icn-12-compare-sel::before {
+  transform: translateY(-110%);
+}
+
 .icn-14-more-gr::before {
   background-image: url("../images/common/icn-14-more-gr.svg");
 }
@@ -2374,8 +2400,20 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-16-plus-gr.svg");
 }
 
-.icn-16-plus-dr::before {
+.icn-16-compare-sel::before {
   background-image: url("../images/common/icn-16-plus-dr.svg");
+}
+
+.icn-16-compare-sel {
+  background-image: url("../images/common/icn-16-check-pr.svg");
+}
+
+.is-selected .icn-16-compare-sel {
+  background-position: center center;
+}
+
+.is-selected .icn-16-compare-sel::before {
+  transform: translateY(-110%);
 }
 
 .icn-16-info-gr::before {
@@ -5081,12 +5119,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -5103,9 +5194,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -5116,6 +5209,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -5124,6 +5220,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB02-01-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -5587,12 +5686,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -5609,9 +5761,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -5622,6 +5776,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -5630,6 +5787,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB02-01-page .cb-ratePlanE-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -5894,17 +6054,15 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card {
   position: relative;
-  padding: 16rem;
-  padding-right: 156rem;
-  border-radius: 2rem;
-  background-color: #EAE6FB;
+  padding: 20rem 16rem;
+  background-color: #F2F5FB;
 }
 .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-img {
   position: absolute;
   right: 16rem;
-  bottom: calc(50% - 40rem);
-  width: 80rem;
-  height: 80rem;
+  top: 20rem;
+  width: 40rem;
+  height: 40rem;
 }
 .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-img img {
   width: 100%;
@@ -5912,57 +6070,54 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tit {
   position: relative;
-  margin-top: 4rem;
-  font-weight: 600;
-  font-size: 18rem;
-  line-height: 24rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
   color: #000000;
 }
-.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-txt {
-  position: relative;
-  margin-top: 4rem;
-  font-weight: 500;
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-charge {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #542FDD;
+}
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-guide {
+  margin-top: 16rem;
+  padding: 16rem;
+  background-color: #fff;
+  border-radius: 8rem;
+}
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-guide .tit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8rem;
+  font-weight: 700;
   font-size: 14rem;
   line-height: 20rem;
-  color: #46484B;
+  color: #36383A;
 }
-.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tag {
-  margin-top: 18rem;
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-guide .tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-guide .list li {
   position: relative;
-  display: flex;
-  gap: 4rem;
-}
-.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 선택요금제 태그강조 수정 */
-  padding: 2rem 7rem 1rem 7rem;
-  border-radius: 12rem;
-  /* border: 1px solid #CDC2F5; */
+  padding-left: 16rem;
   font-weight: 500;
   font-size: 12rem;
-  line-height: 17rem;
-  color: #fff;
-  background-color: #542FDD;
+  line-height: 16rem;
+  color: #63666A;
 }
-.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom { /* 7차 수정 : 추천요금제인 경우 타입 추가 */
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
-  transition: padding 0.2s ease;
-  background-color: #F2F5FB;
-}
-@media all and (min-width: 768px) {
-  .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom {
-    padding-left: 23rem;
-    padding-right: 23rem;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom {
-    padding-left: 23rem;
-    padding-right: 23rem;
-  }
-}
-.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card.type-recom .recom-bnr {
-  cursor: default;
+.F-CB02-03-page .cb-ratePlanB-sec .ratePlanB-card .card-guide .list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5rem;
+  top: 7rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #63666A;
+  border-radius: 50%;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list {
   display: flex;
@@ -6293,12 +6448,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -6315,9 +6523,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -6328,6 +6538,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -6336,6 +6549,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB02-03-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -7089,12 +7305,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -7111,9 +7380,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -7124,6 +7395,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -7132,6 +7406,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-CB03-06-page .cb-ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -8603,12 +8880,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo {
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -8625,9 +8955,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -8638,6 +8970,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -8646,6 +8981,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -11878,10 +12216,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card {
   position: relative;
-  padding: 16rem;
-  padding-right: 156rem;
-  border-radius: 2rem;
-  background-color: #EAE6FB;
+  padding: 20rem 16rem;
+  background-color: #F2F5FB;
   padding-left: 24rem;
   padding-right: 24rem;
   border-radius: 0;
@@ -11889,9 +12225,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-img {
   position: absolute;
   right: 16rem;
-  bottom: calc(50% - 40rem);
-  width: 80rem;
-  height: 80rem;
+  top: 20rem;
+  width: 40rem;
+  height: 40rem;
 }
 .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-img img {
   width: 100%;
@@ -11899,100 +12235,54 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tit {
   position: relative;
-  margin-top: 4rem;
-  font-weight: 600;
-  font-size: 18rem;
-  line-height: 24rem;
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
   color: #000000;
 }
-.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-txt {
-  position: relative;
-  margin-top: 4rem;
-  font-weight: 500;
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-charge {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #542FDD;
+}
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-guide {
+  margin-top: 16rem;
+  padding: 16rem;
+  background-color: #fff;
+  border-radius: 8rem;
+}
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-guide .tit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8rem;
+  font-weight: 700;
   font-size: 14rem;
   line-height: 20rem;
-  color: #46484B;
+  color: #36383A;
 }
-.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tag {
-  margin-top: 18rem;
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-guide .tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-guide .list li {
   position: relative;
-  display: flex;
-  gap: 4rem;
-}
-.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-tag .tag { /* 7차 수정 : 선택요금제 태그강조 수정 */
-  padding: 2rem 7rem 1rem 7rem;
-  border-radius: 12rem;
-  /* border: 1px solid #CDC2F5; */
+  padding-left: 16rem;
   font-weight: 500;
   font-size: 12rem;
-  line-height: 17rem;
-  color: #fff;
-  background-color: #542FDD;
+  line-height: 16rem;
+  color: #63666A;
 }
-.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom { /* 7차 수정 : 추천요금제인 경우 타입 추가 */
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
-  transition: padding 0.2s ease;
-  background-color: #F2F5FB;
-}
-@media all and (min-width: 768px) {
-  .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom {
-    padding-left: 23rem;
-    padding-right: 23rem;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom {
-    padding-left: 23rem;
-    padding-right: 23rem;
-  }
-}
-.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card.type-recom .recom-bnr {
-  cursor: default;
-}
-.F-M02-01-T01-page .keyword-sec {
-  overflow: hidden;
-  margin-top: 30rem;
-}
-.F-M02-01-T01-page .keyword-sec .keyword-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8rem;
-}
-.F-M02-01-T01-page .keyword-sec .keyword-swiper {
-  overflow: visible;
-}
-.F-M02-01-T01-page .keyword-sec .keyword-swiper .swiper-wrapper .swiper-slide {
-  width: auto;
-}
-@media all and (min-width: 768px) {
-  .F-M02-01-T01-page .keyword-sec .keyword-swiper {
-    overflow: hidden;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-M02-01-T01-page .keyword-sec .keyword-swiper {
-    overflow: hidden;
-  }
-}
-.F-M02-01-T01-page .keyword-sec .keyword-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36rem;
-  padding: 0 9rem;
-  font-weight: 500;
-  font-size: 14rem;
-  color: #36383A;
-  border-radius: 6rem;
-  border: 1px solid transparent;
-  background-color: #EFF0F0;
-}
-.F-M02-01-T01-page .keyword-sec .keyword-btn.is-selected {
-  border-color: #542FDD;
-  background-color: #EAE6FB;
-  color: #542FDD;
+.F-M02-01-T01-page .ratePlanB-sec .ratePlanB-card .card-guide .list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5rem;
+  top: 7rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #63666A;
+  border-radius: 50%;
 }
 .F-M02-01-T01-page .ratePlanB-sec + .ratePlanC-sec { /* 7차 수정 : 추천요금제인 경우 여백수정 추가 */
   margin-top: 30rem;
@@ -12000,10 +12290,6 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanB-sec + .ratePlanC-sec .sec-inner {
   padding-top: 0;
   border-top: 0;
-}
-.F-M02-01-T01-page .ratePlanC-sec {
-  margin-top: 16rem;
-  padding-top: 16rem;
 }
 .F-M02-01-T01-page .ratePlanC-sec .sec-header {
   position: relative;
@@ -12436,12 +12722,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -12458,9 +12797,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -12471,6 +12812,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -12479,6 +12823,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-M02-01-T01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -13339,12 +13686,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -13361,9 +13761,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -13374,6 +13776,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -13382,6 +13787,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-M03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -14208,12 +14616,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -14230,9 +14691,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -14243,6 +14706,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -14251,6 +14717,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-M05-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -15663,12 +16132,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -15685,9 +16207,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -15698,6 +16222,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -15706,6 +16233,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-MY01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -16261,12 +16791,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -16283,9 +16866,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -16296,6 +16881,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -16304,6 +16892,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-MY01-04-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -17747,12 +18338,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -17769,9 +18413,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -17782,6 +18428,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -17790,6 +18439,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-O01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -18092,7 +18744,6 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-page .ratePlanC-sec {
   margin-top: 30rem;
-  border-top: 1px solid #EFF0F0;
 }
 .F-P01-01-page .ratePlanC-sec .sec-header {
   position: relative;
@@ -18138,14 +18789,12 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 @media all and (min-width: 768px) {
   .F-P01-01-page .ratePlanC-sec {
-    margin-top: 16rem;
     padding-top: 0;
     border-top: 0;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
   .F-P01-01-page .ratePlanC-sec {
-    margin-top: 16rem;
     padding-top: 0;
     border-top: 0;
   }
@@ -18571,12 +19220,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -18593,9 +19295,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -18606,6 +19310,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -18614,6 +19321,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-P01-01-page .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-P01-01-page .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -20253,12 +20963,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-mo {
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -20275,9 +21038,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -20288,6 +21053,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -20296,6 +21064,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-P02-01-page .ratePlanC-sec .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -22454,12 +23225,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -22476,9 +23300,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -22489,6 +23315,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -22497,6 +23326,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-SL01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
@@ -23035,12 +23867,65 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo {
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare {
+  width: auto;
+  height: 20rem;
+  padding: 0 7rem;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: 600;
+  color: #5A5D60;
+  vertical-align: top;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+  display: none;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare .count {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 10rem;
+  line-height: 12rem;
+  border-radius: 50%;
+  background-color: #542FDD;
+  color: #fff;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+  border-color: #CFD0D1;
+  background-color: #fff;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+  background-color: #fff;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+  color: #542FDD;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+  display: none;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+  display: inline-flex;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+  display: inline-flex;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
+  gap: 2rem;
   border-radius: 4rem;
   border: 1px solid transparent;
   font-size: 12rem;
@@ -23057,9 +23942,11 @@ body.is-scroll-first .floating-menu .btn-top {
   justify-content: center;
   width: 16rem;
   height: 16rem;
+  padding: 0 1px 1px 0;
   font-weight: 500;
   font-size: 10rem;
   line-height: 12rem;
+  border-radius: 50%;
   background-color: #542FDD;
   color: #fff;
 }
@@ -23070,6 +23957,9 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+  color: #542FDD;
+}
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
@@ -23078,6 +23968,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
+}
+.F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+  border-color: #542FDD;
 }
 .F-SL-01-page .ratePlanC-sec .ratePlanC-list .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
