@@ -346,7 +346,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 	}
 
-	@include media-mobile-xl {
+	@include media-tablet-xs {
 		height: 180rem;
 		.card-thumb {
 			position: absolute;

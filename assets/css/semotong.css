@@ -6029,7 +6029,28 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
   display: none;
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 768px) {
+  .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card {
+    height: 180rem;
+  }
+  .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card .card-thumb {
+    position: absolute;
+    right: 12rem;
+    top: auto;
+    bottom: 12rem;
+  }
+  .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card .card-thumb img {
+    width: 40rem;
+    height: 40rem;
+  }
+  .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card .card-body .card-explain {
+    margin-top: 8rem;
+  }
+  .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
+    all: unset;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
   .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card {
     height: 180rem;
   }
@@ -11753,7 +11774,28 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
   display: none;
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 768px) {
+  .F-M01-page .ratePlanA-sec .ratePlanA-card {
+    height: 180rem;
+  }
+  .F-M01-page .ratePlanA-sec .ratePlanA-card .card-thumb {
+    position: absolute;
+    right: 12rem;
+    top: auto;
+    bottom: 12rem;
+  }
+  .F-M01-page .ratePlanA-sec .ratePlanA-card .card-thumb img {
+    width: 40rem;
+    height: 40rem;
+  }
+  .F-M01-page .ratePlanA-sec .ratePlanA-card .card-body .card-explain {
+    margin-top: 8rem;
+  }
+  .F-M01-page .ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
+    all: unset;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
   .F-M01-page .ratePlanA-sec .ratePlanA-card {
     height: 180rem;
   }
