@@ -18772,6 +18772,7 @@ body.is-scroll-first .floating-menu .btn-top {
   .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-cont .ratePlan-chip-list {
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
   }
   .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-cont .ratePlan-chip-list li:first-child {
     margin-left: 0;
@@ -18784,6 +18785,7 @@ body.is-scroll-first .floating-menu .btn-top {
   .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-cont .ratePlan-chip-list {
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
   }
   .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-cont .ratePlan-chip-list li:first-child {
     margin-left: 0;
