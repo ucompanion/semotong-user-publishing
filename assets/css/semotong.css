@@ -6025,6 +6025,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+  white-space: pre-line;
 }
 .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
   display: none;
@@ -11770,6 +11771,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
+  white-space: pre-line;
 }
 .F-M01-page .ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
   display: none;
