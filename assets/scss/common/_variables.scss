@@ -2791,3 +2791,101 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		}
 	}
 }
+
+// 혜택카드 목록
+.benefit-card-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12rem;
+
+	.benefit-card-item {
+		width: 100%;
+	}
+}
+
+// 혜택카드
+.benefit-card {
+	position: relative;
+	padding: 26rem 24rem;
+	@include box-shadow-16;
+	border-radius: 4rem;
+	border:1px solid #EFF0F0;
+
+	.benefit-header {
+		display: flex;
+		align-items: center;
+		gap: 10rem;
+
+		.benefit-title {
+			flex: 1 1 auto;
+			.stit-gr {
+				margin-bottom: 8rem;
+				font-weight: 600;
+				font-size: 12rem;
+				line-height: 14rem;
+				color: #656565;
+			}
+			.stit-bk {
+				margin-bottom: 8rem;
+				font-weight: 600;
+				font-size: 12rem;
+				line-height: 14rem;
+				color: #000;
+			}
+			.title-20 {
+				font-weight: 700;
+				font-size: 20rem;
+				line-height: 28rem;
+				color: #000;
+			}
+			.title-16 {
+				font-weight: 700;
+				font-size: 16rem;
+				line-height: 22rem;
+				color: #000;
+			}
+			em {
+				color: $color-primary;
+			}
+		}
+
+		.benefit-img {
+			display: flex;
+			justify-content: flex-end;
+			flex: none;
+			width: 100rem;
+			height: 72rem;
+			img {
+				height: 100%;
+			}
+		}
+	}
+
+	.benefit-body {
+		margin-top: 12rem;
+		padding-top: 8rem;
+		border-top: 1px solid #EFF0F0;
+
+		.desc {
+			font-weight: 400;
+			font-size: 11rem;
+			line-height: 15rem;
+			color: #828588;
+		}
+	}
+
+	&.only-semotong {
+		border-color: $color-primary;
+		.benefit-badge {
+			position: absolute;
+			top: 0;
+			right: 10rem;
+			display: flex;
+		}
+	}
+
+	&.primary {
+		background-color: #EAE6FB;
+	}
+
+}

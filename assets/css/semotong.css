@@ -1,6 +1,94 @@
 @charset "UTF-8";
 /* 피시전용 hover 스타일 대용 */
 /* 모바일전용 hover 스타일 대응 */
+.benefit-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+.benefit-card-list .benefit-card-item {
+  width: 100%;
+}
+
+.benefit-card {
+  position: relative;
+  padding: 26rem 24rem;
+  box-shadow: 0rem 3rem 16rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  border-radius: 4rem;
+  border: 1px solid #EFF0F0;
+}
+.benefit-card .benefit-header {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.benefit-card .benefit-header .benefit-title {
+  flex: 1 1 auto;
+}
+.benefit-card .benefit-header .benefit-title .stit-gr {
+  margin-bottom: 8rem;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 14rem;
+  color: #656565;
+}
+.benefit-card .benefit-header .benefit-title .stit-bk {
+  margin-bottom: 8rem;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 14rem;
+  color: #000;
+}
+.benefit-card .benefit-header .benefit-title .title-20 {
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 28rem;
+  color: #000;
+}
+.benefit-card .benefit-header .benefit-title .title-16 {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.benefit-card .benefit-header .benefit-title em {
+  color: #542FDD;
+}
+.benefit-card .benefit-header .benefit-img {
+  display: flex;
+  justify-content: flex-end;
+  flex: none;
+  width: 100rem;
+  height: 72rem;
+}
+.benefit-card .benefit-header .benefit-img img {
+  height: 100%;
+}
+.benefit-card .benefit-body {
+  margin-top: 12rem;
+  padding-top: 8rem;
+  border-top: 1px solid #EFF0F0;
+}
+.benefit-card .benefit-body .desc {
+  font-weight: 400;
+  font-size: 11rem;
+  line-height: 15rem;
+  color: #828588;
+}
+.benefit-card.only-semotong {
+  border-color: #542FDD;
+}
+.benefit-card.only-semotong .benefit-badge {
+  position: absolute;
+  top: 0;
+  right: 10rem;
+  display: flex;
+}
+.benefit-card.primary {
+  background-color: #EAE6FB;
+}
+
 /*-------------------------------------------------------------------
 	분류그룹 : 초기화
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
@@ -2339,6 +2427,14 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .icn-16-more-02-gr::before {
   background-image: url("../images/common/icn-16-more-02-gr.svg");
+}
+
+.icn-16-more-wh::before {
+  background-image: url("../images/common/icn-16-more-wh.svg");
+}
+
+.icn-16-more-pr::before {
+  background-image: url("../images/common/icn-16-more-pr.svg");
 }
 
 .icn-16-star-bk::before {
@@ -11097,6 +11193,149 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I01-01-P01-page .consult-frm-sec .consult-terms .consult-terms-item .btn-more { /* 6차 수정 : 동의여부 구조로 변경 (여기까지) */
   width: 28rem;
   height: 28rem;
+}
+
+/*-------------------------------------------------------------------
+	분류그룹 : 인터넷 홈
+	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
+-------------------------------------------------------------------*/
+.F-I02-01-page {
+  --sec-outer-margin: 50rem;
+  padding-bottom: 32rem;
+}
+@media all and (min-width: 768px) {
+  .F-I02-01-page {
+    padding-bottom: 48rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-I02-01-page {
+    padding-bottom: 48rem;
+  }
+}
+.F-I02-01-page .rending-main-sec {
+  padding-left: 0;
+  padding-right: 0;
+}
+.F-I02-01-page .rending-main-sec .rending-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 22rem;
+  text-align: center;
+}
+.F-I02-01-page .rending-main-sec .rending-desc strong {
+  font-weight: 600;
+}
+.F-I02-01-page .rending-main-sec .rending-desc.green {
+  background-color: #BADEDE;
+}
+.F-I02-01-page .rending-main-sec .rending-desc.purple {
+  background-color: #DCD5FB;
+}
+.F-I02-01-page .rending-main-sec .rending-form {
+  padding-top: 24rem;
+  padding-bottom: 24rem;
+  background-color: #F4F5F8;
+  min-width: 320rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
+  transition: padding 0.2s ease;
+}
+@media all and (min-width: 768px) {
+  .F-I02-01-page .rending-main-sec .rending-form {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-I02-01-page .rending-main-sec .rending-form {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+.F-I02-01-page .rending-main-sec .rending-form .ui-inp-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.F-I02-01-page .rending-main-sec .rending-form .ui-inp-group .ui-inp {
+  width: 100%;
+}
+.F-I02-01-page .rending-main-sec .rending-form .ui-chk-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-top: 20rem;
+}
+.F-I02-01-page .rending-main-sec .rending-form .ui-chk-group .ui-chk {
+  width: 100%;
+}
+.F-I02-01-page .rending-main-sec .rending-form .ui-btn-group {
+  margin-top: 20rem;
+}
+.F-I02-01-page .rending-main-sec .rending-form .secret-desc {
+  margin-top: 30rem;
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #828588;
+  word-break: keep-all;
+}
+.F-I02-01-page .benefit-sec {
+  margin-top: var(--sec-outer-margin);
+}
+.F-I02-01-page .benefit-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-I02-01-page .benefit-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-I02-01-page .benefit-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-I02-01-page .benefit-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-I02-01-page .benefit-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+.F-I02-01-page .benefit-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-I02-01-page .benefit-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-I02-01-page .benefit-sec .sec-header .btn-more.static {
+  position: static;
+}
+.F-I02-01-page .benefit-sec .sec-header .sec-tit {
+  display: block;
+  line-height: 28rem;
+}
+.F-I02-01-page .benefit-sec .sec-header .sec-tit em {
+  color: #542FDD;
 }
 
 /*-------------------------------------------------------------------

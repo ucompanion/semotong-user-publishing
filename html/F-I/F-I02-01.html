@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="세모통" />
+	<meta name="description" content="세모통" />
+	<title>인터넷 | 세모통</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- 페이지 스크립트 영역 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@7.0.0/swiper-bundle.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// 상품 스와이프
+		    var productChoiceSwiper = new Swiper("#productSwiper", {
+				threshold: 3,
+				slidesPerView: 'auto',
+				spaceBetween: 12,
+				// 4차 수정 : 상풍 스와이프 버튼 옵션 추가
+				navigation: {
+					nextEl: ".product-choice-sec .choice-button-next",
+					prevEl: ".product-choice-sec .choice-button-prev",
+				}
+			});
+		})
+	</script>
+</head>
+
+<body>
+	<!-- 레이아웃 유형구분
+		메인: main-wrapper,
+		서브: sub-wrapper,
+		기타: [기타]-wrapper
+	 -->
+	<div class="wrapper only-container">
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div class="content F-I02-01-page">
+				<!-- 랜딩비주얼 영역 -->
+				<section class="rending-main-sec">
+					<div class="sec-inner">
+						<div class="rending-visual">
+							<img src="../../assets/images/upload/@img-product-mo.jpg" alt="" />
+						</div>
+						<div class="rending-consult">
+							<div class="rending-desc green">
+								<p>가입 의무 없이! <strong>상담만 받아도 OK!</strong></p>
+							</div>
+							<div class="rending-form">
+								<div class="ui-inp-group">
+									<div class="ui-inp">
+										<input type="text" name="" id="" value="" placeholder="이름을 입력해주세요." title="" class="inp" />
+									</div>
+									<div class="ui-inp">
+										<input type="text" name="" id="" value="" placeholder="전화번호를 입력해주세요 (‘-’없이 숫자만 입력)" title="" class="inp" />
+									</div>
+								</div>
+
+								<div class="ui-chk-group">
+									<label class="ui-chk chk-style1">
+										<input type="checkbox" name="secretFormCheck" id="secretFormCheck1">
+										<span class="chk"><span>(필수) 개인정보 수집 이용 동의</span></span>
+									</label>
+									<label class="ui-chk chk-style1">
+										<input type="checkbox" name="secretFormCheck" id="secretFormCheck2">
+										<span class="chk"><span>(필수) 개인정보 제3자 제공 동의</span></span>
+									</label>
+									<label class="ui-chk chk-style1">
+										<input type="checkbox" name="secretFormCheck" id="secretFormCheck3">
+										<span class="chk"><span>희망하는 상담 시간이 있으신가요?</span></span>
+									</label>
+								</div>
+
+								<div class="ui-btn-group">
+									<button type="button" class="btn-action primary">
+										<span>시크릿지원금 확인하기</span>
+										<i class="ui-icn icn-16-more-wh" aria-hidden="true"></i>
+									</button>
+								</div>
+
+								<div class="secret-desc">
+									<p>※ 고객님의 개인정보는 관련 법령에 따라 철저히 관리되어 상담 외 목적으로 사용되지 않습니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //랜딩비주얼 영역 -->
+
+				<!-- 혜택: 인터넷바꿈 -->
+				<section class="benefit-sec">
+					<div class="sec-inner">
+						<!-- benefit-card -->
+						<div class="benefit-card">
+							<div class="benefit-header">
+								<div class="benefit-title">
+									<p class="title-20">인터넷을 바꿨는데 <br>현금을 받는데요.</p>
+								</div>
+								<div class="benefit-img">
+									<img src="../../assets/images/contents/img-internet-01.png" alt="" />
+								</div>
+							</div>
+							<div class="benefit-body">
+								이런 경험이 한 번이라도 있다면!
+							</div>
+						</div>
+						<!-- //benefit-card -->
+					</div>
+				</section>
+				<!-- //혜택: 인터넷바꿈 -->
+
+				<!-- 혜택: 결합 -->
+				<section class="benefit-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">결합 시 <em>최대 125만원</em> 혜택에 <br>OTT 및 무료 콘텐츠까지!</h2>
+						</div>
+						<div class="sec-body">
+							<ul class="benefit-card-list">
+								<li class="benefit-card-item">
+									<div class="benefit-card primary">
+										<div class="benefit-header">
+											<div class="benefit-title">
+												<p class="stit-bk">가입 축하금</p>
+												<p class="title-16">최대 <em>48만원</em> <br><em>현금 당일</em> 지급</p>
+											</div>
+											<div class="benefit-img">
+												<img src="../../assets/images/contents/img-internet-02.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="benefit-card-item">
+									<div class="benefit-card">
+										<div class="benefit-header">
+											<div class="benefit-title">
+												<p class="stit-gr">인터넷 요금 할인</p>
+												<p class="title-16">인터넷 요금 <br><em>최대 396,000원</em> 할인</p>
+											</div>
+											<div class="benefit-img">
+												<img src="../../assets/images/contents/img-internet-03.png" alt="" />
+											</div>
+										</div>
+										<div class="benefit-body">
+											<p class="desc">※ KT 모바일 결합 시, 매월 최대 1.1만원 36개월 할인</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<ul class="benefit-card-list">
+								<li class="benefit-card-item">
+									<div class="benefit-card only-semotong">
+										<div class="benefit-badge">
+											<img src="../../assets/images/common/badge-card-semotong.svg" alt="">
+										</div>
+										<div class="benefit-header">
+											<div class="benefit-title">
+												<p class="stit-gr">현금처럼 바로 쓰는 혜택</p>
+												<p class="title-16">Npay 포인트+상품권 <br>최대 <em>39만원</em></p>
+											</div>
+											<div class="benefit-img">
+												<img src="../../assets/images/contents/img-internet-04.png" alt="" />
+											</div>
+										</div>
+										<div class="benefit-body">
+											<p class="desc">※ 가입 축하금 31만원, 중고폰 보상 5만원 , 스타벅스 3만원권</p>
+										</div>
+									</div>
+								</li>
+								<li class="benefit-card-item">
+									<div class="benefit-card">
+										<div class="benefit-header">
+											<div class="benefit-title">
+												<p class="stit-gr">OTT 및 콘텐츠 혜택</p>
+												<p class="title-16">인기 <em>OTT 2종 및</em> <br><em>콘텐츠 1종 2년 무료</em></p>
+											</div>
+											<div class="benefit-img">
+												<img src="../../assets/images/contents/img-internet-05.png" alt="" />
+											</div>
+										</div>
+										<div class="benefit-body">
+											<p class="desc">※ OTT 2종 및 콘텐츠 1종 무료, 24개월 간 제공</p>
+										</div>
+									</div>
+								</li>
+								<li class="benefit-card-item">
+									<div class="benefit-card">
+										<div class="benefit-header">
+											<div class="benefit-title">
+												<p class="stit-gr">무료 구독 혜택</p>
+												<p class="title-16">밀리의 서재 <br><em>매월 구독권</em> 제공</p>
+											</div>
+											<div class="benefit-img">
+												<img src="../../assets/images/contents/img-internet-06.png" alt="" />
+											</div>
+										</div>
+										<div class="benefit-body">
+											<p class="desc">※ KT 요고 69 요금제 이용 시, 12개월 간 증정</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- //혜택: 결합 -->
+
+				<!-- 혜택: 세모통가입이유 -->
+				<section class="benefit-sec">
+					<div class="sec-inner">
+						<ul class="benefit-card-list">
+							<li class="benefit-card-item">
+								<div class="benefit-card">
+									<div class="benefit-header">
+										<div class="benefit-title">
+											<p class="stit-gr">01. 최저가 보상제</p>
+											<p class="title-16">동일 조건 차액 발생시, <br><em>200%</em>를 보상해드려요.</p>
+										</div>
+										<div class="benefit-img">
+											<img src="../../assets/images/contents/img-internet-07.png" alt="" />
+										</div>
+									</div>
+									<div class="benefit-body">
+										<p class="desc">※ 동일 조건, 동일 상품 대비</p>
+									</div>
+								</div>
+							</li>
+							<li class="benefit-card-item">
+								<div class="benefit-card">
+									<div class="benefit-header">
+										<div class="benefit-title">
+											<p class="stit-gr">02. 100% 당일 지급</p>
+											<p class="title-16">인터넷 설치 당일 <br>현금으로 빠르게 드려요.</p>
+										</div>
+										<div class="benefit-img">
+											<img src="../../assets/images/contents/img-internet-08.png" alt="" />
+										</div>
+									</div>
+									<div class="benefit-body">
+										<p class="desc">※ 오후 3시 전 설치 건에 한함</p>
+									</div>
+								</div>
+							</li>
+							<li class="benefit-card-item">
+								<div class="benefit-card">
+									<div class="benefit-header">
+										<div class="benefit-title">
+											<p class="stit-gr">03. 추가 S캐쉬 제공</p>
+											<p class="title-16">후기 작성만 해도 <br><em>2만 S캐쉬</em>를 더!</p>
+										</div>
+										<div class="benefit-img">
+											<img src="../../assets/images/contents/img-internet-09.png" alt="" />
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="benefit-card-item">
+								<div class="benefit-card">
+									<div class="benefit-header">
+										<div class="benefit-title">
+											<p class="stit-gr">04. 원스톱 해지 서비스</p>
+											<p class="title-16">직접 전화하지 마세요! <br>기존 인터넷 해지는 <br>대신 처리해드릴게요.</p>
+										</div>
+										<div class="benefit-img">
+											<img src="../../assets/images/contents/img-internet-10.png" alt="" />
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="benefit-card-item">
+								<div class="benefit-card">
+									<div class="benefit-header">
+										<div class="benefit-title">
+											<p class="stit-gr">05. 전문 고객센터</p>
+											<p class="title-16">고객님에게 딱 맞는 <br>상품과 혜택을 찾아드려요.</p>
+										</div>
+										<div class="benefit-img">
+											<img src="../../assets/images/contents/img-internet-11.png" alt="" />
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- //혜택: 세모통가입이유 -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+	</div>
+</body>
+
+</html>
