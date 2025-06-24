@@ -158,6 +158,12 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			+ .sec-explain {
 				margin-top: 4rem;
 			}
+			@include media-mobile-xl {
+				br {
+					display: none;
+				}
+			}
+
 		}
 		.sec-explain {
 			font-weight: 600;
@@ -1318,24 +1324,24 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 8rem;
-		gap: 4rem;
+		margin-top: 20rem;
+		gap: 8rem;
 		&-bullet {
-			width: 6rem;
-			height: 6rem;
+			width: 10rem;
+			height: 10rem;
 			margin: 0;
-			border-radius: 3rem;
+			border-radius: 10rem;
 			background-color: #EFF0F0;
 			opacity: 1;
 			transition: all 0.2s ease;
 			&-active {
-				width: 12rem;
+				width: 20rem;
 				background-color: $color-primary;
 			}
 		}
 	}
-
 }
+
 // 이벤트 목록
 @mixin event-list {
 	display: flex;
@@ -2338,6 +2344,10 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			text-align: left;
 			padding-right: 24rem;
 			> .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+				display: inline-block;
+				min-width: 60rem;
+				font-size: 14rem;
+				line-height: 20rem;
 				flex: none;
 			}
 			> span {
@@ -2460,6 +2470,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				}
 			}
 			.num {
+				flex: none;
 				position: relative;
 				display: flex;
 				align-items: center;
@@ -2793,7 +2804,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 }
 
 // 혜택카드 목록
-.benefit-card-list {
+@mixin benefit-card-list {
 	display: flex;
 	flex-direction: column;
 	gap: 12rem;
@@ -2804,7 +2815,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 }
 
 // 혜택카드
-.benefit-card {
+@mixin benefit-card {
 	position: relative;
 	padding: 26rem 24rem;
 	@include box-shadow-16;
@@ -2888,4 +2899,104 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		background-color: #EAE6FB;
 	}
 
+	// Benefit Content Types
+	.benefit-cont {
+		&.type-a {
+			.tit {
+				margin-bottom: 8rem;
+				font-weight: 700;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #000;
+			}
+			.bul-check {
+				display: flex;
+				flex-direction: column;
+				gap: 4rem;
+
+				li {
+					position: relative;
+					width: 100%;
+					padding-left: 20rem;
+					font-weight: 400;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #000;
+
+					&::before {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 2rem;
+						width: 16rem;
+						height: 16rem;
+						background: url('../images/common/icn-16-bul-check.svg') no-repeat 0 0 / 100%;
+					}
+				}
+			}
+			.msg-box {
+				margin-top: 12rem;
+				padding: 16rem;
+				background-color: #EAE6FB;
+				border-radius: 4rem;
+				text-align: center;
+
+				.msg-para {
+					font-weight: 400;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #000;
+					strong {
+						font-weight: 700;
+						color: $color-primary;
+					}
+					.msg-inline {
+						display: block;
+						@include media-mobile-xl {
+							display: inline-block;
+						}
+					}
+					.msg-block {
+						display: block;
+					}
+				}
+			}
+		}
+		&.type-b {
+			.msg-box {
+				position: relative;
+				margin-top: 12rem;
+				padding: 16rem;
+				background-color: #fff;
+				border-radius: 4rem;
+				text-align: center;
+
+				&::before {
+					content:'';
+					position: absolute;
+					left: 50%;
+					bottom: 100%;
+					display: block;
+					width: 40rem;
+					height: 40rem;
+					background: url('../images/common/icn-24-benefit-plus.svg') no-repeat 0 0 / 100%;
+					transform: translate(-50%, 15rem);
+				}
+
+				.msg-para {
+					font-weight: 400;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #000;
+				}
+				.msg-info {
+					font-weight: 400;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #828588;
+				}
+			}
+		}
+	}
 }

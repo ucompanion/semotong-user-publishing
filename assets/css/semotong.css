@@ -1,94 +1,6 @@
 @charset "UTF-8";
 /* 피시전용 hover 스타일 대용 */
 /* 모바일전용 hover 스타일 대응 */
-.benefit-card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12rem;
-}
-.benefit-card-list .benefit-card-item {
-  width: 100%;
-}
-
-.benefit-card {
-  position: relative;
-  padding: 26rem 24rem;
-  box-shadow: 0rem 3rem 16rem 0 rgba(0, 0, 0, 0.08);
-  border-radius: 2rem;
-  border-radius: 4rem;
-  border: 1px solid #EFF0F0;
-}
-.benefit-card .benefit-header {
-  display: flex;
-  align-items: center;
-  gap: 10rem;
-}
-.benefit-card .benefit-header .benefit-title {
-  flex: 1 1 auto;
-}
-.benefit-card .benefit-header .benefit-title .stit-gr {
-  margin-bottom: 8rem;
-  font-weight: 600;
-  font-size: 12rem;
-  line-height: 14rem;
-  color: #656565;
-}
-.benefit-card .benefit-header .benefit-title .stit-bk {
-  margin-bottom: 8rem;
-  font-weight: 600;
-  font-size: 12rem;
-  line-height: 14rem;
-  color: #000;
-}
-.benefit-card .benefit-header .benefit-title .title-20 {
-  font-weight: 700;
-  font-size: 20rem;
-  line-height: 28rem;
-  color: #000;
-}
-.benefit-card .benefit-header .benefit-title .title-16 {
-  font-weight: 700;
-  font-size: 16rem;
-  line-height: 22rem;
-  color: #000;
-}
-.benefit-card .benefit-header .benefit-title em {
-  color: #542FDD;
-}
-.benefit-card .benefit-header .benefit-img {
-  display: flex;
-  justify-content: flex-end;
-  flex: none;
-  width: 100rem;
-  height: 72rem;
-}
-.benefit-card .benefit-header .benefit-img img {
-  height: 100%;
-}
-.benefit-card .benefit-body {
-  margin-top: 12rem;
-  padding-top: 8rem;
-  border-top: 1px solid #EFF0F0;
-}
-.benefit-card .benefit-body .desc {
-  font-weight: 400;
-  font-size: 11rem;
-  line-height: 15rem;
-  color: #828588;
-}
-.benefit-card.only-semotong {
-  border-color: #542FDD;
-}
-.benefit-card.only-semotong .benefit-badge {
-  position: absolute;
-  top: 0;
-  right: 10rem;
-  display: flex;
-}
-.benefit-card.primary {
-  background-color: #EAE6FB;
-}
-
 /*-------------------------------------------------------------------
 	분류그룹 : 초기화
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
@@ -891,6 +803,10 @@ html {
     padding-right: 23rem;
   }
 }
+.header-mobile.transparent {
+  background-color: transparent;
+  border-bottom: 0;
+}
 .header-mobile .header-sec {
   display: flex;
   flex-direction: row;
@@ -1471,6 +1387,19 @@ body.is-scroll-first .floating-menu .btn-top {
   bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
 }
 
+.rending-wrapper {
+  padding-top: 0;
+}
+.rending-wrapper .header-mobile {
+  position: absolute;
+  background-color: transparent;
+}
+.rending-wrapper .header-mobile .header-sec .title .logo {
+  background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+  -webkit-mask: none;
+          mask: none;
+}
+
 @media all and (min-width: 550px) {
   .footer .fnb-item {
     min-width: 0 !important;
@@ -1766,7 +1695,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .btn-action {
   width: 100%;
   max-width: 720rem;
-  height: 50rem;
+  height: 48rem;
   padding-left: 18rem;
   padding-right: 18rem;
   border-radius: 4rem;
@@ -1823,6 +1752,20 @@ body.is-scroll-first .floating-menu .btn-top {
   font-weight: 600;
   font-size: 14rem;
   line-height: 20rem;
+  gap: 2rem;
+}
+.btn-sub.top-arw {
+  overflow: visible;
+}
+.btn-sub.top-arw::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  display: block;
+  background: url("../images/common/img-btn-sub-shap.svg") no-repeat 0 0/100%;
+  width: 8rem;
+  height: 4rem;
 }
 
 .btn-texted {
@@ -2290,6 +2233,11 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 62rem;
 }
 
+[class*=icn-64] {
+  width: 64rem;
+  height: 64rem;
+}
+
 [class*=icn-80] {
   width: 80rem;
   height: 80rem;
@@ -2618,6 +2566,10 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .icn-20-expand-arw-gr::before {
   background-image: url("../images/common/icn-20-expand-arw-gr.svg");
+}
+
+.icn-24-plus-bk::before {
+  background-image: url("../images/common/icn-24-plus-bk.svg");
 }
 
 .icn-24-dropdown-arw-gr::before {
@@ -3160,6 +3112,14 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-62-motong.png");
 }
 
+.icn-64-internet-bk::before {
+  background-image: url("../images/common/icn-64-internet-bk.svg");
+}
+
+.icn-64-tv-bk::before {
+  background-image: url("../images/common/icn-64-tv-bk.svg");
+}
+
 .icn-80-kakao::before {
   background-image: url("../images/common/icn-80-kakao.svg");
 }
@@ -3315,6 +3275,46 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .icn-h20-lgu-02::before {
   background-image: url("../images/common/icn-h20-lgu-02.png");
+}
+
+.icn-h16-kt {
+  width: 20rem;
+  height: 16rem;
+}
+.icn-h16-kt::before {
+  -webkit-mask: url("../images/common/icn-h16-kt-wh.svg") no-repeat 0 0/100% auto;
+          mask: url("../images/common/icn-h16-kt-wh.svg") no-repeat 0 0/100% auto;
+  background: #B7B9BA;
+}
+
+.icn-h16-lgu {
+  width: 46rem;
+  height: 16rem;
+}
+.icn-h16-lgu::before {
+  -webkit-mask: url("../images/common/icn-h16-lgu-wh.svg") no-repeat 0 0/100% auto;
+          mask: url("../images/common/icn-h16-lgu-wh.svg") no-repeat 0 0/100% auto;
+  background: #B7B9BA;
+}
+
+.icn-h16-b {
+  width: 15rem;
+  height: 16rem;
+}
+.icn-h16-b::before {
+  -webkit-mask: url("../images/common/icn-h16-b-wh.svg") no-repeat 0 0/100% auto;
+          mask: url("../images/common/icn-h16-b-wh.svg") no-repeat 0 0/100% auto;
+  background: #B7B9BA;
+}
+
+.icn-h16-skylife {
+  width: 51rem;
+  height: 16rem;
+}
+.icn-h16-skylife::before {
+  -webkit-mask: url("../images/common/icn-h16-skylife-wh.svg") no-repeat 0 0/100% auto;
+          mask: url("../images/common/icn-h16-skylife-wh.svg") no-repeat 0 0/100% auto;
+  background: #B7B9BA;
 }
 
 /*-------------------------------------------------------------------
@@ -4172,6 +4172,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .address-srch-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .address-srch-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .address-srch-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -4366,12 +4371,12 @@ body.is-scroll-first .floating-menu .btn-top {
 /* 스타일1 */
 .popover-style1 {
   width: 180rem;
-  background-color: #46484B;
+  background-color: #111;
   color: #fff;
   border-radius: 4rem;
 }
 .popover-style1 .popover-body {
-  padding: 12rem;
+  padding: 8rem 12rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
@@ -6815,20 +6820,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-CB03-01-page .cb-event-sec .event-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-CB03-01-page .cb-event-sec .event-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-CB03-01-page .cb-event-sec .event-bnr {
@@ -7694,6 +7699,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CS01-page .motongcb-intro-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-CS01-page .motongcb-intro-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-CS01-page .motongcb-intro-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -7893,6 +7903,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-CS01-page .motongcb-intro-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-CS01-page .motongcb-intro-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-CS01-page .motongcb-intro-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -8354,20 +8369,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-CS02-01-page .event-sec .event-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-CS02-01-page .event-sec .event-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-CS02-01-page .event-sec .event-bnr {
@@ -9477,6 +9492,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G03-01-page .faq-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-G03-01-page .faq-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-G03-01-page .faq-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -9582,6 +9602,10 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-right: 24rem;
 }
 .F-G03-01-page .faq-sec .faq-accordion-wrap .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  display: inline-block;
+  min-width: 60rem;
+  font-size: 14rem;
+  line-height: 20rem;
   flex: none;
 }
 .F-G03-01-page .faq-sec .faq-accordion-wrap .faq-accordion .acco-header .acco-button > span {
@@ -10324,20 +10348,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-I01-01-page .event-sec .event-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-I01-01-page .event-sec .event-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-I01-01-page .event-sec .event-bnr { /* 8차 수정 : 인벤트 섹션 추가(여기까지) */
@@ -10380,6 +10404,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I01-01-page .telecom-choice-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-I01-01-page .telecom-choice-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-I01-01-page .telecom-choice-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -10477,6 +10506,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I01-01-page .product-choice-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-I01-01-page .product-choice-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-I01-01-page .product-choice-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -10626,6 +10660,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I01-01-page .internet-choice-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-I01-01-page .internet-choice-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-I01-01-page .internet-choice-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -10773,6 +10812,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I01-01-page .plan-view-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-I01-01-page .plan-view-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-I01-01-page .plan-view-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -10892,6 +10936,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I01-01-page .join-steps-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-I01-01-page .join-steps-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-I01-01-page .join-steps-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -11201,21 +11250,13 @@ body.is-scroll-first .floating-menu .btn-top {
 -------------------------------------------------------------------*/
 .F-I02-01-page {
   --sec-outer-margin: 50rem;
-  padding-bottom: 32rem;
-}
-@media all and (min-width: 768px) {
-  .F-I02-01-page {
-    padding-bottom: 48rem;
-  }
-}
-@media all and (min-width: 940px) and (min-height: 480px) {
-  .F-I02-01-page {
-    padding-bottom: 48rem;
-  }
 }
 .F-I02-01-page .rending-main-sec {
   padding-left: 0;
   padding-right: 0;
+}
+.F-I02-01-page .rending-main-sec .sec-inner {
+  position: relative;
 }
 .F-I02-01-page .rending-main-sec .rending-desc {
   display: flex;
@@ -11230,11 +11271,8 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I02-01-page .rending-main-sec .rending-desc strong {
   font-weight: 600;
 }
-.F-I02-01-page .rending-main-sec .rending-desc.green {
-  background-color: #BADEDE;
-}
-.F-I02-01-page .rending-main-sec .rending-desc.purple {
-  background-color: #DCD5FB;
+.F-I02-01-page .rending-main-sec .rending-consult {
+  position: relative;
 }
 .F-I02-01-page .rending-main-sec .rending-form {
   padding-top: 24rem;
@@ -11266,6 +11304,7 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
 }
 .F-I02-01-page .rending-main-sec .rending-form .ui-chk-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 6rem;
@@ -11273,6 +11312,15 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I02-01-page .rending-main-sec .rending-form .ui-chk-group .ui-chk {
   width: 100%;
+}
+.F-I02-01-page .rending-main-sec .rending-form .ui-chk-group .ui-btn.open-modal {
+  position: absolute;
+  left: 28rem;
+  right: 20%;
+  z-index: 10;
+  bottom: 0;
+  height: 28rem;
+  background-color: transparent;
 }
 .F-I02-01-page .rending-main-sec .rending-form .ui-btn-group {
   margin-top: 20rem;
@@ -11284,6 +11332,80 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
   word-break: keep-all;
+}
+.F-I02-01-page .rending-main-sec.mint .sec-inner {
+  background-color: #D0F2F2;
+}
+.F-I02-01-page .rending-main-sec.mint .rending-desc {
+  background-color: #BADEDE;
+}
+.F-I02-01-page .rending-main-sec.purple .sec-inner {
+  background-color: #542FDD;
+}
+.F-I02-01-page .rending-main-sec.purple .rending-desc {
+  background-color: #DCD5FB;
+}
+@media all and (min-width: 768px) {
+  .F-I02-01-page .rending-main-sec .sec-inner {
+    overflow: hidden;
+    border-radius: 12rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-visual img {
+    width: 50%;
+  }
+  .F-I02-01-page .rending-main-sec .rending-consult {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(50% - 40rem);
+    border-radius: 8rem;
+    overflow: hidden;
+  }
+  .F-I02-01-page .rending-main-sec .rending-consult .ui-inp .inp {
+    height: 40rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-form {
+    padding: 20rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-form .ui-chk-group {
+    gap: 0;
+    margin-top: 12rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-form .ui-btn-group {
+    margin-top: 12rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-I02-01-page .rending-main-sec .sec-inner {
+    overflow: hidden;
+    border-radius: 12rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-visual img {
+    width: 50%;
+  }
+  .F-I02-01-page .rending-main-sec .rending-consult {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(50% - 40rem);
+    border-radius: 8rem;
+    overflow: hidden;
+  }
+  .F-I02-01-page .rending-main-sec .rending-consult .ui-inp .inp {
+    height: 40rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-form {
+    padding: 20rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-form .ui-chk-group {
+    gap: 0;
+    margin-top: 12rem;
+  }
+  .F-I02-01-page .rending-main-sec .rending-form .ui-btn-group {
+    margin-top: 12rem;
+  }
 }
 .F-I02-01-page .benefit-sec {
   margin-top: var(--sec-outer-margin);
@@ -11317,6 +11439,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I02-01-page .benefit-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-I02-01-page .benefit-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-I02-01-page .benefit-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -11336,6 +11463,765 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I02-01-page .benefit-sec .sec-header .sec-tit em {
   color: #542FDD;
+}
+.F-I02-01-page .benefit-sec .sec-body .benefit-group {
+  position: relative;
+}
+.F-I02-01-page .benefit-sec .sec-body .benefit-group + .benefit-group {
+  margin-top: var(--sec-outer-margin);
+}
+.F-I02-01-page .benefit-sec .sec-body .benefit-group .sec-stit {
+  display: flex;
+  align-items: flex-start;
+  gap: 8rem;
+  margin-bottom: 12rem;
+}
+.F-I02-01-page .benefit-sec .sec-body .benefit-group .sec-stit .label {
+  flex: none;
+  position: relative;
+  top: 2rem;
+  display: inline-block;
+  padding: 2rem 8rem;
+  background-color: #000;
+  border-radius: 20rem;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #fff;
+}
+.F-I02-01-page .benefit-sec .sec-body .benefit-group .sec-stit .stit {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .sec-body .benefit-more {
+  margin-top: 24rem;
+}
+.F-I02-01-page .benefit-sec .sec-body .benefit-more .btn-sub {
+  margin: 0;
+}
+.F-I02-01-page .benefit-sec .benefit-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+.F-I02-01-page .benefit-sec .benefit-card-list .benefit-card-item {
+  width: 100%;
+}
+.F-I02-01-page .benefit-sec .benefit-card {
+  position: relative;
+  padding: 26rem 24rem;
+  box-shadow: 0rem 3rem 16rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  border-radius: 4rem;
+  border: 1px solid #EFF0F0;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-title {
+  flex: 1 1 auto;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-title .stit-gr {
+  margin-bottom: 8rem;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 14rem;
+  color: #656565;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-title .stit-bk {
+  margin-bottom: 8rem;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 14rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-title .title-20 {
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 28rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-title .title-16 {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-title em {
+  color: #542FDD;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-img {
+  display: flex;
+  justify-content: flex-end;
+  flex: none;
+  width: 100rem;
+  height: 72rem;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-header .benefit-img img {
+  height: 100%;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-body {
+  margin-top: 12rem;
+  padding-top: 8rem;
+  border-top: 1px solid #EFF0F0;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-body .desc {
+  font-weight: 400;
+  font-size: 11rem;
+  line-height: 15rem;
+  color: #828588;
+}
+.F-I02-01-page .benefit-sec .benefit-card.only-semotong {
+  border-color: #542FDD;
+}
+.F-I02-01-page .benefit-sec .benefit-card.only-semotong .benefit-badge {
+  position: absolute;
+  top: 0;
+  right: 10rem;
+  display: flex;
+}
+.F-I02-01-page .benefit-sec .benefit-card.primary {
+  background-color: #EAE6FB;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .tit {
+  margin-bottom: 8rem;
+  font-weight: 700;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .bul-check {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .bul-check li {
+  position: relative;
+  width: 100%;
+  padding-left: 20rem;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .bul-check li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  width: 16rem;
+  height: 16rem;
+  background: url("../images/common/icn-16-bul-check.svg") no-repeat 0 0/100%;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .msg-box {
+  margin-top: 12rem;
+  padding: 16rem;
+  background-color: #EAE6FB;
+  border-radius: 4rem;
+  text-align: center;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .msg-box .msg-para {
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .msg-box .msg-para strong {
+  font-weight: 700;
+  color: #542FDD;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .msg-box .msg-para .msg-inline {
+  display: block;
+}
+@media all and (min-width: 480px) {
+  .F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .msg-box .msg-para .msg-inline {
+    display: inline-block;
+  }
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .msg-box .msg-para .msg-block {
+  display: block;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-b .msg-box {
+  position: relative;
+  margin-top: 12rem;
+  padding: 16rem;
+  background-color: #fff;
+  border-radius: 4rem;
+  text-align: center;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-b .msg-box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  display: block;
+  width: 40rem;
+  height: 40rem;
+  background: url("../images/common/icn-24-benefit-plus.svg") no-repeat 0 0/100%;
+  transform: translate(-50%, 15rem);
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-b .msg-box .msg-para {
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #000;
+}
+.F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-b .msg-box .msg-info {
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #828588;
+}
+.F-I02-01-page .benefit-sec .benefit-swiper {
+  position: relative;
+}
+.F-I02-01-page .benefit-sec .benefit-swiper .swiper {
+  margin: -20rem -16rem;
+  padding: 20rem 16rem;
+}
+.F-I02-01-page .benefit-sec .benefit-swiper .benefit-button-prev,
+.F-I02-01-page .benefit-sec .benefit-swiper .benefit-button-next {
+  position: absolute;
+  top: calc(50% - 10rem);
+  right: 0;
+  z-index: 10;
+  transform: translate(50%, 50%);
+  width: 28rem;
+  height: 28rem;
+}
+.F-I02-01-page .benefit-sec .benefit-swiper .benefit-button-prev {
+  right: auto;
+  left: 0;
+  transform: translate(-50%, 50%) rotate(180deg);
+}
+.F-I02-01-page .benefit-sec .benefit-swiper .swiper-button-disabled { /* 8차 수정 : 추천딜 스와이프 버튼 추가(여기까지) */
+  display: none;
+}
+.F-I02-01-page .telecom-choice-sec {
+  margin-top: var(--sec-outer-margin);
+}
+.F-I02-01-page .telecom-choice-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-I02-01-page .telecom-choice-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-I02-01-page .telecom-choice-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-I02-01-page .telecom-choice-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-I02-01-page .telecom-choice-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-I02-01-page .telecom-choice-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
+.F-I02-01-page .telecom-choice-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-I02-01-page .telecom-choice-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-I02-01-page .telecom-choice-sec .sec-header .btn-more.static {
+  position: static;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-item {
+  width: 18%;
+  min-width: 72rem;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo input + .telecom-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #F4F5F8;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo input + .telecom-con .ui-icn {
+  width: 100%;
+  height: 22%;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo input + .telecom-con .ui-icn::before {
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo input:checked + .telecom-con {
+  background-color: #542FDD;
+}
+.F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo input:checked + .telecom-con .ui-icn::before {
+  background-color: #fff;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap {
+  margin-top: 24rem;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .sub-title {
+  margin-bottom: 12rem;
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #656565;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-swiper {
+  box-sizing: border-box;
+  margin: -20rem -16rem;
+  padding: 20rem 16rem;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-swiper .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+  gap: 8rem;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-swiper .swiper-pagination-bullet {
+  width: 10rem;
+  height: 10rem;
+  margin: 0;
+  border-radius: 10rem;
+  background-color: #EFF0F0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-swiper .swiper-pagination-bullet-active {
+  width: 20rem;
+  background-color: #542FDD;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box {
+  box-shadow: 0rem 3rem 16rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  padding: 24rem;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-header .label {
+  display: inline-flex;
+  padding: 3rem 11rem;
+  border-radius: 30rem;
+  border: 1px solid #2FBE98;
+  font-weight: 600;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #2FBE98;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-header .title {
+  display: block;
+  margin-top: 8rem;
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 22rem;
+  color: #000;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-body {
+  padding: 20rem 0;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-body .product-colabo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24rem;
+  text-align: center;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-body .product-colabo .product-item {
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 16rem;
+  color: #000;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-footer {
+  text-align: center;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-footer .product-charge .sale {
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 24rem;
+  color: #542FDD;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-footer .product-charge .original {
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #656565;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-footer .product-action {
+  margin-top: 8rem;
+}
+.F-I02-01-page .telecom-choice-sec .product-wrap .product-box .product-footer .product-action .btn-sub {
+  margin: 0;
+  box-sizing: border-box;
+}
+.F-I02-01-page .join-steps-sec {
+  margin-top: var(--sec-outer-margin);
+}
+.F-I02-01-page .join-steps-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-I02-01-page .join-steps-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-I02-01-page .join-steps-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-I02-01-page .join-steps-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-I02-01-page .join-steps-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-I02-01-page .join-steps-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
+.F-I02-01-page .join-steps-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-I02-01-page .join-steps-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-I02-01-page .join-steps-sec .sec-header .btn-more.static {
+  position: static;
+}
+.F-I02-01-page .join-steps-sec .join-steps {
+  padding: 20rem;
+  border-radius: 4rem;
+  background-color: #F4F5F8;
+}
+.F-I02-01-page .join-steps-sec .join-steps li {
+  position: relative;
+  display: flex;
+  padding-bottom: 26rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
+}
+.F-I02-01-page .join-steps-sec .join-steps li::after {
+  content: "";
+  position: absolute;
+  left: 11rem;
+  top: 28rem;
+  bottom: 4rem;
+  display: block;
+  width: 2rem;
+  background: url("../images/common/line-18-step.svg") repeat-y center center;
+}
+.F-I02-01-page .join-steps-sec .join-steps li:last-child {
+  padding-bottom: 0;
+}
+.F-I02-01-page .join-steps-sec .join-steps li:last-child::after {
+  display: none;
+}
+.F-I02-01-page .join-steps-sec .join-steps li .num {
+  flex: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24rem;
+  height: 24rem;
+  margin-right: 10rem;
+  border-radius: 50%;
+  background-color: #CDC2F5;
+  font-weight: 700;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #542FDD;
+}
+.F-I02-01-page .join-steps-sec .join-steps li .con dt {
+  font-weight: 600;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-I02-01-page .join-steps-sec .join-steps li .con dd {
+  color: #63666A;
+}
+.F-I02-01-page .faq-sec {
+  margin-top: var(--sec-outer-margin);
+  margin-bottom: var(--sec-outer-margin);
+}
+.F-I02-01-page .faq-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-I02-01-page .faq-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-I02-01-page .faq-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-I02-01-page .faq-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-I02-01-page .faq-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-I02-01-page .faq-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
+.F-I02-01-page .faq-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-I02-01-page .faq-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-I02-01-page .faq-sec .sec-header .btn-more.static {
+  position: static;
+}
+.F-I02-01-page .faq-sec .faq-accordion {
+  margin-top: -14rem;
+}
+.F-I02-01-page .faq-sec .faq-accordion .collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+.F-I02-01-page .faq-sec .faq-accordion .collapse:not(.show) {
+  display: none;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-button .ui-icn {
+  transition: transform 0.35s ease;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-button[aria-expanded=true] .ui-icn {
+  transform: rotate(180deg);
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-item {
+  padding: 14rem 0;
+  border-bottom: 1px solid #EFF0F0;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-header {
+  position: relative;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-header .acco-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding-right: 24rem;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  display: inline-block;
+  min-width: 60rem;
+  font-size: 14rem;
+  line-height: 20rem;
+  flex: none;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-header .acco-button > span {
+  position: relative;
+  display: block;
+  padding-left: 16rem;
+  font-weight: 600;
+  font-size: 14rem;
+  line-height: 20rem;
+  max-height: 40rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-header .acco-button > span em {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #542FDD;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-header .acco-button .ui-icn {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 8rem);
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-body {
+  margin-top: 16rem;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-body .acco-answer {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #46484B;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-body .acco-answer ol {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  font-size: 12rem;
+  line-height: 16rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-body .acco-answer ol:first-child {
+  margin-top: 0;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-body .acco-answer ol:last-child {
+  margin-bottom: 0;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-body .acco-answer ol li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+}
+.F-I02-01-page .faq-sec .faq-accordion .acco-body .acco-answer ol li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media all and (min-width: 768px) {
+  .F-I02-01-page .faq-sec .faq-accordion {
+    margin: 0;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-I02-01-page .faq-sec .faq-accordion {
+    margin: 0;
+  }
+}
+.F-I02-01-page .consult-btm-sec {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  margin-top: auto;
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 -4rem 20rem 0 rgba(0, 0, 0, 0.1);
+  padding-bottom: env(safe-area-inset-bottom, 0)/1.7;
+}
+.F-I02-01-page .consult-btm-sec .consult-action {
+  display: flex;
+  align-items: center;
+  padding: 20rem 0;
+  text-align: left;
+}
+.F-I02-01-page .consult-btm-sec .consult-action .title {
+  flex: 1 1 auto;
+  width: 100%;
+  padding-right: 50rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #000;
+  word-break: keep-all;
+}
+.F-I02-01-page .consult-btm-sec .consult-action .ui-btn {
+  flex: 1 1 auto;
+  justify-content: space-between;
+  width: 100%;
+  height: 56rem;
+  min-width: 1px;
+  padding: 8rem 8rem 8rem 12rem;
+  text-align: left;
+  font-size: 14rem;
+  line-height: 20rem;
+}
+.F-I02-01-page .consult-btm-sec .consult-action .ui-btn span {
+  word-break: keep-all;
+}
+@media all and (min-width: 480px) {
+  .F-I02-01-page .consult-btm-sec .consult-action br {
+    display: none;
+  }
+}
+
+.popover-style1.type-secretBtn {
+  z-index: 0 !important;
+}
+.popover-style1.type-secretBtn .popover-body {
+  padding-left: 24rem;
+  padding-right: 24rem;
 }
 
 /*-------------------------------------------------------------------
@@ -11508,6 +12394,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M01-page .deal-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M01-page .deal-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M01-page .deal-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -11898,6 +12789,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .ratePlanA-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-M01-page .ratePlanA-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-M01-page .ratePlanA-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -12093,6 +12989,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .recom-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-M01-page .recom-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-M01-page .recom-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -12179,6 +13080,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .special-event-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-M01-page .special-event-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-M01-page .special-event-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -12241,6 +13147,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M01-page .review-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M01-page .review-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M01-page .review-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -12369,6 +13280,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M01-page .partner-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M01-page .partner-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M01-page .partner-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -12616,6 +13532,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M02-01-T01-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M02-01-T01-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -13250,6 +14171,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .recom-bnr-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-M02-01-T01-page .recom-bnr-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-M02-01-T01-page .recom-bnr-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -13269,20 +14195,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-M02-01-T01-page .recom-bnr-sec .recom-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-M02-01-T01-page .recom-bnr-sec .recom-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-M02-01-T01-page .recom-bnr-sec .recom-bnr { /* 7차 수정 : 추천배너 스와이프로 변경 */
@@ -13325,6 +14251,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M02-01-T01-page .faq-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M02-01-T01-page .faq-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M02-01-T01-page .faq-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -13371,6 +14302,10 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-right: 24rem;
 }
 .F-M02-01-T01-page .faq-sec .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  display: inline-block;
+  min-width: 60rem;
+  font-size: 14rem;
+  line-height: 20rem;
   flex: none;
 }
 .F-M02-01-T01-page .faq-sec .faq-accordion .acco-header .acco-button > span {
@@ -13499,6 +14434,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: none;
 }
 .F-M02-01-T01-page .account-sol-sec .solution-steps li .num {
+  flex: none;
   position: relative;
   display: flex;
   align-items: center;
@@ -13612,6 +14548,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M03-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M03-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M03-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -14214,6 +15155,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M03-page .recom-bnr-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-M03-page .recom-bnr-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-M03-page .recom-bnr-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -14275,6 +15221,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M04-page .partner-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M04-page .partner-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M04-page .partner-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -14544,6 +15495,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M05-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-M05-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-M05-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -15485,20 +16441,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-MY01-01-page .event-sec .event-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-MY01-01-page .event-sec .event-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-MY01-01-page .event-sec .event-bnr {
@@ -15604,6 +16560,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-02-P01-page .review-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-MY01-02-P01-page .review-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-MY01-02-P01-page .review-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -16083,6 +17044,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-03-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-MY01-03-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-MY01-03-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -16742,6 +17708,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-04-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-MY01-04-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-MY01-04-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -17403,6 +18374,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-MY01-05-page .ratePlanD-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-MY01-05-page .ratePlanD-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-MY01-05-page .ratePlanD-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -18075,20 +19051,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-MY02-01-page .event-sec .event-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-MY02-01-page .event-sec .event-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-MY02-01-page .event-sec .event-bnr {
@@ -18821,20 +19797,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-O01-page .event-sec .event-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-O01-page .event-sec .event-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-O01-page .event-sec .event-bnr {
@@ -19069,6 +20045,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P01-01-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-P01-01-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-P01-01-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -19169,6 +20150,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-page .recent-ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-P01-01-page .recent-ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-P01-01-page .recent-ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -20032,6 +21018,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P01-01-P01-page .filter-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-P01-01-P01-page .filter-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-P01-01-P01-page .filter-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -20324,6 +21315,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-P03-page .usimBuy-store-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-P02-01-P03-page .usimBuy-store-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-P02-01-P03-page .usimBuy-store-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -20495,6 +21491,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-P04-page .usimBuy-store-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-P02-01-P04-page .usimBuy-store-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-P02-01-P04-page .usimBuy-store-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -20668,6 +21669,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-P05-page .usimBuy-store-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-P02-01-P05-page .usimBuy-store-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-P02-01-P05-page .usimBuy-store-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -20839,6 +21845,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-P06-page .usimBuy-store-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-P02-01-P06-page .usimBuy-store-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-P02-01-P06-page .usimBuy-store-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -21486,6 +22497,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .ratePlan-combi-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-P02-01-page .ratePlan-combi-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-P02-01-page .ratePlan-combi-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -21505,20 +22521,20 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  gap: 4rem;
+  margin-top: 20rem;
+  gap: 8rem;
 }
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
   margin: 0;
-  border-radius: 3rem;
+  border-radius: 10rem;
   background-color: #EFF0F0;
   opacity: 1;
   transition: all 0.2s ease;
 }
 .F-P02-01-page .ratePlan-combi-sec .combi-swiper .swiper-pagination-bullet-active {
-  width: 12rem;
+  width: 20rem;
   background-color: #542FDD;
 }
 .F-P02-01-page .ratePlan-combi-sec .combi-bnr { /* 7차 수정 : 결합배너 스와이프로 변경 */
@@ -21631,6 +22647,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .benefit-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-P02-01-page .benefit-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-P02-01-page .benefit-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -21755,6 +22776,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .ratePlan-detail-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-P02-01-page .ratePlan-detail-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-P02-01-page .ratePlan-detail-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -22056,6 +23082,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .review-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-P02-01-page .review-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-P02-01-page .review-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -22205,6 +23236,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .faq-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-P02-01-page .faq-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-P02-01-page .faq-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -22250,6 +23286,10 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-right: 24rem;
 }
 .F-P02-01-page .faq-sec .faq-accordion .acco-header .acco-button > .part { /* 8차 수정 : FAQ 요금제 소개 한줄 처리 */
+  display: inline-block;
+  min-width: 60rem;
+  font-size: 14rem;
+  line-height: 20rem;
   flex: none;
 }
 .F-P02-01-page .faq-sec .faq-accordion .acco-header .acco-button > span {
@@ -22377,6 +23417,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: none;
 }
 .F-P02-01-page .account-sol-sec .solution-steps li .num {
+  flex: none;
   position: relative;
   display: flex;
   align-items: center;
@@ -22429,6 +23470,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P02-01-page .similar-plan-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-P02-01-page .similar-plan-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-P02-01-page .similar-plan-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -22911,6 +23957,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SC02-page .sCash-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-SC02-page .sCash-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-SC02-page .sCash-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -23155,6 +24206,11 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SL01-page .event-benefit-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
 }
+@media all and (min-width: 480px) {
+  .F-SL01-page .event-benefit-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
 .F-SL01-page .event-benefit-sec .sec-header .sec-explain {
   font-weight: 600;
   font-size: 14rem;
@@ -23199,6 +24255,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-SL01-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-SL01-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-SL01-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -23782,6 +24843,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-SL-01-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-SL-01-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-SL-01-page .ratePlanC-sec .sec-header .sec-explain {
   font-weight: 600;
@@ -24607,6 +25673,11 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-QU-page .simple-open-sec .sec-header .sec-tit + .sec-explain {
   margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-QU-page .simple-open-sec .sec-header .sec-tit br {
+    display: none;
+  }
 }
 .F-QU-page .simple-open-sec .sec-header .sec-explain {
   font-weight: 600;

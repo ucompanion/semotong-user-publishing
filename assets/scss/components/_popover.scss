@@ -46,11 +46,11 @@
 /* 스타일1 */
 .popover-style1 {
 	width: 180rem;
-	background-color: #46484B;
+	background-color: #111;
 	color: #fff;
 	border-radius: 4rem;
 	.popover-body {
-		padding: 12rem;
+		padding: 8rem 12rem;
 		font-weight: 500;
 		font-size: 12rem;
 		line-height: 16rem;
@@ -103,6 +103,6 @@
 	&.popover-auto {
 		width: auto;
 	}
-}
 
+}
 /* 스타일2 */

@@ -128,7 +128,7 @@
 .btn-action {
 	width: 100%;
 	max-width: $pc-inner-content;
-	height: 50rem;
+	height: 48rem;
 	padding-left: 18rem;
 	padding-right: 18rem;
 	border-radius: 4rem;
@@ -187,6 +187,20 @@
 		font-weight: 600;
 		font-size: 14rem;
 		line-height: 20rem;
+		gap: 2rem;
+	}
+	&.top-arw {
+		overflow: visible;
+		&::before {
+			content:'';
+			position: absolute;
+			left: 50%;
+			bottom: 100%;
+			display: block;
+			background: url('../images/common/img-btn-sub-shap.svg') no-repeat 0 0 / 100%;
+			width: 8rem;
+			height: 4rem;
+		}
 	}
 }
 // e: 서브 버튼

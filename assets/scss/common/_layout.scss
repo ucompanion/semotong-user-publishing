@@ -61,6 +61,10 @@ html {
 	border-bottom: 1px solid #EFF0F0;
 	@include out-sec;
 	transition: all 0.2s ease;
+	&.transparent {
+		background-color: transparent;
+		border-bottom: 0;
+	}
 
 	.header-sec {
 		display: flex;
@@ -679,6 +683,21 @@ body.is-scroll-first {
 	}
 	.floating-menu {
 		bottom: calc(#{$safe-area-bottom} + var(--btn-gap));
+	}
+}
+
+// Rending Wrapper
+.rending-wrapper {
+	padding-top: 0;
+
+	.header-mobile {
+		position: absolute;
+		background-color: transparent;
+
+		.header-sec .title .logo {
+			background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
+			mask: none;
+		}
 	}
 }
 

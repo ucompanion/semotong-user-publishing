@@ -117,6 +117,11 @@
 	height: 62rem;
 }
 
+[class*=icn-64] {
+	width: 64rem;
+	height: 64rem;
+}
+
 [class*=icn-80] {
 	width: 80rem;
 	height: 80rem;
@@ -445,6 +450,10 @@
 
 .icn-20-expand-arw-gr::before {
 	background-image: url("../images/common/icn-20-expand-arw-gr.svg");
+}
+
+.icn-24-plus-bk::before {
+	background-image: url("../images/common/icn-24-plus-bk.svg");
 }
 
 .icn-24-dropdown-arw-gr::before {
@@ -985,6 +994,14 @@
 	background-image: url("../images/common/icn-62-motong.png");
 }
 
+.icn-64-internet-bk::before {
+	background-image: url("../images/common/icn-64-internet-bk.svg");
+}
+
+.icn-64-tv-bk::before {
+	background-image: url("../images/common/icn-64-tv-bk.svg");
+}
+
 .icn-80-kakao::before {
 	background-image: url("../images/common/icn-80-kakao.svg");
 }
@@ -1143,5 +1160,45 @@
 
 	&::before {
 		background-image: url("../images/common/icn-h20-lgu-02.png");
+	}
+}
+
+.icn-h16-kt {
+	width: 20rem;
+	height: 16rem;
+
+	&::before {
+		mask: url("../images/common/icn-h16-kt-wh.svg") no-repeat 0 0 / 100% auto;
+		background: #B7B9BA;
+	}
+}
+
+.icn-h16-lgu {
+	width: 46rem;
+	height: 16rem;
+
+	&::before {
+		mask: url("../images/common/icn-h16-lgu-wh.svg") no-repeat 0 0 / 100% auto;
+		background: #B7B9BA;
+	}
+}
+
+.icn-h16-b {
+	width: 15rem;
+	height: 16rem;
+
+	&::before {
+		mask: url("../images/common/icn-h16-b-wh.svg") no-repeat 0 0 / 100% auto;
+		background: #B7B9BA;
+	}
+}
+
+.icn-h16-skylife {
+	width: 51rem;
+	height: 16rem;
+
+	&::before {
+		mask: url("../images/common/icn-h16-skylife-wh.svg") no-repeat 0 0 / 100% auto;
+		background: #B7B9BA;
 	}
 }
