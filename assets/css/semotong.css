@@ -11557,7 +11557,7 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I02-01-page .benefit-sec .benefit-card {
   position: relative;
-  padding: 26rem 24rem;
+  padding: 24rem 20rem;
   box-shadow: 0rem 3rem 16rem 0 rgba(0, 0, 0, 0.08);
   border-radius: 2rem;
   border-radius: 4rem;
@@ -11652,6 +11652,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-weight: 400;
   font-size: 14rem;
   line-height: 20rem;
+  letter-spacing: -0.2rem;
   color: #000;
 }
 .F-I02-01-page .benefit-sec .benefit-card .benefit-cont.type-a .bul-check li::before {

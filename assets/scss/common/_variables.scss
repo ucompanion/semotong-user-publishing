@@ -2817,7 +2817,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 // 혜택카드
 @mixin benefit-card {
 	position: relative;
-	padding: 26rem 24rem;
+	padding: 24rem 20rem;
 	@include box-shadow-16;
 	border-radius: 4rem;
 	border:1px solid #EFF0F0;
@@ -2921,6 +2921,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 					font-weight: 400;
 					font-size: 14rem;
 					line-height: 20rem;
+					letter-spacing: -0.2rem;
 					color: #000;
 
 					&::before {
