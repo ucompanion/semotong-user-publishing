@@ -472,7 +472,7 @@ select:focus {
   display: none !important;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .only-mo {
     display: none !important;
   }
@@ -730,12 +730,12 @@ html {
 .footer {
   flex: none;
   position: relative;
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .header,
   .footer {
     padding-left: 23rem;
@@ -751,12 +751,12 @@ html {
 }
 
 .out-sec {
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .out-sec {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -773,7 +773,7 @@ html {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720rem;
+  max-width: 720px;
 }
 
 .header-mobile {
@@ -785,13 +785,13 @@ html {
   background-color: #fff;
   height: 60rem;
   border-bottom: 1px solid #EFF0F0;
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
   transition: all 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .header-mobile {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -817,7 +817,7 @@ html {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720rem;
+  max-width: 720px;
 }
 .header-mobile .header-sec .title { /* 로고 베타 추가 */
   display: flex;
@@ -1019,7 +1019,7 @@ html {
   margin-bottom: 30rem;
   background: url("../images/common/img-logo-header-bk-only.svg") no-repeat center center/contain;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .modal.aside-modal .aside-nav-sec .aside-logo .logo:hover { /* 4차 수정 : 전체메뉴 로고 추가 */
     background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
   }
@@ -1071,13 +1071,13 @@ html {
 }
 
 section {
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   section {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -1093,7 +1093,7 @@ section .sec-inner {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720rem;
+  max-width: 720px;
   transition: padding 0.2s ease;
 }
 
@@ -1109,7 +1109,7 @@ section .sec-inner {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720rem;
+  max-width: 720px;
 }
 .footer .footer-sec .logo-area .logo-footer {
   display: block;
@@ -1165,7 +1165,7 @@ section .sec-inner {
   bottom: -2rem;
   width: 30rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .footer .footer-sec .info-area .info-mark {
     right: 0;
     width: 40rem;
@@ -1316,7 +1316,7 @@ body.is-scroll-first .floating-menu .btn-top {
   z-index: 300;
   width: 100%;
   height: calc(76rem + env(safe-area-inset-bottom, 0)/1.7);
-  min-width: 320rem;
+  min-width: 320px;
   background-color: #fff;
   border-top: 1px solid #EFF0F0;
 }
@@ -1327,7 +1327,7 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720rem;
+  max-width: 720px;
   background-color: #fff;
 }
 .floating-nav .nav-list .nav-item {
@@ -1387,17 +1387,8 @@ body.is-scroll-first .floating-menu .btn-top {
   bottom: calc(env(safe-area-inset-bottom, 0)/1.7 + var(--btn-gap));
 }
 
-.rending-wrapper {
+.lending-wrapper {
   padding-top: 0;
-}
-.rending-wrapper .header-mobile {
-  position: absolute;
-  background-color: transparent;
-}
-.rending-wrapper .header-mobile .header-sec .title .logo {
-  background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
-  -webkit-mask: none;
-          mask: none;
 }
 
 @media all and (min-width: 550px) {
@@ -1405,7 +1396,7 @@ body.is-scroll-first .floating-menu .btn-top {
     min-width: 0 !important;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .wrapper {
     padding-top: 80rem;
   }
@@ -1414,6 +1405,9 @@ body.is-scroll-first .floating-menu .btn-top {
   }
   .wrapper.only-container .header-mobile {
     position: relative;
+  }
+  .wrapper.lending-wrapper {
+    padding-top: 0;
   }
   .footer {
     padding-bottom: 0; /* 1차 수정 : 피시 푸터 여백 초기화 */
@@ -1459,6 +1453,9 @@ body.is-scroll-first .floating-menu .btn-top {
   }
   .wrapper.only-container .header-mobile {
     position: relative;
+  }
+  .wrapper.lending-wrapper {
+    padding-top: 0;
   }
   .footer {
     padding-bottom: 0; /* 1차 수정 : 피시 푸터 여백 초기화 */
@@ -1694,7 +1691,7 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .btn-action {
   width: 100%;
-  max-width: 720rem;
+  max-width: 720px;
   height: 48rem;
   padding-left: 18rem;
   padding-right: 18rem;
@@ -1773,8 +1770,16 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 14rem;
   line-height: 20rem;
   color: #63666A;
-  text-decoration: underline;
-  text-underline-position: under;
+}
+.btn-texted::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  width: 100%;
+  height: 1px;
+  background-color: #63666A;
 }
 
 /*-------------------------------------------------------------------
@@ -3774,12 +3779,12 @@ body.is-scroll-first .floating-menu .btn-top {
   align-items: center;
   height: 60rem;
   gap: 12rem;
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .modal-full .modal-header {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -3821,12 +3826,12 @@ body.is-scroll-first .floating-menu .btn-top {
   transition: all 0.2s ease;
 }
 .modal-full .modal-footer {
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .modal-full .modal-footer {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -3838,7 +3843,7 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-right: 23rem;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .modal-full.fade {
     transition: opacity 0.15s linear;
   }
@@ -3847,7 +3852,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
   .modal-full .modal-content {
     height: auto;
-    max-width: 720rem;
+    max-width: 720px;
     max-height: calc(100% - 40px);
     border-radius: 10rem;
   }
@@ -3861,7 +3866,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
   .modal-full .modal-content {
     height: auto;
-    max-width: 720rem;
+    max-width: 720px;
     max-height: calc(100% - 40px);
     border-radius: 10rem;
   }
@@ -3905,15 +3910,15 @@ body.is-scroll-first .floating-menu .btn-top {
 .modal-basic .modal-header {
   display: flex;
   align-items: center;
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
   padding-top: 20rem;
   padding-bottom: 10rem;
   padding-right: 50rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .modal-select .modal-header,
   .modal-basic .modal-header {
     padding-left: 23rem;
@@ -3937,18 +3942,18 @@ body.is-scroll-first .floating-menu .btn-top {
 .modal-select .modal-header .btn-close,
 .modal-basic .modal-header .btn-close {
   position: absolute;
-  right: 16rem;
+  right: 20rem;
   top: 18rem;
 }
 .modal-select .modal-footer,
 .modal-basic .modal-footer {
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
   gap: 8rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .modal-select .modal-footer,
   .modal-basic .modal-footer {
     padding-left: 23rem;
@@ -3966,7 +3971,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .modal-basic .modal-footer .ui-btn {
   flex: 1 1 auto;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .modal-select .modal-dialog,
   .modal-basic .modal-dialog {
     justify-content: center;
@@ -4053,7 +4058,7 @@ body.is-scroll-first .floating-menu .btn-top {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .select-bank-list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -4096,7 +4101,7 @@ body.is-scroll-first .floating-menu .btn-top {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .select-partner-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -4473,12 +4478,12 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 16rem;
   background-color: #fff;
   z-index: 10;
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .tab-style1 {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -4494,7 +4499,7 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720rem;
+  max-width: 720px;
 }
 .tab-style1 .tab-item {
   flex: 1;
@@ -4514,7 +4519,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-color: #000;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .container .tab-style1 {
     top: 80rem;
     padding-top: 12rem;
@@ -4536,12 +4541,12 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 16rem;
   background-color: #fff;
   z-index: 10;
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .tab-style2 {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -4592,7 +4597,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-color: #000;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .container .tab-style2 {
     top: 80rem;
     padding-top: 16rem;
@@ -4603,7 +4608,7 @@ body.is-scroll-first .floating-menu .btn-top {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 720rem;
+    max-width: 720px;
   }
   .container .tab-style2 .swiper-wrapper {
     display: flex;
@@ -4620,7 +4625,7 @@ body.is-scroll-first .floating-menu .btn-top {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 720rem;
+    max-width: 720px;
   }
   .container .tab-style2 .tab-list .tab-item {
     flex: 1 1 auto;
@@ -4643,7 +4648,7 @@ body.is-scroll-first .floating-menu .btn-top {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 720rem;
+    max-width: 720px;
   }
   .container .tab-style2 .swiper-wrapper {
     display: flex;
@@ -4660,7 +4665,7 @@ body.is-scroll-first .floating-menu .btn-top {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 720rem;
+    max-width: 720px;
   }
   .container .tab-style2 .tab-list .tab-item {
     flex: 1 1 auto;
@@ -4771,7 +4776,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB01-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB01-page .cb-intro-sec .sec-inner {
     flex-direction: row;
     align-items: center;
@@ -4880,7 +4885,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-01-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB02-01-page .cb-intro-sec .sec-inner {
     flex-direction: row;
     align-items: center;
@@ -5997,7 +6002,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-02-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB02-02-page .cb-intro-sec .sec-inner {
     flex-direction: row;
     align-items: center;
@@ -6026,7 +6031,7 @@ body.is-scroll-first .floating-menu .btn-top {
   grid-template-columns: 1fr;
   gap: 10rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-list {
     display: flex;
     gap: 0;
@@ -6065,7 +6070,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-02-page .cb-ratePlanA-sec .swiper-button-disabled {
   display: none;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-button-prev,
   .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-button-next {
     display: block;
@@ -6083,7 +6088,7 @@ body.is-scroll-first .floating-menu .btn-top {
     display: none;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-swiper {
     padding: 10rem;
   }
@@ -6135,7 +6140,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
   display: none;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB02-02-page .cb-ratePlanA-sec .ratePlanA-card {
     height: 180rem;
   }
@@ -6782,7 +6787,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB03-01-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB03-01-page .cb-intro-sec .sec-inner {
     flex-direction: row;
     align-items: center;
@@ -6876,7 +6881,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB03-05-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB03-05-page .cb-intro-sec .sec-inner {
     flex-direction: row;
     align-items: center;
@@ -6966,7 +6971,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-CB03-06-page .cb-intro-sec .intro-con p em {
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CB03-06-page .cb-intro-sec .sec-inner {
     flex-direction: row;
     align-items: center;
@@ -7657,7 +7662,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 20rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CS01-page {
     padding-bottom: 48rem;
   }
@@ -7862,7 +7867,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 20rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CS01-page {
     padding-bottom: 48rem;
   }
@@ -8279,7 +8284,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 20rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CS02-01-page {
     padding-bottom: 48rem;
   }
@@ -8296,8 +8301,8 @@ body.is-scroll-first .floating-menu .btn-top {
   border-top: 1px solid #2A2B2D;
   /* 1차 수정 : 리스트 여백 취소 */
   /*
-  	margin-left: calc(16rem * -1);
-  	margin-right: calc(16rem * -1);
+  	margin-left: calc(20rem * -1);
+  	margin-right: calc(20rem * -1);
   */
   /* 1차 수정 : 리스트 여백 취소 */
   /*
@@ -8403,7 +8408,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 20rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-CS02-02-page {
     padding-bottom: 48rem;
   }
@@ -8468,7 +8473,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-E01-01-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-E01-01-page {
     padding-bottom: 48rem;
   }
@@ -8581,7 +8586,7 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 16rem;
   color: #828588;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-E01-01-page .eventIng-sec .eventIng-list .eventIng-item {
     width: calc(50% - 10px);
   }
@@ -8630,7 +8635,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-E01-02-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-E01-02-page {
     padding-bottom: 48rem;
   }
@@ -8648,7 +8653,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-E01-03-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-E01-03-page {
     padding-bottom: 48rem;
   }
@@ -9201,7 +9206,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-E02-01-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-E02-01-page {
     padding-bottom: 48rem;
   }
@@ -9266,7 +9271,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G01-01-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G01-01-page {
     padding-bottom: 48rem;
   }
@@ -9285,7 +9290,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: block;
   margin: 20rem auto;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G01-01-page .intro-sec .data-view p {
     font-size: 16rem;
     line-height: 24rem;
@@ -9305,7 +9310,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G02-01-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G02-01-page {
     padding-bottom: 48rem;
   }
@@ -9335,7 +9340,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G02-01-page .howto-sec .howto-list-wrap .howto-list .howto-item {
   width: 100%;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G02-01-page .howto-sec .howto-list-wrap .howto-list .howto-item {
     width: calc(50% - 10px);
   }
@@ -9374,7 +9379,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G02-01-page .howto-sec .howto-list-wrap .howto-card .card-cont p .is-keyword {
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G02-01-page .howto-sec .howto-list-wrap .howto-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -9450,7 +9455,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-G03-01-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G03-01-page {
     padding-bottom: 48rem;
   }
@@ -9518,13 +9523,13 @@ body.is-scroll-first .floating-menu .btn-top {
   content: "";
   display: block;
   height: 8rem;
-  margin: 20rem calc(16rem * -1);
+  margin: 20rem calc(20rem * -1);
   background-color: #F5F5F5;
 }
 .F-G03-01-page .faq-sec .keyword-swiper .swiper-wrapper .swiper-slide {
   width: auto;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G03-01-page .faq-sec .keyword-swiper {
     margin-top: 30rem;
     overflow: hidden;
@@ -9668,7 +9673,7 @@ body.is-scroll-first .floating-menu .btn-top {
   left: 0;
   top: 0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-G03-01-page .faq-sec .faq-accordion-wrap .faq-accordion {
     margin: 0;
   }
@@ -9758,7 +9763,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 20rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-HP01-01-page {
     padding-bottom: 48rem;
   }
@@ -9927,7 +9932,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-HP02-01-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-HP02-01-page {
     padding-bottom: 48rem;
   }
@@ -9937,7 +9942,7 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-bottom: 48rem;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-HP02-01-page {
     padding-top: 60rem;
   }
@@ -9950,8 +9955,8 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-HP02-01-page .hp-detail-sec .hp-detail-view {
   display: flex;
   justify-content: center;
-  margin-left: calc(16rem * -1);
-  margin-right: calc(16rem * -1);
+  margin-left: calc(20rem * -1);
+  margin-right: calc(20rem * -1);
   padding: 45rem 0;
   background-color: #EFF0F0;
 }
@@ -9992,7 +9997,7 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   gap: 4rem;
   overflow-x: auto;
-  margin-right: calc(16rem);
+  margin-right: calc(20rem);
 }
 .F-HP02-01-page .hp-detail-sec .hp-detail-cont .detail-color .rdo-color {
   position: relative;
@@ -10137,7 +10142,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-HP02-01-page .hp-detail-sec .hp-detail-cont .detail-gift p .ui-icn {
   margin-right: 4rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-HP02-01-page .hp-detail-sec .hp-detail-view {
     margin-left: 0;
     margin-right: 0;
@@ -10195,7 +10200,7 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 20rem;
   color: #828588;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-HP02-01-page .hp-floating-sec {
     margin-bottom: calc(48rem * -1);
   }
@@ -10332,7 +10337,7 @@ body.is-scroll-first .floating-menu .btn-top {
   --sec-outer-margin: 50rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-I01-01-page {
     padding-bottom: 48rem;
   }
@@ -10433,7 +10438,7 @@ body.is-scroll-first .floating-menu .btn-top {
     gap: 20rem;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-I01-01-page .telecom-choice-sec .telecom-list {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 8rem;
@@ -10549,7 +10554,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I01-01-page .product-choice-sec .choice-swiper { /* 2024-12-23 조찬기 상품 Swiper 적용 및 list 수정 */
   overflow: visible;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-I01-01-page .product-choice-sec .choice-swiper {
     overflow: hidden;
   }
@@ -10702,7 +10707,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I01-01-page .internet-choice-sec .choice-swiper { /* 2024-12-23 조찬기 인터넷 Swiper 적용 및 list 수정 */
   overflow: visible;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-I01-01-page .internet-choice-sec .choice-swiper {
     overflow: hidden;
   }
@@ -10843,7 +10848,7 @@ body.is-scroll-first .floating-menu .btn-top {
   overscroll-behavior: auto;
 }
 .F-I01-01-page .plan-view-sec .plan-table table {
-  width: 720rem;
+  width: 720px;
   table-layout: fixed;
   border-collapse: collapse;
   border-spacing: 0;
@@ -11064,7 +11069,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I01-01-page .payment-noti-sec .payment-noti .payment-btn {
   margin-top: 20rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-I01-01-page .payment-noti-sec {
     border-top: 1px solid #EFF0F0;
     box-shadow: none;
@@ -11251,14 +11256,38 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I02-01-page {
   --sec-outer-margin: 50rem;
 }
-.F-I02-01-page .rending-main-sec {
+.F-I02-01-page .lending-main-sec {
   padding-left: 0;
   padding-right: 0;
 }
-.F-I02-01-page .rending-main-sec .sec-inner {
+.F-I02-01-page .lending-main-sec .sec-inner {
   position: relative;
 }
-.F-I02-01-page .rending-main-sec .rending-desc {
+.F-I02-01-page .lending-main-sec .lending-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 60rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  transition: padding 0.2s ease;
+}
+@media all and (min-width: 720px) {
+  .F-I02-01-page .lending-main-sec .lending-logo {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-I02-01-page .lending-main-sec .lending-logo {
+    padding-left: 23rem;
+    padding-right: 23rem;
+  }
+}
+.F-I02-01-page .lending-main-sec .lending-desc {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11268,52 +11297,52 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 22rem;
   text-align: center;
 }
-.F-I02-01-page .rending-main-sec .rending-desc strong {
+.F-I02-01-page .lending-main-sec .lending-desc strong {
   font-weight: 600;
 }
-.F-I02-01-page .rending-main-sec .rending-consult {
+.F-I02-01-page .lending-main-sec .lending-consult {
   position: relative;
 }
-.F-I02-01-page .rending-main-sec .rending-form {
+.F-I02-01-page .lending-main-sec .lending-form {
   padding-top: 24rem;
   padding-bottom: 24rem;
   background-color: #F4F5F8;
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
 }
-@media all and (min-width: 768px) {
-  .F-I02-01-page .rending-main-sec .rending-form {
+@media all and (min-width: 720px) {
+  .F-I02-01-page .lending-main-sec .lending-form {
     padding-left: 23rem;
     padding-right: 23rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-I02-01-page .rending-main-sec .rending-form {
+  .F-I02-01-page .lending-main-sec .lending-form {
     padding-left: 23rem;
     padding-right: 23rem;
   }
 }
-.F-I02-01-page .rending-main-sec .rending-form .ui-inp-group {
+.F-I02-01-page .lending-main-sec .lending-form .ui-inp-group {
   display: flex;
   flex-direction: column;
   gap: 8rem;
 }
-.F-I02-01-page .rending-main-sec .rending-form .ui-inp-group .ui-inp {
+.F-I02-01-page .lending-main-sec .lending-form .ui-inp-group .ui-inp {
   width: 100%;
 }
-.F-I02-01-page .rending-main-sec .rending-form .ui-chk-group {
+.F-I02-01-page .lending-main-sec .lending-form .ui-chk-group {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 6rem;
   margin-top: 20rem;
 }
-.F-I02-01-page .rending-main-sec .rending-form .ui-chk-group .ui-chk {
+.F-I02-01-page .lending-main-sec .lending-form .ui-chk-group .ui-chk {
   width: 100%;
 }
-.F-I02-01-page .rending-main-sec .rending-form .ui-chk-group .ui-btn.open-modal {
+.F-I02-01-page .lending-main-sec .lending-form .ui-chk-group .ui-btn.open-modal {
   position: absolute;
   left: 28rem;
   right: 20%;
@@ -11322,10 +11351,10 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 28rem;
   background-color: transparent;
 }
-.F-I02-01-page .rending-main-sec .rending-form .ui-btn-group {
+.F-I02-01-page .lending-main-sec .lending-form .ui-btn-group {
   margin-top: 20rem;
 }
-.F-I02-01-page .rending-main-sec .rending-form .secret-desc {
+.F-I02-01-page .lending-main-sec .lending-form .secret-desc {
   margin-top: 30rem;
   font-weight: 400;
   font-size: 12rem;
@@ -11333,27 +11362,27 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #828588;
   word-break: keep-all;
 }
-.F-I02-01-page .rending-main-sec.mint .sec-inner {
+.F-I02-01-page .lending-main-sec.mint .sec-inner {
   background-color: #D0F2F2;
 }
-.F-I02-01-page .rending-main-sec.mint .rending-desc {
+.F-I02-01-page .lending-main-sec.mint .lending-desc {
   background-color: #BADEDE;
 }
-.F-I02-01-page .rending-main-sec.purple .sec-inner {
+.F-I02-01-page .lending-main-sec.purple .sec-inner {
   background-color: #542FDD;
 }
-.F-I02-01-page .rending-main-sec.purple .rending-desc {
+.F-I02-01-page .lending-main-sec.purple .lending-desc {
   background-color: #DCD5FB;
 }
-@media all and (min-width: 768px) {
-  .F-I02-01-page .rending-main-sec .sec-inner {
+@media all and (min-width: 720px) {
+  .F-I02-01-page .lending-main-sec.responsive .sec-inner {
     overflow: hidden;
     border-radius: 12rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-visual img {
+  .F-I02-01-page .lending-main-sec.responsive .lending-visual img {
     width: 50%;
   }
-  .F-I02-01-page .rending-main-sec .rending-consult {
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -11362,29 +11391,37 @@ body.is-scroll-first .floating-menu .btn-top {
     border-radius: 8rem;
     overflow: hidden;
   }
-  .F-I02-01-page .rending-main-sec .rending-consult .ui-inp .inp {
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp {
     height: 40rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-form {
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp::-moz-placeholder {
+    font-size: 13rem;
+  }
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp.is-placeholder, .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp::placeholder {
+    font-size: 13rem;
+  }
+  .F-I02-01-page .lending-main-sec.responsive .lending-form {
     padding: 20rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-form .ui-chk-group {
+  .F-I02-01-page .lending-main-sec.responsive .lending-form .ui-chk-group {
     gap: 0;
     margin-top: 12rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-form .ui-btn-group {
+  .F-I02-01-page .lending-main-sec.responsive .lending-form .ui-btn-group {
     margin-top: 12rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-I02-01-page .rending-main-sec .sec-inner {
+  .F-I02-01-page .lending-main-sec.responsive .sec-inner {
     overflow: hidden;
     border-radius: 12rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-visual img {
+  .F-I02-01-page .lending-main-sec.responsive .lending-visual img {
     width: 50%;
   }
-  .F-I02-01-page .rending-main-sec .rending-consult {
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -11393,17 +11430,25 @@ body.is-scroll-first .floating-menu .btn-top {
     border-radius: 8rem;
     overflow: hidden;
   }
-  .F-I02-01-page .rending-main-sec .rending-consult .ui-inp .inp {
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp {
     height: 40rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-form {
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp::-moz-placeholder {
+    font-size: 13rem;
+  }
+  .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp.is-placeholder, .F-I02-01-page .lending-main-sec.responsive .lending-consult .ui-inp .inp::placeholder {
+    font-size: 13rem;
+  }
+  .F-I02-01-page .lending-main-sec.responsive .lending-form {
     padding: 20rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-form .ui-chk-group {
+  .F-I02-01-page .lending-main-sec.responsive .lending-form .ui-chk-group {
     gap: 0;
     margin-top: 12rem;
   }
-  .F-I02-01-page .rending-main-sec .rending-form .ui-btn-group {
+  .F-I02-01-page .lending-main-sec.responsive .lending-form .ui-btn-group {
     margin-top: 12rem;
   }
 }
@@ -11682,8 +11727,8 @@ body.is-scroll-first .floating-menu .btn-top {
   position: relative;
 }
 .F-I02-01-page .benefit-sec .benefit-swiper .swiper {
-  margin: -20rem -16rem;
-  padding: 20rem 16rem;
+  margin: -20rem -20rem;
+  padding: 20rem 20rem;
 }
 .F-I02-01-page .benefit-sec .benefit-swiper .benefit-button-prev,
 .F-I02-01-page .benefit-sec .benefit-swiper .benefit-button-next {
@@ -11761,6 +11806,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I02-01-page .telecom-choice-sec .telecom-list .telecom-item {
   width: 18%;
   min-width: 72rem;
+  max-width: 100rem;
 }
 .F-I02-01-page .telecom-choice-sec .telecom-list .telecom-rdo {
   position: relative;
@@ -11815,8 +11861,8 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I02-01-page .telecom-choice-sec .product-wrap .product-swiper {
   box-sizing: border-box;
-  margin: -20rem -16rem;
-  padding: 20rem 16rem;
+  margin: -20rem -20rem;
+  padding: 20rem 20rem;
 }
 .F-I02-01-page .telecom-choice-sec .product-wrap .product-swiper .swiper-pagination {
   position: static;
@@ -12159,7 +12205,7 @@ body.is-scroll-first .floating-menu .btn-top {
   left: 0;
   top: 0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-I02-01-page .faq-sec .faq-accordion {
     margin: 0;
   }
@@ -12250,15 +12296,15 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #fff;
 }
 .F-M01-page .visual-sec .sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
   padding-top: var(--sec-inner-padding);
   background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
   background-color: #3C239A;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .visual-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -12342,7 +12388,7 @@ body.is-scroll-first .floating-menu .btn-top {
   text-fill-color: transparent;
   color: transparent;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .visual-sec {
     margin-top: calc(-1 * 80rem);
   }
@@ -12414,15 +12460,15 @@ body.is-scroll-first .floating-menu .btn-top {
   position: static;
 }
 .F-M01-page .deal-sec .sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
-  min-width: 320rem;
-  padding-left: 16rem;
-  padding-right: 16rem;
+  min-width: 320px;
+  padding-left: 20rem;
+  padding-right: 20rem;
   transition: padding 0.2s ease;
   background-color: #CDC2F5;
   padding-top: var(--sec-inner-padding);
   padding-bottom: var(--sec-inner-padding);
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .deal-sec .sec-outer {
     padding-left: 23rem;
     padding-right: 23rem;
@@ -12525,7 +12571,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .deal-sec .deal-swiper.no-scroll .swiper-slide {
   opacity: 1;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .deal-sec .deal-swiper {
     overflow: hidden;
   }
@@ -12815,7 +12861,7 @@ body.is-scroll-first .floating-menu .btn-top {
   grid-template-columns: 1fr;
   gap: 10rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .ratePlanA-sec .ratePlanA-list {
     display: flex;
     gap: 0;
@@ -12854,7 +12900,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .ratePlanA-sec .swiper-button-disabled {
   display: none;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .ratePlanA-sec .ratePlanA-button-prev,
   .F-M01-page .ratePlanA-sec .ratePlanA-button-next {
     display: block;
@@ -12915,7 +12961,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .ratePlanA-sec .ratePlanA-card .card-body .card-explain br {
   display: none;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .ratePlanA-sec .ratePlanA-card {
     height: 180rem;
   }
@@ -13169,7 +13215,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M01-page .review-sec .review-swiper .swiper-slide {
   width: 270rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .review-sec .review-swiper {
     overflow: hidden;
   }
@@ -13321,7 +13367,7 @@ body.is-scroll-first .floating-menu .btn-top {
   max-height: 32rem;
   max-width: 80rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-page .partner-sec .sec-inner {
     overflow: hidden;
   }
@@ -13356,7 +13402,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: transparent;
   padding-bottom: 0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M01-P02-page {
     border-radius: 20rem !important;
     overflow: hidden;
@@ -13411,7 +13457,7 @@ body.is-scroll-first .floating-menu .btn-top {
   --sec-outer-margin: 50rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M02-01-T01-page {
     padding-bottom: 48rem;
   }
@@ -13551,7 +13597,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M02-01-T01-page .ratePlanC-sec .sec-header .btn-more.static {
   position: static;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M02-01-T01-page .ratePlanC-sec {
     margin-top: 16rem;
     padding-top: 0;
@@ -14368,7 +14414,7 @@ body.is-scroll-first .floating-menu .btn-top {
   left: 0;
   top: 0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M02-01-T01-page .faq-sec .faq-accordion {
     margin: 0;
   }
@@ -14469,7 +14515,7 @@ body.is-scroll-first .floating-menu .btn-top {
   --sec-outer-margin: 50rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M03-page {
     padding-bottom: 48rem;
   }
@@ -15183,7 +15229,7 @@ body.is-scroll-first .floating-menu .btn-top {
   --sec-outer-margin: 50rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M04-page {
     padding-bottom: 48rem;
   }
@@ -15378,7 +15424,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M04-02-P01-page .review-sec .review-list .review-item {
   border-bottom: 1px solid #EFF0F0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M04-02-P01-page .review-sec .review-list {
     margin-left: 0;
     margin-right: 0;
@@ -15434,7 +15480,7 @@ body.is-scroll-first .floating-menu .btn-top {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M04-02-P01-page .review-sec .review-card {
     padding-left: 0;
     padding-right: 0;
@@ -15454,7 +15500,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-M05-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-M05-page {
     padding-bottom: 48rem;
   }
@@ -16077,7 +16123,7 @@ body.is-scroll-first .floating-menu .btn-top {
   --sec-outer-margin: 30rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-01-page {
     padding-bottom: 48rem;
   }
@@ -16475,7 +16521,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 8rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-02-page {
     padding-bottom: 48rem;
   }
@@ -16810,7 +16856,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-02-P01-page .review-sec .review-list .review-card .basic-frm .frm-alert.is-errored {
   color: #EA2A2A;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-02-P01-page .review-sec .sec-header br {
     display: none;
   }
@@ -16880,7 +16926,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-02-P02-page .recom-history-sec .recom-history-list .recom-history-item {
   width: 100%;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-02-P02-page .recom-history-sec .recom-history-list .recom-history-item {
     width: calc(50% - 6rem);
   }
@@ -17006,7 +17052,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-03-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-03-page {
     padding-bottom: 48rem;
   }
@@ -17595,7 +17641,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-03-page .ratePlanC-sec .nodata .nodata-tit + .nodata-txt {
   margin-top: 4rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-03-page .ratePlanC-sec .nodata {
     margin: 120px 0;
   }
@@ -17670,7 +17716,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-04-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-04-page {
     padding-bottom: 48rem;
   }
@@ -18259,7 +18305,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-04-page .ratePlanC-sec .nodata .nodata-tit + .nodata-txt {
   margin-top: 4rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-04-page .ratePlanC-sec .nodata {
     margin: 120px 0;
   }
@@ -18336,7 +18382,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 20rem; /* 1차 수정 : 제목 추가로 여백 적용 */
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-05-page {
     padding-bottom: 48rem;
   }
@@ -18631,7 +18677,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-MY01-05-page .ratePlanD-sec .nodata .nodata-tit + .nodata-txt {
   margin-top: 4rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY01-05-page .ratePlanD-sec .nodata {
     margin: 120px 0;
   }
@@ -18707,7 +18753,7 @@ body.is-scroll-first .floating-menu .btn-top {
   --sec-outer-margin: 30rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-MY02-01-page {
     padding-bottom: 48rem;
   }
@@ -19085,7 +19131,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 20rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-O01-page {
     padding-bottom: 48rem;
   }
@@ -19199,7 +19245,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-O01-page .review-sec .review-list .review-item {
   border-bottom: 1px solid #EFF0F0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-O01-page .review-sec .review-list {
     margin-left: 0;
     margin-right: 0;
@@ -19255,7 +19301,7 @@ body.is-scroll-first .floating-menu .btn-top {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-O01-page .review-sec .review-card {
     padding-left: 0;
     padding-right: 0;
@@ -19864,7 +19910,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 10rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-page {
     padding-bottom: 48rem;
   }
@@ -19892,10 +19938,10 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-P01-01-page .ratePlan-filter-sec .ratePlan-search {
   background-color: #F2F5FB;
-  margin: 0 calc(16rem * -1);
-  padding: 20rem 16rem;
+  margin: 0 calc(20rem * -1);
+  padding: 20rem 20rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-page .ratePlan-filter-sec .ratePlan-search {
     margin: 0;
   }
@@ -19954,8 +20000,8 @@ body.is-scroll-first .floating-menu .btn-top {
   display: flex;
   gap: 8rem;
   overflow: auto;
-  margin: 0 calc(16rem * -1);
-  padding: 0 16rem;
+  margin: 0 calc(20rem * -1);
+  padding: 0 20rem;
 }
 .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-cont .ratePlan-chip-list::-webkit-scrollbar {
   height: 0;
@@ -19987,7 +20033,7 @@ body.is-scroll-first .floating-menu .btn-top {
   border-color: #542FDD;
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-page .ratePlan-filter-sec .ratePlan-search .ratePlan-search-cont .ratePlan-chip-list {
     margin: 0;
     padding: 0;
@@ -20063,7 +20109,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P01-01-page .ratePlanC-sec .sec-header .btn-more.static {
   position: static;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-page .ratePlanC-sec {
     padding-top: 0;
     border-top: 0;
@@ -20731,7 +20777,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P01-01-srch-page {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-srch-page {
     padding-bottom: 48rem;
   }
@@ -20764,7 +20810,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P01-01-srch-page .ratePlan-search-sec {
   padding-top: 20rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-srch-page .ratePlan-search-sec .ratePlan-search {
     margin: 0;
   }
@@ -20840,7 +20886,7 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 20rem;
   color: #36383A;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-srch-page .ratePlan-search-sec .ratePlan-search .ratePlan-search-cont .ratePlan-keyword-list {
     flex-wrap: wrap;
     overflow: hidden;
@@ -20886,7 +20932,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #EAE6FB;
   color: #542FDD;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P01-01-srch-page .ratePlan-search-sec .ratePlan-search .ratePlan-search-cont .ratePlan-chip-list {
     margin: 0;
     padding: 0;
@@ -20975,7 +21021,7 @@ body.is-scroll-first .floating-menu .btn-top {
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 .F-P01-01-P01-page {
-  max-width: 720rem !important;
+  max-width: 720px !important;
 }
 .F-P01-01-P01-page .modal-body {
   overflow: hidden;
@@ -21400,7 +21446,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-P03-page .usimBuy-store-sec .usim-store-card .card-info .ui-btn {
   margin-left: 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-P03-page .usimBuy-store-sec .usim-store-card .card-title .title br {
     display: none;
   }
@@ -21577,7 +21623,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-P04-page .usimBuy-store-sec .usim-store-card .card-info .ui-btn {
   margin-left: 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-P04-page .usimBuy-store-sec .usim-store-card .card-title .title br {
     display: none;
   }
@@ -21754,7 +21800,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-P05-page .usimBuy-store-sec .usim-store-card .card-info .ui-btn {
   margin-left: 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-P05-page .usimBuy-store-sec .usim-store-card .card-title .title br {
     display: none;
   }
@@ -21931,7 +21977,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-P06-page .usimBuy-store-sec .usim-store-card .card-info .ui-btn {
   margin-left: 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-P06-page .usimBuy-store-sec .usim-store-card .card-title .title br {
     display: none;
   }
@@ -21959,7 +22005,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .tab-content {
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-page .tab-content {
     padding-bottom: 48rem;
   }
@@ -23038,7 +23084,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 16rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-page .ratePlan-detail-sec .ratePlan-detail-acco {
     margin-left: 0;
     margin-right: 0;
@@ -23136,7 +23182,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .review-sec .review-user-sat .review-list .review-item {
   border-bottom: 1px solid #EFF0F0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-page .review-sec .review-user-sat .review-list {
     margin-left: 0;
     margin-right: 0;
@@ -23192,7 +23238,7 @@ body.is-scroll-first .floating-menu .btn-top {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-page .review-sec .review-user-sat .review-card {
     padding-left: 0;
     padding-right: 0;
@@ -23352,7 +23398,7 @@ body.is-scroll-first .floating-menu .btn-top {
   left: 0;
   top: 0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-page .faq-sec .faq-accordion {
     margin: 0;
   }
@@ -23492,7 +23538,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-P02-01-page .similar-plan-sec .similar-plan-swiper .swiper-wrapper .swiper-slide {
   width: 240rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-page .similar-plan-sec .similar-plan-swiper .swiper-wrapper .swiper-slide {
     width: 233rem;
   }
@@ -23674,7 +23720,7 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 20rem;
   color: #828588;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-P02-01-page .payment-noti-sec {
     border-top: 1px solid #EFF0F0;
     box-shadow: none;
@@ -23918,7 +23964,7 @@ body.is-scroll-first .floating-menu .btn-top {
   padding-top: 56rem;
   padding-bottom: 32rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-SC02-page.content {
     padding-bottom: 48rem;
   }
@@ -24862,7 +24908,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-SL-01-page .ratePlanC-sec .sec-header .btn-more.static {
   position: static;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .F-SL-01-page .ratePlanC-sec {
     margin-top: 16rem;
     padding-top: 0;
@@ -25463,7 +25509,7 @@ body.is-scroll-first .floating-menu .btn-top {
   word-break: keep-all;
   max-width: 1200rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .terms-content {
     padding-bottom: 48rem;
   }
@@ -25490,7 +25536,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .terms-content .terms-title .ui-sel {
   margin-top: 8rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 720px) {
   .terms-content .terms-title {
     align-items: center;
   }

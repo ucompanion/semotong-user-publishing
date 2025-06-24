@@ -686,19 +686,9 @@ body.is-scroll-first {
 	}
 }
 
-// Rending Wrapper
-.rending-wrapper {
+// lending Wrapper
+.lending-wrapper {
 	padding-top: 0;
-
-	.header-mobile {
-		position: absolute;
-		background-color: transparent;
-
-		.header-sec .title .logo {
-			background: url("../images/common/img-logo-header-bk.svg") no-repeat center center/contain;
-			mask: none;
-		}
-	}
 }
 
 @include media-min-width(550px) {
@@ -716,6 +706,9 @@ body.is-scroll-first {
 			.header-mobile {
 				position: relative;
 			}
+		}
+		&.lending-wrapper {
+			padding-top: 0;
 		}
 	}
 	.footer {

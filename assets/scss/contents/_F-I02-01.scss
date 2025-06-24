@@ -9,7 +9,7 @@
 	--sec-outer-margin: 50rem;
 
 	// 랜딩대표영역
-	.rending-main-sec {
+	.lending-main-sec {
 		padding-left: 0;
 		padding-right: 0;
 
@@ -17,7 +17,17 @@
 			position: relative;
 		}
 
-		.rending-desc {
+		.lending-logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			height: $mobile-height-header;
+			@include out-sec;
+		}
+
+		.lending-desc {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -32,11 +42,11 @@
 			}
 		}
 
-		.rending-consult {
+		.lending-consult {
 			position: relative;
 		}
 
-		.rending-form {
+		.lending-form {
 			padding-top: 24rem;
 			padding-bottom: 24rem;
 			background-color: #F4F5F8;
@@ -93,7 +103,7 @@
 			.sec-inner {
 				background-color: #D0F2F2;
 			}
-			.rending-desc {
+			.lending-desc {
 				background-color: #BADEDE;
 			}
 		}
@@ -101,46 +111,54 @@
 			.sec-inner {
 				background-color: #542FDD;
 			}
-			.rending-desc {
+			.lending-desc {
 				background-color: #DCD5FB;
 			}
 		}
 
 
 		@include media-tablet-xs {
-			.sec-inner {
-				overflow: hidden;
-				border-radius: 12rem;
-			}
-
-			.rending-visual {
-				img {
-					width: 50%;
+			&.responsive {
+				.sec-inner {
+					overflow: hidden;
+					border-radius: 12rem;
 				}
-			}
 
-			.rending-consult {
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translateY(-50%);
-				width: calc(50% - 40rem);
-				border-radius: 8rem;
-				overflow: hidden;
-
-				.ui-inp .inp {
-					height: 40rem;
+				.lending-visual {
+					img {
+						width: 50%;
+					}
 				}
-			}
 
-			.rending-form {
-				padding: 20rem;
-				.ui-chk-group {
-					gap: 0;
-					margin-top: 12rem;
+				.lending-consult {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: calc(50% - 40rem);
+					border-radius: 8rem;
+					overflow: hidden;
+
+					.ui-inp .inp {
+						height: 40rem;
+						padding-top: 5rem;
+						padding-bottom: 5rem;
+						&.is-placeholder,
+						&::placeholder {
+							font-size: 13rem;
+						}
+					}
 				}
-				.ui-btn-group {
-					margin-top: 12rem;
+
+				.lending-form {
+					padding: 20rem;
+					.ui-chk-group {
+						gap: 0;
+						margin-top: 12rem;
+					}
+					.ui-btn-group {
+						margin-top: 12rem;
+					}
 				}
 			}
 		}
@@ -256,6 +274,7 @@
 			.telecom-item {
 				width: 18%;
 				min-width: 72rem;
+				max-width: 100rem;
 			}
 
 			.telecom-rdo {

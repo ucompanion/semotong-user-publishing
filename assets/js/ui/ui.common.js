@@ -217,27 +217,6 @@ function setPopover(selector){
 }
 
 // Select Valued
-function setSelected(option) {
-    // 이미 선택된 항목인 경우: 초기화 처리
-    if (option.classList.contains('is-selected')) {
-		// 모든 옵션에서 선택 클래스 제거
-		Array.from(option.parentNode.children).forEach(sibling => {
-			sibling.classList.remove('is-selected');
-		});
-    } else {
-        // 새로 선택된 항목 처리
-        option.classList.add('is-selected');
-
-		// 다른 형제 요소에서 is-selected 클래스 제거
-        Array.from(option.parentNode.children).forEach(sibling => {
-            if (sibling !== option) {
-                sibling.classList.remove('is-selected');
-            }
-        });
-    }
-}
-
-// Select Valued
 function setSelectValued(buttonId, option, selected) {
     var button = document.querySelector(buttonId);
     var buttonSpan = document.querySelector(buttonId + ' > span');
@@ -345,4 +324,10 @@ function setRegularNumber(input){
 // NavigateTo
 function navigateTo(url) {
 	window.location.href = url;
+}
+
+// Only Number
+function onlyNumber(el, maxLength = null) {
+	let val = el.value.replace(/[^0-9]/g, '');
+	el.value = maxLength ? val.slice(0, maxLength) : val;
 }

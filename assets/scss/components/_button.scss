@@ -211,7 +211,16 @@
 	font-size: 14rem;
 	line-height: 20rem;
 	color: #63666A;
-	text-decoration: underline;
-	text-underline-position: under;
+	&::before {
+		content:'';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 2rem;
+		width: 100%;
+		height: 1px;
+		background-color: #63666A;
+	}
+
 }
 // e: 버튼 텍스트

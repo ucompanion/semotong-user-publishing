@@ -49,13 +49,40 @@
 			const myPopover = new bootstrap.Popover(document.getElementById('SecretPopover'), {
 				customClass: 'ui-popover popover-style1 popover-auto type-secretBtn',
 				trigger: 'manual',  // 자동 트리거 제거
-				container: '.rending-consult',  // body에 위치
+				container: '.lending-consult',  // body에 위치
 				placement: 'bottom',
 				autoPlacement: false,
 				html: true
 			});
 			myPopover.show(); // 페이지 로드시 바로 표시
 		})
+
+		// 희망하는 상담시간 체크 설정
+		function setSelected(option, checkId) {
+			const siblings = Array.from(option.parentNode.children);
+			const checkbox = document.getElementById(checkId);
+
+			if (option.classList.contains('is-selected')) {
+				// 이미 선택된 항목이면 해제
+				siblings.forEach(sibling => sibling.classList.remove('is-selected'));
+			} else {
+				// 새 항목 선택
+				option.classList.add('is-selected');
+
+				// 다른 항목은 선택 해제
+				siblings.forEach(sibling => {
+				if (sibling !== option) {
+					sibling.classList.remove('is-selected');
+				}
+				});
+			}
+
+			// 현재 is-selected가 살아있는 항목이 있는지 검사
+			const anySelected = siblings.some(el => el.classList.contains('is-selected'));
+
+			// 체크박스 상태 반영
+			checkbox.checked = anySelected;
+		}
 	</script>
 </head>
 
@@ -156,22 +183,23 @@
 			<!-- content -->
 			<div class="content F-I02-01-page">
 				<!-- 랜딩비주얼 영역 -->
-				<section class="rending-main-sec purple">
+				<!-- 상품페이지만 반응형 조건 추가 responsive -->
+				<section class="lending-main-sec responsive purple">
 					<div class="sec-inner">
-						<div class="rending-visual">
+						<div class="lending-visual">
 							<img src="../../assets/images/contents/img-benefit-02.jpg" alt="" />
 						</div>
-						<div class="rending-consult">
-							<div class="rending-desc">
+						<div class="lending-consult">
+							<div class="lending-desc">
 								<p>가입 의무 없이! <strong>상담만 받아도 OK!</strong></p>
 							</div>
-							<div class="rending-form">
+							<div class="lending-form">
 								<div class="ui-inp-group">
 									<div class="ui-inp">
 										<input type="text" name="" id="" value="" placeholder="이름을 입력해주세요." title="" class="inp h-48" />
 									</div>
 									<div class="ui-inp">
-										<input type="text" name="" id="" value="" placeholder="전화번호를 입력해주세요 (‘-’없이 숫자만 입력)" title="" class="inp" />
+										<input type="tel" name="" id="" value="" placeholder="전화번호를 입력해주세요 (‘-’없이 숫자만 입력)" title="" class="inp" oninput="onlyNumber(this)"/>
 									</div>
 								</div>
 
@@ -471,7 +499,7 @@
 								</div>
 
 								<div class="benefit-more">
-									<button type="button" class="ui-btn btn-sub xl">
+									<button type="button" class="ui-btn btn-sub xl" data-bs-toggle="modal" data-bs-target="#consultModal">
 										<span>최대 혜택 받는 법 바로 확인하기</span>
 										<i class="ui-icn icn-16-more-pr" aria-label="true"></i>
 									</button>
@@ -692,7 +720,7 @@
 														<p class="original">월 42,900원</p>
 													</div>
 													<div class="product-action">
-														<button type="button" class="ui-btn btn-sub xl top-arw">
+														<button type="button" class="ui-btn btn-sub xl top-arw" data-bs-toggle="modal" data-bs-target="#consultModal02">
 															<span>최저가 상담 받기</span>
 															<i class="ui-icn icn-16-more-pr" aria-hidden="true"></i>
 														</button>
@@ -731,7 +759,7 @@
 														<p class="original">월 48,400원</p>
 													</div>
 													<div class="product-action">
-														<button type="button" class="ui-btn btn-sub xl top-arw">
+														<button type="button" class="ui-btn btn-sub xl top-arw" data-bs-toggle="modal" data-bs-target="#consultModal02">
 															<span>최저가 상담 받기</span>
 															<i class="ui-icn icn-16-more-pr" aria-hidden="true"></i>
 														</button>
@@ -762,7 +790,7 @@
 														<p class="original">월 16,500원</p>
 													</div>
 													<div class="product-action">
-														<button type="button" class="ui-btn btn-sub xl top-arw">
+														<button type="button" class="ui-btn btn-sub xl top-arw" data-bs-toggle="modal" data-bs-target="#consultModal02">
 															<span>최저가 상담 받기</span>
 															<i class="ui-icn icn-16-more-pr" aria-hidden="true"></i>
 														</button>
@@ -830,7 +858,7 @@
 										<button class="acco-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccordion1"
 											aria-expanded="true" aria-controls="faqAccordion1">
 											<strong class="part">가입문의</strong>
-											<span>쓰던 번호 그대로 알뜰폰 가입할 수 있나요? 어떻게 그럴수 있죠?</span>
+											<span>통신사 직접 가입과 세모통 가입의 차이는 무엇인가요?</span>
 											<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
 										</button>
 									</h3>
@@ -961,9 +989,9 @@
 							<ul class="select-listbox" role="listbox">
 								<!-- setSelectValued 는 퍼블 확인용입니다. -->
 								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this)">언제든 가능해요.</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this)">오전에 전화주세요. (9~12시)</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this)">오후에 전화주세요. (14~18시)</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this, 'secretFormCheck3')">언제든 가능해요.</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this, 'secretFormCheck3')">오전에 전화주세요. (9~12시)</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this, 'secretFormCheck3')">오후에 전화주세요. (14~18시)</li>
 							</ul>
 						</div>
 					</section>
@@ -973,6 +1001,74 @@
 		</div>
 	</div>
 	<!-- // 희망하는 상담시간 선택모달 -->
+
+	<!-- 최대 혜택 받는 범 확인하기 modal basic -->
+	<div class="modal modal-basic fade" id="consultModal" tabindex="-1" role="dialog" aria-labelledby="consultModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-I01-01-P01-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="consultModalLabel">얼마나 받을 수 있는지 궁금하신가요?</h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 상담신청 섹션 -->
+					<section class="consult-frm-sec">
+						<div class="sec-inner">
+							<div class="consult-msg">
+								<i class="ui-icn icn-14-noti-gr" aria-hidden="true"></i>
+								<p>혜택을 최대로 받을 수 있도록 <br>전문 상담원이 도와드릴게요.</p>
+							</div>
+
+							<!-- 등록폼 -->
+							<div class="consult-frm">
+								<!-- 이름 입력 -->
+								<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label class="tit" for="frmName">이름</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-inp">
+											<input type="text" name="" id="frmName" value="" placeholder="이름을 입력해 주세요." title="" class="inp" />
+										</div>
+									</div>
+								</div>
+								<!-- // 이름 입력 -->
+
+								<!-- 전화번호 입력 -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label for="frmTitle" class="tit">전화번호</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-inp">
+											<input type="tel" name="" id="frmTitle" value="" placeholder="전화번호를 입력해 주세요." title="" class="inp" oninput="setRegularNumber(this)"/>
+										</div>
+									</div>
+								</div>
+								<!-- // 전화번호 입력 -->
+							</div>
+							<!-- // 등록폼 -->
+
+							<div class="consult-links">
+								<button type="button" class="ui-btn btn-texted"><span>개인정보 수집 이용</span></button>
+								<button type="button" class="ui-btn btn-texted"><span>개인정보 제3자 제공</span></button>
+							</div>
+						</div>
+					</section>
+					<!-- // 상담신청 섹션 -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-action primary">
+						<span>상담 신청하기</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 최대 혜택 받는 범 확인하기 modal basic -->
 
 	<!-- 나의 최적 상품 확인하기 modal basic -->
 	<div class="modal modal-basic fade" id="consultModal01" tabindex="-1" role="dialog" aria-labelledby="consultModal01Label" aria-hidden="true">

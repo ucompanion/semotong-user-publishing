@@ -22,17 +22,18 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@7.0.0/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
-			// 상품 스와이프
-		    var productChoiceSwiper = new Swiper("#productSwiper", {
+			// 혜택 슬라이드
+			var benefitSwiper = new Swiper(".benefit-swiper .swiper", {
 				threshold: 3,
 				slidesPerView: 'auto',
-				spaceBetween: 12,
-				// 4차 수정 : 상풍 스와이프 버튼 옵션 추가
+				spaceBetween: 30,
+				autoHeight: true,
+				// 8차 수정 : 추천딜 스와이프 버튼 옵션 추가
 				navigation: {
-					nextEl: ".product-choice-sec .choice-button-next",
-					prevEl: ".product-choice-sec .choice-button-prev",
+					nextEl: ".benefit-swiper .benefit-button-next",
+					prevEl: ".benefit-swiper .benefit-button-prev",
 				}
-			});
+			})
 
 			// Bootstrap Popover Custom
 			const myPopover = new bootstrap.Popover(document.getElementById('SecretPopover'), {
@@ -43,6 +44,33 @@
 			});
 			myPopover.show(); // 페이지 로드시 바로 표시
 		})
+
+		// 희망하는 상담시간 체크 설정
+		function setSelected(option, checkId) {
+			const siblings = Array.from(option.parentNode.children);
+			const checkbox = document.getElementById(checkId);
+
+			if (option.classList.contains('is-selected')) {
+				// 이미 선택된 항목이면 해제
+				siblings.forEach(sibling => sibling.classList.remove('is-selected'));
+			} else {
+				// 새 항목 선택
+				option.classList.add('is-selected');
+
+				// 다른 항목은 선택 해제
+				siblings.forEach(sibling => {
+				if (sibling !== option) {
+					sibling.classList.remove('is-selected');
+				}
+				});
+			}
+
+			// 현재 is-selected가 살아있는 항목이 있는지 검사
+			const anySelected = siblings.some(el => el.classList.contains('is-selected'));
+
+			// 체크박스 상태 반영
+			checkbox.checked = anySelected;
+		}
 	</script>
 </head>
 
@@ -52,106 +80,31 @@
 		서브: sub-wrapper,
 		기타: [기타]-wrapper
 	 -->
-	<div class="wrapper rending-wrapper">
-		<!-- Header Deaktop -->
-		<header class="header-desktop">
-			<div class="header-skip">
-				<a href="#content">본문 바로가기</a>
-			</div>
-
-			<div class="header-sec">
-				<h1 class="title">
-					<!-- 로고 베타 추가 -->
-					<a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a>
-					<!-- <span class="logo-beta"><img src="../../assets/images/common/img-logo-header-beta.png" alt=""></span> -->
-				</h1>
-				<nav class="header-nav">
-					<ul class="nav-list">
-						<li class="nav-item">
-							<!-- 선택된 상태 : is-selected -->
-							<a href="../F-G/F-G01-01.html" role="link" class="ui-btn nav-link">
-								<span>세모통 설명서</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<div class="ui-dropdown">
-								<a href="../scenario/F-P01-01.html" role="link" class="ui-btn nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-									<span>요금제 찾기</span>
-								</a>
-								<div class="dropdown-menu">
-									<ul class="sub-nav">
-										<li class="sub-nav-item">
-											<a href="../scenario/F-P01-01.html" role="link" class="ui-btn sub-nav-link">
-												<span>알뜰요금제</span>
-											</a>
-										</li>
-										<li class="sub-nav-item">
-											<a href="../scenario/F-P01-01.html" role="link" class="ui-btn sub-nav-link">
-												<i class="ui-icn icn-h20-sk" aria-label="SKT"></i>
-												<i class="ui-icn icn-h20-kt" aria-label="KT"></i>
-												<i class="ui-icn icn-h20-lgu-02" aria-label="U+"></i>
-												요금제
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a href="../F-I/F-I01-01.html" role="link" class="ui-btn nav-link">
-								<span>인터넷</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="../F-E/F-E01-01.html" role="link" class="ui-btn nav-link">
-								<span>이벤트</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="../F-MY/F-MY01-01.html" role="link" class="ui-btn nav-link">
-								<span>마이페이지</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<!-- // Header Deaktop -->
-
-		<!-- Header Mobile -->
-		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
-		<header class="header-mobile only-mo">
-			<section class="header-sec">
-				<h1 class="title">
-					<!-- 로고 베타 추가 -->
-					<a href="../scenario/F-M01-01.html" class="logo"><span class="blind">세모통</span></a>
-				</h1>
-			</section>
-			<!-- // Mobile Header -->
-		</header>
-		<!-- // Header -->
-
+	<div class="wrapper lending-wrapper">
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
 			<div class="content F-I02-01-page">
 				<!-- 랜딩비주얼 영역 -->
-				<section class="rending-main-sec mint">
+				<section class="lending-main-sec mint">
 					<div class="sec-inner">
-						<div class="rending-visual">
+						<div class="lending-logo">
+							<img src="../../assets/images/common/img-logo-header-bk.svg" alt="세모통" />
+						</div>
+						<div class="lending-visual">
 							<img src="../../assets/images/contents/img-benefit-01.jpg" alt="" />
 						</div>
-						<div class="rending-consult">
-							<div class="rending-desc">
+						<div class="lending-consult">
+							<div class="lending-desc">
 								<p>가입 의무 없이! <strong>상담만 받아도 OK!</strong></p>
 							</div>
-							<div class="rending-form">
+							<div class="lending-form">
 								<div class="ui-inp-group">
 									<div class="ui-inp">
 										<input type="text" name="" id="" value="" placeholder="이름을 입력해주세요." title="" class="inp" />
 									</div>
 									<div class="ui-inp">
-										<input type="text" name="" id="" value="" placeholder="전화번호를 입력해주세요 (‘-’없이 숫자만 입력)" title="" class="inp" />
+										<input type="tel" name="" id="" value="" placeholder="전화번호를 입력해주세요 (‘-’없이 숫자만 입력)" title="" class="inp" oninput="onlyNumber(this)" />
 									</div>
 								</div>
 
@@ -234,6 +187,7 @@
 							<h2 class="sec-tit">결합 시 <em>최대 125만원</em> 혜택에 <br>OTT 및 무료 콘텐츠까지!</h2>
 						</div>
 						<div class="sec-body">
+							<!-- 혜택1 -->
 							<div class="benefit-group">
 								<h2 class="sec-stit">
 									<span class="label">혜택 1</span>
@@ -283,72 +237,180 @@
 									</li>
 								</ul>
 							</div>
+							<!-- //혜택1 -->
 
+							<!-- 혜택2 -->
 							<div class="benefit-group">
-								<h2 class="sec-stit">
-									<span class="label">혜택 2</span>
-									<span class="stit">세모통 KT 유심 요금제 결합하면</span>
-								</h2>
-								<ul class="benefit-card-list">
-									<li class="benefit-card-item">
-										<div class="benefit-card only-semotong">
-											<div class="benefit-badge">
-												<img src="../../assets/images/common/badge-card-semotong.svg" alt="">
+								<div class="benefit-swiper">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<!-- 혜택2: KT -->
+											<div class="swiper-slide">
+												<h2 class="sec-stit">
+													<span class="label">혜택 2</span>
+													<span class="stit">세모통 KT 유심 요금제 결합하면</span>
+												</h2>
+												<ul class="benefit-card-list">
+													<li class="benefit-card-item">
+														<div class="benefit-card only-semotong">
+															<div class="benefit-badge">
+																<img src="../../assets/images/common/badge-card-semotong.svg" alt="">
+															</div>
+															<div class="benefit-header">
+																<div class="benefit-title">
+																	<p class="stit-gr">현금처럼 바로 쓰는 혜택</p>
+																	<p class="title-16">Npay 포인트+상품권 <br>최대 <em>39만원</em></p>
+																</div>
+																<div class="benefit-img">
+																	<img src="../../assets/images/contents/img-internet-04.png" alt="" />
+																</div>
+															</div>
+															<div class="benefit-body">
+																<p class="desc">※ 가입 축하금 31만원, 중고폰 보상 5만원 , 스타벅스 3만원권</p>
+															</div>
+														</div>
+													</li>
+													<li class="benefit-card-item">
+														<div class="benefit-card">
+															<div class="benefit-header">
+																<div class="benefit-title">
+																	<p class="stit-gr">OTT 및 콘텐츠 혜택</p>
+																	<p class="title-16">인기 <em>OTT 2종 및</em> <br><em>콘텐츠 1종 2년 무료</em></p>
+																</div>
+																<div class="benefit-img">
+																	<img src="../../assets/images/contents/img-internet-05.png" alt="" />
+																</div>
+															</div>
+															<div class="benefit-body">
+																<p class="desc">※ OTT 2종 및 콘텐츠 1종 무료, 24개월 간 제공</p>
+															</div>
+														</div>
+													</li>
+													<li class="benefit-card-item">
+														<div class="benefit-card">
+															<div class="benefit-header">
+																<div class="benefit-title">
+																	<p class="stit-gr">무료 구독 혜택</p>
+																	<p class="title-16">밀리의 서재 <br><em>매월 구독권</em> 제공</p>
+																</div>
+																<div class="benefit-img">
+																	<img src="../../assets/images/contents/img-internet-06.png" alt="" />
+																</div>
+															</div>
+															<div class="benefit-body">
+																<p class="desc">※ KT 요고 69 요금제 이용 시, 12개월 간 증정</p>
+															</div>
+														</div>
+													</li>
+												</ul>
 											</div>
-											<div class="benefit-header">
-												<div class="benefit-title">
-													<p class="stit-gr">현금처럼 바로 쓰는 혜택</p>
-													<p class="title-16">Npay 포인트+상품권 <br>최대 <em>39만원</em></p>
-												</div>
-												<div class="benefit-img">
-													<img src="../../assets/images/contents/img-internet-04.png" alt="" />
-												</div>
+											<!-- //혜택2: KT -->
+											<!-- 혜택2: U+ -->
+											<div class="swiper-slide">
+												<h2 class="sec-stit">
+													<span class="label">혜택 2</span>
+													<span class="stit">세모통 U+ 유심 요금제 결합하면</span>
+												</h2>
+												<ul class="benefit-card-list">
+													<li class="benefit-card-item">
+														<div class="benefit-card only-semotong">
+															<div class="benefit-badge">
+																<img src="../../assets/images/common/badge-card-semotong.svg" alt="">
+															</div>
+															<div class="benefit-header">
+																<div class="benefit-title">
+																	<p class="stit-gr">현금처럼 바로 쓰는 혜택</p>
+																	<p class="title-16">Npay 포인트 <br>최대 <em>24만원</em></p>
+																</div>
+																<div class="benefit-img">
+																	<img src="../../assets/images/contents/img-internet-12.png" alt="" />
+																</div>
+															</div>
+															<div class="benefit-body">
+																<p class="desc">※ 너겟 요금제 가입 시</p>
+															</div>
+														</div>
+													</li>
+													<li class="benefit-card-item">
+														<div class="benefit-card">
+															<div class="benefit-header">
+																<div class="benefit-title">
+																	<p class="stit-gr">OTT 및 콘텐츠 혜택</p>
+																	<p class="title-16">인기 <em>OTT 2종 및</em> <br><em>VIP 콕 멤버십 혜택</em></p>
+																</div>
+																<div class="benefit-img">
+																	<img src="../../assets/images/contents/img-internet-13.png" alt="" />
+																</div>
+															</div>
+															<div class="benefit-body">
+																<p class="desc">※ 티빙 베이직, 디즈니 스탠다드 구독권 기본 제공</p>
+															</div>
+														</div>
+													</li>
+													<li class="benefit-card-item">
+														<div class="benefit-card">
+															<div class="benefit-header">
+																<div class="benefit-title">
+																	<p class="stit-gr">안심 보안</p>
+																	<p class="title-16">피싱/해킹 보험<br><em>24개월 무료</em> 제공</p>
+																</div>
+																<div class="benefit-img">
+																	<img src="../../assets/images/contents/img-internet-14.png" alt="" />
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
 											</div>
-											<div class="benefit-body">
-												<p class="desc">※ 가입 축하금 31만원, 중고폰 보상 5만원 , 스타벅스 3만원권</p>
+											<!-- //혜택2: U+ -->
+											<!-- 혜택2: SKT -->
+											<div class="swiper-slide">
+												<h2 class="sec-stit">
+													<span class="label">혜택 2</span>
+													<span class="stit">세모통 SKT 유심 요금제 결합하면</span>
+												</h2>
+												<ul class="benefit-card-list">
+													<li class="benefit-card-item">
+														<div class="benefit-card only-semotong">
+															<div class="benefit-badge">
+																<img src="../../assets/images/common/badge-card-semotong.svg" alt="">
+															</div>
+															<div class="benefit-header">
+																<div class="benefit-title">
+																	<p class="stit-gr">Npay로 즉시 전환 가능</p>
+																	<p class="title-16">S캐쉬 포인트 <br><em>20만원</em></p>
+																</div>
+																<div class="benefit-img">
+																	<img src="../../assets/images/contents/img-internet-15.png" alt="" />
+																</div>
+															</div>
+															<div class="benefit-body">
+																<p class="desc">※ 가입 축하금 31만원, 중고폰 보상 5만원 , 스타벅스 3만원권</p>
+															</div>
+														</div>
+													</li>
+												</ul>
 											</div>
+											<!-- //혜택2: SKT -->
 										</div>
-									</li>
-									<li class="benefit-card-item">
-										<div class="benefit-card">
-											<div class="benefit-header">
-												<div class="benefit-title">
-													<p class="stit-gr">OTT 및 콘텐츠 혜택</p>
-													<p class="title-16">인기 <em>OTT 2종 및</em> <br><em>콘텐츠 1종 2년 무료</em></p>
-												</div>
-												<div class="benefit-img">
-													<img src="../../assets/images/contents/img-internet-05.png" alt="" />
-												</div>
-											</div>
-											<div class="benefit-body">
-												<p class="desc">※ OTT 2종 및 콘텐츠 1종 무료, 24개월 간 제공</p>
-											</div>
-										</div>
-									</li>
-									<li class="benefit-card-item">
-										<div class="benefit-card">
-											<div class="benefit-header">
-												<div class="benefit-title">
-													<p class="stit-gr">무료 구독 혜택</p>
-													<p class="title-16">밀리의 서재 <br><em>매월 구독권</em> 제공</p>
-												</div>
-												<div class="benefit-img">
-													<img src="../../assets/images/contents/img-internet-06.png" alt="" />
-												</div>
-											</div>
-											<div class="benefit-body">
-												<p class="desc">※ KT 요고 69 요금제 이용 시, 12개월 간 증정</p>
-											</div>
-										</div>
-									</li>
-								</ul>
+									</div>
+									<!-- 8차 수정 : 추천딜 스와이프 버튼 추가 -->
+									<button type="button" class="ui-btn benefit-button-prev">
+										<i class="ui-icn icn-28-arw" aria-label="Prev"></i>
+									</button>
+									<button type="button" class="ui-btn benefit-button-next">
+										<i class="ui-icn icn-28-arw" aria-label="Next"></i>
+									</button>
+								</div>
+
 								<div class="benefit-more">
-									<button type="button" class="ui-btn btn-sub xl">
+									<button type="button" class="ui-btn btn-sub xl" data-bs-toggle="modal" data-bs-target="#consultModal">
 										<span>최대 혜택 받는 법 바로 확인하기</span>
 										<i class="ui-icn icn-16-more-pr" aria-label="true"></i>
 									</button>
 								</div>
 							</div>
+							<!-- //혜택2 -->
 						</div>
 					</div>
 				</section>
@@ -494,7 +556,7 @@
 										<button class="acco-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccordion1"
 											aria-expanded="true" aria-controls="faqAccordion1">
 											<strong class="part">가입문의</strong>
-											<span>쓰던 번호 그대로 알뜰폰 가입할 수 있나요? 어떻게 그럴수 있죠?</span>
+											<span>통신사 직접 가입과 세모통 가입의 차이는 무엇인가요?</span>
 											<i class="ui-icn icn-16-acco-arw" aria-label="Toggle"></i>
 										</button>
 									</h3>
@@ -625,9 +687,9 @@
 							<ul class="select-listbox" role="listbox">
 								<!-- setSelectValued 는 퍼블 확인용입니다. -->
 								<!-- 이미 선택목록이 있는 경우 class="is-selected" 추가 -->
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this)">언제든 가능해요.</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this)">오전에 전화주세요. (9~12시)</li>
-								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this)">오후에 전화주세요. (14~18시)</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this, 'secretFormCheck3')">언제든 가능해요.</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this, 'secretFormCheck3')">오전에 전화주세요. (9~12시)</li>
+								<li role="option" tabindex="0" data-bs-dismiss="modal" onclick="setSelected(this, 'secretFormCheck3')">오후에 전화주세요. (14~18시)</li>
 							</ul>
 						</div>
 					</section>
@@ -637,6 +699,74 @@
 		</div>
 	</div>
 	<!-- //희망하는 상담시간 선택모달 -->
+
+	<!-- 최대 혜택 받는 범 확인하기 modal basic -->
+	<div class="modal modal-basic fade" id="consultModal" tabindex="-1" role="dialog" aria-labelledby="consultModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content F-I01-01-P01-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="consultModalLabel">얼마나 받을 수 있는지 궁금하신가요?</h3>
+					<button type="button" class="ui-btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<i class="ui-icn icn-32-close-bk" aria-label="닫기"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- 상담신청 섹션 -->
+					<section class="consult-frm-sec">
+						<div class="sec-inner">
+							<div class="consult-msg">
+								<i class="ui-icn icn-14-noti-gr" aria-hidden="true"></i>
+								<p>혜택을 최대로 받을 수 있도록 <br>전문 상담원이 도와드릴게요.</p>
+							</div>
+
+							<!-- 등록폼 -->
+							<div class="consult-frm">
+								<!-- 이름 입력 -->
+								<!-- input.scss: ui-input, ui-textarea, ui-sel, ui-file -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label class="tit" for="frmName">이름</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-inp">
+											<input type="text" name="" id="frmName" value="" placeholder="이름을 입력해 주세요." title="" class="inp" />
+										</div>
+									</div>
+								</div>
+								<!-- // 이름 입력 -->
+
+								<!-- 전화번호 입력 -->
+								<div class="frm-field">
+									<div class="frm-title">
+										<label for="frmTitle" class="tit">전화번호</label>
+									</div>
+									<div class="frm-content">
+										<div class="ui-inp">
+											<input type="tel" name="" id="frmTitle" value="" placeholder="전화번호를 입력해 주세요." title="" class="inp" oninput="setRegularNumber(this)"/>
+										</div>
+									</div>
+								</div>
+								<!-- // 전화번호 입력 -->
+							</div>
+							<!-- // 등록폼 -->
+
+							<div class="consult-links">
+								<button type="button" class="ui-btn btn-texted"><span>개인정보 수집 이용</span></button>
+								<button type="button" class="ui-btn btn-texted"><span>개인정보 제3자 제공</span></button>
+							</div>
+						</div>
+					</section>
+					<!-- // 상담신청 섹션 -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="ui-btn btn-action primary">
+						<span>상담 신청하기</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 최대 혜택 받는 범 확인하기 modal basic -->
 
 	<!-- 나의 최적 상품 확인하기 modal basic -->
 	<div class="modal modal-basic fade" id="consultModal01" tabindex="-1" role="dialog" aria-labelledby="consultModal01Label" aria-hidden="true">
@@ -654,10 +784,8 @@
 						<div class="sec-inner">
 							<div class="consult-msg">
 								<i class="ui-icn icn-14-noti-gr" aria-hidden="true"></i>
-								<!-- 7차 수정 : 통신사 span태그로 감싸기 -->
 								<p>정확한 설명과 투명한 혜택 비교로 <br>쉽게 선택할 수 있도록 도와드릴게요.</p>
 							</div>
-
 
 							<!-- 등록폼 -->
 							<div class="consult-frm">
