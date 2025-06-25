@@ -235,8 +235,8 @@
 		.benefit-swiper {
 			position: relative;
 			.swiper {
-				margin:-20rem calc(-1 * $mobile-outer-spacer);
-				padding:20rem $mobile-outer-spacer;
+				margin:-20rem calc(-1 * ($mobile-outer-spacer / 2));
+				padding:20rem calc(+1 * ($mobile-outer-spacer / 2));
 			}
 
 			// 스와이프 버튼
