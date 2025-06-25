@@ -28,7 +28,6 @@
 				slidesPerView: 'auto',
 				spaceBetween: 30,
 				autoHeight: true,
-				// 8차 수정 : 추천딜 스와이프 버튼 옵션 추가
 				navigation: {
 					nextEl: ".benefit-swiper .benefit-button-next",
 					prevEl: ".benefit-swiper .benefit-button-prev",
@@ -72,6 +71,18 @@
 			checkbox.checked = anySelected;
 		}
 	</script>
+	<style>
+		@media (min-width: 320px) and (max-width: 431px) {
+			html {
+				font-size: calc(100vw / 360);
+			}
+		}
+		@media (min-width: 432px) {
+			html {
+				font-size: calc((432 / 360) * 1px);
+			}
+		}
+	</style>
 </head>
 
 <body>
