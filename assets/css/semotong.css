@@ -25592,6 +25592,14 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 24rem;
   color: #000;
 }
+.terms-content h3.terms-title-sub {
+  margin-top: 40rem;
+  font-size: 18rem;
+  font-weight: 700;
+}
+.terms-content h3.terms-title-sub + h3 {
+  margin-top: 10rem;
+}
 .terms-content h4 {
   margin-top: 10rem;
   margin-bottom: 4rem;
@@ -25658,6 +25666,51 @@ body.is-scroll-first .floating-menu .btn-top {
   left: 0;
   top: 0;
 }
+.terms-content .terms-num1 > li {
+  text-indent: -15rem;
+  padding-left: 15rem;
+}
+.terms-content .terms-num1 > li::before {
+  display: none;
+}
+.terms-content .terms-num1 > li ol.terms-num2 {
+  padding-top: 6rem;
+}
+.terms-content .terms-num2 > li {
+  text-indent: -15rem;
+  padding-left: 15rem;
+}
+.terms-content .terms-num2 > li::before {
+  display: none;
+}
+.terms-content .terms-num2 > li + li {
+  margin-top: 6rem;
+}
+.terms-content .terms-num2 > li ol.terms-kor1 {
+  padding-top: 2rem;
+}
+.terms-content .terms-kor1 > li {
+  text-indent: -18rem;
+  padding-left: 18rem;
+  color: #666;
+}
+.terms-content .terms-kor1 > li::before {
+  display: none;
+}
+.terms-content .terms-kor1 > li + li {
+  margin-top: 2rem;
+}
+.terms-content .terms-hypen > li {
+  text-indent: -10rem;
+  padding-left: 10rem;
+  color: #666;
+}
+.terms-content .terms-hypen > li::before {
+  display: none;
+}
+.terms-content .terms-hypen > li + li {
+  margin-top: 2rem;
+}
 .terms-content dl dt {
   margin-bottom: 4rem;
   font-weight: 600;
@@ -25669,6 +25722,7 @@ body.is-scroll-first .floating-menu .btn-top {
   width: 100%;
   overflow-x: auto;
   overscroll-behavior: auto;
+  margin-top: 10rem;
 }
 .terms-content .terms-tbl-scroll .terms-tbl {
   min-width: 720rem;
@@ -25688,7 +25742,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .terms-content .terms-tbl td {
   border-bottom: 1px solid #f1f3f5;
 }
-.terms-content .terms-tbl td ul {
+.terms-content .terms-tbl td > ul {
   padding-left: 0;
 }
 .terms-content p + .terms-tbl-scroll,
