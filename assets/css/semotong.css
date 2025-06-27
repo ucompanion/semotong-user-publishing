@@ -25700,8 +25700,16 @@ body.is-scroll-first .floating-menu .btn-top {
 .terms-content .terms-kor1 > li::before {
   display: none;
 }
+.terms-content .terms-kor1 > li strong.block {
+  display: block;
+  margin-top: 6rem;
+  color: #000;
+}
 .terms-content .terms-kor1 > li + li {
   margin-top: 2rem;
+}
+.terms-content .terms-kor1 > li:first-child strong.block {
+  margin-top: 0;
 }
 .terms-content .terms-hypen > li {
   text-indent: -10rem;

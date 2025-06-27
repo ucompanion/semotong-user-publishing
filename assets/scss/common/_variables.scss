@@ -2662,8 +2662,18 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			&::before {
 				display: none;
 			}
+			strong.block {
+				display: block;
+				margin-top: 6rem;
+				color: #000;
+			}
 			+ li {
 				margin-top: 2rem;
+			}
+			&:first-child {
+				strong.block {
+					margin-top: 0;
+				}
 			}
 		}
 	}
