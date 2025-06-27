@@ -27,6 +27,11 @@
 			@include out-sec;
 		}
 
+		.lending-visual {
+			img {
+				width: 100%;
+			}
+		}
 		.lending-desc {
 			display: flex;
 			align-items: center;

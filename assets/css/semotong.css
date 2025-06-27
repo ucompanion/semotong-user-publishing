@@ -11287,6 +11287,9 @@ body.is-scroll-first .floating-menu .btn-top {
     padding-right: 24rem;
   }
 }
+.F-I02-01-page .lending-main-sec .lending-visual img {
+  width: 100%;
+}
 .F-I02-01-page .lending-main-sec .lending-desc {
   display: flex;
   align-items: center;
@@ -25618,18 +25621,18 @@ body.is-scroll-first .floating-menu .btn-top {
   text-decoration: underline;
   text-underline-position: under;
 }
-.terms-content ul {
+.terms-content > ul {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
-.terms-content ul.indent-hypen {
+.terms-content > ul.indent-hypen {
   padding-left: 12rem;
 }
-.terms-content ul li {
+.terms-content > ul li {
   position: relative;
   padding-left: 12rem;
 }
-.terms-content ul li::before {
+.terms-content > ul li::before {
   content: "";
   position: absolute;
   top: 7rem;
@@ -25641,26 +25644,26 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #999;
   background-color: #999;
 }
-.terms-content ol > li {
+.terms-content > ol > li {
   position: relative;
   counter-increment: item;
   padding-left: 12rem;
 }
-.terms-content ol > li + li {
+.terms-content > ol > li + li {
   margin-top: 8rem;
 }
-.terms-content ol > li::before {
+.terms-content > ol > li::before {
   content: counter(item) ". ";
   position: absolute;
   left: 0;
   top: 0;
 }
-.terms-content ol ul > li {
+.terms-content > ol ul > li {
   position: relative;
   padding-left: 12rem;
   color: #46484B;
 }
-.terms-content ol ul > li::before {
+.terms-content > ol ul > li::before {
   content: "-";
   position: absolute;
   left: 0;
@@ -25737,6 +25740,7 @@ body.is-scroll-first .floating-menu .btn-top {
 .terms-content .terms-tbl th {
   padding: 8rem 0;
   font-weight: 600;
+  text-align: center;
   background-color: #f1f3f5;
 }
 .terms-content .terms-tbl td {

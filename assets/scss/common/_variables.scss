@@ -2568,7 +2568,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		text-decoration: underline;
 		text-underline-position: under;
 	}
-	ul {
+	> ul {
 		margin-top: 2rem;
 		margin-bottom: 4rem;
 		&.indent-hypen {
@@ -2591,7 +2591,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 			}
 		}
 	}
-	ol {
+	> ol {
 		> li {
 			position: relative;
 			counter-increment: item;
@@ -2707,6 +2707,7 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 		th {
 			padding: 8rem 0;
 			font-weight: 600;
+			text-align: center;
 			background-color: #f1f3f5;
 		}
 		td {
