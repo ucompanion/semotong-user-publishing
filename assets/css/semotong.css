@@ -1103,7 +1103,7 @@ section .sec-inner {
   color: #EFF0F0;
 }
 .footer.is-sticy-consult {
-  padding-bottom: calc(96rem + env(safe-area-inset-bottom, 0)/1.7);
+  padding-bottom: env(safe-area-inset-bottom, 0)/1.7;
 }
 .footer .footer-sec {
   display: flex;
@@ -8761,8 +8761,7 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #96989B;
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body {
-  padding: 32rem 8rem;
-  border-bottom: 1px solid #EFF0F0;
+  padding: 32rem 0 0 0;
 }
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .data-view {
   font-weight: 400;
@@ -8773,17 +8772,67 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-E01-03-page .event-detail-sec .event-detail .detail-body .data-view p + p {
   margin-top: 8rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-list {
-  margin-top: 24rem;
+.F-E01-03-page .ratePlanC-sec {
+  margin-top: 32rem;
+}
+.F-E01-03-page .ratePlanC-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-E01-03-page .ratePlanC-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-E01-03-page .ratePlanC-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-E01-03-page .ratePlanC-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-E01-03-page .ratePlanC-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-E01-03-page .ratePlanC-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
+.F-E01-03-page .ratePlanC-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-E01-03-page .ratePlanC-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-E01-03-page .ratePlanC-sec .sec-header .btn-more.static {
+  position: static;
+}
+.F-E01-03-page .ratePlanC-sec .ratePlanC-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16rem;
   padding-top: 16rem;
+  padding-top: 0;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-list .ratePlanC-item {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-list .ratePlanC-item {
   width: 100%;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8793,10 +8842,10 @@ body.is-scroll-first .floating-menu .btn-top {
   border-radius: 4rem;
   border: 1px solid transparent;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-body {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-body {
   position: relative;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-body .card-button {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-body .card-button {
   position: absolute;
   left: -16rem;
   right: -16rem;
@@ -8804,56 +8853,56 @@ body.is-scroll-first .floating-menu .btn-top {
   bottom: -16rem;
   z-index: 1;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-footer {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-footer {
   margin-top: 16rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label {
   display: flex;
   flex: none;
   gap: 2rem;
   font-size: 10rem;
   line-height: 12rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label {
   display: inline-block;
   padding: 3rem 5rem 5rem;
   border-radius: 2rem;
   color: #fff;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.skt {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.skt {
   background-color: #3617CE;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.kt {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.kt {
   background-color: #EC1B23;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.lgu {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.lgu {
   background-color: #D0006F;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.main {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.main {
   background-color: #2091AA;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.price {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.price {
   background-color: #EFBD28;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.benefit {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.benefit {
   background-color: #0084FF;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.semotong {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.semotong {
   background-color: #542FDD;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.merge {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.merge {
   background-color: #EFBD28;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-label .label.open {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-label .label.open {
   background-color: #0084FF;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-util-btn {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-util-btn {
   position: relative;
   z-index: 10;
   display: flex;
@@ -8861,29 +8910,29 @@ body.is-scroll-first .floating-menu .btn-top {
   gap: 12rem;
   margin-left: auto;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-stit {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-stit {
   margin-bottom: 3rem;
   font-weight: 500;
   font-size: 10rem;
   line-height: 14rem;
   color: #96989B;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-tit {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-tit {
   font-weight: 700;
   font-size: 20rem;
   color: #000;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-tit .ui-btn {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-tit .ui-btn {
   z-index: 10;
   top: 1rem;
   margin-left: 4rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-name {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-name {
   margin-top: 4rem;
   font-size: 12rem;
   color: #777;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-info {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-info {
   display: flex;
   align-items: center;
   gap: 6rem;
@@ -8891,14 +8940,14 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-bottom: 20rem;
   padding: 2rem 0;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-info .split {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-info .split {
   display: inline-block;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   background-color: #CFD0D1;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-info .label {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-info .label {
   display: inline-flex;
   align-items: center;
   color: #494949;
@@ -8906,25 +8955,25 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 12rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-info .label .ui-icn {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-info .label .ui-icn {
   margin-right: 4rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .brand {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .brand {
   display: flex;
   align-items: center;
   height: 20rem;
   gap: 4rem;
   margin-top: 1rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .brand img {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .brand img {
   height: 100%;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .brand .brand-rating {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .brand .brand-rating {
   display: inline-flex;
   align-items: center;
   padding: 2rem 8rem 2rem 4rem;
@@ -8935,7 +8984,7 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12rem;
   line-height: 14rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .charge { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -8943,21 +8992,21 @@ body.is-scroll-first .floating-menu .btn-top {
   position: relative;
   text-align: right;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-tit { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
   margin-bottom: 2rem;
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-txt { /* 4차 수정 : 요금제 공통 할인금액 조건부 노출 대응 */
   margin-top: 0rem;
   font-weight: 500;
   font-size: 12rem;
   line-height: 16rem;
   color: #828588;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .charge .charge-point {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-point {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
@@ -8966,41 +9015,41 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 24rem;
   color: #E43558;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-charge .charge .charge-point .tit {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-charge .charge .charge-point .tit {
   font-size: 12rem;
   line-height: 24rem;
   margin-right: 4rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status {
   padding: 11rem 16rem;
   background-color: #F4F5F8;
   border-radius: 4rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift {
   position: relative;
   display: flex;
   align-items: center;
   --icn-size: 20rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .img {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .img {
   width: var(--icn-size);
   height: var(--icn-size);
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .ui-btn {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .ui-btn {
   margin-left: auto;
   position: absolute;
   right: 0;
   top: 2rem;
   z-index: 10;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .status-gift-tit {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .status-gift-tit {
   display: flex;
   align-items: center;
   flex: 1 1 auto;
   overflow: hidden;
   padding-right: var(--icn-size);
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .status-gift-tit .count {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .status-gift-tit .count {
   flex: none;
   display: inline-flex;
   justify-content: center;
@@ -9018,7 +9067,7 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: var(--icn-size);
   font-weight: 400;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .status-gift-tit .tit {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .status-gift-tit .tit {
   display: block;
   flex: 1 1 auto;
   overflow: hidden;
@@ -9031,12 +9080,12 @@ body.is-scroll-first .floating-menu .btn-top {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .status-gift-list {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .status-gift-list {
   display: flex;
   flex-direction: column;
   gap: 8rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .status-gift-list li {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .status-gift-list li {
   position: relative;
   width: 100%;
   padding-left: calc(var(--icn-size) + 6rem);
@@ -9045,46 +9094,46 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 20rem;
   color: #63666A;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .status-gift-list li .img {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .status-gift-list li .img {
   position: absolute;
   left: 0;
   top: 0;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift .status-gift-expanded {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift .status-gift-expanded {
   display: none;
   width: 100%;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift.is-expanded .ui-btn .ui-icn {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift.is-expanded .ui-btn .ui-icn {
   transform: rotate(180deg);
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift.is-expanded .status-gift-tit {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift.is-expanded .status-gift-tit {
   display: none;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-gift.is-expanded .status-gift-expanded {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-gift.is-expanded .status-gift-expanded {
   display: block;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .choice {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .choice {
   display: flex;
   align-items: center;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .choice .ui-icn:first-child {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .choice .ui-icn:first-child {
   margin-right: 4rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .choice .txt {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .choice .txt {
   font-weight: 600;
   font-size: 12rem;
   line-height: 16rem;
   color: #36383A;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .choice .txt em {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .choice .txt em {
   color: #542FDD;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .choice .split {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .choice .split {
   content: "";
   display: block;
   width: 1px;
@@ -9092,7 +9141,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #CFD0D1;
   margin: 0 8rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .ui-btn {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn {
   margin-left: auto; /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   align-items: center;
   font-weight: 600;
@@ -9100,13 +9149,13 @@ body.is-scroll-first .floating-menu .btn-top {
   line-height: 14rem;
   color: #828588;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status .status-choice .ui-btn > span { /* 4차 수정 : 요금제 카드 공통 오류문의 margin 추가 */
   margin-left: 4rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-status + .card-compare-mo {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-status + .card-compare-mo {
   margin-top: 12rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare {
   width: auto;
   height: 20rem;
   padding: 0 7rem;
@@ -9119,10 +9168,10 @@ body.is-scroll-first .floating-menu .btn-top {
   color: #5A5D60;
   vertical-align: top;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare .icn-selection {
   display: none;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare .count {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare .count {
   display: none;
   align-items: center;
   justify-content: center;
@@ -9136,29 +9185,29 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #542FDD;
   color: #fff;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.outlined {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.outlined {
   border-color: #CFD0D1;
   background-color: #fff;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.outlined:active {
   background-color: #fff;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected {
   color: #542FDD;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-default {
   display: none;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected .icn-selection {
   display: inline-flex;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected .count {
   display: inline-flex;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-pc .btn-compare.is-selected.outlined {
   border-color: #542FDD;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare {
   width: 100%;
   height: 38rem;
   gap: 2rem;
@@ -9169,10 +9218,10 @@ body.is-scroll-first .floating-menu .btn-top {
   font-weight: 600;
   color: #5A5D60;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare .icn-selection {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare .icn-selection {
   display: none;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare .count {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare .count {
   display: none;
   align-items: center;
   justify-content: center;
@@ -9186,55 +9235,55 @@ body.is-scroll-first .floating-menu .btn-top {
   background-color: #542FDD;
   color: #fff;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.outlined {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.outlined {
   border-color: #CFD0D1;
   background-color: #fff;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.outlined:active {
   background-color: #fff;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected {
   color: #542FDD;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-default {
   display: none;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-selection {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected .icn-selection {
   display: inline-flex;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected .count {
   display: inline-flex;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-compare-mo .btn-compare.is-selected.outlined {
   border-color: #542FDD;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-buyinfo {
   margin-top: 32rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo .buyinfo-con {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con {
   text-align: center;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo .buyinfo-con dt {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dt {
   font-weight: 700;
   font-size: 16rem;
   line-height: 22rem;
   color: #000;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dt:last-child { /* 8차 수정 : 내용 숨김에 대한 여백 조정 */
   margin-bottom: 20rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card .card-buyinfo .buyinfo-con dd {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card .card-buyinfo .buyinfo-con dd {
   margin-top: 6rem;
   font-weight: 600;
   font-size: 14rem;
   line-height: 20rem;
   color: #36383A;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card.plan-best {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card.plan-best {
   border-color: #542FDD;
   padding-top: 45rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card.plan-best .card-best {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card.plan-best .card-best {
   position: absolute;
   left: 0;
   top: 0;
@@ -9242,7 +9291,7 @@ body.is-scroll-first .floating-menu .btn-top {
   background: linear-gradient(90deg, #6039EE 0%, #3A1EA2 100%);
   padding: 6rem 11rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card.plan-best .card-best p {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card.plan-best .card-best p {
   display: flex;
   gap: 4rem;
   color: #fff;
@@ -9250,26 +9299,213 @@ body.is-scroll-first .floating-menu .btn-top {
   font-size: 12re;
   line-height: 18rem;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card.outlined {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card.outlined {
   box-shadow: none;
   border-color: #EFF0F0;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card.outlined.is-recom {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card.outlined.is-recom {
   border-color: #542FDD;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card.outlined.is-recom .card-badge {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card.outlined.is-recom .card-badge {
   position: absolute;
   right: 10rem;
   top: 0;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card + .ratePlan-info {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card + .ratePlan-info {
   margin-top: 12rem;
   text-align: right;
 }
-.F-E01-03-page .event-detail-sec .event-detail .detail-body .ratePlanC-card + .ratePlan-info .btn-texted {
+.F-E01-03-page .ratePlanC-sec .ratePlanC-card + .ratePlan-info .btn-texted {
   font-size: 12rem;
   line-height: 18rem;
   color: #828588;
+}
+.F-E01-03-page .note-sec {
+  padding-bottom: 60rem;
+}
+.F-E01-03-page .note-sec .sec-header {
+  position: relative;
+  margin-bottom: 16rem;
+}
+.F-E01-03-page .note-sec .sec-header .sec-label {
+  display: inline-block;
+  margin-bottom: 8rem;
+  padding: 4rem 8rem;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 18rem;
+  background-color: #EAE6FB;
+  border-radius: 2rem;
+  color: #542FDD;
+}
+.F-E01-03-page .note-sec .sec-header .sec-tit {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20rem;
+  line-height: 24rem;
+  color: #2A2B2D;
+}
+.F-E01-03-page .note-sec .sec-header .sec-tit .ui-icn {
+  margin-right: 4rem;
+}
+.F-E01-03-page .note-sec .sec-header .sec-tit + .sec-explain {
+  margin-top: 4rem;
+}
+@media all and (min-width: 480px) {
+  .F-E01-03-page .note-sec .sec-header .sec-tit br {
+    display: none;
+  }
+}
+.F-E01-03-page .note-sec .sec-header .sec-explain {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #63666A;
+}
+.F-E01-03-page .note-sec .sec-header .btn-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.F-E01-03-page .note-sec .sec-header .btn-more.static {
+  position: static;
+}
+.F-E01-03-page .note-sec .note-acco {
+  margin-top: 30rem;
+  border-top: 1px solid #EFF0F0;
+}
+.F-E01-03-page .note-sec .note-acco .collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+.F-E01-03-page .note-sec .note-acco .collapse:not(.show) {
+  display: none;
+}
+.F-E01-03-page .note-sec .note-acco .acco-button .ui-icn {
+  transition: transform 0.35s ease;
+}
+.F-E01-03-page .note-sec .note-acco .acco-button[aria-expanded=true] .ui-icn {
+  transform: rotate(180deg);
+}
+.F-E01-03-page .note-sec .note-acco .acco-header {
+  position: relative;
+  padding: 14rem 0;
+  border-bottom: 1px solid #EFF0F0;
+}
+.F-E01-03-page .note-sec .note-acco .acco-header .acco-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+.F-E01-03-page .note-sec .note-acco .acco-header .acco-button > span {
+  position: relative;
+  display: block;
+  padding-right: 12rem;
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 24rem;
+  max-height: 72rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.F-E01-03-page .note-sec .note-acco .acco-header .acco-button .ui-icn {
+  margin-left: auto;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body {
+  margin-top: 16rem;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data {
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 20rem;
+  color: #63666A;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data p {
+  margin-top: 20rem;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data p:first-child {
+  margin-top: 0;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data p strong {
+  display: block;
+  font-weight: 500;
+  font-weight: 16rem;
+  line-height: 24rem;
+  color: #000;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  font-size: 12rem;
+  line-height: 16rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ol:first-child {
+  margin-top: 0;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ol:last-child {
+  margin-bottom: 0;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ol li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ol li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  font-size: 12rem;
+  line-height: 16rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ul:first-child {
+  margin-top: 0;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ul:last-child {
+  margin-bottom: 0;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ul li {
+  position: relative;
+  counter-increment: item;
+  padding-left: 12rem;
+  color: #63666A;
+}
+.F-E01-03-page .note-sec .note-acco .acco-body .acco-data ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+@media all and (min-width: 720px) {
+  .F-E01-03-page .note-sec .note-acco {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-E01-03-page .note-sec .note-acco {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /*-------------------------------------------------------------------
@@ -12137,9 +12373,6 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-top: var(--sec-outer-margin);
   margin-bottom: var(--sec-outer-margin);
 }
-.F-I02-01-page .faq-sec.is-sticy-consult {
-	padding-bottom: calc(96rem + env(safe-area-inset-bottom, 0)/1.7);
-}
 .F-I02-01-page .faq-sec .sec-header {
   position: relative;
   margin-bottom: 16rem;
@@ -12186,6 +12419,9 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-I02-01-page .faq-sec .sec-header .btn-more.static {
   position: static;
+}
+.F-I02-01-page .faq-sec.is-sticy-consult {
+  padding-bottom: calc(96rem + env(safe-area-inset-bottom, 0) / 1.7);
 }
 .F-I02-01-page .faq-sec .faq-accordion {
   margin-top: -14rem;
@@ -12296,7 +12532,7 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-I02-01-page .consult-btm-sec {
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   z-index: 100;
@@ -12368,125 +12604,244 @@ body.is-scroll-first .floating-menu .btn-top {
 }
 .F-M01-page .visual-sec {
   position: relative;
+  z-index: 10;
+  padding-left: 0;
+  padding-right: 0;
   margin-top: calc(-1 * 60rem);
-  padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
-  background: #F2F5FB; /* 3차 수정 : 메인 레이아웃 변경 추가 */
-  /* background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%); 3차 수정 : 메인 레이아웃 변경 삭제 */
-  /* background-color: #3C239A; 3차 수정 : 메인 레이아웃 변경 삭제 */
-  overflow: hidden;
-  color: #fff;
 }
-.F-M01-page .visual-sec .sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
+.F-M01-page .visual-sec .visual-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  top: auto;
+  left: 0;
+  width: 100%;
+  bottom: 6.3888888889vw;
   min-width: 320px;
   padding-left: 24rem;
   padding-right: 24rem;
   transition: padding 0.2s ease;
-  padding-top: var(--sec-inner-padding);
-  background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
-  background-color: #3C239A;
 }
 @media all and (min-width: 720px) {
-  .F-M01-page .visual-sec .sec-outer {
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler {
     padding-left: 24rem;
     padding-right: 24rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
-  .F-M01-page .visual-sec .sec-outer {
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler {
     padding-left: 24rem;
     padding-right: 24rem;
   }
 }
-.F-M01-page .visual-sec .sec-body {
-  position: relative;
-  height: calc(220rem + 60rem);
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .in-sec {
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 30rem;
 }
-.F-M01-page .visual-sec .sec-body::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 338rem;
-  height: 291rem;
-  border-radius: 50%;
-  transform: translate(50%, 50%);
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-controler-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 0.5555555556vw 1.1111111111vw 0.5555555556vw 2.2222222222vw;
+  border-radius: 13.8888888889vw;
   background-color: rgba(255, 255, 255, 0.1);
 }
-.F-M01-page .visual-sec .sec-body .sec-tit {
-  font-weight: 700;
-  font-size: 22rem;
-  line-height: 30rem;
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8rem;
+  width: auto;
 }
-.F-M01-page .visual-sec .sec-body .sec-img {
-  position: absolute;
-  right: 12rem; /* 2차 수정 : 봇 이미지 위치 수정 */
-  bottom: 76rem;
-  width: 140rem;
-  height: 122rem;
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination-fraction {
+  gap: 1.1111111111vw;
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.7777777778vw;
 }
-.F-M01-page .visual-sec .sec-body .sec-btn {
-  margin-top: 16rem;
-}
-.F-M01-page .visual-sec .sec-body .sec-btn .ui-btn {
-  width: 100%;
-  height: 50rem;
-  padding: 2rem;
-  border-radius: 30rem;
-  font-weight: 600;
-  font-size: 16rem;
-  line-height: 22rem;
-  color: #0D173F;
-  box-shadow: 0px 4px 17.6px rgba(255, 255, 255, 0.28);
-  background: linear-gradient(90deg, #6B43FF 0%, #B433FF 100%);
-}
-.F-M01-page .visual-sec .sec-body .sec-btn .ui-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
-  right: 2rem;
-  bottom: 2rem;
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination .swiper-pagination-bullet {
+  width: 10rem;
+  height: 10rem;
+  -webkit-mask: center center/10rem;
+          mask: center center/10rem;
+  margin: 0;
   background-color: #fff;
-  border-radius: 30rem;
+  opacity: 0.25;
+  border-radius: 0;
+  transition: all 0.15s ease;
 }
-.F-M01-page .visual-sec .sec-body .sec-btn .ui-btn span {
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination .swiper-pagination-bullet:nth-child(1) {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10L5 0L10 10H0Z' fill='white'/%3E%3C/svg%3E%0A");
+          mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10L5 0L10 10H0Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination .swiper-pagination-bullet:nth-child(2) {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect opacity='1' width='10' height='10' fill='white'/%3E%3C/svg%3E%0A");
+          mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect opacity='1' width='10' height='10' fill='white'/%3E%3C/svg%3E%0A");
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination .swiper-pagination-bullet:nth-child(3) {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='1' cx='5' cy='5' r='5' fill='white'/%3E%3C/svg%3E%0A");
+          mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='1' cx='5' cy='5' r='5' fill='white'/%3E%3C/svg%3E%0A");
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination .swiper-pagination-bullet:nth-child(4) {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='1' d='M0.548557 1.37139C0.285811 0.714527 0.769568 0 1.47703 0H8.52297C9.23043 0 9.71419 0.714526 9.45144 1.37139L8.14856 4.62861C8.05319 4.86702 8.05319 5.13298 8.14856 5.37139L9.45144 8.62861C9.71419 9.28547 9.23043 10 8.52297 10H1.47703C0.769568 10 0.285811 9.28547 0.548556 8.62861L1.85144 5.37139C1.94681 5.13298 1.94681 4.86702 1.85144 4.62861L0.548557 1.37139Z' fill='white'/%3E%3C/svg%3E%0A");
+          mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='1' d='M0.548557 1.37139C0.285811 0.714527 0.769568 0 1.47703 0H8.52297C9.23043 0 9.71419 0.714526 9.45144 1.37139L8.14856 4.62861C8.05319 4.86702 8.05319 5.13298 8.14856 5.37139L9.45144 8.62861C9.71419 9.28547 9.23043 10 8.52297 10H1.47703C0.769568 10 0.285811 9.28547 0.548556 8.62861L1.85144 5.37139C1.94681 5.13298 1.94681 4.86702 1.85144 4.62861L0.548557 1.37139Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-pagination .swiper-pagination-bullet:nth-child(5) {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='1' d='M0 5L5 0L10 5L5 10L0 5Z' fill='white'/%3E%3C/svg%3E%0A");
+          mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='1' d='M0 5L5 0L10 5L5 10L0 5Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay {
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .ui-btn {
+  width: 4.4444444444vw;
+  height: 4.4444444444vw;
+  border-radius: 50%;
+  background: no-repeat center center/100% auto;
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .is-playing {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='9' y='4' width='2' height='8' fill='white'/%3E%3Crect x='5' y='4' width='2' height='8' fill='white'/%3E%3C/svg%3E%0A");
+}
+.F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .is-paused {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 8L6 4V12L12 8Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.F-M01-page .visual-sec .visual-swiper .visual {
   width: 100%;
-  height: 100%;
-  border-radius: 30rem;
-  background: linear-gradient(91.41deg, #6B43FF 9.18%, #B433FF 98.8%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  color: transparent;
+}
+.F-M01-page .visual-sec .visual-swiper .visual-link {
+  display: block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+.F-M01-page .visual-sec .visual-swiper .visual-link img {
+  max-width: 100%;
 }
 @media all and (min-width: 720px) {
   .F-M01-page .visual-sec {
-    margin-top: calc(-1 * 80rem);
+    margin-top: 0;
   }
-  .F-M01-page .visual-sec .sec-body {
-    height: calc(220rem + 80rem);
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler {
+    top: auto;
+    bottom: 84rem;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .in-sec {
+    justify-content: flex-start;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-controler-group {
+    gap: 12rem;
+    justify-content: flex-start;
+    max-width: 720px;
+    background-color: transparent;
+    padding: 0;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .ui-btn {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background: no-repeat center center/100% auto;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .is-playing {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Crect x='9' y='5' width='2' height='6' fill='white'/%3E%3Crect x='5' y='5' width='2' height='6' fill='white'/%3E%3C/svg%3E%0A");
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .is-paused {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Cpath d='M12 8L6 4V12L12 8Z' fill='white'/%3E%3C/svg%3E%0A");
+  }
+  .F-M01-page .visual-sec .visual-swiper .visual {
+    min-width: 320px;
+    padding-left: 24rem;
+    padding-right: 24rem;
+    transition: padding 0.2s ease;
+  }
+}
+@media all and (min-width: 720px) and (min-width: 720px) {
+  .F-M01-page .visual-sec .visual-swiper .visual {
+    padding-left: 24rem;
+    padding-right: 24rem;
+  }
+}
+@media all and (min-width: 720px) and (min-width: 940px) and (min-height: 480px) {
+  .F-M01-page .visual-sec .visual-swiper .visual {
+    padding-left: 24rem;
+    padding-right: 24rem;
+  }
+}
+@media all and (min-width: 720px) {
+  .F-M01-page .visual-sec .visual-swiper .visual-link {
+    height: 394rem;
   }
 }
 @media all and (min-width: 940px) and (min-height: 480px) {
   .F-M01-page .visual-sec {
-    margin-top: calc(-1 * 80rem);
+    margin-top: 0;
   }
-  .F-M01-page .visual-sec .sec-body {
-    height: calc(220rem + 80rem);
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler {
+    top: auto;
+    bottom: 84rem;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .in-sec {
+    justify-content: flex-start;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-controler-group {
+    gap: 12rem;
+    justify-content: flex-start;
+    max-width: 720px;
+    background-color: transparent;
+    padding: 0;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .ui-btn {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background: no-repeat center center/100% auto;
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .is-playing {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Crect x='9' y='5' width='2' height='6' fill='white'/%3E%3Crect x='5' y='5' width='2' height='6' fill='white'/%3E%3C/svg%3E%0A");
+  }
+  .F-M01-page .visual-sec .visual-swiper .swiper-controler .swiper-autoplay .is-paused {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Cpath d='M12 8L6 4V12L12 8Z' fill='white'/%3E%3C/svg%3E%0A");
+  }
+  .F-M01-page .visual-sec .visual-swiper .visual {
+    min-width: 320px;
+    padding-left: 24rem;
+    padding-right: 24rem;
+    transition: padding 0.2s ease;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) and (min-width: 720px) {
+  .F-M01-page .visual-sec .visual-swiper .visual {
+    padding-left: 24rem;
+    padding-right: 24rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) and (min-width: 940px) and (min-height: 480px) {
+  .F-M01-page .visual-sec .visual-swiper .visual {
+    padding-left: 24rem;
+    padding-right: 24rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M01-page .visual-sec .visual-swiper .visual-link {
+    height: 394rem;
   }
 }
 .F-M01-page .deal-sec {
-  overflow: hidden;
+  position: relative;
+  z-index: 20;
   padding-top: var(--sec-inner-padding);
   padding-bottom: var(--sec-inner-padding);
   padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
@@ -12790,6 +13145,16 @@ body.is-scroll-first .floating-menu .btn-top {
   display: none;
   font-size: 12rem;
   line-height: 18rem;
+}
+@media all and (min-width: 720px) {
+  .F-M01-page .deal-sec .sec-outer {
+    margin-top: -40rem;
+  }
+}
+@media all and (min-width: 940px) and (min-height: 480px) {
+  .F-M01-page .deal-sec .sec-outer {
+    margin-top: -40rem;
+  }
 }
 .F-M01-page .deal-sec { /* 추천딜 섹션 (오픈전 추가) */
   position: relative;
