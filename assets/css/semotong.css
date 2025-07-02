@@ -1234,6 +1234,7 @@ section .sec-inner {
   display: flex;
   flex-direction: column;
   pointer-events: none;
+  gap: 8rem;
 }
 .floating-menu .floating-layer > .ui-btn {
   visibility: hidden;
@@ -1273,9 +1274,6 @@ section .sec-inner {
   display: flex;
 }
 .floating-menu.is-active .floating-layer {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
   pointer-events: auto;
 }
 .floating-menu.is-active .floating-layer .ui-btn {

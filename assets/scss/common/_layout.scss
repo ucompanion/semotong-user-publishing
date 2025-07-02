@@ -508,6 +508,8 @@ section   {
 		display: flex;
 		flex-direction: column;
 		pointer-events: none;
+		gap: 8rem;
+
 
 		> .ui-btn {
 			visibility: hidden;
@@ -550,9 +552,6 @@ section   {
 			}
 		}
 		.floating-layer {
-			display: flex;
-			flex-direction: column;
-			gap: 10rem;
 			pointer-events: auto;
 			.ui-btn {
 				visibility: visible;
