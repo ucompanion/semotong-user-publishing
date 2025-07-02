@@ -1102,6 +1102,9 @@ section .sec-inner {
   background-color: #111;
   color: #EFF0F0;
 }
+.footer.is-sticy-consult {
+  padding-bottom: calc(96rem + env(safe-area-inset-bottom, 0)/1.7);
+}
 .footer .footer-sec {
   display: flex;
   flex-direction: column;
@@ -1140,6 +1143,9 @@ section .sec-inner {
 }
 .footer .footer-sec .info-area {
   position: relative;
+}
+.footer .footer-sec .info-area:first-child .info-cont {
+  margin-top: 0;
 }
 .footer .footer-sec .info-area .info-cont {
   margin-top: 30rem;
@@ -1196,7 +1202,7 @@ section .sec-inner {
   height: var(--btn-size);
   background-color: #fff;
   border-radius: 50%;
-  margin-top: 10rem;
+  margin-top: 8rem;
   color: #333;
   box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
 }
@@ -1223,7 +1229,7 @@ section .sec-inner {
   position: absolute;
   z-index: 0;
   right: 0;
-  bottom: calc(100% + 16rem);
+  bottom: calc(100% + 0rem);
   white-space: nowrap;
   display: flex;
   flex-direction: column;
@@ -1232,16 +1238,15 @@ section .sec-inner {
 .floating-menu .floating-layer > .ui-btn {
   visibility: hidden;
   gap: 6rem;
-  background-color: #fff;
-  border-radius: 12rem;
-  padding: 10rem 12rem;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+  width: var(--btn-size);
+  height: var(--btn-size);
   opacity: 0;
-  font-weight: 500;
-  font-size: 16rem;
-  line-height: 22rem;
-  color: #36383A;
   transition: all 0.2s ease;
   transform-origin: right bottom;
+  box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
 }
 .floating-menu .floating-layer > .ui-btn:nth-child(1) {
   transform: translate(0rem, 120rem) scale(0);
@@ -1279,6 +1284,55 @@ section .sec-inner {
 }
 .floating-menu.is-active .floating-layer .ui-btn:nth-child(1), .floating-menu.is-active .floating-layer .ui-btn:nth-child(2), .floating-menu.is-active .floating-layer .ui-btn:nth-child(3), .floating-menu.is-active .floating-layer .ui-btn:nth-child(4) {
   transform: translate(0rem, 0rem) scale(1);
+}
+.floating-menu.is-active .floating-layer .ui-btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12rem;
+  line-height: 120%;
+}
+.floating-menu.is-active .floating-layer .ui-btn.type-cs span {
+  background-color: #0084FF;
+}
+.floating-menu.is-active .floating-layer .ui-btn.type-bot span {
+  background-color: #542FDD;
+}
+.floating-menu.is-active .floating-layer .ui-btn .ui-icn,
+.floating-menu.is-active .floating-layer .ui-btn span {
+  opacity: 0;
+  animation: crossFade 4s infinite ease-in-out;
+}
+.floating-menu.is-active .floating-layer .ui-btn .ui-icn {
+  animation-delay: 0s;
+}
+.floating-menu.is-active .floating-layer .ui-btn span {
+  animation-delay: 2s;
+}
+@keyframes crossFade {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .floating-backdrop {
@@ -2233,6 +2287,11 @@ body.is-scroll-first .floating-menu .btn-top {
   height: 50rem;
 }
 
+[class*=icn-54] {
+  width: 54rem;
+  height: 54rem;
+}
+
 [class*=icn-62] {
   width: 62rem;
   height: 62rem;
@@ -2933,6 +2992,10 @@ body.is-scroll-first .floating-menu .btn-top {
   background-image: url("../images/common/icn-32-remove-bk.svg");
 }
 
+.icn-32-acco-arw::before {
+  background-image: url("../images/common/icn-32-acco-arw.svg");
+}
+
 .icn-34-bank-hb::before {
   background-image: url("../images/bank/icn-34-bank-hb.png");
 }
@@ -3110,6 +3173,16 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .icn-50-cert-card::before {
   background-image: url("../images/common/icn-50-cert-card.png");
+}
+
+.icn-54-floating-kakao::before {
+  background-image: url("../images/common/icn-54-floating-kakao.png");
+  background-size: 74rem;
+}
+
+.icn-54-floating-bot::before {
+  background-image: url("../images/common/icn-54-floating-bot.png");
+  background-size: 74rem;
 }
 
 .icn-62-motong::before {
@@ -12220,13 +12293,14 @@ body.is-scroll-first .floating-menu .btn-top {
   }
 }
 .F-I02-01-page .consult-btm-sec {
-  position: sticky;
+  position: fixed;
   left: 0;
   bottom: 0;
   z-index: 100;
+  width: 100%;
   margin-top: auto;
   background-color: #fff;
-  border-radius: 0;
+  border-radius: 20rem 20rem 0 0;
   box-shadow: 0 -4rem 20rem 0 rgba(0, 0, 0, 0.1);
   padding-bottom: env(safe-area-inset-bottom, 0)/1.7;
 }
