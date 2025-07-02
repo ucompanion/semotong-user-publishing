@@ -590,26 +590,28 @@ section   {
 				}
 
 				// Animations
-				.ui-icn,
-				span {
-					opacity: 0;
-					animation: crossFade  4s infinite ease-in-out;
-				}
-
 				.ui-icn {
-					animation-delay: 0s;
+					animation: fadeInOut 4s infinite ease-in-out;
 				}
 
 				span {
-					animation-delay: 2s;
+					animation: fadeOutIn 4s infinite ease-in-out;
 				}
 
-				@keyframes crossFade {
+				@keyframes fadeInOut {
 					0%   { opacity: 0; }
-					2%  { opacity: 1; }
-					48%  { opacity: 1; }
+					7%   { opacity: 1; }
+					43%  { opacity: 1; }
 					50%  { opacity: 0; }
 					100% { opacity: 0; }
+				}
+
+				@keyframes fadeOutIn {
+					0%   { opacity: 1; }
+					7%   { opacity: 0; }
+					43%  { opacity: 0; }
+					50%  { opacity: 1; }
+					100% { opacity: 1; }
 				}
 			}
 		}
