@@ -12137,6 +12137,9 @@ body.is-scroll-first .floating-menu .btn-top {
   margin-top: var(--sec-outer-margin);
   margin-bottom: var(--sec-outer-margin);
 }
+.F-I02-01-page .faq-sec.is-sticy-consult {
+	padding-bottom: calc(96rem + env(safe-area-inset-bottom, 0)/1.7);
+}
 .F-I02-01-page .faq-sec .sec-header {
   position: relative;
   margin-bottom: 16rem;

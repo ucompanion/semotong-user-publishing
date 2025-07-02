@@ -58,7 +58,11 @@
 <!-- // 푸터 섹션 -->
 
 <!-- 플로팅 메뉴 -->
-<div class="floating-menu">
+<!-- 2025-07-02 플롯팅 메뉴 수정
+	floating-menu: is-active 기본값
+	floating-layer: fade show 기본값, 버튼 변경
+-->
+<div class="floating-menu is-active">
 	<!-- 2025-05-20 조찬기 : 요금제 비교하기 추가 -->
 	<!-- 비교할때 is-compared -->
 	<button type="button" class="ui-btn btn-compare-view">
@@ -66,29 +70,25 @@
 	</button>
 
 	<!-- aria-expanded: true/false -->
-	<button type="button" class="ui-btn btn-menu" id="floatingBtn" aria-expanded="false" aria-haspopup="menu" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingBtn')">
+	<!-- <button type="button" class="ui-btn btn-menu" id="floatingBtn" aria-expanded="false" aria-haspopup="menu" onclick="floatingMenuHandler('floatingMenuLayer', 'floatingBtn')">
 		<i class="ui-icn icn-30-floating-logo" aria-label="Floating Menu"></i>
 		<i class="ui-icn icn-30-floating-close" aria-label="Floating Menu"></i>
-	</button>
+	</button> -->
 	<!-- 3차 수정 : 푸터 Top버튼 아이콘 적용 -->
 	<button type="button" class="ui-btn btn-top" onclick="window.scrollTo({top:0, left:0, behavior: 'smooth'})">
 		<i class="ui-icn icn-30-floating-top" aria-label="Scroll Top"></i>
 	</button>
 
 
-	<div class="floating-layer fade" id="floatingMenuLayer">
+	<div class="floating-layer fade show" id="floatingMenuLayer">
 		<!-- a태그, button태그 무관합니다. -->
-		<button type="button" class="ui-btn btn-item">
-			<i class="ui-icn icn-24-floating-review" aria-hidden="true"></i>
-			<span>이용후기</span>
+		<button type="button" class="ui-btn type-cs" aria-label="1:1 문의">
+			<i class="ui-icn icn-54-floating-kakao" aria-hidden="true"></i>
+			<span>1:1 <br>문의</span>
 		</button>
-		<button type="button" class="ui-btn">
-			<i class="ui-icn icn-24-floating-recom" aria-hidden="true"></i>
-			<span>친구추천</span>
-		</button>
-		<button type="button" class="ui-btn">
-			<i class="ui-icn icn-24-floating-kakao" aria-hidden="true"></i>
-			<span>카카오톡</span>
+		<button type="button" class="ui-btn type-bot" aria-label="요금제 추천">
+			<i class="ui-icn icn-54-floating-bot" aria-hidden="true"></i>
+			<span>요금제 <br>추천</span>
 		</button>
 	</div>
 </div>

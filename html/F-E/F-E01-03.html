@@ -140,271 +140,341 @@
 								<div class="data-view">
 									<img src="../../assets/images/upload/@thumb-event-01.png" alt="" />
 								</div>
-
-								<!-- 2025-02-04 조찬기 : 요금제 목록 추가 -->
-								<!-- 요금제 공통 타입 C : 요금제 상품 리스트 -->
-								<ul class="ratePlanC-list">
-									<li class="ratePlanC-item">
-										<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-										<!--
-											2차 수정 : 서비스카드 공통 망제공자 제목에 추가
-											2차 수정 : 서비스카드 공통 툴팁 추가
-										-->
-										<div class="ratePlanC-card">
-											<div class="card-body">
-												<div class="card-label">
-													<div class="card-label-benefit">
-														<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
-														<span class="label secondary">+20GB</span>
-													</div>
-													<div class="card-label-option">
-														<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="간편개통을 하시면 통신사에서 개통을 도와드려요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>간편개통</button>
-														<span class="split" aria-hidden="true"></span>
-														<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
-													</div>
-												</div>
-												<div class="card-tit">
-													<strong>150GB+최대 5Mbps</strong>
-													<!-- 5차 수정 : QoS 툴팁을 팝업으로 변경 -->
-													<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
-													<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
-														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-													</button>
-												</div>
-												<div class="card-info">
-													<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span>
-												</div>
-												<div class="card-charge">
-													<div class="brand">
-														<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
-														<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-													</div>
-													<div class="charge">
-														<p class="charge-tit">58,700원</p>
-														<p class="charge-txt">7개월 이후 49,000원</p>
-													</div>
-												</div>
-												<!-- 카드 클릭영역  -->
-												<button type="button" class="card-button">
-													<span class="blind">요금제 자세히 보기</span>
-												</button>
-											</div>
-											<div class="card-footer">
-												<div class="card-util">
-													<div class="card-util-tooltip">
-														<strong class="tit">밀리의 서재</strong>
-														<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
-														<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-															data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
-															<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-														</button>
-													</div>
-													<div class="card-util-btn">
-														<button type="button" class="ui-btn is-selected" aria-selected="true">
-															<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
-														</button>
-														<!-- 2024-12-11 조찬기 : 공유하기 모달 추가 -->
-														<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
-															<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
-														</button>
-													</div>
-												</div>
-												<!-- Case 사은품확인 -->
-												<div class="card-status">
-													<div class="status-gift" id="cardExpand01">
-														<p class="tit"><em>사은품이 최대 5개</em> 지금바로 확인하기!</p>
-														<button type="button" class="ui-btn" aria-expanded="false" onclick="cardExpand('#cardExpand01', this)">
-															<i class="ui-icn icn-14-plan-expand-bk" aria-label="자세히보기"></i>
-														</button>
-														<div class="status-gift-expanded">
-															<ul class="status-gift-list">
-																<li>
-																	<i class="ui-icn icn-16-plan-gift-gr"></i>
-																	3대 마트 상품권 3만원 제공
-																</li>
-																<li>
-																	<i class="ui-icn icn-16-plan-gift-gr"></i>
-																	밀리의 서재 구독권 제공
-																</li>
-																<li>
-																	<i class="ui-icn icn-16-plan-gift-gr"></i>
-																	[결합] 최대 20GB 추가 데이터 제공
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-									</li>
-									<li class="ratePlanC-item">
-										<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-										<div class="ratePlanC-card">
-											<div class="card-body">
-												<div class="card-label">
-													<div class="card-label-benefit">
-														<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
-														<span class="label secondary">+20GB</span>
-													</div>
-													<div class="card-label-option">
-														<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="간편개통을 하시면 통신사에서 개통을 도와드려요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>간편개통</button>
-														<span class="split" aria-hidden="true"></span>
-														<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
-													</div>
-												</div>
-												<div class="card-tit">
-													<strong>150GB+최대 5Mbps</strong>
-													<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
-													<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
-														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-													</button>
-												</div>
-												<div class="card-info">
-													<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span>
-												</div>
-												<div class="card-charge">
-													<div class="brand">
-														<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
-														<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-													</div>
-													<div class="charge">
-														<p class="charge-tit">58,700원</p>
-														<p class="charge-txt">7개월 이후 49,000원</p>
-													</div>
-												</div>
-												<!-- 카드 클릭영역  -->
-												<button type="button" class="card-button">
-													<span class="blind">요금제 자세히 보기</span>
-												</button>
-											</div>
-											<div class="card-footer">
-												<div class="card-util">
-													<div class="card-util-tooltip">
-														<strong class="tit">밀리의 서재</strong>
-														<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
-														<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-															data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
-															<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-														</button>
-													</div>
-													<div class="card-util-btn">
-														<button type="button" class="ui-btn is-selected" aria-selected="true">
-															<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
-														</button>
-														<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
-															<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-									</li>
-									<li class="ratePlanC-item">
-										<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-										<div class="ratePlanC-card">
-											<div class="card-body">
-												<div class="card-label">
-													<div class="card-label-benefit">
-														<button class="label primary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="오직 세모통에서만 드리는 특별한 혜택과 가격! 놓치지 마세요.">단독특가</button>
-														<span class="label secondary">+20GB</span>
-													</div>
-													<div class="card-label-option">
-														<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="간편개통을 하시면 통신사에서 개통을 도와드려요."><i class="ui-icn icn-14-plan-self-pr" aria-hidden="true"></i>간편개통</button>
-														<span class="split" aria-hidden="true"></span>
-														<button class="label" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="인터넷과 결합 시 가격 할인, 데이터 추가 지급, 상품권 등 혜택이 있는 요금제에요."><i class="ui-icn icn-14-plan-link-pr" aria-hidden="true"></i>인터넷 결합</button>
-													</div>
-												</div>
-												<div class="card-tit">
-													<strong>150GB+최대 5Mbps</strong>
-													<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
-													<button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
-														<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-													</button>
-												</div>
-												<div class="card-info">
-													<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
-													<span class="split" aria-hidden="true"></span>
-													<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span>
-												</div>
-												<div class="card-charge">
-													<div class="brand">
-														<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
-														<span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span>
-													</div>
-													<div class="charge">
-														<p class="charge-tit">58,700원</p>
-														<p class="charge-txt">7개월 이후 49,000원</p>
-													</div>
-												</div>
-												<!-- 카드 클릭영역  -->
-												<button type="button" class="card-button">
-													<span class="blind">요금제 자세히 보기</span>
-												</button>
-											</div>
-											<div class="card-footer">
-												<div class="card-util">
-													<div class="card-util-tooltip">
-														<strong class="tit">밀리의 서재</strong>
-														<button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto"
-															data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요.">
-															<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
-														</button>
-													</div>
-													<div class="card-util-btn">
-														<button type="button" class="ui-btn is-selected" aria-selected="true">
-															<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
-														</button>
-														<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
-															<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
-														</button>
-													</div>
-												</div>
-												<!-- Case 선택한상태정보 -->
-												<div class="card-status">
-													<div class="status-choice">
-														<!-- 신청정보 제외
-														<div class="choice">
-															<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
-															<span class="txt"><em>52</em>명 선택</span>
-															<span class="split"></span>
-															<span class="txt"><em>12</em>명 신청 중</span>
-														</div> -->
-														<button type="button" class="ui-btn" aria-expanded="false">
-															<i class="ui-icn icn-12-plan-check-pr" aria-hidden="true"></i>
-															<span>오류 문의</span>
-															<i class="ui-icn icn-14-plan-more-gr" aria-label="자세히보기"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
-									</li>
-								</ul>
-								<!-- // 요금제 공통 타입 C : 요금제 상품 리스트 -->
 							</div>
 						</div>
 					</div>
 				</section>
 				<!-- // 이벤트 상세 섹션 -->
+
+				<!-- 요금제 섹션 -->
+				<!-- 2025-07-02 조찬기 : 요금제 섹션 분리 -->
+				<section class="ratePlanC-sec">
+					<div class="sec-inner">
+						<div class="sec-header">
+							<h2 class="sec-tit">이벤트 대상 요금제에요.</h2>
+						</div>
+						<div class="sec-body">
+							<!-- 2025-02-04 조찬기 : 요금제 목록 추가 -->
+							<!-- 요금제 공통 타입 C : 요금제 상품 리스트 -->
+							<ul class="ratePlanC-list">
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<!--
+										2차 수정 : 서비스카드 공통 망제공자 제목에 추가
+										2차 수정 : 서비스카드 공통 툴팁 추가
+									-->
+									<!-- 2025-05-08 조찬기 : 요금제 카드 UI/UX 개선 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-util">
+												<div class="card-util-label">
+													<span class="label skt">SKT</span>
+													<span class="label kt">KT</span>
+													<span class="label lgu">U+</span>
+													<span class="label semotong">세모통 Only</span>
+													<span class="label merge">인터넷 결합</span>
+													<span class="label open">간편개통</span>
+												</div>
+												<div class="card-util-btn">
+													<!-- 비교하기 -->
+													<div class="card-compare-pc only-pc">
+														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-1" onclick="selectedToggle(this)">
+															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
+															<span>비교하기</span>
+															<span class="count">3</span>
+														</button>
+													</div>
+
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<!-- 2024-12-11 조찬기 : 공유하기 모달 추가 -->
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+											<!-- 2025-05-20 조찬기 : 요금제 카드 UI 개선 (소제목 추가) -->
+											<div class="card-stit">
+												<p>The 착한 데이터 유심 11GB</p>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<!-- 5차 수정 : QoS 툴팁을 팝업으로 변경 -->
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<!-- <button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button> -->
+											</div>
+											<div class="card-name">
+												<p>[모빌카드 스페셜] 통화, 데이터 마음대로 11GB+</p>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+												<!-- <span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span> -->
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<!-- <span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span> -->
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-point"><em class="tit">실제 체감가</em> 10원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<!-- Case 사은품확인 -->
+											<div class="card-status">
+												<div class="status-gift" id="cardExpand01">
+													<p class="status-gift-tit">
+														<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+														<span class="count">+3</span>
+														<span class="tit">네이버포인트 매월 5천원 제공</span>
+													</p>
+													<button type="button" class="ui-btn" aria-expanded="false" onclick="cardExpand('#cardExpand01', this)">
+														<i class="ui-icn icn-16-plan-expand-gr" aria-label="자세히보기"></i>
+													</button>
+													<div class="status-gift-expanded">
+														<ul class="status-gift-list">
+															<li>
+																<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+																네이버포인트 매월 5천원 제공
+															</li>
+															<li>
+																<img src="../../assets/images/upload/@benefit-gift.png" alt="" aria-hidden="true" class="img" />
+																신세계orCU 상품권 30,000원권
+															</li>
+															<li>
+																<img src="../../assets/images/upload/@benefit-scash.png" alt="" aria-hidden="true" class="img" />
+																[세모통] 2만 S캐쉬 제공
+															</li>
+															<li>
+																<img src="../../assets/images/upload/@benefit-data.png" alt="" aria-hidden="true" class="img" />
+																추가데이터 15GB
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-util">
+												<div class="card-util-label">
+													<span class="label skt">SKT</span>
+													<span class="label kt">KT</span>
+													<span class="label lgu">U+</span>
+													<span class="label semotong">세모통 Only</span>
+													<span class="label merge">인터넷 결합</span>
+													<span class="label open">간편개통</span>
+												</div>
+												<div class="card-util-btn">
+													<!-- 비교하기 -->
+													<div class="card-compare-pc only-pc">
+														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-2" onclick="selectedToggle(this)">
+															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
+															<span>비교하기</span>
+															<span class="count">3</span>
+														</button>
+													</div>
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<!-- 2024-12-11 조찬기 : 공유하기 모달 추가 -->
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+											<div class="card-stit">
+												<p>The 착한 데이터 유심 11GB</p>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<!-- <button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button> -->
+											</div>
+											<div class="card-name">
+												<p>[모빌카드 스페셜] 통화, 데이터 마음대로 11GB+</p>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+												<!-- <span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span> -->
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<!-- <span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span> -->
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-point"><em class="tit">실제 체감가</em> 48,100원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+										<div class="card-footer">
+											<div class="card-status">
+												<div class="status-gift" id="cardExpand12">
+													<p class="status-gift-tit">
+														<img src="../../assets/images/upload/@benefit-naver.png" alt="" aria-hidden="true" class="img" />
+														<!-- <span class="count">+3</span> -->
+														<span class="tit">네이버포인트 매월 5천원 제공</span>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+								<li class="ratePlanC-item">
+									<!--  요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+									<div class="ratePlanC-card">
+										<div class="card-body">
+											<div class="card-util">
+												<div class="card-util-label">
+													<span class="label skt">SKT</span>
+													<span class="label kt">KT</span>
+													<span class="label lgu">U+</span>
+													<span class="label semotong">세모통 Only</span>
+													<span class="label merge">인터넷 결합</span>
+													<span class="label open">간편개통</span>
+												</div>
+												<div class="card-util-btn">
+													<!-- 비교하기 -->
+													<div class="card-compare-pc only-pc">
+														<button type="button" class="ui-btn btn-compare outlined" data-compare-id="card-3" onclick="selectedToggle(this)">
+															<i class="ui-icn icn-12-compare-sel" aria-hidden="true"></i>
+															<span>비교하기</span>
+															<span class="count">3</span>
+														</button>
+													</div>
+													<button type="button" class="ui-btn is-selected" aria-selected="true">
+														<i class="ui-icn icn-20-plan-like-gr" aria-label="좋아요"></i>
+													</button>
+													<!-- 2024-12-11 조찬기 : 공유하기 모달 추가 -->
+													<button type="button" class="ui-btn" data-bs-toggle="modal" data-bs-target="#shareModal">
+														<i class="ui-icn icn-20-plan-share-gr" aria-label="공유하기"></i>
+													</button>
+												</div>
+											</div>
+											<div class="card-stit">
+												<p>The 착한 데이터 유심 11GB</p>
+											</div>
+											<div class="card-tit">
+												<strong>150GB+최대 5Mbps</strong>
+												<!-- <button type="button" class="ui-btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="텍스트와 용량이 작은 이미지 페이지 까지 확인할 수 있어요. 유튜브 480p로 재생돼요."> -->
+												<!-- <button type="button" class="ui-btn" onclick="openQosModal('QosModal')">
+													<i class="ui-icn icn-16-plan-quse-gr" aria-label="툴팁"></i>
+												</button> -->
+											</div>
+											<div class="card-name">
+												<p>[모빌카드 스페셜] 통화, 데이터 마음대로 11GB+</p>
+											</div>
+											<div class="card-info">
+												<span class="label"><i class="ui-icn icn-12-tel-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-mail-gr" aria-hidden="true"></i>무제한</span>
+												<span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-antena-gr" aria-hidden="true"></i>LTE</span>
+												<!-- <span class="split" aria-hidden="true"></span>
+												<span class="label"><i class="ui-icn icn-12-wifi-gr" aria-hidden="true"></i>KT</span> -->
+											</div>
+											<div class="card-charge">
+												<div class="brand">
+													<img src="../../assets/images/partner/logo-snowman.svg" alt="안녕 알뜰폰 snowman" />
+													<!-- <span class="brand-rating"><i class="ui-icn icn-14-plan-star-pr" aria-label="평점"></i>4.5</span> -->
+												</div>
+												<div class="charge">
+													<p class="charge-tit">58,700원</p>
+													<p class="charge-point"><em class="tit">실제 체감가</em> 48,100원</p>
+													<p class="charge-txt">7개월 이후 49,000원</p>
+												</div>
+											</div>
+											<!-- 카드 클릭영역  -->
+											<button type="button" class="card-button">
+												<span class="blind">요금제 자세히 보기</span>
+											</button>
+										</div>
+									</div>
+									<!--  // 요금제 공통 타입 C : 요금제 상품 리스트 카드 -->
+								</li>
+							</ul>
+							<!-- // 요금제 공통 타입 C : 요금제 상품 리스트 -->
+						</div>
+					</div>
+				</section>
+				<!-- 요금제 섹션 -->
+
+				<!-- 유의사항 -->
+				<!-- 2025-07-02 조찬기 : 유의사항 추가 -->
+				<section class="note-sec">
+					<div class="sec-inner">
+						<!-- 요금제상세 아코디언 -->
+						<div class="note-acco" id="noteAccordion">
+							<div class="acco-item">
+								<h2 class="acco-header">
+									<button class="acco-button collapsed" type="button" data-bs-toggle="collapse"
+										data-bs-target="#noteAccordion3" aria-expanded="false" aria-controls="noteAccordion3">
+										<span>유의사항</span>
+										<i class="ui-icn icn-32-acco-arw" aria-label="Toggle"></i>
+									</button>
+								</h2>
+								<div id="noteAccordion3" class="acco-collapse collapse" data-bs-parent="#noteAccordion">
+									<div class="acco-body">
+										<div class="acco-data">
+											<p><strong>요금제 공통 안내</strong></p>
+											<ol>
+												<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+												<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+												<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+												<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+											</ol>
+
+											<p><strong>요금제 공통 안내</strong></p>
+											<ul>
+												<li>일 SMS&MMS 사용량이 (SKT망 : 500건 / KT망 : 500건 / LG망 : 500건)을 초과하는 경우</li>
+												<li>일 SMS&MMS 사용량이 (SKT망 : 200건 / KT&LGU+망 : 150건)을 초과하는 횟수가 월 중 10회를 넘는 경우</li>
+												<li>광고성 스팸 메시지를 발송과 같이 상업적 목적으로 이용하거나 물리적 장치 또는 자동발송 프로그램을 이용하는 경우</li>
+												<li>수신처가 (SKT망 : 월 3,000개 / KT&LGU+망 : 월 2,000개) 회선을 초과하는 경우</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // 요금제상세 아코디언 -->
+					</div>
+				</section>
+				<!-- // 유의사항 -->
 
 				<!-- 플로팅 섹션 -->
 				<section class="floating-sec">
@@ -421,12 +491,8 @@
 		<!-- // Container -->
 
 		<!-- Footer (include_footer.html) -->
-		<footer class="footer"></footer>
+		<!-- <footer class="footer"></footer> -->
 		<!-- // Footer -->
-
-		<!-- floating Nav (include_floatingNav.html) -->
-		<nav class="floating-nav"></nav>
-		<!-- // floating Nav- -->
 	</div>
 
 	<!-- QOS Modal Alert -->

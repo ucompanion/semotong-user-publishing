@@ -65,158 +65,99 @@
 	// s: 비주얼 섹션
 	.visual-sec {
 		position: relative;
-		z-index: 10;
-		padding-left: 0;
-		padding-right: 0;
 		margin-top: calc(-1 * #{$mobile-height-header});
-		.visual-swiper {
-			.swiper-slide {
-				display: flex;
-				justify-content: center;
-				box-sizing: border-box;
-			}
-			.swiper-controler {
+		padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+		background: #F2F5FB; /* 3차 수정 : 메인 레이아웃 변경 추가 */
+		/* background: linear-gradient(to left, #3C239A 4.99%, #7B56FF 95.96%); 3차 수정 : 메인 레이아웃 변경 삭제 */
+		/* background-color: #3C239A; 3차 수정 : 메인 레이아웃 변경 삭제 */
+		overflow: hidden;
+		color: #fff;
+		.sec-outer { /* 3차 수정 : 메인 레이아웃 변경 추가 */
+			@include out-sec;
+			padding-top: var(--sec-inner-padding);
+			background: linear-gradient(314.82deg, #3C239A 4.99%, #7B56FF 95.96%);
+			background-color: #3C239A;
+		}
+		.sec-body {
+			position: relative;
+			height: calc(220rem + #{$mobile-height-header});
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding-bottom: 30rem;
+			&::after {
+				content:'';
 				display: block;
 				position: absolute;
-				z-index: 20;
-				top: auto;
-				left: 0;
-				width: 100%;
-				bottom: calc((100vw / 360) * 23);
-				@include out-sec;
+				right: 0;
+				bottom: 0;
+				width: 338rem;
+				height: 291rem;
+				border-radius: 50%;
+				transform: translate(50%, 50%);
+				background-color: rgba(255,255,255,0.1);
+			}
 
-				.in-sec {
-					display: flex;
-					justify-content: flex-end;
-				}
+			.sec-tit {
+				font-weight: 700;
+				font-size: 22rem;
+				line-height: 30rem;
+			}
 
-				.swiper-controler-group {
-					display: inline-flex;
-					align-items: center;
-					justify-content: flex-end;
-					gap: 2rem;
-					padding: calc((100vw / 360) * 2) calc((100vw / 360) * 4) calc((100vw / 360) * 2) calc((100vw / 360) * 8);
-					border-radius: calc((100vw / 360) * 50);
-					background-color: rgba(255, 255, 255, 0.1);
-				}
-				.swiper-pagination {
-					position: static;
-					display: flex;
-					justify-content: flex-start;
-					gap: 8rem;
-					width: auto;
-					// 번호타입
-					&-fraction {
-						gap: calc((100vw / 360) * 4);
-						color: #fff;
-						font-weight: 500;
-						font-size: calc((100vw / 360) * 10);
-					}
-					// 블릿타입
-					.swiper-pagination-bullet {
-						width: 10rem;
-						height: 10rem;
-						mask: center center / 10rem;
-						margin: 0;
+			.sec-img {
+				position: absolute;
+				right: 12rem; /* 2차 수정 : 봇 이미지 위치 수정 */
+				bottom: 76rem;
+				width: 140rem;
+				height: 122rem;
+			}
+
+			.sec-btn {
+				margin-top: 16rem;
+				.ui-btn {
+					width: 100%;
+					height: 50rem;
+					padding: 2rem;
+					border-radius: 30rem;
+					font-weight: 600;
+					font-size: 16rem;
+					line-height: 22rem;
+					color: #0D173F;
+					box-shadow: 0px 4px 17.6px rgba(255, 255, 255, 0.28);
+					background: linear-gradient(90deg, #6B43FF 0%, #B433FF 100%);
+					&::before {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 2rem;
+						top: 2rem;
+						right: 2rem;
+						bottom: 2rem;
 						background-color: #fff;
-						opacity: 0.25;
-						border-radius: 0;
-						transition: all 0.15s ease;
-						&-active {
-							opacity: 1;
-						}
-						&:nth-child(1) {
-							mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10L5 0L10 10H0Z' fill='white'/%3E%3C/svg%3E%0A");
-						}
-						&:nth-child(2) {
-							mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect opacity='1' width='10' height='10' fill='white'/%3E%3C/svg%3E%0A");
-						}
-						&:nth-child(3) {
-							mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='1' cx='5' cy='5' r='5' fill='white'/%3E%3C/svg%3E%0A");
-						}
-						&:nth-child(4) {
-							mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='1' d='M0.548557 1.37139C0.285811 0.714527 0.769568 0 1.47703 0H8.52297C9.23043 0 9.71419 0.714526 9.45144 1.37139L8.14856 4.62861C8.05319 4.86702 8.05319 5.13298 8.14856 5.37139L9.45144 8.62861C9.71419 9.28547 9.23043 10 8.52297 10H1.47703C0.769568 10 0.285811 9.28547 0.548556 8.62861L1.85144 5.37139C1.94681 5.13298 1.94681 4.86702 1.85144 4.62861L0.548557 1.37139Z' fill='white'/%3E%3C/svg%3E%0A");
-						}
-						&:nth-child(5) {
-							mask-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='1' d='M0 5L5 0L10 5L5 10L0 5Z' fill='white'/%3E%3C/svg%3E%0A");
-						}
+						border-radius: 30rem;
 					}
-				}
-				.swiper-autoplay {
-					display: flex;
-					align-items: center;
-					.ui-btn {
-						width: calc((100vw / 360) * 16);
-						height: calc((100vw / 360) * 16);
-						border-radius: 50%;
-						background: no-repeat center center / 100% auto;
-					}
-					.is-playing {
-						background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='9' y='4' width='2' height='8' fill='white'/%3E%3Crect x='5' y='4' width='2' height='8' fill='white'/%3E%3C/svg%3E%0A");
-					}
-					.is-paused {
-						background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 8L6 4V12L12 8Z' fill='white'/%3E%3C/svg%3E%0A");
+					span {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+						height: 100%;
+						border-radius: 30rem;
+						background: linear-gradient(91.41deg, #6B43FF 9.18%, #B433FF 98.8%);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						background-clip: text;
+						text-fill-color: transparent;
+						color: transparent;
+						// background-color: #fff;
 					}
 				}
 			}
-			.visual {
-				width: 100%;
-			}
-			.visual-link {
-				display: block;
-				position: relative;
-				height: auto;
-				width: 100%;
-				@include in-sec;
-
-				img {
-					max-width: 100%;
-				}
-			}
-
 		}
 		@include media-tablet-xs {
-			margin-top: 0;
-
-			.visual-swiper {
-				.swiper-controler {
-					top: auto;
-					bottom: 84rem;
-
-					.in-sec {
-						justify-content: flex-start;
-					}
-
-					.swiper-controler-group {
-						gap: 12rem;
-						justify-content: flex-start;
-						max-width: $pc-inner-content;
-						background-color: transparent;
-						padding: 0;
-					}
-
-					.swiper-autoplay {
-						.ui-btn {
-							width: 16rem;
-							height: 16rem;
-							border-radius: 50%;
-							background: no-repeat center center / 100% auto;
-						}
-
-						.is-playing {
-							background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Crect x='9' y='5' width='2' height='6' fill='white'/%3E%3Crect x='5' y='5' width='2' height='6' fill='white'/%3E%3C/svg%3E%0A");
-						}
-						.is-paused {
-							background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Cpath d='M12 8L6 4V12L12 8Z' fill='white'/%3E%3C/svg%3E%0A");
-						}
-					}
-				}
-				.visual {
-					@include out-sec;
-				}
-				.visual-link {
-					height: 394rem;
-				}
+			margin-top: calc(-1 * #{$pc-height-header});
+			.sec-body {
+				height: calc(220rem + #{$pc-height-header});
 			}
 		}
 	}
@@ -224,9 +165,7 @@
 
 	// s: 추천딜 섹션
 	.deal-sec {
-		position: relative;
-		z-index: 20;
-		// overflow: hidden;
+		overflow: hidden;
 		padding-top: var(--sec-inner-padding);
 		padding-bottom: var(--sec-inner-padding);
 		padding: 0; /* 3차 수정 : 메인 레이아웃 변경 추가 */
@@ -465,12 +404,6 @@
 						line-height: 18rem;
 					}
 				}
-			}
-		}
-
-		@include media-tablet-xs {
-			.sec-outer {
-				margin-top: -40rem;
 			}
 		}
 	}

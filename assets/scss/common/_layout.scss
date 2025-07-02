@@ -371,7 +371,7 @@ section   {
 	color: #EFF0F0;
 
 	&.is-sticy-consult {
-		padding-bottom: calc(96rem + #{$safe-area-bottom});
+		padding-bottom: #{$safe-area-bottom};
 	}
 
 	// 푸터 섹션

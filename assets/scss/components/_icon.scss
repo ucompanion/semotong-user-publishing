@@ -112,6 +112,11 @@
 	height: 50rem;
 }
 
+[class*=icn-54] {
+	width: 54rem;
+	height: 54rem;
+}
+
 [class*=icn-62] {
 	width: 62rem;
 	height: 62rem;
@@ -810,6 +815,10 @@
 	background-image: url("../images/common/icn-32-remove-bk.svg");
 }
 
+.icn-32-acco-arw::before {
+	background-image: url("../images/common/icn-32-acco-arw.svg");
+}
+
 .icn-34-bank-hb::before {
 	background-image: url("../images/bank/icn-34-bank-hb.png");
 }
@@ -987,6 +996,16 @@
 
 .icn-50-cert-card::before {
 	background-image: url("../images/common/icn-50-cert-card.png");
+}
+
+.icn-54-floating-kakao::before {
+	background-image: url("../images/common/icn-54-floating-kakao.png");
+	background-size: 74rem;
+}
+
+.icn-54-floating-bot::before {
+	background-image: url("../images/common/icn-54-floating-bot.png");
+	background-size: 74rem;
 }
 
 .icn-62-motong::before {

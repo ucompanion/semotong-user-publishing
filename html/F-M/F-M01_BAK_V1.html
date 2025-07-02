@@ -20,85 +20,9 @@
 	<!-- 페이지 스크립트 영역 -->
 	<!-- Swiper Librarys -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@7.0.0/swiper-bundle.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
-			//s: 2025-07-02 조찬기 : 메인 비주얼 수정
-			let visualSwiper;
-			let currentMode = null; // 'mobile' 또는 'desktop' 기억용
-
-			function initVisualSwiper() {
-				const isMobile = window.innerWidth < 720;
-				const newMode = isMobile ? 'mobile' : 'desktop';
-
-				if (currentMode === newMode) return; // 같은 상태면 재초기화 안함
-				currentMode = newMode;
-
-				// 기존 인스턴스 제거
-				if (visualSwiper) {
-					visualSwiper.destroy(true, true); // true: DOM도 제거
-				}
-
-				// Swiper 다시 생성
-				visualSwiper = new Swiper(".visual-swiper", {
-					threshold: 3,
-					spaceBetween: 0,
-					slidesPerView: 1,
-					autoplay: {
-						delay: 4000,
-						disableOnInteraction: false
-					},
-					pagination: {
-						el: ".swiper-pagination", // 필요시 모바일/PC 분리 가능
-						type: isMobile ? "fraction" : "bullets"
-					}
-				});
-			}
-
-			// 초기 실행
-			initVisualSwiper();
-
-			// resize 이벤트에 따라 재초기화 (디바운싱 포함)
-			let resizeTimer;
-			window.addEventListener("resize", () => {
-			clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(() => {
-					initVisualSwiper();
-				}, 150);
-			});
-
-			// 비주얼 스와이프 재생/정지
-			const playPauseBtn = document.querySelector("#playPauseBtn");
-
-			// 초기 상태: 자동 재생 중이니 재생 상태로 표시
-			let isPlaying = true;
-			updateButton();
-
-			// 버튼 텍스트 업데이트 함수
-			function updateButton() {
-				if (isPlaying) {
-					playPauseBtn.classList.add("is-playing");
-					playPauseBtn.classList.remove("is-paused");
-				} else {
-					playPauseBtn.classList.add("is-paused");
-					playPauseBtn.classList.remove("is-playing");
-				}
-			}
-
-			// 버튼 클릭 이벤트
-			playPauseBtn.addEventListener("click", () => {
-				if (isPlaying) {
-					visualSwiper.autoplay.stop();
-					isPlaying = false;
-				} else {
-					visualSwiper.autoplay.start();
-					isPlaying = true;
-				}
-				updateButton();
-			});
-			//e: 2025-07-02 조찬기 : 메인 비주얼 수정
-
-
 			// 추천딜 스와이프
 		    var dealSwiper = new Swiper(".deal-swiper", {
 				threshold: 3,
@@ -292,75 +216,18 @@
 		<main role="main" class="container">
 			<!-- content -->
 			<div class="content F-M01-page">
-				<!-- 2025-07-02 조찬기 : 메인 비주얼 수정 -->
 				<!-- 메인 비주얼 섹션 -->
 				<section class="visual-sec">
-					<div class="swiper visual-swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
-									<a href="#" class="visual-link">
-										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
-										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
-									<a href="#" class="visual-link">
-										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
-										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
-									<a href="#" class="visual-link">
-										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
-										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
-									<a href="#" class="visual-link">
-										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
-										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
-									<a href="#" class="visual-link">
-										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
-										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
-									<a href="#" class="visual-link">
-										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
-										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
-									<a href="#" class="visual-link">
-										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
-										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-controler">
-							<div class="in-sec">
-								<div class="swiper-controler-group">
-									<div class="swiper-pagination"></div>
-									<div class="swiper-autoplay">
-										<button type="button" class="ui-btn is-playing" id="playPauseBtn"></button>
-									</div>
+					<!-- 3차 수정 : 메인 레이아웃 변경 sec-outer 추가 -->
+					<div class="sec-outer">
+						<div class="sec-inner">
+							<div class="sec-body">
+								<h2 class="sec-tit"><em>나에게 딱 맞는</em> <br>요금제를 모통봇에게 <br>추천 받아 보세요.</h2>
+								<div class="sec-img"><img src="../../assets/images/contents/main-visual-bot.svg" alt="챗봇 캐릭터" /></div>
+								<div class="sec-btn">
+									<button type="button" class="ui-btn">
+										<span>지금 바로 요금제 추천받기!</span>
+									</button>
 								</div>
 							</div>
 						</div>
