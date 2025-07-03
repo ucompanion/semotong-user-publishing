@@ -12736,7 +12736,7 @@ body.is-scroll-first .floating-menu .btn-top {
   max-width: 720px;
 }
 .F-M01-page .visual-sec .visual-swiper .visual-link img {
-  max-width: 100%;
+  width: 100%;
 }
 @media all and (min-width: 720px) {
   .F-M01-page .visual-sec {
