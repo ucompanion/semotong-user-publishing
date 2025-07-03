@@ -53,6 +53,23 @@
 					pagination: {
 						el: ".swiper-pagination", // 필요시 모바일/PC 분리 가능
 						type: isMobile ? "fraction" : "bullets"
+					},
+					on: {
+						slideChangeTransitionStart: function () {
+							const activeSlide = this.slides[this.activeIndex];
+							const visualEl = activeSlide.querySelector(".visual");
+							const headerMobile = document.querySelector(".header-mobile");
+							if (visualEl) {
+								const theme = visualEl.getAttribute("data-theme");
+								headerMobile.classList.remove("is-black", "is-white");
+
+								if (theme === "black") {
+									headerMobile.classList.add("is-black");
+								} else if (theme === "white") {
+									headerMobile.classList.add("is-white");
+								}
+							}
+						}
 					}
 				});
 			}
@@ -180,7 +197,6 @@
 			// 2025-03-27 조찬기 : 타임딜 활성화UI 조건개선 (스와이프 상태감지)
 			function checkScrollable(thisSwiper, swiperSelector) {
 				const swiperContainer = document.querySelector(swiperSelector);
-				console.log(thisSwiper);
 				if (!thisSwiper || thisSwiper.isLocked === undefined) return;
 				if (thisSwiper.isLocked) {
 					swiperContainer.classList.add("no-scroll");
@@ -270,7 +286,7 @@
 
 		<!-- Header Mobile -->
 		<!-- 모바일 헤더에 로고가 나오는 케이스에 한하여 모바일전용 클래스 only-mo 적용 -->
-		<header class="header-mobile primary only-mo">
+		<header class="header-mobile only-mo">
 			<section class="header-sec">
 				<h1 class="title">
 					<!-- 로고 베타 추가 -->
@@ -300,7 +316,7 @@
 					<div class="swiper visual-swiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
+								<div class="visual" style="background-color: #1C2541;" data-theme="white">
 									<a href="#" class="visual-link">
 										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
 										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
@@ -308,7 +324,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="visual" style="background-color: #0084FF;">
+								<div class="visual" style="background-color: #0084FF;" data-theme="white">
 									<a href="#" class="visual-link">
 										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
 										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
@@ -316,7 +332,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="visual" style="background-color: #542FDD;">
+								<div class="visual" style="background-color: #542FDD;" data-theme="white">
 									<a href="#" class="visual-link">
 										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
 										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
@@ -324,7 +340,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="visual" style="background-color: #1C2541;">
+								<div class="visual" style="background-color: yellowgreen;" data-theme="black">
 									<a href="#" class="visual-link">
 										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
 										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
@@ -332,7 +348,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="visual" style="background-color: #0084FF;">
+								<div class="visual" style="background-color: #0084FF;" data-theme="white">
 									<a href="#" class="visual-link">
 										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
 										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>
@@ -340,7 +356,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="visual" style="background-color: #542FDD;">
+								<div class="visual" style="background-color: #542FDD;" data-theme="black">
 									<a href="#" class="visual-link">
 										<img src="../../assets/images/upload/@visual-main-pc.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-pc"/>
 										<img src="../../assets/images/upload/@visual-main-mo.png" alt="Hello Mobile 헬로 쿠폰팩 최대 20만원 혜택! 매월 입맛따라 골라먹는 요금제 혜택" class="only-mo"/>

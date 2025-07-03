@@ -862,14 +862,23 @@ html {
 .is-scroll-first .header-mobile {
   border-color: transparent;
 }
-.is-scroll-first .header-mobile.primary {
+.is-scroll-first .header-mobile.is-white, .is-scroll-first .header-mobile.primary {
   background-color: transparent;
 }
-.is-scroll-first .header-mobile.primary .title .logo {
+.is-scroll-first .header-mobile.is-white .title .logo, .is-scroll-first .header-mobile.primary .title .logo {
   background-color: #fff;
 }
-.is-scroll-first .header-mobile.primary .icn-32-anb-bk::before {
+.is-scroll-first .header-mobile.is-white .icn-32-anb-bk::before, .is-scroll-first .header-mobile.primary .icn-32-anb-bk::before {
   background-color: #fff;
+}
+.is-scroll-first .header-mobile.is-black {
+  background-color: transparent;
+}
+.is-scroll-first .header-mobile.is-black .title .logo {
+  background-color: #000;
+}
+.is-scroll-first .header-mobile.is-black .icn-32-anb-bk::before {
+  background-color: #000;
 }
 
 .header-desktop {

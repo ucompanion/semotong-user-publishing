@@ -117,7 +117,7 @@ html {
 }
 .is-scroll-first .header-mobile {
 	border-color: transparent;
-
+	&.is-white,
 	&.primary {
 		background-color: transparent;
 		.title .logo {
@@ -126,6 +126,17 @@ html {
 
 		.icn-32-anb-bk::before {
 			background-color: #fff;
+		}
+	}
+
+	&.is-black {
+		background-color: transparent;
+		.title .logo {
+			background-color: #000;
+		}
+
+		.icn-32-anb-bk::before {
+			background-color: #000;
 		}
 	}
 }
