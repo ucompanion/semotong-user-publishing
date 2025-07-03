@@ -61,10 +61,6 @@ html {
 	border-bottom: 1px solid #EFF0F0;
 	@include out-sec;
 	transition: all 0.2s ease;
-	&.transparent {
-		background-color: transparent;
-		border-bottom: 0;
-	}
 
 	.header-sec {
 		display: flex;
@@ -117,24 +113,19 @@ html {
 }
 .is-scroll-first .header-mobile {
 	border-color: transparent;
-	&.is-white,
-	&.primary {
+	&.transparent {
 		background-color: transparent;
-		.title .logo {
-			background-color: #fff;
-		}
-
+		border-bottom: transparent;
+	}
+	&.is-white {
+		.title .logo,
 		.icn-32-anb-bk::before {
 			background-color: #fff;
 		}
 	}
 
 	&.is-black {
-		background-color: transparent;
-		.title .logo {
-			background-color: #000;
-		}
-
+		.title .logo,
 		.icn-32-anb-bk::before {
 			background-color: #000;
 		}

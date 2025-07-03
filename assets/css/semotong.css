@@ -803,10 +803,6 @@ html {
     padding-right: 24rem;
   }
 }
-.header-mobile.transparent {
-  background-color: transparent;
-  border-bottom: 0;
-}
 .header-mobile .header-sec {
   display: flex;
   flex-direction: row;
@@ -862,21 +858,15 @@ html {
 .is-scroll-first .header-mobile {
   border-color: transparent;
 }
-.is-scroll-first .header-mobile.is-white, .is-scroll-first .header-mobile.primary {
+.is-scroll-first .header-mobile.transparent {
   background-color: transparent;
+  border-bottom: transparent;
 }
-.is-scroll-first .header-mobile.is-white .title .logo, .is-scroll-first .header-mobile.primary .title .logo {
+.is-scroll-first .header-mobile.is-white .title .logo,
+.is-scroll-first .header-mobile.is-white .icn-32-anb-bk::before {
   background-color: #fff;
 }
-.is-scroll-first .header-mobile.is-white .icn-32-anb-bk::before, .is-scroll-first .header-mobile.primary .icn-32-anb-bk::before {
-  background-color: #fff;
-}
-.is-scroll-first .header-mobile.is-black {
-  background-color: transparent;
-}
-.is-scroll-first .header-mobile.is-black .title .logo {
-  background-color: #000;
-}
+.is-scroll-first .header-mobile.is-black .title .logo,
 .is-scroll-first .header-mobile.is-black .icn-32-anb-bk::before {
   background-color: #000;
 }
