@@ -512,10 +512,6 @@
 		margin-top: var(--sec-outer-margin);
 		margin-bottom: var(--sec-outer-margin);
 
-		&.is-sticy-consult {
-			padding-bottom: calc(96rem + env(safe-area-inset-bottom, 0)/1.7);
-		}
-
 		// 자주묻는 질문 아코디언
 		.faq-accordion {
 			@include faq-accordion;

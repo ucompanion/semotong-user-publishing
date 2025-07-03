@@ -12430,9 +12430,6 @@ body.is-scroll-first .floating-menu .btn-top {
 .F-I02-01-page .faq-sec .sec-header .btn-more.static {
   position: static;
 }
-.F-I02-01-page .faq-sec.is-sticy-consult {
-  padding-bottom: calc(96rem + env(safe-area-inset-bottom, 0) / 1.7);
-}
 .F-I02-01-page .faq-sec .faq-accordion {
   margin-top: -14rem;
 }
