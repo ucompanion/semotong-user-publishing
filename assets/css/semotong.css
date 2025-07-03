@@ -3187,12 +3187,10 @@ body.is-scroll-first .floating-menu .btn-top {
 
 .icn-54-floating-kakao::before {
   background-image: url("../images/common/icn-54-floating-kakao.png");
-  background-size: 74rem;
 }
 
 .icn-54-floating-bot::before {
   background-image: url("../images/common/icn-54-floating-bot.png");
-  background-size: 74rem;
 }
 
 .icn-62-motong::before {
