@@ -1180,6 +1180,7 @@
 	}
 }
 
+// 삭제예정 2025-07-09
 .icn-h16-kt {
 	width: 20rem;
 	height: 16rem;
@@ -1218,4 +1219,35 @@
 		mask: url("../images/common/icn-h16-skylife-wh.svg") no-repeat 0 0 / 100% auto;
 		background: #B7B9BA;
 	}
+}
+
+// 교체소스 2025-07-09
+.icn-40-kt-wh::before {
+  -webkit-mask: url("../images/common/icn-40-kt-wh.svg") no-repeat 0 0/100% auto;
+  mask: url("../images/common/icn-40-kt-wh.svg") no-repeat 0 0/100% auto;
+  background: #b7b9ba;
+}
+
+.icn-40-lgu-wh::before {
+  -webkit-mask: url("../images/common/icn-40-lgu-wh.svg") no-repeat 0 0/100% auto;
+  mask: url("../images/common/icn-40-lgu-wh.svg") no-repeat 0 0/100% auto;
+  background: #b7b9ba;
+}
+
+.icn-40-sk-wh::before {
+  -webkit-mask: url("../images/common/icn-40-sk-wh.svg") no-repeat 0 0/100% auto;
+  mask: url("../images/common/icn-40-sk-wh.svg") no-repeat 0 0/100% auto;
+  background: #b7b9ba;
+}
+
+.icn-40-b-wh::before {
+  -webkit-mask: url("../images/common/icn-40-b-wh.svg") no-repeat 0 0/100% auto;
+  mask: url("../images/common/icn-40-b-wh.svg") no-repeat 0 0/100% auto;
+  background: #b7b9ba;
+}
+
+.icn-40-skylife-wh::before {
+  -webkit-mask: url("../images/common/icn-40-skylife-wh.svg") no-repeat 0 0/100% auto;
+  mask: url("../images/common/icn-h16-skylife-wh.svg") no-repeat 0 0/100% auto;
+  background: #b7b9ba;
 }
