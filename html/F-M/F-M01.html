@@ -52,21 +52,28 @@
 					},
 					pagination: {
 						el: ".swiper-pagination", // 필요시 모바일/PC 분리 가능
-						type: isMobile ? "fraction" : "bullets"
+						type: isMobile ? "fraction" : "bullets",
+						clickable: true
 					},
 					on: {
+						// 2025-07-17 조찬기 : 스크립트 const controlerEl 추가
 						slideChangeTransitionStart: function () {
 							const activeSlide = this.slides[this.activeIndex];
 							const visualEl = activeSlide.querySelector(".visual");
 							const headerMobile = document.querySelector(".header-mobile");
+							const controlerEl = document.querySelector(".visual-swiper .swiper-controler");
+
 							if (visualEl) {
 								const theme = visualEl.getAttribute("data-theme");
 								headerMobile.classList.remove("is-black", "is-white");
+								controlerEl.classList.remove("is-black", "is-white");
 
 								if (theme === "black") {
 									headerMobile.classList.add("is-black");
+									controlerEl.classList.add("is-black");
 								} else if (theme === "white") {
 									headerMobile.classList.add("is-white");
+									controlerEl.classList.add("is-white");
 								}
 							}
 						}

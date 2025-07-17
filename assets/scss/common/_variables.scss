@@ -47,6 +47,7 @@ $color-item-benefit: #0084FF;
 $color-item-semotong: $color-primary;
 $color-item-merge: #EFBD28;
 $color-item-open: #0084FF;
+$color-item-lowest: #1fbc5e;
 
 // 그림자
 $box-shadow-10: 0rem 4rem 10rem 0 rgba(0,0,0,0.08);
@@ -529,6 +530,9 @@ $box-shadow-16: 0rem 3rem 16rem 0 rgba(0,0,0,0.08);
 				}
 				&.open {
 					background-color: $color-item-open;
+				}
+				&.lowest {
+					background-color: $color-item-lowest;
 				}
 			}
 		}
